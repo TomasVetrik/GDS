@@ -37,12 +37,15 @@ namespace GDS_SERVER_WPF
             {
                 FileHandler.Save<OSAbrivationsData>(osAbrivationsData, path);
             }
-            foreach (string item in listBox.Items)
+            foreach (string OSAbrivation in listBox.Items)
             {
-                listBoxOSAbbrivationsOutPut.Items.Add(item);
+                listBoxOSAbbrivationsOutPut.Items.Add(OSAbrivation);
             }
             osAbrivationsData = FileHandler.Load<OSAbrivationsData>(path);
-            listBoxOsAbbrivations.ItemsSource = osAbrivationsData.osAbrivations;
+            foreach (string OSAbrivation in osAbrivationsData.osAbrivations)
+            {
+                listViewOsAbbrivations.Items.Add(OSAbrivation);
+            }
         }
 
         private void buttonCancel_Click(object sender, RoutedEventArgs e)
@@ -50,7 +53,7 @@ namespace GDS_SERVER_WPF
             this.Close();
         }
 
-        private void listBoxOSAbbrivations_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void listBoxOsAbbrivationsOutPut_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             if (listBoxOSAbbrivationsOutPut.SelectedItems.Count != 0)
             {
@@ -60,11 +63,16 @@ namespace GDS_SERVER_WPF
 
         private void MenuItemRemove_Click(object sender, RoutedEventArgs e)
         {
-            if (listBoxOsAbbrivations.SelectedIndex == -1)
+            if (listViewOsAbbrivations.SelectedIndex == -1)
             {
                 return;
-            }            
-            osAbrivationsData.osAbrivations = (List<string>)listBoxOsAbbrivations.ItemsSource;            
+            }
+            listViewOsAbbrivations.Items.Remove(listViewOsAbbrivations.SelectedItem);
+            osAbrivationsData.osAbrivations.Clear();
+            foreach (string OSAbrivation in listViewOsAbbrivations.Items)
+            {
+                osAbrivationsData.osAbrivations.Add(OSAbrivation);
+            }
             FileHandler.Save<OSAbrivationsData>(osAbrivationsData, path);
         }
 
@@ -72,16 +80,14 @@ namespace GDS_SERVER_WPF
         {
             if(textBoxNewAbrivation.Text != "")
             {
-                if (!listBoxOsAbbrivations.Items.Contains(textBoxNewAbrivation.Text))
+                if (!listViewOsAbbrivations.Items.Contains(textBoxNewAbrivation.Text))
                 {
                     osAbrivationsData.osAbrivations.Add(textBoxNewAbrivation.Text);
                     FileHandler.Save<OSAbrivationsData>(osAbrivationsData, path);
-                    listBoxOsAbbrivations.ItemsSource = osAbrivationsData.osAbrivations;
+                    listViewOsAbbrivations.ItemsSource = osAbrivationsData.osAbrivations;
                 }
             }
         }
-
-        
 
         private void buttonOK_Click(object sender, RoutedEventArgs e)
         {
@@ -99,12 +105,12 @@ namespace GDS_SERVER_WPF
             this.Close();
         }
 
-        private void listBoxOsAbbrivations_MouseDoubleClick_1(object sender, MouseButtonEventArgs e)
+        private void listViewOsAbbrivations_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            if(listBoxOsAbbrivations.SelectedItems.Count != 0)
+            if(listViewOsAbbrivations.SelectedItems.Count != 0)
             {
-                if (!listBoxOSAbbrivationsOutPut.Items.Contains(listBoxOsAbbrivations.SelectedItems[0]))
-                    listBoxOSAbbrivationsOutPut.Items.Add(listBoxOsAbbrivations.SelectedItems[0]);
+                if (!listBoxOSAbbrivationsOutPut.Items.Contains(listViewOsAbbrivations.SelectedItems[0]))
+                    listBoxOSAbbrivationsOutPut.Items.Add(listViewOsAbbrivations.SelectedItems[0]);
             }
         }
     }

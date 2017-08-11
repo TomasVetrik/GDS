@@ -25,26 +25,32 @@ namespace GDS_SERVER_WPF
         
         public string ImageSource { get; set; } 
         public string Name { get; set; }               
-        public string LastExecuted { get; set; }        
-        public string MachineGroup { get; set; }   
-        public string BaseImageSourcePath { get; set; }
-        public string DriveEImageSourcePath { get; set; }
-        public string SourceDirectory { get; set; }
-        public string DestinationDirectoryInOS { get; set; }
-        public string DestinationDirectoryInWINPE { get; set; }
+        public string LastExecuted { get; set; }
+        public List<string> TargetComputers { get; set; }
+        public string MachineGroup { get; set; }
+
         public bool WakeOnLan { get; set; }
         public bool Configuration { get; set; }
-        public bool Cloning { get; set; }
         public bool ForceInstall { get; set; }
         public bool ShutDown { get; set; }
-        public bool SoftwareAndFileAction { get; set; }
-        public bool SoftwareAndFileAction_WINPE { get; set; }
+       
+        public bool Cloning { get; set; }
+        public string BaseImageSourcePath { get; set; }
         public bool WithoutVHD { get; set; }
+        public string DriveEImageSourcePath { get; set; }
+
+        public bool SoftwareAndFileAction { get; set; }
+        public string SourceDirectoryInOS { get; set; }
+        public string DestinationDirectoryInOS { get; set; }
         public List<string> CommnadsInOS { get; set; }
         public List<string> CopyFilesInOS { get; set; }
+
+        public bool SoftwareAndFileAction_WINPE { get; set; }
+        public string SourceDirectoryInWINPE { get; set; }
+        public string DestinationDirectoryInWINPE { get; set; }
         public List<string> CopyFilesInWINPE { get; set; }
         public List<string> CommnadsInWINPE { get; set; }
-        public List<string> TargetComputers { get; set; }
+
         public int WaitingTime { get; set; }
     }
 }

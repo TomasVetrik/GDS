@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Management;
 using System.Net;
+using System.Net.NetworkInformation;
 using System.Threading;
 
 namespace GDS_Client
@@ -183,7 +185,22 @@ namespace GDS_Client
         {
             try
             {
-                string macAddresses = "";
+                List<string> macAddresses = new List<string>();
+                ManagementObjectSearcher searcher = new ManagementObjectSearcher
+    ("Select MACAddress,PNPDeviceID FROM Win32_NetworkAdapter WHERE MACAddress IS NOT NULL AND PNPDeviceID IS NOT NULL");
+                ManagementObjectCollection mObject = searcher.Get();
+
+                foreach (ManagementObject obj in mObject)
+                {
+                    string pnp = obj["PNPDeviceID"].ToString();
+                    if (pnp.Contains("PCI\\"))
+                    {
+                        macAddresses.Add(obj["MACAddress"].ToString()); 
+                    }
+                }
+
+                return String.Join("&", macAddresses);
+                /*string macAddresses = "";
                 ManagementObjectSearcher mos = new ManagementObjectSearcher("select MACAddress, PNPDeviceID from Win32_NetworkAdapter Where AdapterType='Ethernet 802.3'");
                 foreach (ManagementObject mo in mos.Get())
                 {
@@ -201,7 +218,28 @@ namespace GDS_Client
                     return macAddresses;
                 }
                 GetMacAddresses();
-                return "";
+                return "";                
+                /*
+                List<string> macAddresses = new List<string>();
+
+                foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
+                {
+                    if (nic.NetworkInterfaceType == NetworkInterfaceType.Ethernet)
+                        macAddresses.Add(nic.GetPhysicalAddress().ToString());
+                }
+
+               
+                return String.Join("&", macAddresses);  
+                /*
+                ManagementClass mc = new ManagementClass("Win32_NetworkAdapterConfiguration");
+                ManagementObjectCollection moc = mc.GetInstances();
+                List<string> MACAddress = new List<string>();
+                foreach (ManagementObject mo in moc)
+                {
+                    if ((bool)mo["IPEnabled"] == true) MACAddress.Add(mo["MacAddress"].ToString());
+                    mo.Dispose();
+                }
+                return String.Join("&", MACAddress);*/
             }
             catch
             {

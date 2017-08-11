@@ -41,13 +41,13 @@ namespace GDS_SERVER_WPF
         
         public void LoadMachines(string path)
         {
+            machines.Items.Clear();
             if (Directory.Exists(path))
             {
-                var directoriesInfoFiles = Directory.GetDirectories(path);
-                var data = new List<MachinesGroupsData>();
+                var directoriesInfoFiles = Directory.GetDirectories(path);                
                 foreach (var dir in directoriesInfoFiles)
                 {
-                    data.Add(new MachinesGroupsData(new DirectoryInfo(dir).Name, "", "", "", "", "Images/Folder.ico"));
+                    machines.Items.Add(new MachinesGroupsData(new DirectoryInfo(dir).Name, "", "", "", "", "Images/Folder.ico"));
                 }
                 string[] computersInfoFiles = Directory.GetFiles(path, "*.my");
                 foreach (string computerFile in computersInfoFiles)
@@ -57,7 +57,7 @@ namespace GDS_SERVER_WPF
                     string imageSource = "Images/Offline.ico";                                        
                     foreach (ClientHandler client in clients)
                     {
-                        if (client.macAddress != null && client.CheckMacsInREC(client.macAddress, computerData.macAddress))
+                        if (client.macAddresses != null && client.CheckMacsInREC(client.macAddresses, computerData.macAddresses))
                         {
                             imageSource = "Images/Online.ico";
                             break;
@@ -69,29 +69,27 @@ namespace GDS_SERVER_WPF
                     {
                         var lockDetailsData = FileHandler.Load<LockDetailsData>(lockFilePath);                        
                         detail = lockDetailsData.details;
-                    }
-                    data.Add(new MachinesGroupsData(Name, computerData.macAddress, computerData.ipAddress, computerData.computerName, detail, imageSource));
+                    }                    
+                    machines.Items.Add(new MachinesGroupsData(Name, computerData.MacAddress, computerData.ipAddress, computerData.computerName, detail, imageSource));
                 }
-                machines.ItemsSource = data;
             }
         }
 
         public void LoadTasks(string path)
         {
+            tasks.Items.Clear();
             if (Directory.Exists(path))
             {
-                var directoriesInfoFiles = Directory.GetDirectories(path);
-                var data = new List<TaskData>();
+                var directoriesInfoFiles = Directory.GetDirectories(path);                
                 foreach (var dir in directoriesInfoFiles)
                 {
-                    data.Add(new TaskData(new DirectoryInfo(dir).Name, "", "", new List<string>(), "Images/Folder.ico"));
+                    tasks.Items.Add(new TaskData(new DirectoryInfo(dir).Name, "", "", new List<string>(), "Images/Folder.ico"));
                 }
                 string[] tasksPath = Directory.GetFiles(path, "*.my");                
                 foreach (string taskPath in tasksPath)
-                {                    
-                    data.Add(FileHandler.Load<TaskData>(taskPath));
-                }
-                tasks.ItemsSource = data;                
+                {
+                    tasks.Items.Add(FileHandler.Load<TaskData>(taskPath));
+                }                
             }
         }
 

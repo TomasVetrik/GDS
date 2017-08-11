@@ -12,7 +12,7 @@ namespace GDS_SERVER_WPF
 {
     public class ClientHandler
     {
-        TcpClient clientSocket;        
+        public TcpClient clientSocket;        
         ListBox list;
         Label labelOnline;   
         byte[] dataStream = new byte[1024];
@@ -24,7 +24,7 @@ namespace GDS_SERVER_WPF
         public NetworkStream networkStream;
         public int clientNumber;
         public bool inWinpe;
-        public string macAddress;
+        public List<string> macAddresses = new List<string>();
         public ListViewMachinesAndTasksHandler listViewMachinesAndTasksHandler;      
 
         public void startClient(TcpClient inClientSocket, int _clientNumber, ListBox _list, List<ClientHandler> _clients, Label _labelOnline, ListViewMachinesAndTasksHandler _listViewMachinesAndTasksHandler)
@@ -41,9 +41,9 @@ namespace GDS_SERVER_WPF
             ctThread.Start();
         }
 
-        public void SendMessage(DataIdentifier ID, string _macAddress, string _message)
+        public void SendMessage(DataIdentifier ID, string _message)
         {
-            var sendData = new Packet(ID, _macAddress, _message);
+            var sendData = new Packet(ID, "", _message);
             var sendBytes = sendData.GetDataStream();            
             networkStream.Write(sendBytes, 0, sendBytes.Length);
             networkStream.Flush();
@@ -96,7 +96,11 @@ namespace GDS_SERVER_WPF
                 case DataIdentifier.SYN_FLAG:
                     {
                         inWinpe = false;
-                        macAddress = data.MacAddress;
+                        macAddresses.Clear();
+                        if (data.MacAddress.Contains("&"))
+                            macAddresses = new List<string>(data.MacAddress.Split('&'));
+                        else
+                            macAddresses.Add(data.MacAddress);
                         CheckIfClientNotDuplicate();
                         SaveComputerData(data.Message);
                         break;
@@ -104,7 +108,11 @@ namespace GDS_SERVER_WPF
                 case DataIdentifier.SYN_FLAG_WINPE:
                     {
                         inWinpe = true;
-                        macAddress = data.MacAddress;
+                        macAddresses.Clear();
+                        if (data.MacAddress.Contains("&"))
+                            macAddresses = new List<string>(data.MacAddress.Split('&'));
+                        else
+                            macAddresses.Add(data.MacAddress);
                         CheckIfClientNotDuplicate();
                         SaveComputerData(data.Message);
                         break;
@@ -116,10 +124,10 @@ namespace GDS_SERVER_WPF
         {
             for(int i = 0; i < clients.Count; i++)
             {
-                if(CheckMacsInREC(clients[i].macAddress, macAddress) && clients[i].clientNumber != clientNumber)
+                if(CheckMacsInREC(clients[i].macAddresses, macAddresses) && clients[i].clientNumber != clientNumber)
                 {
                     clientNumber = clients[i].clientNumber;
-                    clients[i].SendMessage(DataIdentifier.CLOSE, clients[i].macAddress, "CLOSE");
+                    clients[i].SendMessage(DataIdentifier.CLOSE, "CLOSE");
                     clients[i].clientSocket.Close();
                     clients.Remove(clients[i]);
                     Application.Current.Dispatcher.Invoke(() =>
@@ -131,26 +139,14 @@ namespace GDS_SERVER_WPF
                 }
             }
         }
-
-        private bool IsMacAddressIn(string[] array1, string MacAddress)
+        
+        private bool IsMacAddressIn(List<string> array1, List<string> array2)
         {
-            for (int i = 0; i < array1.Length; i++)
-            {
-                if (array1[i] == MacAddress)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        private bool IsMacAddressIn(string[] array1, string[] array2)
-        {
-            for (int i = 0; i < array1.Length; i++)
+            foreach (string text1 in array1)
             {
                 foreach (string text2 in array2)
                 {
-                    if (array1[i] == text2)
+                    if (text1 == text2)
                     {
                         return true;
                     }
@@ -159,29 +155,12 @@ namespace GDS_SERVER_WPF
             return false;
         }
 
-        public bool CheckMacsInREC(string Mac, string Rec)
+        public bool CheckMacsInREC(List<string> Macs, List<string> Recs)
         {
-            if (Rec != null)
+            if (Recs != null)
             {
-                if (Mac.Contains('&') && Rec.Contains('&'))
-                {
-                    return IsMacAddressIn(Mac.Split('&'), Rec.Split('&'));
-                }
-                else if (Mac.Contains('&'))
-                {
-                    return IsMacAddressIn(Mac.Split('&'), Rec);
-                }
-                else if (Rec.Contains('&'))
-                {
-                    return IsMacAddressIn(Rec.Split('&'), Mac);
-                }
-                else
-                {
-                    if (Mac == Rec)
-                    {
-                        return true;
-                    }
-                }
+                if (Macs.Count != 0 && Recs.Count != 0)
+                    return IsMacAddressIn(Macs, Recs);
             }
             return false;
         }
@@ -189,7 +168,11 @@ namespace GDS_SERVER_WPF
         private void SaveComputerData(string message)
         {            
             List<String> computerDetails_list = new List<string>(message.Split(new string[] { "|..|" }, StringSplitOptions.None));
-            computerDetails_list.Add("IP Address||" + epSender.ToString());
+            string IP = epSender.ToString();
+            if(IP.Contains(":"))
+                computerDetails_list.Add("IP Address||" + IP.Split(':')[0]);
+            else
+                computerDetails_list.Add("IP Address||" + IP);
             computerData.LoadDataFromList(computerDetails_list);
             var computersInfoFiles = Directory.GetFiles(@".\Machine Groups\", "*.my", SearchOption.AllDirectories);
             var filePath = GetFileNameByMac(computersInfoFiles);
@@ -219,7 +202,7 @@ namespace GDS_SERVER_WPF
                 }
                 else
                 {
-                    filePath = @".\Machine Groups\Default\" + computerData.computerName + "-NEW..my";                   
+                    filePath = @".\Machine Groups\Default\" + computerData.computerName + "-NEW.my";                   
                 }
                 FileHandler.Save<ComputerDetailsData>(computerData, filePath);
                 FileHandler.Save<ComputerConfigData>(computerConfigData, filePath.Replace(".my", ".cfg"));
@@ -232,7 +215,7 @@ namespace GDS_SERVER_WPF
             foreach (string computerFile in computersInfoFiles)
             {
                 var computerData = FileHandler.Load<ComputerDetailsData>(computerFile);
-                if (CheckMacsInREC(computerData.macAddress, macAddress))
+                if (CheckMacsInREC(computerData.macAddresses, macAddresses))
                 {
                     filePath = computerFile;
                     break;

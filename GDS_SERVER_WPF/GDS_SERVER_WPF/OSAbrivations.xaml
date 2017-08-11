@@ -20,19 +20,19 @@
         </Grid.ColumnDefinitions>
         <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Content="New OS Abrivation:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <TextBox Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" x:Name="textBoxNewAbrivation" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Width="auto" Height="auto" Margin="5,5,5,5"/>        
-        <Button Grid.Column="2" Grid.Row="0" x:Name="buttonNew" Content="Add New" Width="75" Height="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5,5,5,5" Click="buttonNew_Click" />
+        <Button Grid.Column="2" Grid.Row="0" x:Name="buttonNew" Content="Add New" Width="75" Height="auto" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5,5,5,5" Click="buttonNew_Click" />        
         <Separator Grid.ColumnSpan="3" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
-        <ListBox  Grid.ColumnSpan="3" Grid.Row="1" x:Name="listBoxOsAbbrivations" ItemsSource="{Binding MyItems}" Width="auto" Height="auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5" MouseDoubleClick="listBoxOsAbbrivations_MouseDoubleClick_1">
-            <ListBox.ContextMenu>
+        <ListView  Grid.ColumnSpan="3" Grid.Row="1" x:Name="listViewOsAbbrivations" ItemsSource="{Binding MyItems}" Width="auto" Height="auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5" MouseDoubleClick="listViewOsAbbrivations_MouseDoubleClick">
+            <ListView.ContextMenu>
                 <ContextMenu>
-                    <MenuItem Header="remove" Command="{Binding RemoveItem}"
+                    <MenuItem Header="Remove" Command="{Binding RemoveItem}"
             CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=ContextMenu}, Path=PlacementTarget.SelectedItem}" Click="MenuItemRemove_Click"/>
-                </ContextMenu>                
-            </ListBox.ContextMenu>
-        </ListBox>
+                </ContextMenu>
+            </ListView.ContextMenu>
+        </ListView>
         <Separator Grid.ColumnSpan="3" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
         <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" Content="Selected OS Abrivations:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <ListBox Grid.Row="2" Grid.ColumnSpan="3" x:Name="listBoxOSAbbrivationsOutPut" Width="auto" Height="22" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="5,5,5,5" MouseDoubleClick="listBoxOSAbbrivations_MouseDoubleClick">
+        <ListBox Grid.Row="2" Grid.ColumnSpan="3" x:Name="listBoxOSAbbrivationsOutPut" Width="auto" Height="22" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="5,5,5,5" MouseDoubleClick="listBoxOsAbbrivationsOutPut_MouseDoubleClick">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <VirtualizingStackPanel Orientation="Horizontal" />

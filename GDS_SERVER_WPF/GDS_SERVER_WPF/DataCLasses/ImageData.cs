@@ -5,8 +5,16 @@ namespace GDS_SERVER_WPF.DataCLasses
     public class ImageData
     {
         public ImageData()
-        {            
-            this.ImageSource = "Images/Tasks.png";     
+        {
+            Name = "";
+            this.ImageSource = "Images/Tasks.png";
+            SourcePath = "";
+            BoolLabel = "";
+            PartitionSize = 90;
+            VHDResizeSize = 50;
+            VHDResize = false;
+            VHDNames = new List<string>();
+            OSAbrivations = new List<string>();
         }
 
         public ImageData(string _name, string _imageSource = "Images/Tasks.png")

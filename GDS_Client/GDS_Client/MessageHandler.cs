@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace GDS_Client
 {
@@ -24,6 +26,12 @@ namespace GDS_Client
                     {
                         Console.WriteLine("Close client application");
                         Environment.Exit(0);
+                        break;
+                    }
+                case DataIdentifier.SEND_CONFIG:
+                    {
+                        List<String> fileInfo = new List<string>(data.Message.Split(new string[] { "|..|" }, StringSplitOptions.None));
+                        File.WriteAllText(fileInfo[0], fileInfo[1]);
                         break;
                     }
             }

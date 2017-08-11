@@ -14,9 +14,10 @@ namespace GDS_SERVER_WPF
     /// </summary>
     public partial class ImageOptions : Window
     {
-        public string path;
-        public bool baseImage;
-        public string nodePath;
+        public string path = "";
+        public bool baseImage = false;
+        public string nodePath = "";
+        public List<string> Names = new List<string>();        
 
         ImageData imageData = new ImageData();        
 
@@ -35,13 +36,18 @@ namespace GDS_SERVER_WPF
                 sliderPartitionDSize.Value = imageData.PartitionSize;
                 checkBoxVHDResize.IsChecked = imageData.VHDResize;
                 sliderVHDResizeSize.Value = imageData.VHDResizeSize;
-                listBoxVHDNames.ItemsSource = imageData.VHDNames;
+                foreach (string VHDName in imageData.VHDNames)
+                {                    
+                    listBoxVHDNames.Items.Add(VHDName);
+                }
                 textBoxBootLabel.Text = imageData.BoolLabel;
-                listBoxOSAbbrivations.ItemsSource = imageData.OSAbrivations;
+                foreach (string OSAbrivation in imageData.OSAbrivations)
+                {
+                    listBoxOSAbbrivations.Items.Add(OSAbrivation);
+                }
             }
             if(!baseImage)
             {
-                textBoxBootLabel.IsEnabled = false;
                 listBoxOSAbbrivations.IsEnabled = false;
                 listBoxVHDNames.IsEnabled = false;
                 sliderPartitionDSize.IsEnabled = false;
@@ -86,7 +92,13 @@ namespace GDS_SERVER_WPF
 
         private void buttonVHDNameAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            var addVHDNameDialog = new EditItem();
+            foreach (string name in listBoxVHDNames.Items)
+            {
+                addVHDNameDialog.Names.Add(name);
+            }
+            addVHDNameDialog.ShowDialog();
+            listBoxVHDNames.Items.Add(addVHDNameDialog.textBoxNewName.Text);
         }
 
         private void buttonOSAbrivationsAdd_Click(object sender, RoutedEventArgs e)
@@ -126,13 +138,23 @@ namespace GDS_SERVER_WPF
             {
                 SetErrorMessage(labelImageName, "'Image Name' cannot be empty or contains spaces");
                 return;
-            }            
+            }      
+            if(Names.Contains(textBoxImageName.Text) && path != "")
+            {
+                SetErrorMessage(labelImageName, "'Image Name': " + textBoxImageName.Text + " exists");
+                return;
+            }      
             if(textBoxSourcePath.Text == "")
             {
                 SetErrorMessage(labelSourcePath, "'Source Path' cannot be empty");
                 return;
             }
-            if(baseImage)
+            if (textBoxBootLabel.Text == "" || textBoxBootLabel.Text.IndexOfAny(new char[] { ',', '|', '#', '$', '.' }) != -1)
+            {
+                SetErrorMessage(labelBootLabel, "'Boot Label' cannot be empty or contains , | # $ .");
+                return;
+            }
+            if (baseImage)
             {
                 if (checkBoxVHDResize.IsChecked.Value && sliderPartitionDSize.Value < sliderVHDResizeSize.Value + 50)
                 {
@@ -143,27 +165,31 @@ namespace GDS_SERVER_WPF
                 {
                     SetErrorMessage(labelVHDName, "'VHD Name' cannot be empty");
                     return;
-                }
-                if (textBoxBootLabel.Text == "" || textBoxBootLabel.Text.IndexOfAny(new char[] { ',', '|', '#', '$', '.' }) != -1)
-                {
-                    SetErrorMessage(labelBootLabel, "'Boot Label' cannot be empty or contains , | # $ .");
-                    return;
-                }                
+                }                          
                 if(listBoxOSAbbrivations.Items.Count == 0)
                 {
                     SetErrorMessage(labelOSAbrivations, "'OS Abrivations' cannot be empty");
                     return;
                 }
+                imageData.PartitionSize = (int)sliderPartitionDSize.Value;
+                imageData.VHDResize = checkBoxVHDResize.IsChecked.Value;
+                imageData.VHDResizeSize = (int)sliderVHDResizeSize.Value;
+                imageData.VHDNames.Clear();
+                foreach (string VHDName in listBoxVHDNames.Items)
+                {
+                    imageData.VHDNames.Add(VHDName);
+                }
+                imageData.OSAbrivations.Clear();
+                foreach (string OSAbrivation in listBoxOSAbbrivations.Items)
+                {
+                    imageData.OSAbrivations.Add(OSAbrivation);
+                }
             }
             imageData.Name = textBoxImageName.Text;
             imageData.SourcePath = textBoxSourcePath.Text;
-            imageData.PartitionSize = (int)sliderPartitionDSize.Value;
-            imageData.VHDResize = checkBoxVHDResize.IsChecked.Value;
-            imageData.VHDResizeSize = (int)sliderVHDResizeSize.Value;
-            imageData.VHDNames = (List<string>)listBoxVHDNames.ItemsSource;
             imageData.BoolLabel = textBoxBootLabel.Text;
-            imageData.OSAbrivations = (List<string>)listBoxOSAbbrivations.ItemsSource;
-            FileHandler.Save<ImageData>(imageData, nodePath + "\\" + imageData.Name + ".my");
+            FileHandler.Save<ImageData>(imageData, nodePath + "\\" + imageData.Name + ".my");            
+            this.Close();
         }
 
         private void buttonOK_Click(object sender, RoutedEventArgs e)

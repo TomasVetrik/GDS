@@ -7,7 +7,8 @@ namespace GDS_SERVER_WPF
     public class ComputerDetailsData     
     {        
         public string computerName { set; get; }
-        public string macAddress { set; get; }
+        public List<string> macAddresses { set; get; }
+        public string MacAddress { set; get; }
         public string OSInformations { set; get; }
         public string processorInfo { set; get; }
         public string physicalMemoryInfo { set; get; }
@@ -35,7 +36,16 @@ namespace GDS_SERVER_WPF
                     if (line.Contains("MacAddress||"))
                     {
                         string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
-                        macAddress = splitter[1].Split('&')[0];
+                        if (splitter[1].Contains("&"))
+                        {
+                            macAddresses = new List<string>(splitter[1].Split('&'));
+                            MacAddress = macAddresses[0];
+                        }
+                        else
+                        {
+                            MacAddress = splitter[1];
+                            macAddresses.Add(MacAddress);
+                        }
                     }
                     if (line.Contains("OS Informations||"))
                     {
@@ -100,7 +110,7 @@ namespace GDS_SERVER_WPF
         {
             List<ItemData> items = new List<ItemData>();
             items.Add(new ItemData("Computer Name", computerName));
-            items.Add(new ItemData("Mac Address", macAddress));
+            items.Add(new ItemData("Mac Address", String.Join(" | ", macAddresses)));
             items.Add(new ItemData("OS Informations", OSInformations));
             items.Add(new ItemData("Processor Info", processorInfo));
             items.Add(new ItemData("Memory Info", physicalMemoryInfo));

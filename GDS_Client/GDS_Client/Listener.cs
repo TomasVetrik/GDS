@@ -54,8 +54,8 @@ namespace GDS_Client
                 clientSocket = new System.Net.Sockets.TcpClient();
                 //clientSocket.Connect("10.202.0.6", 100);
                 //clientSocket.Connect("10.202.20.32", 100);
-                //clientSocket.Connect("127.0.0.1", 100);
-                clientSocket.Connect("192.168.0.73", 100);
+                clientSocket.Connect("127.0.0.1", 100);
+                //clientSocket.Connect("192.168.0.73", 100);
                 serverStream = clientSocket.GetStream();
                 serverStream.BeginRead(dataStream, 0, dataStream.Length,
                                                    new AsyncCallback(myReadCallBack),

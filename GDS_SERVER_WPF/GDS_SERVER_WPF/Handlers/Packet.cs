@@ -31,6 +31,7 @@ namespace GDS_SERVER_WPF
         FINISH_MESSAGE,
         LogOut,
         Login,
+        SEND_CONFIG,
         CLOSE
     }
 

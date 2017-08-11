@@ -16,8 +16,7 @@ namespace GDS_SERVER_WPF
         public ListBox listBoxOut;
 
         TreeViewHandler treeViewMachinesAndTasksHandler;
-        ListBoxBrowseComputersHandler listViewBrowseComputersHandler;
-        List<string> machines = new List<string>();        
+        ListBoxBrowseComputersHandler listViewBrowseComputersHandler;             
         public BrowseComputers()
         {
             InitializeComponent();
@@ -69,7 +68,7 @@ namespace GDS_SERVER_WPF
 
         private void button_OK_Click(object sender, RoutedEventArgs e)
         {
-            machines = new List<string>();
+            listBoxOut.Items.Clear();
             if(listView.SelectedItems.Count != 0)
             {
                 foreach (MachinesGroupsData machineGroupData in listView.SelectedItems)
@@ -78,16 +77,15 @@ namespace GDS_SERVER_WPF
                     {
                         foreach(string file in Directory.GetFiles(treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + machineGroupData.Name, "*.my", SearchOption.AllDirectories))
                         {
-                            machines.Add(Path.GetFileName(file).Replace(".my",""));
+                            listBoxOut.Items.Add(Path.GetFileName(file).Replace(".my",""));
                         }
                     }
                     else
                     {
-                        machines.Add(machineGroupData.Name);
+                        listBoxOut.Items.Add(machineGroupData.Name);
                     }
                 }
             }
-            listBoxOut.ItemsSource = machines;
             this.Close();
         }       
     }

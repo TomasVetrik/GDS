@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GDS_SERVER_WPF"
         mc:Ignorable="d"
-        Title="GDS Console" Height="748" Width="1024" Closing="Window_Closing" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" WindowState="Maximized" Icon="Images/logo_gopas_sk.ico">
+        Title="GDS Server" Height="748" Width="1024" Closing="Window_Closing" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" WindowState="Maximized" Icon="Images/logo_gopas_sk.ico">
     <Window.Resources>
         <Style TargetType="{x:Type GridViewColumnHeader}">
             <Setter Property="HorizontalContentAlignment" Value="Left" />
@@ -140,17 +140,17 @@
                         </ListView.ContextMenu>
                         <ListView.View>
                             <GridView>
-                                <GridViewColumn Header="Name">
+                                <GridViewColumn Header="Name" Width="300">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Stretch">
                                                 <Image Width="32" Height="32" Source="{Binding ImageSource}"/>
                                                 <TextBlock Text="{Binding Path=Name}" Foreground="Black" VerticalAlignment="Center"/>
                                             </StackPanel>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Last Executed">
+                                <GridViewColumn Header="Last Executed" Width="150">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -159,7 +159,7 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Machine Group">
+                                <GridViewColumn Header="Machine Group" Width="150">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -262,6 +262,7 @@
         <Label x:Name="labelOnline" Grid.Row="1" Grid.Column="2" Content="Online: 999" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
         <Label x:Name="labelOffilne" Grid.Row="1" Grid.Column="3" Content="Offline: 999" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
         <Label x:Name="labelClients" Grid.Row="1" Grid.Column="4" Content="Clients: 999" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center" FontWeight="Bold"/>
+        <Button x:Name="button" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="104.273,-5,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
 
     </Grid>
 </Window>

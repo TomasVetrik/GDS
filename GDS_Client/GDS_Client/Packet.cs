@@ -31,6 +31,7 @@ namespace GDS_Client
         FINISH_MESSAGE,
         LogOut,
         Login,
+        SEND_CONFIG,
         CLOSE
     }
 

@@ -65,7 +65,7 @@
                                     </ItemsPanelTemplate>
                                 </ListBox.ItemsPanel>
                             </ListBox>
-                            <Button Grid.Column="1" Grid.Row="0" x:Name="buttonBrowse" Content="Browse" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="buttonBrowse_Click"/>
+                            <Button Grid.Column="1" Grid.Row="0" x:Name="buttonBrowse" Content="Browse" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="buttonBrowseComputers_Click"/>
                             <Button Grid.Column="1" Grid.Row="1" x:Name="buttonClear" Content="Clear" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="buttonClear_Click"/>
                             <Label x:Name="labelMachineGroup" Content="Mahine Group:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="9" Margin="0,29,0,0" Grid.RowSpan="2"/>
                             <Label Grid.Row="1" x:Name="labelNumberOfMachines" Content="Numbers Of PCs: 0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="9" Margin="0,0,0,0.333"/>
@@ -165,10 +165,10 @@
                                 <ColumnDefinition />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <ListBox Grid.ColumnSpan="3" Grid.Row="0" x:Name="listBoxCopyFilesInOS" IsEnabled="False"/>
+                            <ListBox Grid.ColumnSpan="3" Grid.Row="0" x:Name="listBoxCopyFilesInOS" MouseDoubleClick="listBoxCopyFilesInOS_MouseDoubleClick"/>
                             <Label Grid.ColumnSpan="3" Grid.Row="1" Content="Destination Folder:" VerticalContentAlignment="Center" FontWeight="Bold"/>
                             <TextBox Grid.ColumnSpan="3" Grid.Row="2" x:Name="textBoxDestinationFolderInOS" />
-                            <Button Grid.Column="0" Grid.Row="3" x:Name="buttonFilesInOS" Width="75" Height="auto" Content="Files" VerticalAlignment="Center" />
+                            <Button Grid.Column="0" Grid.Row="3" x:Name="buttonFilesInOS" Width="75" Height="auto" Content="Files" VerticalAlignment="Center" Click="buttonFilesInOS_Click" />
                             <Button Grid.Column="1" Grid.Row="3" x:Name="buttonFolderInOS" Width="75" Height="auto" Content="Folder" VerticalAlignment="Center" />
                             <Button Grid.Column="2" Grid.Row="3" x:Name="buttonClearInOS" Width="75" Height="auto" Content="Clear" VerticalAlignment="Center" />
                         </Grid>
@@ -199,10 +199,10 @@
                                 <ColumnDefinition />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <ListBox Grid.ColumnSpan="3" Grid.Row="0" x:Name="listBoxCopyFilesInWINPE" IsEnabled="False"/>
+                            <ListBox Grid.ColumnSpan="3" Grid.Row="0" x:Name="listBoxCopyFilesInWINPE" MouseDoubleClick="listBoxCopyFilesInWINPE_MouseDoubleClick"/>
                             <Label Grid.ColumnSpan="3" Grid.Row="1" Content="Destination Folder:" VerticalContentAlignment="Center" FontWeight="Bold"/>
                             <TextBox Grid.ColumnSpan="3" Grid.Row="2" x:Name="textBoxDestinationFolderInWINPE" />
-                            <Button Grid.Column="0" Grid.Row="3" x:Name="buttonFilesInWINPE" Width="75" Height="auto" Content="Files" VerticalAlignment="Center" />
+                            <Button Grid.Column="0" Grid.Row="3" x:Name="buttonFilesInWINPE" Width="75" Height="auto" Content="Files" VerticalAlignment="Center" Click="buttonFilesInWINPE_Click" />
                             <Button Grid.Column="1" Grid.Row="3" x:Name="buttonFolderInWINPE" Width="75" Height="auto" Content="Folder" VerticalAlignment="Center" />
                             <Button Grid.Column="2" Grid.Row="3" x:Name="buttonClearInWINPE" Width="75" Height="auto" Content="Clear" VerticalAlignment="Center" />
                         </Grid>

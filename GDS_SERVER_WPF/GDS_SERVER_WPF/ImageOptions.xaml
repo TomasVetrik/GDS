@@ -54,7 +54,7 @@
         <Separator Grid.Row="4" Grid.ColumnSpan="4" VerticalAlignment="Bottom"/>
 
         <Label Grid.Row="5" Grid.Column="0"  x:Name="labelBootLabel" Content="Bool Label:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" x:Name="textBoxBootLabel" Width="auto" Height="auto" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Text="Boot Label" Margin="5,5,5,5"/>
+        <TextBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" x:Name="textBoxBootLabel" Width="auto" Height="auto" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Margin="5,5,5,5"/>
         <Separator Grid.Row="5" Grid.ColumnSpan="4" VerticalAlignment="Bottom"/>
 
         <Label Grid.Row="6" Grid.Column="0"  x:Name="labelOSAbrivations" Content="OS Abrivations (Drivers):" HorizontalAlignment="Left" VerticalAlignment="Top"/>

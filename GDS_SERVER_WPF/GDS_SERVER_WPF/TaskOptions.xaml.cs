@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows;
@@ -23,6 +24,21 @@ namespace GDS_SERVER_WPF
             InitializeComponent();
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            taskData = new TaskData();
+            if (File.Exists(path))
+            {
+                taskData = FileHandler.Load<TaskData>(path);
+                LoadData();
+            }
+            else
+            {
+                LoadNewData();
+            }
+            labelNumberOfMachines.Content = "Number Of PCs: " + listBoxTargetComputers.Items.Count;
+        }
+
         private void SetDefaultColors()
         {
             labelTaskName.Foreground = Brushes.Black;
@@ -34,18 +50,13 @@ namespace GDS_SERVER_WPF
         {
             taskData.Name = textBoxTaskName.Text;
             taskData.LastExecuted = "NONE";
-        }
-
-        private void buttonSave_Click(object sender, RoutedEventArgs e)
-        {
-            Save();
-        }
+        }        
 
         private void LoadData()
         {
             textBoxTaskName.Text = taskData.Name;
             labelMachineGroupContent.Content = taskData.MachineGroup;
-            listBoxTargetComputers.ItemsSource = taskData.TargetComputers;
+            LoadDataToListBox(taskData.TargetComputers, listBoxTargetComputers);            
             textBoxBaseImage.Text = taskData.BaseImageSourcePath;
             textBoxDestinationFolderInOS.Text = taskData.DestinationDirectoryInOS;
             textBoxDestinationFolderInWINPE.Text = taskData.DestinationDirectoryInWINPE;
@@ -62,8 +73,8 @@ namespace GDS_SERVER_WPF
             richTextBoxCommandsInOS.AppendText(commandsOS);
             var commandsWINPE = string.Join("\n", taskData.CommnadsInWINPE);
             richTextBoxCommandsInWINPE.AppendText(commandsWINPE);
-            listBoxCopyFilesInOS.ItemsSource = taskData.CopyFilesInOS;
-            listBoxCopyFilesInWINPE.ItemsSource = taskData.CopyFilesInWINPE;
+            LoadDataToListBox(taskData.CopyFilesInOS, listBoxCopyFilesInOS);            
+            LoadDataToListBox(taskData.CopyFilesInWINPE, listBoxCopyFilesInWINPE);            
 
             slider.Value = taskData.WaitingTime;            
         }
@@ -75,18 +86,22 @@ namespace GDS_SERVER_WPF
             return textRange.Text;
         }
 
+        private void buttonSave_Click(object sender, RoutedEventArgs e)
+        {
+            Save();
+        }
+
         private void Save()
         {
             if (SaveControl())
             {
                 taskData.Name = textBoxTaskName.Text;
                 taskData.MachineGroup = labelMachineGroupContent.Content.ToString();
-                taskData.TargetComputers = (List<string>)listBoxTargetComputers.ItemsSource;
+                LoadDataToList(listBoxTargetComputers, taskData.TargetComputers);                
                 taskData.BaseImageSourcePath = textBoxBaseImage.Text;
                 taskData.DestinationDirectoryInOS = textBoxDestinationFolderInOS.Text;
                 taskData.DestinationDirectoryInWINPE = textBoxDestinationFolderInWINPE.Text;
-                taskData.DriveEImageSourcePath = textBoxDriveEImage.Text;
-                taskData.SourceDirectory = "";                
+                taskData.DriveEImageSourcePath = textBoxDriveEImage.Text;                
                 taskData.WakeOnLan = checkBoxWakeOnLan.IsChecked.Value;
                 taskData.Configuration = checkBoxConfiguration.IsChecked.Value;
                 taskData.Cloning = checkBoxCloning.IsChecked.Value;
@@ -98,8 +113,8 @@ namespace GDS_SERVER_WPF
                 string[] commandsOS = StringFromRichTextBox(richTextBoxCommandsInOS).Split(new[] { Environment.NewLine }
                                           , StringSplitOptions.RemoveEmptyEntries);
                 taskData.CommnadsInOS = new List<string>(commandsOS);
-                taskData.CopyFilesInOS = (List<string>)listBoxCopyFilesInOS.ItemsSource;
-                taskData.CopyFilesInWINPE = (List<string>)listBoxCopyFilesInWINPE.ItemsSource;
+                LoadDataToList(listBoxCopyFilesInOS, taskData.CopyFilesInOS);
+                LoadDataToList(listBoxCopyFilesInWINPE, taskData.CopyFilesInWINPE);
                 string[] commandsWINPE = StringFromRichTextBox(richTextBoxCommandsInWINPE).Split(new[] { Environment.NewLine }
                                           , StringSplitOptions.RemoveEmptyEntries);
                 taskData.CommnadsInOS = new List<string>(commandsWINPE);                
@@ -135,25 +150,12 @@ namespace GDS_SERVER_WPF
                 labelToolTip.Content += "The property 'Target Machines' cannot be an empty string\n";
                 return;
             }
+            taskData.LastExecuted = DateTime.Now.ToString();
             Save();
-        }
+            this.Close();
+        }        
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            taskData = new TaskData();
-            if(File.Exists(path))
-            {
-                taskData = FileHandler.Load<TaskData>(path);
-                LoadData();
-            }
-            else
-            {
-                LoadNewData();
-            }
-            labelNumberOfMachines.Content = "Number Of PCs: " + listBoxTargetComputers.Items.Count;
-        }
-
-        private void buttonBrowse_Click(object sender, RoutedEventArgs e)
+        private void buttonBrowseComputers_Click(object sender, RoutedEventArgs e)
         {
             var browseComputersDialog = new BrowseComputers();
             browseComputersDialog.clients = clients;
@@ -172,17 +174,31 @@ namespace GDS_SERVER_WPF
 
         private void buttonClear_Click(object sender, RoutedEventArgs e)
         {
-            listBoxTargetComputers.ItemsSource = taskData.TargetComputers = new List<string> { };
+            listBoxTargetComputers.Items.Clear();
             labelMachineGroupContent.Content = "NONE";
+            labelNumberOfMachines.Content = "Number Of PCs: 0";
+        }
+
+        private void ShowBrowseImagesDialog(string path, TextBox textBox, bool baseImage)
+        {
+            var browseImagesWindows = new BrowseImages();
+            browseImagesWindows.path = path;
+            browseImagesWindows.baseImage = baseImage;
+            browseImagesWindows.ShowDialog();
+            if (browseImagesWindows.pathOutput != "")
+            {
+                textBox.Text = browseImagesWindows.pathOutput;
+            }
         }
 
         private void buttonBaseBrowseImage_Click(object sender, RoutedEventArgs e)
         {
-            var browseImagesWindows = new BrowseImages();
-            browseImagesWindows.path = @".\Base\";
-            browseImagesWindows.baseImage = true;            
-            browseImagesWindows.ShowDialog();
+            ShowBrowseImagesDialog(@".\Base\", textBoxBaseImage, true);
+        }
 
+        private void buttonDriveEBrowseImage_Click(object sender, RoutedEventArgs e)
+        {
+            ShowBrowseImagesDialog(@".\DriveE", textBoxDriveEImage, false);
         }
 
         private void buttonBaseClear_Click(object sender, RoutedEventArgs e)
@@ -195,13 +211,72 @@ namespace GDS_SERVER_WPF
             textBoxDriveEImage.Text = "";
         }
 
-        private void buttonDriveEBrowseImage_Click(object sender, RoutedEventArgs e)
+        private string LoadCopyFiles(string sourceDirectory, string destinationDirectory, TextBox textBox, ListBox listBox, List<string> copyFiles)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = true;
+            if (sourceDirectory != "" && Directory.Exists(sourceDirectory))
+            {
+                openFileDialog.InitialDirectory = sourceDirectory;
+            }
+            openFileDialog.Filter = "All files (*.*)|*.*";
+            openFileDialog.ShowDialog();
+            string[] result = openFileDialog.FileNames;
+            if (result.Length != 0)
+            {
+                copyFiles = new List<string>(result);
+                sourceDirectory = Path.GetDirectoryName(openFileDialog.FileName);
+                LoadDataToListBox(copyFiles, listBox);
+                if (textBox.Text == "")
+                {
+                    destinationDirectory = textBox.Text = sourceDirectory;
+                }
+            }
+            return sourceDirectory;
+        }
 
-            var browseImagesWindows = new BrowseImages();
-            browseImagesWindows.baseImage = false;
-            browseImagesWindows.path = @".\DriveE";
-            browseImagesWindows.ShowDialog();
+        private void buttonFilesInWINPE_Click(object sender, RoutedEventArgs e)
+        {            
+            taskData.SourceDirectoryInWINPE = LoadCopyFiles(taskData.SourceDirectoryInWINPE, taskData.DestinationDirectoryInWINPE, textBoxDestinationFolderInWINPE, listBoxCopyFilesInWINPE, taskData.CopyFilesInWINPE);
+        }
+
+        private void LoadDataToListBox(List<string> items, ListBox listBox)
+        {
+            listBox.Items.Clear();
+            foreach(string item in items)
+            {
+                listBox.Items.Add(item);
+            }
+        }
+
+        private void LoadDataToList(ListBox listBox, List<string> items)
+        {
+            items.Clear();
+            foreach (string item in listBox.Items)
+            {
+                items.Add(item);
+            }
+        }
+
+        private void listBoxCopyFilesInWINPE_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (listBoxCopyFilesInWINPE.SelectedIndex != -1)
+            {
+                listBoxCopyFilesInWINPE.Items.Remove(listBoxCopyFilesInWINPE.SelectedItem);
+            }            
+        }
+
+        private void buttonFilesInOS_Click(object sender, RoutedEventArgs e)
+        {
+            taskData.SourceDirectoryInOS = LoadCopyFiles(taskData.SourceDirectoryInOS, taskData.DestinationDirectoryInOS, textBoxDestinationFolderInOS, listBoxCopyFilesInOS, taskData.CopyFilesInOS);
+        }
+
+        private void listBoxCopyFilesInOS_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            if (listBoxCopyFilesInOS.SelectedIndex != -1)
+            {
+                listBoxCopyFilesInOS.Items.Remove(listBoxCopyFilesInOS.SelectedItem);
+            }
         }
     }
 }

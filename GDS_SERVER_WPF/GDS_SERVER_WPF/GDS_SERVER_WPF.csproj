@@ -71,9 +71,14 @@
       <DependentUpon>ComputerDetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataCLasses\ComputerDetailsData.cs" />
+    <Compile Include="DataCLasses\ExecutedTaskData.cs" />
     <Compile Include="DataCLasses\ImageData.cs" />
     <Compile Include="DataCLasses\ItemData.cs" />
     <Compile Include="DataCLasses\OSAbrivationsData.cs" />
+    <Compile Include="DataCLasses\TaskStatusEnum.cs" />
+    <Compile Include="EditItem.xaml.cs">
+      <DependentUpon>EditItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Handlers\FileHandler.cs" />
     <Compile Include="Handlers\ListBoxBrowseImagesHandler.cs" />
     <Compile Include="Handlers\ListViewBrowseComputersHandler.cs" />
@@ -101,6 +106,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ComputerDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

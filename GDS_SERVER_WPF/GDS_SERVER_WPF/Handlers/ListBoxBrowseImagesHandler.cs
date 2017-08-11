@@ -1,7 +1,6 @@
 ﻿using GDS_SERVER_WPF.DataCLasses;
 using System.Collections.Generic;
 using System.IO;
-using System.Windows;
 using System.Windows.Controls;
 
 namespace GDS_SERVER_WPF.Handlers
@@ -18,21 +17,20 @@ namespace GDS_SERVER_WPF.Handlers
         }
 
         public void LoadImages(string path)
-        {            
+        {
+            tasks.Items.Clear();
             if (Directory.Exists(path))
             {
-                var directoriesInfoFiles = Directory.GetDirectories(path);
-                var data = new List<ImageData>();
+                var directoriesInfoFiles = Directory.GetDirectories(path);                
                 foreach (var dir in directoriesInfoFiles)
                 {
-                    data.Add(new ImageData(new DirectoryInfo(dir).Name, "Images/Folder.ico"));
+                    tasks.Items.Add(new ImageData(new DirectoryInfo(dir).Name, "Images/Folder.ico"));
                 }
                 string[] tasksPath = Directory.GetFiles(path, "*.my");
                 foreach (string taskPath in tasksPath)
                 {
-                    data.Add(FileHandler.Load<ImageData>(taskPath));
-                }
-                tasks.ItemsSource = data;
+                    tasks.Items.Add(FileHandler.Load<ImageData>(taskPath));
+                }                
             }
         }
 
@@ -45,6 +43,18 @@ namespace GDS_SERVER_WPF.Handlers
         {            
             treeViewHandler.AddPath(path);
             treeViewHandler.Refresh();
+        }
+
+        public void SelectItemByName(string name)
+        {
+            foreach(ImageData item in tasks.Items)
+            {
+                if(item.Name == name)
+                {
+                    tasks.SelectedItem = item;
+                    break;
+                }
+            }
         }
     }
 }

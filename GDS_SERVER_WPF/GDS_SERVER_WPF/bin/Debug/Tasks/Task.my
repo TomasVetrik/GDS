@@ -3,27 +3,29 @@
   <ImageSource>Images/Tasks.png</ImageSource>
   <Name>Task</Name>
   <LastExecuted>NONE</LastExecuted>
-  <MachineGroup>Default</MachineGroup>
-  <BaseImageSourcePath />
-  <DriveEImageSourcePath />
-  <SourceDirectory />
-  <DestinationDirectoryInOS />
-  <DestinationDirectoryInWINPE />
-  <WakeOnLan>true</WakeOnLan>
-  <Configuration>true</Configuration>
-  <Cloning>true</Cloning>
-  <ForceInstall>false</ForceInstall>
-  <ShutDown>true</ShutDown>
-  <SoftwareAndFileAction>true</SoftwareAndFileAction>
-  <SoftwareAndFileAction_WINPE>true</SoftwareAndFileAction_WINPE>
-  <WithoutVHD>false</WithoutVHD>
-  <CommnadsInOS />
-  <CopyFilesInOS />
-  <CopyFilesInWINPE />
-  <CommnadsInWINPE />
   <TargetComputers>
     <string>GAMER-PC</string>
     <string>VETRIK</string>
   </TargetComputers>
+  <MachineGroup>Machine Groups</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>true</ShutDown>
+  <Cloning>true</Cloning>
+  <BaseImageSourcePath />
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <DestinationDirectoryInOS />
+  <CommnadsInOS />
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>true</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE>D:\Projtekty\GDS_SOURCE\GDS\GDS\bin\Debug\DriveE</SourceDirectoryInWINPE>
+  <DestinationDirectoryInWINPE>D:\Projtekty\GDS_SOURCE\GDS\GDS\bin\Debug</DestinationDirectoryInWINPE>
+  <CopyFilesInWINPE>
+    <string>D:\Projtekty\GDS_SOURCE\GDS\GDS\bin\Debug\!NEMAZAT_temp</string>
+  </CopyFilesInWINPE>
+  <CommnadsInWINPE />
   <WaitingTime>40</WaitingTime>
 </TaskData>

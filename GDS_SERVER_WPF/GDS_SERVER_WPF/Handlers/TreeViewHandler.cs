@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
@@ -23,7 +24,7 @@ namespace GDS_SERVER_WPF
         }
 
         public void ListDirectory(string path)
-        {            
+        {
             var rootDirectoryInfo = new DirectoryInfo(path);
             treeView.Items.Add(CreateDirectoryNode(rootDirectoryInfo));
         }
@@ -53,7 +54,7 @@ namespace GDS_SERVER_WPF
             {
                 ListDirectory(path);
             }
-            ((TreeViewItem)treeView.Items[0]).IsSelected = true; 
+            ((TreeViewItem)treeView.Items[0]).IsSelected = true;
         }
 
         public void SelectNode(TreeViewItem node)
@@ -75,8 +76,7 @@ namespace GDS_SERVER_WPF
         {
             var node = (TreeViewItem)treeView.SelectedItem;
             if (node != null)
-            {
-                var result = Convert.ToString(node.Header);
+            {                var result = Convert.ToString(node.Header);
 
                 for (var i = GetParentItem(node); i != null; i = GetParentItem(i))
                     result = i.Header + "\\" + result;
@@ -87,15 +87,76 @@ namespace GDS_SERVER_WPF
         }
 
         public void SetTreeNode(string name)
-        {                       
-            foreach(TreeViewItem item in (treeView.SelectedItem as TreeViewItem).Items)
+        {
+            foreach (TreeViewItem item in (treeView.SelectedItem as TreeViewItem).Items)
             {
-                if((string)item.Header == name)
+                if ((string)item.Header == name)
                 {
                     item.IsSelected = true;
                     break;
                 }
-            }            
+            }
         }
-    }
+
+        public void SetTreeNodeByLastSelectedNode(string path, TreeView treeViewItem)
+        {
+            path = path.Replace(".\\", "");
+            if (path != "")
+            {
+                string name = "";
+                if (path.Contains("\\"))
+                {
+                    string[] splitter = path.Split('\\');
+                    path = "";
+                    name = splitter[0];
+                    for (int i = 1; i < splitter.Length; i++)
+                    {
+                        path += splitter[i] + "\\";
+                    }
+                }
+                if (name != "")
+                {
+                    foreach (TreeViewItem item in treeViewItem.Items)
+                    {
+                        if ((string)item.Header == name)
+                        {
+                            item.IsSelected = true;
+                            SetTreeNodeTemp(path, (treeViewItem.SelectedItem as TreeViewItem));
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        private void SetTreeNodeTemp(string path, TreeViewItem treeViewItem)
+        {           
+            if (path != "")
+            {
+                string name = "";
+                if (path.Contains("\\"))
+                {
+                    string[] splitter = path.Split('\\');
+                    path = "";
+                    name = splitter[0];
+                    for (int i = 1; i < splitter.Length; i++)
+                    {
+                        path += splitter[i] + "\\";
+                    }
+                }                
+                if (name != "")
+                {
+                    foreach (TreeViewItem item in treeViewItem.Items)
+                    {
+                        if ((string)item.Header == name)
+                        {
+                            item.IsSelected = true;
+                            SetTreeNodeTemp(path, item);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }    
 }

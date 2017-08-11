@@ -126,7 +126,6 @@ namespace GDS_SERVER_WPF
                 menuItemRenameWG.IsEnabled = false;
                 menuItemFeaturesWG.IsEnabled = false;
             }
-
         }
 
         private void listViewTasks_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -149,6 +148,17 @@ namespace GDS_SERVER_WPF
                     treeViewMachinesAndTasksHandler.SetTreeNode(taskData.Name);
                 }
             }                
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            string name = @".\OsAbrivations.my";
+            string lines = File.ReadAllText(name);
+            List<string> fileInfo = new List<string>();
+            fileInfo.Add(name);
+            fileInfo.Add(lines);
+
+            listViewMachinesAndTasksHandler.clients[0].SendMessage(DataIdentifier.SEND_CONFIG, String.Join("|..|", fileInfo.ToArray()));
         }
     }
 }
