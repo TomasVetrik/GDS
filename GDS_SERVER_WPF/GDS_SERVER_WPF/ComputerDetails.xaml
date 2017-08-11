@@ -1,0 +1,54 @@
+﻿<Window x:Class="GDS_SERVER_WPF.ComputerDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GDS_SERVER_WPF"
+        mc:Ignorable="d"
+        Title="ComputerDetails" Height="500" Width="500" Loaded="Window_Loaded" Icon="Images/logo_gopas_sk.ico" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TabControl x:Name="tabControl" HorizontalContentAlignment="Left" VerticalContentAlignment="Top">
+            <TabItem Header="Computer Details">
+                <Grid Background="#FFFFFF">
+                    <ListBox x:Name="listBox">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="0,2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="180" />
+                                        <ColumnDefinition Width="5*" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="{Binding Header}" />
+                                    <TextBlock Grid.Column="1" Text="{Binding Content}" />
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Configuration">
+                <Grid Background="#FFFFFF">
+                    <Label x:Name="labelComputerName" Content="ComputerName:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+                    <Label x:Name="labelWorkgroup" Content="Workgroup:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,36,0,0"/>
+                    <TextBox x:Name="textBoxComputerName" HorizontalAlignment="Left" Height="23" Margin="112,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212">
+                        <TextBox.Style>
+                            <Style TargetType="TextBox">
+                                <EventSetter Event="GotKeyboardFocus" Handler="EventSetter_OnHandler" />
+                            </Style>
+                        </TextBox.Style>
+                    </TextBox>
+                    <TextBox x:Name="textBoxWorkGroup" HorizontalAlignment="Left" Height="23" Margin="112,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="212">
+                        <TextBox.Style>
+                            <Style TargetType="TextBox">
+                                <EventSetter Event="GotKeyboardFocus" Handler="EventSetter_OnHandler" />
+                            </Style>
+                        </TextBox.Style>
+                    </TextBox>
+                    <Button x:Name="button" Content="Cancel" HorizontalAlignment="Right" Margin="0,0,10.333,9.667" VerticalAlignment="Bottom" Width="100" Click="button_Click"/>
+                    <Button x:Name="button1" Content="Save" HorizontalAlignment="Left" Margin="10,0,0,9.667" VerticalAlignment="Bottom" Width="100" Click="button1_Click"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

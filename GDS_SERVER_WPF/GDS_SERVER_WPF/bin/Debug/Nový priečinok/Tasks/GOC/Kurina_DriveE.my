@@ -1,0 +1,21 @@
+Kurina_DriveE
+TargetComputers||LEKTORSK1,STUDENTSK1-01,STUDENTSK1-02,STUDENTSK1-03,STUDENTSK1-04,STUDENTSK1-05,STUDENTSK1-06,STUDENTSK1-07,STUDENTSK1-08
+Clone||True
+Image Source Path||.\Images\Office\Office_2k13_x64
+DriveE Source Path||.\DriveE\GOC\Kurina_DriveE
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||2. 8. 2017 8:58:13
+WaitingTime||30
+Machine Group||UcebnaSK01
+Configuration||True
+WithoutVHD||False

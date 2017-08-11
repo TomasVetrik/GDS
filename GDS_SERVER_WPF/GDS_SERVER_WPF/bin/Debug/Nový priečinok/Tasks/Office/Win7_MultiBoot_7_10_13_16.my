@@ -1,0 +1,21 @@
+Win7_MultiBoot_7_10_13_16
+TargetComputers||STUDENTSK10-09
+Clone||True
+Image Source Path||.\Images\Office\Win7_MultiBoot
+DriveE Source Path||
+SAFA||False
+SourceDirectory||
+TargetDirectory||
+Force Install||True
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||c:\bcdedit_W7_Off2k16_x86.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||1. 8. 2017 15:10:58
+WaitingTime||30
+Machine Group||!Testing
+Configuration||True
+WithoutVHD||False

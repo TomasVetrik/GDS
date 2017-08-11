@@ -1,0 +1,21 @@
+HOHER_MS_SP_2013
+TargetComputers||LEKTORSK7,STUDENTSK7-01,STUDENTSK7-02,STUDENTSK7-03,STUDENTSK7-04,STUDENTSK7-05,STUDENTSK7-06,STUDENTSK7-07,STUDENTSK7-08
+Clone||True
+Image Source Path||.\Images\MOC\W2k8_R2
+DriveE Source Path||.\DriveE\HOHER_MS_SP_2013
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||27. 1. 2017 9:06:38
+WaitingTime||30
+Machine Group||UcebnaSK07
+Configuration||True
+WithoutVHD||False

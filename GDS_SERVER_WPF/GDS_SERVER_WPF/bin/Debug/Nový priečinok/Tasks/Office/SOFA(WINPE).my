@@ -1,0 +1,21 @@
+SOFA(WINPE)
+TargetComputers||STUDENTSK10-09
+Clone||False
+Image Source Path||.\Images\Office_2k13_MUI(1)
+DriveE Source Path||
+SAFA||False
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||True
+SourceDirectory(WINPE)||I:\Startup_WinPE
+TargetDirectory(WINPE)||C:\
+I:\Startup_WinPE\vnc.ps1
+Commands||
+WOL||True
+Commands(WINPE)||dir > C:\Dir.txt
+Shutdown||False
+LastExecution||27. 4. 2016 11:26:42
+WaitingTime||30
+Machine Group||Default
+Configuration||True

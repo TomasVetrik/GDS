@@ -1,0 +1,22 @@
+WOL
+TargetComputers||LEKTORSK2,STUDENTSK2-01,STUDENTSK2-03,STUDENTSK2-04,STUDENTSK2-05,STUDENTSK2-06,STUDENTSK2-07,STUDENTSK2-08,STUDENTSK2-09,STUDENTSK2-10,STUDENTSK2-11,STUDENTSK2-12
+Clone||False
+Image Source Path||
+DriveE Source Path||
+SAFA||False
+SourceDirectory||I:\Startup_WinPE\Deployment\GDS Console
+TargetDirectory||D:\TEST
+I:\Startup_WinPE\Deployment\GDS Console\START.bat
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||D:\TEST\Start.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||16. 3. 2017 10:10:10
+WaitingTime||30
+Machine Group||UcebnaSK02
+Configuration||False
+WithoutVHD||False

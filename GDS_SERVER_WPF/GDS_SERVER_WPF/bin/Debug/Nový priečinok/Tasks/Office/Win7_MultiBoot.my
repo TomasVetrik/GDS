@@ -1,0 +1,21 @@
+Win7_MultiBoot
+TargetComputers||DELL08
+Clone||True
+Image Source Path||.\Images\Office\Win7_MultiBoot
+DriveE Source Path||
+SAFA||False
+SourceDirectory||
+TargetDirectory||
+Force Install||True
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||16. 11. 2016 11:01:53
+WaitingTime||30
+Machine Group||Notebooks\Temp
+Configuration||True
+WithoutVHD||False

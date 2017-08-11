@@ -1,0 +1,20 @@
+InterNet_Generic
+TargetComputers||LEKTORSK8,STUDENTSK8-01,STUDENTSK8-02,STUDENTSK8-03,STUDENTSK8-04,STUDENTSK8-05,STUDENTSK8-06,STUDENTSK8-07,STUDENTSK8-08,STUDENTSK8-09,STUDENTSK8-10,STUDENTSK8-11,STUDENTSK8-12
+Clone||True
+Image Source Path||.\Images\_Net_Generic_v7
+DriveE Source Path||
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||D:\_internet_generic\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||31. 10. 2016 8:38:20
+WaitingTime||20
+Machine Group||UcebnaSK08
+Configuration||True

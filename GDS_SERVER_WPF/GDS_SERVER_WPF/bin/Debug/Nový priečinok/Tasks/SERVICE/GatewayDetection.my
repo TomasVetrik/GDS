@@ -1,0 +1,25 @@
+GatewayDetection
+TargetComputers||STUDENTSK9-01,STUDENTSK9-02,STUDENTSK9-03,STUDENTSK9-04,STUDENTSK9-05,STUDENTSK9-06,STUDENTSK9-07,STUDENTSK9-08
+Clone||False
+Image Source Path||
+DriveE Source Path||
+SAFA||True
+SourceDirectory||I:\Startup_OS
+TargetDirectory||D:\
+I:\Startup_OS\Autologon.bat
+I:\Startup_OS\Autologon_D.ps1
+I:\Startup_OS\Gateway_detection.bat
+I:\Startup_OS\Gateway_detection.ps1
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||D:\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||10. 7. 2017 10:07:33
+WaitingTime||30
+Machine Group||UcebnaSK09
+Configuration||False
+WithoutVHD||False

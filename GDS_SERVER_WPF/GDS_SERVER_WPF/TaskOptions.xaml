@@ -1,0 +1,221 @@
+﻿<Window x:Class="GDS_SERVER_WPF.TaskOptions"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GDS_SERVER_WPF"
+        mc:Ignorable="d"
+        Title="TaskOptions" Height="600" Width="400" Icon="Images/logo_gopas_sk.ico" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl x:Name="tabControl" Grid.Row="0" Grid.ColumnSpan="3" Height="auto">
+            <TabItem Header="General">
+                <Grid Background="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" />
+                        <RowDefinition Height="90" />
+                        <RowDefinition Height="95" />
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" x:Name="labelTaskName" Content="Task Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                    <TextBox Grid.Row="0" x:Name="textBoxTaskName" Height="25" Margin="10,36,10,0" TextWrapping="Wrap" Width="auto" VerticalAlignment="Top">
+                    </TextBox>
+                    <GroupBox Grid.Row="1" x:Name="groupBoxTaskSteps" Header="Task Steps" Margin="10,0" VerticalAlignment="Top" Height="80">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <CheckBox x:Name="checkBoxCloning" Grid.Row="0" Grid.Column="0" Content="Clone" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="True"/>
+                            <CheckBox x:Name="checkBoxSOFA" Grid.Row="0" Grid.Column="1" Content="Software And File Actions" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="True"/>
+                            <CheckBox x:Name="checkBoxSOFAWinpe" Grid.Row="1" Grid.ColumnSpan="2" Content="Software and File Actions (WINPE)" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="True"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Grid.Row="2" x:Name="groupBoxTargetMachines" Header="Target Machines" Margin="10,0" VerticalAlignment="Top" Height="90">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="75"/>
+                            </Grid.ColumnDefinitions>
+                            <ListBox Grid.Column="0" Grid.Row="0" x:Name="listBoxTargetComputers" Height="25" Width="auto" VerticalAlignment="Center" ToolTip="Task Name" Margin="0,0,10.333,0" IsEnabled="False" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                <ListBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <VirtualizingStackPanel Orientation="Horizontal" />
+                                    </ItemsPanelTemplate>
+                                </ListBox.ItemsPanel>
+                            </ListBox>
+                            <Button Grid.Column="1" Grid.Row="0" x:Name="buttonBrowse" Content="Browse" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="buttonBrowse_Click"/>
+                            <Button Grid.Column="1" Grid.Row="1" x:Name="buttonClear" Content="Clear" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="buttonClear_Click"/>
+                            <Label x:Name="labelMachineGroup" Content="Mahine Group:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="9" Margin="0,29,0,0" Grid.RowSpan="2"/>
+                            <Label Grid.Row="1" x:Name="labelNumberOfMachines" Content="Numbers Of PCs: 0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="9" Margin="0,0,0,0.333"/>
+                            <Label x:Name="labelMachineGroupContent" Content="NONE" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="9" Margin="67,29,0,0" Grid.RowSpan="2" FontWeight="Bold"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Grid.Row="3" x:Name="groupBoxTaskOptions" Header="Task Options" Margin="10,0" VerticalAlignment="Top" Height="80">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <CheckBox x:Name="checkBoxWakeOnLan" Grid.Row="0" Grid.Column="0" Content="Use Wake On Lan" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="True" IsEnabled="False"/>
+                            <CheckBox x:Name="checkBoxShutdown" Grid.Row="0" Grid.Column="1" Content="Shutdown" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <CheckBox x:Name="checkBoxConfiguration" Grid.Row="1" Grid.Column="0" Content="Configuration" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <CheckBox x:Name="checkBoxForceInstall" Grid.Row="1" Grid.Column="1" Content="Force Install" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        </Grid>
+                    </GroupBox>
+                    <Grid Grid.Row="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="5*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Slider Grid.Column="1" x:Name="slider" VerticalAlignment="Center" Width="auto" Margin="10,0" Maximum="100" Minimum="10" SmallChange="1" Value="30" IsSnapToTickEnabled="True"/>
+                        <Label Grid.Column="0" x:Name="labelWaitingTime" Content="Waiting Time:" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                        <Label Grid.Column="3" x:Name="labelWaitingTimeCount" Content="{ Binding ElementName=slider, Path=Value}" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Center"/>
+                    </Grid>
+                    <Label x:Name="labelToolTip" Content="" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="5" Foreground="Red" VerticalAlignment="Top" FontWeight="Bold"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Clone" Visibility="{Binding ElementName=checkBoxCloning, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}" >
+                <Grid Background="#FFFFFF">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <GroupBox x:Name="groupBox" Header="Base Image" Grid.Row="0" HorizontalAlignment="Stretch" Margin="10,10,10,10" VerticalAlignment="Stretch">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <CheckBox Grid.Row="1"  Grid.Column="0" x:Name="checkBoxWithoutVHD" Content="Without VHD" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <TextBox Grid.Row="0"  Grid.Column="0" x:Name="textBoxBaseImage" HorizontalAlignment="Stretch" Height="auto" Margin="0,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="auto" IsEnabled="False"/>
+                            <Button Grid.Row="0"  Grid.Column="1" x:Name="buttonBaseBrowseImage" Content="Browse" Width="75" Height="auto" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonBaseBrowseImage_Click"/>
+                            <Button Grid.Row="1"  Grid.Column="1" x:Name="buttonBaseClear" Content="Clear" Width="75" Height="auto" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonBaseClear_Click"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox x:Name="groupBox_Copy" Header="DriveE Image" Grid.Row="1" HorizontalAlignment="Stretch" Margin="10,10,10,10" VerticalAlignment="Stretch">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Grid.Row="0"  Grid.Column="0" x:Name="textBoxDriveEImage" HorizontalAlignment="Stretch" Height="auto" Margin="0,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="auto" IsEnabled="False"/>
+                            <Button Grid.Row="0"  Grid.Column="1" x:Name="buttonDriveEBrowseImage" Content="Browse" Width="75" Height="auto" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonDriveEBrowseImage_Click"/>
+                            <Button Grid.Row="1"  Grid.Column="1" x:Name="buttonDriveEClear" Content="Clear" Width="75" Height="auto" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonDriveEClear_Click"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="SOFA" Visibility="{Binding ElementName=checkBoxSOFA, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}" >
+                <Grid Background="#FFFFFF">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="5*" />
+                        <RowDefinition Height="3*" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" x:Name="label" Content="IN OS" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="24"/>
+                    <GroupBox  Grid.Row="1" x:Name="groupBox1" Header="Copy Files" HorizontalAlignment="Stretch" Margin="10,0,10,0" VerticalAlignment="Stretch">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="6*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="3*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <ListBox Grid.ColumnSpan="3" Grid.Row="0" x:Name="listBoxCopyFilesInOS" IsEnabled="False"/>
+                            <Label Grid.ColumnSpan="3" Grid.Row="1" Content="Destination Folder:" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                            <TextBox Grid.ColumnSpan="3" Grid.Row="2" x:Name="textBoxDestinationFolderInOS" />
+                            <Button Grid.Column="0" Grid.Row="3" x:Name="buttonFilesInOS" Width="75" Height="auto" Content="Files" VerticalAlignment="Center" />
+                            <Button Grid.Column="1" Grid.Row="3" x:Name="buttonFolderInOS" Width="75" Height="auto" Content="Folder" VerticalAlignment="Center" />
+                            <Button Grid.Column="2" Grid.Row="3" x:Name="buttonClearInOS" Width="75" Height="auto" Content="Clear" VerticalAlignment="Center" />
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Grid.Row="2" x:Name="groupBox2" Header="Commands to Run" HorizontalAlignment="Stretch" Margin="10,0,10,0" VerticalAlignment="Stretch">
+                        <RichTextBox x:Name="richTextBoxCommandsInOS" />
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="SOFA(WINPE)" Visibility="{Binding ElementName=checkBoxSOFAWinpe, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}}" >
+                <Grid Background="#FFFFFF">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="5*" />
+                        <RowDefinition Height="3*" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" x:Name="label2" Content="IN WINPE" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="24"/>
+                    <GroupBox  Grid.Row="1" x:Name="groupBox4" Header="Copy Files" HorizontalAlignment="Stretch" Margin="10,0,10,0" VerticalAlignment="Stretch">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="6*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="3*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <ListBox Grid.ColumnSpan="3" Grid.Row="0" x:Name="listBoxCopyFilesInWINPE" IsEnabled="False"/>
+                            <Label Grid.ColumnSpan="3" Grid.Row="1" Content="Destination Folder:" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                            <TextBox Grid.ColumnSpan="3" Grid.Row="2" x:Name="textBoxDestinationFolderInWINPE" />
+                            <Button Grid.Column="0" Grid.Row="3" x:Name="buttonFilesInWINPE" Width="75" Height="auto" Content="Files" VerticalAlignment="Center" />
+                            <Button Grid.Column="1" Grid.Row="3" x:Name="buttonFolderInWINPE" Width="75" Height="auto" Content="Folder" VerticalAlignment="Center" />
+                            <Button Grid.Column="2" Grid.Row="3" x:Name="buttonClearInWINPE" Width="75" Height="auto" Content="Clear" VerticalAlignment="Center" />
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Grid.Row="2" x:Name="groupBox3" Header="Commands to Run" HorizontalAlignment="Stretch" Margin="10,0,10,0" VerticalAlignment="Stretch">
+                        <RichTextBox x:Name="richTextBoxCommandsInWINPE" />
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button x:Name="buttonExecute" Grid.Row="1" Grid.Column="0" Content="Execute" Width="75" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonExecute_Click"/>
+        <Button x:Name="buttonSave" Grid.Row="1" Grid.Column="1" Content="Save" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="buttonSave_Click"/>
+        <Button x:Name="buttonClose" Grid.Row="1" Grid.Column="2" Content="Close" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="buttonClose_Click"/>
+
+    </Grid>
+</Window>

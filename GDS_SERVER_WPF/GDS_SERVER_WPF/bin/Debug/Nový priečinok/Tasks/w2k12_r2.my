@@ -1,0 +1,26 @@
+w2k12_r2
+TargetComputers||STUDENTSK10-09
+Clone||True
+Image Source Path||.\Images\W2k2r2
+DriveE Source Path||.\DriveE\AHoj
+SAFA||False
+SourceDirectory||D:\Base
+TargetDirectory||D:\Base
+D:\Base\Lon-Host1.vhdx
+D:\Base\Lon-Host2.vhdx
+Force Install||False
+SAFA(WINPE)||True
+SourceDirectory(WINPE)||D:\Projtekty\GDS_SOURCE\GDS\GDS\bin\Debug
+TargetDirectory(WINPE)||D:\Base
+D:\Projtekty\GDS_SOURCE\GDS\GDS\bin\Debug\Connected_selected.ico
+Commands||Ahoj1
+Ahoj2
+WOL||True
+Commands(WINPE)||rm dir
+rm dir2
+rm dir3
+Shutdown||False
+LastExecution||1. 3. 2016 12:35:09
+WaitingTime||25
+Machine Group||Default
+Configuration||True

@@ -1,0 +1,24 @@
+TEST_UPDATE
+TargetComputers||LEKTORSK2,STUDENTSK2-01,STUDENTSK2-02,STUDENTSK2-03,STUDENTSK2-04,STUDENTSK2-05,STUDENTSK2-06,STUDENTSK2-07,STUDENTSK2-08,STUDENTSK2-09,STUDENTSK2-10,STUDENTSK2-11,STUDENTSK2-12
+Clone||False
+Image Source Path||
+DriveE Source Path||
+SAFA||True
+SourceDirectory||D:\Projtekty\GDS_SOURCE\GDS\GDS\bin\Debug\UPDATE
+TargetDirectory||D:\Temp\GDSClient\UPDATE
+D:\Projtekty\GDS_SOURCE\GDS\GDS\bin\Debug\UPDATE\GDSClient_Update.bat
+D:\Projtekty\GDS_SOURCE\GDS\GDS\bin\Debug\UPDATE\GDSClient_Update.ps1
+D:\Projtekty\GDS_SOURCE\GDS\GDS\bin\Debug\UPDATE\HONMSW_CLIENT.exe
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||D:\TEMP\GDSClient\UPDATE\GDSClient_Update.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||16.3.2017 10:02:31
+WaitingTime||20
+Machine Group||UcebnaSK02
+Configuration||False
+WithoutVHD||False

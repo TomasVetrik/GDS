@@ -1,0 +1,21 @@
+20342B
+TargetComputers||LEKTORSK10,STUDENTSK10-01,STUDENTSK10-02,STUDENTSK10-03,STUDENTSK10-04,STUDENTSK10-07,STUDENTSK10-08
+Clone||True
+Image Source Path||.\Images\MOC\W2k8_R2
+DriveE Source Path||.\DriveE\20000\20342B
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||cscript E:\AutoLogon.vbs
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||30. 12. 2016 10:53:05
+WaitingTime||30
+Machine Group||UcebnaSK10
+Configuration||True
+WithoutVHD||False

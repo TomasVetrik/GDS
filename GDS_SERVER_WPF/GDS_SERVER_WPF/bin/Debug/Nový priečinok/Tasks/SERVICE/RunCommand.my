@@ -1,0 +1,21 @@
+RunCommand
+TargetComputers||STUDENTSK14-11,STUDENTSK14-12
+Clone||False
+Image Source Path||
+DriveE Source Path||
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||shutdown /r /t 0
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||21. 7. 2017 16:09:32
+WaitingTime||30
+Machine Group||UcebnaSK14
+Configuration||False
+WithoutVHD||False

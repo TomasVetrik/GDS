@@ -1,0 +1,21 @@
+GOC54
+TargetComputers||LEKTORSK4,STUDENTSK4-01,STUDENTSK4-02,STUDENTSK4-03,STUDENTSK4-04,STUDENTSK4-05,STUDENTSK4-06,STUDENTSK4-07,STUDENTSK4-08
+Clone||True
+Image Source Path||.\Images\Office\Office_2k13_x64
+DriveE Source Path||.\DriveE\GOC\GOC54
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||cscript E:\Autologon.vbs
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||16. 6. 2017 9:02:02
+WaitingTime||30
+Machine Group||UcebnaSK04
+Configuration||True
+WithoutVHD||False
