@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GDS_SERVER_WPF"
         mc:Ignorable="d"
-        Title="TaskOptions" Height="600" Width="400" Icon="Images/logo_gopas_sk.ico" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+        Title="TaskOptions" Height="600" Width="400" Icon="Images/logo_gopas_sk.ico" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" KeyUp="Window_KeyUp">
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
     </Window.Resources>
@@ -43,9 +43,9 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <CheckBox x:Name="checkBoxCloning" Grid.Row="0" Grid.Column="0" Content="Clone" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="True"/>
-                            <CheckBox x:Name="checkBoxSOFA" Grid.Row="0" Grid.Column="1" Content="Software And File Actions" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="True"/>
-                            <CheckBox x:Name="checkBoxSOFAWinpe" Grid.Row="1" Grid.ColumnSpan="2" Content="Software and File Actions (WINPE)" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="True"/>
+                            <CheckBox x:Name="checkBoxCloning" Grid.Row="0" Grid.Column="0" Content="Clone" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <CheckBox x:Name="checkBoxSOFA" Grid.Row="0" Grid.Column="1" Content="Software And File Actions" HorizontalAlignment="Left" VerticalAlignment="Center" IsEnabled="False"/>
+                            <CheckBox x:Name="checkBoxSOFAWinpe" Grid.Row="1" Grid.ColumnSpan="2" Content="Software and File Actions (WINPE)" HorizontalAlignment="Left" VerticalAlignment="Center" IsEnabled="False"/>
                         </Grid>
                     </GroupBox>
                     <GroupBox Grid.Row="2" x:Name="groupBoxTargetMachines" Header="Target Machines" Margin="10,0" VerticalAlignment="Top" Height="90">
@@ -64,6 +64,16 @@
                                         <VirtualizingStackPanel Orientation="Horizontal" />
                                     </ItemsPanelTemplate>
                                 </ListBox.ItemsPanel>
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Margin="0,2">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Text="{Binding Name}" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
                             </ListBox>
                             <Button Grid.Column="1" Grid.Row="0" x:Name="buttonBrowse" Content="Browse" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="buttonBrowseComputers_Click"/>
                             <Button Grid.Column="1" Grid.Row="1" x:Name="buttonClear" Content="Clear" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="buttonClear_Click"/>
@@ -94,11 +104,11 @@
                             <ColumnDefinition Width="5*" />
                             <ColumnDefinition Width="2*" />
                         </Grid.ColumnDefinitions>
-                        <Slider Grid.Column="1" x:Name="slider" VerticalAlignment="Center" Width="auto" Margin="10,0" Maximum="100" Minimum="10" SmallChange="1" Value="30" IsSnapToTickEnabled="True"/>
+                        <Slider Grid.Column="1" x:Name="slider" VerticalAlignment="Center" Width="auto" Margin="10,0" Maximum="100" SmallChange="1" Value="30" IsSnapToTickEnabled="True" Minimum="10"/>
                         <Label Grid.Column="0" x:Name="labelWaitingTime" Content="Waiting Time:" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                         <Label Grid.Column="3" x:Name="labelWaitingTimeCount" Content="{ Binding ElementName=slider, Path=Value}" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Center"/>
                     </Grid>
-                    <Label x:Name="labelToolTip" Content="" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="5" Foreground="Red" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label x:Name="labelError" Content="" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="5" Foreground="Red" VerticalAlignment="Top" FontWeight="Bold"/>
 
                 </Grid>
             </TabItem>

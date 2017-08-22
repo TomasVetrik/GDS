@@ -181,13 +181,13 @@ namespace GDS_Client
             return info;
         }
 
-        public static string GetMacAddresses()
+        public static List<string> GetMacAddresses()
         {
             try
             {
                 List<string> macAddresses = new List<string>();
                 ManagementObjectSearcher searcher = new ManagementObjectSearcher
-    ("Select MACAddress,PNPDeviceID FROM Win32_NetworkAdapter WHERE MACAddress IS NOT NULL AND PNPDeviceID IS NOT NULL");
+    ("Select MACAddress,PNPDeviceID FROM Win32_NetworkAdapter WHERE MACAddress IS NOT NULL");
                 ManagementObjectCollection mObject = searcher.Get();
 
                 foreach (ManagementObject obj in mObject)
@@ -198,8 +198,8 @@ namespace GDS_Client
                         macAddresses.Add(obj["MACAddress"].ToString()); 
                     }
                 }
-
-                return String.Join("&", macAddresses);
+             
+                return macAddresses;
                 /*string macAddresses = "";
                 ManagementObjectSearcher mos = new ManagementObjectSearcher("select MACAddress, PNPDeviceID from Win32_NetworkAdapter Where AdapterType='Ethernet 802.3'");
                 foreach (ManagementObject mo in mos.Get())
@@ -245,7 +245,7 @@ namespace GDS_Client
             {
                 Thread.Sleep(1000);
                 GetMacAddresses();
-                return "";
+                return new List<string>();
             }
         }
     }

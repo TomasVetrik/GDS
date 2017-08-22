@@ -1,6 +1,7 @@
 ﻿using GDS_SERVER_WPF.DataCLasses;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
 using System.Windows.Controls;
 
 namespace GDS_SERVER_WPF.Handlers
@@ -9,11 +10,12 @@ namespace GDS_SERVER_WPF.Handlers
     {
         TreeViewHandler treeViewHandler;
         ListView tasks;
+        
 
         public ListViewBrowseImagesHandler(ListView _tasks, TreeViewHandler _treeViewHandler)
         {
             this.tasks = _tasks;
-            this.treeViewHandler = _treeViewHandler;
+            this.treeViewHandler = _treeViewHandler;            
         }
 
         public void LoadImages(string path)

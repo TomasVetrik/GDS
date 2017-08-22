@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GDS_SERVER_WPF"
+        xmlns:local="clr-namespace:GDS_SERVER_WPF"  
+        xmlns:self="clr-namespace:GDS_SERVER_WPF"
         mc:Ignorable="d"
-        Title="GDS Server" Height="748" Width="1024" Closing="Window_Closing" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" WindowState="Maximized" Icon="Images/logo_gopas_sk.ico">
+        Title="GDS Server" Height="748" Width="1024" Closing="Window_Closing" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" WindowState="Maximized" Icon="Images/logo_gopas_sk.ico" KeyUp="Window_KeyUp">
     <Window.Resources>
         <Style TargetType="{x:Type GridViewColumnHeader}">
             <Setter Property="HorizontalContentAlignment" Value="Left" />
@@ -66,21 +67,21 @@
                         </TreeView.Resources>
                     </TreeView>
                     <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
-                    <ListView Grid.Row="0" Grid.Column="3" x:Name="listViewMachineGroups" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White" MouseDoubleClick="listViewMachineGroups_MouseDoubleClick" SelectionChanged="listViewMachineGroups_SelectionChanged">
+                    <ListView Grid.Row="0" Grid.Column="3" x:Name="listViewMachineGroups" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White" MouseDoubleClick="listViewMachineGroups_MouseDoubleClick" SelectionChanged="listViewMachineGroups_SelectionChanged" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True">
                         <ListView.ContextMenu>
                             <ContextMenu>
                                 <MenuItem x:Name="menuItemRenameWG" Header="Rename" InputGestureText="F2"  Click="MenuItemMachineGroupsRename_Click"/>
-                                <MenuItem x:Name="menuItemDeleteWG" Header="Delete" InputGestureText="DEL" Click="MenuItemMachineGroupsDelete_Click"/>
+                                <MenuItem x:Name="menuItemDeleteWG" Header="Delete" InputGestureText="DEL" Click="MenuItemDelete_Click"/>
                                 <MenuItem x:Name="menuItemFeaturesWG" Header="Features">
                                     <MenuItem Header="Wake On Lan" InputGestureText="CTRL+W" Click="MenuItemMachineGroupsWOL_Click"/>
                                     <MenuItem Header="RDP" InputGestureText="CTRL+R" Click="MenuItemMachineGroupsRDP_Click"/>
                                 </MenuItem>
-                                <MenuItem Header="New Folder" InputGestureText="CTRL+SHIFT+N" Click="MenuItemMachineGroupsCreateFolder_Click"/>
+                                <MenuItem Header="New Folder" InputGestureText="CTRL+SHIFT+N" Click="MenuItemCreateFolder_Click"/>
                             </ContextMenu>
                         </ListView.ContextMenu>
                         <ListView.View>
                             <GridView>
-                                <GridViewColumn Header="Name" Width="180">
+                                <GridViewColumn Header="Name" Width="180" local:GridViewSort.PropertyName="Name">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -90,7 +91,7 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Mac Address" Width="150">
+                                <GridViewColumn Header="Mac Address" Width="150" local:GridViewSort.PropertyName="MacAddress">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -99,7 +100,7 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="IP Address" Width="150">
+                                <GridViewColumn Header="IP Address" Width="150" local:GridViewSort.PropertyName="IPAddress">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -108,7 +109,7 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Real PC Name" Width="150">
+                                <GridViewColumn Header="Real PC Name" Width="150"  local:GridViewSort.PropertyName="RealPCName">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -117,7 +118,7 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Detail" Width="300">
+                                <GridViewColumn Header="Detail" Width="300" local:GridViewSort.PropertyName="Detail">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -129,18 +130,18 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <ListView Grid.Row="0" Grid.Column="3" x:Name="listViewTasks" Visibility="Hidden" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MouseDoubleClick="listViewTasks_MouseDoubleClick">
+                    <ListView Grid.Row="0" Grid.Column="3" x:Name="listViewTasks" Visibility="Hidden" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MouseDoubleClick="listViewTasks_MouseDoubleClick" SelectionChanged="listViewTasks_SelectionChanged" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True">
                         <ListView.ContextMenu>
                             <ContextMenu>
-                                <MenuItem Header="New Task" Click="MenuItemTasksNewTask_Click"/>
-                                <MenuItem Header="Rename" Click="MenuItemTaskRename_Click"/>
-                                <MenuItem Header="Delete" Click="MenuItemTaskDelete_Click"/>
-                                <MenuItem Header="New Folder" Click="MenuItemTaskCreateFolder_Click"/>
+                                <MenuItem Header="New Task" Click="MenuItemTaskNew_Click"/>
+                                <MenuItem x:Name="menuItemRenameTask" Header="Rename" InputGestureText="F2" Click="MenuItemTaskRename_Click"/>
+                                <MenuItem x:Name="menuItemDeleteTask" Header="Delete" InputGestureText="DEL" Click="MenuItemDelete_Click"/>
+                                <MenuItem Header="New Folder" Click="MenuItemCreateFolder_Click"/>
                             </ContextMenu>
                         </ListView.ContextMenu>
                         <ListView.View>
                             <GridView>
-                                <GridViewColumn Header="Name" Width="300">
+                                <GridViewColumn Header="Name" Width="300" local:GridViewSort.PropertyName="Name">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Stretch">
@@ -150,7 +151,7 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Last Executed" Width="150">
+                                <GridViewColumn Header="Last Executed" Width="150" local:GridViewSort.PropertyName="LastExecuted">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -159,7 +160,7 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Machine Group" Width="150">
+                                <GridViewColumn Header="Machine Group" Width="150" local:GridViewSort.PropertyName="MachineGroup">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -168,11 +169,11 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Computers" Width="300">
+                                <GridViewColumn Header="Computers" Width="300" local:GridViewSort.PropertyName="TargetComputers">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                                <ListBox ItemsSource="{Binding Path=TargetComputers}" Foreground="Black" VerticalAlignment="Center" >
+                                                <ListBox ItemsSource="{Binding TargetComputers}" Foreground="Black" VerticalAlignment="Center">
                                                     <ListBox.BorderBrush>
                                                         <SolidColorBrush Color="White" Opacity="0"/>
                                                     </ListBox.BorderBrush>
@@ -189,17 +190,88 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <ListView Grid.Row="2" Grid.ColumnSpan="3" x:Name="listViewTasksDetails" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <ListView Grid.Row="2" Grid.ColumnSpan="3" x:Name="listViewTasksDetails" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseDoubleClick="listViewTasksDetails_MouseDoubleClick" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True">
+                        <ListView.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem x:Name="menuItemDeleteDetails" Header="Delete" Click="MenuItemDetailsDelete_Click"/>
+                                <MenuItem x:Name="menuItemDeleteDetailsAll" Header="Delete All" Click="MenuItemDetailsDeleteAll_Click"/>
+                                <MenuItem x:Name="menuItemStopDetails" Header="Stop" Click="MenuItemDetailsStop_Click"/>
+                            </ContextMenu>
+                        </ListView.ContextMenu>
                         <ListView.View>
                             <GridView>
-                                <GridViewColumn Header="ID"/>
-                                <GridViewColumn Header="Name"/>
-                                <GridViewColumn Header="Status"/>
-                                <GridViewColumn Header="Started"/>
-                                <GridViewColumn Header="Finished"/>
-                                <GridViewColumn Header="Clients"/>
-                                <GridViewColumn Header="Clients Done"/>
-                                <GridViewColumn Header="Machine Group"/>
+                                <GridViewColumn Header="Name" Width="200" local:GridViewSort.PropertyName="Name">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=Name}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Status" Width="50" local:GridViewSort.PropertyName="Status">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <Image Source="{Binding Path=Status}" Width="20" Height="20" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Started" Width="150" local:GridViewSort.PropertyName="Started">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=Started}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Finished" Width="150" local:GridViewSort.PropertyName="Finished">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=Finished}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Clients" Width="50" local:GridViewSort.PropertyName="Clients">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=Clients}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Done" Width="50" local:GridViewSort.PropertyName="Done">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=Done}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Failed" Width="50" local:GridViewSort.PropertyName="Failed">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=Failed}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Machine Group" Width="150" local:GridViewSort.PropertyName="MachineGroup">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=MachineGroup}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
                             </GridView>
                         </ListView.View>
                     </ListView>
@@ -224,22 +296,102 @@
                     </Grid.ColumnDefinitions>
                     <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
                     <GridSplitter Grid.Column="3" Width="5" HorizontalAlignment="Stretch" />
-                    <ListBox Grid.Column="0"  x:Name="listBoxWorkingTasks" Height="auto" Width="auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                    <ListView Grid.Column="2" x:Name="listViewTaskComputersProgress" Height="auto" Width="auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <ListView Grid.Column="0" x:Name="listViewTaskDetailsProgress" Height="auto" Width="auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" SelectionChanged="listViewTaskDetailsProgress_SelectionChanged">
                         <ListView.View>
                             <GridView>
-                                <GridViewColumn Header="Name"/>
-                                <GridViewColumn Header="Status"/>
-                                <GridViewColumn Header="Time"/>
+                                <GridViewColumn Header="Name" Width="100" local:GridViewSort.PropertyName="Name">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=Name}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Started" Width="120" local:GridViewSort.PropertyName="Started">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=Started}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Machine Group" Width="100" local:GridViewSort.PropertyName="MachineGroup">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=MachineGroup}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <ListView Grid.Column="4" x:Name="listViewComputersProgress" Height="auto" Width="auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <ListView Grid.Column="2" x:Name="listViewComputersProgressSelected" Height="auto" Width="auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True">
                         <ListView.View>
                             <GridView>
-                                <GridViewColumn Header="Name"/>
-                                <GridViewColumn Header="Status"/>
-                                <GridViewColumn Header="Time"/>
+                                <GridViewColumn Header="Name" Width="120" local:GridViewSort.PropertyName="ComputerName">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=ComputerName}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Status" Width="150" local:GridViewSort.PropertyName="Step">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=Step}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Time" Width="100" local:GridViewSort.PropertyName="Time">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=Time}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <ListView Grid.Column="4" x:Name="listViewComputersProgressAll" Height="auto" Width="auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Name" Width="120" local:GridViewSort.PropertyName="ComputerName">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=ComputerName}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Status" Width="150" local:GridViewSort.PropertyName="Step">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=Step}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Time" Width="100" local:GridViewSort.PropertyName="Time">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=Time}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
                             </GridView>
                         </ListView.View>
                     </ListView>
@@ -262,7 +414,6 @@
         <Label x:Name="labelOnline" Grid.Row="1" Grid.Column="2" Content="Online: 999" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
         <Label x:Name="labelOffilne" Grid.Row="1" Grid.Column="3" Content="Offline: 999" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
         <Label x:Name="labelClients" Grid.Row="1" Grid.Column="4" Content="Clients: 999" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center" FontWeight="Bold"/>
-        <Button x:Name="button" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="104.273,-5,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
 
     </Grid>
 </Window>

@@ -1,19 +1,23 @@
 <?xml version="1.0"?>
 <ComputerDetailsData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <computerName>VETRIK2</computerName>
+  <Name>VETRIK</Name>
+  <RealPCName>VETRIK</RealPCName>
   <macAddresses>
-    <string>1C:39:47:18:3C:E6</string>
+    <string>68:05:CA:1A:35:11</string>
+    <string>00:22:4D:80:6F:A0</string>
   </macAddresses>
-  <MacAddress>1C:39:47:18:3C:E6</MacAddress>
-  <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
-  <processorInfo>Intel® Core™ i5-5200U CPU @ 2.20GHz</processorInfo>
-  <physicalMemoryInfo>8192MB</physicalMemoryInfo>
-  <numberOfRamSLots>2</numberOfRamSLots>
-  <biosCaption>InsydeH2O Version 05.04.43AFCN30WW(V2.02)</biosCaption>
-  <boardProductId>Lenovo E31-70</boardProductId>
-  <accountName>TomasVe</accountName>
-  <ipAddress>192.168.0.73:51020</ipAddress>
+  <MacAddress>68:05:CA:1A:35:11</MacAddress>
+  <OSInformations>Microsoft Windows 7 Enterprise, 64-bit</OSInformations>
+  <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+  <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+  <numberOfRamSLots>4</numberOfRamSLots>
+  <biosCaption>Default System BIOS</biosCaption>
+  <boardProductId>DZ77BH-55K</boardProductId>
+  <accountName>tomasve</accountName>
+  <IPAddress>10.202.20.32</IPAddress>
   <baseImageName />
   <driveEImageName />
   <dartInfo />
+  <ImageSource>Images/WinPE.ico</ImageSource>
+  <inWinpe>false</inWinpe>
 </ComputerDetailsData>

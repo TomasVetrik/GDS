@@ -2,6 +2,7 @@
 using Microsoft.Win32;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -18,8 +19,7 @@ namespace GDS_SERVER_WPF
         public bool baseImage = false;
         public string nodePath = "";
         public List<string> Names = new List<string>();        
-
-        ImageData imageData = new ImageData();        
+        ImageData imageData = new ImageData();       
 
         public ImageOptions()
         {
@@ -104,7 +104,7 @@ namespace GDS_SERVER_WPF
         private void buttonOSAbrivationsAdd_Click(object sender, RoutedEventArgs e)
         {
             var osAbrivationsDialog = new OSAbrivations();
-            osAbrivationsDialog.listBox = listBoxOSAbbrivations; 
+            osAbrivationsDialog.listBox = listBoxOSAbbrivations;
             osAbrivationsDialog.ShowDialog();                                    
         }
 
@@ -133,25 +133,30 @@ namespace GDS_SERVER_WPF
 
         private void SavaData()
         {
-            SetDefault();
-            if(textBoxImageName.Text == "" || textBoxImageName.Text.Contains(" "))
-            {
-                SetErrorMessage(labelImageName, "'Image Name' cannot be empty or contains spaces");
-                return;
-            }      
+            SetDefault();               
             if(Names.Contains(textBoxImageName.Text) && path != "")
             {
                 SetErrorMessage(labelImageName, "'Image Name': " + textBoxImageName.Text + " exists");
                 return;
-            }      
-            if(textBoxSourcePath.Text == "")
+            }
+            if (textBoxImageName.Text.IndexOfAny(new char[] { '\\', '/', ':', '*', '?', '"', '<', '>', '|' }) != -1)
             {
-                SetErrorMessage(labelSourcePath, "'Source Path' cannot be empty");
+                SetErrorMessage(labelImageName, "'Image Name' cannot contains \\ / : * ? \" < > |");
                 return;
             }
-            if (textBoxBootLabel.Text == "" || textBoxBootLabel.Text.IndexOfAny(new char[] { ',', '|', '#', '$', '.' }) != -1)
+            if (textBoxSourcePath.Text == "")
             {
-                SetErrorMessage(labelBootLabel, "'Boot Label' cannot be empty or contains , | # $ .");
+                SetErrorMessage(labelSourcePath, "'Source Path' cannot be an empty string");
+                return;
+            }
+            if (textBoxBootLabel.Text == "")
+            {
+                SetErrorMessage(labelBootLabel, "'Boot Label' cannot be an empty string");
+                return;
+            }
+            if(textBoxBootLabel.Text.IndexOfAny(new char[] { '\\', '/', ':', '*', '?', '"', '<', '>', '|' }) != -1)
+            {
+                SetErrorMessage(labelBootLabel, "'Boot Label' cannot contains \\ / : * ? \" < > |");
                 return;
             }
             if (baseImage)
@@ -163,12 +168,12 @@ namespace GDS_SERVER_WPF
                 }
                 if(listBoxVHDNames.Items.Count == 0)
                 {
-                    SetErrorMessage(labelVHDName, "'VHD Name' cannot be empty");
+                    SetErrorMessage(labelVHDName, "'VHD Name' cannot be an empty string");
                     return;
                 }                          
                 if(listBoxOSAbbrivations.Items.Count == 0)
                 {
-                    SetErrorMessage(labelOSAbrivations, "'OS Abrivations' cannot be empty");
+                    SetErrorMessage(labelOSAbrivations, "'OS Abrivations' cannot be an empty string");
                     return;
                 }
                 imageData.PartitionSize = (int)sliderPartitionDSize.Value;
@@ -195,6 +200,18 @@ namespace GDS_SERVER_WPF
         private void buttonOK_Click(object sender, RoutedEventArgs e)
         {
             SavaData();
-        }       
+        }
+
+        private void Window_KeyUp(object sender, KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.Escape:
+                    {
+                        this.Close();
+                        break;
+                    }
+            }
+        }
     }
 }

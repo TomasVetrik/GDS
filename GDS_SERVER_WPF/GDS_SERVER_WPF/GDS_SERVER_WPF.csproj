@@ -51,6 +51,9 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="WakeOnLan">
+      <HintPath>..\..\..\..\..\..\..\GDS\GDS\GDS\bin\Debug\WakeOnLan.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -66,33 +69,42 @@
     <Compile Include="BrowseImages.xaml.cs">
       <DependentUpon>BrowseImages.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DataCLasses\ComputerConfigData.cs" />
     <Compile Include="ComputerDetails.xaml.cs">
       <DependentUpon>ComputerDetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataCLasses\ComputerDetailsData.cs" />
+    <Compile Include="DataCLasses\PhonesForTask.cs" />
+    <Compile Include="DataCLasses\SemaphoresForTask.cs" />
+    <Compile Include="DataCLasses\ComputerConfigData.cs" />
+    <Compile Include="GridViewSort.cs" />
+    <Compile Include="Handlers\ComputerInTaskHandler.cs" />
     <Compile Include="DataCLasses\ExecutedTaskData.cs" />
     <Compile Include="DataCLasses\ImageData.cs" />
     <Compile Include="DataCLasses\ItemData.cs" />
     <Compile Include="DataCLasses\OSAbrivationsData.cs" />
+    <Compile Include="DataCLasses\ProgressComputerData.cs" />
     <Compile Include="DataCLasses\TaskStatusEnum.cs" />
     <Compile Include="EditItem.xaml.cs">
       <DependentUpon>EditItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Handlers\ExecutedTaskHandler.cs" />
     <Compile Include="Handlers\FileHandler.cs" />
     <Compile Include="Handlers\ListBoxBrowseImagesHandler.cs" />
     <Compile Include="Handlers\ListViewBrowseComputersHandler.cs" />
     <Compile Include="Handlers\ListViewMachinesAndTasksHandler.cs" />
     <Compile Include="Handlers\ListViewTaskDetailsHandler.cs" />
     <Compile Include="DataCLasses\LockDetailsData.cs" />
-    <Compile Include="DataCLasses\MachinesGroupsData.cs" />
     <Compile Include="DataCLasses\TasksData.cs" />
     <Compile Include="Handlers\TreeViewHandler.cs" />
+    <Compile Include="Handlers\WakeOnLanHandler.cs" />
     <Compile Include="ImageOptions.xaml.cs">
       <DependentUpon>ImageOptions.xaml</DependentUpon>
     </Compile>
     <Compile Include="OSAbrivations.xaml.cs">
       <DependentUpon>OSAbrivations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressComputersDetails.xaml.cs">
+      <DependentUpon>ProgressComputersDetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="TaskOptions.xaml.cs">
       <DependentUpon>TaskOptions.xaml</DependentUpon>
@@ -135,13 +147,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ProgressComputersDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TaskOptions.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Handlers\Packet.cs" />
+    <Compile Include="DataCLasses\Packet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -169,18 +185,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\logo_gopas_sk.ico" />
+    <Resource Include="Images\logo_gopas_sk.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Images\Folder.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Folder.ico">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Tasks.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
@@ -192,6 +205,56 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WinPE.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Tasks_Selected.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WinPE_Selected.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Offline_Selected.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Online_Selected.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Folder_Selected.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Tasks.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Image.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Image_Selected.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Stopped.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Done.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Failed.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Progress.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

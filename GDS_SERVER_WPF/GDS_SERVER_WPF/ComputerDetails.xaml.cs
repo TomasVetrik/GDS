@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace GDS_SERVER_WPF
 {    
@@ -14,25 +16,27 @@ namespace GDS_SERVER_WPF
             InitializeComponent();
         }
 
+        
         public string computerPath;
         string computerFilePath;
-        string configurationFilePath;
-        ComputerConfigData configData;
+        string computerConfigFilePath;
+        ComputerDetailsData computerData;
+        ComputerConfigData computerConfigData;
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             computerFilePath = computerPath + ".my";
-            configurationFilePath = computerPath + ".cfg";
+            computerConfigFilePath = computerPath + ".cfg";
             if (File.Exists(computerFilePath))
             {
-                var computerData = FileHandler.Load<ComputerDetailsData>(computerFilePath);
+                computerData = FileHandler.Load<ComputerDetailsData>(computerFilePath);
                 listBox.ItemsSource = computerData.GetItems();
             }
-            if (File.Exists(configurationFilePath))
+            if (File.Exists(computerConfigFilePath))
             {
-                configData = FileHandler.Load<ComputerConfigData>(configurationFilePath);
-                textBoxComputerName.Text = configData.Name;
-                textBoxWorkGroup.Text = configData.WorkGroup;
+                computerConfigData = FileHandler.Load<ComputerConfigData>(computerConfigFilePath);
+                textBoxComputerName.Text = computerConfigData.Name;
+                textBoxWorkGroup.Text = computerConfigData.Workgroup;
             }
         }
 
@@ -43,15 +47,28 @@ namespace GDS_SERVER_WPF
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            configData.Name = textBoxComputerName.Text;
-            configData.WorkGroup = textBoxWorkGroup.Text;                            
-            FileHandler.Save<ComputerConfigData>(configData, configurationFilePath);
+            computerConfigData.Name = textBoxComputerName.Text;
+            computerConfigData.Workgroup = textBoxWorkGroup.Text;                            
+            FileHandler.Save<ComputerDetailsData>(computerData, computerFilePath);
+            FileHandler.Save<ComputerConfigData>(computerConfigData, computerConfigFilePath);
             this.Close();
         }
 
         private void EventSetter_OnHandler(object sender, RoutedEventArgs e)
         {
             ((TextBox)sender).SelectAll();
+        }
+
+        private void Window_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.Escape:
+                    {
+                        this.Close();
+                        break;
+                    }
+            }
         }
     }
 }

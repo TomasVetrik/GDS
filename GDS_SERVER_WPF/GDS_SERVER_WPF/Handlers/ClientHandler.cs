@@ -1,33 +1,45 @@
-﻿using System;
+﻿using GDS_SERVER_WPF.DataCLasses;
+using GDS_SERVER_WPF.Handlers;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
+using System.Xml.Serialization;
 
 namespace GDS_SERVER_WPF
 {
     public class ClientHandler
     {
-        public TcpClient clientSocket;        
         ListBox list;
-        Label labelOnline;   
-        byte[] dataStream = new byte[1024];
+        Label labelOnline;
+        Label labelOffline;
+        static int length = 20000;
+        byte[] dataStream = new byte[length];
         List<ClientHandler> clients;
         ComputerDetailsData computerData;
-        EndPoint epSender;
+        int clientsAll = 0;
+        XmlSerializer xs = new XmlSerializer(typeof(Packet));
+        DateTime IDTimeOLD = DateTime.Now;
 
+        public ComputerInTaskHandler computerInTaskHandler = null;
+        public List<ExecutedTaskHandler> executedTasksHandlers;
+        public Packet receivePacket;
+        public TcpClient clientSocket;
         public bool offline;
-        public NetworkStream networkStream;
+        public bool deleting = false;
+        public Stream networkStream;
         public int clientNumber;
         public bool inWinpe;
         public List<string> macAddresses = new List<string>();
-        public ListViewMachinesAndTasksHandler listViewMachinesAndTasksHandler;      
+        public ListViewMachinesAndTasksHandler listViewMachinesAndTasksHandler;
+        public ComputerConfigData computerConfigData;
+        
 
-        public void startClient(TcpClient inClientSocket, int _clientNumber, ListBox _list, List<ClientHandler> _clients, Label _labelOnline, ListViewMachinesAndTasksHandler _listViewMachinesAndTasksHandler)
+        public void startClient(TcpClient inClientSocket, int _clientNumber, ListBox _list, List<ClientHandler> _clients, Label _labelOnline, Label _labelOffline, ListViewMachinesAndTasksHandler _listViewMachinesAndTasksHandler, List<ExecutedTaskHandler> _executedTasksHandlers)
         {
             this.clientSocket = inClientSocket;
             this.clientNumber = _clientNumber;
@@ -35,111 +47,170 @@ namespace GDS_SERVER_WPF
             this.offline = false;
             this.clients = _clients;
             this.labelOnline = _labelOnline;
+            this.labelOffline = _labelOffline;
             this.listViewMachinesAndTasksHandler = _listViewMachinesAndTasksHandler;
+            this.executedTasksHandlers = _executedTasksHandlers;            
             Thread ctThread = new Thread(doChat);
-            computerData = new ComputerDetailsData();           
+            computerData = new ComputerDetailsData();
             ctThread.Start();
         }
 
-        public void SendMessage(DataIdentifier ID, string _message)
+        public void SendMessage(Packet packet)
         {
-            var sendData = new Packet(ID, "", _message);
-            var sendBytes = sendData.GetDataStream();            
-            networkStream.Write(sendBytes, 0, sendBytes.Length);
-            networkStream.Flush();
+            try {
+                byte[] bytes = new byte[length];
+                using (MemoryStream memStream = new MemoryStream(bytes))
+                {
+                    xs.Serialize(memStream, packet);
+                    memStream.WriteTo(networkStream);
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Dojebalo sa posielanie: " + ex.ToString());
+            }
         }
 
         public void myReadCallBack(IAsyncResult ar)
         {
-            epSender = null;
-            var sendData = new Packet(); 
             try
             {
-                Packet receivedData = new Packet(this.dataStream);
-                
-                IPEndPoint clients = (IPEndPoint)clientSocket.Client.RemoteEndPoint;
-                epSender = (EndPoint)clients;
-                
-                var myNetworkStream = (NetworkStream)ar.AsyncState;
-                Application.Current.Dispatcher.Invoke(() =>
-                {                    
-                    list.Items.Add(clientNumber + " " + receivedData.Message + " " + receivedData.MacAddress); 
-                });                
-                HandleMessage(receivedData);
-                if (receivedData.DataIdentifier == DataIdentifier.SYN_FLAG)
+                using (MemoryStream memStream = new MemoryStream(dataStream, 0, dataStream.Length, false))
                 {
-                    Application.Current.Dispatcher.Invoke(() =>
+                    var myNetworkStream = (NetworkStream)ar.AsyncState;
+                    var receivePacket2 = xs.Deserialize(memStream) as Packet;
+                    if (receivePacket2.IDTime != IDTimeOLD)
                     {
-                        listViewMachinesAndTasksHandler.Refresh();
-                    });
+                        receivePacket = receivePacket2;                        
+                        if (computerInTaskHandler != null)
+                            computerInTaskHandler.receivePacket = receivePacket;
+                        HandleMessage(receivePacket);
+                        Application.Current.Dispatcher.Invoke(() =>
+                        {
+                            if (computerInTaskHandler != null)
+                            {
+                                //list.Items.Add("computerInTaskHandler is not NULL + " + computerInTaskHandler.receivePacket.dataIdentifier);
+                            }
+                            list.Items.Add(computerData.Name + " " + receivePacket.dataIdentifier + " " + receivePacket.computerDetailsData.MacAddress);
+                        });
+                        if (receivePacket.dataIdentifier == DataIdentifier.SYN_FLAG || receivePacket.dataIdentifier == DataIdentifier.SYN_FLAG_WINPE)
+                        {
+                            Application.Current.Dispatcher.Invoke(() =>
+                            {
+                                listViewMachinesAndTasksHandler.Refresh();
+                            });
+                        }
+                    }
+                    else
+                    {
+                        Application.Current.Dispatcher.Invoke(() =>
+                        {
+                            list.Items.Add(computerData.Name + " " + receivePacket.dataIdentifier + " " + receivePacket.computerDetailsData.MacAddress + " SHUTDOWN??");
+                        });
+                        SendMessage(new Packet(DataIdentifier.SYN_FLAG));
+                    }
+                    IDTimeOLD = receivePacket.IDTime;
+                    myNetworkStream.BeginRead(dataStream, 0, dataStream.Length,
+                                                                  new AsyncCallback(myReadCallBack),
+                                                                  myNetworkStream);
                 }
-                myNetworkStream.BeginRead(dataStream, 0, dataStream.Length,
-                                                          new AsyncCallback(this.myReadCallBack),
-                                                          myNetworkStream);
             }
-            catch
+            catch (Exception ex)
             {
+                //MessageBox.Show(ex.ToString());
                 clients.Remove(this);
                 Application.Current.Dispatcher.Invoke(() =>
                 {
                     labelOnline.Content = "Online: " + clients.Count;
+                    labelOffline.Content = "Offline: " + (clientsAll - clients.Count);
                     listViewMachinesAndTasksHandler.Refresh();
                 });
                 offline = true;
+                if (receivePacket != null)
+                    receivePacket.dataIdentifier = DataIdentifier.Null;
+                if (computerInTaskHandler != null)
+                    computerInTaskHandler.receivePacket = receivePacket;
             }
         }
 
-        private void HandleMessage(Packet data)
+        private void HandleMessage(Packet packet)
         {
-            switch (data.DataIdentifier)
+            if (!deleting)
             {
-                case DataIdentifier.SYN_FLAG:
+                switch (packet.dataIdentifier)
+                {
+                    case DataIdentifier.SYN_FLAG:
+                        {
+                            inWinpe = false;
+                            macAddresses = packet.computerDetailsData.macAddresses;
+                            CheckIfClientNotDuplicate();
+                            SaveComputerData(packet.computerDetailsData);
+                            FindComputerInTask();
+                            break;
+                        }
+                    case DataIdentifier.SYN_FLAG_WINPE:
+                        {
+                            inWinpe = true;
+                            macAddresses = packet.computerDetailsData.macAddresses;
+                            CheckIfClientNotDuplicate();
+                            SaveComputerData(packet.computerDetailsData);
+                            FindComputerInTask();
+                            break;
+                        }
+                    case DataIdentifier.CLONING_DONE:
+                        {
+                            SendMessage(new Packet(DataIdentifier.CLONING_DONE));
+                            break;
+                        }
+                    case DataIdentifier.SHUTDOWN:
+                        {
+                            SendMessage(new Packet(DataIdentifier.SHUTDOWN_DONE));                                                                                    
+                            break;
+                        }
+                }
+            }
+        }                
+
+        private void FindComputerInTask()
+        {
+            for (int i = 0; i < executedTasksHandlers.Count; i++)
+            {
+                ExecutedTaskHandler executedTaskHandler = executedTasksHandlers[i];
+                foreach (ComputerInTaskHandler computer in executedTaskHandler.computers)
+                {
+                    if (CheckMacsInREC(computer.computer.macAddresses, macAddresses))
                     {
-                        inWinpe = false;
-                        macAddresses.Clear();
-                        if (data.MacAddress.Contains("&"))
-                            macAddresses = new List<string>(data.MacAddress.Split('&'));
-                        else
-                            macAddresses.Add(data.MacAddress);
-                        CheckIfClientNotDuplicate();
-                        SaveComputerData(data.Message);
+                        computerInTaskHandler = computer;
+                        computerInTaskHandler.client = this;
+                        computerInTaskHandler.receivePacket = receivePacket;
+                        computerInTaskHandler.computerConfigData = computerConfigData;
                         break;
                     }
-                case DataIdentifier.SYN_FLAG_WINPE:
-                    {
-                        inWinpe = true;
-                        macAddresses.Clear();
-                        if (data.MacAddress.Contains("&"))
-                            macAddresses = new List<string>(data.MacAddress.Split('&'));
-                        else
-                            macAddresses.Add(data.MacAddress);
-                        CheckIfClientNotDuplicate();
-                        SaveComputerData(data.Message);
-                        break;
-                    }
+                }
             }
         }
 
         private void CheckIfClientNotDuplicate()
         {
-            for(int i = 0; i < clients.Count; i++)
+            for (int i = 0; i < clients.Count; i++)
             {
-                if(CheckMacsInREC(clients[i].macAddresses, macAddresses) && clients[i].clientNumber != clientNumber)
+                if (CheckMacsInREC(clients[i].macAddresses, macAddresses) && clients[i].clientNumber != clientNumber)
                 {
                     clientNumber = clients[i].clientNumber;
-                    clients[i].SendMessage(DataIdentifier.CLOSE, "CLOSE");
+                    clients[i].SendMessage(new Packet(DataIdentifier.CLOSE));
                     clients[i].clientSocket.Close();
                     clients.Remove(clients[i]);
                     Application.Current.Dispatcher.Invoke(() =>
                     {
                         labelOnline.Content = "Online: " + clients.Count;
+                        labelOffline.Content = "Offline: " + (clientsAll - clients.Count);
                         listViewMachinesAndTasksHandler.Refresh();
                     });
                     break;
                 }
             }
         }
-        
+
         private bool IsMacAddressIn(List<string> array1, List<string> array2)
         {
             foreach (string text1 in array1)
@@ -165,32 +236,36 @@ namespace GDS_SERVER_WPF
             return false;
         }
 
-        private void SaveComputerData(string message)
-        {            
-            List<String> computerDetails_list = new List<string>(message.Split(new string[] { "|..|" }, StringSplitOptions.None));
-            string IP = epSender.ToString();
-            if(IP.Contains(":"))
-                computerDetails_list.Add("IP Address||" + IP.Split(':')[0]);
-            else
-                computerDetails_list.Add("IP Address||" + IP);
-            computerData.LoadDataFromList(computerDetails_list);
+        private void SaveComputerData(ComputerDetailsData computerDetailsData)
+        {
+            string IP = ((IPEndPoint)clientSocket.Client.RemoteEndPoint).Address.ToString();
+            computerDetailsData.IPAddress = IP;
+            computerDetailsData.ImageSource = "Images/WinPE.ico";
+            computerData = computerDetailsData;
             var computersInfoFiles = Directory.GetFiles(@".\Machine Groups\", "*.my", SearchOption.AllDirectories);
-            var filePath = GetFileNameByMac(computersInfoFiles);
-            var computerConfigData = new ComputerConfigData(computerData.computerName, "Workgroup");
+            clientsAll = computersInfoFiles.Length;
+            var filePath = GetFileNameByMac(computersInfoFiles);            
+            computerConfigData = new ComputerConfigData(computerData.RealPCName, "Workgroup");
             if (filePath != "")
             {
+                computerData.Name = Path.GetFileName(filePath).Replace(".my", "");
                 FileHandler.Save<ComputerDetailsData>(computerData, filePath);
                 if (!File.Exists(filePath.Replace(".my", ".cfg")))
                 {
                     FileHandler.Save<ComputerConfigData>(computerConfigData, filePath.Replace(".my", ".cfg"));
                 }
+                else
+                {
+                    FileHandler.Load<ComputerConfigData>(filePath.Replace(".my", ".cfg"));
+                }
             }
             else
             {
+                computerData.Name = computerData.RealPCName;
                 bool exist = false;
                 foreach (string computerFile in computersInfoFiles)
                 {
-                    if (computerFile == @".\Machine Groups\Default\" + computerData.computerName + ".my")
+                    if (computerFile == @".\Machine Groups\Default\" + computerData.RealPCName + ".my")
                     {
                         exist = true;
                         break;
@@ -198,11 +273,11 @@ namespace GDS_SERVER_WPF
                 }
                 if (!exist)
                 {
-                    filePath = @".\Machine Groups\Default\" + computerData.computerName + ".my";
+                    filePath = @".\Machine Groups\Default\" + computerData.RealPCName + ".my";
                 }
                 else
                 {
-                    filePath = @".\Machine Groups\Default\" + computerData.computerName + "-NEW.my";                   
+                    filePath = @".\Machine Groups\Default\" + computerData.RealPCName + "-NEW.my";
                 }
                 FileHandler.Save<ComputerDetailsData>(computerData, filePath);
                 FileHandler.Save<ComputerConfigData>(computerConfigData, filePath.Replace(".my", ".cfg"));
@@ -225,11 +300,11 @@ namespace GDS_SERVER_WPF
         }
 
         private void doChat()
-        {            
+        {
             networkStream = clientSocket.GetStream();
             networkStream.BeginRead(dataStream, 0, dataStream.Length,
                                                    new AsyncCallback(this.myReadCallBack),
-                                                   networkStream);                        
+                                                   networkStream);
         }
     }
 }

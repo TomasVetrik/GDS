@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,16 +13,17 @@ namespace GDS_SERVER_WPF
     public class ListViewMachinesAndTasksHandler
     {
         public List<ClientHandler> clients;
+        
 
         ListView machines;
-        ListView tasks;
+        ListView tasks;        
         TreeViewHandler treeViewHandler;
         
         public ListViewMachinesAndTasksHandler(ListView _machines, ListView _tasks, TreeViewHandler _treeViewHandler)
         {
             this.machines = _machines;
             this.tasks = _tasks;
-            this.treeViewHandler = _treeViewHandler;
+            this.treeViewHandler = _treeViewHandler;            
         }
 
         public void SetVisibility(string path)
@@ -47,19 +49,19 @@ namespace GDS_SERVER_WPF
                 var directoriesInfoFiles = Directory.GetDirectories(path);                
                 foreach (var dir in directoriesInfoFiles)
                 {
-                    machines.Items.Add(new MachinesGroupsData(new DirectoryInfo(dir).Name, "", "", "", "", "Images/Folder.ico"));
+                    machines.Items.Add(new ComputerDetailsData(new DirectoryInfo(dir).Name, "", "", "", "", "Images/Folder.ico"));
                 }
                 string[] computersInfoFiles = Directory.GetFiles(path, "*.my");
                 foreach (string computerFile in computersInfoFiles)
                 {
                     string Name = Path.GetFileName(computerFile).Replace(".my", "");
                     var computerData = FileHandler.Load<ComputerDetailsData>(computerFile);                   
-                    string imageSource = "Images/Offline.ico";                                        
+                    computerData.ImageSource = "Images/Offline.ico";                                        
                     foreach (ClientHandler client in clients)
                     {
                         if (client.macAddresses != null && client.CheckMacsInREC(client.macAddresses, computerData.macAddresses))
                         {
-                            imageSource = "Images/Online.ico";
+                            computerData.ImageSource = "Images/Online.ico";
                             break;
                         }
                     }
@@ -70,7 +72,7 @@ namespace GDS_SERVER_WPF
                         var lockDetailsData = FileHandler.Load<LockDetailsData>(lockFilePath);                        
                         detail = lockDetailsData.details;
                     }                    
-                    machines.Items.Add(new MachinesGroupsData(Name, computerData.MacAddress, computerData.ipAddress, computerData.computerName, detail, imageSource));
+                    machines.Items.Add(computerData);
                 }
             }
         }
@@ -83,12 +85,13 @@ namespace GDS_SERVER_WPF
                 var directoriesInfoFiles = Directory.GetDirectories(path);                
                 foreach (var dir in directoriesInfoFiles)
                 {
-                    tasks.Items.Add(new TaskData(new DirectoryInfo(dir).Name, "", "", new List<string>(), "Images/Folder.ico"));
+                    tasks.Items.Add(new TaskData(new DirectoryInfo(dir).Name, "", "", new List<ComputerDetailsData>(), "Images/Folder.ico"));
                 }
                 string[] tasksPath = Directory.GetFiles(path, "*.my");                
                 foreach (string taskPath in tasksPath)
                 {
-                    tasks.Items.Add(FileHandler.Load<TaskData>(taskPath));
+                    if (File.Exists(taskPath))                    
+                        tasks.Items.Add(FileHandler.Load<TaskData>(taskPath));                    
                 }                
             }
         }
@@ -108,6 +111,14 @@ namespace GDS_SERVER_WPF
             {
                 LoadMachines(path);
             }
+        }
+
+        public void SelectAll()
+        {
+            if (tasks.Visibility == Visibility.Visible)
+                tasks.SelectAll();
+            else
+                machines.SelectAll();
         }
 
         public void LoadTreeViewMachinesAndTasks()

@@ -7,7 +7,7 @@ namespace GDS_SERVER_WPF.DataCLasses
         public ImageData()
         {
             Name = "";
-            this.ImageSource = "Images/Tasks.png";
+            this.ImageSource = "Images/Image.ico";
             SourcePath = "";
             BoolLabel = "";
             PartitionSize = 90;
@@ -17,7 +17,7 @@ namespace GDS_SERVER_WPF.DataCLasses
             OSAbrivations = new List<string>();
         }
 
-        public ImageData(string _name, string _imageSource = "Images/Tasks.png")
+        public ImageData(string _name, string _imageSource = "Images/Image.ico")
         {
             this.ImageSource = _imageSource;
             this.Name = _name;

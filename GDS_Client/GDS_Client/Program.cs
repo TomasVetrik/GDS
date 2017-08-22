@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using System.Threading;
 
 namespace GDS_Client
@@ -9,10 +10,12 @@ namespace GDS_Client
         {
             Repeater();
         }
-
+        static Listener listener;
         static void Repeater()
         {
-            var listener = new Listener();
+            handler = new ConsoleEventDelegate(ConsoleEventCallback);
+            SetConsoleCtrlHandler(handler, true);
+            listener = new Listener();
             listener.running = true;
             listener.StartListener();
             Thread.Sleep(5000);
@@ -22,5 +25,27 @@ namespace GDS_Client
             }
             Repeater();
         }
+
+        static bool ConsoleEventCallback(int eventType)
+        {
+            try
+            {
+                if (listener.clientSocket != null)
+                {
+                    listener.serverStream.Close();
+                    listener.clientSocket.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Closing Error: " + ex.Message, "UDP Client");
+            }            
+            return false;
+        }
+        static ConsoleEventDelegate handler;   // Keeps it from getting garbage collected
+                                               // Pinvoke
+        private delegate bool ConsoleEventDelegate(int eventType);
+        [DllImport("kernel32.dll", SetLastError = true)]
+        private static extern bool SetConsoleCtrlHandler(ConsoleEventDelegate callback, bool add);
     }    
 }

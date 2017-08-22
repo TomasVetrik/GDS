@@ -2,8 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace GDS_SERVER_WPF
 {
@@ -14,6 +16,7 @@ namespace GDS_SERVER_WPF
     {
         public List<ClientHandler> clients;
         public ListBox listBoxOut;
+        
 
         TreeViewHandler treeViewMachinesAndTasksHandler;
         ListBoxBrowseComputersHandler listViewBrowseComputersHandler;             
@@ -50,12 +53,12 @@ namespace GDS_SERVER_WPF
         {
             if (listView.SelectedItems.Count != 0)
             {
-                var computerDetail = (MachinesGroupsData)listView.SelectedItems[0];
+                var computerDetail = (ComputerDetailsData)listView.SelectedItems[0];
                 var path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + computerDetail.Name;
                 if (!computerDetail.ImageSource.Contains("Folder.ico"))
                 {
                     var dialogComputerDetails = new ComputerDetails();
-                    dialogComputerDetails.computerPath = path;
+                    dialogComputerDetails.computerPath = path;                    
                     dialogComputerDetails.ShowDialog();
                 }
                 else
@@ -66,27 +69,51 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void button_OK_Click(object sender, RoutedEventArgs e)
+        private void SelectComputers()
         {
             listBoxOut.Items.Clear();
-            if(listView.SelectedItems.Count != 0)
+            if (listView.SelectedItems.Count != 0)
             {
-                foreach (MachinesGroupsData machineGroupData in listView.SelectedItems)
+                foreach (ComputerDetailsData machineGroupData in listView.SelectedItems)
                 {
                     if (machineGroupData.ImageSource.Contains("Folder.ico"))
                     {
-                        foreach(string file in Directory.GetFiles(treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + machineGroupData.Name, "*.my", SearchOption.AllDirectories))
+                        foreach (string file in Directory.GetFiles(treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + machineGroupData.Name, "*.my", SearchOption.AllDirectories))
                         {
-                            listBoxOut.Items.Add(Path.GetFileName(file).Replace(".my",""));
+                            var machine = FileHandler.Load<ComputerDetailsData>(file);
+                            listBoxOut.Items.Add(machine);
                         }
                     }
                     else
                     {
-                        listBoxOut.Items.Add(machineGroupData.Name);
+                        listBoxOut.Items.Add(machineGroupData);
                     }
                 }
             }
+        }
+
+        private void button_OK_Click(object sender, RoutedEventArgs e)
+        {
+            SelectComputers();
             this.Close();
-        }       
+        }
+
+        private void Window_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.Escape:
+                    {
+                        this.Close();
+                        break;
+                    }
+                case Key.Enter:
+                    {
+                        SelectComputers();
+                        this.Close();
+                        break;
+                    }
+            }
+        }
     }
 }

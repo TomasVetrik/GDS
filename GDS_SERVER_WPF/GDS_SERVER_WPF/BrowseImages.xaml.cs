@@ -1,6 +1,7 @@
 ﻿using GDS_SERVER_WPF.DataCLasses;
 using GDS_SERVER_WPF.Handlers;
 using System.IO;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -14,7 +15,8 @@ namespace GDS_SERVER_WPF
     {
         public string path = "";
         public bool baseImage = false;
-        public string pathOutput = "";          
+        public string pathOutput = "";
+        
 
         TreeViewHandler treeViewMachinesAndTasksHandler;
         ListViewBrowseImagesHandler listViewBrowseImagesHandler;       
@@ -32,7 +34,7 @@ namespace GDS_SERVER_WPF
             listViewBrowseImagesHandler.Refresh();            
         }
 
-        private void button_OK_Click(object sender, RoutedEventArgs e)
+        private void SelectedImage()
         {
             if (listView.SelectedItems.Count != 0)
             {
@@ -45,6 +47,11 @@ namespace GDS_SERVER_WPF
                 }
             }
             return;
+        }
+
+        private void button_OK_Click(object sender, RoutedEventArgs e)
+        {
+            SelectedImage();
         }
 
         private void EditSelectedItem()
@@ -62,7 +69,7 @@ namespace GDS_SERVER_WPF
                             imageOptionsDialog.Names.Add(item.Name);
                     }
                     imageOptionsDialog.baseImage = baseImage;
-                    imageOptionsDialog.path = path;
+                    imageOptionsDialog.path = path;                    
                     imageOptionsDialog.nodePath = treeViewMachinesAndTasksHandler.GetNodePath();
                     imageOptionsDialog.ShowDialog();                    
                     listViewBrowseImagesHandler.Refresh();
@@ -89,7 +96,7 @@ namespace GDS_SERVER_WPF
         {
             var imageOptionsDialog = new ImageOptions();
             imageOptionsDialog.baseImage = baseImage;
-            imageOptionsDialog.nodePath = treeViewMachinesAndTasksHandler.GetNodePath();
+            imageOptionsDialog.nodePath = treeViewMachinesAndTasksHandler.GetNodePath();            
             imageOptionsDialog.ShowDialog();
             listViewBrowseImagesHandler.Refresh();
             listViewBrowseImagesHandler.SelectItemByName(imageOptionsDialog.textBoxImageName.Text);
@@ -117,10 +124,30 @@ namespace GDS_SERVER_WPF
             foreach (ImageData item in listView.Items)
                 newFolderDialog.Names.Add(item.Name);
             newFolderDialog.ShowDialog();
-            string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + newFolderDialog.textBoxNewName.Text;
-            Directory.CreateDirectory(path);            
-            treeViewMachinesAndTasksHandler.Refresh();
-            treeViewMachinesAndTasksHandler.SetTreeNodeByLastSelectedNode(path, treeView);
+            if (!newFolderDialog.cancel)
+            {
+                string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + newFolderDialog.textBoxNewName.Text;
+                Directory.CreateDirectory(path);
+                treeViewMachinesAndTasksHandler.AddItem(newFolderDialog.textBoxNewName.Text);
+                listViewBrowseImagesHandler.Refresh();
+            }
+        }
+
+        private void Window_KeyUp(object sender, KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.Escape:
+                    {
+                        this.Close();
+                        break;
+                    }
+                case Key.Enter:
+                    {
+                        SelectedImage();
+                        break;
+                    }
+            }
         }
     }
 }

@@ -5,8 +5,23 @@ using System.Collections.Generic;
 namespace GDS_SERVER_WPF
 {    
     public class ComputerDetailsData     
-    {        
-        public string computerName { set; get; }
+    {
+        public ComputerDetailsData()
+        {
+            macAddresses = new List<string>();
+        }
+        public ComputerDetailsData(string _name, string _macAddress, string _IPAddress, string _realPCName, string _detail, string _imageSource = "Images/Offline.ico")
+        {
+            this.ImageSource = _imageSource;
+            this.Name = _name;
+            this.MacAddress = _macAddress;
+            this.IPAddress = _IPAddress;
+            this.RealPCName = _realPCName;
+            this.Detail = _detail;
+        }
+
+        public string Name { set; get; }
+        public string RealPCName { set; get; }
         public List<string> macAddresses { set; get; }
         public string MacAddress { set; get; }
         public string OSInformations { set; get; }
@@ -16,11 +31,20 @@ namespace GDS_SERVER_WPF
         public string biosCaption { set; get; }
         public string boardProductId { set; get; }
         public string accountName { set; get; }
-        public string ipAddress { set; get; }
+        public string IPAddress { set; get; }
         public string baseImageName { set; get; }
         public string driveEImageName { set; get; }
         public string dartInfo { set; get; }
-        public string pathNode { set; get; }        
+        public string Detail { set; get; }
+        public string ImageSource { set; get; }
+        public string pathNode { set; get; }
+        public bool inWinpe { get; set; }
+
+
+        public override string ToString()
+        {
+            return Name.ToString();
+        }
 
         public void LoadDataFromList(List<string> list)
         {
@@ -31,7 +55,7 @@ namespace GDS_SERVER_WPF
                     if (line.Contains("Computer Name||"))
                     {
                         string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
-                        computerName = splitter[1];
+                        RealPCName = splitter[1];                        
                     }
                     if (line.Contains("MacAddress||"))
                     {
@@ -85,7 +109,7 @@ namespace GDS_SERVER_WPF
                     if (line.Contains("IP Address||"))
                     {
                         string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
-                        ipAddress = splitter[1];
+                        IPAddress = splitter[1];
                     }
                     if (line.Contains("BASE NAME||"))
                     {
@@ -109,7 +133,7 @@ namespace GDS_SERVER_WPF
         public List<ItemData> GetItems()
         {
             List<ItemData> items = new List<ItemData>();
-            items.Add(new ItemData("Computer Name", computerName));
+            items.Add(new ItemData("Computer Name", RealPCName));
             items.Add(new ItemData("Mac Address", String.Join(" | ", macAddresses)));
             items.Add(new ItemData("OS Informations", OSInformations));
             items.Add(new ItemData("Processor Info", processorInfo));
@@ -118,7 +142,7 @@ namespace GDS_SERVER_WPF
             items.Add(new ItemData("Bios Caption", biosCaption));
             items.Add(new ItemData("Board Production ID", boardProductId));
             items.Add(new ItemData("Account Name", accountName));
-            items.Add(new ItemData("IP Address", ipAddress));
+            items.Add(new ItemData("IP Address", IPAddress));
             items.Add(new ItemData("Base Image", baseImageName));
             items.Add(new ItemData("DriveE Image", driveEImageName));
             items.Add(new ItemData("Dart Info", dartInfo));

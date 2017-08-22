@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GDS_SERVER_WPF"
         mc:Ignorable="d"
-        Title="ImageOptions" Height="500" Width="700" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+        Title="ImageOptions" Height="500" Width="700" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" KeyUp="Window_KeyUp">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>

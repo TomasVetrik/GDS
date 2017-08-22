@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -28,6 +29,7 @@ namespace GDS_SERVER_WPF
 
         public ListBox listBox;
         
+
         string path = @".\OsAbrivations.my";
         OSAbrivationsData osAbrivationsData = new OSAbrivationsData();        
 
@@ -111,6 +113,18 @@ namespace GDS_SERVER_WPF
             {
                 if (!listBoxOSAbbrivationsOutPut.Items.Contains(listViewOsAbbrivations.SelectedItems[0]))
                     listBoxOSAbbrivationsOutPut.Items.Add(listViewOsAbbrivations.SelectedItems[0]);
+            }
+        }
+
+        private void Window_KeyUp(object sender, KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.Escape:
+                    {
+                        this.Close();
+                        break;
+                    }
             }
         }
     }

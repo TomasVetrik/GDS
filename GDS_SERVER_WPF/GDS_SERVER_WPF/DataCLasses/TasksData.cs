@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using GDS_SERVER_WPF.DataCLasses;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Media.Imaging;
 
@@ -9,12 +10,14 @@ namespace GDS_SERVER_WPF
         public TaskData()
         {
             this.LastExecuted = "NONE";
-            this.ImageSource = "Images/Tasks.png";
+            this.ImageSource = "Images/Tasks.ico";
             this.MachineGroup = "NONE";
-            this.TargetComputers = new List<string>();
+            this.TargetComputers = new List<ComputerDetailsData>();
+            this.CopyFilesInOS = new List<string>();
+            this.CopyFilesInWINPE = new List<string>();
         }
 
-        public TaskData(string _name, string _lastExecuted, string _machineGroups, List<string> _computers, string _imageSource = "Images/Tasks.png")
+        public TaskData(string _name, string _lastExecuted, string _machineGroups, List<ComputerDetailsData> _computers, string _imageSource = "Images/Tasks.ico")
         {
             this.ImageSource = _imageSource;
             this.Name = _name;
@@ -26,7 +29,7 @@ namespace GDS_SERVER_WPF
         public string ImageSource { get; set; } 
         public string Name { get; set; }               
         public string LastExecuted { get; set; }
-        public List<string> TargetComputers { get; set; }
+        public List<ComputerDetailsData> TargetComputers { get; set; }
         public string MachineGroup { get; set; }
 
         public bool WakeOnLan { get; set; }
@@ -36,8 +39,10 @@ namespace GDS_SERVER_WPF
        
         public bool Cloning { get; set; }
         public string BaseImageSourcePath { get; set; }
+        public ImageData BaseImageData { get; set; }
         public bool WithoutVHD { get; set; }
         public string DriveEImageSourcePath { get; set; }
+        public ImageData DriveEImageData { get; set; }
 
         public bool SoftwareAndFileAction { get; set; }
         public string SourceDirectoryInOS { get; set; }

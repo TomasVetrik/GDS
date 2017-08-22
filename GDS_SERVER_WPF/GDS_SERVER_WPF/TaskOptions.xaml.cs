@@ -1,10 +1,15 @@
-﻿using Microsoft.Win32;
+﻿using GDS_SERVER_WPF.DataCLasses;
+using GDS_SERVER_WPF.Handlers;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
+using System.Windows.Input;
 using System.Windows.Media;
 
 namespace GDS_SERVER_WPF
@@ -13,11 +18,16 @@ namespace GDS_SERVER_WPF
     /// Interaction logic for TaskOptions.xaml
     /// </summary>
     public partial class TaskOptions : Window
-    {
-        TaskData taskData;
+    {        
         public string path;
         public string nodePath;
         public List<ClientHandler> clients;
+        public List<string> Names = new List<string>();
+        public bool executed = false;
+        public List<ExecutedTaskHandler> ExecutedTasksHandlers;
+        
+
+        public TaskData taskData;
 
         public TaskOptions()
         {
@@ -37,14 +47,7 @@ namespace GDS_SERVER_WPF
                 LoadNewData();
             }
             labelNumberOfMachines.Content = "Number Of PCs: " + listBoxTargetComputers.Items.Count;
-        }
-
-        private void SetDefaultColors()
-        {
-            labelTaskName.Foreground = Brushes.Black;
-            labelNumberOfMachines.Foreground = Brushes.Black;
-            labelToolTip.Content = "";
-        }
+        }       
 
         private void LoadNewData()
         {
@@ -55,7 +58,7 @@ namespace GDS_SERVER_WPF
         private void LoadData()
         {
             textBoxTaskName.Text = taskData.Name;
-            labelMachineGroupContent.Content = taskData.MachineGroup;
+            labelMachineGroupContent.Content = taskData.MachineGroup;           
             LoadDataToListBox(taskData.TargetComputers, listBoxTargetComputers);            
             textBoxBaseImage.Text = taskData.BaseImageSourcePath;
             textBoxDestinationFolderInOS.Text = taskData.DestinationDirectoryInOS;
@@ -86,12 +89,20 @@ namespace GDS_SERVER_WPF
             return textRange.Text;
         }
 
+        private void SetDefaultColors()
+        {
+            labelTaskName.Foreground = Brushes.Black;
+            labelNumberOfMachines.Foreground = Brushes.Black;
+            labelMachineGroup.Foreground = Brushes.Black;
+            labelError.Content = "";
+        }
+
         private void buttonSave_Click(object sender, RoutedEventArgs e)
         {
             Save();
         }
 
-        private void Save()
+        private bool Save()
         {
             if (SaveControl())
             {
@@ -121,19 +132,53 @@ namespace GDS_SERVER_WPF
                 taskData.WaitingTime = (int)slider.Value;
 
                 FileHandler.Save<TaskData>(taskData, nodePath + "\\" + textBoxTaskName.Text + ".my");
+                return true;
             }
-        }
+            return false;
+        }        
 
         private bool SaveControl()
         {
             SetDefaultColors();
             if (textBoxTaskName.Text == "")
             {
-                labelTaskName.Foreground = Brushes.Red;
-                labelToolTip.Content += "The property 'Task Name' cannot be an empty string\n";
+                SetErrorMessage(labelTaskName, "'Task Name' cannot be an empty string\n");                
+                return false;
+            }
+            if (textBoxTaskName.Text.IndexOfAny(new char[] {  '\\', '/', ':', '*', '?', '"', '<', '>', '|' }) != -1)
+            {
+                SetErrorMessage(labelTaskName, "'Task Name' cannot contains \\ / : * ? \" < > | \n");
+                return false;
+            }
+            if (Names.Contains(textBoxTaskName.Text))
+            {
+                SetErrorMessage(labelTaskName, "'Task Name': " + textBoxTaskName.Text + " exists\n");
+                return false;
+            }
+            List<string> LockComputers = Directory.GetFiles(@".\Machine Groups\Lock\", "*.my", SearchOption.AllDirectories).ToList();
+            foreach (string LockComputer in LockComputers)
+            {
+                foreach (string computerName in listBoxTargetComputers.Items)
+                {
+                    if (LockComputer.Contains(computerName + ".my"))
+                    {
+                        SetErrorMessage(labelMachineGroup, "Computer: " + computerName + " is locked\n");
+                        return false;
+                    }
+                }
+            }
+            if(checkBoxCloning.IsChecked.Value && textBoxBaseImage.Text == "" && textBoxDriveEImage.Text == "")
+            {
+                labelError.Content += "Cloning is not properly set up\n";
                 return false;
             }
             return true;
+        }
+
+        private void SetErrorMessage(Label label, string message)
+        {
+            label.Foreground = Brushes.Red;
+            labelError.Content += message;
         }
 
         private void buttonClose_Click(object sender, RoutedEventArgs e)
@@ -141,25 +186,73 @@ namespace GDS_SERVER_WPF
             this.Close();
         }
 
+        private bool IsMacAddressIn(List<string> array1, List<string> array2)
+        {
+            foreach (string text1 in array1)
+            {
+                foreach (string text2 in array2)
+                {
+                    if (text1 == text2)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public bool CheckMacsInREC(List<string> Macs, List<string> Recs)
+        {
+            if (Recs != null)
+            {
+                if (Macs.Count != 0 && Recs.Count != 0)
+                    return IsMacAddressIn(Macs, Recs);
+            }
+            return false;
+        }
+
         private void buttonExecute_Click(object sender, RoutedEventArgs e)
         {
-            SetDefaultColors();
+            SetDefaultColors();                        
             if (listBoxTargetComputers.Items.Count == 0)
             {
-                labelNumberOfMachines.Foreground = Brushes.Red;
-                labelToolTip.Content += "The property 'Target Machines' cannot be an empty string\n";
+                SetErrorMessage(labelNumberOfMachines, "The property 'Target Machines' cannot be an empty string\n");                
                 return;
             }
+            else
+            {
+                if (ExecutedTasksHandlers != null)
+                {
+                    foreach (ComputerDetailsData computer in listBoxTargetComputers.Items)
+                    {
+                        for (int i = ExecutedTasksHandlers.Count - 1; i >= 0; i--)
+                        {
+                            var item = ExecutedTasksHandlers[i];
+                            foreach (ComputerDetailsData computerInTask in item.executedTaskData.taskData.TargetComputers)
+                            {
+                                if (CheckMacsInREC(computer.macAddresses, computerInTask.macAddresses))
+                                {
+                                    SetErrorMessage(labelMachineGroup, computerInTask.Name + " is in task: " + item.executedTaskData.Name + "\n");
+                                    return;
+                                }
+                            }
+                        }                        
+                    }
+                }
+            }
             taskData.LastExecuted = DateTime.Now.ToString();
-            Save();
-            this.Close();
+            if (Save())
+            {
+                executed = true;
+                this.Close();
+            }            
         }        
 
         private void buttonBrowseComputers_Click(object sender, RoutedEventArgs e)
         {
             var browseComputersDialog = new BrowseComputers();
             browseComputersDialog.clients = clients;
-            browseComputersDialog.listBoxOut = listBoxTargetComputers;
+            browseComputersDialog.listBoxOut = listBoxTargetComputers;            
             browseComputersDialog.ShowDialog();
             if (listBoxTargetComputers.Items.Count != 0)
             {
@@ -183,11 +276,15 @@ namespace GDS_SERVER_WPF
         {
             var browseImagesWindows = new BrowseImages();
             browseImagesWindows.path = path;
-            browseImagesWindows.baseImage = baseImage;
+            browseImagesWindows.baseImage = baseImage;            
             browseImagesWindows.ShowDialog();
             if (browseImagesWindows.pathOutput != "")
             {
                 textBox.Text = browseImagesWindows.pathOutput;
+                if (path.Contains(@".\Base\"))
+                    taskData.BaseImageData = FileHandler.Load<ImageData>(textBox.Text + ".my");
+                else
+                    taskData.DriveEImageData = FileHandler.Load<ImageData>(textBox.Text + ".my");
             }
         }
 
@@ -241,18 +338,41 @@ namespace GDS_SERVER_WPF
         }
 
         private void LoadDataToListBox(List<string> items, ListBox listBox)
-        {
+        {            
             listBox.Items.Clear();
-            foreach(string item in items)
+            if (items != null)
             {
-                listBox.Items.Add(item);
+                foreach (string item in items)
+                {
+                    listBox.Items.Add(item);
+                }
             }
         }
 
         private void LoadDataToList(ListBox listBox, List<string> items)
-        {
+        {            
             items.Clear();
             foreach (string item in listBox.Items)
+            {
+                items.Add(item);
+            }
+        }
+
+        private void LoadDataToListBox(List<ComputerDetailsData> items, ListBox listBox)
+        {
+            listBox.Items.Clear();
+            if (items != null)
+            {
+                foreach (ComputerDetailsData item in items)
+                {
+                    listBox.Items.Add(item);
+                }
+            }
+        }
+        private void LoadDataToList(ListBox listBox, List<ComputerDetailsData> items)
+        {
+            items.Clear();
+            foreach (ComputerDetailsData item in listBox.Items)
             {
                 items.Add(item);
             }
@@ -278,5 +398,18 @@ namespace GDS_SERVER_WPF
                 listBoxCopyFilesInOS.Items.Remove(listBoxCopyFilesInOS.SelectedItem);
             }
         }
-    }
+
+        private void Window_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.Escape:
+                    {
+                        executed = false;
+                        this.Close();
+                        break;
+                    }
+            }
+        }
+    }   
 }

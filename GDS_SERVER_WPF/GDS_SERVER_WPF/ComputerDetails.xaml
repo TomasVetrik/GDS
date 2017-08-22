@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GDS_SERVER_WPF"
         mc:Ignorable="d"
-        Title="ComputerDetails" Height="500" Width="500" Loaded="Window_Loaded" Icon="Images/logo_gopas_sk.ico" WindowStartupLocation="CenterScreen">
+        Title="ComputerDetails" Height="500" Width="500" Loaded="Window_Loaded" Icon="Images/logo_gopas_sk.ico" WindowStartupLocation="CenterScreen" KeyUp="Window_KeyUp">
     <Grid>
         <TabControl x:Name="tabControl" HorizontalContentAlignment="Left" VerticalContentAlignment="Top">
             <TabItem Header="Computer Details">

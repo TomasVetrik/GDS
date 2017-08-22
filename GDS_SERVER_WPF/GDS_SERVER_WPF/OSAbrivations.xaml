@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GDS_SERVER_WPF"
         mc:Ignorable="d"
-        Title="OSAbrivations" Height="400" Width="400" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+        Title="OSAbrivations" Height="400" Width="400" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" KeyUp="Window_KeyUp">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
