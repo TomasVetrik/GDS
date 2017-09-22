@@ -45,14 +45,14 @@ namespace GDS_Client
         public bool SoftwareAndFileAction { get; set; }
         public string SourceDirectoryInOS { get; set; }
         public string DestinationDirectoryInOS { get; set; }
-        public List<string> CommnadsInOS { get; set; }
+        public List<string> CommandsInOS { get; set; }
         public List<string> CopyFilesInOS { get; set; }
 
         public bool SoftwareAndFileAction_WINPE { get; set; }
         public string SourceDirectoryInWINPE { get; set; }
         public string DestinationDirectoryInWINPE { get; set; }
         public List<string> CopyFilesInWINPE { get; set; }
-        public List<string> CommnadsInWINPE { get; set; }
+        public List<string> CommandsInWINPE { get; set; }
 
         public int WaitingTime { get; set; }
     }

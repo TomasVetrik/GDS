@@ -32,6 +32,10 @@ namespace GDS_Client
             {
                 if (listener.clientSocket != null)
                 {
+                    try {
+                        listener.SendMessage(new Packet(DataIdentifier.CLOSE, listener.computerDetails.computerDetailsData));
+                    }
+                    catch { }
                     listener.serverStream.Close();
                     listener.clientSocket.Close();
                 }

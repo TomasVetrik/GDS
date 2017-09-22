@@ -2,6 +2,8 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
+using System.Text;
 using System.Threading;
 
 namespace GDS_Client
@@ -16,7 +18,9 @@ namespace GDS_Client
         bool cloningDoneReceive = false;
         bool shutdowning = false;
         bool shutdowningDoneReceive = false;
-
+        bool runningCommands = false;
+        bool restarting = false;
+        Process CloneProcess;
 
         public MessageHandler(Listener _listener)
         {
@@ -45,23 +49,36 @@ namespace GDS_Client
 
         public void WorkingOnTask()
         {
-            int counter = 0;
+            File.WriteAllText(@"X:\Error.txt", "False");
+            CloneProcess = System.Diagnostics.Process.Start(@"X:\windows\system32\WindowsPowershell\v1.0\powershell.exe", @"-WindowStyle Maximized -executionpolicy unrestricted -File W:\Cloning.ps1");
             cloning = true;
-            while (counter != 5 && listener.running)
+            string CloneMessage = "CLONING";
+            while (listener.running && CloneMessage != "FALSE" && CloneMessage != "TRUE")
             {                
-                listener.SendMessage(new Packet(DataIdentifier.CLONING_STATUS, listener.computerDetails.computerDetailsData, "OK"));
-                Thread.Sleep(500);
-                listener.SendMessage(new Packet(DataIdentifier.CLONING_STATUS, listener.computerDetails.computerDetailsData, "Cloning"));
-                Thread.Sleep(500);
-                counter++;
+                listener.SendMessage(new Packet(DataIdentifier.CLONING_STATUS, listener.computerDetails.computerDetailsData, CloneMessage));
+                try { CloneMessage = File.ReadLines(@"X:\CloneStatus.txt").First(); } catch { }
+                Thread.Sleep(500);                               
             }
             cloning = false;
+
+            var dataIdentifier = DataIdentifier.CLONING_DONE;
+            if (CloneMessage == "FALSE")            
+                dataIdentifier = DataIdentifier.RESTART;       
             cloningDoneReceive = false;
             while (!cloningDoneReceive && listener.running)
             {
                 Thread.Sleep(500);
-                listener.SendMessage(new Packet(DataIdentifier.CLONING_DONE, listener.computerDetails.computerDetailsData));
+                listener.SendMessage(new Packet(dataIdentifier, listener.computerDetails.computerDetailsData));
             }
+        }
+
+        static void RunCommand(string FileName, string Arguments)
+        {
+            Process proc = new Process();
+            proc.StartInfo.FileName = FileName;
+            proc.StartInfo.Arguments = Arguments;
+            proc.StartInfo.Verb = "runas";
+            proc.Start();
         }
 
         private void Shutdowning()
@@ -91,19 +108,52 @@ namespace GDS_Client
                         break;
                     }
                 case DataIdentifier.SEND_TASK_CONFIG:
-                    {                        
+                    {
                         listener.SendMessage(new Packet(DataIdentifier.SEND_TASK_CONFIG, listener.computerDetails.computerDetailsData));
+                        packet.taskData.TargetComputers.Clear();
+                        packet.taskData.TargetComputers.Add(listener.computerDetails.computerDetailsData);
+                        if (listener.computerDetails.computerDetailsData.inWinpe)
+                            FileHandler.Save(packet.taskData, @"X:\TaskData.my");
+                        else
+                            FileHandler.Save(packet.taskData, @".\TaskData.my");
+                        break;
+                    }
+                case DataIdentifier.RUN_COMMAND:
+                    {
+                        listener.SendMessage(new Packet(DataIdentifier.RUN_COMMAND, listener.computerDetails.computerDetailsData));
+                        if (!runningCommands)
+                        {
+                            runningCommands = true;
+                            string pathTaskData = @".\TaskData.my";
+                            if (listener.computerDetails.computerDetailsData.inWinpe)                            
+                                pathTaskData = @"X:\TaskData.my";                            
+                            if(File.Exists(pathTaskData))
+                            {
+                                var taskData = FileHandler.Load<TaskData>(pathTaskData);
+                                var listCommands = taskData.CommandsInOS;
+                                if (listener.computerDetails.computerDetailsData.inWinpe)
+                                    listCommands = taskData.CommandsInWINPE;
+                                foreach (string arguments in listCommands)
+                                {
+                                    RunCommand("cmd.exe", "/C " + arguments);                                    
+                                }
+                                listener.SendMessage(new Packet(DataIdentifier.FINISH_RUN_COMMAND, listener.computerDetails.computerDetailsData));
+                                runningCommands = false;
+                            }
+                        }
+                        break;
+                    }
+                case DataIdentifier.CLONING:
+                    {
+                        listener.SendMessage(new Packet(DataIdentifier.CLONING, listener.computerDetails.computerDetailsData));
                         if (!cloning)
                         {
                             cloningThread = new Thread(WorkingOnTask);
                             cloningThread.Start();
-                            if (listener.computerDetails.computerDetailsData.inWinpe)
-                                FileHandler.Save<TaskData>(packet.taskData, @"X:\" + packet.taskData.Name + ".my");
-                            else
-                                FileHandler.Save<TaskData>(packet.taskData, @".\" + packet.taskData.Name + ".my");
-                        }                   
+                        }
                         break;
                     }
+                case DataIdentifier.RESTART:
                 case DataIdentifier.CLONING_DONE:
                     {                        
                         cloningDoneReceive = true;
@@ -112,7 +162,69 @@ namespace GDS_Client
                 case DataIdentifier.SEND_CONFIG:
                     {
                         listener.SendMessage(new Packet(DataIdentifier.SEND_CONFIG, listener.computerDetails.computerDetailsData));
-                        FileHandler.Save<ComputerConfigData>(packet.computerConfigData, @"D:\Temp\Config.my");       
+                        if (listener.computerDetails.computerDetailsData.inWinpe)
+                            FileHandler.Save(packet.computerConfigData, @"X:\Configuration.my");
+                        else
+                        {
+                            FileHandler.Save(packet.computerConfigData, @"D:\Temp\Configuration.my");
+                            var FileName = @"C:\windows\system32\WindowsPowershell\v1.0\powershell";
+                            var args = @"(Get-WmiObject -Class win32_ComputerSystem).rename(" + "\'" + packet.computerConfigData.Name + "\')";
+                            var processStartInfo = new ProcessStartInfo
+                            {
+                                FileName = FileName,
+                                Arguments = args,
+                                RedirectStandardOutput = true,
+                                CreateNoWindow = true,
+                                WindowStyle = ProcessWindowStyle.Hidden,
+                                UseShellExecute = false
+                            };
+                            var process = Process.Start(processStartInfo);
+                            process.WaitForExit();
+                            args = @"(Get-WmiObject -Class Win32_ComputerSystem).JoinDomainOrWorkgroup(" + "\'" + packet.computerConfigData.Workgroup + "\')";
+                            processStartInfo = new ProcessStartInfo
+                            {
+                                FileName = FileName,
+                                Arguments = args,
+                                RedirectStandardOutput = true,
+                                CreateNoWindow = true,
+                                WindowStyle = ProcessWindowStyle.Hidden,
+                                UseShellExecute = false
+                            };
+                            process = Process.Start(processStartInfo);
+                            process.WaitForExit();
+                        }
+                        break;
+                    }                
+                case DataIdentifier.CLIENT_TO_WINPE:
+                    {
+                        if (listener.computerDetails.computerDetailsData.inWinpe)
+                        {
+                            listener.SendMessage(new Packet(DataIdentifier.CLIENT_TO_WINPE, listener.computerDetails.computerDetailsData));                            
+                        }
+                        else
+                        {
+                            if (!restarting)
+                            {
+                                restarting = true;
+                                RunCommand(@"D:\Temp\GDS_Initialize.bat", "");                                
+                            }
+                        }
+                        break;
+                    }
+                case DataIdentifier.TO_OPERATING_SYSTEM:
+                    {
+                        if (listener.computerDetails.computerDetailsData.inWinpe)
+                        {
+                            if (!restarting)
+                            {
+                                restarting = true;
+                                Process.Start(@"X:\Windows\System32\wpeutil.exe", "reboot");
+                            }
+                        }
+                        else
+                        {
+                            listener.SendMessage(new Packet(DataIdentifier.TO_OPERATING_SYSTEM, listener.computerDetails.computerDetailsData));                            
+                        }
                         break;
                     }
                 case DataIdentifier.SHUTDOWN:
@@ -120,7 +232,7 @@ namespace GDS_Client
                         listener.SendMessage(new Packet(DataIdentifier.SHUTDOWN, listener.computerDetails.computerDetailsData));
                         if (!shutdowning)
                         {
-                            shutdowningThread = new Thread(WorkingOnTask);
+                            shutdowningThread = new Thread(Shutdowning);
                             shutdowningThread.Start();
                         }
                         break;
@@ -130,28 +242,18 @@ namespace GDS_Client
                         shutdowningDoneReceive = true;
                         break;
                     }
-                case DataIdentifier.CLIENT_TO_WINPE:
+                case DataIdentifier.ERROR_MESSAGE:
                     {
-                        if (listener.computerDetails.computerDetailsData.inWinpe)
+                        if (cloning)
                         {
-                            listener.SendMessage(new Packet(DataIdentifier.CLIENT_TO_WINPE, listener.computerDetails.computerDetailsData));                            
+                            Process[] procs = Process.GetProcessesByName("wdsmcast");
+                            foreach (Process p in procs) { p.Kill(); }                            
+                            Process p2 = Process.GetProcessById(CloneProcess.Id);
+                            p2.Kill();
+                            Process[] procs2 = Process.GetProcessesByName("diskpart");
+                            foreach (Process p in procs2) { p.Kill(); }
                         }
-                        else
-                        {
-                            Process.Start(@"D:\Temp\GDS_Initialize.bat");
-                        }
-                        break;
-                    }
-                case DataIdentifier.TO_OPERATING_SYSTEM:
-                    {
-                        if (listener.computerDetails.computerDetailsData.inWinpe)
-                        {                            
-                            Process.Start(@"X:\Windows\System32\wpeutil.exe", "reboot");
-                        }
-                        else
-                        {
-                            listener.SendMessage(new Packet(DataIdentifier.TO_OPERATING_SYSTEM, listener.computerDetails.computerDetailsData));                            
-                        }
+                        cloning = false;
                         break;
                     }
             }

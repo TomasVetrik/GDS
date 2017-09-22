@@ -65,8 +65,8 @@ namespace GDS_Client
                 running = true;
                 serverIP = "10.202.20.32";
                 serverPORT = 65452;
-                //serverIP = "10.202.0.6";
-                //serverIP = "127.0.0.1";
+                serverIP = "10.202.0.6";
+                serverIP = "127.0.0.1";
 
                 clientSocket = new System.Net.Sockets.TcpClient();                               
                 clientSocket.Connect(serverIP, serverPORT);

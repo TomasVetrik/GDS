@@ -25,8 +25,7 @@ namespace GDS_SERVER_WPF
         List<TaskData> clipBoardTasks = new List<TaskData>();
         string nodePathOld = "";
         bool copy;
-        bool machines;
-        Thread Server;
+        bool machines;        
         List<ExecutedTaskHandler> ExecutedTasksHandlers;
         Listener listener;
         TreeViewHandler treeViewMachinesAndTasksHandler;
@@ -51,17 +50,25 @@ namespace GDS_SERVER_WPF
             ExecutedTasksHandlers = new List<ExecutedTaskHandler>();
             listener = new Listener();
             listener.executedTasksHandlers = ExecutedTasksHandlers;
-            listener.listBox1 = this.consoleGDS;
             listener.labelOnlineClients = labelOnline;
             listener.labelOfflineClients = labelOffilne;
+            listener.labelAllClients = labelClients;
             listener.listViewMachinesAndTasksHandler = listViewMachinesAndTasksHandler;
+            listener.clientsAll = Directory.GetFiles(@".\Machine Groups\", "*.my", SearchOption.AllDirectories).Length;
             LoadIpAddresses();
-            Server = new Thread(listener.StartListener);
-            Server.Start();
+            listener.StartListener();
+            //Server = new Thread(listener.StartListener);
+            //Server.Start();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            try
+            {
+                for (int i = listViewMachinesAndTasksHandler.clients.Count; i >= 0; i--)
+                    listViewMachinesAndTasksHandler.clients[i].Close();
+            }
+            catch { }
             Environment.Exit(Environment.ExitCode);
         }
 
@@ -75,14 +82,12 @@ namespace GDS_SERVER_WPF
         }
         private void MenuItemMachineGroupsWOL_Click(object sender, RoutedEventArgs e)
         {
-            foreach (ComputerDetailsData item in listViewMachineGroups.SelectedItems)
-            {
-                if (item.ImageSource.Contains("Folder"))
-                    WakeOnLanHandler.runWakeOnLan(item.macAddresses, ipAddresses);
-            }
+            runWakeOnLanOnSelectedItems();
         }
         private void MenuItemMachineGroupsRDP_Click(object sender, RoutedEventArgs e)
-        { }
+        {
+            RemoteDesktop();
+        }
         private void MenuItemCreateFolder_Click(object sender, RoutedEventArgs e)
         {
             NewFolder();
@@ -146,6 +151,10 @@ namespace GDS_SERVER_WPF
                     }
                 }
             }
+        }
+        private void MenuItemMachineGroupsConfigureTemplate_Click(object sender, RoutedEventArgs e)
+        {
+            ConfigureTemplate();
         }
         private void MenuItemDetailsDeleteAll_Click(object sender, RoutedEventArgs e)
         {
@@ -249,12 +258,77 @@ namespace GDS_SERVER_WPF
             }
         }
 
+        private void runWakeOnLanOnSelectedItems()
+        {
+            foreach (ComputerDetailsData item in listViewMachineGroups.SelectedItems)
+            {
+                if (item.ImageSource.Contains("Folder"))
+                    WakeOnLanHandler.runWakeOnLan(item.macAddresses, ipAddresses);
+            }
+        }
+
+        private void RemoteDesktop()
+        {
+            var computer = (ComputerDetailsData)listViewMachineGroups.SelectedItem;
+            if (computer != null)
+            {
+                if (computer.inWinpe && computer.ImageSource.Contains("Winpe"))
+                    DartViewer(computer);
+                else
+                    System.Diagnostics.Process.Start("mstsc", "/v:" + computer.IPAddress);
+            }
+        }
+
+        private void ConfigureTemplate()
+        {
+            var ConfigureTemplateDialog = new ConfigureTemplate();
+            ConfigureTemplateDialog.ShowDialog();
+            if (!ConfigureTemplateDialog.cancel)
+            {
+                foreach (ComputerDetailsData computer in listViewMachineGroups.SelectedItems)
+                {
+                    string pathConfigFile = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + computer.Name + ".cfg";
+                    if (File.Exists(pathConfigFile))
+                    {
+                        var computerConfig = FileHandler.Load<ComputerConfigData>(pathConfigFile);
+                        computerConfig.Workgroup = ConfigureTemplateDialog.textBoxNewName.Text;
+                        if(computerConfig.Name == "" || computerConfig.Name.Contains("MININT"))
+                        {
+                            computerConfig.Name = computer.Name;
+                        }                        
+                        FileHandler.Save(computerConfig, pathConfigFile);
+                    }
+                    else
+                    {
+                        FileHandler.Save(new ComputerConfigData(computer.Name, ConfigureTemplateDialog.textBoxNewName.Text), pathConfigFile);
+                    }
+                }
+            }
+        }
+
+        private void DartViewer(ComputerDetailsData computer)
+        {
+            try
+            {                
+                string temp = computer.dartInfo;
+                string[] details = temp.Split('#');
+                string ticket = details[0];
+                string port = details[2];
+                string IPAdd = details[1];
+                System.Diagnostics.Process.Start(@"C:\Windows\Sysnative\DartRemoteViewer.exe", "-ticket=" + ticket + " -IPaddress=" + IPAdd + " -port=" + port);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+       } 
+
         private void RunTask(TaskOptions dialog)
         {
             ExecutedTaskData executedTask = new ExecutedTaskData();
             executedTask.Name = dialog.taskData.Name;
             executedTask.Status = "Images/Progress.ico";
-            executedTask.Started = dialog.taskData.LastExecuted.Replace(":", "-");
+            executedTask.Started = dialog.taskData.LastExecuted;
             executedTask.Finished = "NONE";
             executedTask.Clients = dialog.taskData.TargetComputers.Count.ToString();
             executedTask.Done = "0";
@@ -595,10 +669,10 @@ namespace GDS_SERVER_WPF
                     string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + renameItemDialog.textBoxNewName.Text;
                     if (oldItem.ImageSource.Contains("Folder"))
                     {
-                        if (Directory.Exists(path))
+                        if (Directory.Exists(oldPath))
                             Directory.Move(oldPath, path);
                         treeViewMachinesAndTasksHandler.RenameItem(oldItem.Name, renameItemDialog.textBoxNewName.Text);
-                    }
+                   } 
                     else
                     {
                         oldPath += ".my";
@@ -910,10 +984,17 @@ namespace GDS_SERVER_WPF
                         }
                     case Key.W:
                         {
+                            runWakeOnLanOnSelectedItems();
                             break;
                         }
                     case Key.R:
                         {
+                            RemoteDesktop();
+                            break;
+                        }
+                    case Key.T:
+                        {
+                            ConfigureTemplate();
                             break;
                         }
                 }
@@ -945,7 +1026,7 @@ namespace GDS_SERVER_WPF
                 progressComputerDetailsDialog.executedTaskData = selectedItem;
                 progressComputerDetailsDialog.ShowDialog();
             }
-        }       
+        }        
     }
 
     public static class CharExtensions

@@ -73,7 +73,7 @@ namespace GDS_Client
                 computerDetails.Add("BASE NAME||" + computerDetailsData.baseImageName);
                 computerDetailsData.driveEImageName = GeDriveEImageName();
                 computerDetails.Add("DRIVEE NAME||" + computerDetailsData.driveEImageName);
-                computerDetailsData.dartInfo = GetDartViewerInfo();
+                computerDetailsData.dartInfo = GetDartViewerInfo(0);
                 computerDetails.Add("Dart Viewer||" + computerDetailsData.dartInfo + "END");
             }
             catch
@@ -119,7 +119,7 @@ namespace GDS_Client
             return name;
         }
 
-        string GetDartViewerInfo()
+        string GetDartViewerInfo(int counter)
         {
             if (computerDetailsData.inWinpe)
             {
@@ -128,6 +128,16 @@ namespace GDS_Client
                 {
                     string dartViewerDetails = File.ReadAllLines(path).First();
                     return dartViewerDetails;
+                }
+                else
+                {
+                    Console.WriteLine("Dart Viewer File not exists");
+                    if (counter != 5)
+                    {
+                        Thread.Sleep(2000);
+                        counter++;
+                        return GetDartViewerInfo(counter);
+                    }
                 }
             }
             return "";

@@ -14,9 +14,9 @@ namespace GDS_SERVER_WPF
 {
     public class ClientHandler
     {
-        ListBox list;
         Label labelOnline;
         Label labelOffline;
+        Label labelAllClients;
         static int length = 20000;
         byte[] dataStream = new byte[length];
         List<ClientHandler> clients;
@@ -39,17 +39,17 @@ namespace GDS_SERVER_WPF
         public ComputerConfigData computerConfigData;
         
 
-        public void startClient(TcpClient inClientSocket, int _clientNumber, ListBox _list, List<ClientHandler> _clients, Label _labelOnline, Label _labelOffline, ListViewMachinesAndTasksHandler _listViewMachinesAndTasksHandler, List<ExecutedTaskHandler> _executedTasksHandlers)
+        public void startClient(TcpClient inClientSocket, int _clientNumber, List<ClientHandler> _clients, Label _labelOnline, Label _labelOffline, ListViewMachinesAndTasksHandler _listViewMachinesAndTasksHandler, List<ExecutedTaskHandler> _executedTasksHandlers, Label _labelAllClients)
         {
             this.clientSocket = inClientSocket;
             this.clientNumber = _clientNumber;
-            this.list = _list;
             this.offline = false;
             this.clients = _clients;
             this.labelOnline = _labelOnline;
             this.labelOffline = _labelOffline;
             this.listViewMachinesAndTasksHandler = _listViewMachinesAndTasksHandler;
-            this.executedTasksHandlers = _executedTasksHandlers;            
+            this.executedTasksHandlers = _executedTasksHandlers;
+            this.labelAllClients = _labelAllClients;
             Thread ctThread = new Thread(doChat);
             computerData = new ComputerDetailsData();
             ctThread.Start();
@@ -87,27 +87,30 @@ namespace GDS_SERVER_WPF
                         HandleMessage(receivePacket);
                         Application.Current.Dispatcher.Invoke(() =>
                         {
-                            if (computerInTaskHandler != null)
+                            for (int i = listViewMachinesAndTasksHandler.machines.Items.Count - 1; i >= 0; i--)
                             {
-                                //list.Items.Add("computerInTaskHandler is not NULL + " + computerInTaskHandler.receivePacket.dataIdentifier);
+                                try {
+                                    ComputerDetailsData computer = (ComputerDetailsData)listViewMachinesAndTasksHandler.machines.Items[i];
+                                    if (!computer.ImageSource.Contains("Folder"))
+                                    {
+                                        if (CheckMacsInREC(computer.macAddresses, macAddresses))
+                                        {
+                                            if (computer.inWinpe)
+                                                computer.ImageSource = "Images/WinPE.ico";
+                                            else
+                                                computer.ImageSource = "Images/Online.ico";
+                                            listViewMachinesAndTasksHandler.machines.Items.RemoveAt(i);
+                                            listViewMachinesAndTasksHandler.machines.Items.Insert(i, computer);                                            
+                                            break;
+                                        }
+                                    }
+                                }
+                                catch (Exception e)
+                                {
+                                    MessageBox.Show(e.ToString());
+                                }
                             }
-                            list.Items.Add(computerData.Name + " " + receivePacket.dataIdentifier + " " + receivePacket.computerDetailsData.MacAddress);
                         });
-                        if (receivePacket.dataIdentifier == DataIdentifier.SYN_FLAG || receivePacket.dataIdentifier == DataIdentifier.SYN_FLAG_WINPE)
-                        {
-                            Application.Current.Dispatcher.Invoke(() =>
-                            {
-                                listViewMachinesAndTasksHandler.Refresh();
-                            });
-                        }
-                    }
-                    else
-                    {
-                        Application.Current.Dispatcher.Invoke(() =>
-                        {
-                            list.Items.Add(computerData.Name + " " + receivePacket.dataIdentifier + " " + receivePacket.computerDetailsData.MacAddress + " SHUTDOWN??");
-                        });
-                        SendMessage(new Packet(DataIdentifier.SYN_FLAG));
                     }
                     IDTimeOLD = receivePacket.IDTime;
                     myNetworkStream.BeginRead(dataStream, 0, dataStream.Length,
@@ -117,13 +120,26 @@ namespace GDS_SERVER_WPF
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.ToString());
+                Console.WriteLine(ex.ToString());
                 clients.Remove(this);
                 Application.Current.Dispatcher.Invoke(() =>
                 {
                     labelOnline.Content = "Online: " + clients.Count;
                     labelOffline.Content = "Offline: " + (clientsAll - clients.Count);
-                    listViewMachinesAndTasksHandler.Refresh();
+                    Application.Current.Dispatcher.Invoke(() =>
+                    {
+                        for (int i = listViewMachinesAndTasksHandler.machines.Items.Count - 1; i >= 0; i--)
+                        {
+                            ComputerDetailsData computer = (ComputerDetailsData)listViewMachinesAndTasksHandler.machines.Items[i];
+                            if (CheckMacsInREC(computer.macAddresses, macAddresses))
+                            {
+                                computer.ImageSource = "Images/Offline.ico";
+                                listViewMachinesAndTasksHandler.machines.Items.RemoveAt(i);
+                                listViewMachinesAndTasksHandler.machines.Items.Insert(i, computer);
+                                break;
+                            }
+                        }                        
+                    });
                 });
                 offline = true;
                 if (receivePacket != null)
@@ -157,6 +173,11 @@ namespace GDS_SERVER_WPF
                             FindComputerInTask();
                             break;
                         }
+                    case DataIdentifier.RESTART:
+                        {
+                            SendMessage(new Packet(DataIdentifier.RESTART));
+                            break;
+                        }
                     case DataIdentifier.CLONING_DONE:
                         {
                             SendMessage(new Packet(DataIdentifier.CLONING_DONE));
@@ -165,6 +186,12 @@ namespace GDS_SERVER_WPF
                     case DataIdentifier.SHUTDOWN:
                         {
                             SendMessage(new Packet(DataIdentifier.SHUTDOWN_DONE));                                                                                    
+                            break;
+                        }
+                    case DataIdentifier.CLOSE:
+                        {
+                            networkStream.Close();
+                            clientSocket.Close();
                             break;
                         }
                 }
@@ -240,10 +267,13 @@ namespace GDS_SERVER_WPF
         {
             string IP = ((IPEndPoint)clientSocket.Client.RemoteEndPoint).Address.ToString();
             computerDetailsData.IPAddress = IP;
-            computerDetailsData.ImageSource = "Images/WinPE.ico";
             computerData = computerDetailsData;
             var computersInfoFiles = Directory.GetFiles(@".\Machine Groups\", "*.my", SearchOption.AllDirectories);
             clientsAll = computersInfoFiles.Length;
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                labelAllClients.Content = "Clients: " + clientsAll;
+            });
             var filePath = GetFileNameByMac(computersInfoFiles);            
             computerConfigData = new ComputerConfigData(computerData.RealPCName, "Workgroup");
             if (filePath != "")
@@ -256,7 +286,7 @@ namespace GDS_SERVER_WPF
                 }
                 else
                 {
-                    FileHandler.Load<ComputerConfigData>(filePath.Replace(".my", ".cfg"));
+                    computerConfigData = FileHandler.Load<ComputerConfigData>(filePath.Replace(".my", ".cfg"));
                 }
             }
             else
@@ -305,6 +335,12 @@ namespace GDS_SERVER_WPF
             networkStream.BeginRead(dataStream, 0, dataStream.Length,
                                                    new AsyncCallback(this.myReadCallBack),
                                                    networkStream);
+        }
+
+        public void Close()
+        {
+            networkStream.Close();
+            clientSocket.Close();
         }
     }
 }

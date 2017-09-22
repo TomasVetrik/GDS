@@ -15,7 +15,7 @@ namespace GDS_SERVER_WPF
         public List<ClientHandler> clients;
         
 
-        ListView machines;
+        public ListView machines;
         ListView tasks;        
         TreeViewHandler treeViewHandler;
         
@@ -62,6 +62,8 @@ namespace GDS_SERVER_WPF
                         if (client.macAddresses != null && client.CheckMacsInREC(client.macAddresses, computerData.macAddresses))
                         {
                             computerData.ImageSource = "Images/Online.ico";
+                            if (client.inWinpe)
+                                computerData.ImageSource = "Images/Winpe.ico";
                             break;
                         }
                     }

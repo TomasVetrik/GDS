@@ -32,12 +32,16 @@ namespace GDS_SERVER_WPF
                 computerData = FileHandler.Load<ComputerDetailsData>(computerFilePath);
                 listBox.ItemsSource = computerData.GetItems();
             }
+            else
+                computerData = new ComputerDetailsData();
             if (File.Exists(computerConfigFilePath))
             {
                 computerConfigData = FileHandler.Load<ComputerConfigData>(computerConfigFilePath);
                 textBoxComputerName.Text = computerConfigData.Name;
                 textBoxWorkGroup.Text = computerConfigData.Workgroup;
             }
+            else
+                computerConfigData = new ComputerConfigData();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
