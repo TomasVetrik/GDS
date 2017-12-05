@@ -29,6 +29,49 @@ namespace GDS_Client
 
         public static string GetIPAddress()
         {
+            try
+            {
+                string wmiQuery = "SELECT * FROM Win32_NetworkAdapter WHERE NetConnectionId != NULL";
+                ManagementObjectSearcher moSearch = new ManagementObjectSearcher(wmiQuery);
+                ManagementObjectCollection moCollection = moSearch.Get();
+                string IPAddress = "Not Found,";
+                foreach (ManagementObject mo in moCollection)
+                {
+                    string pnp = mo["PNPDeviceID"].ToString();
+                    if (pnp.Contains("PCI\\"))
+                    {
+                        ManagementObjectSearcher query = new ManagementObjectSearcher("SELECT * FROM Win32_NetworkAdapterConfiguration WHERE IPEnabled = 'TRUE' AND Index =" + mo["Index"]);
+                        ManagementObjectCollection queryCollection = query.Get();
+                        foreach (ManagementObject mo2 in queryCollection)
+                        {
+                            string[] addresses = (string[])mo2["IPAddress"];
+                            {
+                                IPAddress += addresses[0] + ",";
+                            }
+                        }
+                    }
+                }
+                if (IPAddress != "Not Found,")
+                {
+                    IPAddress = IPAddress.Replace("Not Found,", "");
+                }
+                else
+                {
+                    string hostName = Dns.GetHostName();
+                    IPAddress = Dns.GetHostByName(hostName).AddressList[0].ToString();
+                }
+                if (IPAddress.Length != 0)
+                {
+                    IPAddress = IPAddress.Substring(0, IPAddress.Length - 1);
+                }
+                return "IP Address||" + IPAddress;
+            }
+            catch { }
+            return "IP Address||NONE";
+        }
+
+        public static string GetIPAddress2()
+        {
             string wmiQuery = "SELECT * FROM Win32_NetworkAdapter WHERE NetConnectionId != NULL";
             ManagementObjectSearcher moSearch = new ManagementObjectSearcher(wmiQuery);
             ManagementObjectCollection moCollection = moSearch.Get();
@@ -199,47 +242,7 @@ namespace GDS_Client
                     }
                 }
              
-                return macAddresses;
-                /*string macAddresses = "";
-                ManagementObjectSearcher mos = new ManagementObjectSearcher("select MACAddress, PNPDeviceID from Win32_NetworkAdapter Where AdapterType='Ethernet 802.3'");
-                foreach (ManagementObject mo in mos.Get())
-                {
-                    string pnp = mo["PNPDeviceID"].ToString();
-                    if (pnp.Contains("PCI\\"))
-                    {
-                        string mac = mo["MACAddress"].ToString();
-                        macAddresses += mac + "&";
-                    }
-                }
-
-                macAddresses = macAddresses.Substring(0, macAddresses.Length - 1);
-                if (macAddresses != "")
-                {
-                    return macAddresses;
-                }
-                GetMacAddresses();
-                return "";                
-                /*
-                List<string> macAddresses = new List<string>();
-
-                foreach (NetworkInterface nic in NetworkInterface.GetAllNetworkInterfaces())
-                {
-                    if (nic.NetworkInterfaceType == NetworkInterfaceType.Ethernet)
-                        macAddresses.Add(nic.GetPhysicalAddress().ToString());
-                }
-
-               
-                return String.Join("&", macAddresses);  
-                /*
-                ManagementClass mc = new ManagementClass("Win32_NetworkAdapterConfiguration");
-                ManagementObjectCollection moc = mc.GetInstances();
-                List<string> MACAddress = new List<string>();
-                foreach (ManagementObject mo in moc)
-                {
-                    if ((bool)mo["IPEnabled"] == true) MACAddress.Add(mo["MacAddress"].ToString());
-                    mo.Dispose();
-                }
-                return String.Join("&", MACAddress);*/
+                return macAddresses;                
             }
             catch
             {

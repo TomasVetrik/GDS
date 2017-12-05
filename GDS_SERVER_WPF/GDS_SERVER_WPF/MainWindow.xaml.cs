@@ -1,5 +1,7 @@
 ﻿using GDS_SERVER_WPF.DataCLasses;
 using GDS_SERVER_WPF.Handlers;
+using NetworkCommsDotNet;
+using NetworkCommsDotNet.Tools;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -29,6 +31,8 @@ namespace GDS_SERVER_WPF
         List<ExecutedTaskHandler> ExecutedTasksHandlers;
         Listener listener;
         TreeViewHandler treeViewMachinesAndTasksHandler;
+        TreeViewHandler treeViewPostInstallsHandler;
+        ListViewPostinstallsHandler listViewPostInstallsHandler;
         ListViewMachinesAndTasksHandler listViewMachinesAndTasksHandler;
         ListViewTaskDetailsHandler listViewTaskDetailsHandler;
         string LockPath = @".\Machine Groups\Lock";
@@ -42,7 +46,8 @@ namespace GDS_SERVER_WPF
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             CheckDirectories();
-            treeViewMachinesAndTasksHandler = new TreeViewHandler(treeViewMachinesAndTasks);                        
+            treeViewMachinesAndTasksHandler = new TreeViewHandler(treeViewMachinesAndTasks);
+            
             listViewMachinesAndTasksHandler = new ListViewMachinesAndTasksHandler(listViewMachineGroups, listViewTasks, treeViewMachinesAndTasksHandler);
             listViewTaskDetailsHandler = new ListViewTaskDetailsHandler(listViewTasksDetails);
             listViewMachinesAndTasksHandler.LoadTreeViewMachinesAndTasks();
@@ -55,6 +60,11 @@ namespace GDS_SERVER_WPF
             listener.labelAllClients = labelClients;
             listener.listViewMachinesAndTasksHandler = listViewMachinesAndTasksHandler;
             listener.clientsAll = Directory.GetFiles(@".\Machine Groups\", "*.my", SearchOption.AllDirectories).Length;
+            listener.console = listBoxConsole;
+            treeViewPostInstallsHandler = new TreeViewHandler(treeViewPostInstalls);
+            listViewPostInstallsHandler = new ListViewPostinstallsHandler(listViewPostInstalls, treeViewPostInstallsHandler, listBoxPostInstallsSelected, listBoxPostInstallsSelector);
+            listViewPostInstallsHandler.ClientsDictionary = listener.ClientsDictionary;
+            listViewPostInstallsHandler.LoadTreeViewMachines();
             LoadIpAddresses();
             listener.StartListener();
             //Server = new Thread(listener.StartListener);
@@ -65,8 +75,7 @@ namespace GDS_SERVER_WPF
         {
             try
             {
-                for (int i = listViewMachinesAndTasksHandler.clients.Count; i >= 0; i--)
-                    listViewMachinesAndTasksHandler.clients[i].Close();
+                NetworkComms.Shutdown();
             }
             catch { }
             Environment.Exit(Environment.ExitCode);
@@ -97,7 +106,7 @@ namespace GDS_SERVER_WPF
             var taskOptionsDialog = new TaskOptions();
             taskOptionsDialog.path = "";
             taskOptionsDialog.nodePath = treeViewMachinesAndTasksHandler.GetNodePath();
-            taskOptionsDialog.clients = listViewMachinesAndTasksHandler.clients;
+            taskOptionsDialog.ClientsDictionary = listViewMachinesAndTasksHandler.ClientsDictionary;
             taskOptionsDialog.ExecutedTasksHandlers = ExecutedTasksHandlers;
             foreach (TaskData item in listViewTasks.Items)
             {
@@ -339,7 +348,7 @@ namespace GDS_SERVER_WPF
             ExecutedTasksHandlers.Add(taskHandler);
             taskHandler.handlers = ExecutedTasksHandlers;
             taskHandler.listViewHandler = listViewTaskDetailsHandler;
-            taskHandler.clients = listViewMachinesAndTasksHandler.clients;
+            taskHandler.ClientsDictionary = listViewMachinesAndTasksHandler.ClientsDictionary;
             Thread taskHandlerThread = new Thread(taskHandler.Start);            
             taskHandlerThread.Start();
         }                     
@@ -390,12 +399,12 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void listViewMachineGroups_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void listViewComputers_MouseDoubleClick(ListView listView, TreeViewHandler treeViewHandler)
         {
-            var selectedItem = (ComputerDetailsData)listViewMachineGroups.SelectedItem;
+            var selectedItem = (ComputerDetailsData)listView.SelectedItem;
             if (selectedItem != null)
             {
-                var path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + selectedItem.Name;
+                var path = treeViewHandler.GetNodePath() + "\\" + selectedItem.Name;
                 if (!selectedItem.ImageSource.Contains("Folder"))
                 {
                     var dialogComputerDetails = new ComputerDetails();
@@ -404,9 +413,14 @@ namespace GDS_SERVER_WPF
                 }
                 else
                 {
-                    treeViewMachinesAndTasksHandler.SetTreeNode(selectedItem.Name);                    
+                    treeViewHandler.SetTreeNode(selectedItem.Name);
                 }
             }
+        }
+
+        private void listViewMachineGroups_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            listViewComputers_MouseDoubleClick(listViewMachineGroups, treeViewMachinesAndTasksHandler);
         }
 
         private void listViewTasks_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -420,7 +434,7 @@ namespace GDS_SERVER_WPF
                     var taskOptionsDialog = new TaskOptions();
                     taskOptionsDialog.path = path;
                     taskOptionsDialog.nodePath = treeViewMachinesAndTasksHandler.GetNodePath();
-                    taskOptionsDialog.clients = listViewMachinesAndTasksHandler.clients;
+                    taskOptionsDialog.ClientsDictionary = listViewMachinesAndTasksHandler.ClientsDictionary;
                     taskOptionsDialog.ExecutedTasksHandlers = ExecutedTasksHandlers;
                     foreach (TaskData item in listViewTasks.Items)
                     {
@@ -507,13 +521,11 @@ namespace GDS_SERVER_WPF
                                 foreach (string computerFile in computersInfoFiles)
                                 {
                                     var computerData = FileHandler.Load<ComputerDetailsData>(computerFile);
-                                    for (int j = listViewMachinesAndTasksHandler.clients.Count - 1; j >= 0; j--)
+                                    foreach (KeyValuePair<ShortGuid, ComputerWithConnection> computer in listener.ClientsDictionary)
                                     {
-                                        ClientHandler client = listViewMachinesAndTasksHandler.clients[j];
-                                        if (client.CheckMacsInREC(client.macAddresses, computerData.macAddresses))
+                                        if (computer.Value.ComputerData.macAddresses != null && Listener.CheckMacsInREC(computer.Value.ComputerData.macAddresses, computerData.macAddresses))
                                         {
-                                            client.SendMessage(new Packet(DataIdentifier.CLOSE));
-                                            client.deleting = true;
+                                            listener.SendMessage(new Packet(FLAG.CLOSE), computer.Value.connection);
                                             break;
                                         }
                                     }
@@ -531,13 +543,11 @@ namespace GDS_SERVER_WPF
                         else
                         {
                             string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + item.Name + ".my";
-                            for (int j = listViewMachinesAndTasksHandler.clients.Count - 1; j >= 0; j--)
+                            foreach (KeyValuePair<ShortGuid, ComputerWithConnection> computer in listener.ClientsDictionary)
                             {
-                                ClientHandler client = listViewMachinesAndTasksHandler.clients[j];
-                                if (client.CheckMacsInREC(client.macAddresses, item.macAddresses))
+                                if (computer.Value.ComputerData.macAddresses != null && Listener.CheckMacsInREC(computer.Value.ComputerData.macAddresses, item.macAddresses))
                                 {
-                                    client.SendMessage(new Packet(DataIdentifier.CLOSE));
-                                    client.deleting = true;
+                                    listener.SendMessage(new Packet(FLAG.CLOSE), computer.Value.connection);
                                     break;
                                 }
                             }
@@ -1026,7 +1036,28 @@ namespace GDS_SERVER_WPF
                 progressComputerDetailsDialog.executedTaskData = selectedItem;
                 progressComputerDetailsDialog.ShowDialog();
             }
-        }        
+        }
+
+        private void listViewPostInstalls_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            listViewComputers_MouseDoubleClick(listViewPostInstalls, treeViewPostInstallsHandler);
+        }
+
+        private void treeViewPostInstalls_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            if (treeViewPostInstalls.SelectedItem != null)
+            {
+                (treeViewPostInstalls.SelectedItem as TreeViewItem).IsExpanded = true;
+            }
+            var path = treeViewPostInstallsHandler.GetNodePath();
+            listViewPostInstallsHandler.LoadMachines(path);
+            listViewPostInstalls.SelectAll();
+        }
+
+        private void btnPostInstallsSelect_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            listViewPostInstallsHandler.SeLect();
+        }
     }
 
     public static class CharExtensions

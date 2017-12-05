@@ -13,15 +13,22 @@ namespace GDS_Client
         static Listener listener;
         static void Repeater()
         {
-            handler = new ConsoleEventDelegate(ConsoleEventCallback);
-            SetConsoleCtrlHandler(handler, true);
-            listener = new Listener();
-            listener.running = true;
-            listener.StartListener();
-            Thread.Sleep(5000);
-            while (listener.running)
+            try
             {
-                Thread.Sleep(10000);
+                handler = new ConsoleEventDelegate(ConsoleEventCallback);
+                SetConsoleCtrlHandler(handler, true);
+                listener = new Listener();
+                listener.running = true;
+                listener.StartListener();
+                Thread.Sleep(5000);
+                while (listener.running)
+                {
+                    Thread.Sleep(10000);
+                }                
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Problem with repeater: " + ex.ToString());
             }
             Repeater();
         }
@@ -30,14 +37,12 @@ namespace GDS_Client
         {
             try
             {
-                if (listener.clientSocket != null)
+                if (listener.connection != null)
                 {
                     try {
-                        listener.SendMessage(new Packet(DataIdentifier.CLOSE, listener.computerDetails.computerDetailsData));
+                        listener.connection.CloseConnection(true);
                     }
                     catch { }
-                    listener.serverStream.Close();
-                    listener.clientSocket.Close();
                 }
             }
             catch (Exception ex)

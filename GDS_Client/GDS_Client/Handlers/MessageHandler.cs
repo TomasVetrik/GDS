@@ -27,20 +27,22 @@ namespace GDS_Client
             this.listener = _listener;
         }
 
-        void WriteToLogs(string LOG)
+        string FileName = @"D:\Temp\GDSClient\GDS_Client_LOG.txt";
+
+        public void WriteToLogs(string LOG)
         {
             Console.WriteLine(LOG);
             if (!listener.computerDetails.computerDetailsData.inWinpe)
             {
-                if (File.Exists(@".\LOG.txt"))
+                if (File.Exists(FileName))
                 {
-                    FileInfo FI = new FileInfo(@".\LOG.txt");
+                    FileInfo FI = new FileInfo(FileName);
                     if (FI.Length > 2000000)
                     {
                         FI.Delete();
                     }
                 }
-                using (StreamWriter sw = File.AppendText(@".\LOG.txt"))
+                using (StreamWriter sw = File.AppendText(FileName))
                 {
                     sw.WriteLine(DateTime.Now.ToString() + ": " + LOG);
                 }
@@ -49,26 +51,46 @@ namespace GDS_Client
 
         public void WorkingOnTask()
         {
-            File.WriteAllText(@"X:\Error.txt", "False");
-            CloneProcess = System.Diagnostics.Process.Start(@"X:\windows\system32\WindowsPowershell\v1.0\powershell.exe", @"-WindowStyle Maximized -executionpolicy unrestricted -File W:\Cloning.ps1");
-            cloning = true;
-            string CloneMessage = "CLONING";
-            while (listener.running && CloneMessage != "FALSE" && CloneMessage != "TRUE")
-            {                
-                listener.SendMessage(new Packet(DataIdentifier.CLONING_STATUS, listener.computerDetails.computerDetailsData, CloneMessage));
-                try { CloneMessage = File.ReadLines(@"X:\CloneStatus.txt").First(); } catch { }
-                Thread.Sleep(500);                               
-            }
-            cloning = false;
-
-            var dataIdentifier = DataIdentifier.CLONING_DONE;
-            if (CloneMessage == "FALSE")            
-                dataIdentifier = DataIdentifier.RESTART;       
-            cloningDoneReceive = false;
-            while (!cloningDoneReceive && listener.running)
+            try
             {
-                Thread.Sleep(500);
-                listener.SendMessage(new Packet(dataIdentifier, listener.computerDetails.computerDetailsData));
+                if(!File.Exists(@"X:\CloneStatus.txt"))
+                    File.WriteAllText(@"X:\CloneStatus.txt", "CLONING");
+                File.WriteAllText(@"X:\Error.txt", "False");
+                CloneProcess = System.Diagnostics.Process.Start(@"X:\windows\system32\WindowsPowershell\v1.0\powershell.exe", @"-WindowStyle Maximized -executionpolicy unrestricted -File W:\Cloning.ps1");
+                cloning = true;
+                string CloneMessage = "CLONING";
+                while (listener.running && CloneMessage != "FALSE" && CloneMessage != "TRUE" && cloning)
+                {                    
+                    try
+                    {
+                        if(CloneMessage != null && listener.computerDetails.computerDetailsData != null && CloneMessage != "")
+                            listener.SendMessage(new Packet(FLAG.CLONING_STATUS, listener.computerDetails.computerDetailsData, CloneMessage));
+                        CloneMessage = File.ReadLines(@"X:\CloneStatus.txt").First();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Problem with cloning: " + ex.ToString());
+                    }
+                    Thread.Sleep(1000);
+                    Console.WriteLine(DateTime.Now + " " + CloneMessage);
+                }
+                var dataIdentifier = FLAG.CLONING_DONE;
+                if (CloneMessage == "FALSE")
+                    dataIdentifier = FLAG.RESTART;
+                cloningDoneReceive = false;                
+                if (cloning)
+                {
+                    while (!cloningDoneReceive && listener.running)
+                    {
+                        Thread.Sleep(500);
+                        listener.SendMessage(new Packet(dataIdentifier, listener.computerDetails.computerDetailsData));
+                    }
+                }
+                cloning = false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
             }
         }
 
@@ -87,29 +109,29 @@ namespace GDS_Client
             while(!shutdowningDoneReceive)
             {
                 Thread.Sleep(500);
-                listener.SendMessage(new Packet(DataIdentifier.SHUTDOWN, listener.computerDetails.computerDetailsData));
+                listener.SendMessage(new Packet(FLAG.SHUTDOWN_DONE, listener.computerDetails.computerDetailsData));
             }
             Process.Start("shutdown", "/s /t 0");
         }
             
         public void HandleMessage(Packet packet)
         {
-            WriteToLogs(DateTime.Now.ToLongTimeString().ToString() + ": " + packet.dataIdentifier);
-            switch (packet.dataIdentifier)
+            WriteToLogs(DateTime.Now.ToLongTimeString().ToString() + ": " + packet.ID);
+            switch (packet.ID)
             {            
-                case DataIdentifier.SYN_FLAG:
+                case FLAG.SYN_FLAG:
                     {                       
-                        listener.SendMessage(new Packet(DataIdentifier.SYN_FLAG,listener.computerDetails.computerDetailsData));
+                        listener.SendMessage(new Packet(FLAG.SYN_FLAG,listener.computerDetails.computerDetailsData));
                         break;
                     }
-                case DataIdentifier.CLOSE:
+                case FLAG.CLOSE:
                     {
                         Environment.Exit(0);
                         break;
                     }
-                case DataIdentifier.SEND_TASK_CONFIG:
+                case FLAG.SEND_TASK_CONFIG:
                     {
-                        listener.SendMessage(new Packet(DataIdentifier.SEND_TASK_CONFIG, listener.computerDetails.computerDetailsData));
+                        listener.SendMessage(new Packet(FLAG.SEND_TASK_CONFIG, listener.computerDetails.computerDetailsData));
                         packet.taskData.TargetComputers.Clear();
                         packet.taskData.TargetComputers.Add(listener.computerDetails.computerDetailsData);
                         if (listener.computerDetails.computerDetailsData.inWinpe)
@@ -118,9 +140,9 @@ namespace GDS_Client
                             FileHandler.Save(packet.taskData, @".\TaskData.my");
                         break;
                     }
-                case DataIdentifier.RUN_COMMAND:
+                case FLAG.RUN_COMMAND:
                     {
-                        listener.SendMessage(new Packet(DataIdentifier.RUN_COMMAND, listener.computerDetails.computerDetailsData));
+                        listener.SendMessage(new Packet(FLAG.RUN_COMMAND, listener.computerDetails.computerDetailsData));
                         if (!runningCommands)
                         {
                             runningCommands = true;
@@ -137,15 +159,15 @@ namespace GDS_Client
                                 {
                                     RunCommand("cmd.exe", "/C " + arguments);                                    
                                 }
-                                listener.SendMessage(new Packet(DataIdentifier.FINISH_RUN_COMMAND, listener.computerDetails.computerDetailsData));
+                                listener.SendMessage(new Packet(FLAG.FINISH_RUN_COMMAND, listener.computerDetails.computerDetailsData));
                                 runningCommands = false;
                             }
                         }
                         break;
                     }
-                case DataIdentifier.CLONING:
+                case FLAG.CLONING:
                     {
-                        listener.SendMessage(new Packet(DataIdentifier.CLONING, listener.computerDetails.computerDetailsData));
+                        listener.SendMessage(new Packet(FLAG.CLONING, listener.computerDetails.computerDetailsData));
                         if (!cloning)
                         {
                             cloningThread = new Thread(WorkingOnTask);
@@ -153,15 +175,15 @@ namespace GDS_Client
                         }
                         break;
                     }
-                case DataIdentifier.RESTART:
-                case DataIdentifier.CLONING_DONE:
+                case FLAG.RESTART:
+                case FLAG.CLONING_DONE:
                     {                        
                         cloningDoneReceive = true;
                         break;
                     }                
-                case DataIdentifier.SEND_CONFIG:
+                case FLAG.SEND_CONFIG:
                     {
-                        listener.SendMessage(new Packet(DataIdentifier.SEND_CONFIG, listener.computerDetails.computerDetailsData));
+                        listener.SendMessage(new Packet(FLAG.SEND_CONFIG, listener.computerDetails.computerDetailsData));
                         if (listener.computerDetails.computerDetailsData.inWinpe)
                             FileHandler.Save(packet.computerConfigData, @"X:\Configuration.my");
                         else
@@ -195,11 +217,11 @@ namespace GDS_Client
                         }
                         break;
                     }                
-                case DataIdentifier.CLIENT_TO_WINPE:
+                case FLAG.CLIENT_TO_WINPE:
                     {
                         if (listener.computerDetails.computerDetailsData.inWinpe)
                         {
-                            listener.SendMessage(new Packet(DataIdentifier.CLIENT_TO_WINPE, listener.computerDetails.computerDetailsData));                            
+                            listener.SendMessage(new Packet(FLAG.CLIENT_TO_WINPE, listener.computerDetails.computerDetailsData));                            
                         }
                         else
                         {
@@ -211,7 +233,7 @@ namespace GDS_Client
                         }
                         break;
                     }
-                case DataIdentifier.TO_OPERATING_SYSTEM:
+                case FLAG.TO_OPERATING_SYSTEM:
                     {
                         if (listener.computerDetails.computerDetailsData.inWinpe)
                         {
@@ -223,13 +245,13 @@ namespace GDS_Client
                         }
                         else
                         {
-                            listener.SendMessage(new Packet(DataIdentifier.TO_OPERATING_SYSTEM, listener.computerDetails.computerDetailsData));                            
+                            listener.SendMessage(new Packet(FLAG.TO_OPERATING_SYSTEM, listener.computerDetails.computerDetailsData));                            
                         }
                         break;
                     }
-                case DataIdentifier.SHUTDOWN:
+                case FLAG.SHUTDOWN:
                     {
-                        listener.SendMessage(new Packet(DataIdentifier.SHUTDOWN, listener.computerDetails.computerDetailsData));
+                        listener.SendMessage(new Packet(FLAG.SHUTDOWN, listener.computerDetails.computerDetailsData));
                         if (!shutdowning)
                         {
                             shutdowningThread = new Thread(Shutdowning);
@@ -237,12 +259,12 @@ namespace GDS_Client
                         }
                         break;
                     }
-                case DataIdentifier.SHUTDOWN_DONE:
+                case FLAG.SHUTDOWN_DONE:
                     {
                         shutdowningDoneReceive = true;
                         break;
                     }
-                case DataIdentifier.ERROR_MESSAGE:
+                case FLAG.ERROR_MESSAGE:
                     {
                         if (cloning)
                         {

@@ -39,6 +39,12 @@
     <ApplicationIcon>Images\logo_gopas_sk.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NetworkCommsDotNet, Version=3.0.0.0, Culture=neutral, PublicKeyToken=f58108eb6480f6ec, processorArchitecture=MSIL">
+      <HintPath>..\packages\NetworkCommsDotNet.3.0.3\lib\NetworkCommsDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>..\..\..\..\Visual Studio 2015\Projects\Copy Projects\Client\Client\bin\Debug\protobuf-net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -76,6 +82,7 @@
       <DependentUpon>ConfigureTemplate.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataCLasses\ComputerDetailsData.cs" />
+    <Compile Include="DataCLasses\ComputerWithConnection.cs" />
     <Compile Include="DataCLasses\PhonesForTask.cs" />
     <Compile Include="DataCLasses\SemaphoresForTask.cs" />
     <Compile Include="DataCLasses\ComputerConfigData.cs" />
@@ -95,9 +102,11 @@
     <Compile Include="Handlers\ListBoxBrowseImagesHandler.cs" />
     <Compile Include="Handlers\ListViewBrowseComputersHandler.cs" />
     <Compile Include="Handlers\ListViewMachinesAndTasksHandler.cs" />
+    <Compile Include="Handlers\ListViewPostInstallsHandler.cs" />
     <Compile Include="Handlers\ListViewTaskDetailsHandler.cs" />
     <Compile Include="DataCLasses\LockDetailsData.cs" />
     <Compile Include="DataCLasses\TasksData.cs" />
+    <Compile Include="Handlers\Proto.cs" />
     <Compile Include="Handlers\TreeViewHandler.cs" />
     <Compile Include="Handlers\WakeOnLanHandler.cs" />
     <Compile Include="ImageOptions.xaml.cs">
@@ -144,7 +153,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Handlers\ClientHandler.cs" />
     <Compile Include="Handlers\Listener.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -182,6 +190,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

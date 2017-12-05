@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using ProtoBuf;
+using System.Collections.Generic;
 
 namespace GDS_SERVER_WPF.DataCLasses
 {
+    [ProtoContract]
     public class ImageData
     {
         public ImageData()
@@ -23,14 +25,23 @@ namespace GDS_SERVER_WPF.DataCLasses
             this.Name = _name;
         }
 
+        [ProtoMember(1)]
         public string Name { get; set; }
+        [ProtoMember(2)]
         public string ImageSource { get; set; }
+        [ProtoMember(3)]
         public string SourcePath { get; set; }
+        [ProtoMember(4)]
         public string BoolLabel { get; set; }
+        [ProtoMember(5)]
         public int PartitionSize { get; set; }
+        [ProtoMember(6)]
         public int VHDResizeSize { get; set; }
+        [ProtoMember(7)]
         public bool VHDResize { get; set; }
+        [ProtoMember(8)]
         public List<string> VHDNames { get; set; }
+        [ProtoMember(9)]
         public List<string> OSAbrivations { get; set; }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using GDS_SERVER_WPF.DataCLasses;
+using NetworkCommsDotNet.Tools;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using System.Windows.Controls;
@@ -6,12 +8,11 @@ using System.Windows.Controls;
 namespace GDS_SERVER_WPF.Handlers
 {
     public class ListBoxBrowseComputersHandler
-    {
-        public List<ClientHandler> clients;
-        
+    {    
+        public Dictionary<ShortGuid, ComputerWithConnection> ClientsDictionary = new Dictionary<ShortGuid, ComputerWithConnection>();
 
-        ListView machines;
-        TreeViewHandler treeViewHandler;
+        public ListView machines;
+        public TreeViewHandler treeViewHandler;
 
         public ListBoxBrowseComputersHandler(ListView _machines, TreeViewHandler _treeViewHandler)
         {
@@ -35,11 +36,13 @@ namespace GDS_SERVER_WPF.Handlers
                     string Name = Path.GetFileName(computerFile).Replace(".my", "");
                     var computerData = FileHandler.Load<ComputerDetailsData>(computerFile);
                     computerData.ImageSource = "Images/Offline.ico";
-                    foreach (ClientHandler client in clients)
+                    foreach (KeyValuePair<ShortGuid, ComputerWithConnection> computer in ClientsDictionary)
                     {
-                        if (client.macAddresses != null && client.CheckMacsInREC(client.macAddresses, computerData.macAddresses))
+                        if (computer.Value.ComputerData.macAddresses != null && Listener.CheckMacsInREC(computer.Value.ComputerData.macAddresses, computerData.macAddresses))
                         {
                             computerData.ImageSource = "Images/Online.ico";
+                            if (computer.Value.ComputerData.inWinpe)
+                                computerData.ImageSource = "Images/Winpe.ico";
                             break;
                         }
                     }
@@ -60,7 +63,7 @@ namespace GDS_SERVER_WPF.Handlers
             LoadMachines(treeViewHandler.GetNodePath());
         }
 
-        public void LoadTreeViewMachinesAndTasks()
+        public void LoadTreeViewMachines()
         {
             treeViewHandler.AddPath(@".\Machine Groups");
             treeViewHandler.Refresh();

@@ -1,6 +1,7 @@
 ﻿using GDS_SERVER_WPF.DataCLasses;
 using GDS_SERVER_WPF.Handlers;
 using Microsoft.Win32;
+using NetworkCommsDotNet.Tools;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,7 +22,7 @@ namespace GDS_SERVER_WPF
     {        
         public string path;
         public string nodePath;
-        public List<ClientHandler> clients;
+        public Dictionary<ShortGuid, ComputerWithConnection> ClientsDictionary = new Dictionary<ShortGuid, ComputerWithConnection>();
         public List<string> Names = new List<string>();
         public bool executed = false;
         public List<ExecutedTaskHandler> ExecutedTasksHandlers;
@@ -255,7 +256,7 @@ namespace GDS_SERVER_WPF
         private void buttonBrowseComputers_Click(object sender, RoutedEventArgs e)
         {
             var browseComputersDialog = new BrowseComputers();
-            browseComputersDialog.clients = clients;
+            browseComputersDialog.ClientsDictionary = ClientsDictionary;
             browseComputersDialog.listBoxOut = listBoxTargetComputers;            
             browseComputersDialog.ShowDialog();
             if (listBoxTargetComputers.Items.Count != 0)

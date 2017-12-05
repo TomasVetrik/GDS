@@ -1,6 +1,11 @@
-﻿using System;
+﻿using GDS_Client.Handlers;
+using NetworkCommsDotNet;
+using NetworkCommsDotNet.Connections;
+using NetworkCommsDotNet.Connections.TCP;
+using System;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -11,107 +16,164 @@ namespace GDS_Client
 {
     public class Listener
     {
-        public  System.Net.Sockets.TcpClient clientSocket;
-        static int length = 20000;  
-        static byte[] dataStream = new byte[length];
         public ComputerDetails computerDetails = new ComputerDetails();
         public bool running;
-        public Stream serverStream;
         public MessageHandler messageHandler;
-        public string serverIP;
-        public int serverPORT;
+        public string serverIP = null;
+        public int serverPort = 10000;
+        public Connection connection;
 
-        XmlSerializer xs = new XmlSerializer(typeof(Packet));
-        
-        public void myReadCallBack(IAsyncResult ar)
+        void getServerIP()
         {
             try
             {
-                using (MemoryStream memStream = new MemoryStream(dataStream, 0, dataStream.Length, false))
+                while (serverIP == null)
                 {
-                    bool hasAllZeroes = dataStream.All(singleByte => singleByte == 0);
-                    var myNetworkStream = (NetworkStream)ar.AsyncState;
-                    if (!hasAllZeroes)
-                    {                        
-                        try
+                    string IPAdd = (HardwareInfo.GetIPAddress().Split(new string[] { "||" }, StringSplitOptions.None)[1]);
+                    if (IPAdd.Contains(','))
+                    {
+                        foreach (string IP in IPAdd.Split(','))
                         {
-                            var packet = xs.Deserialize(memStream) as Packet;
-                            if (packet.dataIdentifier != DataIdentifier.Null)
-                            {
-                                messageHandler.HandleMessage(packet);
-                            }
-                        }
-                        catch (Exception ex)
-                        {                            
-                            Console.WriteLine("Problem with parse: " + ex);
+                            Console.WriteLine(IP);
+                            SetServerIP(IP);
                         }
                     }
-                    myNetworkStream.BeginRead(dataStream, 0, dataStream.Length,
-                                                              new AsyncCallback(myReadCallBack),
-                                                              myNetworkStream);
-                }                
+                    else
+                    {
+                        Console.WriteLine(IPAdd);
+                        SetServerIP(IPAdd);
+                    }
+                    Thread.Sleep(10000);
+                }
             }
             catch
             {
-                running = false;
-                Console.WriteLine("Something is wrong with socket reading");
+                getServerIP();
+            }
+        }
+
+        void SetServerIP(string IPAdd)
+        {
+            if (IPAdd != "IP Address||Not Found")
+            {
+                serverIP = null;
+                if (IPAdd.StartsWith("10.201."))
+                {
+                    serverIP = "10.201.0.6";
+                }
+                if (IPAdd.StartsWith("10.202."))
+                {
+                    serverIP = "10.202.0.6";
+                }
+                if (IPAdd.StartsWith("10.101."))
+                {
+                    serverIP = "10.101.0.6";
+                }
+                if (IPAdd.StartsWith("10.102."))
+                {
+                    serverIP = "10.102.0.6";
+                }
+                if (IPAdd.StartsWith("10.1."))
+                {
+                    serverIP = "10.1.0.6";
+                }
+                if (IPAdd.StartsWith("10.2."))
+                {
+                    serverIP = "10.2.0.6";
+                }
+            }
+            //serverIP = "10.201.20.14";
+        }
+
+        string FileName = @"D:\Temp\GDSClient\GDS_Client_LOG.txt";
+
+        public void WriteToLogs(string LOG)
+        {
+            Console.WriteLine(LOG);
+            if (!computerDetails.computerDetailsData.inWinpe)
+            {
+                if (File.Exists(FileName))
+                {
+                    FileInfo FI = new FileInfo(FileName);
+                    if (FI.Length > 2000000)
+                    {
+                        FI.Delete();
+                    }
+                }
+                using (StreamWriter sw = File.AppendText(FileName))
+                {
+                    sw.WriteLine(DateTime.Now.ToString() + ": " + LOG);
+                }
             }
         }
 
         public void StartListener()
         {
-            try
+            messageHandler = new MessageHandler(this);
+            WriteToLogs("Getting IP");
+            getServerIP();
+            WriteToLogs("Server IP: " + serverIP);
+            computerDetails.SetComputerDetails();
+            WriteToLogs("Getting computer details");
+            bool created = false;
+            while (!created)
             {
-                running = true;
-                serverIP = "10.202.20.32";
-                serverPORT = 65452;
-                serverIP = "10.202.0.6";
-                serverIP = "127.0.0.1";
-
-                clientSocket = new System.Net.Sockets.TcpClient();                               
-                clientSocket.Connect(serverIP, serverPORT);
-                serverStream = clientSocket.GetStream();    
-                serverStream.BeginRead(dataStream, 0, dataStream.Length,
-                                                       new AsyncCallback(myReadCallBack),
-                                                       serverStream);                
-                messageHandler = new MessageHandler(this);               
-                computerDetails.SetComputerDetails();
-                DataIdentifier ID = DataIdentifier.SYN_FLAG;
-                if(computerDetails.computerDetailsData.inWinpe)
+                created = true;
+                ConnectionInfo serverConnectionInfo = null;
+                try
                 {
-                    ID = DataIdentifier.SYN_FLAG_WINPE;
+                    serverConnectionInfo = new ConnectionInfo(serverIP.Trim(), serverPort);
+                    try
+                    {
+                        connection = TCPConnection.GetConnection(serverConnectionInfo);
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Failed with Creating connection");
+                        Thread.Sleep(10000);
+                        created = false;
+                    }
                 }
-                Packet packet = new Packet(ID, computerDetails.computerDetailsData);
-                packet.computerDetailsData = computerDetails.computerDetailsData;
-                SendMessage(packet);
-                Console.WriteLine("Connected on IP: " + serverIP + " PORT: " + serverPORT);           
+                catch (Exception)
+                {
+                    Console.WriteLine("Failed to parse the server IP and port. Please ensure it is correct and try again");
+                    Thread.Sleep(10000);
+                    created = false;
+                }
             }
-            catch (Exception e)
+            FLAG ID = FLAG.SYN_FLAG;
+            if (computerDetails.computerDetailsData.inWinpe)
             {
-                //Console.WriteLine("Server Offline repeat: " + e.ToString());
-                Console.WriteLine("Server Offline repeat");
-                running = false;
+                ID = FLAG.SYN_FLAG_WINPE;
             }
+            Packet packet = new Packet(ID, computerDetails.computerDetailsData);
+            packet.computerDetailsData = computerDetails.computerDetailsData;            
+            connection.AppendIncomingPacketHandler<byte[]>("Packet", IncommingMessage);
+            connection.AppendShutdownHandler(HandleConnectionClosed);
+            Console.WriteLine("Connected to: " + serverIP);            
+            SendMessage(packet);
+            WriteToLogs("Sending SYN FLAG");
+        }
+
+        private void HandleConnectionClosed(Connection connection)
+        {
+            StartListener();
+            return;
+        }
+
+        private void IncommingMessage(PacketHeader packetHeader, Connection connection, byte[] data)
+        {
+            Packet packet = Proto.ProtoDeserialize<Packet>(data);
+            if (!connection.ToString().StartsWith("[UDP-E-E] 127."))
+                messageHandler.HandleMessage(packet);
         }
 
         public void SendMessage(Packet packet)
         {
-            try
-            {
-                byte[] bytes = new byte[length];
-                using (MemoryStream memStream = new MemoryStream(bytes))
-                {
-                    xs.Serialize(memStream, packet);
-                    memStream.WriteTo(serverStream);
-                }
-                Thread.Sleep(500);
-            }
-            catch ( Exception ex)
-            {
-                running = false;
-                Console.WriteLine("Server OFF: " +ex);
-                Thread.Sleep(500);
-            }
-        }        
+            byte[] data = Proto.ProtoSerialize<Packet>(packet);
+            WriteToLogs("SENDINIG: " + packet.ID);
+            try { connection.SendObject("Packet", data); }
+            catch (CommsException) { Console.WriteLine("A CommsException occurred while trying to send message"); }
+        }
     }
 }

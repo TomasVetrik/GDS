@@ -224,7 +224,7 @@
             </TabItem>
         </TabControl>
         <Button x:Name="buttonExecute" Grid.Row="1" Grid.Column="0" Content="Execute" Width="75" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonExecute_Click"/>
-        <Button x:Name="buttonSave" Grid.Row="1" Grid.Column="1" Content="Save" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="buttonSave_Click"/>
+        <Button x:Name="buttonSave" Grid.Row="1" Grid.Column="1" Content="Save" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="76" Click="buttonSave_Click" Margin="27,0,27,4"/>
         <Button x:Name="buttonClose" Grid.Row="1" Grid.Column="2" Content="Close" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="buttonClose_Click"/>
 
     </Grid>

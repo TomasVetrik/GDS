@@ -1,4 +1,6 @@
-﻿using GDS_SERVER_WPF.Handlers;
+﻿using GDS_SERVER_WPF.DataCLasses;
+using GDS_SERVER_WPF.Handlers;
+using NetworkCommsDotNet.Tools;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -14,9 +16,8 @@ namespace GDS_SERVER_WPF
     /// </summary>
     public partial class BrowseComputers : Window
     {
-        public List<ClientHandler> clients;
-        public ListBox listBoxOut;
-        
+        public Dictionary<ShortGuid, ComputerWithConnection> ClientsDictionary = new Dictionary<ShortGuid, ComputerWithConnection>();
+        public ListBox listBoxOut;        
 
         TreeViewHandler treeViewMachinesAndTasksHandler;
         ListBoxBrowseComputersHandler listViewBrowseComputersHandler;             
@@ -34,8 +35,8 @@ namespace GDS_SERVER_WPF
         {
             treeViewMachinesAndTasksHandler = new TreeViewHandler(treeView);
             listViewBrowseComputersHandler = new ListBoxBrowseComputersHandler(listView, treeViewMachinesAndTasksHandler);
-            listViewBrowseComputersHandler.clients = clients;
-            listViewBrowseComputersHandler.LoadTreeViewMachinesAndTasks();
+            listViewBrowseComputersHandler.ClientsDictionary = ClientsDictionary;
+            listViewBrowseComputersHandler.LoadTreeViewMachines();
         }
 
         private void treeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)

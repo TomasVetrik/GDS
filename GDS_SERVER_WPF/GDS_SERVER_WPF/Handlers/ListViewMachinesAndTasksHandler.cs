@@ -1,10 +1,7 @@
-﻿using System;
+﻿using GDS_SERVER_WPF.DataCLasses;
+using NetworkCommsDotNet.Tools;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -12,9 +9,8 @@ namespace GDS_SERVER_WPF
 {
     public class ListViewMachinesAndTasksHandler
     {
-        public List<ClientHandler> clients;
-        
-
+        public Dictionary<ShortGuid, ComputerWithConnection> ClientsDictionary = new Dictionary<ShortGuid, ComputerWithConnection>();
+    
         public ListView machines;
         ListView tasks;        
         TreeViewHandler treeViewHandler;
@@ -57,12 +53,12 @@ namespace GDS_SERVER_WPF
                     string Name = Path.GetFileName(computerFile).Replace(".my", "");
                     var computerData = FileHandler.Load<ComputerDetailsData>(computerFile);                   
                     computerData.ImageSource = "Images/Offline.ico";                                        
-                    foreach (ClientHandler client in clients)
+                    foreach (KeyValuePair<ShortGuid, ComputerWithConnection> computer in ClientsDictionary)
                     {
-                        if (client.macAddresses != null && client.CheckMacsInREC(client.macAddresses, computerData.macAddresses))
+                        if (computer.Value.ComputerData.macAddresses != null && Listener.CheckMacsInREC(computer.Value.ComputerData.macAddresses, computerData.macAddresses))
                         {
                             computerData.ImageSource = "Images/Online.ico";
-                            if (client.inWinpe)
+                            if (computer.Value.ComputerData.inWinpe)
                                 computerData.ImageSource = "Images/Winpe.ico";
                             break;
                         }

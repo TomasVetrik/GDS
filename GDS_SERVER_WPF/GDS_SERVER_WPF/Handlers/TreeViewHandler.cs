@@ -105,7 +105,6 @@ namespace GDS_SERVER_WPF
             return null;
         }
 
-
         public string GetNodePath()
         {
             var node = (TreeViewItem)treeView.SelectedItem;

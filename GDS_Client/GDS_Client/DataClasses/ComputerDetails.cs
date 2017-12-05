@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NetworkCommsDotNet;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -37,6 +38,28 @@ namespace GDS_Client
             }
         }
 
+        string FileName = @"D:\Temp\GDSClient\GDS_Client_LOG.txt";
+
+        public void WriteToLogs(string LOG)
+        {
+            Console.WriteLine(LOG);
+            if (!computerDetailsData.inWinpe)
+            {
+                if (File.Exists(FileName))
+                {
+                    FileInfo FI = new FileInfo(FileName);
+                    if (FI.Length > 2000000)
+                    {
+                        FI.Delete();
+                    }
+                }
+                using (StreamWriter sw = File.AppendText(FileName))
+                {
+                    sw.WriteLine(DateTime.Now.ToString() + ": " + LOG);
+                }
+            }
+        }
+
         public void SetComputerDetails()
         {
             try
@@ -51,7 +74,7 @@ namespace GDS_Client
                     SetComputerDetails();
                     return;
                 }
-
+                computerDetailsData._sourceIdentifier = NetworkComms.NetworkIdentifier;
                 computerDetailsData.macAddresses = MacAddress;
                 computerDetailsData.MacAddress = MacAddress[0];
                 computerDetails.Add("MacAddress||" + MacAddress);
@@ -74,10 +97,11 @@ namespace GDS_Client
                 computerDetailsData.driveEImageName = GeDriveEImageName();
                 computerDetails.Add("DRIVEE NAME||" + computerDetailsData.driveEImageName);
                 computerDetailsData.dartInfo = GetDartViewerInfo(0);
-                computerDetails.Add("Dart Viewer||" + computerDetailsData.dartInfo + "END");
+                computerDetails.Add("Dart Viewer||" + computerDetailsData.dartInfo);
             }
-            catch
+            catch (Exception ex)
             {
+                WriteToLogs("SOMETHING WRONG WITH GET COMPUTER DETAILS: " + ex.ToString());
                 Console.WriteLine("SOMETHING WRONG WITH GET COMPUTER DETAILS");
                 Thread.Sleep(5000);
                 SetComputerDetails();

@@ -1,8 +1,8 @@
-﻿using System;
+﻿using ProtoBuf;
 
 namespace GDS_SERVER_WPF
 {
-    public enum DataIdentifier
+    public enum FLAG
     {
         Null,
         SYN_FLAG_WINPE,
@@ -35,24 +35,40 @@ namespace GDS_SERVER_WPF
         CLOSE
     }
 
+    [ProtoContract]
     public class Packet
     {
-        public DataIdentifier dataIdentifier { get; set; }
+        [ProtoMember(1)]
+        public FLAG ID { get; set; }
+        [ProtoMember(2)]
         public TaskData taskData { get; set; }
+        [ProtoMember(3)]
         public ComputerDetailsData computerDetailsData { get; set; }
-        public DateTime IDTime { get; set; }
+        [ProtoMember(4)]
         public ComputerConfigData computerConfigData { get; set; }
+        [ProtoMember(5)]
         public string clonningMessage { get; set; }
 
         public Packet()
         {
-            this.IDTime = DateTime.Now;
         }
 
-        public Packet(DataIdentifier _ID)
+        public Packet(FLAG _ID)
         {
-            this.dataIdentifier = _ID;
-            this.IDTime = DateTime.Now;
-        }       
+            this.ID = _ID;
+        }
+
+        public Packet(FLAG _ID, ComputerDetailsData _computerDetailsData)
+        {
+            this.ID = _ID;
+            this.computerDetailsData = _computerDetailsData;
+        }
+
+        public Packet(FLAG _ID, ComputerDetailsData _computerDetailsData, string _message)
+        {
+            this.ID = _ID;
+            this.computerDetailsData = _computerDetailsData;
+            this.clonningMessage = _message;
+        }
     }
 }

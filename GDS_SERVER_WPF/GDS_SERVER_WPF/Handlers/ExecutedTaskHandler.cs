@@ -1,4 +1,5 @@
 ﻿using GDS_SERVER_WPF.DataCLasses;
+using NetworkCommsDotNet.Tools;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,7 +13,7 @@ namespace GDS_SERVER_WPF.Handlers
     public class ExecutedTaskHandler
     {
         public ExecutedTaskData executedTaskData;
-        public List<ClientHandler> clients { get; set; }
+        public Dictionary<ShortGuid, ComputerWithConnection> ClientsDictionary { get; set; }
         public List<ExecutedTaskHandler> handlers;
         public ListViewTaskDetailsHandler listViewHandler;
         public List<string> ipAddresses;
@@ -56,7 +57,8 @@ namespace GDS_SERVER_WPF.Handlers
             RefreshList();
             for (int i = 0; i < executedTaskData.taskData.TargetComputers.Count; i++)
             {                
-                var computer = new ComputerInTaskHandler(executedTaskData, clients, i, ipAddresses, semaphoreFotSaveFile, listViewAll, listViewSelected);
+                var computer = new ComputerInTaskHandler(executedTaskData, i, ipAddresses, semaphoreFotSaveFile, listViewAll, listViewSelected);
+                computer.ClientsDictionary = ClientsDictionary;
                 computers.Add(computer);
                 var computerThread = new Thread(computer.Start);
                 computersThreads.Add(computerThread);
