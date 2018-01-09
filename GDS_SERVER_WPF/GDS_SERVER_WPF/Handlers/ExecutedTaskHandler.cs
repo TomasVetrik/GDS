@@ -71,6 +71,7 @@ namespace GDS_SERVER_WPF.Handlers
                 listViewTaskDetailsProgress.SelectedItems.Clear();
                 listViewTaskDetailsProgress.SelectedItems.Add(listViewTaskDetailsProgress.Items[listViewTaskDetailsProgress.Items.Count - 1]);
             });
+            Thread.Sleep(1000);
             foreach (ComputerInTaskHandler computer in computers)
             {
                 computer.semaphoreForTask.WaitOne();
@@ -122,7 +123,8 @@ namespace GDS_SERVER_WPF.Handlers
             {
                 Application.Current.Dispatcher.Invoke(() =>
                 {
-                    listViewAll.Items.Add(new ProgressComputerData("", computer.computer.Name, computer.step, computer.computer.MacAddress));
+                    computer.progressComputerData = new ProgressComputerData("", computer.computer.Name, computer.step, computer.computer.MacAddress);
+                    listViewAll.Items.Add(computer.progressComputerData);
                 });                
             }
         }
@@ -134,7 +136,7 @@ namespace GDS_SERVER_WPF.Handlers
                 listViewSelected.Items.Clear();
                 foreach (ComputerInTaskHandler computer in computers)
                 {
-                    listViewSelected.Items.Add(new ProgressComputerData("", computer.computer.Name, computer.step, computer.computer.MacAddress));
+                    listViewSelected.Items.Add(computer.progressComputerData);
                     computer.listViewSelected = listViewSelected;
                 }
             });            

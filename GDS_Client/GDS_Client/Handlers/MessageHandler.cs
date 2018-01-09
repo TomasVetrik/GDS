@@ -1,4 +1,7 @@
-﻿using Microsoft.Win32;
+﻿using GDS_Client.Handlers;
+using Microsoft.Win32;
+using NetworkCommsDotNet.Connections;
+using NetworkCommsDotNet.Tools;
 using System;
 using System.Diagnostics;
 using System.IO;
@@ -14,13 +17,14 @@ namespace GDS_Client
 
         Thread cloningThread;
         Thread shutdowningThread;
-        bool cloning = false;
+        public bool cloning = false;
         bool cloningDoneReceive = false;
         bool shutdowning = false;
         bool shutdowningDoneReceive = false;
         bool runningCommands = false;
         bool restarting = false;
         Process CloneProcess;
+        TCP_UNICAST tcp_unicast = null;
 
         public MessageHandler(Listener _listener)
         {
@@ -31,47 +35,60 @@ namespace GDS_Client
 
         public void WriteToLogs(string LOG)
         {
-            Console.WriteLine(LOG);
-            if (!listener.computerDetails.computerDetailsData.inWinpe)
+            try
             {
-                if (File.Exists(FileName))
+                Console.WriteLine(LOG);
+                if (!listener.computerDetails.computerDetailsData.inWinpe)
                 {
-                    FileInfo FI = new FileInfo(FileName);
-                    if (FI.Length > 2000000)
+                    if (File.Exists(FileName))
                     {
-                        FI.Delete();
+                        FileInfo FI = new FileInfo(FileName);
+                        if (FI.Length > 2000000)
+                        {
+                            FI.Delete();
+                        }
+                    }
+                    using (StreamWriter sw = File.AppendText(FileName))
+                    {
+                        sw.WriteLine(DateTime.Now.ToString() + ": " + LOG);
                     }
                 }
-                using (StreamWriter sw = File.AppendText(FileName))
-                {
-                    sw.WriteLine(DateTime.Now.ToString() + ": " + LOG);
-                }
+            }
+            catch
+            {
+                Console.WriteLine("Problem so zapisom do Logu");
             }
         }
 
         public void WorkingOnTask()
         {
             try
-            {
-                if(!File.Exists(@"X:\CloneStatus.txt"))
-                    File.WriteAllText(@"X:\CloneStatus.txt", "CLONING");
+            {                
+                File.WriteAllText(@"X:\CloneStatus.txt", "CLONING");                
                 File.WriteAllText(@"X:\Error.txt", "False");
                 CloneProcess = System.Diagnostics.Process.Start(@"X:\windows\system32\WindowsPowershell\v1.0\powershell.exe", @"-WindowStyle Maximized -executionpolicy unrestricted -File W:\Cloning.ps1");
                 cloning = true;
                 string CloneMessage = "CLONING";
+                string CloneMessage_OLD = "OLD";
                 while (listener.running && CloneMessage != "FALSE" && CloneMessage != "TRUE" && cloning)
                 {                    
                     try
                     {
-                        if(CloneMessage != null && listener.computerDetails.computerDetailsData != null && CloneMessage != "")
-                            listener.SendMessage(new Packet(FLAG.CLONING_STATUS, listener.computerDetails.computerDetailsData, CloneMessage));
+                        if (CloneMessage != null && listener.computerDetails.computerDetailsData != null && CloneMessage != "")
+                        {
+                            if (CloneMessage_OLD != CloneMessage)
+                            {
+                                listener.SendMessage(new Packet(FLAG.CLONING_STATUS, listener.computerDetails.computerDetailsData, CloneMessage));
+                                CloneMessage_OLD = CloneMessage;
+                            }
+                        }
                         CloneMessage = File.ReadLines(@"X:\CloneStatus.txt").First();
                     }
                     catch (Exception ex)
                     {
                         Console.WriteLine("Problem with cloning: " + ex.ToString());
                     }
-                    Thread.Sleep(1000);
+                    Thread.Sleep(5000);
                     Console.WriteLine(DateTime.Now + " " + CloneMessage);
                 }
                 var dataIdentifier = FLAG.CLONING_DONE;
@@ -113,172 +130,224 @@ namespace GDS_Client
             }
             Process.Start("shutdown", "/s /t 0");
         }
-            
-        public void HandleMessage(Packet packet)
+
+        public void HandleMessage(Packet packet, Connection connection)
         {
-            WriteToLogs(DateTime.Now.ToLongTimeString().ToString() + ": " + packet.ID);
-            switch (packet.ID)
-            {            
-                case FLAG.SYN_FLAG:
-                    {                       
-                        listener.SendMessage(new Packet(FLAG.SYN_FLAG,listener.computerDetails.computerDetailsData));
-                        break;
-                    }
-                case FLAG.CLOSE:
-                    {
-                        Environment.Exit(0);
-                        break;
-                    }
-                case FLAG.SEND_TASK_CONFIG:
-                    {
-                        listener.SendMessage(new Packet(FLAG.SEND_TASK_CONFIG, listener.computerDetails.computerDetailsData));
-                        packet.taskData.TargetComputers.Clear();
-                        packet.taskData.TargetComputers.Add(listener.computerDetails.computerDetailsData);
-                        if (listener.computerDetails.computerDetailsData.inWinpe)
-                            FileHandler.Save(packet.taskData, @"X:\TaskData.my");
-                        else
-                            FileHandler.Save(packet.taskData, @".\TaskData.my");
-                        break;
-                    }
-                case FLAG.RUN_COMMAND:
-                    {
-                        listener.SendMessage(new Packet(FLAG.RUN_COMMAND, listener.computerDetails.computerDetailsData));
-                        if (!runningCommands)
+            try
+            {
+                WriteToLogs(DateTime.Now.ToLongTimeString().ToString() + ": " + packet.ID);
+                switch (packet.ID)
+                {
+                    case FLAG.SYN_FLAG:
                         {
-                            runningCommands = true;
-                            string pathTaskData = @".\TaskData.my";
-                            if (listener.computerDetails.computerDetailsData.inWinpe)                            
-                                pathTaskData = @"X:\TaskData.my";                            
-                            if(File.Exists(pathTaskData))
+                            listener.SendMessage(new Packet(FLAG.SYN_FLAG, listener.computerDetails.computerDetailsData));
+                            break;
+                        }
+                    case FLAG.CLOSE:
+                        {
+                            //Environment.Exit(0);
+                            break;
+                        }
+                    case FLAG.SEND_TASK_CONFIG:
+                        {
+                            listener.SendMessage(new Packet(FLAG.SEND_TASK_CONFIG, listener.computerDetails.computerDetailsData));
+                            packet.taskData.TargetComputers = new System.Collections.Generic.List<ComputerDetailsData>();
+                            packet.taskData.TargetComputers.Add(listener.computerDetails.computerDetailsData);
+                            if (listener.computerDetails.computerDetailsData.inWinpe)
                             {
-                                var taskData = FileHandler.Load<TaskData>(pathTaskData);
-                                var listCommands = taskData.CommandsInOS;
-                                if (listener.computerDetails.computerDetailsData.inWinpe)
-                                    listCommands = taskData.CommandsInWINPE;
-                                foreach (string arguments in listCommands)
+                                try
                                 {
-                                    RunCommand("cmd.exe", "/C " + arguments);                                    
+                                    if (File.Exists(@"X:\TaskData.my"))
+                                    {
+                                        File.Delete(@"X:\TaskData.my");
+                                        Thread.Sleep(1000);
+                                    }                                    
                                 }
-                                listener.SendMessage(new Packet(FLAG.FINISH_RUN_COMMAND, listener.computerDetails.computerDetailsData));
-                                runningCommands = false;
+                                catch
+                                { }
+                                FileHandler.Save<TaskData>(packet.taskData, @"X:\TaskData.my");
                             }
+                            else
+                                FileHandler.Save<TaskData>(packet.taskData, @".\TaskData.my");                            
+                            break;
                         }
-                        break;
-                    }
-                case FLAG.CLONING:
-                    {
-                        listener.SendMessage(new Packet(FLAG.CLONING, listener.computerDetails.computerDetailsData));
-                        if (!cloning)
+                    case FLAG.RUN_COMMAND:
                         {
-                            cloningThread = new Thread(WorkingOnTask);
-                            cloningThread.Start();
-                        }
-                        break;
-                    }
-                case FLAG.RESTART:
-                case FLAG.CLONING_DONE:
-                    {                        
-                        cloningDoneReceive = true;
-                        break;
-                    }                
-                case FLAG.SEND_CONFIG:
-                    {
-                        listener.SendMessage(new Packet(FLAG.SEND_CONFIG, listener.computerDetails.computerDetailsData));
-                        if (listener.computerDetails.computerDetailsData.inWinpe)
-                            FileHandler.Save(packet.computerConfigData, @"X:\Configuration.my");
-                        else
-                        {
-                            FileHandler.Save(packet.computerConfigData, @"D:\Temp\Configuration.my");
-                            var FileName = @"C:\windows\system32\WindowsPowershell\v1.0\powershell";
-                            var args = @"(Get-WmiObject -Class win32_ComputerSystem).rename(" + "\'" + packet.computerConfigData.Name + "\')";
-                            var processStartInfo = new ProcessStartInfo
+                            listener.SendMessage(new Packet(FLAG.RUN_COMMAND, listener.computerDetails.computerDetailsData));
+                            if (!runningCommands)
                             {
-                                FileName = FileName,
-                                Arguments = args,
-                                RedirectStandardOutput = true,
-                                CreateNoWindow = true,
-                                WindowStyle = ProcessWindowStyle.Hidden,
-                                UseShellExecute = false
-                            };
-                            var process = Process.Start(processStartInfo);
-                            process.WaitForExit();
-                            args = @"(Get-WmiObject -Class Win32_ComputerSystem).JoinDomainOrWorkgroup(" + "\'" + packet.computerConfigData.Workgroup + "\')";
-                            processStartInfo = new ProcessStartInfo
-                            {
-                                FileName = FileName,
-                                Arguments = args,
-                                RedirectStandardOutput = true,
-                                CreateNoWindow = true,
-                                WindowStyle = ProcessWindowStyle.Hidden,
-                                UseShellExecute = false
-                            };
-                            process = Process.Start(processStartInfo);
-                            process.WaitForExit();
-                        }
-                        break;
-                    }                
-                case FLAG.CLIENT_TO_WINPE:
-                    {
-                        if (listener.computerDetails.computerDetailsData.inWinpe)
-                        {
-                            listener.SendMessage(new Packet(FLAG.CLIENT_TO_WINPE, listener.computerDetails.computerDetailsData));                            
-                        }
-                        else
-                        {
-                            if (!restarting)
-                            {
-                                restarting = true;
-                                RunCommand(@"D:\Temp\GDS_Initialize.bat", "");                                
+                                runningCommands = true;
+                                string pathTaskData = @".\TaskData.my";
+                                if (listener.computerDetails.computerDetailsData.inWinpe)
+                                    pathTaskData = @"X:\TaskData.my";
+                                if (File.Exists(pathTaskData))
+                                {
+                                    var taskData = FileHandler.Load<TaskData>(pathTaskData);
+                                    var listCommands = taskData.CommandsInOS;
+                                    if (listener.computerDetails.computerDetailsData.inWinpe)
+                                        listCommands = taskData.CommandsInWINPE;
+                                    foreach (string arguments in listCommands)
+                                    {
+                                        RunCommand("cmd.exe", "/C " + arguments);
+                                    }
+                                    listener.SendMessage(new Packet(FLAG.FINISH_RUN_COMMAND, listener.computerDetails.computerDetailsData));
+                                    runningCommands = false;
+                                }
                             }
+                            break;
                         }
-                        break;
-                    }
-                case FLAG.TO_OPERATING_SYSTEM:
-                    {
-                        if (listener.computerDetails.computerDetailsData.inWinpe)
+                    case FLAG.CLONING:
                         {
-                            if (!restarting)
+                            listener.SendMessage(new Packet(FLAG.CLONING, listener.computerDetails.computerDetailsData));
+                            if (!cloning)
                             {
-                                restarting = true;
-                                Process.Start(@"X:\Windows\System32\wpeutil.exe", "reboot");
+                                cloningThread = new Thread(WorkingOnTask);
+                                cloningThread.Start();
                             }
+                            break;
                         }
-                        else
+                    case FLAG.RESTART:
+                    case FLAG.CLONING_DONE:
                         {
-                            listener.SendMessage(new Packet(FLAG.TO_OPERATING_SYSTEM, listener.computerDetails.computerDetailsData));                            
+                            cloningDoneReceive = true;
+                            break;
                         }
-                        break;
-                    }
-                case FLAG.SHUTDOWN:
-                    {
-                        listener.SendMessage(new Packet(FLAG.SHUTDOWN, listener.computerDetails.computerDetailsData));
-                        if (!shutdowning)
+                    case FLAG.SEND_CONFIG:
                         {
-                            shutdowningThread = new Thread(Shutdowning);
-                            shutdowningThread.Start();
+                            listener.SendMessage(new Packet(FLAG.SEND_CONFIG, listener.computerDetails.computerDetailsData));
+                            if (listener.computerDetails.computerDetailsData.inWinpe)
+                            {
+                                FileHandler.Save(packet.computerConfigData, @"X:\Configuration.my");
+                                string pathTaskData = @"X:\TaskData.my";
+                                if (File.Exists(pathTaskData))
+                                {
+                                    var taskData = FileHandler.Load<TaskData>(pathTaskData);
+                                    if (taskData.WithoutVHD)
+                                        FileHandler.Save(packet.computerConfigData, @"D:\Configuration.my");
+                                    else
+                                        FileHandler.Save(packet.computerConfigData, @"C:\Configuration.my");
+                                }
+                            }
+                            else
+                            {
+                                FileHandler.Save(packet.computerConfigData, @"D:\Configuration.my");
+                                var FileName = @"C:\windows\system32\WindowsPowershell\v1.0\powershell";
+                                var args = @"(Get-WmiObject -Class win32_ComputerSystem).rename(" + "\'" + packet.computerConfigData.Name + "\')";
+                                var processStartInfo = new ProcessStartInfo
+                                {
+                                    FileName = FileName,
+                                    Arguments = args,
+                                    RedirectStandardOutput = true,
+                                    CreateNoWindow = true,
+                                    WindowStyle = ProcessWindowStyle.Hidden,
+                                    UseShellExecute = false
+                                };
+                                var process = Process.Start(processStartInfo);
+                                process.WaitForExit();
+                                args = @"(Get-WmiObject -Class Win32_ComputerSystem).JoinDomainOrWorkgroup(" + "\'" + packet.computerConfigData.Workgroup + "\')";
+                                processStartInfo = new ProcessStartInfo
+                                {
+                                    FileName = FileName,
+                                    Arguments = args,
+                                    RedirectStandardOutput = true,
+                                    CreateNoWindow = true,
+                                    WindowStyle = ProcessWindowStyle.Hidden,
+                                    UseShellExecute = false
+                                };
+                                process = Process.Start(processStartInfo);
+                                process.WaitForExit();
+                            }
+                            break;
                         }
-                        break;
-                    }
-                case FLAG.SHUTDOWN_DONE:
-                    {
-                        shutdowningDoneReceive = true;
-                        break;
-                    }
-                case FLAG.ERROR_MESSAGE:
-                    {
-                        if (cloning)
+                    case FLAG.CLIENT_TO_WINPE:
                         {
-                            Process[] procs = Process.GetProcessesByName("wdsmcast");
-                            foreach (Process p in procs) { p.Kill(); }                            
-                            Process p2 = Process.GetProcessById(CloneProcess.Id);
-                            p2.Kill();
-                            Process[] procs2 = Process.GetProcessesByName("diskpart");
-                            foreach (Process p in procs2) { p.Kill(); }
+                            if (listener.computerDetails.computerDetailsData.inWinpe)
+                            {
+                                listener.SendMessage(new Packet(FLAG.CLIENT_TO_WINPE, listener.computerDetails.computerDetailsData));
+                            }
+                            else
+                            {
+                                if (!restarting)
+                                {
+                                    restarting = true;
+                                    RunCommand(@"D:\Temp\GDS_Initialize.bat", "");
+                                }
+                            }
+                            break;
                         }
-                        cloning = false;
-                        break;
-                    }
+                    case FLAG.FINISH_COPY_FILES:
+                        {
+                            listener.SendMessage(new Packet(FLAG.FINISH_COPY_FILES, listener.computerDetails.computerDetailsData));
+                            break;
+                        }
+                    case FLAG.START_COPY_FILES:
+                        {
+                            listener.SendMessage(new Packet(FLAG.START_COPY_FILES, listener.computerDetails.computerDetailsData));
+                            if (tcp_unicast == null)
+                            {
+                                tcp_unicast = new TCP_UNICAST(listener.serverIP, Convert.ToInt32(packet.clonningMessage));
+                                if (tcp_unicast.error)
+                                {
+                                    Packet packet_temp = new Packet(FLAG.ERROR_MESSAGE, listener.computerDetails.computerDetailsData);
+                                    packet_temp.clonningMessage = tcp_unicast.Message;
+                                    listener.SendMessage(packet_temp);
+                                }
+                                tcp_unicast = null;
+                            }
+                            break;
+                        }
+                    case FLAG.TO_OPERATING_SYSTEM:
+                        {
+                            if (listener.computerDetails.computerDetailsData.inWinpe)
+                            {
+                                if (!restarting)
+                                {
+                                    restarting = true;
+                                    Process.Start(@"X:\Windows\System32\wpeutil.exe", "reboot");
+                                }
+                            }
+                            else
+                            {
+                                listener.SendMessage(new Packet(FLAG.TO_OPERATING_SYSTEM, listener.computerDetails.computerDetailsData));
+                            }
+                            break;
+                        }
+                    case FLAG.SHUTDOWN:
+                        {
+                            listener.SendMessage(new Packet(FLAG.SHUTDOWN, listener.computerDetails.computerDetailsData));
+                            if (!shutdowning)
+                            {
+                                shutdowningThread = new Thread(Shutdowning);
+                                shutdowningThread.Start();
+                            }
+                            break;
+                        }
+                    case FLAG.SHUTDOWN_DONE:
+                        {
+                            shutdowningDoneReceive = true;
+                            break;
+                        }
+                    case FLAG.ERROR_MESSAGE:
+                        {
+                            if (cloning)
+                            {
+                                Process[] procs = Process.GetProcessesByName("wdsmcast");
+                                foreach (Process p in procs) { p.Kill(); }
+                                Process p2 = Process.GetProcessById(CloneProcess.Id);
+                                p2.Kill();
+                                Process[] procs2 = Process.GetProcessesByName("diskpart");
+                                foreach (Process p in procs2) { p.Kill(); }
+                                File.WriteAllText(@"X:\CloneStatus.txt", "FALSE");
+                            }
+                            cloning = false;
+                            break;
+                        }
+                }
             }
-        }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        } 
     }
 }

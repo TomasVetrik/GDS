@@ -17,7 +17,7 @@
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -41,6 +41,9 @@
   <ItemGroup>
     <Reference Include="NetworkCommsDotNet, Version=3.0.0.0, Culture=neutral, PublicKeyToken=f58108eb6480f6ec, processorArchitecture=MSIL">
       <HintPath>..\packages\NetworkCommsDotNet.3.0.3\lib\NetworkCommsDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Ookii.Dialogs.Wpf, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0c15020868fd6249, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ookii.Dialogs.1.0\lib\net35\Ookii.Dialogs.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="protobuf-net">
       <HintPath>..\..\..\..\Visual Studio 2015\Projects\Copy Projects\Client\Client\bin\Debug\protobuf-net.dll</HintPath>
@@ -75,17 +78,23 @@
     <Compile Include="BrowseImages.xaml.cs">
       <DependentUpon>BrowseImages.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChangeNote.xaml.cs">
+      <DependentUpon>ChangeNote.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ComputerDetails.xaml.cs">
       <DependentUpon>ComputerDetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="ConfigureTemplate.xaml.cs">
       <DependentUpon>ConfigureTemplate.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CreateRenameCancel.xaml.cs">
+      <DependentUpon>CreateRenameCancel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataCLasses\ComputerConfigData.cs" />
     <Compile Include="DataCLasses\ComputerDetailsData.cs" />
     <Compile Include="DataCLasses\ComputerWithConnection.cs" />
     <Compile Include="DataCLasses\PhonesForTask.cs" />
     <Compile Include="DataCLasses\SemaphoresForTask.cs" />
-    <Compile Include="DataCLasses\ComputerConfigData.cs" />
     <Compile Include="GridViewSort.cs" />
     <Compile Include="Handlers\ComputerInTaskHandler.cs" />
     <Compile Include="DataCLasses\ExecutedTaskData.cs" />
@@ -99,14 +108,18 @@
     </Compile>
     <Compile Include="Handlers\ExecutedTaskHandler.cs" />
     <Compile Include="Handlers\FileHandler.cs" />
+    <Compile Include="Handlers\FilePiece.cs" />
+    <Compile Include="Handlers\FileStreamer.cs" />
     <Compile Include="Handlers\ListBoxBrowseImagesHandler.cs" />
     <Compile Include="Handlers\ListViewBrowseComputersHandler.cs" />
+    <Compile Include="Handlers\ListViewHistoryHandler.cs" />
     <Compile Include="Handlers\ListViewMachinesAndTasksHandler.cs" />
     <Compile Include="Handlers\ListViewPostInstallsHandler.cs" />
     <Compile Include="Handlers\ListViewTaskDetailsHandler.cs" />
     <Compile Include="DataCLasses\LockDetailsData.cs" />
     <Compile Include="DataCLasses\TasksData.cs" />
     <Compile Include="Handlers\Proto.cs" />
+    <Compile Include="Handlers\TCP_UNICAST.cs" />
     <Compile Include="Handlers\TreeViewHandler.cs" />
     <Compile Include="Handlers\WakeOnLanHandler.cs" />
     <Compile Include="ImageOptions.xaml.cs">
@@ -129,11 +142,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ChangeNote.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ComputerDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ConfigureTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateRenameCancel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

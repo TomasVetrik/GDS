@@ -1,6 +1,4 @@
 ﻿using ProtoBuf;
-using System;
-using System.Xml.Serialization;
 
 namespace GDS_Client
 {

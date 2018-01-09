@@ -13,11 +13,9 @@ namespace GDS_SERVER_WPF
 {
     public class ListViewTaskDetailsHandler
     {
-        ListView tasksDetails;
-        string path;
-
+        public ListView tasksDetails;
+        public string path;
         
-
         public ListViewTaskDetailsHandler(ListView _tasksDetails, string _path = @".\TaskDetails\")
         {
             this.tasksDetails = _tasksDetails;            
@@ -40,8 +38,6 @@ namespace GDS_SERVER_WPF
                 }                                
             });
         }
-
-
 
         public void Refresh()
         {

@@ -3,6 +3,7 @@ using NetworkCommsDotNet;
 using NetworkCommsDotNet.Connections;
 using NetworkCommsDotNet.Connections.TCP;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -29,19 +30,16 @@ namespace GDS_Client
             {
                 while (serverIP == null)
                 {
-                    string IPAdd = (HardwareInfo.GetIPAddress().Split(new string[] { "||" }, StringSplitOptions.None)[1]);
-                    if (IPAdd.Contains(','))
+                    List<string> IPAdds = (HardwareInfo.GetIPAddress());
+                    if (IPAdds.Count != 0)
                     {
-                        foreach (string IP in IPAdd.Split(','))
+                        foreach (string IP in IPAdds)
                         {
-                            Console.WriteLine(IP);
+                            Console.WriteLine(IP);                           
                             SetServerIP(IP);
+                            if (serverIP != null)
+                                break;
                         }
-                    }
-                    else
-                    {
-                        Console.WriteLine(IPAdd);
-                        SetServerIP(IPAdd);
                     }
                     Thread.Sleep(10000);
                 }
@@ -54,33 +52,30 @@ namespace GDS_Client
 
         void SetServerIP(string IPAdd)
         {
-            if (IPAdd != "IP Address||Not Found")
+            serverIP = null;
+            if (IPAdd.StartsWith("10.201."))
             {
-                serverIP = null;
-                if (IPAdd.StartsWith("10.201."))
-                {
-                    serverIP = "10.201.0.6";
-                }
-                if (IPAdd.StartsWith("10.202."))
-                {
-                    serverIP = "10.202.0.6";
-                }
-                if (IPAdd.StartsWith("10.101."))
-                {
-                    serverIP = "10.101.0.6";
-                }
-                if (IPAdd.StartsWith("10.102."))
-                {
-                    serverIP = "10.102.0.6";
-                }
-                if (IPAdd.StartsWith("10.1."))
-                {
-                    serverIP = "10.1.0.6";
-                }
-                if (IPAdd.StartsWith("10.2."))
-                {
-                    serverIP = "10.2.0.6";
-                }
+                serverIP = "10.201.0.6";
+            }
+            if (IPAdd.StartsWith("10.202."))
+            {
+                serverIP = "10.202.0.6";
+            }
+            if (IPAdd.StartsWith("10.101."))
+            {
+                serverIP = "10.101.0.6";
+            }
+            if (IPAdd.StartsWith("10.102."))
+            {
+                serverIP = "10.102.0.6";
+            }
+            if (IPAdd.StartsWith("10.1."))
+            {
+                serverIP = "10.1.0.6";
+            }
+            if (IPAdd.StartsWith("10.2."))
+            {
+                serverIP = "10.2.0.6";
             }
             //serverIP = "10.201.20.14";
         }
@@ -98,11 +93,11 @@ namespace GDS_Client
                     if (FI.Length > 2000000)
                     {
                         FI.Delete();
+                    }   
+                    using (StreamWriter sw = File.AppendText(FileName))
+                    {
+                        sw.WriteLine(DateTime.Now.ToString() + ": " + LOG);
                     }
-                }
-                using (StreamWriter sw = File.AppendText(FileName))
-                {
-                    sw.WriteLine(DateTime.Now.ToString() + ": " + LOG);
                 }
             }
         }
@@ -153,19 +148,32 @@ namespace GDS_Client
             Console.WriteLine("Connected to: " + serverIP);            
             SendMessage(packet);
             WriteToLogs("Sending SYN FLAG");
+            running = true;
         }
 
         private void HandleConnectionClosed(Connection connection)
         {
+            if(messageHandler.cloning)
+            {
+                messageHandler.HandleMessage(new Packet(FLAG.ERROR_MESSAGE), connection);
+            }
+            Thread.Sleep(10000);
             StartListener();
             return;
         }
 
         private void IncommingMessage(PacketHeader packetHeader, Connection connection, byte[] data)
         {
-            Packet packet = Proto.ProtoDeserialize<Packet>(data);
-            if (!connection.ToString().StartsWith("[UDP-E-E] 127."))
-                messageHandler.HandleMessage(packet);
+            try
+            {
+                Packet packet = Proto.ProtoDeserialize<Packet>(data);
+                if (!connection.ToString().StartsWith("[UDP-E-E] 127."))
+                    messageHandler.HandleMessage(packet, connection);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Problem: " + ex.ToString());
+            }
         }
 
         public void SendMessage(Packet packet)

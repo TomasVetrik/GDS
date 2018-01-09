@@ -32,7 +32,17 @@
                 </Style>
             </TreeView.Resources>
         </TreeView>
-        <ListView x:Name="listView" Grid.Column="1" Grid.RowSpan="2"  HorizontalAlignment="Stretch" Height="auto" VerticalAlignment="Stretch" Width="auto" MouseDoubleClick="listView_MouseDoubleClick">
+        <ListView x:Name="listView" Grid.Column="1" Grid.RowSpan="2"  HorizontalAlignment="Stretch" Height="auto" VerticalAlignment="Stretch" Width="auto" MouseDoubleClick="listView_MouseDoubleClick" MouseDown="listView_MouseDown">
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem x:Name="menuItemRenameWG" Header="Rename" InputGestureText="F2"  Click="MenuItemRenameBrowseImage_Click"/>
+                    <MenuItem x:Name="menuItemDeleteWG" Header="Delete" InputGestureText="DEL" Click="MenuItemDeleteBrowseImage_Click"/>
+                    <MenuItem x:Name="menuItemCopy" Header="Copy" InputGestureText="CTRL+C" Click="MenuItemCopyBrowseImage_Click"/>
+                    <MenuItem x:Name="menuItemCut" Header="Cut" InputGestureText="CTRL+X" Click="MenuItemCutBrowseImage_Click"/>
+                    <MenuItem x:Name="menuItemPaste" Header="Paste" InputGestureText="CTRL+V" Click="MenuItemPasteBrowseImage_Click"/>
+                    <MenuItem Header="New Folder" InputGestureText="CTRL+SHIFT+N" Click="MenuItemCreateFolderBrowseImage_Click"/>
+                </ContextMenu>
+            </ListView.ContextMenu>
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Name" Width="270">

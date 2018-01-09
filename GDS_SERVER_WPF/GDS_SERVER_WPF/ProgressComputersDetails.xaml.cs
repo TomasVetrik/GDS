@@ -1,6 +1,7 @@
 ﻿using GDS_SERVER_WPF.DataCLasses;
 using System.Threading;
 using System.Windows;
+using System.Windows.Input;
 
 namespace GDS_SERVER_WPF
 {
@@ -26,6 +27,18 @@ namespace GDS_SERVER_WPF
                 {
                     listViewProgressDetails.Items.Add(progressComputerData);
                 }
+            }
+        }
+
+        private void Window_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.Escape:
+                    {
+                        this.Close();
+                        break;
+                    }
             }
         }
     }

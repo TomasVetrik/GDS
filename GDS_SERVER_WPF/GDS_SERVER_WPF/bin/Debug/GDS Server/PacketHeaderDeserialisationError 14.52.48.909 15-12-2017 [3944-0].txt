@@ -1,0 +1,14 @@
+Comment: The header data follows:45-54-20-2F-20-48-54-54-50-2F-31-2E-31-0D-0A-41-63-63-65-70-74-3A-20-74-65-78-74-2F-68-74-6D-6C-2C-20-61-70-70-6C-69-63-61-74-69-6F-6E-2F-78-68-74-6D-6C-2B-78-6D-6C-2C-20-2A-2F-2A-0D-0A-41-63-63-65-70-74-2D-4C-61
+
+Base Exception Type: NetworkCommsDotNet.SerialisationException: Error deserializing packet header. Number of long items was too large to be present in the input stream. This error is typically thrown because a non NetworkComms.Net peer attempted to communicate. If this is desirable please consider using an unmanaged connection.
+   at NetworkCommsDotNet.PacketHeader.Deserialize(Stream inputStream)
+   at NetworkCommsDotNet.DPSBase.ExplicitSerializer.DeserialiseDataObjectInt(Stream inputStream, Type resultType, Dictionary`2 options)
+   at NetworkCommsDotNet.DPSBase.DataSerializer.DeserialiseGeneralObject[T](MemoryStream receivedObjectStream, List`1 dataProcessors, Dictionary`2 options)
+   at NetworkCommsDotNet.DPSBase.DataSerializer.DeserialiseDataObject[T](MemoryStream receivedObjectStream, List`1 dataProcessors, Dictionary`2 options)
+   at NetworkCommsDotNet.PacketHeader..ctor(MemoryStream packetHeaderStream, SendReceiveOptions headerSendReceiveOptions)
+
+Stack Trace:    at NetworkCommsDotNet.PacketHeader.Deserialize(Stream inputStream)
+   at NetworkCommsDotNet.DPSBase.ExplicitSerializer.DeserialiseDataObjectInt(Stream inputStream, Type resultType, Dictionary`2 options)
+   at NetworkCommsDotNet.DPSBase.DataSerializer.DeserialiseGeneralObject[T](MemoryStream receivedObjectStream, List`1 dataProcessors, Dictionary`2 options)
+   at NetworkCommsDotNet.DPSBase.DataSerializer.DeserialiseDataObject[T](MemoryStream receivedObjectStream, List`1 dataProcessors, Dictionary`2 options)
+   at NetworkCommsDotNet.PacketHeader..ctor(MemoryStream packetHeaderStream, SendReceiveOptions headerSendReceiveOptions)

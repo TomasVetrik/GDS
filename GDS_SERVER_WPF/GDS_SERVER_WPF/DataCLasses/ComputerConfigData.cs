@@ -1,7 +1,7 @@
 ﻿using ProtoBuf;
 using System.Collections.Generic;
 
-namespace GDS_SERVER_WPF
+namespace GDS_SERVER_WPF.DataCLasses
 {
     [ProtoContract]
     public class ComputerConfigData
@@ -11,7 +11,7 @@ namespace GDS_SERVER_WPF
         [ProtoMember(2)]
         public string Workgroup { get; set; }
         [ProtoMember(3)]
-        public List<string> PostInstalls{ get; set; }
+        public List<string> PostInstalls { get; set; }
 
         public ComputerConfigData()
         {

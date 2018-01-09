@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ImageData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 10 Office 2016 x64 SP</Name>
+  <ImageSource>Images/Image.ico</ImageSource>
+  <SourcePath>I:\Office\Base\_WIM\W10_Off2k16_x64_Singleprofile\W10_Off2k16_x64_Singleprofile.wim</SourcePath>
+  <BoolLabel>Windows 10 Office 2016</BoolLabel>
+  <PartitionSize>150</PartitionSize>
+  <VHDResizeSize>50</VHDResizeSize>
+  <VHDResize>false</VHDResize>
+  <VHDNames>
+    <string>W10_Off2k16_x64_Singleprofile</string>
+  </VHDNames>
+  <OSAbrivations>
+    <string>W10_x64</string>
+  </OSAbrivations>
+</ImageData>

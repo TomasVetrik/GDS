@@ -1,0 +1,13 @@
+Comment: A fatal exception occurred in IncomingPacketHandleHandOff(), connection with [TCP-E-I] 10.202.0.6:10000 -> 10.202.20.155:49214 be closed. Loop counter 0. Packet builder contained 251 total cached bytes.
+
+Base Exception Type: NetworkCommsDotNet.SerialisationException: Error deserializing packetHeader. NetworkCommsDotNet.SerialisationException: Error deserializing packet header. Number of long items was too large to be present in the input stream. This error is typically thrown because a non NetworkComms.Net peer attempted to communicate. If this is desirable please consider using an unmanaged connection.
+   at NetworkCommsDotNet.PacketHeader.Deserialize(Stream inputStream)
+   at NetworkCommsDotNet.DPSBase.ExplicitSerializer.DeserialiseDataObjectInt(Stream inputStream, Type resultType, Dictionary`2 options)
+   at NetworkCommsDotNet.DPSBase.DataSerializer.DeserialiseGeneralObject[T](MemoryStream receivedObjectStream, List`1 dataProcessors, Dictionary`2 options)
+   at NetworkCommsDotNet.DPSBase.DataSerializer.DeserialiseDataObject[T](MemoryStream receivedObjectStream, List`1 dataProcessors, Dictionary`2 options)
+   at NetworkCommsDotNet.PacketHeader..ctor(MemoryStream packetHeaderStream, SendReceiveOptions headerSendReceiveOptions)
+   at NetworkCommsDotNet.PacketHeader..ctor(MemoryStream packetHeaderStream, SendReceiveOptions headerSendReceiveOptions)
+   at NetworkCommsDotNet.Connections.Connection.IncomingPacketHandleHandOff(PacketBuilder packetBuilder)
+
+Stack Trace:    at NetworkCommsDotNet.PacketHeader..ctor(MemoryStream packetHeaderStream, SendReceiveOptions headerSendReceiveOptions)
+   at NetworkCommsDotNet.Connections.Connection.IncomingPacketHandleHandOff(PacketBuilder packetBuilder)

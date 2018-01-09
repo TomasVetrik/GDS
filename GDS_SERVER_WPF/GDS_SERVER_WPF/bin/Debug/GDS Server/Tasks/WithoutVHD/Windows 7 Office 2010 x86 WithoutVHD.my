@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>Windows 7 Office 2010 x86 WithoutVHD</Name>
+  <LastExecuted>21.12.2017 08-56-29</LastExecuted>
+  <TargetComputers>
+    <ComputerDetailsData>
+      <_sourceIdentifier>nUlKydgsVUOOzsmE_kXYiw</_sourceIdentifier>
+      <Name>STUDENTSK12-06</Name>
+      <RealPCName>MININT-FQUN1CJ</RealPCName>
+      <macAddresses>
+        <string>FC:AA:14:AC:70:26</string>
+        <string>68:05:CA:3C:30:DF</string>
+      </macAddresses>
+      <MacAddress>FC:AA:14:AC:70:26</MacAddress>
+      <OSInformations>, 64-bit</OSInformations>
+      <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+      <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+      <numberOfRamSLots>4</numberOfRamSLots>
+      <biosCaption>BIOS Date: 11/19/14 21:14:12 Ver: 04.06.05</biosCaption>
+      <boardProductId>H97-HD3</boardProductId>
+      <accountName>SYSTEM</accountName>
+      <IPAddress>10.202.20.93</IPAddress>
+      <baseImageName />
+      <driveEImageName />
+      <dartInfo>433-459-327#10.202.20.93#49422</dartInfo>
+      <ImageSource>Images/Winpe.ico</ImageSource>
+      <inWinpe>true</inWinpe>
+    </ComputerDetailsData>
+  </TargetComputers>
+  <MachineGroup>UCEBNASK12</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>true</Cloning>
+  <BaseImageSourcePath>.\Base\Windows 7 Office 2010 x86 WithoutVHD</BaseImageSourcePath>
+  <BaseImageData>
+    <Name>Windows 7 Office 2010 x86 WithoutVHD</Name>
+    <ImageSource>Images/Image.ico</ImageSource>
+    <SourcePath>I:\Office\Base\_WIM_WITHOUT_VHD\W7_Off2k10_x86_MUI\W7_Off2k10_MUI_x86.wim</SourcePath>
+    <BoolLabel>Windows 7 Office 2010</BoolLabel>
+    <PartitionSize>90</PartitionSize>
+    <VHDResizeSize>50</VHDResizeSize>
+    <VHDResize>false</VHDResize>
+    <VHDNames>
+      <string>W7_Off2k10_MUI_x86</string>
+    </VHDNames>
+    <OSAbrivations>
+      <string>w7_x86</string>
+    </OSAbrivations>
+  </BaseImageData>
+  <WithoutVHD>true</WithoutVHD>
+  <DriveEImageSourcePath />
+  <DriveEImageData>
+    <Name>10989B</Name>
+    <ImageSource>Images/Image.ico</ImageSource>
+    <SourcePath>I:\MOC\DriveE\_WIM\10989B\10989B.wim</SourcePath>
+    <BoolLabel>MOC 10989 B</BoolLabel>
+    <PartitionSize>90</PartitionSize>
+    <VHDResizeSize>50</VHDResizeSize>
+    <VHDResize>false</VHDResize>
+    <VHDNames />
+    <OSAbrivations />
+  </DriveEImageData>
+  <SoftwareAndFileAction>false</SoftwareAndFileAction>
+  <DestinationDirectoryInOS />
+  <CommandsInOS />
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE />
+  <WaitingTime>30</WaitingTime>
+</TaskData>

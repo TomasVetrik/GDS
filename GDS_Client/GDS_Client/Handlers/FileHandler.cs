@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
+using System.Threading;
 using System.Xml.Serialization;
 
 namespace GDS_Client
@@ -20,8 +22,10 @@ namespace GDS_Client
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                Console.WriteLine("Chyba pri nacitani suboru: " + FileSpec + " " + ex);
+                Thread.Sleep(1000);
                 return Load<T>(FileSpec);
             }
         }
@@ -37,8 +41,10 @@ namespace GDS_Client
                 formatter.Serialize(outFile, ToSerialize);
                 outFile.Close();
             }
-            catch
+            catch (Exception ex)
             {
+                Console.WriteLine("Chyba pri zapise suboru: " + FileSpec+ " " + ex);
+                Thread.Sleep(1000);
                 Save<T>(ToSerialize, FileSpec);
             }
         }

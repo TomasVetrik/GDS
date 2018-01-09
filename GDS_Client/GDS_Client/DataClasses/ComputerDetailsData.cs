@@ -62,6 +62,8 @@ namespace GDS_Client
         [ProtoMember(19)]
         public bool inWinpe { get; set; }
         [ProtoMember(20)]
+        public List<string> PostInstalls { get; set; }
+        [ProtoMember(21)]
         public string _sourceIdentifier;
         public ShortGuid SourceIdentifier { get { return new ShortGuid(_sourceIdentifier); } }
     }

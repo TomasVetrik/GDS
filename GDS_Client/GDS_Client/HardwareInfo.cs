@@ -27,14 +27,14 @@ namespace GDS_Client
             return "Unknown";
         }
 
-        public static string GetIPAddress()
+        public static List<string> GetIPAddress()
         {
             try
             {
                 string wmiQuery = "SELECT * FROM Win32_NetworkAdapter WHERE NetConnectionId != NULL";
                 ManagementObjectSearcher moSearch = new ManagementObjectSearcher(wmiQuery);
                 ManagementObjectCollection moCollection = moSearch.Get();
-                string IPAddress = "Not Found,";
+                List<string> IPAddress = new List<string>();
                 foreach (ManagementObject mo in moCollection)
                 {
                     string pnp = mo["PNPDeviceID"].ToString();
@@ -46,28 +46,20 @@ namespace GDS_Client
                         {
                             string[] addresses = (string[])mo2["IPAddress"];
                             {
-                                IPAddress += addresses[0] + ",";
+                                IPAddress.Add(addresses[0]);
                             }
                         }
                     }
                 }
-                if (IPAddress != "Not Found,")
+                string hostName = Dns.GetHostName();
+                foreach (IPAddress IP in Dns.GetHostByName(hostName).AddressList)
                 {
-                    IPAddress = IPAddress.Replace("Not Found,", "");
+                    IPAddress.Add(IP.ToString());
                 }
-                else
-                {
-                    string hostName = Dns.GetHostName();
-                    IPAddress = Dns.GetHostByName(hostName).AddressList[0].ToString();
-                }
-                if (IPAddress.Length != 0)
-                {
-                    IPAddress = IPAddress.Substring(0, IPAddress.Length - 1);
-                }
-                return "IP Address||" + IPAddress;
+                return IPAddress;
             }
             catch { }
-            return "IP Address||NONE";
+            return new List<string>();
         }
 
         public static string GetIPAddress2()

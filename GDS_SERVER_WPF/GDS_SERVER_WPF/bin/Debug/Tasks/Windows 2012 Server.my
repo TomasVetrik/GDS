@@ -36,8 +36,9 @@
   <BaseImageSourcePath>.\Base\Office2010</BaseImageSourcePath>
   <WithoutVHD>false</WithoutVHD>
   <DriveEImageSourcePath />
-  <SoftwareAndFileAction>false</SoftwareAndFileAction>
-  <DestinationDirectoryInOS />
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <SourceDirectoryInOS>C:\Users\TomasVe\Documents\GitHub\GDS\GDS_SERVER_WPF\GDS_SERVER_WPF\bin\Debug\GDS Server\TaskDetails</SourceDirectoryInOS>
+  <DestinationDirectoryInOS>C:\Users\TomasVe\Documents\GitHub\GDS\GDS_SERVER_WPF\GDS_SERVER_WPF\bin\Debug\GDS Server</DestinationDirectoryInOS>
   <CommandsInOS>
     <string>E:\Autologon.bat</string>
   </CommandsInOS>

@@ -33,7 +33,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -44,11 +44,13 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>logo_gopas_sk.ico</ApplicationIcon>
@@ -75,8 +77,10 @@
     <Compile Include="DataClasses\ComputerDetails.cs" />
     <Compile Include="DataClasses\ComputerDetailsData.cs" />
     <Compile Include="DataClasses\ImageData.cs" />
+    <Compile Include="FilePiece.cs" />
     <Compile Include="Handlers\FileHandler.cs" />
     <Compile Include="Handlers\Proto.cs" />
+    <Compile Include="Handlers\TCP_UNICAST.cs" />
     <Compile Include="HardwareInfo.cs" />
     <Compile Include="DataClasses\ItemData.cs" />
     <Compile Include="Handlers\Listener.cs" />

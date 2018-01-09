@@ -23,7 +23,8 @@ namespace GDS_SERVER_WPF
         public Label labelOfflineClients;
         public Label labelAllClients;
         public int clientsAll = 0;
-        public ListViewMachinesAndTasksHandler listViewMachinesAndTasksHandler;        
+        public Semaphore semaphore = new Semaphore(1, 500);
+        public ListViewMachinesAndTasksHandler listViewMachinesAndTasksHandler;
         public List<ExecutedTaskHandler> executedTasksHandlers;
         public ListBox console;
 
@@ -45,33 +46,32 @@ namespace GDS_SERVER_WPF
 
         private void HandleConnectionClosed(Connection connection)
         {
-            lock (ClientsDictionary)
+            semaphore.WaitOne();
+            ShortGuid remoteIdentifier = connection.ConnectionInfo.NetworkIdentifier;
+            if (ClientsDictionary.ContainsKey(remoteIdentifier))
             {
-                ShortGuid remoteIdentifier = connection.ConnectionInfo.NetworkIdentifier;
-                if (ClientsDictionary.ContainsKey(remoteIdentifier))
+                Application.Current.Dispatcher.Invoke(() =>
                 {
-                    Application.Current.Dispatcher.Invoke(() =>
+                    for (int i = listViewMachinesAndTasksHandler.machines.Items.Count - 1; i >= 0; i--)
                     {
-                        for (int i = listViewMachinesAndTasksHandler.machines.Items.Count - 1; i >= 0; i--)
+                        ComputerDetailsData computer = (ComputerDetailsData)listViewMachinesAndTasksHandler.machines.Items[i];
+                        if (computer.macAddresses != null && ClientsDictionary[remoteIdentifier].ComputerData.macAddresses != null && CheckMacsInREC(computer.macAddresses, ClientsDictionary[remoteIdentifier].ComputerData.macAddresses))
                         {
-                            ComputerDetailsData computer = (ComputerDetailsData)listViewMachinesAndTasksHandler.machines.Items[i];
-                            if (computer.macAddresses != null && ClientsDictionary[remoteIdentifier].ComputerData.macAddresses != null && CheckMacsInREC(computer.macAddresses, ClientsDictionary[remoteIdentifier].ComputerData.macAddresses))
-                            {
-                                computer.ImageSource = "Images/Offline.ico";
-                                listViewMachinesAndTasksHandler.machines.Items.RemoveAt(i);
-                                listViewMachinesAndTasksHandler.machines.Items.Insert(i, computer);
-                                break;
-                            }
+                            computer.ImageSource = "Images/Offline.ico";
+                            listViewMachinesAndTasksHandler.machines.Items.RemoveAt(i);
+                            listViewMachinesAndTasksHandler.machines.Items.Insert(i, computer);
+                            break;
                         }
-                    });
-                }                
-                ClientsDictionary.Remove(connection.ConnectionInfo.NetworkIdentifier);
+                    }
+                });
             }
+            ClientsDictionary.Remove(connection.ConnectionInfo.NetworkIdentifier);
             Application.Current.Dispatcher.Invoke(() =>
             {
                 labelOnlineClients.Content = "Online: " + ClientsDictionary.Count;
                 labelOfflineClients.Content = "Offline: " + (clientsAll - ClientsDictionary.Count);
             });
+            semaphore.Release(1);
         }
 
         public static bool CheckMacsInREC(List<string> Macs, List<string> Recs)
@@ -101,82 +101,139 @@ namespace GDS_SERVER_WPF
 
         private void IncommingMessage(PacketHeader packetHeader, Connection connection, byte[] data)
         {
-            Packet packet = Proto.ProtoDeserialize<Packet>(data);
-            lock (ClientsDictionary)
+            try
             {
+                semaphore.WaitOne();
+                Packet packet = Proto.ProtoDeserialize<Packet>(data);
+
                 if (ClientsDictionary.ContainsKey(packet.computerDetailsData.SourceIdentifier))
                 {
                     ClientsDictionary[packet.computerDetailsData.SourceIdentifier] = new ComputerWithConnection { ComputerData = packet.computerDetailsData, connection = connection };
                 }
                 else
                 {
-                    ClientsDictionary.Add(packet.computerDetailsData.SourceIdentifier, new ComputerWithConnection {ComputerData = packet.computerDetailsData, connection = connection });
+                    ClientsDictionary.Add(packet.computerDetailsData.SourceIdentifier, new ComputerWithConnection { ComputerData = packet.computerDetailsData, connection = connection });
                 }
+                semaphore.Release();
                 if (!connection.ToString().StartsWith("[UDP-E-E] 127."))
                 {
                     packet.computerDetailsData.IPAddress = connection.ConnectionInfo.RemoteEndPoint.ToString().Split(':').First();
-                    MessageHandler(packet, connection);
-                    Application.Current.Dispatcher.Invoke(() =>
-                    {
-                        for (int i = listViewMachinesAndTasksHandler.machines.Items.Count - 1; i >= 0; i--)
-                        {
-                            try
-                            {
-                                ComputerDetailsData computer = (ComputerDetailsData)listViewMachinesAndTasksHandler.machines.Items[i];
-                                if (!computer.ImageSource.Contains("Folder"))
-                                {
-                                    if (CheckMacsInREC(computer.macAddresses, packet.computerDetailsData.macAddresses))
-                                    {
-                                        if (packet.computerDetailsData.inWinpe)
-                                            packet.computerDetailsData.ImageSource = "Images/WinPE.ico";
-                                        else
-                                            packet.computerDetailsData.ImageSource = "Images/Online.ico";
-                                        listViewMachinesAndTasksHandler.machines.Items.RemoveAt(i);
-                                        listViewMachinesAndTasksHandler.machines.Items.Insert(i, packet.computerDetailsData);
-                                        break;
-                                    }
-                                }
-                            }
-                            catch (Exception e)
-                            {
-                                MessageBox.Show("BEZIM: " + e.ToString());
-                            }
-                        }
-                    });
+
+                    MessageHandler(packet, connection);                    
                 }
             }
-
-            Application.Current.Dispatcher.Invoke(() =>
+            catch (Exception ex)
             {
-                labelOnlineClients.Content = "Online: " + ClientsDictionary.Count;
-                labelOfflineClients.Content = "Offline: " + (clientsAll - ClientsDictionary.Count);
-            });
+                Application.Current.Dispatcher.Invoke(() =>
+                {
+                    MessageBox.Show("PROBLEM AKO HOVADO: " + ex.ToString());
+                });
+                StartListener();
+            }
         }
 
-        private void FindComputerInTask(Packet packet, Connection connection)
+        private void FindComputerInTask(Packet packet, Connection connection, bool failed)
         {
-            for (int i = 0; i < executedTasksHandlers.Count; i++)
+            try
             {
-                ExecutedTaskHandler executedTaskHandler = executedTasksHandlers[i];
-                foreach (ComputerInTaskHandler computer in executedTaskHandler.computers)
+                for (int i = 0; i < executedTasksHandlers.Count; i++)
                 {
-                    if (CheckMacsInREC(computer.computer.macAddresses, packet.computerDetailsData.macAddresses))
+                    ExecutedTaskHandler executedTaskHandler = executedTasksHandlers[i];
+                    foreach (ComputerInTaskHandler computer in executedTaskHandler.computers)
                     {
-                        computer.ClientsDictionary = ClientsDictionary;
-                        computer.receivePacket = packet;
-                        computer.connection = connection;
-                        break;
+                        if (CheckMacsInREC(computer.computer.macAddresses, packet.computerDetailsData.macAddresses))
+                        {
+                            computer.ClientsDictionary = ClientsDictionary;
+                            computer.receivePacket = packet;
+                            computer.connection = connection;
+                            if(computer.cloning)
+                            {
+                                computer.semaphoreForCloning.Release();
+                            }
+                            if (failed)
+                            {
+                                computer.Failed(packet.clonningMessage);
+                            }
+                            break;
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                Application.Current.Dispatcher.Invoke(() =>
+                {
+                    MessageBox.Show("PROBLEM AKO HOVADO4: " + ex.ToString());
+                });
             }
         }
 
         private void MessageHandler(Packet packet, Connection connection)
         {
-            SaveComputerData(packet, connection);
-            if (packet.ID == FLAG.SHUTDOWN_DONE)
-            {                
-                SendMessage(packet, connection);
+            try
+            {
+                bool failed = false;
+                switch (packet.ID)
+                {
+                    case FLAG.SYN_FLAG:
+                    case FLAG.SYN_FLAG_WINPE:
+                        {
+                            SaveComputerData(packet, connection);
+                            Application.Current.Dispatcher.Invoke(() =>
+                            {
+                                for (int i = listViewMachinesAndTasksHandler.machines.Items.Count - 1; i >= 0; i--)
+                                {
+                                    try
+                                    {
+                                        ComputerDetailsData computer = (ComputerDetailsData)listViewMachinesAndTasksHandler.machines.Items[i];
+                                        if (!computer.ImageSource.Contains("Folder"))
+                                        {
+                                            if (CheckMacsInREC(computer.macAddresses, packet.computerDetailsData.macAddresses))
+                                            {
+                                                if (packet.computerDetailsData.inWinpe)
+                                                    packet.computerDetailsData.ImageSource = "Images/WinPE.ico";
+                                                else
+                                                    packet.computerDetailsData.ImageSource = "Images/Online.ico";
+                                                packet.computerDetailsData.PostInstalls = packet.computerConfigData.PostInstalls;
+                                                listViewMachinesAndTasksHandler.machines.Items.RemoveAt(i);
+                                                listViewMachinesAndTasksHandler.machines.Items.Insert(i, packet.computerDetailsData);
+                                                break;
+                                            }
+                                        }
+                                    }
+                                    catch (Exception e)
+                                    {
+                                        MessageBox.Show("BEZIM: " + e.ToString());
+                                    }
+                                }
+                            });
+
+                            Application.Current.Dispatcher.Invoke(() =>
+                            {
+                                labelOnlineClients.Content = "Online: " + ClientsDictionary.Count;
+                                labelOfflineClients.Content = "Offline: " + (clientsAll - ClientsDictionary.Count);
+                            });
+                            break;
+                        }
+                    case FLAG.ERROR_MESSAGE:
+                        {
+                            failed = true;
+                            break;
+                        }
+                        
+                }
+                FindComputerInTask(packet, connection, failed);
+                if (packet.ID == FLAG.SHUTDOWN_DONE || packet.ID == FLAG.CLONING_DONE)
+                {
+                    SendMessage(packet, connection);
+                }
+            }
+            catch (Exception ex)
+            {
+                Application.Current.Dispatcher.Invoke(() =>
+                {
+                    MessageBox.Show("PROBLEM AKO HOVADO2: " + ex.ToString());
+                });
             }
         }
 
@@ -196,58 +253,74 @@ namespace GDS_SERVER_WPF
         }
 
         private void SaveComputerData(Packet packet, Connection connection)
-        {            
-            var computersInfoFiles = Directory.GetFiles(@".\Machine Groups\", "*.my", SearchOption.AllDirectories);
-            clientsAll = computersInfoFiles.Length;
-            Application.Current.Dispatcher.Invoke(() =>
+        {
+            try
             {
-                labelAllClients.Content = "Clients: " + clientsAll;
-            });
-            var filePath = GetFileNameByMac(computersInfoFiles, packet.computerDetailsData.macAddresses);
-            packet.computerConfigData = new ComputerConfigData(packet.computerDetailsData.RealPCName, "Workgroup");
-            if (filePath != "")
-            {
-                packet.computerDetailsData.Name = Path.GetFileName(filePath).Replace(".my", "");
-                FileHandler.Save<ComputerDetailsData>(packet.computerDetailsData, filePath);
-                if (!File.Exists(filePath.Replace(".my", ".cfg")))
+                var computersInfoFiles = Directory.GetFiles(@".\Machine Groups\", "*.my", SearchOption.AllDirectories);
+                clientsAll = computersInfoFiles.Length;
+                Application.Current.Dispatcher.Invoke(() =>
                 {
-                    FileHandler.Save<ComputerConfigData>(packet.computerConfigData, filePath.Replace(".my", ".cfg"));
-                }
-                else
+                    labelAllClients.Content = "Clients: " + clientsAll;
+                });
+                var filePath = GetFileNameByMac(computersInfoFiles, packet.computerDetailsData.macAddresses);
+                packet.computerConfigData = new ComputerConfigData(packet.computerDetailsData.RealPCName, "Workgroup");
+                if (filePath != "")
                 {
-                    packet.computerConfigData = FileHandler.Load<ComputerConfigData>(filePath.Replace(".my", ".cfg"));
-                }
-            }
-            else
-            {
-                packet.computerDetailsData.Name = packet.computerDetailsData.RealPCName;
-                bool exist = false;
-                foreach (string computerFile in computersInfoFiles)
-                {
-                    if (computerFile == @".\Machine Groups\Default\" + packet.computerDetailsData.RealPCName + ".my")
+                    packet.computerDetailsData.Name = Path.GetFileName(filePath).Replace(".my", "");
+                    FileHandler.Save<ComputerDetailsData>(packet.computerDetailsData, filePath);
+                    if (!File.Exists(filePath.Replace(".my", ".cfg")))
                     {
-                        exist = true;
-                        break;
+                        FileHandler.Save<ComputerConfigData>(packet.computerConfigData, filePath.Replace(".my", ".cfg"));
+                    }
+                    else
+                    {
+                        packet.computerConfigData = FileHandler.Load<ComputerConfigData>(filePath.Replace(".my", ".cfg"));
                     }
                 }
-                if (!exist)
-                {
-                    filePath = @".\Machine Groups\Default\" + packet.computerDetailsData.RealPCName + ".my";
-                }
                 else
                 {
-                    filePath = @".\Machine Groups\Default\" + packet.computerDetailsData.RealPCName + "-NEW.my";
+                    packet.computerDetailsData.Name = packet.computerDetailsData.RealPCName;
+                    bool exist = false;
+                    foreach (string computerFile in computersInfoFiles)
+                    {
+                        if (computerFile == @".\Machine Groups\Default\" + packet.computerDetailsData.RealPCName + ".my")
+                        {
+                            exist = true;
+                            break;
+                        }
+                    }
+                    if (!exist)
+                    {
+                        filePath = @".\Machine Groups\Default\" + packet.computerDetailsData.RealPCName + ".my";
+                    }
+                    else
+                    {
+                        filePath = @".\Machine Groups\Default\" + packet.computerDetailsData.RealPCName + "-NEW.my";
+                    }
+                    FileHandler.Save<ComputerDetailsData>(packet.computerDetailsData, filePath);
+                    FileHandler.Save<ComputerConfigData>(packet.computerConfigData, filePath.Replace(".my", ".cfg"));
                 }
-                FileHandler.Save<ComputerDetailsData>(packet.computerDetailsData, filePath);
-                FileHandler.Save<ComputerConfigData>(packet.computerConfigData, filePath.Replace(".my", ".cfg"));                
             }
-            FindComputerInTask(packet, connection);
+            catch (Exception ex)
+            {
+                Application.Current.Dispatcher.Invoke(() =>
+                {
+                    MessageBox.Show("PROBLEM AKO HOVADO3: " + ex.ToString());
+                });
+            }
         }
 
         public void SendMessage(Packet packet, Connection connection)
         {
-            byte[] data = Proto.ProtoSerialize<Packet>(packet);
-            connection.SendObject("Packet", data);
+            try
+            {
+                if (connection.ConnectionAlive())
+                {
+                    byte[] data = Proto.ProtoSerialize<Packet>(packet);
+                    connection.SendObject("Packet", data);
+                }
+            }
+            catch { }
         }
     }
 }

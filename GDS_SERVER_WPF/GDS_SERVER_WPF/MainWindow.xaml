@@ -50,7 +50,7 @@
                         <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.HighlightTextColorKey}}"/>
                     </Grid.Background>
                     <GridSplitter Grid.Row="1" Grid.ColumnSpan="3" Height="5" HorizontalAlignment="Stretch" />
-                    <TreeView Grid.Row="0" Grid.Column="0" x:Name="treeViewMachinesAndTasks" HorizontalAlignment="Stretch" Width="auto" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" Height="auto" VerticalAlignment="Stretch" SelectedItemChanged="treeViewMachinesAndTasks_SelectedItemChanged">
+                    <TreeView Grid.Row="0" Grid.Column="0" x:Name="treeViewMachinesAndTasks" HorizontalAlignment="Stretch" Width="auto" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" Height="auto" VerticalAlignment="Stretch" SelectedItemChanged="treeViewMachinesAndTasks_SelectedItemChanged" KeyUp="treeViewMachinesAndTasks_KeyUp">
                         <TreeView.Resources>
                             <Style TargetType="{x:Type TreeViewItem}">
                                 <Setter Property="HeaderTemplate">
@@ -67,7 +67,7 @@
                         </TreeView.Resources>
                     </TreeView>
                     <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
-                    <ListView Grid.Row="0" Grid.Column="3" x:Name="listViewMachineGroups" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White" MouseDoubleClick="listViewMachineGroups_MouseDoubleClick" SelectionChanged="listViewMachineGroups_SelectionChanged" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True">
+                    <ListView Grid.Row="0" Grid.Column="3" x:Name="listViewMachineGroups" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White" MouseDoubleClick="listViewMachineGroups_MouseDoubleClick" SelectionChanged="listViewMachineGroups_SelectionChanged" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" Focusable="False" MouseDown="listViewMachineGroups_MouseDown" KeyUp="listViewMachineGroups_KeyUp_1" >
                         <ListView.ContextMenu>
                             <ContextMenu>
                                 <MenuItem x:Name="menuItemRenameWG" Header="Rename" InputGestureText="F2"  Click="MenuItemMachineGroupsRename_Click"/>
@@ -80,6 +80,11 @@
                                 <MenuItem Header="New Folder" InputGestureText="CTRL+SHIFT+N" Click="MenuItemCreateFolder_Click"/>
                             </ContextMenu>
                         </ListView.ContextMenu>
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <EventSetter Event="MouseEnter" Handler="ListViewItem_MouseEnter"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Name" Width="180" local:GridViewSort.PropertyName="Name">
@@ -119,7 +124,84 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Detail" Width="300" local:GridViewSort.PropertyName="Detail">
+                                <GridViewColumn Header="PostInstalls" Width="300">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <ListBox ItemsSource="{Binding PostInstalls}" Foreground="Black" VerticalAlignment="Center">
+                                                    <ListBox.BorderBrush>
+                                                        <SolidColorBrush Color="White" Opacity="0"/>
+                                                    </ListBox.BorderBrush>
+                                                    <ListBox.ItemsPanel>
+                                                        <ItemsPanelTemplate>
+                                                            <VirtualizingStackPanel Orientation="Horizontal" />
+                                                        </ItemsPanelTemplate>
+                                                    </ListBox.ItemsPanel>
+                                                </ListBox>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <ListView Grid.Row="0" Grid.Column="3" x:Name="listViewMachineGroupsLock" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White" MouseDoubleClick="listViewMachineGroups_MouseDoubleClick" SelectionChanged="listViewMachineGroups_SelectionChanged" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" Focusable="False" MouseDown="listViewMachineGroups_MouseDown" KeyUp="listViewMachineGroups_KeyUp_1" >
+                        <ListView.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem x:Name="menuItemRenameWGLock" Header="Rename" InputGestureText="F2"  Click="MenuItemMachineGroupsRenameLock_Click"/>
+                                <MenuItem x:Name="menuItemDetailsWGLock" Header="Edit Detail" InputGestureText="F3"  Click="MenuItemMachineGroupsEditDetailLock_Click"/>
+                                <MenuItem x:Name="menuItemUnLockWGLock" Header="Unlock" InputGestureText="F4"  Click="MenuItemMachineGroupsUnLockLock_Click"/>
+                                <MenuItem x:Name="menuItemFeaturesWGLock" Header="Features">
+                                    <MenuItem Header="Wake On Lan" InputGestureText="CTRL+W" Click="MenuItemMachineGroupsWOLLock_Click"/>
+                                    <MenuItem Header="RDP" InputGestureText="CTRL+R" Click="MenuItemMachineGroupsRDPLock_Click"/>
+                                </MenuItem>
+                            </ContextMenu>
+                        </ListView.ContextMenu>
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <EventSetter Event="MouseEnter" Handler="ListViewItem_MouseEnter"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Name" Width="180" local:GridViewSort.PropertyName="Name">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <Image x:Name="imageSource" Width="20" Height="20" Source="{Binding ImageSource}"/>
+                                                <TextBlock Text="{Binding Path=Name}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Mac Address" Width="150" local:GridViewSort.PropertyName="MacAddress">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=MacAddress}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="IP Address" Width="150" local:GridViewSort.PropertyName="IPAddress">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=IPAddress}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Real PC Name" Width="150"  local:GridViewSort.PropertyName="RealPCName">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=RealPCName}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Lock Detail" Width="150"  local:GridViewSort.PropertyName="Detail">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -131,13 +213,13 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <ListView Grid.Row="0" Grid.Column="3" x:Name="listViewTasks" Visibility="Hidden" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MouseDoubleClick="listViewTasks_MouseDoubleClick" SelectionChanged="listViewTasks_SelectionChanged" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True">
+                    <ListView Grid.Row="0" Grid.Column="3" x:Name="listViewTasks" Visibility="Hidden" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MouseDoubleClick="listViewTasks_MouseDoubleClick" SelectionChanged="listViewTasks_SelectionChanged" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" KeyUp="listViewTasks_KeyUp" MouseDown="listViewTasks_MouseDown">
                         <ListView.ContextMenu>
                             <ContextMenu>
-                                <MenuItem Header="New Task" Click="MenuItemTaskNew_Click"/>
+                                <MenuItem Header="New Task" InputGestureText="CTRL+T" Click="MenuItemTaskNew_Click"/>
                                 <MenuItem x:Name="menuItemRenameTask" Header="Rename" InputGestureText="F2" Click="MenuItemTaskRename_Click"/>
                                 <MenuItem x:Name="menuItemDeleteTask" Header="Delete" InputGestureText="DEL" Click="MenuItemDelete_Click"/>
-                                <MenuItem Header="New Folder" Click="MenuItemCreateFolder_Click"/>
+                                <MenuItem Header="New Folder" InputGestureText="CTRL+SHIFT+N" Click="MenuItemCreateFolder_Click"/>
                             </ContextMenu>
                         </ListView.ContextMenu>
                         <ListView.View>
@@ -170,7 +252,7 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Computers" Width="300" local:GridViewSort.PropertyName="TargetComputers">
+                                <GridViewColumn Header="Computers" Width="300">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -191,10 +273,10 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <ListView Grid.Row="2" Grid.ColumnSpan="3" x:Name="listViewTasksDetails" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseDoubleClick="listViewTasksDetails_MouseDoubleClick" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True">
+                    <ListView Grid.Row="2" Grid.ColumnSpan="3" x:Name="listViewTasksDetails" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseDoubleClick="listViewTasksDetails_MouseDoubleClick" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" KeyUp="listViewTasksDetails_KeyUp">
                         <ListView.ContextMenu>
                             <ContextMenu>
-                                <MenuItem x:Name="menuItemDeleteDetails" Header="Delete" Click="MenuItemDetailsDelete_Click"/>
+                                <MenuItem x:Name="menuItemDeleteDetails" Header="Delete" InputGestureText="DEL" Click="MenuItemDetailsDelete_Click"/>
                                 <MenuItem x:Name="menuItemDeleteDetailsAll" Header="Delete All" Click="MenuItemDetailsDeleteAll_Click"/>
                                 <MenuItem x:Name="menuItemStopDetails" Header="Stop" Click="MenuItemDetailsStop_Click"/>
                             </ContextMenu>
@@ -442,7 +524,7 @@
                             </Style>
                         </TreeView.Resources>
                     </TreeView>
-                    <ListView Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="9" x:Name="listViewPostInstalls" HorizontalAlignment="Stretch" Height="auto" VerticalAlignment="Stretch" Width="auto" Margin="5" MouseDoubleClick="listViewPostInstalls_MouseDoubleClick">
+                    <ListView Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="9" x:Name="listViewPostInstalls" HorizontalAlignment="Stretch" Height="auto" VerticalAlignment="Stretch" Width="auto" Margin="5" MouseDoubleClick="listViewPostInstalls_MouseDoubleClick" SelectionChanged="listViewPostInstalls_SelectionChanged">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Name" Width="180">
@@ -467,20 +549,140 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <ListBox x:Name="listBoxPostInstallsSelected" Grid.Column="2" Grid.Row="0" Grid.RowSpan="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" />
-                    <ListBox x:Name="listBoxPostInstallsSelector" Grid.Column="4" Grid.Row="0" Grid.RowSpan="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" />
-                    <Button x:Name="btnPostInstallsSelect" Grid.Column="3" Grid.Row="1" Content="&lt;&lt;" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDoubleClick="btnPostInstallsSelect_MouseDoubleClick"/>
-                    <Button x:Name="btnPostInstallsUnSelect" Grid.Column="3" Grid.Row="3" Content="&gt;&gt;" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5"/>
-                    <Button x:Name="btnPostInstallsRefresh" Grid.Column="2" Grid.Row="5" Content="Refresh" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Height="30" Margin="5"/>
+                    <ListBox x:Name="listBoxPostInstallsSelected" Grid.Column="2" Grid.Row="0" Grid.RowSpan="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDoubleClick="listBoxPostInstallsSelected_MouseDoubleClick" />
+                    <ListBox x:Name="listBoxPostInstallsSelector" Grid.Column="4" Grid.Row="0" Grid.RowSpan="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDoubleClick="listBoxPostInstallsSelector_MouseDoubleClick" SelectionChanged="listBoxPostInstallsSelector_SelectionChanged"/>
+                    <Button x:Name="btnPostInstallsSelect" Grid.Column="3" Grid.Row="1" Content="&lt;&lt;" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDown="btnPostInstallsSelect_MouseDown"/>
+                    <Button x:Name="btnPostInstallsUnSelect" Grid.Column="3" Grid.Row="3" Content="&gt;&gt;" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDown="btnPostInstallsUnSelect_MouseDown"/>
+                    <Button x:Name="btnPostInstallsRefresh" Grid.Column="2" Grid.Row="5" Content="Refresh" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Height="30" Margin="5" MouseDown="btnPostInstallsRefresh_MouseDown"/>
                     <Label Content="* Restart after all" Grid.Column="4" Grid.Row="5" FontWeight="Bold" VerticalAlignment="Top"/>
                     <Label Content="** Shutdown after all" Grid.Column="4" Grid.Row="5" FontWeight="Bold" VerticalAlignment="Bottom"/>
                     <Label Content="Note to Installation:" Grid.Column="2" Grid.Row="6" FontWeight="Bold" VerticalAlignment="Bottom" />
                     <Border BorderThickness="1" BorderBrush="Black" Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="3" Margin="5">
-                        <TextBlock x:Name="txtBlockPostInstalls" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="Black" Background="White" />
+                        <TextBlock x:Name="txtBlockPostInstalls" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="Black" Background="White" FontSize="16" TextWrapping="Wrap" />
                     </Border>
-                    <Button x:Name="btnPostInstallsCopyPath" Grid.Column="2" Grid.Row="8" Content="Copy Path" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Margin="5"/>
-                    <Button x:Name="btnPostInstallsChangeNote" Grid.Column="4" Grid.Row="8" Content="Change Note" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Margin="5"/>
+                    <Button x:Name="btnPostInstallsCopyPath" Grid.Column="2" Grid.Row="8" Content="Copy Path" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Margin="5" Click="btnPostInstallsCopyPath_Click"/>
+                    <Button x:Name="btnPostInstallsChangeNote" Grid.Column="4" Grid.Row="8" Content="Change Note" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Margin="5" Click="btnPostInstallsChangeNote_Click"/>
                 </Grid>
+            </TabItem>
+            <TabItem Header="History">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                        <GradientStop Color="{DynamicResource {x:Static SystemColors.HighlightTextColorKey}}" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+                    <TreeView Grid.Row="0" Grid.Column="0" x:Name="treeViewHistory" HorizontalAlignment="Stretch" Width="auto" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" Height="auto" VerticalAlignment="Stretch" SelectedItemChanged="treeViewHistory_SelectedItemChanged" KeyUp="treeViewHistory_KeyUp">
+                        <TreeView.Resources>
+                            <Style TargetType="{x:Type TreeViewItem}">
+                                <Setter Property="HeaderTemplate">
+                                    <Setter.Value>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" >
+                                                <Image Name="img" Width="30" Height="30" Stretch="Fill" Source="Images/Folder.ico"/>
+                                                <TextBlock Text="{Binding}" Margin="5,0" />
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </TreeView.Resources>
+                    </TreeView>
+                    <ListView Grid.Row="2" Grid.ColumnSpan="3" x:Name="listViewTasksDetailsHistory" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" MouseDoubleClick="listViewTasksDetailsHistory_MouseDoubleClick">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Name" Width="200" local:GridViewSort.PropertyName="Name">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=Name}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Status" Width="50" local:GridViewSort.PropertyName="Status">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <Image Source="{Binding Path=Status}" Width="20" Height="20" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Started" Width="150" local:GridViewSort.PropertyName="Started">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=Started}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Finished" Width="150" local:GridViewSort.PropertyName="Finished">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=Finished}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Clients" Width="50" local:GridViewSort.PropertyName="Clients">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=Clients}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Done" Width="50" local:GridViewSort.PropertyName="Done">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=Done}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Failed" Width="50" local:GridViewSort.PropertyName="Failed">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=Failed}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Machine Group" Width="150" local:GridViewSort.PropertyName="MachineGroup">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                                <TextBlock Text="{Binding Path=MachineGroup}" Foreground="Black" VerticalAlignment="Center"/>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Info">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                        <GradientStop Color="{DynamicResource {x:Static SystemColors.HighlightTextColorKey}}" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
             </TabItem>
             <TabItem Header="Console">
                 <TabItem.Background>

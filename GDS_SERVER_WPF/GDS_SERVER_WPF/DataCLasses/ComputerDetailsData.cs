@@ -13,6 +13,7 @@ namespace GDS_SERVER_WPF
         public ComputerDetailsData()
         {
             macAddresses = new List<string>();
+            PostInstalls = new List<string>();
         }
         public ComputerDetailsData(string _name, string _macAddress, string _IPAddress, string _realPCName, string _detail, string _imageSource = "Images/Offline.ico")
         {
@@ -22,6 +23,8 @@ namespace GDS_SERVER_WPF
             this.IPAddress = _IPAddress;
             this.RealPCName = _realPCName;
             this.Detail = _detail;
+            macAddresses = new List<string>();
+            PostInstalls = new List<string>();
         }
 
         [ProtoMember(1)]
@@ -63,6 +66,8 @@ namespace GDS_SERVER_WPF
         [ProtoMember(19)]
         public bool inWinpe { get; set; }
         [ProtoMember(20)]
+        public List<string> PostInstalls { get; set; }
+        [ProtoMember(21)]
         public string _sourceIdentifier;
         public ShortGuid SourceIdentifier { get { return new ShortGuid(_sourceIdentifier); } }    
 

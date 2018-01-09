@@ -2,11 +2,11 @@
 using GDS_SERVER_WPF.Handlers;
 using Microsoft.Win32;
 using NetworkCommsDotNet.Tools;
+using Ookii.Dialogs.Wpf;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -108,7 +108,6 @@ namespace GDS_SERVER_WPF
         {
             if (SaveControl())
             {
-                taskData.Name = textBoxTaskName.Text;
                 taskData.MachineGroup = labelMachineGroupContent.Content.ToString();
                 LoadDataToList(listBoxTargetComputers, taskData.TargetComputers);                
                 taskData.BaseImageSourcePath = textBoxBaseImage.Text;
@@ -133,9 +132,36 @@ namespace GDS_SERVER_WPF
                                           , StringSplitOptions.RemoveEmptyEntries);
                 taskData.CommandsInWINPE= new List<string>(commandsWINPE);                
                 taskData.WaitingTime = (int)slider.Value;
-
-                FileHandler.Save<TaskData>(taskData, nodePath + "\\" + textBoxTaskName.Text + ".my");
-                return true;
+                if (taskData.Name != textBoxTaskName.Text && taskData.Name != "")
+                {
+                    var createRenameDialog = new CreateRenameCancel();
+                    createRenameDialog.lblNewName.Content = textBoxTaskName.Text;
+                    createRenameDialog.lblOldName.Content = taskData.Name;
+                    createRenameDialog.ShowDialog();
+                    if (createRenameDialog.renameOld)
+                    {
+                        if (File.Exists(nodePath + "\\" + taskData.Name + ".my"))
+                        {
+                            File.Delete(nodePath + "\\" + taskData.Name + ".my");
+                        }
+                        taskData.Name = textBoxTaskName.Text;
+                        FileHandler.Save<TaskData>(taskData, nodePath + "\\" + taskData.Name + ".my");
+                        return true;
+                    }
+                    if (createRenameDialog.createNew)
+                    {
+                        taskData.Name = textBoxTaskName.Text;
+                        FileHandler.Save<TaskData>(taskData, nodePath + "\\" + taskData.Name + ".my");
+                        return true;
+                    }
+                }
+                else
+                {
+                    taskData.Name = textBoxTaskName.Text;
+                    FileHandler.Save<TaskData>(taskData, nodePath + "\\" + taskData.Name + ".my");
+                    return true;
+                }             
+                return true;               
             }
             return false;
         }        
@@ -218,10 +244,10 @@ namespace GDS_SERVER_WPF
 
         private void buttonExecute_Click(object sender, RoutedEventArgs e)
         {
-            SetDefaultColors();                        
+            SetDefaultColors();
             if (listBoxTargetComputers.Items.Count == 0)
             {
-                SetErrorMessage(labelNumberOfMachines, "The property 'Target Machines' cannot be an empty string\n");                
+                SetErrorMessage(labelNumberOfMachines, "The property 'Target Machines' cannot be an empty string\n");
                 return;
             }
             else
@@ -241,17 +267,22 @@ namespace GDS_SERVER_WPF
                                     return;
                                 }
                             }
-                        }                        
+                        }
                     }
                 }
             }
-            taskData.LastExecuted = DateTime.Now.ToString("dd.MM.yyyy HH-mm-ss");
-            if (Save())
+            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Will you execute Task?", "Confirmation", System.Windows.MessageBoxButton.YesNo);
+            if (messageBoxResult == MessageBoxResult.Yes)
             {
-                executed = true;
-                this.Close();
-            }            
-        }        
+
+                taskData.LastExecuted = DateTime.Now.ToString("dd.MM.yyyy HH-mm-ss");
+                if (Save())
+                {
+                    executed = true;
+                    this.Close();
+                }
+            }
+        }
 
         private void buttonBrowseComputers_Click(object sender, RoutedEventArgs e)
         {
@@ -415,6 +446,48 @@ namespace GDS_SERVER_WPF
                         break;
                     }
             }
+        }
+
+        private string LoadCopyFolder(string sourceDirectory, string destinationDirectory, TextBox textBox, ListBox listBox, List<string> copyFiles)
+        {
+            VistaFolderBrowserDialog dlg = new VistaFolderBrowserDialog();
+            dlg.ShowNewFolderButton = true;            
+            dlg.ShowDialog();
+            string path = dlg.SelectedPath;
+            if (path != "")
+            {
+                string[] result = Directory.GetFiles(path, "*", SearchOption.AllDirectories);
+                copyFiles = new List<string>(result);
+                sourceDirectory = path;
+                LoadDataToListBox(copyFiles, listBox);
+                if (textBox.Text == "")
+                {
+                    destinationDirectory = textBox.Text = sourceDirectory;
+                }
+            }
+            return sourceDirectory;
+        }
+
+        private void buttonFolderInOS_Click(object sender, RoutedEventArgs e)
+        {
+            taskData.SourceDirectoryInOS = LoadCopyFolder(taskData.SourceDirectoryInOS, taskData.DestinationDirectoryInOS, textBoxDestinationFolderInOS, listBoxCopyFilesInOS, taskData.CopyFilesInOS);
+        }
+
+        private void buttonClearInOS_Click(object sender, RoutedEventArgs e)
+        {
+            listBoxCopyFilesInOS.Items.Clear();
+            textBoxDestinationFolderInOS.Clear();
+        }
+
+        private void buttonFolderInWINPE_Click(object sender, RoutedEventArgs e)
+        {
+            taskData.SourceDirectoryInWINPE = LoadCopyFolder(taskData.SourceDirectoryInWINPE, taskData.DestinationDirectoryInWINPE, textBoxDestinationFolderInWINPE, listBoxCopyFilesInWINPE, taskData.CopyFilesInWINPE);
+        }
+
+        private void buttonClearInWINPE_Click(object sender, RoutedEventArgs e)
+        {
+            listBoxCopyFilesInWINPE.Items.Clear();
+            textBoxDestinationFolderInWINPE.Clear();
         }
     }   
 }

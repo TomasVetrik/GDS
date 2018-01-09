@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>Ahoj</Name>
+  <LastExecuted>05.01.2018 10-29-27</LastExecuted>
+  <TargetComputers>
+    <ComputerDetailsData>
+      <_sourceIdentifier>tNJZ_VVJPkaHKMy3S7ZpVQ</_sourceIdentifier>
+      <RealPCName>VETRIK</RealPCName>
+      <macAddresses>
+        <string>68:05:CA:1A:35:11</string>
+      </macAddresses>
+      <MacAddress>68:05:CA:1A:35:11</MacAddress>
+      <OSInformations>Microsoft Windows 7 Enterprise, 64-bit</OSInformations>
+      <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+      <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+      <numberOfRamSLots>4</numberOfRamSLots>
+      <biosCaption>Default System BIOS</biosCaption>
+      <boardProductId>DZ77BH-55K</boardProductId>
+      <accountName>tomasve</accountName>
+      <baseImageName />
+      <driveEImageName />
+      <dartInfo />
+      <inWinpe>false</inWinpe>
+    </ComputerDetailsData>
+  </TargetComputers>
+  <MachineGroup>Machine Groups</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>false</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>false</Cloning>
+  <BaseImageSourcePath>.\Base\Office2010</BaseImageSourcePath>
+  <BaseImageData>
+    <Name>Office2010</Name>
+    <ImageSource>Images/Image.ico</ImageSource>
+    <SourcePath>D:\Projtekty\GDS_SOURCE\GDS\GDS\bin\Debug\examination-512.wim</SourcePath>
+    <BoolLabel>Office2010</BoolLabel>
+    <PartitionSize>90</PartitionSize>
+    <VHDResizeSize>50</VHDResizeSize>
+    <VHDResize>false</VHDResize>
+    <VHDNames>
+      <string>examination-512</string>
+    </VHDNames>
+    <OSAbrivations>
+      <string>w7_x64</string>
+    </OSAbrivations>
+  </BaseImageData>
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <SourceDirectoryInOS>D:\</SourceDirectoryInOS>
+  <DestinationDirectoryInOS>D:\Temp</DestinationDirectoryInOS>
+  <CopyFilesInOS>
+    <string>D:\14393.0.161119-1705.RS1_REFRESH_SERVER_EVAL_X64FRE_EN-US.ISO</string>
+  </CopyFilesInOS>
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <WaitingTime>10</WaitingTime>
+</TaskData>

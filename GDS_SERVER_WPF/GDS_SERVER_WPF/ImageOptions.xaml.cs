@@ -190,11 +190,38 @@ namespace GDS_SERVER_WPF
                     imageData.OSAbrivations.Add(OSAbrivation);
                 }
             }
-            imageData.Name = textBoxImageName.Text;
             imageData.SourcePath = textBoxSourcePath.Text;
             imageData.BoolLabel = textBoxBootLabel.Text;
-            FileHandler.Save<ImageData>(imageData, nodePath + "\\" + imageData.Name + ".my");            
-            this.Close();
+
+            if(imageData.Name != textBoxImageName.Text && imageData.Name != "")
+            {
+                var createRenameDialog = new CreateRenameCancel();
+                createRenameDialog.lblNewName.Content = textBoxImageName.Text;
+                createRenameDialog.lblOldName.Content = imageData.Name;
+                createRenameDialog.ShowDialog();
+                if(createRenameDialog.renameOld)
+                {
+                    if(File.Exists(nodePath + "\\" + imageData.Name + ".my"))
+                    {
+                        File.Delete(nodePath + "\\" + imageData.Name + ".my");
+                    }
+                    imageData.Name = textBoxImageName.Text;
+                    FileHandler.Save<ImageData>(imageData, nodePath + "\\" + imageData.Name + ".my");
+                    this.Close();
+                }
+                if(createRenameDialog.createNew)
+                {
+                    imageData.Name = textBoxImageName.Text;
+                    FileHandler.Save<ImageData>(imageData, nodePath + "\\" + imageData.Name + ".my");
+                    this.Close();
+                }
+            }
+            else
+            {
+                imageData.Name = textBoxImageName.Text;
+                FileHandler.Save<ImageData>(imageData, nodePath + "\\" + imageData.Name + ".my");
+                this.Close();
+            }            
         }
 
         private void buttonOK_Click(object sender, RoutedEventArgs e)

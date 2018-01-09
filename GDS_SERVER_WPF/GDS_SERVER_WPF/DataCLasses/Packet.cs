@@ -1,4 +1,5 @@
-﻿using ProtoBuf;
+﻿using GDS_SERVER_WPF.DataCLasses;
+using ProtoBuf;
 
 namespace GDS_SERVER_WPF
 {

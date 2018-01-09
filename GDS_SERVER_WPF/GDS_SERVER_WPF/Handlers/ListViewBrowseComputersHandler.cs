@@ -22,7 +22,7 @@ namespace GDS_SERVER_WPF.Handlers
 
         public void LoadMachines(string path)
         {
-            machines.Items.Clear();
+            machines.Items.Clear();            
             if (Directory.Exists(path))
             {
                 var directoriesInfoFiles = Directory.GetDirectories(path);                

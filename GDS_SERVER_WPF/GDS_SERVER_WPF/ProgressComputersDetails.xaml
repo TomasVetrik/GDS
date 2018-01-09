@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GDS_SERVER_WPF"
         mc:Ignorable="d"
-        Title="ProgressComputersDetails" Height="500" Width="700" Loaded="Window_Loaded" Icon="Images/logo_gopas_sk.ico" WindowStartupLocation="CenterScreen">
+        Title="ProgressComputersDetails" Height="500" Width="850" Loaded="Window_Loaded" Icon="Images/logo_gopas_sk.ico" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown">
     <Grid>
         <ListView x:Name="listViewProgressDetails" FontFamily="Times New Roman" FontSize="16" Cursor="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True">
             <ListView.View>
@@ -19,7 +19,7 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Time" Width="150" local:GridViewSort.PropertyName="Time">
+                    <GridViewColumn Header="Time" Width="100" local:GridViewSort.PropertyName="Time">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -42,6 +42,15 @@
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                     <Image Source="{Binding Path=Status}" Width="20" Height="20" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Message" Width="250" local:GridViewSort.PropertyName="Message">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <TextBlock Text="{Binding Path=Message}" Foreground="Black" VerticalAlignment="Center"/>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>

@@ -18,19 +18,23 @@ namespace GDS_SERVER_WPF.Handlers
         public Connection connection;
         public int index;
         public List<string> ipAddresses;
-        public Semaphore semaphoreForTask = new Semaphore(1,1);
+        public Semaphore semaphoreForTask = new Semaphore(1, 1);
+        public Semaphore semaphoreForCloning = new Semaphore(0, 1);
         public Semaphore semaphoreForSaveFile;
         public ComputerDetailsData computer;
         public bool stopped = false;
         public bool restart = false;
         public bool failed = false;
         public bool finish = false;
+        public bool cloning = false;
         public Dictionary<ShortGuid, ComputerWithConnection> ClientsDictionary;
         public string step;
         public ListView listViewAll;
         public ListView listViewSelected;
-        public Packet receivePacket;   
-        
+        public Packet receivePacket;
+        public ProgressComputerData progressComputerData = new ProgressComputerData();
+        TCP_UNICAST tCP_UNICAST = null;
+
 
         Task waitingTask;
         TaskData taskData;
@@ -39,8 +43,7 @@ namespace GDS_SERVER_WPF.Handlers
 
         public ComputerInTaskHandler(ExecutedTaskData _executedTaskData, int _index, List<string> _ipAddresses, Semaphore _semaphoreFotSaveFile, ListView _listViewAll, ListView _listViewSelected)
         {
-            step = "WAITING FO ACK";
-            semaphoreForTask.WaitOne();
+            step = "WAITING FO ACK";            
             this.executedTaskData = _executedTaskData;            
             this.index = _index;
             this.ipAddresses = _ipAddresses;
@@ -48,13 +51,14 @@ namespace GDS_SERVER_WPF.Handlers
             this.semaphoreForSaveFile = _semaphoreFotSaveFile;
             this.listViewAll = _listViewAll;
             this.listViewSelected = _listViewSelected;
-            receivePacket = new Packet(FLAG.CLOSE);
+            receivePacket = new Packet(FLAG.Null);
             computer = executedTaskData.taskData.TargetComputers[index];            
         }
 
         private void WaitForCloningDone()
-        {            
-            receivePacket.ID = FLAG.CLOSE;
+        {
+            cloning = true;
+            receivePacket.ID = FLAG.Null;
             while (receivePacket.ID != FLAG.CLONING_DONE  && receivePacket.ID != FLAG.CLONING_ERROR && !stopped)
             {
                 if (receivePacket.ID == FLAG.RESTART || receivePacket.ID == FLAG.SYN_FLAG_WINPE)
@@ -64,22 +68,42 @@ namespace GDS_SERVER_WPF.Handlers
                 }
                 if (receivePacket.clonningMessage != "")
                     ChangeProgressData(receivePacket.clonningMessage);
-                Thread.Sleep(1000);
+                semaphoreForCloning.WaitOne();
             }
+            cloning = false;            
         }
 
         private void SendMessage(Packet packet, Connection connection)
         {
-            byte[] data = Proto.ProtoSerialize<Packet>(packet);
-            connection.SendObject("Packet", data);
+            try
+            {
+                if (connection.ConnectionAlive())
+                {
+                    byte[] data = Proto.ProtoSerialize<Packet>(packet);
+                    connection.SendObject("Packet", data);
+                }
+            }
+            catch { }
         }
 
-        private void CheckFlags(FLAG _stepDataIdentifier1, Packet packet , FLAG _stepDataIdentifier2 = FLAG.Null, int WaitingTime = 1000)
+        private void CheckFlags(FLAG _stepDataIdentifier1, Packet packet , FLAG _stepDataIdentifier2 = FLAG.CLOSE, int WaitingTime = 5000)
         {
             stepDataIdentifier1 = _stepDataIdentifier1;
             stepDataIdentifier2 = _stepDataIdentifier2;
-            receivePacket.ID = FLAG.CLOSE;            
+            receivePacket.ID = FLAG.Null;
             ChangeProgressData(stepDataIdentifier1.ToString());
+            try
+            {
+                if (connection != null)
+                {
+                    SendMessage(packet, connection);
+                }
+            }
+            catch
+            {
+                connection = null;
+            }
+            Thread.Sleep(1000);
             while (receivePacket.ID != stepDataIdentifier1 && receivePacket.ID != stepDataIdentifier2 && !stopped)
             {
                 if(stopped || failed)
@@ -101,7 +125,8 @@ namespace GDS_SERVER_WPF.Handlers
             }
             if (!failed && !stopped)
             {
-                SaveProgress(new ProgressComputerData("Images/Done.ico", computer.Name, receivePacket.ID.ToString()));
+                progressComputerData = new ProgressComputerData("Images/Done.ico", computer.Name, receivePacket.ID.ToString(), "", computer.MacAddress);
+                SaveProgress();
             }
         }
 
@@ -124,6 +149,38 @@ namespace GDS_SERVER_WPF.Handlers
         {
             CheckFlags(FLAG.SHUTDOWN, new Packet(FLAG.SHUTDOWN), FLAG.SHUTDOWN_DONE);
         }
+
+        private void ClientSendingFileInOS()
+        {
+            Packet packet = new Packet(FLAG.START_COPY_FILES, computer, connection.ConnectionInfo.NetworkIdentifier);
+            packet.taskData = taskData;
+            int PORT = 60000;
+            foreach (string number in ipAddresses[0].Split('.'))
+            {
+                PORT += Convert.ToInt32(number);
+            }
+            packet.clonningMessage = PORT.ToString();
+            CheckFlags(FLAG.START_COPY_FILES, packet);
+            tCP_UNICAST = new TCP_UNICAST(taskData.CopyFilesInOS, taskData.DestinationDirectoryInOS, taskData.SourceDirectoryInOS, ipAddresses[0], PORT);
+            tCP_UNICAST.SendingFiles();
+            CheckFlags(FLAG.FINISH_COPY_FILES, new Packet(FLAG.FINISH_COPY_FILES));
+        }
+
+        private void ClientSendingFileInWinPE()
+        {
+            Packet packet = new Packet(FLAG.START_COPY_FILES, computer, connection.ConnectionInfo.NetworkIdentifier);
+            packet.taskData = taskData;
+            int PORT = 60000;
+            foreach (string number in ipAddresses[0].Split('.'))
+            {
+                PORT += Convert.ToInt32(number);
+            }
+            packet.clonningMessage = PORT.ToString();
+            CheckFlags(FLAG.START_COPY_FILES, packet);
+            tCP_UNICAST = new TCP_UNICAST(taskData.CopyFilesInWINPE, taskData.DestinationDirectoryInWINPE, taskData.SourceDirectoryInWINPE, ipAddresses[0], PORT);
+            tCP_UNICAST.SendingFiles();
+            CheckFlags(FLAG.FINISH_COPY_FILES, new Packet(FLAG.FINISH_COPY_FILES));
+        }        
 
         private void ClientStartCloning()
         {
@@ -165,12 +222,13 @@ namespace GDS_SERVER_WPF.Handlers
             return false;
         }
 
-        private void SaveProgress(ProgressComputerData progress)
+        private void SaveProgress()
         {
-            if (progress.Step != "Null")
+            if (progressComputerData.Step != "Null")
             {
                 semaphoreForSaveFile.WaitOne();
-                executedTaskData.progressComputerData.Add(progress);
+                progressComputerData.MacAddress = computer.MacAddress;
+                executedTaskData.progressComputerData.Add(progressComputerData);
                 FileHandler.Save(executedTaskData, executedTaskData.GetFileName());
                 semaphoreForSaveFile.Release();
             }
@@ -186,6 +244,11 @@ namespace GDS_SERVER_WPF.Handlers
                     return;
                 }
                 if (!RunAndWait(SendTaskDataFile))
+                {
+                    Failed();
+                    return;
+                }
+                if (!RunAndWait(ClientSendingFileInOS))
                 {
                     Failed();
                     return;
@@ -208,6 +271,11 @@ namespace GDS_SERVER_WPF.Handlers
                     return;
                 }
                 if (!RunAndWait(SendTaskDataFile))
+                {
+                    Failed();
+                    return;
+                }
+                if(!RunAndWait(ClientSendingFileInWinPE))
                 {
                     Failed();
                     return;
@@ -243,7 +311,8 @@ namespace GDS_SERVER_WPF.Handlers
                 WaitForCloningDone();
                 if (receivePacket.ID == FLAG.RESTART || receivePacket.ID == FLAG.SYN_FLAG_WINPE)
                 {
-                    SaveProgress(new ProgressComputerData("Images/Failed.ico", computer.Name, "RESTART CLONNIG"));
+                    progressComputerData = new ProgressComputerData("Images/Failed.ico", computer.Name, "RESTART CLONNIG", "", computer.MacAddress);
+                    SaveProgress();
                     CloningImage();
                     return;
                 }
@@ -271,20 +340,13 @@ namespace GDS_SERVER_WPF.Handlers
                         Failed();
                         return;
                     }
-                    if (!RunAndWait(SendConfigFile))
-                    {
-                        Failed();
-                        return;
-                    }
-                }    
-                else
+                    
+                }
+                if (!RunAndWait(SendConfigFile))
                 {
-                    if (!RunAndWait(SendConfigFile))
-                    {
-                        Failed();
-                        return;
-                    }
-                }            
+                    Failed();
+                    return;
+                }                            
             }
         }
 
@@ -308,13 +370,22 @@ namespace GDS_SERVER_WPF.Handlers
                 }
             }
         }
+
+        private void WakeOnLan()
+        {
+            if(taskData.WakeOnLan)
+            {
+                WakeOnLanHandler.runWakeOnLan(computer.macAddresses, ipAddresses);
+            }
+        }
         
         public void Start()
         {
             try
             {
+                semaphoreForTask.WaitOne();
                 FindClient();
-                WakeOnLanHandler.runWakeOnLan(computer.macAddresses, ipAddresses);
+                WakeOnLan();
                 CheckOnline();
                 CloningImage();
                 SoftwareAndFileActionsInOS();
@@ -326,40 +397,64 @@ namespace GDS_SERVER_WPF.Handlers
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                finish = true;
+                semaphoreForTask.Release();
+                MessageBox.Show("PROBLEMIK START COMPUTER: " + ex.ToString());
             }
         }
 
         private void FindClient()
         {
-            foreach (KeyValuePair<ShortGuid, ComputerWithConnection> cmp in ClientsDictionary)
-            {
-                if (cmp.Value.ComputerData.macAddresses != null && Listener.CheckMacsInREC(cmp.Value.ComputerData.macAddresses, computer.macAddresses))
+            try {
+                lock (ClientsDictionary)
                 {
-                    connection = cmp.Value.connection;
+                    for (int index = ClientsDictionary.Count - 1; index >= 0; index--)
+                    {
+                        var cmp = ClientsDictionary.ElementAt(index);
+                        if (cmp.Value.ComputerData.macAddresses != null && Listener.CheckMacsInREC(cmp.Value.ComputerData.macAddresses, computer.macAddresses))
+                        {
+                            connection = cmp.Value.connection;
+                            break;
+                        }
+                    }
                 }
+            }
+            catch
+            {
+                FindClient();                
             }
         }
 
-        public void Failed()
+        public void Failed(string Message = "Expired waiting time")
         {
             if (!failed && !stopped)
             {
                 failed = true;
-                SaveProgress(new ProgressComputerData("Images/Failed.ico", computer.Name, stepDataIdentifier1.ToString()));                
+                progressComputerData = new ProgressComputerData("Images/Failed.ico", computer.Name, stepDataIdentifier1.ToString(), Message, computer.MacAddress);
+                SaveProgress();                
+            }
+            if(tCP_UNICAST != null)
+            {
+                tCP_UNICAST.DestroyConnection();
             }
         }
 
         public void Stop()
         {
+            semaphoreForCloning.Release();
             if (!stopped && !failed && !finish)
             {
                 stopped = true;
-                SaveProgress(new ProgressComputerData("Images/Stopped.ico", computer.Name, stepDataIdentifier1.ToString()));
+                progressComputerData = new ProgressComputerData("Images/Stopped.ico", computer.Name, stepDataIdentifier1.ToString());
+                SaveProgress();
                 if (connection != null)
                 {
                     SendMessage(new Packet(FLAG.ERROR_MESSAGE), connection);
                 }
+            }
+            if (tCP_UNICAST != null)
+            {
+                tCP_UNICAST.DestroyConnection();
             }
         }
 
@@ -368,15 +463,16 @@ namespace GDS_SERVER_WPF.Handlers
             step = _step;
             Application.Current.Dispatcher.Invoke(() =>
             {
+                progressComputerData = new ProgressComputerData("", computer.Name, step, computer.MacAddress);
                 int index = GetIndexOfItemFromList(listViewAll);
                 if (index != -1)
                 {
-                    listViewAll.Items[index] = new ProgressComputerData("", computer.Name, step, computer.MacAddress);
+                    listViewAll.Items[index] = progressComputerData;
                 }
                 index = GetIndexOfItemFromList(listViewSelected);
                 if (index != -1)
                 {
-                    listViewSelected.Items[index] = new ProgressComputerData("", computer.Name, step, computer.MacAddress);
+                    listViewSelected.Items[index] = progressComputerData;
                 }
             });
         }
@@ -386,9 +482,15 @@ namespace GDS_SERVER_WPF.Handlers
             for (int i = listView.Items.Count - 1; i >= 0; i--)
             {
                 ProgressComputerData item = (ProgressComputerData)listView.Items[i];
-                if (item.ComputerName == computer.Name && item.MacAddress == computer.MacAddress)
+                if (item.ComputerName == computer.Name)
                 {
-                    return i;                    
+                    if (item.MacAddress == "")
+                        return i;
+                    else
+                    {
+                        if (item.MacAddress == computer.MacAddress)
+                            return i;
+                    }
                 }
             }
             return -1;

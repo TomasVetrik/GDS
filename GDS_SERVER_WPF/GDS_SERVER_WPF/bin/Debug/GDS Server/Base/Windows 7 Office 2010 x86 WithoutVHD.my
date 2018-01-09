@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ImageData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 7 Office 2010 x86 WithoutVHD</Name>
+  <ImageSource>Images/Image.ico</ImageSource>
+  <SourcePath>I:\Office\Base\_WIM_WITHOUT_VHD\W7_Off2k10_x86_MUI\W7_Off2k10_MUI_x86.wim</SourcePath>
+  <BoolLabel>Windows 7 Office 2010</BoolLabel>
+  <PartitionSize>90</PartitionSize>
+  <VHDResizeSize>50</VHDResizeSize>
+  <VHDResize>false</VHDResize>
+  <VHDNames>
+    <string>W7_Off2k10_MUI_x86</string>
+  </VHDNames>
+  <OSAbrivations>
+    <string>w7_x86</string>
+  </OSAbrivations>
+</ImageData>

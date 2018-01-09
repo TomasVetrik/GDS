@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ImageData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows Server 2012 R2</Name>
+  <ImageSource>Images/Image.ico</ImageSource>
+  <SourcePath>I:\MOC\Base\_WIM\W2k12r2\W2k12R2.wim</SourcePath>
+  <BoolLabel>Windows 2012 R2</BoolLabel>
+  <PartitionSize>90</PartitionSize>
+  <VHDResizeSize>50</VHDResizeSize>
+  <VHDResize>false</VHDResize>
+  <VHDNames>
+    <string>W2k12R2</string>
+  </VHDNames>
+  <OSAbrivations>
+    <string>W2k12_R2</string>
+  </OSAbrivations>
+</ImageData>

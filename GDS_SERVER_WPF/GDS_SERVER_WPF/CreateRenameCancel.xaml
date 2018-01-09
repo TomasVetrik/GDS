@@ -1,0 +1,27 @@
+﻿<Window x:Class="GDS_SERVER_WPF.CreateRenameCancel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GDS_SERVER_WPF"
+        mc:Ignorable="d"
+        Title="Warning" Height="200" Width="500" WindowStartupLocation="CenterScreen" Icon="Images/logo_gopas_sk.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblNewName" Content="NewName" HorizontalAlignment="Left" VerticalAlignment="Center" Background="White" Foreground="#FF0023FF" Grid.ColumnSpan="2"/>
+        <Label x:Name="lblOldName" Content="OldName" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Background="White" Foreground="Red" Grid.ColumnSpan="2"/>
+        <Label Content="The Name is not same. Will you Create New or Rename Old?" Grid.ColumnSpan="3" VerticalAlignment="Center"  HorizontalAlignment="Center" Grid.Row="1"/>
+        <Button x:Name="btnCreateNew" Content="Create New" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Height="auto" Margin="10" Grid.Row="2" Click="btnCreateNew_Click"/>
+        <Button x:Name="btnRenameOld" Content="Rename Old" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Height="auto" Margin="10" Grid.Row="2" Grid.Column="1" Click="btnRenameOld_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Height="auto" Margin="10" Grid.Row="2" Grid.Column="2" Click="btnCancel_Click"/>
+    </Grid>
+</Window>
