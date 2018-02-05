@@ -125,9 +125,9 @@ namespace GDS_SERVER_WPF
                                 path = path.Replace(".my", "-(1).my");
                                 if (!File.Exists(path))
                                 {
-                                    TaskData taskData = FileHandler.Load<TaskData>(oldPath);
+                                    ImageData taskData = FileHandler.Load<ImageData>(oldPath);
                                     taskData.Name = itemClipBoard.Name + "-(1)";
-                                    FileHandler.Save<TaskData>(taskData, path);
+                                    FileHandler.Save<ImageData>(taskData, path);
                                 }
                             }
                         }
@@ -141,8 +141,8 @@ namespace GDS_SERVER_WPF
                                         {
                                             if (File.Exists(path))
                                             {
-                                                TaskData taskData = FileHandler.Load<TaskData>(oldPath);
-                                                FileHandler.Save<TaskData>(taskData, path);
+                                                ImageData taskData = FileHandler.Load<ImageData>(oldPath);
+                                                FileHandler.Save<ImageData>(taskData, path);
                                             }
                                         }
                                         else

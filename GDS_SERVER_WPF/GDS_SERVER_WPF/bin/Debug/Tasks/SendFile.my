@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>SendFile</Name>
+  <LastExecuted>18.01.2018 15-26-17</LastExecuted>
+  <TargetComputers>
+    <ComputerDetailsData>
+      <Name>VETRIK</Name>
+      <RealPCName>VETRIK</RealPCName>
+      <macAddresses>
+        <string>68:05:CA:1A:35:11</string>
+        <string>00:22:4D:80:6F:A0</string>
+      </macAddresses>
+      <MacAddress>68:05:CA:1A:35:11</MacAddress>
+      <OSInformations>Microsoft Windows 7 Enterprise, 64-bit</OSInformations>
+      <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+      <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+      <numberOfRamSLots>4</numberOfRamSLots>
+      <biosCaption>Default System BIOS</biosCaption>
+      <boardProductId>DZ77BH-55K</boardProductId>
+      <accountName>tomasve</accountName>
+      <IPAddress>10.202.20.32</IPAddress>
+      <baseImageName />
+      <driveEImageName />
+      <dartInfo />
+      <ImageSource>Images/Online.ico</ImageSource>
+      <inWinpe>false</inWinpe>
+      <PostInstalls />
+    </ComputerDetailsData>
+  </TargetComputers>
+  <MachineGroup>Default</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>false</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>false</Cloning>
+  <BaseImageSourcePath>.\Base\Office2010</BaseImageSourcePath>
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <SourceDirectoryInOS>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline</SourceDirectoryInOS>
+  <DestinationDirectoryInOS>D:\Temp\</DestinationDirectoryInOS>
+  <CommandsInOS />
+  <CopyFilesInOS>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\01 - Mlčanie Jahniat.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\02 - Všetko OK feat. Majk Spirit.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\03 - Jackpot feat. Momo.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\04 - Zlatá Soška feat. ADiss.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\05 - Bazooka rock feat. Sergei Barracuda.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\06 - Dúha.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\07 - Bublinky.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\08 - Sanscript.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\09 - Rátaj so mnou.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\10 - Z hlavy do hlavy feat. Separ.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\11 - Nič feat. Pil C.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\12 - Chlapci zo zadnej lavice.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\13 - Čínska pošta.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\14 - Žiadna sympatia.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\15 - Kale Jakha, kale bala feat. Sendrejovci a Vec.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\16 - Offline.flac</string>
+  </CopyFilesInOS>
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE />
+  <WaitingTime>20</WaitingTime>
+</TaskData>

@@ -76,8 +76,8 @@ namespace GDS_SERVER_WPF
         {
             var openFileDialog = new OpenFileDialog();    
             openFileDialog.Filter = "WIM files (*.wim)|*.wim";
-            if (File.Exists(textBoxSourcePath.Text))            
-                openFileDialog.InitialDirectory = textBoxSourcePath.Text;
+            if (File.Exists(textBoxSourcePath.Text))
+                openFileDialog.InitialDirectory = Path.GetDirectoryName(textBoxSourcePath.Text);
 
             if (openFileDialog.ShowDialog() == true)
             {

@@ -3,6 +3,7 @@ using NetworkCommsDotNet.Connections;
 using NetworkCommsDotNet.Tools;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading;
@@ -125,9 +126,9 @@ namespace GDS_SERVER_WPF.Handlers
             }
             if (!failed && !stopped)
             {
-                progressComputerData = new ProgressComputerData("Images/Done.ico", computer.Name, receivePacket.ID.ToString(), "", computer.MacAddress);
-                SaveProgress();
+                progressComputerData = new ProgressComputerData("Images/Done.ico", computer.Name, receivePacket.ID.ToString(), "", computer.MacAddress);                
             }
+            SaveProgress();
         }
 
         private void CheckSynFlag()
@@ -151,35 +152,40 @@ namespace GDS_SERVER_WPF.Handlers
         }
 
         private void ClientSendingFileInOS()
-        {
+        {            
             Packet packet = new Packet(FLAG.START_COPY_FILES, computer, connection.ConnectionInfo.NetworkIdentifier);
             packet.taskData = taskData;
-            int PORT = 60000;
-            foreach (string number in ipAddresses[0].Split('.'))
+            if (taskData.CopyFilesInOS.Count != 0)
             {
-                PORT += Convert.ToInt32(number);
+                int PORT = 60000;
+                foreach (string number in computer.IPAddress.Split('.'))
+                {
+                    PORT += Convert.ToInt32(number);
+                }
+                packet.clonningMessage = PORT.ToString();
+                CheckFlags(FLAG.START_COPY_FILES, packet);
+                tCP_UNICAST = new TCP_UNICAST(taskData.CopyFilesInOS, taskData.DestinationDirectoryInOS, taskData.SourceDirectoryInOS, computer.IPAddress, PORT);
+                tCP_UNICAST.SendingFiles();
+                CheckFlags(FLAG.FINISH_COPY_FILES, new Packet(FLAG.FINISH_COPY_FILES));
             }
-            packet.clonningMessage = PORT.ToString();
-            CheckFlags(FLAG.START_COPY_FILES, packet);
-            tCP_UNICAST = new TCP_UNICAST(taskData.CopyFilesInOS, taskData.DestinationDirectoryInOS, taskData.SourceDirectoryInOS, ipAddresses[0], PORT);
-            tCP_UNICAST.SendingFiles();
-            CheckFlags(FLAG.FINISH_COPY_FILES, new Packet(FLAG.FINISH_COPY_FILES));
         }
 
         private void ClientSendingFileInWinPE()
-        {
+        {            
             Packet packet = new Packet(FLAG.START_COPY_FILES, computer, connection.ConnectionInfo.NetworkIdentifier);
             packet.taskData = taskData;
-            int PORT = 60000;
-            foreach (string number in ipAddresses[0].Split('.'))
-            {
-                PORT += Convert.ToInt32(number);
+            if (taskData.CopyFilesInWINPE.Count != 0)
+            {    int PORT = 60000;
+                foreach (string number in computer.IPAddress.Split('.'))
+                {
+                    PORT += Convert.ToInt32(number);
+                }
+                packet.clonningMessage = PORT.ToString();
+                CheckFlags(FLAG.START_COPY_FILES, packet);
+                tCP_UNICAST = new TCP_UNICAST(taskData.CopyFilesInWINPE, taskData.DestinationDirectoryInWINPE, taskData.SourceDirectoryInWINPE, computer.IPAddress, PORT);
+                tCP_UNICAST.SendingFiles();
+                CheckFlags(FLAG.FINISH_COPY_FILES, new Packet(FLAG.FINISH_COPY_FILES));
             }
-            packet.clonningMessage = PORT.ToString();
-            CheckFlags(FLAG.START_COPY_FILES, packet);
-            tCP_UNICAST = new TCP_UNICAST(taskData.CopyFilesInWINPE, taskData.DestinationDirectoryInWINPE, taskData.SourceDirectoryInWINPE, ipAddresses[0], PORT);
-            tCP_UNICAST.SendingFiles();
-            CheckFlags(FLAG.FINISH_COPY_FILES, new Packet(FLAG.FINISH_COPY_FILES));
         }        
 
         private void ClientStartCloning()
@@ -202,7 +208,25 @@ namespace GDS_SERVER_WPF.Handlers
         private void SendConfigFile()
         {
             var packet = new Packet(FLAG.SEND_CONFIG);
-            packet.computerConfigData = receivePacket.computerConfigData;
+            if(receivePacket.computerConfigData != null)
+                packet.computerConfigData = receivePacket.computerConfigData;
+            else
+            {
+                var computersInfoFiles = Directory.GetFiles(@".\Machine Groups\", "*.my", SearchOption.AllDirectories);
+                var filePath = Listener.GetFileNameByMac(computersInfoFiles, receivePacket.computerDetailsData.macAddresses);
+                packet.computerConfigData = new ComputerConfigData(receivePacket.computerDetailsData.RealPCName, "Workgroup");
+                if (filePath != "")
+                {                                        
+                    if (!File.Exists(filePath.Replace(".my", ".cfg")))
+                    {
+                        FileHandler.Save<ComputerConfigData>(packet.computerConfigData, filePath.Replace(".my", ".cfg"));
+                    }
+                    else
+                    {
+                        packet.computerConfigData = FileHandler.Load<ComputerConfigData>(filePath.Replace(".my", ".cfg"));
+                    }
+                }
+            }
             CheckFlags(FLAG.SEND_CONFIG, packet);
         }
 
@@ -430,7 +454,10 @@ namespace GDS_SERVER_WPF.Handlers
             if (!failed && !stopped)
             {
                 failed = true;
-                progressComputerData = new ProgressComputerData("Images/Failed.ico", computer.Name, stepDataIdentifier1.ToString(), Message, computer.MacAddress);
+                if(stopped)
+                    progressComputerData = new ProgressComputerData("Images/Stopped.ico", computer.Name, stepDataIdentifier1.ToString(), Message, computer.MacAddress);
+                else
+                    progressComputerData = new ProgressComputerData("Images/Failed.ico", computer.Name, stepDataIdentifier1.ToString(), Message, computer.MacAddress);
                 SaveProgress();                
             }
             if(tCP_UNICAST != null)
@@ -445,8 +472,6 @@ namespace GDS_SERVER_WPF.Handlers
             if (!stopped && !failed && !finish)
             {
                 stopped = true;
-                progressComputerData = new ProgressComputerData("Images/Stopped.ico", computer.Name, stepDataIdentifier1.ToString());
-                SaveProgress();
                 if (connection != null)
                 {
                     SendMessage(new Packet(FLAG.ERROR_MESSAGE), connection);

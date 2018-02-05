@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <TaskData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ImageSource>Images/Tasks.ico</ImageSource>
-  <Name>Ahoj</Name>
-  <LastExecuted>05.01.2018 10-29-27</LastExecuted>
+  <Name>SendFile</Name>
+  <LastExecuted>18.01.2018 15-26-17</LastExecuted>
   <TargetComputers>
     <ComputerDetailsData>
-      <_sourceIdentifier>tNJZ_VVJPkaHKMy3S7ZpVQ</_sourceIdentifier>
+      <_sourceIdentifier>7xH4gWZT80uNF7gmYAeP6w</_sourceIdentifier>
       <RealPCName>VETRIK</RealPCName>
       <macAddresses>
         <string>68:05:CA:1A:35:11</string>
@@ -17,45 +17,45 @@
       <numberOfRamSLots>4</numberOfRamSLots>
       <biosCaption>Default System BIOS</biosCaption>
       <boardProductId>DZ77BH-55K</boardProductId>
-      <accountName>tomasve</accountName>
+      <accountName>TomasVe</accountName>
       <baseImageName />
       <driveEImageName />
       <dartInfo />
       <inWinpe>false</inWinpe>
     </ComputerDetailsData>
   </TargetComputers>
-  <MachineGroup>Machine Groups</MachineGroup>
+  <MachineGroup>Default</MachineGroup>
   <WakeOnLan>true</WakeOnLan>
   <Configuration>false</Configuration>
   <ForceInstall>false</ForceInstall>
   <ShutDown>false</ShutDown>
   <Cloning>false</Cloning>
   <BaseImageSourcePath>.\Base\Office2010</BaseImageSourcePath>
-  <BaseImageData>
-    <Name>Office2010</Name>
-    <ImageSource>Images/Image.ico</ImageSource>
-    <SourcePath>D:\Projtekty\GDS_SOURCE\GDS\GDS\bin\Debug\examination-512.wim</SourcePath>
-    <BoolLabel>Office2010</BoolLabel>
-    <PartitionSize>90</PartitionSize>
-    <VHDResizeSize>50</VHDResizeSize>
-    <VHDResize>false</VHDResize>
-    <VHDNames>
-      <string>examination-512</string>
-    </VHDNames>
-    <OSAbrivations>
-      <string>w7_x64</string>
-    </OSAbrivations>
-  </BaseImageData>
   <WithoutVHD>false</WithoutVHD>
   <DriveEImageSourcePath />
   <SoftwareAndFileAction>true</SoftwareAndFileAction>
-  <SourceDirectoryInOS>D:\</SourceDirectoryInOS>
-  <DestinationDirectoryInOS>D:\Temp</DestinationDirectoryInOS>
+  <SourceDirectoryInOS>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline</SourceDirectoryInOS>
+  <DestinationDirectoryInOS>D:\Temp\</DestinationDirectoryInOS>
   <CopyFilesInOS>
-    <string>D:\14393.0.161119-1705.RS1_REFRESH_SERVER_EVAL_X64FRE_EN-US.ISO</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\01 - Mlčanie Jahniat.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\02 - Všetko OK feat. Majk Spirit.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\03 - Jackpot feat. Momo.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\04 - Zlatá Soška feat. ADiss.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\05 - Bazooka rock feat. Sergei Barracuda.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\06 - Dúha.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\07 - Bublinky.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\08 - Sanscript.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\09 - Rátaj so mnou.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\10 - Z hlavy do hlavy feat. Separ.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\11 - Nič feat. Pil C.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\12 - Chlapci zo zadnej lavice.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\13 - Čínska pošta.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\14 - Žiadna sympatia.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\15 - Kale Jakha, kale bala feat. Sendrejovci a Vec.flac</string>
+    <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\16 - Offline.flac</string>
   </CopyFilesInOS>
   <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
   <DestinationDirectoryInWINPE />
   <CopyFilesInWINPE />
-  <WaitingTime>10</WaitingTime>
+  <WaitingTime>20</WaitingTime>
 </TaskData>

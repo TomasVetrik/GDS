@@ -50,7 +50,7 @@
                         <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.HighlightTextColorKey}}"/>
                     </Grid.Background>
                     <GridSplitter Grid.Row="1" Grid.ColumnSpan="3" Height="5" HorizontalAlignment="Stretch" />
-                    <TreeView Grid.Row="0" Grid.Column="0" x:Name="treeViewMachinesAndTasks" HorizontalAlignment="Stretch" Width="auto" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" Height="auto" VerticalAlignment="Stretch" SelectedItemChanged="treeViewMachinesAndTasks_SelectedItemChanged" KeyUp="treeViewMachinesAndTasks_KeyUp">
+                    <TreeView Grid.Row="0" Grid.Column="0" x:Name="treeViewMachinesAndTasks" HorizontalAlignment="Stretch" Width="auto" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" Height="auto" VerticalAlignment="Stretch" SelectedItemChanged="TreeViewMachinesAndTasks_SelectedItemChanged" KeyUp="TreeViewMachinesAndTasks_KeyUp">
                         <TreeView.Resources>
                             <Style TargetType="{x:Type TreeViewItem}">
                                 <Setter Property="HeaderTemplate">
@@ -67,7 +67,7 @@
                         </TreeView.Resources>
                     </TreeView>
                     <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
-                    <ListView Grid.Row="0" Grid.Column="3" x:Name="listViewMachineGroups" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White" MouseDoubleClick="listViewMachineGroups_MouseDoubleClick" SelectionChanged="listViewMachineGroups_SelectionChanged" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" Focusable="False" MouseDown="listViewMachineGroups_MouseDown" KeyUp="listViewMachineGroups_KeyUp_1" >
+                    <ListView Grid.Row="0" Grid.Column="3" x:Name="listViewMachineGroups" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White" MouseDoubleClick="ListViewMachineGroups_MouseDoubleClick" SelectionChanged="ListViewMachineGroups_SelectionChanged" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" Focusable="False" MouseDown="ListViewMachineGroups_MouseDown" KeyUp="ListViewMachineGroups_KeyUp_1" >
                         <ListView.ContextMenu>
                             <ContextMenu>
                                 <MenuItem x:Name="menuItemRenameWG" Header="Rename" InputGestureText="F2"  Click="MenuItemMachineGroupsRename_Click"/>
@@ -145,7 +145,7 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <ListView Grid.Row="0" Grid.Column="3" x:Name="listViewMachineGroupsLock" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White" MouseDoubleClick="listViewMachineGroups_MouseDoubleClick" SelectionChanged="listViewMachineGroups_SelectionChanged" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" Focusable="False" MouseDown="listViewMachineGroups_MouseDown" KeyUp="listViewMachineGroups_KeyUp_1" >
+                    <ListView Grid.Row="0" Grid.Column="3" x:Name="listViewMachineGroupsLock" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White" MouseDoubleClick="ListViewMachineGroups_MouseDoubleClick" SelectionChanged="ListViewMachineGroups_SelectionChanged" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" Focusable="False" MouseDown="ListViewMachineGroups_MouseDown" KeyUp="ListViewMachineGroups_KeyUp_1" >
                         <ListView.ContextMenu>
                             <ContextMenu>
                                 <MenuItem x:Name="menuItemRenameWGLock" Header="Rename" InputGestureText="F2"  Click="MenuItemMachineGroupsRenameLock_Click"/>
@@ -213,7 +213,7 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <ListView Grid.Row="0" Grid.Column="3" x:Name="listViewTasks" Visibility="Hidden" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MouseDoubleClick="listViewTasks_MouseDoubleClick" SelectionChanged="listViewTasks_SelectionChanged" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" KeyUp="listViewTasks_KeyUp" MouseDown="listViewTasks_MouseDown">
+                    <ListView Grid.Row="0" Grid.Column="3" x:Name="listViewTasks" Visibility="Hidden" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MouseDoubleClick="ListViewTasks_MouseDoubleClick" SelectionChanged="ListViewTasks_SelectionChanged" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" KeyUp="ListViewTasks_KeyUp" MouseDown="ListViewTasks_MouseDown">
                         <ListView.ContextMenu>
                             <ContextMenu>
                                 <MenuItem Header="New Task" InputGestureText="CTRL+T" Click="MenuItemTaskNew_Click"/>
@@ -273,7 +273,7 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <ListView Grid.Row="2" Grid.ColumnSpan="3" x:Name="listViewTasksDetails" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseDoubleClick="listViewTasksDetails_MouseDoubleClick" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" KeyUp="listViewTasksDetails_KeyUp">
+                    <ListView Grid.Row="2" Grid.ColumnSpan="3" x:Name="listViewTasksDetails" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseDoubleClick="ListViewTasksDetails_MouseDoubleClick" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" KeyUp="ListViewTasksDetails_KeyUp">
                         <ListView.ContextMenu>
                             <ContextMenu>
                                 <MenuItem x:Name="menuItemDeleteDetails" Header="Delete" InputGestureText="DEL" Click="MenuItemDetailsDelete_Click"/>
@@ -379,7 +379,7 @@
                     </Grid.ColumnDefinitions>
                     <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Stretch" />
                     <GridSplitter Grid.Column="3" Width="5" HorizontalAlignment="Stretch" />
-                    <ListView Grid.Column="0" x:Name="listViewTaskDetailsProgress" Height="auto" Width="auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" SelectionChanged="listViewTaskDetailsProgress_SelectionChanged">
+                    <ListView Grid.Column="0" x:Name="listViewTaskDetailsProgress" Height="auto" Width="auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" SelectionChanged="ListViewTaskDetailsProgress_SelectionChanged">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Name" Width="150" local:GridViewSort.PropertyName="Name">
@@ -508,7 +508,7 @@
                         <ColumnDefinition Width="0.3*"/>
                         <ColumnDefinition Width="1*"/>
                     </Grid.ColumnDefinitions>
-                        <TreeView Grid.Row="0" Grid.RowSpan="9" Grid.Column="0" x:Name="treeViewPostInstalls" HorizontalAlignment="Stretch" Height="auto" VerticalAlignment="Stretch" Width="auto" Margin="5" SelectedItemChanged="treeViewPostInstalls_SelectedItemChanged">
+                        <TreeView Grid.Row="0" Grid.RowSpan="9" Grid.Column="0" x:Name="treeViewPostInstalls" HorizontalAlignment="Stretch" Height="auto" VerticalAlignment="Stretch" Width="auto" Margin="5" SelectedItemChanged="TreeViewPostInstalls_SelectedItemChanged">
                         <TreeView.Resources>
                             <Style TargetType="{x:Type TreeViewItem}">
                                 <Setter Property="HeaderTemplate">
@@ -524,7 +524,7 @@
                             </Style>
                         </TreeView.Resources>
                     </TreeView>
-                    <ListView Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="9" x:Name="listViewPostInstalls" HorizontalAlignment="Stretch" Height="auto" VerticalAlignment="Stretch" Width="auto" Margin="5" MouseDoubleClick="listViewPostInstalls_MouseDoubleClick" SelectionChanged="listViewPostInstalls_SelectionChanged">
+                    <ListView Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="9" x:Name="listViewPostInstalls" HorizontalAlignment="Stretch" Height="auto" VerticalAlignment="Stretch" Width="auto" Margin="5" MouseDoubleClick="ListViewPostInstalls_MouseDoubleClick" SelectionChanged="ListViewPostInstalls_SelectionChanged">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Name" Width="180">
@@ -549,19 +549,19 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <ListBox x:Name="listBoxPostInstallsSelected" Grid.Column="2" Grid.Row="0" Grid.RowSpan="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDoubleClick="listBoxPostInstallsSelected_MouseDoubleClick" />
-                    <ListBox x:Name="listBoxPostInstallsSelector" Grid.Column="4" Grid.Row="0" Grid.RowSpan="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDoubleClick="listBoxPostInstallsSelector_MouseDoubleClick" SelectionChanged="listBoxPostInstallsSelector_SelectionChanged"/>
-                    <Button x:Name="btnPostInstallsSelect" Grid.Column="3" Grid.Row="1" Content="&lt;&lt;" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDown="btnPostInstallsSelect_MouseDown"/>
-                    <Button x:Name="btnPostInstallsUnSelect" Grid.Column="3" Grid.Row="3" Content="&gt;&gt;" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDown="btnPostInstallsUnSelect_MouseDown"/>
-                    <Button x:Name="btnPostInstallsRefresh" Grid.Column="2" Grid.Row="5" Content="Refresh" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Height="30" Margin="5" MouseDown="btnPostInstallsRefresh_MouseDown"/>
+                    <ListBox x:Name="listBoxPostInstallsSelected" Grid.Column="2" Grid.Row="0" Grid.RowSpan="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDoubleClick="ListBoxPostInstallsSelected_MouseDoubleClick" />
+                    <ListBox x:Name="listBoxPostInstallsSelector" Grid.Column="4" Grid.Row="0" Grid.RowSpan="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDoubleClick="ListBoxPostInstallsSelector_MouseDoubleClick" SelectionChanged="ListBoxPostInstallsSelector_SelectionChanged"/>
+                    <Button x:Name="btnPostInstallsSelect" Grid.Column="3" Grid.Row="1" Content="&lt;&lt;" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDown="BtnPostInstallsSelect_MouseDown"/>
+                    <Button x:Name="btnPostInstallsUnSelect" Grid.Column="3" Grid.Row="3" Content="&gt;&gt;" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDown="BtnPostInstallsUnSelect_MouseDown"/>
+                    <Button x:Name="btnPostInstallsRefresh" Grid.Column="2" Grid.Row="5" Content="Refresh" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Height="30" Margin="5" MouseDown="BtnPostInstallsRefresh_MouseDown"/>
                     <Label Content="* Restart after all" Grid.Column="4" Grid.Row="5" FontWeight="Bold" VerticalAlignment="Top"/>
                     <Label Content="** Shutdown after all" Grid.Column="4" Grid.Row="5" FontWeight="Bold" VerticalAlignment="Bottom"/>
                     <Label Content="Note to Installation:" Grid.Column="2" Grid.Row="6" FontWeight="Bold" VerticalAlignment="Bottom" />
                     <Border BorderThickness="1" BorderBrush="Black" Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="3" Margin="5">
                         <TextBlock x:Name="txtBlockPostInstalls" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="Black" Background="White" FontSize="16" TextWrapping="Wrap" />
                     </Border>
-                    <Button x:Name="btnPostInstallsCopyPath" Grid.Column="2" Grid.Row="8" Content="Copy Path" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Margin="5" Click="btnPostInstallsCopyPath_Click"/>
-                    <Button x:Name="btnPostInstallsChangeNote" Grid.Column="4" Grid.Row="8" Content="Change Note" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Margin="5" Click="btnPostInstallsChangeNote_Click"/>
+                    <Button x:Name="btnPostInstallsCopyPath" Grid.Column="2" Grid.Row="8" Content="Copy Path" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Margin="5" Click="BtnPostInstallsCopyPath_Click"/>
+                    <Button x:Name="btnPostInstallsChangeNote" Grid.Column="4" Grid.Row="8" Content="Change Note" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Margin="5" Click="BtnPostInstallsChangeNote_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="History">
@@ -578,7 +578,7 @@
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="3*"/>
                     </Grid.RowDefinitions>
-                    <TreeView Grid.Row="0" Grid.Column="0" x:Name="treeViewHistory" HorizontalAlignment="Stretch" Width="auto" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" Height="auto" VerticalAlignment="Stretch" SelectedItemChanged="treeViewHistory_SelectedItemChanged" KeyUp="treeViewHistory_KeyUp">
+                    <TreeView Grid.Row="0" Grid.Column="0" x:Name="treeViewHistory" HorizontalAlignment="Stretch" Width="auto" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Center" Height="auto" VerticalAlignment="Stretch" SelectedItemChanged="TreeViewHistory_SelectedItemChanged" KeyUp="TreeViewHistory_KeyUp">
                         <TreeView.Resources>
                             <Style TargetType="{x:Type TreeViewItem}">
                                 <Setter Property="HeaderTemplate">
@@ -594,7 +594,7 @@
                             </Style>
                         </TreeView.Resources>
                     </TreeView>
-                    <ListView Grid.Row="2" Grid.ColumnSpan="3" x:Name="listViewTasksDetailsHistory" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" MouseDoubleClick="listViewTasksDetailsHistory_MouseDoubleClick">
+                    <ListView Grid.Row="2" Grid.ColumnSpan="3" x:Name="listViewTasksDetailsHistory" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" MouseDoubleClick="ListViewTasksDetailsHistory_MouseDoubleClick">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Name" Width="200" local:GridViewSort.PropertyName="Name">
@@ -683,6 +683,51 @@
                         <GradientStop Color="{DynamicResource {x:Static SystemColors.HighlightTextColorKey}}" Offset="1"/>
                     </LinearGradientBrush>
                 </TabItem.Background>
+            </TabItem>
+            <TabItem Header="SQL Test">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                        <GradientStop Color="{DynamicResource {x:Static SystemColors.HighlightTextColorKey}}" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="grdMachinesGroups" Grid.ColumnSpan="4" SelectionChanged="grdMachinesGroups_SelectionChanged" />
+                    <TextBox x:Name="txtBoxID" ToolTip="ID" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="txtBoxMAC" ToolTip="MAC" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <TextBox x:Name="txtBoxName" ToolTip="Name" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <TextBox x:Name="txtBoxClassRoom" ToolTip="ClassRoom ID" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <Button x:Name="btnInsert" Content="Insert" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="btnInsert_Click" />
+                    <Button x:Name="btnUpdate" Content="Update" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="btnUpdate_Click" />
+                    <Button x:Name="btnDelete" Content="Delete" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="btnDelete_Click" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="SQL Class Rooms">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                        <GradientStop Color="{DynamicResource {x:Static SystemColors.HighlightTextColorKey}}" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid>
+                    <DataGrid x:Name="gridClassRoomsID" />
+                </Grid>
             </TabItem>
             <TabItem Header="Console">
                 <TabItem.Background>

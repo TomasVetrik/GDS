@@ -64,7 +64,7 @@ namespace GDS_Client
         {
             try
             {                
-                File.WriteAllText(@"X:\CloneStatus.txt", "CLONING");                
+                File.WriteAllText(@"X:\CloneStatus.txt", "RUNNING POWERSHELL SCRIPT");                
                 File.WriteAllText(@"X:\Error.txt", "False");
                 CloneProcess = System.Diagnostics.Process.Start(@"X:\windows\system32\WindowsPowershell\v1.0\powershell.exe", @"-WindowStyle Maximized -executionpolicy unrestricted -File W:\Cloning.ps1");
                 cloning = true;
@@ -262,7 +262,7 @@ namespace GDS_Client
                     case FLAG.CLIENT_TO_WINPE:
                         {
                             if (listener.computerDetails.computerDetailsData.inWinpe)
-                            {
+                            {                                
                                 listener.SendMessage(new Packet(FLAG.CLIENT_TO_WINPE, listener.computerDetails.computerDetailsData));
                             }
                             else

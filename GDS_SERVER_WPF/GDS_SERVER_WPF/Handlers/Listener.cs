@@ -12,6 +12,10 @@ using System.Windows.Controls;
 using NetworkCommsDotNet.Connections;
 using GDS_SERVER_WPF.DataCLasses;
 using System.Linq;
+using System.Data.SqlClient;
+using System.Data;
+using System.Windows.Media;
+using System.Windows.Controls.Primitives;
 
 namespace GDS_SERVER_WPF
 {
@@ -27,6 +31,8 @@ namespace GDS_SERVER_WPF
         public ListViewMachinesAndTasksHandler listViewMachinesAndTasksHandler;
         public List<ExecutedTaskHandler> executedTasksHandlers;
         public ListBox console;
+        public DataGrid grdMachinesGroups;
+        public SqlConnection conn;
 
         public void StartListener()
         {
@@ -126,7 +132,7 @@ namespace GDS_SERVER_WPF
             {
                 Application.Current.Dispatcher.Invoke(() =>
                 {
-                    MessageBox.Show("PROBLEM AKO HOVADO: " + ex.ToString());
+                    MessageBox.Show("PROBLEM CHYBA 1: " + ex.ToString());
                 });
                 StartListener();
             }
@@ -136,11 +142,12 @@ namespace GDS_SERVER_WPF
         {
             try
             {
-                for (int i = 0; i < executedTasksHandlers.Count; i++)
+                for (int i = executedTasksHandlers.Count - 1; i >= 0; i--)
                 {
                     ExecutedTaskHandler executedTaskHandler = executedTasksHandlers[i];
-                    foreach (ComputerInTaskHandler computer in executedTaskHandler.computers)
+                    for(int j = executedTaskHandler.computers.Count - 1; j >= 0; j--)
                     {
+                        ComputerInTaskHandler computer = executedTaskHandler.computers[j];
                         if (CheckMacsInREC(computer.computer.macAddresses, packet.computerDetailsData.macAddresses))
                         {
                             computer.ClientsDictionary = ClientsDictionary;
@@ -163,9 +170,119 @@ namespace GDS_SERVER_WPF
             {
                 Application.Current.Dispatcher.Invoke(() =>
                 {
-                    MessageBox.Show("PROBLEM AKO HOVADO4: " + ex.ToString());
+                    MessageBox.Show("PROBLEM CHYBA 4: " + ex.ToString());
                 });
             }
+        }
+
+        public void UpdateDataGridByMacs(List<string> Macs, string Name, string ClassRoom)
+        {
+            foreach(string Mac in Macs)
+            {
+                switch(IsMacInDataGrid(Mac, Name , ClassRoom))
+                {
+                    case 0:
+                        {
+                            Update(Mac, Name, ClassRoom);
+                            break;
+                        }
+                    case 1:
+                        {
+                            Insert(Mac, Name, ClassRoom);
+                            break;
+                        }
+                    case 2:
+                        break;
+                }
+            }
+        }
+
+        private int IsMacInDataGrid(string Mac, string Name, string ClassRoom)
+        {
+            for (int i = grdMachinesGroups.Items.Count - 1; i >= 0; i--)
+            {
+                DataGridCell cell = GetCell(i, 1);
+                if (cell != null)
+                {
+                    TextBlock txtBoxMac = cell.Content as TextBlock;
+                    if (txtBoxMac.Text != "")
+                    {
+                        if (txtBoxMac.Text == Mac)
+                        {
+                            TextBlock txtBoxName = GetCell(i, 2).Content as TextBlock;
+                            if (txtBoxName.Text != "")
+                            {
+                                if (txtBoxName.Text != Name)
+                                {
+                                    return 0;
+                                }
+                            }
+                            TextBlock txtBoxClassRoom = GetCell(i, 3).Content as TextBlock;
+                            if (txtBoxClassRoom.Text != "")
+                            {
+                                if (txtBoxClassRoom.Text != ClassRoom)
+                                {
+                                    return 0;
+                                }
+                            }
+                            return 2;
+                        }
+                    }
+                }
+            }            
+            return 1;
+        }
+
+        public DataGridCell GetCell(int row, int column)
+        {
+            DataGridRow rowContainer = GetRow(row);
+
+            if (rowContainer != null)
+            {
+                DataGridCellsPresenter presenter = GetVisualChild<DataGridCellsPresenter>(rowContainer);
+                if (presenter == null)
+                    return null;
+                DataGridCell cell = (DataGridCell)presenter.ItemContainerGenerator.ContainerFromIndex(column);
+                if (cell == null)
+                {
+                    grdMachinesGroups.ScrollIntoView(rowContainer, grdMachinesGroups.Columns[column]);
+                    cell = (DataGridCell)presenter.ItemContainerGenerator.ContainerFromIndex(column);
+                }
+                return cell;
+            }
+            return null;
+        }
+
+        public static T GetVisualChild<T>(Visual parent) where T : Visual
+        {
+            T child = default(T);
+            int numVisuals = VisualTreeHelper.GetChildrenCount(parent);
+            for (int i = 0; i < numVisuals; i++)
+            {
+                Visual v = (Visual)VisualTreeHelper.GetChild(parent, i);
+                child = v as T;
+                if (child == null)
+                {
+                    child = GetVisualChild<T>(v);
+                }
+                if (child != null)
+                {
+                    break;
+                }
+            }
+            return child;
+        }
+
+        public DataGridRow GetRow(int index)
+        {
+            DataGridRow row = (DataGridRow)grdMachinesGroups.ItemContainerGenerator.ContainerFromIndex(index);
+            if (row == null)
+            {
+                grdMachinesGroups.UpdateLayout();
+                grdMachinesGroups.ScrollIntoView(grdMachinesGroups.Items[index]);
+                row = (DataGridRow)grdMachinesGroups.ItemContainerGenerator.ContainerFromIndex(index);
+            }
+            return row;
         }
 
         private void MessageHandler(Packet packet, Connection connection)
@@ -232,12 +349,12 @@ namespace GDS_SERVER_WPF
             {
                 Application.Current.Dispatcher.Invoke(() =>
                 {
-                    MessageBox.Show("PROBLEM AKO HOVADO2: " + ex.ToString());
+                    MessageBox.Show("PROBLEM CHYBA 2: " + ex.ToString());
                 });
             }
         }
 
-        private string GetFileNameByMac(string[] computersInfoFiles, List<string> macAddresses)
+        public static string GetFileNameByMac(string[] computersInfoFiles, List<string> macAddresses)
         {
             string filePath = "";
             foreach (string computerFile in computersInfoFiles)
@@ -305,7 +422,7 @@ namespace GDS_SERVER_WPF
             {
                 Application.Current.Dispatcher.Invoke(() =>
                 {
-                    MessageBox.Show("PROBLEM AKO HOVADO3: " + ex.ToString());
+                    MessageBox.Show("PROBLEM CHYBA 3: " + ex.ToString());
                 });
             }
         }
@@ -321,6 +438,68 @@ namespace GDS_SERVER_WPF
                 }
             }
             catch { }
+        }
+
+        public void BindMyData()
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("SELECT * FROM [Dynamics365_synchro].[dbo].[MachinesGroups]", conn);
+                DataSet ds = new DataSet();
+                SqlDataAdapter da = new SqlDataAdapter(comm);
+                da.Fill(ds);
+                Application.Current.Dispatcher.Invoke(() =>
+                {
+                    grdMachinesGroups.ItemsSource = ds.Tables[0].DefaultView;
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public void Update(string MAC, string Name, string ClassRoom)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("UPDATE [Dynamics365_synchro].[dbo].[MachinesGroups]  SET MAC='" + MAC + "',Name='" + Name + "',ClassRoom=" + ClassRoom + " WHERE MAC='" + MAC + "'", conn);
+                comm.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+            finally
+            {
+                conn.Close();
+                BindMyData();
+            }
+        }
+
+            public void Insert(string MAC, string Name, string ClassRoom)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("INSERT INTO MachinesGroups VALUES('" + MAC + "','" + Name + "'," + ClassRoom + ")", conn);
+                comm.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+            finally
+            {
+                conn.Close();
+                BindMyData();
+            }
         }
     }
 }

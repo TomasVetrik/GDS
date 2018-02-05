@@ -69,7 +69,9 @@ namespace GDS_SERVER_WPF
         public List<string> PostInstalls { get; set; }
         [ProtoMember(21)]
         public string _sourceIdentifier;
-        public ShortGuid SourceIdentifier { get { return new ShortGuid(_sourceIdentifier); } }    
+        public ShortGuid SourceIdentifier { get { return new ShortGuid(_sourceIdentifier); } }
+        [ProtoMember(22)]
+        public string CustomLog { get; set; }
 
         public override string ToString()
         {
@@ -158,24 +160,30 @@ namespace GDS_SERVER_WPF
                     }
                 }
             }            
-        }       
-         
+        }
+
         public List<ItemData> GetItems()
         {
-            List<ItemData> items = new List<ItemData>();
-            items.Add(new ItemData("Computer Name", RealPCName));
-            items.Add(new ItemData("Mac Address", String.Join(" | ", macAddresses)));
-            items.Add(new ItemData("OS Informations", OSInformations));
-            items.Add(new ItemData("Processor Info", processorInfo));
-            items.Add(new ItemData("Memory Info", physicalMemoryInfo));
-            items.Add(new ItemData("Number of Slots", numberOfRamSLots));
-            items.Add(new ItemData("Bios Caption", biosCaption));
-            items.Add(new ItemData("Board Production ID", boardProductId));
-            items.Add(new ItemData("Account Name", accountName));
-            items.Add(new ItemData("IP Address", IPAddress));
-            items.Add(new ItemData("Base Image", baseImageName));
-            items.Add(new ItemData("DriveE Image", driveEImageName));
-            items.Add(new ItemData("Dart Info", dartInfo));
+            List<ItemData> items = new List<ItemData>
+            {
+                new ItemData("Computer Name", RealPCName),
+                new ItemData("Mac Address", String.Join(" | ", macAddresses)),
+                new ItemData("OS Informations", OSInformations),
+                new ItemData("Processor Info", processorInfo),
+                new ItemData("Memory Info", physicalMemoryInfo),
+                new ItemData("Number of Slots", numberOfRamSLots),
+                new ItemData("Bios Caption", biosCaption),
+                new ItemData("Board Production ID", boardProductId),
+                new ItemData("Account Name", accountName),
+                new ItemData("IP Address", IPAddress),
+                new ItemData("Base Image", baseImageName),
+                new ItemData("DriveE Image", driveEImageName),
+                new ItemData("Dart Info", dartInfo)
+            };
+            if (CustomLog != null)
+            {
+                items.Add(new ItemData("Custom Log", CustomLog.Replace(",", "\n")));
+            }
             return items;
         }
     }

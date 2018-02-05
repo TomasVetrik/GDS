@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using System.Windows;
 
 namespace GDS_SERVER_WPF.Handlers
 {
@@ -40,26 +41,32 @@ namespace GDS_SERVER_WPF.Handlers
 
         string DestinationFileName(string SendingFile)
         {
-            String[] Splitter = null;
-
             String destFileName = "";
-            String DestPath = "";
-
-            Splitter = SendingFile.Split('\\');
-
-            destFileName = Splitter[Splitter.Length - 1];
-
-            Splitter = SendingFile.Replace(srcDirName, "").Split('\\');
-
-            DestPath = destinationDir + "\\";
-
-            for (int i = 0; i < Splitter.Length - 1; i++)
+            try
             {
-                DestPath += Splitter[i] + "\\";
+                String[] Splitter = null;
+                
+                String DestPath = "";
+
+                Splitter = SendingFile.Split('\\');
+
+                destFileName = Splitter[Splitter.Length - 1];
+
+                Splitter = SendingFile.Replace(srcDirName, "").Split('\\');
+
+                DestPath = destinationDir + "\\";
+
+                for (int i = 0; i < Splitter.Length - 1; i++)
+                {
+                    DestPath += Splitter[i] + "\\";
+                }
+
+                destFileName = System.IO.Path.Combine(DestPath, destFileName);
             }
-
-            destFileName = System.IO.Path.Combine(DestPath, destFileName);
-
+            catch(Exception ex)
+            {
+                MessageBox.Show("Chyba destination file name: " + ex.ToString());
+            }
             return destFileName;
         }
 
@@ -72,10 +79,20 @@ namespace GDS_SERVER_WPF.Handlers
                 Listener.Start();
                 socket = Listener.AcceptSocket();                
             }
-            catch
+            catch (SocketException ex)
             {
                 Thread.Sleep(1000);
-                Console.WriteLine("Creating Connection failed, Retry");
+                PORT++;
+                Console.WriteLine(ex.ToString());
+                if (!cancel && !error)
+                {
+                    CreateConnection();
+                }
+            }
+            catch (Exception ex)
+            {                
+                Thread.Sleep(1000);
+                Console.WriteLine(ex.ToString());
                 if (!cancel && !error)
                 {
                     CreateConnection();
@@ -133,7 +150,7 @@ namespace GDS_SERVER_WPF.Handlers
                 foreach (string SendingFile in TempFiles)
                 {
                     FileInfo f = new FileInfo(SendingFile);
-                    long fileLength = f.Length;
+                    long fileLength = f.Length;                    
                     SendSynchInfo(DestinationFileName(SendingFile) + "||" + fileLength.ToString());                    
                     if (!SendingTCP(SendingFile))
                     {

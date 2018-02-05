@@ -24,7 +24,7 @@ namespace GDS_Client
         public int serverPort = 10000;
         public Connection connection;
 
-        void getServerIP()
+        void GetServerIP()
         {
             try
             {
@@ -46,7 +46,7 @@ namespace GDS_Client
             }
             catch
             {
-                getServerIP();
+                GetServerIP();
             }
         }
 
@@ -77,7 +77,7 @@ namespace GDS_Client
             {
                 serverIP = "10.2.0.6";
             }
-            //serverIP = "10.201.20.14";
+            serverIP = "10.201.20.14";
         }
 
         string FileName = @"D:\Temp\GDSClient\GDS_Client_LOG.txt";
@@ -106,7 +106,7 @@ namespace GDS_Client
         {
             messageHandler = new MessageHandler(this);
             WriteToLogs("Getting IP");
-            getServerIP();
+            GetServerIP();
             WriteToLogs("Server IP: " + serverIP);
             computerDetails.SetComputerDetails();
             WriteToLogs("Getting computer details");
@@ -141,8 +141,10 @@ namespace GDS_Client
             {
                 ID = FLAG.SYN_FLAG_WINPE;
             }
-            Packet packet = new Packet(ID, computerDetails.computerDetailsData);
-            packet.computerDetailsData = computerDetails.computerDetailsData;            
+            Packet packet = new Packet(ID, computerDetails.computerDetailsData)
+            {
+                computerDetailsData = computerDetails.computerDetailsData
+            };
             connection.AppendIncomingPacketHandler<byte[]>("Packet", IncommingMessage);
             connection.AppendShutdownHandler(HandleConnectionClosed);
             Console.WriteLine("Connected to: " + serverIP);            

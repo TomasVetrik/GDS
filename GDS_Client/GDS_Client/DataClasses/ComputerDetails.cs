@@ -98,6 +98,9 @@ namespace GDS_Client
                 computerDetails.Add("DRIVEE NAME||" + computerDetailsData.driveEImageName);
                 computerDetailsData.dartInfo = GetDartViewerInfo(0);
                 computerDetails.Add("Dart Viewer||" + computerDetailsData.dartInfo);
+                computerDetailsData.CustomLog = "";
+                computerDetails.Add("Custom Log||" + computerDetailsData.CustomLog);
+
             }
             catch (Exception ex)
             {

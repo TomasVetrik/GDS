@@ -14,6 +14,9 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace GDS_SERVER_WPF
 {
@@ -42,13 +45,101 @@ namespace GDS_SERVER_WPF
         string LockPath = @".\Machine Groups\Lock";
         string DefaultPath = @".\Machine Groups\Default";        
         List<string> ipAddresses;
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConString"].ConnectionString);
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void FillDataGrid()
         {
+            /*try
+            {
+                string ConString = "";
+                string CmdString = "";
+                try
+                {
+                    ConString = ConfigurationManager.ConnectionStrings["ConString"].ConnectionString;
+                    CmdString = string.Empty;
+                }                
+                catch { MessageBox.Show("CHYBA1"); }
+                try
+                {
+                    CmdString = "UPDATE [Dynamics365_synchro].[dbo].[MachinesGroups] SET MAC='68:05:CA:3C:35:81', Name='LEKTORSK1', ClassRoom=35 WHERE Id=1";
+                    CmdString = "Insert into [Dynamics365_synchro].[dbo].[MachinesGroups] (MAC, Name, ClassRoom) Values ('68:05:CA:3C:35:81','LEKTORSK1','35')";
+                    CmdString = "DELETE FROM [Dynamics365_synchro].[dbo].[MachinesGroups] WHERE Name='TestPC'";
+                    SqlConnection connection = new SqlConnection(ConString);
+                    SqlCommand command = new SqlCommand(CmdString, connection);
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+                catch (Exception ex)
+                { MessageBox.Show("CHYBA3: " + ex.ToString()); }
+                using (SqlConnection con = new SqlConnection(ConString))
+                {
+                    try
+                    {
+                        CmdString = "Select * from [Dynamics365_synchro].[dbo].[MachinesGroups]";                        
+                        SqlCommand cmd = new SqlCommand(CmdString, con);
+                        SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable("MachinesGroups");
+                        if (dt != null)
+                        {
+                            sda.Fill(dt);
+                            grdMachinesGroups.ItemsSource = dt.DefaultView;
+                        }
+                    }
+                    catch ( Exception ex)
+                    { MessageBox.Show("CHYBA2: " + ex.ToString()); }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }     */            
+        }
+
+        private void FillDataGridClassRoom()
+        {
+            try
+            {
+                string ConString = "";
+                string CmdString = "";
+                try
+                {
+                    ConString = ConfigurationManager.ConnectionStrings["ConStringClassRooms"].ConnectionString;
+                    CmdString = string.Empty;
+                }
+                catch { MessageBox.Show("CHYBA1"); }
+                using (SqlConnection con = new SqlConnection(ConString))
+                {
+                    try
+                    {
+                        CmdString = "select * from [gopas0410].[dbo].[classroom_classroom]";
+                        SqlCommand cmd = new SqlCommand(CmdString, con);
+                        SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable("classroom_classroom");
+                        if (dt != null)
+                        {
+                            sda.Fill(dt);
+                            gridClassRoomsID.ItemsSource = dt.DefaultView;
+                        }
+                    }
+                    catch (Exception ex)
+                    { MessageBox.Show("CHYBA2: " + ex.ToString()); }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }        
+        
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {            
+            FillDataGridClassRoom();
             CheckDirectories();            
             treeViewMachinesAndTasksHandler = new TreeViewHandler(treeViewMachinesAndTasks);            
             listViewMachinesAndTasksHandler = new ListViewMachinesAndTasksHandler(listViewMachineGroups,listViewMachineGroupsLock, listViewTasks, treeViewMachinesAndTasksHandler);
@@ -56,17 +147,24 @@ namespace GDS_SERVER_WPF
             listViewMachinesAndTasksHandler.LoadTreeViewMachinesAndTasks();
             listViewTaskDetailsHandler.LoadTasksDetails();
             ExecutedTasksHandlers = new List<ExecutedTaskHandler>();
-            listener = new Listener();
-            listener.executedTasksHandlers = ExecutedTasksHandlers;
-            listener.labelOnlineClients = labelOnline;
-            listener.labelOfflineClients = labelOffilne;
-            listener.labelAllClients = labelClients;            
-            listener.listViewMachinesAndTasksHandler = listViewMachinesAndTasksHandler;            
-            listener.clientsAll = Directory.GetFiles(@".\Machine Groups\", "*.my", SearchOption.AllDirectories).Length;
-            listener.console = listBoxConsole;            
-            treeViewPostInstallsHandler = new TreeViewHandler(treeViewPostInstalls);            
-            listViewPostInstallsHandler = new ListViewPostinstallsHandler(listViewPostInstalls, treeViewPostInstallsHandler, listBoxPostInstallsSelected, listBoxPostInstallsSelector, txtBlockPostInstalls);            
-            listViewPostInstallsHandler.ClientsDictionary = listener.ClientsDictionary;
+            listener = new Listener
+            {
+                executedTasksHandlers = ExecutedTasksHandlers,
+                labelOnlineClients = labelOnline,
+                labelOfflineClients = labelOffilne,
+                labelAllClients = labelClients,
+                listViewMachinesAndTasksHandler = listViewMachinesAndTasksHandler,
+                clientsAll = Directory.GetFiles(@".\Machine Groups\", "*.my", SearchOption.AllDirectories).Length,
+                console = listBoxConsole,
+                grdMachinesGroups = this.grdMachinesGroups,
+                conn = this.conn
+            };
+            listener.BindMyData();
+            treeViewPostInstallsHandler = new TreeViewHandler(treeViewPostInstalls);
+            listViewPostInstallsHandler = new ListViewPostinstallsHandler(listViewPostInstalls, treeViewPostInstallsHandler, listBoxPostInstallsSelected, listBoxPostInstallsSelector, txtBlockPostInstalls)
+            {
+                ClientsDictionary = listener.ClientsDictionary
+            };
             listViewPostInstallsHandler.LoadTreeViewMachines();
             treeViewHistoryHandler = new TreeViewHandler(treeViewHistory);
             listViewHistoryHandler = new ListViewHistoryHandler(listViewTasksDetailsHistory, @"TaskDetails History", treeViewHistoryHandler);            
@@ -99,7 +197,7 @@ namespace GDS_SERVER_WPF
         }
         private void MenuItemMachineGroupsWOLLock_Click(object sender, RoutedEventArgs e)
         {
-            runWakeOnLanOnSelectedItems(listViewMachineGroupsLock);
+            RunWakeOnLanOnSelectedItems(listViewMachineGroupsLock);
         }
         private void MenuItemMachineGroupsRDPLock_Click(object sender, RoutedEventArgs e)
         {
@@ -115,7 +213,7 @@ namespace GDS_SERVER_WPF
         }
         private void MenuItemMachineGroupsWOL_Click(object sender, RoutedEventArgs e)
         {
-            runWakeOnLanOnSelectedItems(listViewMachineGroups);
+            RunWakeOnLanOnSelectedItems(listViewMachineGroups);
         }
         private void MenuItemMachineGroupsRDP_Click(object sender, RoutedEventArgs e)
         {
@@ -135,11 +233,13 @@ namespace GDS_SERVER_WPF
         }
         private void NewTask()
         {
-            var taskOptionsDialog = new TaskOptions();
-            taskOptionsDialog.path = "";
-            taskOptionsDialog.nodePath = treeViewMachinesAndTasksHandler.GetNodePath();
-            taskOptionsDialog.ClientsDictionary = listViewMachinesAndTasksHandler.ClientsDictionary;
-            taskOptionsDialog.ExecutedTasksHandlers = ExecutedTasksHandlers;
+            var taskOptionsDialog = new TaskOptions
+            {
+                path = "",
+                nodePath = treeViewMachinesAndTasksHandler.GetNodePath(),
+                ClientsDictionary = listViewMachinesAndTasksHandler.ClientsDictionary,
+                ExecutedTasksHandlers = ExecutedTasksHandlers
+            };
             foreach (TaskData item in listViewTasks.Items)
             {
                 taskOptionsDialog.Names.Add(item.Name);
@@ -293,7 +393,7 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void runWakeOnLanOnSelectedItems(ListView listView)
+        private void RunWakeOnLanOnSelectedItems(ListView listView)
         {
             foreach (ComputerDetailsData item in listView.SelectedItems)
             {
@@ -360,16 +460,18 @@ namespace GDS_SERVER_WPF
 
         private void RunTask(TaskOptions dialog)
         {
-            ExecutedTaskData executedTask = new ExecutedTaskData();
-            executedTask.Name = dialog.taskData.Name;
-            executedTask.Status = "Images/Progress.ico";
-            executedTask.Started = dialog.taskData.LastExecuted;
-            executedTask.Finished = "NONE";
-            executedTask.Clients = dialog.taskData.TargetComputers.Count.ToString();
-            executedTask.Done = "0";
-            executedTask.Failed = "0";
-            executedTask.MachineGroup = dialog.taskData.MachineGroup;
-            executedTask.taskData = dialog.taskData;
+            ExecutedTaskData executedTask = new ExecutedTaskData
+            {
+                Name = dialog.taskData.Name,
+                Status = "Images/Progress.ico",
+                Started = dialog.taskData.LastExecuted,
+                Finished = "NONE",
+                Clients = dialog.taskData.TargetComputers.Count.ToString(),
+                Done = "0",
+                Failed = "0",
+                MachineGroup = dialog.taskData.MachineGroup,
+                taskData = dialog.taskData
+            };
             ExecutedTaskHandler taskHandler = new ExecutedTaskHandler(executedTask, ipAddresses, listViewComputersProgressAll, listViewComputersProgressSelected, listViewTaskDetailsProgress);
             ExecutedTasksHandlers.Add(taskHandler);
             taskHandler.handlers = ExecutedTasksHandlers;
@@ -391,7 +493,7 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void treeViewMachinesAndTasks_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        private void TreeViewMachinesAndTasks_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             try
             {
@@ -415,7 +517,7 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void listViewTaskDetailsProgress_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ListViewTaskDetailsProgress_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selectedItem = (ExecutedTaskData)listViewTaskDetailsProgress.SelectedItem;
             if (selectedItem != null)
@@ -432,7 +534,7 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void listViewComputers_MouseDoubleClick(ListView listView, TreeViewHandler treeViewHandler)
+        private void ListViewComputers_MouseDoubleClick(ListView listView, TreeViewHandler treeViewHandler)
         {
             var selectedItem = (ComputerDetailsData)listView.SelectedItem;
             if (selectedItem != null)
@@ -440,8 +542,10 @@ namespace GDS_SERVER_WPF
                 var path = treeViewHandler.GetNodePath() + "\\" + selectedItem.Name;
                 if (!selectedItem.ImageSource.Contains("Folder"))
                 {
-                    var dialogComputerDetails = new ComputerDetails();
-                    dialogComputerDetails.computerPath = path;
+                    var dialogComputerDetails = new ComputerDetails
+                    {
+                        computerPath = path
+                    };
                     dialogComputerDetails.ShowDialog();
                 }
                 else
@@ -451,12 +555,12 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void listViewMachineGroups_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void ListViewMachineGroups_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            listViewComputers_MouseDoubleClick(listViewMachineGroups, treeViewMachinesAndTasksHandler);
+            ListViewComputers_MouseDoubleClick(listViewMachineGroups, treeViewMachinesAndTasksHandler);
         }
 
-        private void listViewTasks_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void ListViewTasks_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             var selectedItem = (TaskData)listViewTasks.SelectedItem;
             if (selectedItem != null)
@@ -464,11 +568,13 @@ namespace GDS_SERVER_WPF
                 var path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + selectedItem.Name + ".my";
                 if (!selectedItem.ImageSource.Contains("Folder"))
                 {
-                    var taskOptionsDialog = new TaskOptions();
-                    taskOptionsDialog.path = path;
-                    taskOptionsDialog.nodePath = treeViewMachinesAndTasksHandler.GetNodePath();
-                    taskOptionsDialog.ClientsDictionary = listViewMachinesAndTasksHandler.ClientsDictionary;
-                    taskOptionsDialog.ExecutedTasksHandlers = ExecutedTasksHandlers;
+                    var taskOptionsDialog = new TaskOptions
+                    {
+                        path = path,
+                        nodePath = treeViewMachinesAndTasksHandler.GetNodePath(),
+                        ClientsDictionary = listViewMachinesAndTasksHandler.ClientsDictionary,
+                        ExecutedTasksHandlers = ExecutedTasksHandlers
+                    };
                     foreach (TaskData item in listViewTasks.Items)
                     {
                         if (item.Name != selectedItem.Name)
@@ -488,7 +594,7 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void listViewMachineGroups_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ListViewMachineGroups_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selectedItem = (ComputerDetailsData)listViewMachineGroups.SelectedItem;            
             if (selectedItem != null)
@@ -513,7 +619,7 @@ namespace GDS_SERVER_WPF
             ChnageLabels(listViewMachineGroups.Items.Count, listViewMachineGroups.SelectedItems.Count);
         }
 
-        private void listViewTasks_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ListViewTasks_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selectedItem = (TaskData)listViewTasks.SelectedItem;
             if (selectedItem != null)
@@ -995,23 +1101,25 @@ namespace GDS_SERVER_WPF
         {
             if (executedTaskData != null)
             {
-                var progressComputerDetailsDialog = new ProgressComputersDetails();
-                progressComputerDetailsDialog.executedTaskData = executedTaskData;
+                var progressComputerDetailsDialog = new ProgressComputersDetails
+                {
+                    executedTaskData = executedTaskData
+                };
                 progressComputerDetailsDialog.ShowDialog();
             }
         }
 
-        private void listViewTasksDetails_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void ListViewTasksDetails_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             ShowProgressComputerDetailsDialog((ExecutedTaskData)listViewTasksDetails.SelectedItem);            
         }
 
-        private void listViewPostInstalls_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void ListViewPostInstalls_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            listViewComputers_MouseDoubleClick(listViewPostInstalls, treeViewPostInstallsHandler);
+            ListViewComputers_MouseDoubleClick(listViewPostInstalls, treeViewPostInstallsHandler);
         }
 
-        private void treeViewPostInstalls_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        private void TreeViewPostInstalls_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             try
             {
@@ -1029,13 +1137,13 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void btnPostInstallsSelect_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void BtnPostInstallsSelect_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             listViewPostInstallsHandler.SeLect();
             listViewMachinesAndTasksHandler.Refresh();
         }
 
-        private void listViewTasksDetails_KeyUp(object sender, KeyEventArgs e)
+        private void ListViewTasksDetails_KeyUp(object sender, KeyEventArgs e)
         {
             switch (e.Key)
             {
@@ -1050,7 +1158,7 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void listViewTasks_KeyUp(object sender, KeyEventArgs e)
+        private void ListViewTasks_KeyUp(object sender, KeyEventArgs e)
         {
             switch (e.Key)
             {
@@ -1119,7 +1227,7 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void treeViewMachinesAndTasks_KeyUp(object sender, KeyEventArgs e)
+        private void TreeViewMachinesAndTasks_KeyUp(object sender, KeyEventArgs e)
         {
             switch (e.Key)
             {
@@ -1131,7 +1239,7 @@ namespace GDS_SERVER_WPF
             }            
         }
 
-        private void treeViewHistory_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        private void TreeViewHistory_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             try
             {
@@ -1148,7 +1256,7 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void treeViewHistory_KeyUp(object sender, KeyEventArgs e)
+        private void TreeViewHistory_KeyUp(object sender, KeyEventArgs e)
         {
             switch (e.Key)
             {
@@ -1160,56 +1268,56 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void listViewTasksDetailsHistory_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void ListViewTasksDetailsHistory_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             ShowProgressComputerDetailsDialog((ExecutedTaskData)listViewTasksDetailsHistory.SelectedItem);
         }
 
-        private void btnPostInstallsUnSelect_MouseDown(object sender, MouseButtonEventArgs e)
+        private void BtnPostInstallsUnSelect_MouseDown(object sender, MouseButtonEventArgs e)
         {
             listViewPostInstallsHandler.UnSeLect();
             listViewMachinesAndTasksHandler.Refresh();
         }
 
-        private void btnPostInstallsSelect_MouseDown(object sender, MouseButtonEventArgs e)
+        private void BtnPostInstallsSelect_MouseDown(object sender, MouseButtonEventArgs e)
         {
             listViewPostInstallsHandler.SeLect();
             listViewMachinesAndTasksHandler.Refresh();
         }
 
-        private void listBoxPostInstallsSelector_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void ListBoxPostInstallsSelector_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             listViewPostInstallsHandler.SeLect();
             listViewMachinesAndTasksHandler.Refresh();
         }
 
-        private void listBoxPostInstallsSelected_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void ListBoxPostInstallsSelected_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             listViewPostInstallsHandler.UnSeLect();
             listViewMachinesAndTasksHandler.Refresh();
         }
 
-        private void listViewPostInstalls_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ListViewPostInstalls_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             listViewPostInstallsHandler.RefreshSelected();
         }
 
-        private void listBoxPostInstallsSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ListBoxPostInstallsSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             listViewPostInstallsHandler.SelectNote();
         }
 
-        private void btnPostInstallsRefresh_MouseDown(object sender, MouseButtonEventArgs e)
+        private void BtnPostInstallsRefresh_MouseDown(object sender, MouseButtonEventArgs e)
         {
             listViewPostInstallsHandler.RefreshPostInstalls();
         }        
 
-        private void btnPostInstallsCopyPath_Click(object sender, RoutedEventArgs e)
+        private void BtnPostInstallsCopyPath_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void btnPostInstallsChangeNote_Click(object sender, RoutedEventArgs e)
+        private void BtnPostInstallsChangeNote_Click(object sender, RoutedEventArgs e)
         {
             var changeNoteWindow = new ChangeNote();
             changeNoteWindow.txtBoxPostInstalls.Text = listViewPostInstallsHandler.txtBlockPostInstalls.Text;
@@ -1218,7 +1326,7 @@ namespace GDS_SERVER_WPF
             listViewPostInstallsHandler.SelectNote();
         }
 
-        private void listViewMachineGroups_MouseDown(object sender, MouseButtonEventArgs e)
+        private void ListViewMachineGroups_MouseDown(object sender, MouseButtonEventArgs e)
         {
             HitTestResult r = VisualTreeHelper.HitTest(this, e.GetPosition(this));
             if (r.VisualHit.GetType() != typeof(ListBoxItem))
@@ -1238,7 +1346,7 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void listViewMachineGroups_KeyUp_1(object sender, KeyEventArgs e)
+        private void ListViewMachineGroups_KeyUp_1(object sender, KeyEventArgs e)
         {
             switch (e.Key)
             {
@@ -1283,7 +1391,7 @@ namespace GDS_SERVER_WPF
                         }
                     case Key.W:
                         {
-                            runWakeOnLanOnSelectedItems(listViewMachineGroups);
+                            RunWakeOnLanOnSelectedItems(listViewMachineGroups);
                             break;
                         }
                     case Key.R:
@@ -1311,7 +1419,7 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void listViewTasks_MouseDown(object sender, MouseButtonEventArgs e)
+        private void ListViewTasks_MouseDown(object sender, MouseButtonEventArgs e)
         {
             HitTestResult r = VisualTreeHelper.HitTest(this, e.GetPosition(this));
             if (r.VisualHit.GetType() != typeof(ListBoxItem))
@@ -1319,7 +1427,71 @@ namespace GDS_SERVER_WPF
                 listViewTasks.UnselectAll();
                 listViewTasks.Focus();
             }
-        }        
+        }
+
+        private void btnInsert_Click(object sender, RoutedEventArgs e)
+        {
+            var computersInfoFiles = Directory.GetFiles(@".\Machine Groups\UCEBNASK03", "*.my", SearchOption.AllDirectories);
+            foreach (string computerFile in computersInfoFiles)
+            {
+                ComputerDetailsData computer = FileHandler.Load<ComputerDetailsData>(computerFile);
+                listener.UpdateDataGridByMacs(computer.macAddresses, computer.Name, "21");
+            }
+        }
+
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("UPDATE [Dynamics365_synchro].[dbo].[MachinesGroups]  SET MAC='" + txtBoxMAC.Text + "',Name='" + txtBoxName.Text + "',ClassRoom=" +txtBoxClassRoom.Text + " WHERE Mac=" + txtBoxMAC.Text + "", conn);
+                comm.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+            finally
+            {
+                conn.Close();
+                listener.BindMyData();
+            }
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand comm = new SqlCommand("DELETE FROM [Dynamics365_synchro].[dbo].[MachinesGroups] WHERE ID=" + txtBoxID.Text + "", conn);
+                comm.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+            finally
+            {
+                conn.Close();
+                listener.BindMyData();
+            }
+        }
+
+        private void grdMachinesGroups_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(grdMachinesGroups.SelectedItem != null)
+            {
+                try
+                {
+                    DataRowView dataRow = (DataRowView)grdMachinesGroups.SelectedItem;
+                    txtBoxID.Text = dataRow.Row.ItemArray[0].ToString();
+                    txtBoxMAC.Text = dataRow.Row.ItemArray[1].ToString();
+                    txtBoxName.Text = dataRow.Row.ItemArray[2].ToString();
+                    txtBoxClassRoom.Text = dataRow.Row.ItemArray[3].ToString();
+                }
+                catch { }
+            }
+        }
     }
 
     public static class CharExtensions
