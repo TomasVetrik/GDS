@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>SendFile</Name>
+  <Started>07.02.2018 13-45-26</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>07.02.2018 13-46-10</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>!Testing</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>SendFile</Name>
+    <LastExecuted>07.02.2018 13-45-26</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>fRevEKBYsk2F4UDFKqwZ-w</_sourceIdentifier>
+        <Name>VETRIK</Name>
+        <RealPCName>VETRIK</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:1A:35:11</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:1A:35:11</MacAddress>
+        <OSInformations>Microsoft Windows 7 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>TomasVe</accountName>
+        <IPAddress>10.201.20.14</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>!Testing</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath>.\Base\Office2010</BaseImageSourcePath>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <SourceDirectoryInOS>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline</SourceDirectoryInOS>
+    <DestinationDirectoryInOS>D:\Temp\</DestinationDirectoryInOS>
+    <CommandsInOS />
+    <CopyFilesInOS>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\01 - Mlčanie Jahniat.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\02 - Všetko OK feat. Majk Spirit.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\03 - Jackpot feat. Momo.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\04 - Zlatá Soška feat. ADiss.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\05 - Bazooka rock feat. Sergei Barracuda.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\06 - Dúha.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\07 - Bublinky.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\08 - Sanscript.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\09 - Rátaj so mnou.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\10 - Z hlavy do hlavy feat. Separ.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\11 - Nič feat. Pil C.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\12 - Chlapci zo zadnej lavice.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\13 - Čínska pošta.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\14 - Žiadna sympatia.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\15 - Kale Jakha, kale bala feat. Sendrejovci a Vec.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\16 - Offline.flac</string>
+    </CopyFilesInOS>
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>20</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>VETRIK</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:45:27</Time>
+      <MacAddress>68:05:CA:1A:35:11</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>VETRIK</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>13:45:28</Time>
+      <MacAddress>68:05:CA:1A:35:11</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>VETRIK</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:45:29</Time>
+      <MacAddress>68:05:CA:1A:35:11</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>VETRIK</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>13:45:33</Time>
+      <MacAddress>68:05:CA:1A:35:11</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>VETRIK</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>13:45:56</Time>
+      <MacAddress>68:05:CA:1A:35:11</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>VETRIK</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:45:57</Time>
+      <MacAddress>68:05:CA:1A:35:11</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>VETRIK</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>13:45:58</Time>
+      <MacAddress>68:05:CA:1A:35:11</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>VETRIK</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:45:59</Time>
+      <MacAddress>68:05:CA:1A:35:11</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>VETRIK</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>13:46:00</Time>
+      <MacAddress>68:05:CA:1A:35:11</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>VETRIK</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>13:46:09</Time>
+      <MacAddress>68:05:CA:1A:35:11</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>VETRIK</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>13:46:10</Time>
+      <MacAddress>68:05:CA:1A:35:11</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\02\\07.02.2018 13-45-26_SendFile.my</FilePath>
+</ExecutedTaskData>

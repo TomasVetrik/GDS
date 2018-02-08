@@ -2,14 +2,14 @@
 <TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ImageSource>Images/Tasks.ico</ImageSource>
   <Name>SendFile</Name>
-  <LastExecuted>18.01.2018 15-26-17</LastExecuted>
+  <LastExecuted>08.02.2018 14-38-20</LastExecuted>
   <TargetComputers>
     <ComputerDetailsData>
+      <_sourceIdentifier>fRevEKBYsk2F4UDFKqwZ-w</_sourceIdentifier>
       <Name>VETRIK</Name>
       <RealPCName>VETRIK</RealPCName>
       <macAddresses>
         <string>68:05:CA:1A:35:11</string>
-        <string>00:22:4D:80:6F:A0</string>
       </macAddresses>
       <MacAddress>68:05:CA:1A:35:11</MacAddress>
       <OSInformations>Microsoft Windows 7 Enterprise, 64-bit</OSInformations>
@@ -18,17 +18,18 @@
       <numberOfRamSLots>4</numberOfRamSLots>
       <biosCaption>Default System BIOS</biosCaption>
       <boardProductId>DZ77BH-55K</boardProductId>
-      <accountName>tomasve</accountName>
-      <IPAddress>10.202.20.32</IPAddress>
+      <accountName>TomasVe</accountName>
+      <IPAddress>10.201.20.14</IPAddress>
       <baseImageName />
       <driveEImageName />
       <dartInfo />
-      <ImageSource>Images/Online.ico</ImageSource>
+      <ImageSource>Images/Offline.ico</ImageSource>
       <inWinpe>false</inWinpe>
       <PostInstalls />
+      <CustomLog />
     </ComputerDetailsData>
   </TargetComputers>
-  <MachineGroup>Default</MachineGroup>
+  <MachineGroup>!Testing</MachineGroup>
   <WakeOnLan>true</WakeOnLan>
   <Configuration>false</Configuration>
   <ForceInstall>false</ForceInstall>

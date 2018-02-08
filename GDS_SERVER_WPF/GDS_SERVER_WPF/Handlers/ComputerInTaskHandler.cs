@@ -63,12 +63,20 @@ namespace GDS_SERVER_WPF.Handlers
             while (receivePacket.ID != FLAG.CLONING_DONE  && receivePacket.ID != FLAG.CLONING_ERROR && !stopped)
             {
                 if (receivePacket.ID == FLAG.RESTART || receivePacket.ID == FLAG.SYN_FLAG_WINPE)
-                {
+                {                    
                     ChangeProgressData("NEED RESTART");
+                    restart = true;
                     return;
                 }
                 if (receivePacket.clonningMessage != "")
+                {
                     ChangeProgressData(receivePacket.clonningMessage);
+                    if(receivePacket.clonningMessage.Contains("CLONE FAILED"))
+                    {
+                        restart = true;
+                        return;
+                    }
+                }
                 semaphoreForCloning.WaitOne();
             }
             cloning = false;            
@@ -121,6 +129,11 @@ namespace GDS_SERVER_WPF.Handlers
                 catch
                 {
                     connection = null;
+                }
+                if((receivePacket.ID == FLAG.SYN_FLAG || receivePacket.ID == FLAG.SYN_FLAG_WINPE) && (receivePacket.ID != stepDataIdentifier1 || receivePacket.ID != stepDataIdentifier2))
+                {
+                    restart = true;
+                    return;
                 }
                 Thread.Sleep(WaitingTime);
             }
@@ -333,11 +346,11 @@ namespace GDS_SERVER_WPF.Handlers
                     return;
                 }
                 WaitForCloningDone();
-                if (receivePacket.ID == FLAG.RESTART || receivePacket.ID == FLAG.SYN_FLAG_WINPE)
+                if (receivePacket.ID == FLAG.RESTART || receivePacket.ID == FLAG.SYN_FLAG_WINPE || restart)
                 {
                     progressComputerData = new ProgressComputerData("Images/Failed.ico", computer.Name, "RESTART CLONNIG", "", computer.MacAddress);
                     SaveProgress();
-                    CloningImage();
+                    Steps();
                     return;
                 }
                 SoftwareAndFileActionsWinPE();
@@ -400,23 +413,44 @@ namespace GDS_SERVER_WPF.Handlers
             if(taskData.WakeOnLan)
             {
                 WakeOnLanHandler.runWakeOnLan(computer.macAddresses, ipAddresses);
-            }
+            }            
         }
-        
+
+        public void Steps()
+        {
+            Start:
+            restart = false;
+            cloning = false;
+            failed = false;
+            finish = false;
+            stopped = false;
+            FindClient();           
+            WakeOnLan();
+            CheckOnline();
+            if (restart)
+                goto Start;
+            CloningImage();
+            if (restart)
+                goto Start;
+            SoftwareAndFileActionsInOS();
+            if (restart)
+                goto Start;
+            Configuration();
+            if (restart)
+                goto Start;
+            ShutDown();
+            if (restart)
+                goto Start;
+            ChangeProgressData("FINISH");
+            finish = true;
+        }        
+
         public void Start()
         {
             try
             {
                 semaphoreForTask.WaitOne();
-                FindClient();
-                WakeOnLan();
-                CheckOnline();
-                CloningImage();
-                SoftwareAndFileActionsInOS();
-                Configuration();
-                ShutDown();
-                ChangeProgressData("FINISH");
-                finish = true;
+                Steps();
                 semaphoreForTask.Release();
             }
             catch (Exception ex)

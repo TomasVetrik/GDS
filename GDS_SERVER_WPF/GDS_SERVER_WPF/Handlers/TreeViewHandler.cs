@@ -27,18 +27,18 @@ namespace GDS_SERVER_WPF
         public void ListDirectory(string path)
         {
             var rootDirectoryInfo = new DirectoryInfo(path);
-            treeView.Items.Add(CreateDirectoryNode(rootDirectoryInfo));
+            if(rootDirectoryInfo.Name != "Lock")            
+                treeView.Items.Add(CreateDirectoryNode(rootDirectoryInfo));
         }
 
         public TreeViewItem CreateDirectoryNode(DirectoryInfo directoryInfo)
         {
             if (directoryInfo.Exists)
             {
-                var directoryNode = new TreeViewItem { Header = directoryInfo.Name };
-                foreach (var directory in directoryInfo.GetDirectories())
-                    directoryNode.Items.Add(CreateDirectoryNode(directory));
-
-                return directoryNode;
+                    var directoryNode = new TreeViewItem { Header = directoryInfo.Name };
+                    foreach (var directory in directoryInfo.GetDirectories())
+                        directoryNode.Items.Add(CreateDirectoryNode(directory));                
+                    return directoryNode;                
             }
             return null;
         }

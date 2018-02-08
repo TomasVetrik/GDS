@@ -33,7 +33,7 @@ namespace GDS_SERVER_WPF
         Login,
         SEND_TASK_CONFIG,
         SEND_CONFIG,
-        CLOSE
+        CLOSE        
     }
 
     [ProtoContract]
