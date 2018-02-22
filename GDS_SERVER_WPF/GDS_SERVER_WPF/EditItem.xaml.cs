@@ -14,6 +14,7 @@ namespace GDS_SERVER_WPF
         public List<string> Names = new List<string>();
         public bool cancel = true;
         public bool clickOnEnter = false;
+        public bool skipControll = false;
 
         public EditItem()
         {
@@ -29,7 +30,7 @@ namespace GDS_SERVER_WPF
         private void SetDefault()
         {
             labelError.Content = "";
-            labelNewName.Foreground = labelOldName.Foreground =  Brushes.Black;
+            labelNewText.Foreground = labelOldText.Foreground =  Brushes.Black;
         }
 
         private void ClickOK()
@@ -37,16 +38,19 @@ namespace GDS_SERVER_WPF
             SetDefault();            
             foreach (string name in Names)
             {
-                if (name == textBoxNewName.Text)
+                if (name == textBoxNewText.Text)
                 {
-                    SetErrorMessage(labelOldName, "The name: '" + name + "' exists");                    
+                    SetErrorMessage(labelOldText, "'" + name + "' exists");                    
                     return;
                 }
             }
-            if (textBoxNewName.Text.IndexOfAny(new char[] { '\\', '/', ':', '*', '?', '"', '<', '>', '|' }) != -1)
+            if (!skipControll)
             {
-                SetErrorMessage(labelNewName, "'Name' cannot contains \\ / : * ? \" < > |");                
-                return;
+                if (textBoxNewText.Text.IndexOfAny(new char[] { '\\', '/', ':', '*', '?', '"', '<', '>', '|' }) != -1)
+                {
+                    SetErrorMessage(labelNewText, "Cannot contains \\ / : * ? \" < > |");
+                    return;
+                }
             }
             cancel = false;
             this.Close();
@@ -64,9 +68,9 @@ namespace GDS_SERVER_WPF
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            textBoxNewName.Focus();
-            textBoxNewName.SelectAll();
-            if (labelOldName.Content.ToString() == "")
+            textBoxNewText.Focus();
+            textBoxNewText.SelectAll();
+            if (labelOldText.Content.ToString() == "")
                 labelOldNameStatic.Visibility = Visibility.Hidden;
         }
 

@@ -139,7 +139,7 @@ namespace GDS_SERVER_WPF
         
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {            
-            FillDataGridClassRoom();
+            //FillDataGridClassRoom();
             CheckDirectories();            
             treeViewMachinesAndTasksHandler = new TreeViewHandler(treeViewMachinesAndTasks);            
             listViewMachinesAndTasksHandler = new ListViewMachinesAndTasksHandler(listViewMachineGroups,listViewMachineGroupsLock, listViewTasks, treeViewMachinesAndTasksHandler);
@@ -187,13 +187,68 @@ namespace GDS_SERVER_WPF
         {
             RenameItem((ComputerDetailsData)listViewMachineGroupsLock.SelectedItem);
         }
+        private void MenuItemMachineGroupsLock_Click(object sender, RoutedEventArgs e)
+        {
+            if((ComputerDetailsData)listViewMachineGroups.SelectedItem != null)
+            {
+                List<ComputerDetailsData> computers = new List<ComputerDetailsData>();
+                foreach (ComputerDetailsData computer in listViewMachineGroups.SelectedItems)
+                {
+                    computers.Add(computer);
+                }
+                var editItemDialog = new EditItem();
+                editItemDialog.ShowDialog();
+                if (!editItemDialog.cancel)
+                {
+                    foreach (ComputerDetailsData computer in computers)
+                    {
+                        Lock(computer, editItemDialog.textBoxNewText.Text);
+                    }
+                }
+                listViewMachinesAndTasksHandler.Refresh();
+            }
+        }
         private void MenuItemMachineGroupsEditDetailLock_Click(object sender, RoutedEventArgs e)
         {
-            EditDetail((ComputerDetailsData)listViewMachineGroupsLock.SelectedItem);
+            if ((ComputerDetailsData)listViewMachineGroupsLock.SelectedItem != null)
+            {
+                List<ComputerDetailsData> computers = new List<ComputerDetailsData>();
+                foreach (ComputerDetailsData computer in listViewMachineGroupsLock.SelectedItems)
+                {
+                    computers.Add(computer);
+                }
+                var editItemDialog = new EditItem();
+                editItemDialog.labelOldText.Content = computers[0].Detail;
+                editItemDialog.ShowDialog();
+                if (!editItemDialog.cancel)
+                {
+                    foreach (ComputerDetailsData computer in computers)
+                    {
+                        EditLockDetail(computer, editItemDialog.textBoxNewText.Text);
+                    }
+                }
+                listViewMachinesAndTasksHandler.Refresh();
+            }
         }
         private void MenuItemMachineGroupsUnLockLock_Click(object sender, RoutedEventArgs e)
         {
-            UnLock((ComputerDetailsData)listViewMachineGroupsLock.SelectedItem);
+            if ((ComputerDetailsData)listViewMachineGroupsLock.SelectedItem != null)
+            {
+                List<ComputerDetailsData> computers = new List<ComputerDetailsData>();
+                foreach (ComputerDetailsData computer in listViewMachineGroupsLock.SelectedItems)
+                {
+                    computers.Add(computer);
+                }
+                MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure?", "UnLock Confirmation", System.Windows.MessageBoxButton.YesNo);
+                if (messageBoxResult == MessageBoxResult.Yes)
+                {
+                    foreach (ComputerDetailsData computer in computers)
+                    {
+                        UnLock(computer);
+                    }
+                }
+                listViewMachinesAndTasksHandler.Refresh();
+            }
         }
         private void MenuItemMachineGroupsWOLLock_Click(object sender, RoutedEventArgs e)
         {
@@ -222,14 +277,141 @@ namespace GDS_SERVER_WPF
         private void MenuItemCreateFolder_Click(object sender, RoutedEventArgs e)
         {
             NewFolder();
-        }     
-        private void EditDetail(ComputerDetailsData computer)
+        }
+        private void Lock(ComputerDetailsData computer, string Detail)
         {
-
+            if (computer != null)
+            {
+                computer.pathNode = treeViewMachinesAndTasksHandler.GetNodePath();
+                computer.Detail = Detail;
+                string oldPath = computer.pathNode + "\\" + computer.Name + ".my";
+                string path = LockPath + "\\" + computer.Name + ".my";
+                string oldPathConfig = computer.pathNode + "\\" + computer.Name + ".cfg";
+                string pathConfig = LockPath + "\\" + computer.Name + ".cfg";
+                bool exist = false;
+                bool cancel = false;
+                for (int i = listViewMachineGroupsLock.Items.Count - 1; i >= 0; i--)
+                {
+                    ComputerDetailsData item = (ComputerDetailsData)listViewMachineGroupsLock.Items[i];
+                    if (item.Name == computer.Name)
+                    {
+                        exist = true;
+                        switch (MessageBox.Show("Replace Item: '" + computer.Name + "'", "Warning", MessageBoxButton.YesNoCancel, MessageBoxImage.Warning))
+                        {
+                            case MessageBoxResult.Yes:
+                                {
+                                    if (File.Exists(path))
+                                    {
+                                        File.Delete(path);
+                                    }
+                                    if (File.Exists(oldPath))
+                                    {
+                                        File.Delete(oldPath);
+                                    }
+                                    FileHandler.Save(computer, path);
+                                    if (File.Exists(pathConfig))
+                                    {
+                                        File.Delete(pathConfig);
+                                    }
+                                    File.Move(oldPathConfig, pathConfig);
+                                    break;
+                                }
+                            case MessageBoxResult.No:
+                                {
+                                    break;
+                                }
+                            case MessageBoxResult.Cancel:
+                                {
+                                    cancel = true;
+                                    break;
+                                }
+                        }
+                        break;
+                    }
+                }
+                if (!exist && !cancel)
+                {
+                    if (File.Exists(oldPath))
+                    {
+                        File.Delete(oldPath);
+                    }
+                    FileHandler.Save(computer, path);
+                    if (File.Exists(oldPathConfig))
+                    {
+                        File.Move(oldPathConfig, pathConfig);
+                    }                    
+                }
+            }    
+        }
+        private void EditLockDetail(ComputerDetailsData computer, string Detail)
+        {
+            computer.Detail = Detail;
+            FileHandler.Save(computer, LockPath + "\\" + computer.Name + ".my");            
         }
         private void UnLock(ComputerDetailsData computer)
         {
-
+            if (computer != null)
+            {              
+                computer.Detail = "";
+                string path = computer.pathNode + "\\" + computer.Name + ".my";
+                string oldPath = LockPath + "\\" + computer.Name + ".my";
+                string pathConfig = computer.pathNode + "\\" + computer.Name + ".cfg";
+                string oldPathConfig = LockPath + "\\" + computer.Name + ".cfg";
+                bool exist = false;
+                bool cancel = false;
+                var computersInfoFiles = Directory.GetFiles(computer.pathNode, "*.my", SearchOption.AllDirectories);
+                foreach (string filePath in computersInfoFiles)
+                {
+                    string Name = Path.GetFileName(filePath).Replace(".my", "");
+                    if (Name == computer.Name)
+                    {
+                        exist = true;
+                        switch (MessageBox.Show("Replace Item: '" + computer.Name + "'", "Warning", MessageBoxButton.YesNoCancel, MessageBoxImage.Warning))
+                        {
+                            case MessageBoxResult.Yes:
+                                {
+                                    if (File.Exists(path))
+                                    {
+                                        File.Delete(path);
+                                    }
+                                    if (File.Exists(oldPath))
+                                    {
+                                        File.Delete(oldPath);
+                                    }
+                                    FileHandler.Save(computer, path);
+                                    if (File.Exists(pathConfig))
+                                    {
+                                        File.Delete(pathConfig);
+                                    }
+                                    File.Move(oldPathConfig, pathConfig);
+                                    break;
+                                }
+                            case MessageBoxResult.No:
+                                {
+                                    break;
+                                }
+                            case MessageBoxResult.Cancel:
+                                {
+                                    cancel = true;
+                                    break;
+                                }
+                        }
+                        break;
+                    }
+                }
+                if (!exist && !cancel)
+                {
+                    if (File.Exists(oldPath))
+                    {
+                        File.Delete(oldPath);
+                    }
+                    FileHandler.Save(computer, path);
+                    if (File.Exists(oldPathConfig))
+                    {
+                        File.Move(oldPathConfig, pathConfig);
+                    }
+                }
+            }
         }
         private void NewTask()
         {
@@ -747,11 +929,11 @@ namespace GDS_SERVER_WPF
             addFolderDialog.ShowDialog();
             if (!addFolderDialog.cancel)
             {
-                string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + addFolderDialog.textBoxNewName.Text;                
+                string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + addFolderDialog.textBoxNewText.Text;                
                 if (!Directory.Exists(path))
                 {
                     Directory.CreateDirectory(path);
-                    treeViewMachinesAndTasksHandler.AddItem(addFolderDialog.textBoxNewName.Text);                    
+                    treeViewMachinesAndTasksHandler.AddItem(addFolderDialog.textBoxNewText.Text);                    
                     listViewMachinesAndTasksHandler.Refresh();
                 }
             }
@@ -763,8 +945,8 @@ namespace GDS_SERVER_WPF
             {
                 string oldPath = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + oldItem.Name;                
                 var renameItemDialog = new EditItem();
-                renameItemDialog.textBoxNewName.Text = oldItem.Name;
-                renameItemDialog.labelOldName.Content = oldItem.Name;
+                renameItemDialog.textBoxNewText.Text = oldItem.Name;
+                renameItemDialog.labelOldText.Content = oldItem.Name;
                 foreach (TaskData item in listViewTasks.Items)
                 {
                     if (item.ImageSource == oldItem.ImageSource)
@@ -773,19 +955,19 @@ namespace GDS_SERVER_WPF
                 renameItemDialog.ShowDialog();
                 if (!renameItemDialog.cancel)
                 {
-                    string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + renameItemDialog.textBoxNewName.Text;
+                    string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + renameItemDialog.textBoxNewText.Text;
                     if (oldItem.ImageSource.Contains("Folder"))
                     {
                         if (Directory.Exists(oldPath))
                             Directory.Move(oldPath, path);
-                        treeViewMachinesAndTasksHandler.RenameItem(oldItem.Name, renameItemDialog.textBoxNewName.Text);
+                        treeViewMachinesAndTasksHandler.RenameItem(oldItem.Name, renameItemDialog.textBoxNewText.Text);
                     }
                     else
                     {
                         oldPath += ".my";
                         path += ".my";
                         TaskData taksData = FileHandler.Load<TaskData>(oldPath);
-                        taksData.Name = renameItemDialog.textBoxNewName.Text;
+                        taksData.Name = renameItemDialog.textBoxNewText.Text;
                         if (File.Exists(oldPath))
                             File.Delete(oldPath);
                         FileHandler.Save<TaskData>(taksData, path);
@@ -806,8 +988,8 @@ namespace GDS_SERVER_WPF
                     return;
                 }
                 var renameItemDialog = new EditItem();
-                renameItemDialog.textBoxNewName.Text = oldItem.Name;
-                renameItemDialog.labelOldName.Content = oldItem.Name;
+                renameItemDialog.textBoxNewText.Text = oldItem.Name;
+                renameItemDialog.labelOldText.Content = oldItem.Name;
                 foreach (ComputerDetailsData item in listViewMachineGroups.Items)
                 {
                     if (item.ImageSource == oldItem.ImageSource)
@@ -816,19 +998,19 @@ namespace GDS_SERVER_WPF
                 renameItemDialog.ShowDialog();
                 if (!renameItemDialog.cancel)
                 {
-                    string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + renameItemDialog.textBoxNewName.Text;
+                    string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + renameItemDialog.textBoxNewText.Text;
                     if (oldItem.ImageSource.Contains("Folder"))
                     {
                         if (Directory.Exists(oldPath))
                             Directory.Move(oldPath, path);
-                        treeViewMachinesAndTasksHandler.RenameItem(oldItem.Name, renameItemDialog.textBoxNewName.Text);
+                        treeViewMachinesAndTasksHandler.RenameItem(oldItem.Name, renameItemDialog.textBoxNewText.Text);
                    } 
                     else
                     {
                         oldPath += ".my";
                         path += ".my";
                         ComputerDetailsData machineData = FileHandler.Load<ComputerDetailsData>(oldPath);
-                        machineData.Name = renameItemDialog.textBoxNewName.Text;
+                        machineData.Name = renameItemDialog.textBoxNewText.Text;
                         if (File.Exists(oldPath))
                             File.Move(oldPath, path);
                         if (File.Exists(oldPath.Replace(".my", ".cfg")))
@@ -929,9 +1111,13 @@ namespace GDS_SERVER_WPF
                         if (cancel) { break; }
                         string oldPath = nodePathOld + "\\" + itemClipBoard.Name;
                         string path = nodePath + "\\" + itemClipBoard.Name;
+                        string oldPathConfig = "";
+                        string pathConfig = "";
                         if (!itemClipBoard.ImageSource.Contains("Folder_Selected.ico"))
                         {
+                            oldPathConfig = oldPath + ".cfg";
                             oldPath += ".my";
+                            pathConfig = path + ".cfg";
                             path += ".my";
                         }
                         for(int i = listViewMachineGroups.Items.Count - 1; i >= 0; i--)                        
@@ -956,6 +1142,11 @@ namespace GDS_SERVER_WPF
                                                     File.Delete(path);
                                                 }
                                                 File.Move(oldPath, path);
+                                                if (File.Exists(pathConfig))
+                                                {
+                                                    File.Delete(pathConfig);
+                                                }
+                                                File.Move(oldPathConfig, pathConfig);
                                             }
                                             break;
                                         }
@@ -983,6 +1174,10 @@ namespace GDS_SERVER_WPF
                                 else
                                 {
                                     File.Move(oldPath, path);
+                                    if (File.Exists(oldPathConfig))
+                                    {
+                                        File.Move(oldPathConfig, pathConfig);
+                                    }
                                 }
                             }
                         }
@@ -1314,7 +1509,34 @@ namespace GDS_SERVER_WPF
 
         private void BtnPostInstallsCopyPath_Click(object sender, RoutedEventArgs e)
         {
-
+            var EditItemDialog = new EditItem();
+            string PathCopyDestination = listViewPostInstallsHandler.postInstallerDestinationPath;
+            string DestinationText = "";
+            if(File.Exists(PathCopyDestination))
+            {
+                DestinationText = File.ReadAllText(PathCopyDestination);
+            }
+            EditItemDialog.skipControll = true;
+            EditItemDialog.labelOldText.Content = DestinationText;
+            EditItemDialog.ShowDialog();
+            if (!EditItemDialog.cancel)
+            {
+                if (EditItemDialog.textBoxNewText.Text != "")
+                {
+                    File.WriteAllText(PathCopyDestination, EditItemDialog.textBoxNewText.Text);
+                }
+                else
+                {
+                    if (File.Exists(PathCopyDestination))
+                    {
+                        MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Do you want delete Copy Path Destination File?", "Confirmation", System.Windows.MessageBoxButton.YesNo);
+                        if (messageBoxResult == MessageBoxResult.Yes)
+                        {
+                            File.Delete(PathCopyDestination);
+                        }
+                    }
+                }
+            }
         }
 
         private void BtnPostInstallsChangeNote_Click(object sender, RoutedEventArgs e)
@@ -1491,6 +1713,11 @@ namespace GDS_SERVER_WPF
                 }
                 catch { }
             }
+        }
+
+        private void listViewMachineGroupsLock_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            ListViewComputers_MouseDoubleClick(listViewMachineGroupsLock, treeViewMachinesAndTasksHandler);
         }
     }
 

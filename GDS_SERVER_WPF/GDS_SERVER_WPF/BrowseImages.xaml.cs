@@ -316,11 +316,11 @@ namespace GDS_SERVER_WPF
             addFolderDialog.ShowDialog();
             if (!addFolderDialog.cancel)
             {
-                string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + addFolderDialog.textBoxNewName.Text;
+                string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + addFolderDialog.textBoxNewText.Text;
                 if (!Directory.Exists(path))
                 {
                     Directory.CreateDirectory(path);
-                    treeViewMachinesAndTasksHandler.AddItem(addFolderDialog.textBoxNewName.Text);
+                    treeViewMachinesAndTasksHandler.AddItem(addFolderDialog.textBoxNewText.Text);
                     listViewBrowseImagesHandler.Refresh();
                 }
             }
@@ -400,8 +400,8 @@ namespace GDS_SERVER_WPF
             {
                 string oldPath = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + oldItem.Name;
                 var renameItemDialog = new EditItem();
-                renameItemDialog.textBoxNewName.Text = oldItem.Name;
-                renameItemDialog.labelOldName.Content = oldItem.Name;
+                renameItemDialog.textBoxNewText.Text = oldItem.Name;
+                renameItemDialog.labelOldText.Content = oldItem.Name;
                 foreach (ImageData item in listView.Items)
                 {
                     if (item.ImageSource == oldItem.ImageSource)
@@ -410,19 +410,19 @@ namespace GDS_SERVER_WPF
                 renameItemDialog.ShowDialog();
                 if (!renameItemDialog.cancel)
                 {
-                    string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + renameItemDialog.textBoxNewName.Text;
+                    string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + renameItemDialog.textBoxNewText.Text;
                     if (oldItem.ImageSource.Contains("Folder"))
                     {
                         if (Directory.Exists(oldPath))
                             Directory.Move(oldPath, path);
-                        treeViewMachinesAndTasksHandler.RenameItem(oldItem.Name, renameItemDialog.textBoxNewName.Text);
+                        treeViewMachinesAndTasksHandler.RenameItem(oldItem.Name, renameItemDialog.textBoxNewText.Text);
                     }
                     else
                     {
                         oldPath += ".my";
                         path += ".my";
                         ImageData imageData = FileHandler.Load<ImageData>(oldPath);
-                        imageData.Name = renameItemDialog.textBoxNewName.Text;
+                        imageData.Name = renameItemDialog.textBoxNewText.Text;
                         if (File.Exists(oldPath))
                             File.Delete(oldPath);
                         FileHandler.Save<ImageData>(imageData, path);

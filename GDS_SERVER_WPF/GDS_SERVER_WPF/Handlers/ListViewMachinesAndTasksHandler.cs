@@ -111,13 +111,7 @@ namespace GDS_SERVER_WPF
                                 computerData.ImageSource = "Images/Winpe.ico";
                             break;
                         }
-                    }
-                    string lockFilePath = computerFile.Replace(".my", ".lock");
-                    if (File.Exists(lockFilePath))
-                    {
-                        var lockDetailsData = FileHandler.Load<LockDetailsData>(lockFilePath);
-                        computerData.Detail = lockDetailsData.details;
-                    }
+                    }                    
                     machines_lock.Items.Add(computerData);
                 }
             }

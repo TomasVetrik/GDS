@@ -71,7 +71,7 @@ namespace GDS_SERVER_WPF
         public string _sourceIdentifier;
         public ShortGuid SourceIdentifier { get { return new ShortGuid(_sourceIdentifier); } }
         [ProtoMember(22)]
-        public string CustomLog { get; set; }
+        public string CustomLog { get; set; }        
 
         public override string ToString()
         {

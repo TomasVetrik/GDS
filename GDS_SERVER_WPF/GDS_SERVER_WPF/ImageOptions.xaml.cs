@@ -98,7 +98,7 @@ namespace GDS_SERVER_WPF
                 addVHDNameDialog.Names.Add(name);
             }
             addVHDNameDialog.ShowDialog();
-            listBoxVHDNames.Items.Add(addVHDNameDialog.textBoxNewName.Text);
+            listBoxVHDNames.Items.Add(addVHDNameDialog.textBoxNewText.Text);
         }
 
         private void buttonOSAbrivationsAdd_Click(object sender, RoutedEventArgs e)

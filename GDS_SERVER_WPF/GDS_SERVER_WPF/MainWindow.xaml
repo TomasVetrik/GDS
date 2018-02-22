@@ -75,6 +75,7 @@
                                 <MenuItem x:Name="menuItemFeaturesWG" Header="Features">
                                     <MenuItem Header="Wake On Lan" InputGestureText="CTRL+W" Click="MenuItemMachineGroupsWOL_Click"/>
                                     <MenuItem Header="RDP" InputGestureText="CTRL+R" Click="MenuItemMachineGroupsRDP_Click"/>
+                                    <MenuItem Header="Lock" InputGestureText="CTRL+L" Click="MenuItemMachineGroupsLock_Click"/>
                                     <MenuItem Header="Configure Template" InputGestureText="CTRL+T" Click="MenuItemMachineGroupsConfigureTemplate_Click" />
                                 </MenuItem>
                                 <MenuItem Header="New Folder" InputGestureText="CTRL+SHIFT+N" Click="MenuItemCreateFolder_Click"/>
@@ -145,7 +146,7 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <ListView Grid.Row="0" Grid.Column="3" x:Name="listViewMachineGroupsLock" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White" MouseDoubleClick="ListViewMachineGroups_MouseDoubleClick" SelectionChanged="ListViewMachineGroups_SelectionChanged" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" Focusable="False" MouseDown="ListViewMachineGroups_MouseDown" KeyUp="ListViewMachineGroups_KeyUp_1" >
+                    <ListView Grid.Row="0" Grid.Column="3" x:Name="listViewMachineGroupsLock" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White" SelectionChanged="ListViewMachineGroups_SelectionChanged" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" Focusable="False" MouseDown="ListViewMachineGroups_MouseDown" KeyUp="ListViewMachineGroups_KeyUp_1" MouseDoubleClick="listViewMachineGroupsLock_MouseDoubleClick" >
                         <ListView.ContextMenu>
                             <ContextMenu>
                                 <MenuItem x:Name="menuItemRenameWGLock" Header="Rename" InputGestureText="F2"  Click="MenuItemMachineGroupsRenameLock_Click"/>
@@ -558,7 +559,9 @@
                     <Label Content="** Shutdown after all" Grid.Column="4" Grid.Row="5" FontWeight="Bold" VerticalAlignment="Bottom"/>
                     <Label Content="Note to Installation:" Grid.Column="2" Grid.Row="6" FontWeight="Bold" VerticalAlignment="Bottom" />
                     <Border BorderThickness="1" BorderBrush="Black" Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="3" Margin="5">
-                        <TextBlock x:Name="txtBlockPostInstalls" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="Black" Background="White" FontSize="16" TextWrapping="Wrap" />
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <TextBlock x:Name="txtBlockPostInstalls" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="Black" Background="White" FontSize="16" TextWrapping="Wrap" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" />
+                        </ScrollViewer>
                     </Border>
                     <Button x:Name="btnPostInstallsCopyPath" Grid.Column="2" Grid.Row="8" Content="Copy Path" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Margin="5" Click="BtnPostInstallsCopyPath_Click"/>
                     <Button x:Name="btnPostInstallsChangeNote" Grid.Column="4" Grid.Row="8" Content="Change Note" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Margin="5" Click="BtnPostInstallsChangeNote_Click"/>
