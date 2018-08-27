@@ -65,42 +65,46 @@ namespace GDS_Client
             try
             {
                 computerDetails = new List<string>();
-                computerDetailsData.RealPCName = System.Environment.MachineName;
+                computerDetailsData.RealPCName = System.Environment.MachineName;                
                 computerDetails.Add("Computer Name||" + computerDetailsData.RealPCName);
 
                 var MacAddress = HardwareInfo.GetMacAddresses();                
                 if (MacAddress.Count == 0)
                 {
-                    SetComputerDetails();
-                    return;
+                    var Macs = HardwareInfo.GetMacAddresses2();
+                    if (Macs.Count == 0)
+                    {
+                        SetComputerDetails();
+                        return;
+                    }
+                    MacAddress = Macs;
                 }
-                computerDetailsData._sourceIdentifier = NetworkComms.NetworkIdentifier;
+                computerDetailsData._sourceIdentifier = NetworkComms.NetworkIdentifier;                
                 computerDetailsData.macAddresses = MacAddress;
                 computerDetailsData.MacAddress = MacAddress[0];
-                computerDetails.Add("MacAddress||" + MacAddress);
+                computerDetails.Add("MacAddress||" + MacAddress);                
                 computerDetailsData.OSInformations = HardwareInfo.GetOSInformation();                
                 computerDetails.Add("OS Informations||" + computerDetailsData.OSInformations);
-                computerDetailsData.processorInfo = HardwareInfo.GetProcessorInformation();
+                computerDetailsData.processorInfo = HardwareInfo.GetProcessorInformation();                
                 computerDetails.Add("Processor Informations||" + computerDetailsData.processorInfo);
                 computerDetailsData.physicalMemoryInfo = HardwareInfo.GetPhysicalMemory();
                 computerDetails.Add("Memory Size||" + computerDetailsData.physicalMemoryInfo);
-                computerDetailsData.numberOfRamSLots = HardwareInfo.GetNoRamSlots();
+                computerDetailsData.numberOfRamSLots = HardwareInfo.GetNoRamSlots();               
                 computerDetails.Add("Used Memory Slots||" + computerDetailsData.numberOfRamSLots);
-                computerDetailsData.biosCaption = HardwareInfo.GetBIOScaption();
+                computerDetailsData.biosCaption = HardwareInfo.GetBIOScaption();                
                 computerDetails.Add("BIOS Caption||" + computerDetailsData.biosCaption);
-                computerDetailsData.boardProductId = HardwareInfo.GetBoardProductId();
+                computerDetailsData.boardProductId = HardwareInfo.GetBoardProductId();                
                 computerDetails.Add("Board ID||" + computerDetailsData.boardProductId);
-                computerDetailsData.accountName = HardwareInfo.GetAccountName();
+                computerDetailsData.accountName = HardwareInfo.GetAccountName();                
                 computerDetails.Add("User Account Name||" + computerDetailsData.accountName);
-                computerDetailsData.baseImageName = GetBaseImageName();
+                computerDetailsData.baseImageName = GetBaseImageName();                
                 computerDetails.Add("BASE NAME||" + computerDetailsData.baseImageName);
-                computerDetailsData.driveEImageName = GeDriveEImageName();
+                computerDetailsData.driveEImageName = GeDriveEImageName();                
                 computerDetails.Add("DRIVEE NAME||" + computerDetailsData.driveEImageName);
-                computerDetailsData.dartInfo = GetDartViewerInfo(0);
+                computerDetailsData.dartInfo = GetDartViewerInfo(0);                
                 computerDetails.Add("Dart Viewer||" + computerDetailsData.dartInfo);
                 computerDetailsData.CustomLog = "";
                 computerDetails.Add("Custom Log||" + computerDetailsData.CustomLog);
-
             }
             catch (Exception ex)
             {

@@ -31,5 +31,16 @@ namespace GDS_SERVER_WPF.DataCLasses
             }
             return FilePath;
         }
+
+        public void LoadDataFromList(List<string> list)
+        {
+            foreach (string line in list)
+            {
+                if (line != "")
+                {
+
+                }
+            }
+        }
     }
 }

@@ -1,0 +1,21 @@
+SHRP16_x64
+TargetComputers||LEKTOR928,STUDENT928-01,STUDENT928-02,STUDENT928-03,STUDENT928-04,STUDENT928-05,STUDENT928-06,STUDENT928-07,STUDENT928-08
+Clone||True
+Image Source Path||.\Images\W7_Off2k16_x64_MultiProfile
+DriveE Source Path||.\DriveE\SHRP16
+SAFA||False
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||13.04.2018 20:58:40
+WaitingTime||30
+Machine Group||928
+Configuration||True
+WithoutVHD||False

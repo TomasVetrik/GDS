@@ -1,0 +1,21 @@
+JPROG_v4
+TargetComputers||LEKTORSK1,STUDENTSK1-01,STUDENTSK1-02,STUDENTSK1-03,STUDENTSK1-04,STUDENTSK1-05,STUDENTSK1-06,STUDENTSK1-07,STUDENTSK1-08
+Clone||True
+Image Source Path||.\Images\GOC\JPROG
+DriveE Source Path||
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||D:\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||20. 10. 2017 16:22:43
+WaitingTime||30
+Machine Group||UcebnaSK01
+Configuration||True
+WithoutVHD||False

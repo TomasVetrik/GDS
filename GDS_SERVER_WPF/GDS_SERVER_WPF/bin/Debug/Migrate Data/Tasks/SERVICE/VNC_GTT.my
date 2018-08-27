@@ -1,0 +1,30 @@
+VNC_GTT
+TargetComputers||LEKTOR1034,STUDENT1034-01,STUDENT1034-02,STUDENT1034-03,STUDENT1034-04,STUDENT1034-05,STUDENT1034-06,STUDENT1034-07
+Clone||False
+Image Source Path||
+DriveE Source Path||
+SAFA||True
+SourceDirectory||I:\Images\Startup_OS\PostInstallers\VNC_GTT
+TargetDirectory||D:\Temp\PostInstallers\VNC_GTT
+I:\Images\Startup_OS\PostInstallers\VNC_GTT\Descriptions.txt
+I:\Images\Startup_OS\PostInstallers\VNC_GTT\GenVNCProfiles.ps1
+I:\Images\Startup_OS\PostInstallers\VNC_GTT\Shortcut.vbs
+I:\Images\Startup_OS\PostInstallers\VNC_GTT\Start.bat
+I:\Images\Startup_OS\PostInstallers\VNC_GTT\tightvnc-32bit.msi
+I:\Images\Startup_OS\PostInstallers\VNC_GTT\tightvnc-64bit.msi
+I:\Images\Startup_OS\PostInstallers\VNC_GTT\VNC-Viewer-32bit.exe
+I:\Images\Startup_OS\PostInstallers\VNC_GTT\VNC-Viewer.exe
+I:\Images\Startup_OS\PostInstallers\VNC_GTT\VNC_GTT.ps1
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||D:\Temp\PostInstallers\VNC_GTT\Start.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||22.05.2018 8:31:46
+WaitingTime||30
+Machine Group||1034
+Configuration||False
+WithoutVHD||False

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>Adobe_CS6</Name>
+  <LastExecuted>10.03.2018 13:54:20</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>true</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>true</Cloning>
+  <BaseImageSourcePath>.\Base\Adobe_CS6</BaseImageSourcePath>
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <SourceDirectoryInOS>I:\Startup_OS\PostInstallers\Gimp</SourceDirectoryInOS>
+  <DestinationDirectoryInOS />
+  <CommandsInOS>
+    <string>D:\Autologon.bat</string>
+  </CommandsInOS>
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE />
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE>
+    <string />
+  </CommandsInWINPE>
+  <WaitingTime>40</WaitingTime>
+</TaskData>

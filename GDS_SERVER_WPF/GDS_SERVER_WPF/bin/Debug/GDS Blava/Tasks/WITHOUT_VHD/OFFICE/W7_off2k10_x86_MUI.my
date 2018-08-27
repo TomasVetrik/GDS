@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>W7_off2k10_x86_MUI</Name>
+  <LastExecuted>4. 5. 2017 11:18:01</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>true</Cloning>
+  <BaseImageSourcePath>.\Images\Without_VHD\Office\W7_Off2k10_x86_MUI</BaseImageSourcePath>
+  <WithoutVHD>true</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>false</SoftwareAndFileAction>
+  <SourceDirectoryInOS />
+  <DestinationDirectoryInOS />
+  <CommandsInOS>
+    <string />
+  </CommandsInOS>
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE />
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE>
+    <string />
+  </CommandsInWINPE>
+  <WaitingTime>30</WaitingTime>
+</TaskData>

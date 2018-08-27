@@ -1,0 +1,21 @@
+W7_Off2k10_x86_ECDL
+TargetComputers||MAKER-02
+Clone||True
+Image Source Path||.\Images\W7_Off2k10_x86_ECDL
+DriveE Source Path||
+SAFA||True
+SourceDirectory||I:\Startup_OS\PostInstallers\Shrp0213
+TargetDirectory||
+Force Install||True
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||D:\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||21. 11. 2016 11:25:22
+WaitingTime||31
+Machine Group||MAKERS
+Configuration||True
+WithoutVHD||False

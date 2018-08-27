@@ -35,6 +35,7 @@
         <ListView x:Name="listView" Grid.Column="1" Grid.RowSpan="2"  HorizontalAlignment="Stretch" Height="auto" VerticalAlignment="Stretch" Width="auto" MouseDoubleClick="listView_MouseDoubleClick" MouseDown="listView_MouseDown">
             <ListView.ContextMenu>
                 <ContextMenu>
+                    <MenuItem x:Name="menuItemCreateNew" Header="New Image" InputGestureText="CTRL+N"  Click="MenuItemCreateNewBrowseImage_Click"/>
                     <MenuItem x:Name="menuItemRenameWG" Header="Rename" InputGestureText="F2"  Click="MenuItemRenameBrowseImage_Click"/>
                     <MenuItem x:Name="menuItemDeleteWG" Header="Delete" InputGestureText="DEL" Click="MenuItemDeleteBrowseImage_Click"/>
                     <MenuItem x:Name="menuItemCopy" Header="Copy" InputGestureText="CTRL+C" Click="MenuItemCopyBrowseImage_Click"/>

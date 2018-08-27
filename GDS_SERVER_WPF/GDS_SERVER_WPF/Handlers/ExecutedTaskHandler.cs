@@ -18,14 +18,14 @@ namespace GDS_SERVER_WPF.Handlers
         public ListViewTaskDetailsHandler listViewHandler;
         public List<string> ipAddresses;
         public List<ComputerInTaskHandler> computers = new List<ComputerInTaskHandler>();
-        public Semaphore semaphoreFotSaveFile = new Semaphore(1, 1);
+        public Semaphore semaphoreForSaveFile = new Semaphore(1, 1);
+        public Semaphore semaphoreForFinishTask = new Semaphore(0, 1);
         public List<Thread> computersThreads = new List<Thread>();
         public ListView listViewAll;
         public ListView listViewSelected;
         public ListView listViewTaskDetailsProgress;
+        public string imagePath = "Images/Done.ico";
 
-
-        string imagePath = "Images/Done.ico";
         bool stopped = false;
 
         public ExecutedTaskHandler(ExecutedTaskData _executedTaskData, List<string> _ipAddresses, ListView _listViewAll, ListView _listViewSelected, ListView _listViewTaskDetailsProgress)
@@ -56,9 +56,12 @@ namespace GDS_SERVER_WPF.Handlers
             }
             RefreshList();
             for (int i = 0; i < executedTaskData.taskData.TargetComputers.Count; i++)
-            {                
-                var computer = new ComputerInTaskHandler(executedTaskData, i, ipAddresses, semaphoreFotSaveFile, listViewAll, listViewSelected);
-                computer.ClientsDictionary = ClientsDictionary;
+            {
+                var computer = new ComputerInTaskHandler(executedTaskData, i, ipAddresses, semaphoreForSaveFile, listViewAll, listViewSelected)
+                {
+                    ClientsDictionary = ClientsDictionary,
+                    executedTaskHandler = this
+                };
                 computers.Add(computer);
                 var computerThread = new Thread(computer.Start);
                 computersThreads.Add(computerThread);
@@ -72,6 +75,8 @@ namespace GDS_SERVER_WPF.Handlers
                 listViewTaskDetailsProgress.SelectedItems.Add(listViewTaskDetailsProgress.Items[listViewTaskDetailsProgress.Items.Count - 1]);
             });
             Thread.Sleep(1000);
+
+            //semaphoreForFinishTask.WaitOne();
             foreach (ComputerInTaskHandler computer in computers)
             {
                 computer.semaphoreForTask.WaitOne();
@@ -99,10 +104,10 @@ namespace GDS_SERVER_WPF.Handlers
             executedTaskData.Finished = DateTime.Now.ToString("dd.MM.yyyy HH-mm-ss");
             executedTaskData.Status = status;
             executedTaskData.Failed = (Convert.ToInt16(executedTaskData.Clients) - Convert.ToInt16(executedTaskData.Done)).ToString();
-            semaphoreFotSaveFile.WaitOne();
+            semaphoreForSaveFile.WaitOne();
             FileHandler.Save<ExecutedTaskData>(executedTaskData, executedTaskData.GetFileName());
             RefreshList();
-            semaphoreFotSaveFile.Release();
+            semaphoreForSaveFile.Release();
             RemoveFromListViewTaskProgress();
             RemoveFromListViews();
             AutoClosingMessageBox.Show(executedTaskData.Name + "\n" + executedTaskData.MachineGroup , "DONE", 5000);

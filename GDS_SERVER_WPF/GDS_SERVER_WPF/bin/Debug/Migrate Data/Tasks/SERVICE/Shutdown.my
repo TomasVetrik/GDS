@@ -1,0 +1,21 @@
+Shutdown
+TargetComputers||LEKTOR925,STUDENT925-01,STUDENT925-02,STUDENT925-03,STUDENT925-04,STUDENT925-05,STUDENT925-06,STUDENT925-07,STUDENT925-08,STUDENT925-10,STUDENT925-11,STUDENT925-12
+Clone||False
+Image Source Path||
+DriveE Source Path||
+SAFA||False
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||shutdown /s /t 0
+WOL||False
+Commands(WINPE)||s
+Shutdown||True
+LastExecution||13.05.2018 21:28:06
+WaitingTime||5
+Machine Group||925
+Configuration||False
+WithoutVHD||False

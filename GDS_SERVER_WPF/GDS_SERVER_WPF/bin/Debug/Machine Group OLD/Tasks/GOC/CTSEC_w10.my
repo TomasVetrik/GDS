@@ -1,0 +1,21 @@
+CTSEC_w10
+TargetComputers||STUDENTSK3-08
+Clone||True
+Image Source Path||.\Images\Office\Win10_2k16_x64
+DriveE Source Path||.\DriveE\GOC\CTSEC
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||22. 2. 2018 12:14:01
+WaitingTime||30
+Machine Group||UcebnaSK03
+Configuration||True
+WithoutVHD||False

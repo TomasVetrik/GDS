@@ -16,6 +16,7 @@ namespace GDS_SERVER_WPF.Handlers
     public class ComputerInTaskHandler
     {
         public ExecutedTaskData executedTaskData;
+        public ExecutedTaskHandler executedTaskHandler;
         public Connection connection;
         public int index;
         public List<string> ipAddresses;
@@ -28,6 +29,7 @@ namespace GDS_SERVER_WPF.Handlers
         public bool failed = false;
         public bool finish = false;
         public bool cloning = false;
+        public string cloneFaildMessage = "";
         public Dictionary<ShortGuid, ComputerWithConnection> ClientsDictionary;
         public string step;
         public ListView listViewAll;
@@ -35,8 +37,7 @@ namespace GDS_SERVER_WPF.Handlers
         public Packet receivePacket;
         public ProgressComputerData progressComputerData = new ProgressComputerData();
         TCP_UNICAST tCP_UNICAST = null;
-
-
+        
         Task waitingTask;
         TaskData taskData;
         FLAG stepDataIdentifier1;
@@ -44,7 +45,7 @@ namespace GDS_SERVER_WPF.Handlers
 
         public ComputerInTaskHandler(ExecutedTaskData _executedTaskData, int _index, List<string> _ipAddresses, Semaphore _semaphoreFotSaveFile, ListView _listViewAll, ListView _listViewSelected)
         {
-            step = "WAITING FO ACK";            
+            step = "WAITING FOR ACK";            
             this.executedTaskData = _executedTaskData;            
             this.index = _index;
             this.ipAddresses = _ipAddresses;
@@ -65,17 +66,41 @@ namespace GDS_SERVER_WPF.Handlers
                 if (receivePacket.ID == FLAG.RESTART || receivePacket.ID == FLAG.SYN_FLAG_WINPE)
                 {                    
                     ChangeProgressData("NEED RESTART");
+                    if (receivePacket.ID == FLAG.RESTART)
+                    {
+                        try
+                        {
+                            if (connection != null)
+                            {
+                                SendMessage(receivePacket, connection);
+                            }
+                        }
+                        catch
+                        {
+                            connection = null;
+                        }
+                    }
+                    if (receivePacket.clonningMessage != null && receivePacket.clonningMessage != "")
+                    {                        
+                        if (receivePacket.clonningMessage.Contains("CLONE FAILED"))
+                        {
+                            cloneFaildMessage = receivePacket.clonningMessage;
+                            if (cloneFaildMessage.Contains("CLONE FAILED ACCESS DENIED"))
+                            {
+                                Failed(cloneFaildMessage);
+                                return;
+                            }
+                            restart = true;
+                            return;
+                        }
+                    }
+                    cloneFaildMessage = "CLIENT NEED RESTART";
                     restart = true;
                     return;
                 }
-                if (receivePacket.clonningMessage != "")
+                if (receivePacket.clonningMessage != null && receivePacket.clonningMessage != "")
                 {
-                    ChangeProgressData(receivePacket.clonningMessage);
-                    if(receivePacket.clonningMessage.Contains("CLONE FAILED"))
-                    {
-                        restart = true;
-                        return;
-                    }
+                    ChangeProgressData(receivePacket.clonningMessage);                    
                 }
                 semaphoreForCloning.WaitOne();
             }
@@ -132,6 +157,7 @@ namespace GDS_SERVER_WPF.Handlers
                 }
                 if((receivePacket.ID == FLAG.SYN_FLAG || receivePacket.ID == FLAG.SYN_FLAG_WINPE) && (receivePacket.ID != stepDataIdentifier1 || receivePacket.ID != stepDataIdentifier2))
                 {
+                    cloneFaildMessage = "CLIENT NEED RESTART";
                     restart = true;
                     return;
                 }
@@ -165,9 +191,11 @@ namespace GDS_SERVER_WPF.Handlers
         }
 
         private void ClientSendingFileInOS()
-        {            
-            Packet packet = new Packet(FLAG.START_COPY_FILES, computer, connection.ConnectionInfo.NetworkIdentifier);
-            packet.taskData = taskData;
+        {
+            Packet packet = new Packet(FLAG.START_COPY_FILES, computer, connection.ConnectionInfo.NetworkIdentifier)
+            {
+                taskData = taskData
+            };
             if (taskData.CopyFilesInOS.Count != 0)
             {
                 int PORT = 60000;
@@ -184,9 +212,11 @@ namespace GDS_SERVER_WPF.Handlers
         }
 
         private void ClientSendingFileInWinPE()
-        {            
-            Packet packet = new Packet(FLAG.START_COPY_FILES, computer, connection.ConnectionInfo.NetworkIdentifier);
-            packet.taskData = taskData;
+        {
+            Packet packet = new Packet(FLAG.START_COPY_FILES, computer, connection.ConnectionInfo.NetworkIdentifier)
+            {
+                taskData = taskData
+            };
             if (taskData.CopyFilesInWINPE.Count != 0)
             {    int PORT = 60000;
                 foreach (string number in computer.IPAddress.Split('.'))
@@ -213,8 +243,10 @@ namespace GDS_SERVER_WPF.Handlers
 
         private void SendTaskDataFile()
         {
-            var packet = new Packet(FLAG.SEND_TASK_CONFIG);
-            packet.taskData = taskData;
+            var packet = new Packet(FLAG.SEND_TASK_CONFIG)
+            {
+                taskData = taskData
+            };
             CheckFlags(FLAG.SEND_TASK_CONFIG, packet, FLAG.CLONING_STATUS);
         }
 
@@ -348,9 +380,8 @@ namespace GDS_SERVER_WPF.Handlers
                 WaitForCloningDone();
                 if (receivePacket.ID == FLAG.RESTART || receivePacket.ID == FLAG.SYN_FLAG_WINPE || restart)
                 {
-                    progressComputerData = new ProgressComputerData("Images/Failed.ico", computer.Name, "RESTART CLONNIG", "", computer.MacAddress);
+                    progressComputerData = new ProgressComputerData("Images/Failed.ico", computer.Name, "RESTART CLONNIG", cloneFaildMessage, computer.MacAddress);
                     SaveProgress();
-                    Steps();
                     return;
                 }
                 SoftwareAndFileActionsWinPE();
@@ -441,7 +472,10 @@ namespace GDS_SERVER_WPF.Handlers
             ShutDown();
             if (restart)
                 goto Start;
-            ChangeProgressData("FINISH");
+            if(failed)
+                ChangeProgressData("FAILED");
+            else
+                ChangeProgressData("COMPLETED");
             finish = true;
         }        
 
@@ -451,13 +485,39 @@ namespace GDS_SERVER_WPF.Handlers
             {
                 semaphoreForTask.WaitOne();
                 Steps();
+                /*semaphoreForSaveFile.WaitOne();
+                if (!stopped && !failed)
+                {
+                    executedTaskHandler.executedTaskData.Done = (Convert.ToInt16(executedTaskHandler.executedTaskData.Done) + 1).ToString();
+                }
+                else
+                {
+                    if (failed)
+                    {
+                        executedTaskHandler.imagePath = "Images/Failed.ico";
+                    }
+                }
+                executedTaskHandler.computers.Remove(this);
+                if(executedTaskHandler.computers.Count == 0)
+                {
+                    executedTaskHandler.semaphoreForFinishTask.Release();
+                }
+                semaphoreForSaveFile.Release();*/
                 semaphoreForTask.Release();
             }
             catch (Exception ex)
-            {
-                finish = true;
-                semaphoreForTask.Release();
-                MessageBox.Show("PROBLEMIK START COMPUTER: " + ex.ToString());
+            {                             
+                MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("PROBLEM START COMPUTER: " + ex.ToString() + " \n WILL YOU RESTART CLIENT?", "Confirmation", System.Windows.MessageBoxButton.YesNo);
+                if (messageBoxResult == MessageBoxResult.Yes)
+                {
+                    Start();
+                }
+                else
+                {
+                    finish = true;
+                    ChangeProgressData("FAILED");
+                    semaphoreForTask.Release();
+                }
             }
         }
 

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>PostgreSQL</Name>
+  <LastExecuted>27.10.2017 19:05:00</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>true</Cloning>
+  <BaseImageSourcePath>.\Base\W7_Off2k16_x64_MultiProfile</BaseImageSourcePath>
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <SourceDirectoryInOS>I:\Images\Startup_OS\PostInstallers\VirtualBox_v5</SourceDirectoryInOS>
+  <DestinationDirectoryInOS> D:\Temp\PostInstallers\VirtualBox_v5</DestinationDirectoryInOS>
+  <CommandsInOS>
+    <string>D:\Temp\PostInstallers\virtualbox_v5\start.bat</string>
+  </CommandsInOS>
+  <CopyFilesInOS>
+    <string>I:\Images\Startup_OS\PostInstallers\VirtualBox_v5\CopyDestination.txt</string>
+    <string>I:\Images\Startup_OS\PostInstallers\VirtualBox_v5\Descriptions.txt</string>
+    <string>I:\Images\Startup_OS\PostInstallers\VirtualBox_v5\ofun.cer</string>
+    <string>I:\Images\Startup_OS\PostInstallers\VirtualBox_v5\Oracle_VM_VirtualBox_Extension_Pack-5.0.2-102096.vbox-extpack</string>
+    <string>I:\Images\Startup_OS\PostInstallers\VirtualBox_v5\Start.bat</string>
+    <string>I:\Images\Startup_OS\PostInstallers\VirtualBox_v5\VirtualBox-5.0.2-102096-Win.exe</string>
+  </CopyFilesInOS>
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE />
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE>
+    <string />
+  </CommandsInWINPE>
+  <WaitingTime>31</WaitingTime>
+</TaskData>

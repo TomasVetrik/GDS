@@ -5,13 +5,7 @@ using NetworkCommsDotNet.Connections.TCP;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Net;
-using System.Net.Sockets;
-using System.Runtime.InteropServices;
-using System.Text;
 using System.Threading;
-using System.Xml.Serialization;
 
 namespace GDS_Client
 {
@@ -77,7 +71,7 @@ namespace GDS_Client
             {
                 serverIP = "10.2.0.6";
             }
-            serverIP = "10.201.20.14";
+            //serverIP = "10.201.20.14";
         }
 
         string FileName = @"D:\Temp\GDSClient\GDS_Client_LOG.txt";
@@ -105,12 +99,16 @@ namespace GDS_Client
         public void StartListener()
         {
             messageHandler = new MessageHandler(this);
+            Start:
+            serverIP = null;
             WriteToLogs("Getting IP");
             GetServerIP();
             WriteToLogs("Server IP: " + serverIP);
             computerDetails.SetComputerDetails();
             WriteToLogs("Getting computer details");
             bool created = false;
+            int counter = 0;
+            int MAX_COUNT_REFRESH = 5;
             while (!created)
             {
                 created = true;
@@ -123,10 +121,15 @@ namespace GDS_Client
                         connection = TCPConnection.GetConnection(serverConnectionInfo);
                     }
                     catch
-                    {
+                    {                        
                         Console.WriteLine("Failed with Creating connection");
                         Thread.Sleep(10000);
-                        created = false;
+                        created = false;                        
+                        if (counter == MAX_COUNT_REFRESH)
+                        {                            
+                            goto Start;
+                        }
+                        counter++;
                     }
                 }
                 catch (Exception)

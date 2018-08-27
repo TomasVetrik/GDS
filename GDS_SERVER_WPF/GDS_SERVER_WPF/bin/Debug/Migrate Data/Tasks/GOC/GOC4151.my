@@ -1,0 +1,21 @@
+GOC4151
+TargetComputers||LEKTOR1034,STUDENT1034-01,STUDENT1034-02,STUDENT1034-03,STUDENT1034-04,STUDENT1034-05,STUDENT1034-06,STUDENT1034-07
+Clone||True
+Image Source Path||.\Images\W10_Off2k16_x64_Singleprofile_1703
+DriveE Source Path||.\DriveE\VS_generic_VS2015
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||True
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\GOC4151\Autologon.bat
+WOL||True
+Commands(WINPE)||e:
+Shutdown||False
+LastExecution||21.07.2017 15:46:28
+WaitingTime||30
+Machine Group||1034
+Configuration||True
+WithoutVHD||False

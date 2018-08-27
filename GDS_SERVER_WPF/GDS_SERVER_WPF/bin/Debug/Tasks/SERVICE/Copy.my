@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>Copy</Name>
+  <LastExecuted>20.05.2018 18:43:32</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>false</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>false</Cloning>
+  <BaseImageSourcePath />
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <SourceDirectoryInOS>I:\Images\_Temporary\Venca\Cloud</SourceDirectoryInOS>
+  <DestinationDirectoryInOS>C:\Users\Administrator\Desktop</DestinationDirectoryInOS>
+  <CommandsInOS>
+    <string />
+  </CommandsInOS>
+  <CopyFilesInOS>
+    <string>I:\Images\_Temporary\Venca\Cloud\Student08.rdp</string>
+  </CopyFilesInOS>
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE />
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE>
+    <string />
+  </CommandsInWINPE>
+  <WaitingTime>30</WaitingTime>
+</TaskData>

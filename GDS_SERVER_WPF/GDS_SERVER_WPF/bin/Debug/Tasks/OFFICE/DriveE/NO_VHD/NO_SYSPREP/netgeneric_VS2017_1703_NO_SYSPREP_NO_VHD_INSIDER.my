@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>netgeneric_VS2017_1703_NO_SYSPREP_NO_VHD_INSIDER</Name>
+  <LastExecuted>29.09.2017 12:11:56</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>true</Cloning>
+  <BaseImageSourcePath>.\Base\_NO_VHD\_NO_SYSPREP\W10_Off2k16_x64_SingleProfile_1703_INSIDER</BaseImageSourcePath>
+  <WithoutVHD>true</WithoutVHD>
+  <DriveEImageSourcePath>.\DriveE\VS_generic_VS2017</DriveEImageSourcePath>
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <SourceDirectoryInOS />
+  <DestinationDirectoryInOS />
+  <CommandsInOS>
+    <string>E:\NETgeneric\Autologon.bat</string>
+  </CommandsInOS>
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE />
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE>
+    <string />
+  </CommandsInWINPE>
+  <WaitingTime>30</WaitingTime>
+</TaskData>

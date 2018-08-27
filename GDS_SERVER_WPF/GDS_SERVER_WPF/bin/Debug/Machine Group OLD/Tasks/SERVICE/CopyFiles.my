@@ -1,0 +1,22 @@
+CopyFiles
+TargetComputers||LEKTORSK14,STUDENTSK14-01,STUDENTSK14-02,STUDENTSK14-03,STUDENTSK14-04,STUDENTSK14-05,STUDENTSK14-06,STUDENTSK14-07,STUDENTSK14-08,STUDENTSK14-09,STUDENTSK14-11,STUDENTSK14-12
+Clone||False
+Image Source Path||
+DriveE Source Path||
+SAFA||True
+SourceDirectory||I:\_Uzitocne\BuildManager
+TargetDirectory||E:\
+I:\_Uzitocne\BuildManager\Functions_DriveE.ps1
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||1. 12. 2017 13:29:37
+WaitingTime||30
+Machine Group||UcebnaSK14
+Configuration||False
+WithoutVHD||False

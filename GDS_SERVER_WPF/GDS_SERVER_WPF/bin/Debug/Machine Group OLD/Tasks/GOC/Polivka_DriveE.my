@@ -1,0 +1,21 @@
+Polivka_DriveE
+TargetComputers||LEKTORSK4,STUDENTSK4-01,STUDENTSK4-02,STUDENTSK4-03,STUDENTSK4-04,STUDENTSK4-05,STUDENTSK4-06,STUDENTSK4-07,STUDENTSK4-08
+Clone||True
+Image Source Path||.\Images\Office\Win10_x64_SP_Polivka
+DriveE Source Path||.\DriveE\GOC\VS_Generic_2017
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\NETgeneric\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||24. 11. 2017 15:28:49
+WaitingTime||30
+Machine Group||UcebnaSK04
+Configuration||True
+WithoutVHD||False

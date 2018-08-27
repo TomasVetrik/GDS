@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>Test2</Name>
+  <LastExecuted>12.06.2017 15:49:10</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>false</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>false</Cloning>
+  <BaseImageSourcePath />
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <SourceDirectoryInOS>I:\Images\_Temporary\Venca</SourceDirectoryInOS>
+  <DestinationDirectoryInOS />
+  <CommandsInOS>
+    <string>powershell.exe -executionpolicy unrestricted -File "E:\build-machines.ps1" -ArgumentList "GOC201"</string>
+  </CommandsInOS>
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE />
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE>
+    <string>w:\temp\venca\start.bat</string>
+  </CommandsInWINPE>
+  <WaitingTime>30</WaitingTime>
+</TaskData>

@@ -1,0 +1,20 @@
+SHRP10
+TargetComputers||MAKER-02
+Clone||True
+Image Source Path||.\Images\W7_Off2k10_x86
+DriveE Source Path||.\DriveE\SHRP10
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||27. 10. 2016 14:31:11
+WaitingTime||30
+Machine Group||MAKERS
+Configuration||True

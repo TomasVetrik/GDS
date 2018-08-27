@@ -1,0 +1,30 @@
+CentOS_6_x64_Aut
+TargetComputers||LEKTOR930,STUDENT930-01,STUDENT930-02,STUDENT930-03,STUDENT930-04,STUDENT930-05,STUDENT930-06,STUDENT930-07,STUDENT930-08,STUDENT930-09,STUDENT930-10
+Clone||True
+Image Source Path||.\Images\CentOS_6_x64
+DriveE Source Path||
+SAFA||False
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||I:\Images\HIVE\pajka_temp\centos6.6
+TargetDirectory(WINPE)||C:\
+I:\Images\HIVE\pajka_temp\centos6.6\ANG0
+I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup
+I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup.LOG
+I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup.LOG1
+I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup.LOG2
+I:\Images\HIVE\pajka_temp\centos6.6\bootmgr
+I:\Images\HIVE\pajka_temp\centos6.6\BOOTNXT
+I:\Images\HIVE\pajka_temp\centos6.6\BOOTSECT.BAK
+I:\Images\HIVE\pajka_temp\centos6.6\CentOs_6.6_aut.iso
+Commands||
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||22.05.2018 16:20:26
+WaitingTime||30
+Machine Group||930
+Configuration||False
+WithoutVHD||True

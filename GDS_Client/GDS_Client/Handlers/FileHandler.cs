@@ -22,15 +22,13 @@ namespace GDS_Client
                     }
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                Console.WriteLine("Chyba pri nacitani suboru: " + FileSpec + " " + ex);
-                Thread.Sleep(1000);
                 return Load<T>(FileSpec);
             }
         }
 
-        public static void Save<T>(T ToSerialize, string FileSpec)
+        public static void Save<T>(T ToSerialize, string FileSpec, int counter = 0)
         {
             try
             {
@@ -43,11 +41,9 @@ namespace GDS_Client
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Chyba pri zapise suboru: " + FileSpec+ " " + ex);
-                Thread.Sleep(1000);
-                Save<T>(ToSerialize, FileSpec);
+                if (counter != 5)
+                    Save<T>(ToSerialize, FileSpec, counter++);
             }
         }
-
     }
 }

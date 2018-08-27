@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Test</Name>
+  <Started>19.03.2018 11-46-12</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>19.03.2018 11-52-07</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>!Testing</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Test</Name>
+    <LastExecuted>19.03.2018 11-46-12</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>u-7gaWDiTECr5Byv5iM6ng</_sourceIdentifier>
+        <Name>STUDENTSK11-09</Name>
+        <RealPCName>STUDENTSK11-09</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:29:D9:D7</string>
+          <string>00:22:4D:7C:7B:7A</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.20.209</IPAddress>
+        <baseImageName>Windows 10 Office 2016 x64 SP</baseImageName>
+        <driveEImageName>CTSEC</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>!Testing</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\Office\Office_2k13_x64</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Office_2k13_x64</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>D:\install.wim</SourcePath>
+      <BoolLabel>Windows 7 Office 2013</BoolLabel>
+      <PartitionSize>150</PartitionSize>
+      <VHDResizeSize>90</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>install</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W7_X64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <SourceDirectoryInOS>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline</SourceDirectoryInOS>
+    <DestinationDirectoryInOS>D:\temp</DestinationDirectoryInOS>
+    <CommandsInOS />
+    <CopyFilesInOS>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\01 - Mlčanie Jahniat.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\02 - Všetko OK feat. Majk Spirit.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\03 - Jackpot feat. Momo.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\04 - Zlatá Soška feat. ADiss.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\05 - Bazooka rock feat. Sergei Barracuda.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\06 - Dúha.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\07 - Bublinky.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\08 - Sanscript.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\09 - Rátaj so mnou.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\10 - Z hlavy do hlavy feat. Separ.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\11 - Nič feat. Pil C.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\12 - Chlapci zo zadnej lavice.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\13 - Čínska pošta.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\14 - Žiadna sympatia.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\15 - Kale Jakha, kale bala feat. Sendrejovci a Vec.flac</string>
+      <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\16 - Offline.flac</string>
+    </CopyFilesInOS>
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:46:14</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>11:46:15</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>11:46:16</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>11:46:17</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>11:48:18</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:48:19</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>11:48:20</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>11:48:21</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>11:48:22</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>11:49:08</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:49:09</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>11:49:10</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>11:49:11</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>11:49:12</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>11:51:08</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:51:09</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>11:51:10</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>11:51:11</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>11:51:12</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails\19.03.2018 11-46-12_Test.my</FilePath>
+</ExecutedTaskData>

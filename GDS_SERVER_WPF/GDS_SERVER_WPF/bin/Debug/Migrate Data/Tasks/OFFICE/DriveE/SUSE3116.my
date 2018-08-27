@@ -1,0 +1,20 @@
+SUSE3116
+TargetComputers||LEKTOR915,STUDENT915-01,STUDENT915-02,STUDENT915-03,STUDENT915-04,STUDENT915-05,STUDENT915-06,STUDENT915-07,STUDENT915-08,STUDENT915-09,STUDENT915-10,STUDENT915-11,STUDENT915-12
+Clone||True
+Image Source Path||.\Images\W7_Off2k13_x64
+DriveE Source Path||.\DriveE\SUSE3116
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||27. 10. 2016 17:17:59
+WaitingTime||30
+Machine Group||915
+Configuration||True

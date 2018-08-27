@@ -1,0 +1,21 @@
+Winpe_Shutdown
+TargetComputers||STUDENT929-11
+Clone||False
+Image Source Path||
+DriveE Source Path||
+SAFA||False
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||True
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||
+WOL||True
+Commands(WINPE)||wpeutil shutdown
+Shutdown||False
+LastExecution||17.07.2017 12:04:45
+WaitingTime||30
+Machine Group||929
+Configuration||False
+WithoutVHD||False

@@ -1,0 +1,27 @@
+UpdateClients2
+TargetComputers||LEKTORSK1,STUDENTSK1-01,STUDENTSK1-02,STUDENTSK1-03,STUDENTSK1-04,STUDENTSK1-05,STUDENTSK1-06,STUDENTSK1-07,STUDENTSK1-08
+Clone||False
+Image Source Path||
+DriveE Source Path||
+SAFA||True
+SourceDirectory||I:\Startup_OS\Custom_OS\GDSClient
+TargetDirectory||D:\Temp\GDSClient\UPDATE
+I:\Startup_OS\Custom_OS\GDSClient\UPDATE\GDSClient_Update.bat
+I:\Startup_OS\Custom_OS\GDSClient\UPDATE\GDSClient_Update.ps1
+I:\Startup_OS\Custom_OS\GDSClient\HONMSW_CLIENT.exe
+I:\Startup_OS\Custom_OS\GDSClient\HONMSW_CLIENT_x64.exe
+I:\Startup_OS\Custom_OS\GDSClient\Clean.bat
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||D:\Temp\GDSClient\UPDATE\UPDATE\GDSClient_Update.bat
+D:\Temp\GDSClient\UPDATE\Clean.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||10. 11. 2017 16:36:23
+WaitingTime||30
+Machine Group||UcebnaSK01
+Configuration||False
+WithoutVHD||False

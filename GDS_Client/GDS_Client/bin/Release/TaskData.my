@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <TaskData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ImageSource>Images/Tasks.ico</ImageSource>
-  <Name>SendFile</Name>
-  <LastExecuted>08.02.2018 14-38-20</LastExecuted>
+  <Name>Test</Name>
+  <LastExecuted>23.02.2018 10-06-12</LastExecuted>
   <TargetComputers>
     <ComputerDetailsData>
-      <_sourceIdentifier>2koyaE4PHEqtiTsfe3CPNg</_sourceIdentifier>
+      <_sourceIdentifier>69tyU0ZgC0ChZ1f4EmsgBg</_sourceIdentifier>
       <RealPCName>VETRIK</RealPCName>
       <macAddresses>
         <string>68:05:CA:1A:35:11</string>
@@ -17,7 +17,7 @@
       <numberOfRamSLots>4</numberOfRamSLots>
       <biosCaption>Default System BIOS</biosCaption>
       <boardProductId>DZ77BH-55K</boardProductId>
-      <accountName>TomasVe</accountName>
+      <accountName>tomasve</accountName>
       <baseImageName />
       <driveEImageName />
       <dartInfo />
@@ -25,18 +25,18 @@
       <CustomLog />
     </ComputerDetailsData>
   </TargetComputers>
-  <MachineGroup>!Testing</MachineGroup>
+  <MachineGroup>Default</MachineGroup>
   <WakeOnLan>true</WakeOnLan>
   <Configuration>false</Configuration>
   <ForceInstall>false</ForceInstall>
   <ShutDown>false</ShutDown>
   <Cloning>false</Cloning>
-  <BaseImageSourcePath>.\Base\Office2010</BaseImageSourcePath>
+  <BaseImageSourcePath />
   <WithoutVHD>false</WithoutVHD>
   <DriveEImageSourcePath />
   <SoftwareAndFileAction>true</SoftwareAndFileAction>
   <SourceDirectoryInOS>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline</SourceDirectoryInOS>
-  <DestinationDirectoryInOS>D:\Temp\</DestinationDirectoryInOS>
+  <DestinationDirectoryInOS>D:\temp</DestinationDirectoryInOS>
   <CopyFilesInOS>
     <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\01 - Mlčanie Jahniat.flac</string>
     <string>C:\Users\TomasVe\Documents\MR\Moja Rec - Offline\02 - Všetko OK feat. Majk Spirit.flac</string>
@@ -58,5 +58,5 @@
   <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
   <DestinationDirectoryInWINPE />
   <CopyFilesInWINPE />
-  <WaitingTime>20</WaitingTime>
+  <WaitingTime>30</WaitingTime>
 </TaskData>

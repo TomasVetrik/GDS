@@ -141,7 +141,12 @@ namespace GDS_SERVER_WPF
                     if (line.Contains("IP Address||"))
                     {
                         string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
-                        IPAddress = splitter[1];
+                        if(splitter[1].Contains(":"))
+                        {
+                            IPAddress = splitter[1].Split(':')[0];
+                        }
+                        else
+                            IPAddress = splitter[1];
                     }
                     if (line.Contains("BASE NAME||"))
                     {

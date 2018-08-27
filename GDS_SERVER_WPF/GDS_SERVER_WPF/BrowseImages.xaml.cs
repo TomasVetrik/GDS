@@ -42,7 +42,7 @@ namespace GDS_SERVER_WPF
         }
         private void MenuItemDeleteBrowseImage_Click(object sender, RoutedEventArgs e)
         {
-            
+            DeleteItem();
         }
         private void MenuItemCreateFolderBrowseImage_Click(object sender, RoutedEventArgs e)
         {
@@ -61,6 +61,10 @@ namespace GDS_SERVER_WPF
         private void MenuItemPasteBrowseImage_Click(object sender, RoutedEventArgs e)
         {
             PasteClipBoard();
+        }
+        private void MenuItemCreateNewBrowseImage_Click(object sender, RoutedEventArgs e)
+        {
+            NewImage();
         }
 
         private string nodePathOld;
@@ -253,9 +257,14 @@ namespace GDS_SERVER_WPF
 
         private void button_New_Click(object sender, RoutedEventArgs e)
         {
+            NewImage();
+        }
+
+        private void NewImage()
+        {
             var imageOptionsDialog = new ImageOptions();
             imageOptionsDialog.baseImage = baseImage;
-            imageOptionsDialog.nodePath = treeViewMachinesAndTasksHandler.GetNodePath();            
+            imageOptionsDialog.nodePath = treeViewMachinesAndTasksHandler.GetNodePath();
             imageOptionsDialog.ShowDialog();
             listViewBrowseImagesHandler.Refresh();
             listViewBrowseImagesHandler.SelectItemByName(imageOptionsDialog.textBoxImageName.Text);

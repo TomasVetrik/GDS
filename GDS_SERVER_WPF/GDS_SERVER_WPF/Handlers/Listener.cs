@@ -27,7 +27,7 @@ namespace GDS_SERVER_WPF
         public Label labelOfflineClients;
         public Label labelAllClients;
         public int clientsAll = 0;
-        public Semaphore semaphore = new Semaphore(1, 500);
+        public Semaphore semaphore = new Semaphore(1, 5000);
         public ListViewMachinesAndTasksHandler listViewMachinesAndTasksHandler;
         public List<ExecutedTaskHandler> executedTasksHandlers;
         public ListBox console;
@@ -50,6 +50,21 @@ namespace GDS_SERVER_WPF
             Connection.StartListening(ConnectionType.TCP, new IPEndPoint(IPAddress.Any, 10000));
         }
 
+        private void SetOffline(ListView list, ShortGuid remoteIdentifier)
+        {
+            for (int i = list.Items.Count - 1; i >= 0; i--)
+            {
+                ComputerDetailsData computer = (ComputerDetailsData)list.Items[i];
+                if (computer.macAddresses != null && ClientsDictionary[remoteIdentifier].ComputerData.macAddresses != null && CheckMacsInREC(computer.macAddresses, ClientsDictionary[remoteIdentifier].ComputerData.macAddresses))
+                {
+                    computer.ImageSource = "Images/Offline.ico";
+                    list.Items.RemoveAt(i);
+                    list.Items.Insert(i, computer);
+                    break;
+                }
+            }
+        }
+
         private void HandleConnectionClosed(Connection connection)
         {
             semaphore.WaitOne();
@@ -57,18 +72,11 @@ namespace GDS_SERVER_WPF
             if (ClientsDictionary.ContainsKey(remoteIdentifier))
             {
                 Application.Current.Dispatcher.Invoke(() =>
-                {
-                    for (int i = listViewMachinesAndTasksHandler.machines.Items.Count - 1; i >= 0; i--)
-                    {
-                        ComputerDetailsData computer = (ComputerDetailsData)listViewMachinesAndTasksHandler.machines.Items[i];
-                        if (computer.macAddresses != null && ClientsDictionary[remoteIdentifier].ComputerData.macAddresses != null && CheckMacsInREC(computer.macAddresses, ClientsDictionary[remoteIdentifier].ComputerData.macAddresses))
-                        {
-                            computer.ImageSource = "Images/Offline.ico";
-                            listViewMachinesAndTasksHandler.machines.Items.RemoveAt(i);
-                            listViewMachinesAndTasksHandler.machines.Items.Insert(i, computer);
-                            break;
-                        }
-                    }
+                {                    
+                    if(listViewMachinesAndTasksHandler.machines.Visibility == Visibility.Visible)
+                        SetOffline(listViewMachinesAndTasksHandler.machines, remoteIdentifier);
+                    if (listViewMachinesAndTasksHandler.machines_lock.Visibility == Visibility.Visible)
+                        SetOffline(listViewMachinesAndTasksHandler.machines_lock, remoteIdentifier);
                 });
             }
             ClientsDictionary.Remove(connection.ConnectionInfo.NetworkIdentifier);
@@ -109,7 +117,7 @@ namespace GDS_SERVER_WPF
         {
             try
             {
-                semaphore.WaitOne();
+                semaphore.WaitOne();               
                 Packet packet = Proto.ProtoDeserialize<Packet>(data);
 
                 if (ClientsDictionary.ContainsKey(packet.computerDetailsData.SourceIdentifier))
@@ -132,7 +140,7 @@ namespace GDS_SERVER_WPF
             {
                 Application.Current.Dispatcher.Invoke(() =>
                 {
-                    MessageBox.Show("PROBLEM CHYBA 1: " + ex.ToString());
+                    console.Items.Add("PROBLEM LISTENER CHYBA 1: " + ex.ToString());
                 });
                 StartListener();
             }
@@ -142,6 +150,7 @@ namespace GDS_SERVER_WPF
         {
             try
             {
+                bool exist = false;
                 for (int i = executedTasksHandlers.Count - 1; i >= 0; i--)
                 {
                     ExecutedTaskHandler executedTaskHandler = executedTasksHandlers[i];
@@ -155,100 +164,134 @@ namespace GDS_SERVER_WPF
                             computer.connection = connection;
                             if(computer.cloning)
                             {
-                                computer.semaphoreForCloning.Release();
+                                try
+                                {
+                                    computer.semaphoreForCloning.Release();
+                                }
+                                catch(Exception ex)
+                                {
+                                    Application.Current.Dispatcher.Invoke(() =>
+                                    {
+                                        console.Items.Add("PROBLEM LISTENER CHYBA Sempahore release: " + ex.ToString());
+                                    });
+                                }
                             }
                             if (failed)
                             {
                                 computer.Failed(packet.clonningMessage);
                             }
+                            exist = true;
                             break;
                         }
                     }
+                    if (exist)
+                        break;
                 }
             }
             catch (Exception ex)
             {
                 Application.Current.Dispatcher.Invoke(() =>
                 {
-                    MessageBox.Show("PROBLEM CHYBA 4: " + ex.ToString());
+                    console.Items.Add("PROBLEM LISTENER CHYBA 4: " + ex.ToString());
                 });
             }
         }
 
         public void UpdateDataGridByMacs(List<string> Macs, string Name, string ClassRoom)
         {
-            foreach(string Mac in Macs)
+            try
             {
-                switch(IsMacInDataGrid(Mac, Name , ClassRoom))
+                foreach (string Mac in Macs)
                 {
-                    case 0:
-                        {
-                            Update(Mac, Name, ClassRoom);
+                    switch (IsMacInDataGrid(Mac, Name, ClassRoom))
+                    {
+                        case 0:
+                            {
+                                Update(Mac, Name, ClassRoom);
+                                break;
+                            }
+                        case 1:
+                            {
+                                Insert(Mac, Name, ClassRoom);
+                                break;
+                            }
+                        case 2:
                             break;
-                        }
-                    case 1:
-                        {
-                            Insert(Mac, Name, ClassRoom);
-                            break;
-                        }
-                    case 2:
-                        break;
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
 
         private int IsMacInDataGrid(string Mac, string Name, string ClassRoom)
         {
-            for (int i = grdMachinesGroups.Items.Count - 1; i >= 0; i--)
+            try
             {
-                DataGridCell cell = GetCell(i, 1);
-                if (cell != null)
+                for (int i = grdMachinesGroups.Items.Count - 1; i >= 0; i--)
                 {
-                    TextBlock txtBoxMac = cell.Content as TextBlock;
-                    if (txtBoxMac.Text != "")
+                    DataGridCell cell = GetCell(i, 1);
+                    if (cell != null)
                     {
-                        if (txtBoxMac.Text == Mac)
+                        TextBlock txtBoxMac = cell.Content as TextBlock;
+                        if (txtBoxMac.Text != "")
                         {
-                            TextBlock txtBoxName = GetCell(i, 2).Content as TextBlock;
-                            if (txtBoxName.Text != "")
+                            if (txtBoxMac.Text == Mac)
                             {
-                                if (txtBoxName.Text != Name)
+                                TextBlock txtBoxName = GetCell(i, 2).Content as TextBlock;
+                                if (txtBoxName.Text != "")
                                 {
-                                    return 0;
+                                    if (txtBoxName.Text != Name)
+                                    {
+                                        return 0;
+                                    }
                                 }
-                            }
-                            TextBlock txtBoxClassRoom = GetCell(i, 3).Content as TextBlock;
-                            if (txtBoxClassRoom.Text != "")
-                            {
-                                if (txtBoxClassRoom.Text != ClassRoom)
+                                TextBlock txtBoxClassRoom = GetCell(i, 3).Content as TextBlock;
+                                if (txtBoxClassRoom.Text != "")
                                 {
-                                    return 0;
+                                    if (txtBoxClassRoom.Text != ClassRoom)
+                                    {
+                                        return 0;
+                                    }
                                 }
+                                return 2;
                             }
-                            return 2;
                         }
                     }
                 }
-            }            
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
             return 1;
         }
 
         public DataGridCell GetCell(int row, int column)
         {
-            DataGridRow rowContainer = GetRow(row);
-
-            if (rowContainer != null)
+            try
             {
-                DataGridCellsPresenter presenter = GetVisualChild<DataGridCellsPresenter>(rowContainer);
-                if (presenter == null)
-                    return null;
-                DataGridCell cell = (DataGridCell)presenter.ItemContainerGenerator.ContainerFromIndex(column);
-                if (cell == null)
+                DataGridRow rowContainer = GetRow(row);
+
+                if (rowContainer != null)
                 {
-                    grdMachinesGroups.ScrollIntoView(rowContainer, grdMachinesGroups.Columns[column]);
-                    cell = (DataGridCell)presenter.ItemContainerGenerator.ContainerFromIndex(column);
+                    DataGridCellsPresenter presenter = GetVisualChild<DataGridCellsPresenter>(rowContainer);
+                    if (presenter == null)
+                        return null;
+                    DataGridCell cell = (DataGridCell)presenter.ItemContainerGenerator.ContainerFromIndex(column);
+                    if (cell == null)
+                    {
+                        grdMachinesGroups.ScrollIntoView(rowContainer, grdMachinesGroups.Columns[column]);
+                        cell = (DataGridCell)presenter.ItemContainerGenerator.ContainerFromIndex(column);
+                    }
+                    return cell;
                 }
-                return cell;
+            }            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
             return null;
         }
@@ -285,6 +328,35 @@ namespace GDS_SERVER_WPF
             return row;
         }
 
+        private void SetOnline(ListView list, Packet packet)
+        {
+            for (int i = list.Items.Count - 1; i >= 0; i--)
+            {
+                try
+                {
+                    ComputerDetailsData computer = (ComputerDetailsData)list.Items[i];
+                    if (!computer.ImageSource.Contains("Folder"))
+                    {
+                        if (CheckMacsInREC(computer.macAddresses, packet.computerDetailsData.macAddresses))
+                        {
+                            if (packet.computerDetailsData.inWinpe)
+                                packet.computerDetailsData.ImageSource = "Images/WinPE.ico";
+                            else
+                                packet.computerDetailsData.ImageSource = "Images/Online.ico";
+                            packet.computerDetailsData.PostInstalls = packet.computerConfigData.PostInstalls;
+                            list.Items.RemoveAt(i);
+                            list.Items.Insert(i, packet.computerDetailsData);
+                            break;
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("BEZIM: " + e.ToString());
+                }
+            }
+        }
+
         private void MessageHandler(Packet packet, Connection connection)
         {
             try
@@ -298,37 +370,17 @@ namespace GDS_SERVER_WPF
                             SaveComputerData(packet, connection);
                             Application.Current.Dispatcher.Invoke(() =>
                             {
-                                for (int i = listViewMachinesAndTasksHandler.machines.Items.Count - 1; i >= 0; i--)
-                                {
-                                    try
-                                    {
-                                        ComputerDetailsData computer = (ComputerDetailsData)listViewMachinesAndTasksHandler.machines.Items[i];
-                                        if (!computer.ImageSource.Contains("Folder"))
-                                        {
-                                            if (CheckMacsInREC(computer.macAddresses, packet.computerDetailsData.macAddresses))
-                                            {
-                                                if (packet.computerDetailsData.inWinpe)
-                                                    packet.computerDetailsData.ImageSource = "Images/WinPE.ico";
-                                                else
-                                                    packet.computerDetailsData.ImageSource = "Images/Online.ico";
-                                                packet.computerDetailsData.PostInstalls = packet.computerConfigData.PostInstalls;
-                                                listViewMachinesAndTasksHandler.machines.Items.RemoveAt(i);
-                                                listViewMachinesAndTasksHandler.machines.Items.Insert(i, packet.computerDetailsData);
-                                                break;
-                                            }
-                                        }
-                                    }
-                                    catch (Exception e)
-                                    {
-                                        MessageBox.Show("BEZIM: " + e.ToString());
-                                    }
-                                }
+                                if (listViewMachinesAndTasksHandler.machines.Visibility == Visibility.Visible)
+                                    SetOnline(listViewMachinesAndTasksHandler.machines, packet);                                
+                                if (listViewMachinesAndTasksHandler.machines_lock.Visibility == Visibility.Visible)
+                                    SetOnline(listViewMachinesAndTasksHandler.machines_lock, packet);
                             });
 
                             Application.Current.Dispatcher.Invoke(() =>
                             {
                                 labelOnlineClients.Content = "Online: " + ClientsDictionary.Count;
                                 labelOfflineClients.Content = "Offline: " + (clientsAll - ClientsDictionary.Count);
+                                labelAllClients.Content = "Clients: " + clientsAll;
                             });
                             break;
                         }
@@ -349,24 +401,35 @@ namespace GDS_SERVER_WPF
             {
                 Application.Current.Dispatcher.Invoke(() =>
                 {
-                    MessageBox.Show("PROBLEM CHYBA 2: " + ex.ToString());
+                    console.Items.Add("PROBLEM LISTENER CHYBA 2: " + ex.ToString());
                 });
             }
         }
 
         public static string GetFileNameByMac(string[] computersInfoFiles, List<string> macAddresses)
         {
-            string filePath = "";
-            foreach (string computerFile in computersInfoFiles)
+            try
             {
-                var computerData = FileHandler.Load<ComputerDetailsData>(computerFile);
-                if (CheckMacsInREC(computerData.macAddresses, macAddresses))
+                string filePath = "";
+                foreach (string computerFile in computersInfoFiles)
                 {
-                    filePath = computerFile;
-                    break;
+                    var computerData = FileHandler.Load<ComputerDetailsData>(computerFile);
+                    if (computerData != null && computerData.macAddresses != null)
+                    {
+                        if (CheckMacsInREC(computerData.macAddresses, macAddresses))
+                        {
+                            filePath = computerFile;
+                            break;
+                        }
+                    }
                 }
+                return filePath;
             }
-            return filePath;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return "";
         }
 
         private void SaveComputerData(Packet packet, Connection connection)
@@ -384,6 +447,12 @@ namespace GDS_SERVER_WPF
                 if (filePath != "")
                 {
                     packet.computerDetailsData.Name = Path.GetFileName(filePath).Replace(".my", "");
+                    if (filePath.Contains(@".\Machine Groups\Lock"))
+                    {
+                        ComputerDetailsData computer = FileHandler.Load<ComputerDetailsData>(filePath);
+                        packet.computerDetailsData.Detail = computer.Detail;
+                        packet.computerDetailsData.pathNode = computer.pathNode;
+                    }
                     FileHandler.Save<ComputerDetailsData>(packet.computerDetailsData, filePath);
                     if (!File.Exists(filePath.Replace(".my", ".cfg")))
                     {
@@ -398,6 +467,7 @@ namespace GDS_SERVER_WPF
                 {
                     packet.computerDetailsData.Name = packet.computerDetailsData.RealPCName;
                     bool exist = false;
+                    clientsAll++;
                     foreach (string computerFile in computersInfoFiles)
                     {
                         if (computerFile == @".\Machine Groups\Default\" + packet.computerDetailsData.RealPCName + ".my")
@@ -416,15 +486,36 @@ namespace GDS_SERVER_WPF
                     }
                     FileHandler.Save<ComputerDetailsData>(packet.computerDetailsData, filePath);
                     FileHandler.Save<ComputerConfigData>(packet.computerConfigData, filePath.Replace(".my", ".cfg"));
-                }
+                }                
             }
             catch (Exception ex)
             {
                 Application.Current.Dispatcher.Invoke(() =>
                 {
-                    MessageBox.Show("PROBLEM CHYBA 3: " + ex.ToString());
+                    console.Items.Add("PROBLEM LISTENER CHYBA 3: " + ex.ToString());
                 });
             }
+        }
+
+        public string GetTheClassRoomID(string ComputerFilePath)
+        {
+            try
+            {
+                if (ComputerFilePath.Contains("\\"))
+                {
+                    string Name = Path.GetFileName(ComputerFilePath);
+                    string ClassroomIDFilePath = ComputerFilePath.Replace(Name, "") + "ClassRoomID.txt";
+                    if (File.Exists(ClassroomIDFilePath))
+                    {
+                        return File.ReadAllText(ClassroomIDFilePath);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return "";
         }
 
         public void SendMessage(Packet packet, Connection connection)
@@ -463,6 +554,38 @@ namespace GDS_SERVER_WPF
                 conn.Close();
             }
         }
+
+        public void InsertOrUpdate(List<string> MACs, string Name, string ClassRoom)
+        {
+            try
+            {
+                if (ClassRoom != "")
+                {
+                    foreach (string MAC in MACs)
+                    {
+                        string command = "IF NOT EXISTS ( SELECT * FROM [Dynamics365_synchro].[dbo].[MachinesGroups] WHERE MAC='" + MAC + "' ) BEGIN INSERT INTO MachinesGroups VALUES('" + MAC + "','" + Name + "'," + ClassRoom + ") END ELSE BEGIN UPDATE [Dynamics365_synchro].[dbo].[MachinesGroups]  SET MAC='" + MAC + "',Name='" + Name + "',ClassRoom=" + ClassRoom + " WHERE MAC='" + MAC + "' END";
+                        try
+                        {
+                            conn.Open();
+                            SqlCommand comm = new SqlCommand(command, conn);
+                            comm.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message.ToString());
+                        }
+                        finally
+                        {
+                            conn.Close();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+}
 
         public void Update(string MAC, string Name, string ClassRoom)
         {

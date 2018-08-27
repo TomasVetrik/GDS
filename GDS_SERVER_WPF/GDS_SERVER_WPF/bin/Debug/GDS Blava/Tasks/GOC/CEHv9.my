@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>CEHv9</Name>
+  <LastExecuted>9. 12. 2017 14:54:48</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>true</Cloning>
+  <BaseImageSourcePath>.\Base\MOC\W2k12</BaseImageSourcePath>
+  <BaseImageData>
+    <Name>W2k12</Name>
+    <ImageSource>Images/Image.ico</ImageSource>
+    <SourcePath>D:\boot.wim</SourcePath>
+    <BoolLabel>Default</BoolLabel>
+    <PartitionSize>125</PartitionSize>
+    <VHDResizeSize>40</VHDResizeSize>
+    <VHDResize>false</VHDResize>
+    <VHDNames>
+      <string>boot</string>
+    </VHDNames>
+    <OSAbrivations>
+      <string />
+    </OSAbrivations>
+  </BaseImageData>
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <SourceDirectoryInOS />
+  <DestinationDirectoryInOS />
+  <CommandsInOS>
+    <string>E:\Autologon.bat</string>
+  </CommandsInOS>
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE />
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE />
+  <WaitingTime>30</WaitingTime>
+</TaskData>

@@ -1,0 +1,24 @@
+VMware
+TargetComputers||STUDENT1035-07
+Clone||False
+Image Source Path||.\Images\W7_Off2k16_x64_MultiProfile
+DriveE Source Path||
+SAFA||True
+SourceDirectory||I:\Images\Startup_OS\PostInstallers\VMware
+TargetDirectory||D:\Temp\PostInstallers\VMware
+I:\Images\Startup_OS\PostInstallers\VMware\Start.bat
+I:\Images\Startup_OS\PostInstallers\VMware\VMware.ps1
+I:\Images\Startup_OS\PostInstallers\VMware\VMware-player-12.5.0-4352439.msi
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||D:\Temp\PostInstallers\VMware\start.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||19.06.2017 8:06:59
+WaitingTime||10
+Machine Group||1035
+Configuration||False
+WithoutVHD||False

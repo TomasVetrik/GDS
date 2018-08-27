@@ -1,0 +1,21 @@
+Win10_2k16_x64_1703
+TargetComputers||STUDENTSK5-01,STUDENTSK5-02,STUDENTSK5-03,STUDENTSK5-04
+Clone||True
+Image Source Path||.\Images\Without_VHD\Office\Win10_2k16_x64_1703
+DriveE Source Path||
+SAFA||False
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||D:\Temp\Updates\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||True
+LastExecution||15. 12. 2017 9:58:54
+WaitingTime||30
+Machine Group||UcebnaSK05
+Configuration||True
+WithoutVHD||True

@@ -1,0 +1,25 @@
+GatewayDetection
+TargetComputers||LEKTORSK14,STUDENTSK14-01,STUDENTSK14-02,STUDENTSK14-03,STUDENTSK14-04,STUDENTSK14-05,STUDENTSK14-06,STUDENTSK14-07,STUDENTSK14-08,STUDENTSK14-09,STUDENTSK14-10,STUDENTSK14-11,STUDENTSK14-12
+Clone||False
+Image Source Path||
+DriveE Source Path||
+SAFA||True
+SourceDirectory||I:\Startup_OS
+TargetDirectory||D:\
+I:\Startup_OS\Autologon.bat
+I:\Startup_OS\Autologon_D.ps1
+I:\Startup_OS\Gateway_detection.bat
+I:\Startup_OS\Gateway_detection.ps1
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||D:\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||11. 1. 2018 9:22:01
+WaitingTime||30
+Machine Group||UcebnaSK14
+Configuration||False
+WithoutVHD||False

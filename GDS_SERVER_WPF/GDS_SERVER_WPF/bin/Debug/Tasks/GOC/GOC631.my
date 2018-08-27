@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>GOC631</Name>
+  <LastExecuted>29. 3. 2016 8:24:14</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>true</ShutDown>
+  <Cloning>false</Cloning>
+  <BaseImageSourcePath>W2k8_R2</BaseImageSourcePath>
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath>GOC631</DriveEImageSourcePath>
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <SourceDirectoryInOS />
+  <DestinationDirectoryInOS />
+  <CommandsInOS>
+    <string>E:\Autologn.bat</string>
+  </CommandsInOS>
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <CopyFilesInWINPE />
+  <CommandsInWINPE />
+  <WaitingTime>30</WaitingTime>
+</TaskData>

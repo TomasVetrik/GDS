@@ -1,0 +1,23 @@
+Run_PostInstalls
+TargetComputers||LEKTORSK9,STUDENTSK9-01,STUDENTSK9-02,STUDENTSK9-03,STUDENTSK9-04,STUDENTSK9-05,STUDENTSK9-06,STUDENTSK9-07,STUDENTSK9-08,STUDENTSK9-09,STUDENTSK9-10,STUDENTSK9-11,STUDENTSK9-12
+Clone||False
+Image Source Path||
+DriveE Source Path||
+SAFA||True
+SourceDirectory||I:\Startup_OS\Accessories
+TargetDirectory||D:\
+I:\Startup_OS\Accessories\Autologon_PostInstalls.bat
+I:\Startup_OS\Accessories\Autologon_PostInstalls.ps1
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||D:\Autologon_PostInstalls.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||2. 2. 2018 12:05:24
+WaitingTime||30
+Machine Group||UcebnaSK09
+Configuration||False
+WithoutVHD||False

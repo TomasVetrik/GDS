@@ -1,7 +1,5 @@
-﻿using NetworkCommsDotNet.Connections;
-using NetworkCommsDotNet.Tools;
+﻿using NetworkCommsDotNet.Tools;
 using ProtoBuf;
-using System;
 using System.Collections.Generic;
 
 namespace GDS_Client

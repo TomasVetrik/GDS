@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>Questionmark</Name>
+  <LastExecuted>17.01.2018 10:23:47</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>false</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>false</Cloning>
+  <BaseImageSourcePath />
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <SourceDirectoryInOS>I:\Images\Startup_OS\PostInstallers\Questionmark</SourceDirectoryInOS>
+  <DestinationDirectoryInOS>D:\Temp\PostInstallers\Questionmark\</DestinationDirectoryInOS>
+  <CommandsInOS>
+    <string>D:\Temp\PostInstallers\Questionmark\start.bat</string>
+  </CommandsInOS>
+  <CopyFilesInOS>
+    <string>I:\Images\Startup_OS\PostInstallers\Questionmark\Autologon.ps1</string>
+    <string>I:\Images\Startup_OS\PostInstallers\Questionmark\QSB_5.8.1.4_EN.exe</string>
+    <string>I:\Images\Startup_OS\PostInstallers\Questionmark\QuestionMark.ps1</string>
+    <string>I:\Images\Startup_OS\PostInstallers\Questionmark\Start.bat</string>
+    <string>I:\Images\Startup_OS\PostInstallers\Questionmark\ChromeSetup.exe</string>
+  </CopyFilesInOS>
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE />
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE>
+    <string />
+  </CommandsInWINPE>
+  <WaitingTime>10</WaitingTime>
+</TaskData>

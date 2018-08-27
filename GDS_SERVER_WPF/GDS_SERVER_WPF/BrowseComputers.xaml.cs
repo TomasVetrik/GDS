@@ -26,7 +26,7 @@ namespace GDS_SERVER_WPF
             InitializeComponent();
         }
 
-        private void button_Cancel_Click(object sender, RoutedEventArgs e)
+        private void Button_Cancel_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
@@ -34,12 +34,14 @@ namespace GDS_SERVER_WPF
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             treeViewMachinesAndTasksHandler = new TreeViewHandler(treeView);
-            listViewBrowseComputersHandler = new ListBoxBrowseComputersHandler(listView, treeViewMachinesAndTasksHandler);
-            listViewBrowseComputersHandler.ClientsDictionary = ClientsDictionary;
+            listViewBrowseComputersHandler = new ListBoxBrowseComputersHandler(listView, treeViewMachinesAndTasksHandler)
+            {
+                ClientsDictionary = ClientsDictionary
+            };
             listViewBrowseComputersHandler.LoadTreeViewMachines();
         }
 
-        private void treeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        private void TreeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             if (treeView.SelectedItem != null)
             {
@@ -50,7 +52,7 @@ namespace GDS_SERVER_WPF
             listView.SelectAll();
         }
 
-        private void listView_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void ListView_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             if (listView.SelectedItems.Count != 0)
             {
@@ -58,8 +60,10 @@ namespace GDS_SERVER_WPF
                 var path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + computerDetail.Name;
                 if (!computerDetail.ImageSource.Contains("Folder.ico"))
                 {
-                    var dialogComputerDetails = new ComputerDetails();
-                    dialogComputerDetails.computerPath = path;                    
+                    var dialogComputerDetails = new ComputerDetails
+                    {
+                        computerPath = path
+                    };
                     dialogComputerDetails.ShowDialog();
                 }
                 else
@@ -93,7 +97,7 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void button_OK_Click(object sender, RoutedEventArgs e)
+        private void Button_OK_Click(object sender, RoutedEventArgs e)
         {
             SelectComputers();
             this.Close();

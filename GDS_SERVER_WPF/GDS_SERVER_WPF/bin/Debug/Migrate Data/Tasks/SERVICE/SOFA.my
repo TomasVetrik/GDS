@@ -1,0 +1,21 @@
+SOFA
+TargetComputers||STUDENT1042-01,STUDENT1042-03,STUDENT1042-04,STUDENT1042-05,STUDENT1042-06,STUDENT1042-07,STUDENT1042-08,STUDENT1042-09,STUDENT1042-10,STUDENT1042-11,STUDENT1042-12
+Clone||False
+Image Source Path||
+DriveE Source Path||
+SAFA||True
+SourceDirectory||I:\Startup_OS\PostInstallers\VirtualBox_v5
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||I:\HIVE\pajka_temp
+TargetDirectory(WINPE)||c:\
+I:\HIVE\pajka_temp\DG965SS.EXE
+Commands||E:\Autologon.bat
+WOL||True
+Commands(WINPE)||c:\DG956SS.exe -s -force
+Shutdown||False
+LastExecution||15. 9. 2016 12:58:19
+WaitingTime||30
+Machine Group||1042
+Configuration||False

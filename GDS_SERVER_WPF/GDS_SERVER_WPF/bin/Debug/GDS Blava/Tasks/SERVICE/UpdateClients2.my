@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>UpdateClients2</Name>
+  <LastExecuted>10. 11. 2017 16:36:23</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>false</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>false</Cloning>
+  <BaseImageSourcePath />
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <SourceDirectoryInOS>I:\Startup_OS\Custom_OS\GDSClient</SourceDirectoryInOS>
+  <DestinationDirectoryInOS>D:\Temp\GDSClient\UPDATE</DestinationDirectoryInOS>
+  <CommandsInOS>
+    <string>D:\Temp\GDSClient\UPDATE\UPDATE\GDSClient_Update.bat</string>
+    <string>D:\Temp\GDSClient\UPDATE\Clean.bat</string>
+  </CommandsInOS>
+  <CopyFilesInOS>
+    <string>I:\Startup_OS\Custom_OS\GDSClient\UPDATE\GDSClient_Update.bat</string>
+    <string>I:\Startup_OS\Custom_OS\GDSClient\UPDATE\GDSClient_Update.ps1</string>
+    <string>I:\Startup_OS\Custom_OS\GDSClient\HONMSW_CLIENT.exe</string>
+    <string>I:\Startup_OS\Custom_OS\GDSClient\HONMSW_CLIENT_x64.exe</string>
+    <string>I:\Startup_OS\Custom_OS\GDSClient\Clean.bat</string>
+  </CopyFilesInOS>
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE />
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE>
+    <string />
+  </CommandsInWINPE>
+  <WaitingTime>30</WaitingTime>
+</TaskData>

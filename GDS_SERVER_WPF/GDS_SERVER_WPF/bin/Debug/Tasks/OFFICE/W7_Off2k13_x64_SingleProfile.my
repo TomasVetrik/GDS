@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>W7_Off2k13_x64_SingleProfile</Name>
+  <LastExecuted>17.04.2018 12:10:25</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>true</Cloning>
+  <BaseImageSourcePath>.\Base\W7_Off2k13_x64</BaseImageSourcePath>
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>false</SoftwareAndFileAction>
+  <SourceDirectoryInOS>I:\Startup_OS\PostInstallers\VirtualBox_v5</SourceDirectoryInOS>
+  <DestinationDirectoryInOS> D:\Temp\PostInstallers\VirtualBox_v5</DestinationDirectoryInOS>
+  <CommandsInOS>
+    <string>D:\Temp\PostInstallers\virtualbox_v5\start.bat</string>
+  </CommandsInOS>
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE />
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE>
+    <string />
+  </CommandsInWINPE>
+  <WaitingTime>31</WaitingTime>
+</TaskData>

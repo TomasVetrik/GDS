@@ -108,101 +108,152 @@ namespace GDS_SERVER_WPF
         {
             if (SaveControl())
             {
-                taskData.MachineGroup = labelMachineGroupContent.Content.ToString();
-                LoadDataToList(listBoxTargetComputers, taskData.TargetComputers);                
-                taskData.BaseImageSourcePath = textBoxBaseImage.Text;
-                taskData.DestinationDirectoryInOS = textBoxDestinationFolderInOS.Text;
-                taskData.DestinationDirectoryInWINPE = textBoxDestinationFolderInWINPE.Text;
-                taskData.DriveEImageSourcePath = textBoxDriveEImage.Text;                
-                taskData.WakeOnLan = checkBoxWakeOnLan.IsChecked.Value;
-                taskData.Configuration = checkBoxConfiguration.IsChecked.Value;
-                taskData.Cloning = checkBoxCloning.IsChecked.Value;
-                taskData.ForceInstall = checkBoxForceInstall.IsChecked.Value;
-                taskData.ShutDown = checkBoxShutdown.IsChecked.Value;
-                taskData.SoftwareAndFileAction = checkBoxSOFA.IsChecked.Value;
-                taskData.SoftwareAndFileAction_WINPE = checkBoxSOFAWinpe.IsChecked.Value;
-                taskData.WithoutVHD = checkBoxWithoutVHD.IsChecked.Value;
-                string[] commandsOS = StringFromRichTextBox(richTextBoxCommandsInOS).Split(new[] { Environment.NewLine }
-                                          , StringSplitOptions.RemoveEmptyEntries);
-                taskData.CommandsInOS = new List<string>();              
-                taskData.CommandsInOS = new List<string>(commandsOS);                
-                LoadDataToList(listBoxCopyFilesInOS, taskData.CopyFilesInOS);
-                LoadDataToList(listBoxCopyFilesInWINPE, taskData.CopyFilesInWINPE);
-                string[] commandsWINPE = StringFromRichTextBox(richTextBoxCommandsInWINPE).Split(new[] { Environment.NewLine }
-                                          , StringSplitOptions.RemoveEmptyEntries);
-                taskData.CommandsInWINPE= new List<string>(commandsWINPE);                
-                taskData.WaitingTime = (int)slider.Value;
-                if (taskData.Name != textBoxTaskName.Text && taskData.Name != "")
-                {
-                    var createRenameDialog = new CreateRenameCancel();
-                    createRenameDialog.lblNewName.Content = textBoxTaskName.Text;
-                    createRenameDialog.lblOldName.Content = taskData.Name;
-                    createRenameDialog.ShowDialog();
-                    if (createRenameDialog.renameOld)
+                try {
+                    taskData.MachineGroup = labelMachineGroupContent.Content.ToString();
+                    LoadDataToList(listBoxTargetComputers, taskData.TargetComputers);                    
+                    taskData.BaseImageSourcePath = textBoxBaseImage.Text;
+                    taskData.DestinationDirectoryInOS = textBoxDestinationFolderInOS.Text;
+                    taskData.DestinationDirectoryInWINPE = textBoxDestinationFolderInWINPE.Text;
+                    taskData.DriveEImageSourcePath = textBoxDriveEImage.Text;
+                    taskData.WakeOnLan = checkBoxWakeOnLan.IsChecked.Value;
+                    taskData.Configuration = checkBoxConfiguration.IsChecked.Value;
+                    taskData.Cloning = checkBoxCloning.IsChecked.Value;
+                    taskData.ForceInstall = checkBoxForceInstall.IsChecked.Value;
+                    taskData.ShutDown = checkBoxShutdown.IsChecked.Value;
+                    taskData.SoftwareAndFileAction = checkBoxSOFA.IsChecked.Value;
+                    taskData.SoftwareAndFileAction_WINPE = checkBoxSOFAWinpe.IsChecked.Value;
+                    taskData.WithoutVHD = checkBoxWithoutVHD.IsChecked.Value;
+                    string[] commandsOS = StringFromRichTextBox(richTextBoxCommandsInOS).Split(new[] { Environment.NewLine }
+                                              , StringSplitOptions.RemoveEmptyEntries);
+                    taskData.CommandsInOS = new List<string>();
+                    taskData.CommandsInOS = new List<string>(commandsOS);
+                    LoadDataToList(listBoxCopyFilesInOS, taskData.CopyFilesInOS);
+                    LoadDataToList(listBoxCopyFilesInWINPE, taskData.CopyFilesInWINPE);
+                    string[] commandsWINPE = StringFromRichTextBox(richTextBoxCommandsInWINPE).Split(new[] { Environment.NewLine }
+                                              , StringSplitOptions.RemoveEmptyEntries);
+                    taskData.CommandsInWINPE = new List<string>(commandsWINPE);
+                    taskData.WaitingTime = (int)slider.Value;
+                    if (taskData.Name != textBoxTaskName.Text && taskData.Name != "")
                     {
-                        if (File.Exists(nodePath + "\\" + taskData.Name + ".my"))
+                        var createRenameDialog = new CreateRenameCancel();
+                        createRenameDialog.lblNewName.Content = textBoxTaskName.Text;
+                        createRenameDialog.lblOldName.Content = taskData.Name;
+                        createRenameDialog.ShowDialog();
+                        if (createRenameDialog.renameOld)
                         {
-                            File.Delete(nodePath + "\\" + taskData.Name + ".my");
+                            if (File.Exists(nodePath + "\\" + taskData.Name + ".my"))
+                            {
+                                File.Delete(nodePath + "\\" + taskData.Name + ".my");
+                            }
+                            taskData.Name = textBoxTaskName.Text;
+                            FileHandler.Save<TaskData>(taskData, nodePath + "\\" + taskData.Name + ".my");
+                            return true;
                         }
-                        taskData.Name = textBoxTaskName.Text;
-                        FileHandler.Save<TaskData>(taskData, nodePath + "\\" + taskData.Name + ".my");
-                        return true;
+                        if (createRenameDialog.createNew)
+                        {
+                            taskData.Name = textBoxTaskName.Text;
+                            FileHandler.Save<TaskData>(taskData, nodePath + "\\" + taskData.Name + ".my");
+                            return true;
+                        }
                     }
-                    if (createRenameDialog.createNew)
+                    else
                     {
                         taskData.Name = textBoxTaskName.Text;
                         FileHandler.Save<TaskData>(taskData, nodePath + "\\" + taskData.Name + ".my");
                         return true;
                     }
-                }
-                else
-                {
-                    taskData.Name = textBoxTaskName.Text;
-                    FileHandler.Save<TaskData>(taskData, nodePath + "\\" + taskData.Name + ".my");
                     return true;
-                }             
-                return true;               
-            }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            } 
             return false;
         }        
 
         private bool SaveControl()
         {
-            SetDefaultColors();
-            if (textBoxTaskName.Text == "")
+            try
             {
-                SetErrorMessage(labelTaskName, "'Task Name' cannot be an empty string\n");                
-                return false;
-            }
-            if (textBoxTaskName.Text.IndexOfAny(new char[] {  '\\', '/', ':', '*', '?', '"', '<', '>', '|' }) != -1)
-            {
-                SetErrorMessage(labelTaskName, "'Task Name' cannot contains \\ / : * ? \" < > | \n");
-                return false;
-            }
-            if (Names.Contains(textBoxTaskName.Text))
-            {
-                SetErrorMessage(labelTaskName, "'Task Name': " + textBoxTaskName.Text + " exists\n");
-                return false;
-            }
-            List<string> LockComputers = Directory.GetFiles(@".\Machine Groups\Lock\", "*.my", SearchOption.AllDirectories).ToList();
-            foreach (string LockComputer in LockComputers)
-            {
-                foreach (string computerName in listBoxTargetComputers.Items)
+                SetDefaultColors();
+                if (textBoxTaskName.Text == "")
                 {
-                    if (LockComputer.Contains(computerName + ".my"))
+                    SetErrorMessage(labelTaskName, "'Task Name' cannot be an empty string\n");
+                    return false;
+                }
+                if (textBoxTaskName.Text.IndexOfAny(new char[] { '\\', '/', ':', '*', '?', '"', '<', '>', '|' }) != -1)
+                {
+                    SetErrorMessage(labelTaskName, "'Task Name' cannot contains \\ / : * ? \" < > | \n");
+                    return false;
+                }
+                if (Names.Contains(textBoxTaskName.Text))
+                {
+                    SetErrorMessage(labelTaskName, "'Task Name': " + textBoxTaskName.Text + " exists\n");
+                    return false;
+                }
+                List<string> LockComputers = Directory.GetFiles(@".\Machine Groups\Lock\", "*.my", SearchOption.AllDirectories).ToList();
+                foreach (string LockComputer in LockComputers)
+                {
+                    foreach (ComputerDetailsData computer in listBoxTargetComputers.Items)
                     {
-                        SetErrorMessage(labelMachineGroup, "Computer: " + computerName + " is locked\n");
-                        return false;
+                        if (LockComputer.Contains(computer.Name + ".my"))
+                        {
+                            SetErrorMessage(labelMachineGroup, "Computer: " + computer.Name + " is locked\n");
+                            return false;
+                        }
                     }
                 }
+                if (checkBoxCloning.IsChecked.Value && textBoxBaseImage.Text == "" && textBoxDriveEImage.Text == "")
+                {
+                    tabItemGeneral.IsSelected = true;
+                    labelError.Content += "Cloning is not properly set up\n";
+                    return false;
+                }
+                if (checkBoxCloning.IsChecked.Value)
+                {
+                    if (textBoxBaseImage.Text != "")
+                    {
+                        if (!File.Exists(textBoxBaseImage.Text + ".my"))
+                        {
+                            labelError.Content += "Base image settings does not exist\n";
+                            return false;
+                        }
+                        else
+                        {
+                            taskData.BaseImageData = FileHandler.Load<ImageData>(textBoxBaseImage.Text + ".my");
+                            if (!File.Exists(taskData.BaseImageData.SourcePath))
+                            {
+                                labelError.Content += "Source path of Base wim file does not exist\n";
+                                return false;
+                            }
+                        }                        
+                    }
+                    if (textBoxDriveEImage.Text != "")
+                    {
+                        if (!File.Exists(textBoxDriveEImage.Text + ".my"))
+                        {
+                            labelError.Content += "DriveE image settings does not exist\n";
+                            return false;
+                        }
+                        else
+                        {
+                            taskData.DriveEImageData = FileHandler.Load<ImageData>(textBoxDriveEImage.Text + ".my");
+                            if(!File.Exists(taskData.DriveEImageData.SourcePath))
+                            {
+                                labelError.Content += "Source path of DriveE wim file does not exist\n";
+                                return false;
+                            }
+                        }                        
+                    }
+                }
+                return true;
             }
-            if(checkBoxCloning.IsChecked.Value && textBoxBaseImage.Text == "" && textBoxDriveEImage.Text == "")
+            catch(Exception ex)
             {
-                tabItemGeneral.IsSelected = true;
-                labelError.Content += "Cloning is not properly set up\n";
+                MessageBox.Show(ex.ToString());
                 return false;
             }
-            return true;
         }
 
         private void SetErrorMessage(Label label, string message)

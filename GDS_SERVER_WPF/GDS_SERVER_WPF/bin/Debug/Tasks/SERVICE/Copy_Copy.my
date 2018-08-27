@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>Copy_Copy</Name>
+  <LastExecuted>11.12.2017 22:07:26</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>false</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>false</Cloning>
+  <BaseImageSourcePath />
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <SourceDirectoryInOS>I:\Images\MOC\DriveE\_WIM\20764B</SourceDirectoryInOS>
+  <DestinationDirectoryInOS>E:\</DestinationDirectoryInOS>
+  <CommandsInOS>
+    <string />
+  </CommandsInOS>
+  <CopyFilesInOS>
+    <string>I:\Images\MOC\DriveE\_WIM\20764B\parent-VHD.bat</string>
+    <string>I:\Images\MOC\DriveE\_WIM\20764B\parent-VHD.ps1</string>
+  </CopyFilesInOS>
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE />
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE>
+    <string />
+  </CommandsInWINPE>
+  <WaitingTime>30</WaitingTime>
+</TaskData>

@@ -75,10 +75,14 @@
                                 <MenuItem x:Name="menuItemFeaturesWG" Header="Features">
                                     <MenuItem Header="Wake On Lan" InputGestureText="CTRL+W" Click="MenuItemMachineGroupsWOL_Click"/>
                                     <MenuItem Header="RDP" InputGestureText="CTRL+R" Click="MenuItemMachineGroupsRDP_Click"/>
+                                    <MenuItem Header="Dart Viewer" InputGestureText="CTRL+D" Click="MenuItemMachineGroupsDartViewer_Click"/>
                                     <MenuItem Header="Lock" InputGestureText="CTRL+L" Click="MenuItemMachineGroupsLock_Click"/>
                                     <MenuItem Header="Configure Template" InputGestureText="CTRL+T" Click="MenuItemMachineGroupsConfigureTemplate_Click" />
+                                    <MenuItem Header="Crete RDP Files" InputGestureText="F8" Click="MenuItemMachineGroupsCreateRDPFiles_Click"/>
+                                    <MenuItem Header="Update ClassRoomID" InputGestureText="F11" Click="MenuItemMachineGroupsUpdateClassRoomID_Click"/>
                                 </MenuItem>
                                 <MenuItem Header="New Folder" InputGestureText="CTRL+SHIFT+N" Click="MenuItemCreateFolder_Click"/>
+                                <MenuItem x:Name="menuItemSetFolderID" Header="Set ClassRoom ID" InputGestureText="F12"  Click="MenuItemMachineGroupsSetClassRoomID_Click"/>
                             </ContextMenu>
                         </ListView.ContextMenu>
                         <ListView.ItemContainerStyle>
@@ -146,7 +150,7 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <ListView Grid.Row="0" Grid.Column="3" x:Name="listViewMachineGroupsLock" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White" SelectionChanged="ListViewMachineGroups_SelectionChanged" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" Focusable="False" MouseDown="ListViewMachineGroups_MouseDown" KeyUp="ListViewMachineGroups_KeyUp_1" MouseDoubleClick="listViewMachineGroupsLock_MouseDoubleClick" >
+                    <ListView Grid.Row="0" Grid.Column="3" x:Name="listViewMachineGroupsLock" SelectionMode="Extended" FontFamily="Times New Roman" FontSize="16" VerticalContentAlignment="Top" Cursor="" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White" SelectionChanged="ListViewMachineGroups_SelectionChanged" IsSynchronizedWithCurrentItem="True" local:GridViewSort.AutoSort="True" Focusable="False" MouseDown="ListViewMachineGroups_MouseDown" MouseDoubleClick="listViewMachineGroupsLock_MouseDoubleClick" KeyUp="listViewMachineGroupsLock_KeyUp" >
                         <ListView.ContextMenu>
                             <ContextMenu>
                                 <MenuItem x:Name="menuItemRenameWGLock" Header="Rename" InputGestureText="F2"  Click="MenuItemMachineGroupsRenameLock_Click"/>
@@ -155,6 +159,8 @@
                                 <MenuItem x:Name="menuItemFeaturesWGLock" Header="Features">
                                     <MenuItem Header="Wake On Lan" InputGestureText="CTRL+W" Click="MenuItemMachineGroupsWOLLock_Click"/>
                                     <MenuItem Header="RDP" InputGestureText="CTRL+R" Click="MenuItemMachineGroupsRDPLock_Click"/>
+                                    <MenuItem Header="Dart Viewer" InputGestureText="CTRL+D" Click="MenuItemMachineGroupsDartViewerLock_Click"/>
+                                    <MenuItem Header="Create RDP Files" InputGestureText="F8" Click="MenuItemMachineGroupsCreateRDPLock_Click"/>
                                 </MenuItem>
                             </ContextMenu>
                         </ListView.ContextMenu>
@@ -235,7 +241,7 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn Header="Last Executed" Width="150" local:GridViewSort.PropertyName="LastExecuted">
+                                <GridViewColumn Header="Last Executed" Width="160" local:GridViewSort.PropertyName="LastExecuted">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -503,13 +509,14 @@
                         <RowDefinition />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="1*"/>
-                        <ColumnDefinition Width="0.3*"/>
-                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="17*"/>
+                        <ColumnDefinition Width="174*"/>
+                        <ColumnDefinition Width="380*"/>
+                        <ColumnDefinition Width="190*"/>
+                        <ColumnDefinition Width="57*"/>
+                        <ColumnDefinition Width="189*"/>
                     </Grid.ColumnDefinitions>
-                        <TreeView Grid.Row="0" Grid.RowSpan="9" Grid.Column="0" x:Name="treeViewPostInstalls" HorizontalAlignment="Stretch" Height="auto" VerticalAlignment="Stretch" Width="auto" Margin="5" SelectedItemChanged="TreeViewPostInstalls_SelectedItemChanged">
+                    <TreeView Grid.Row="0" Grid.RowSpan="9" Grid.Column="0" x:Name="treeViewPostInstalls" HorizontalAlignment="Stretch" Height="auto" VerticalAlignment="Stretch" Width="auto" Margin="5" SelectedItemChanged="TreeViewPostInstalls_SelectedItemChanged" KeyUp="treeViewPostInstalls_KeyUp" Grid.ColumnSpan="2">
                         <TreeView.Resources>
                             <Style TargetType="{x:Type TreeViewItem}">
                                 <Setter Property="HeaderTemplate">
@@ -525,7 +532,7 @@
                             </Style>
                         </TreeView.Resources>
                     </TreeView>
-                    <ListView Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="9" x:Name="listViewPostInstalls" HorizontalAlignment="Stretch" Height="auto" VerticalAlignment="Stretch" Width="auto" Margin="5" MouseDoubleClick="ListViewPostInstalls_MouseDoubleClick" SelectionChanged="ListViewPostInstalls_SelectionChanged">
+                    <ListView Grid.Column="2" Grid.ColumnSpan="1" Grid.RowSpan="9" x:Name="listViewPostInstalls" HorizontalAlignment="Stretch" Height="auto" VerticalAlignment="Stretch" Width="auto" Margin="5" MouseDoubleClick="ListViewPostInstalls_MouseDoubleClick" SelectionChanged="ListViewPostInstalls_SelectionChanged">
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Name" Width="180">
@@ -550,21 +557,21 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <ListBox x:Name="listBoxPostInstallsSelected" Grid.Column="2" Grid.Row="0" Grid.RowSpan="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDoubleClick="ListBoxPostInstallsSelected_MouseDoubleClick" />
-                    <ListBox x:Name="listBoxPostInstallsSelector" Grid.Column="4" Grid.Row="0" Grid.RowSpan="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDoubleClick="ListBoxPostInstallsSelector_MouseDoubleClick" SelectionChanged="ListBoxPostInstallsSelector_SelectionChanged"/>
-                    <Button x:Name="btnPostInstallsSelect" Grid.Column="3" Grid.Row="1" Content="&lt;&lt;" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDown="BtnPostInstallsSelect_MouseDown"/>
-                    <Button x:Name="btnPostInstallsUnSelect" Grid.Column="3" Grid.Row="3" Content="&gt;&gt;" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDown="BtnPostInstallsUnSelect_MouseDown"/>
-                    <Button x:Name="btnPostInstallsRefresh" Grid.Column="2" Grid.Row="5" Content="Refresh" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Height="30" Margin="5" MouseDown="BtnPostInstallsRefresh_MouseDown"/>
-                    <Label Content="* Restart after all" Grid.Column="4" Grid.Row="5" FontWeight="Bold" VerticalAlignment="Top"/>
-                    <Label Content="** Shutdown after all" Grid.Column="4" Grid.Row="5" FontWeight="Bold" VerticalAlignment="Bottom"/>
-                    <Label Content="Note to Installation:" Grid.Column="2" Grid.Row="6" FontWeight="Bold" VerticalAlignment="Bottom" />
-                    <Border BorderThickness="1" BorderBrush="Black" Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="3" Margin="5">
+                    <ListBox x:Name="listBoxPostInstallsSelected" Grid.Column="3" Grid.Row="0" Grid.RowSpan="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDoubleClick="ListBoxPostInstallsSelected_MouseDoubleClick" />
+                    <ListBox x:Name="listBoxPostInstallsSelector" Grid.Column="5" Grid.Row="0" Grid.RowSpan="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDoubleClick="ListBoxPostInstallsSelector_MouseDoubleClick" SelectionChanged="ListBoxPostInstallsSelector_SelectionChanged"/>
+                    <Button x:Name="btnPostInstallsSelect" Grid.Column="4" Grid.Row="1" Content="&lt;&lt;" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDown="BtnPostInstallsSelect_MouseDown" Click="btnPostInstallsSelect_Click"/>
+                    <Button x:Name="btnPostInstallsUnSelect" Grid.Column="4" Grid.Row="3" Content="&gt;&gt;" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="5" MouseDown="BtnPostInstallsUnSelect_MouseDown" Click="btnPostInstallsUnSelect_Click"/>
+                    <Button x:Name="btnPostInstallsRefresh" Grid.Column="3" Grid.Row="5" Content="Refresh" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Height="30" Margin="5,5,0,0" MouseDown="BtnPostInstallsRefresh_MouseDown" Click="btnPostInstallsRefresh_Click"/>
+                    <Label Content="* Restart after all" Grid.Column="5" Grid.Row="5" FontWeight="Bold" VerticalAlignment="Top"/>
+                    <Label Content="** Shutdown after all" Grid.Column="5" Grid.Row="5" FontWeight="Bold" VerticalAlignment="Bottom"/>
+                    <Label Content="Note to Installation:" Grid.Column="3" Grid.Row="6" FontWeight="Bold" VerticalAlignment="Bottom" />
+                    <Border BorderThickness="1" BorderBrush="Black" Grid.Column="3" Grid.Row="7" Grid.ColumnSpan="3" Margin="5">
                         <ScrollViewer HorizontalScrollBarVisibility="Auto" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                             <TextBlock x:Name="txtBlockPostInstalls" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="Black" Background="White" FontSize="16" TextWrapping="Wrap" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" />
                         </ScrollViewer>
                     </Border>
-                    <Button x:Name="btnPostInstallsCopyPath" Grid.Column="2" Grid.Row="8" Content="Copy Path" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Margin="5" Click="BtnPostInstallsCopyPath_Click"/>
-                    <Button x:Name="btnPostInstallsChangeNote" Grid.Column="4" Grid.Row="8" Content="Change Note" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Margin="5" Click="BtnPostInstallsChangeNote_Click"/>
+                    <Button x:Name="btnPostInstallsCopyPath" Grid.Column="3" Grid.Row="8" Content="Copy Path" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Margin="45,5,45,6" Click="BtnPostInstallsCopyPath_Click"/>
+                    <Button x:Name="btnPostInstallsChangeNote" Grid.Column="5" Grid.Row="8" Content="Change Note" VerticalAlignment="Center" HorizontalAlignment="Center" Width="100" Height="30" Margin="45,5,44,6" Click="BtnPostInstallsChangeNote_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="History">
@@ -686,8 +693,32 @@
                         <GradientStop Color="{DynamicResource {x:Static SystemColors.HighlightTextColorKey}}" Offset="1"/>
                     </LinearGradientBrush>
                 </TabItem.Background>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="15*"/>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Border BorderThickness="1" BorderBrush="Black" Grid.Row="0" Margin="5">
+                        <ScrollViewer HorizontalScrollBarVisibility="Auto" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <TextBlock x:Name="TextBlockInfo" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="auto" Height="auto" Margin="10" FontSize="18"/>
+                        </ScrollViewer>
+                    </Border>
+                    <Button x:Name="BtnRefreshReleaseInfo" Grid.Row="1" Content="Refresh Info" Width="75" Height="25" VerticalAlignment="Center" HorizontalAlignment="Left" Click="BtnRefreshReleaseInfo_Click" />
+                    <Button x:Name="BtnMigrate" Grid.Row="1" Content="Migrate" Width="75" Height="25" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BtnMigrate_Click" />
+                </Grid>
             </TabItem>
-            <TabItem Header="SQL Test">
+            <TabItem Header="Console">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                        <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                        <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                        <GradientStop Color="{DynamicResource {x:Static SystemColors.HighlightTextColorKey}}" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <ListBox x:Name="listBoxConsole" Width="auto" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            </TabItem>
+            <TabItem Header="SQL Test" Visibility="Visible">
                 <TabItem.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                         <GradientStop Color="#FFF3F3F3" Offset="0"/>
@@ -699,6 +730,7 @@
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="10*"/>
+                        <RowDefinition Height="1*"/>
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="1*"/>
                     </Grid.RowDefinitions>
@@ -714,12 +746,15 @@
                     <TextBox x:Name="txtBoxMAC" ToolTip="MAC" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
                     <TextBox x:Name="txtBoxName" ToolTip="Name" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
                     <TextBox x:Name="txtBoxClassRoom" ToolTip="ClassRoom ID" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
-                    <Button x:Name="btnInsert" Content="Insert" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="btnInsert_Click" />
-                    <Button x:Name="btnUpdate" Content="Update" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="btnUpdate_Click" />
-                    <Button x:Name="btnDelete" Content="Delete" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="btnDelete_Click" />
+                    <TextBox x:Name="txtBoxClassRoomName" ToolTip="ClassRoom Name" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <TextBox x:Name="txtBoxClassRoomID" ToolTip="ClassRoom ID" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                    <Button x:Name="btnInsert" Content="Insert" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="btnInsert_Click" />
+                    <Button x:Name="btnUpdate" Content="Update" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="btnUpdate_Click" />
+                    <Button x:Name="btnInsertClassroom" Content="Insert Class Room" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="btnInsertClassroom_Click" />
+                    <Button x:Name="btnDelete" Content="Delete" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Click="btnDelete_Click" />
                 </Grid>
             </TabItem>
-            <TabItem Header="SQL Class Rooms">
+            <TabItem Header="SQL Class Rooms" Visibility="Hidden">
                 <TabItem.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                         <GradientStop Color="#FFF3F3F3" Offset="0"/>
@@ -732,23 +767,12 @@
                     <DataGrid x:Name="gridClassRoomsID" />
                 </Grid>
             </TabItem>
-            <TabItem Header="Console">
-                <TabItem.Background>
-                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                        <GradientStop Color="#FFF3F3F3" Offset="0"/>
-                        <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
-                        <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
-                        <GradientStop Color="{DynamicResource {x:Static SystemColors.HighlightTextColorKey}}" Offset="1"/>
-                    </LinearGradientBrush>
-                </TabItem.Background>
-                <ListBox x:Name="listBoxConsole" Width="auto" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
-            </TabItem>
         </TabControl>
         <Label x:Name="labelSelected" Grid.Row="1" Grid.Column="0" Content="Selected: 999" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
         <Label x:Name="labelFolderContains" Grid.Row="1" Grid.Column="1" Content="Folder Contains: 999" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
         <Label x:Name="labelOnline" Grid.Row="1" Grid.Column="2" Content="Online: 999" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
         <Label x:Name="labelOffilne" Grid.Row="1" Grid.Column="3" Content="Offline: 999" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
-        <Label x:Name="labelClients" Grid.Row="1" Grid.Column="4" Content="Clients: 999" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center" FontWeight="Bold"/>        
+        <Label x:Name="labelClients" Grid.Row="1" Grid.Column="4" Content="Clients: 999" HorizontalAlignment="Left" FontSize="20" VerticalAlignment="Center" FontWeight="Bold"/>
 
     </Grid>
 </Window>

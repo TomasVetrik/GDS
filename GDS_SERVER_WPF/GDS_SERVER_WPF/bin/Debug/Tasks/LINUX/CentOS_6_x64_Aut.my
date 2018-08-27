@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>CentOS_6_x64_Aut</Name>
+  <LastExecuted>22.05.2018 16:20:26</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>false</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>true</Cloning>
+  <BaseImageSourcePath>.\Base\CentOS_6_x64</BaseImageSourcePath>
+  <WithoutVHD>true</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>false</SoftwareAndFileAction>
+  <SourceDirectoryInOS />
+  <DestinationDirectoryInOS />
+  <CommandsInOS>
+    <string />
+  </CommandsInOS>
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE>I:\Images\HIVE\pajka_temp\centos6.6</SourceDirectoryInWINPE>
+  <DestinationDirectoryInWINPE>C:\</DestinationDirectoryInWINPE>
+  <CopyFilesInWINPE>
+    <string>I:\Images\HIVE\pajka_temp\centos6.6\ANG0</string>
+    <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup</string>
+    <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup.LOG</string>
+    <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup.LOG1</string>
+    <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup.LOG2</string>
+    <string>I:\Images\HIVE\pajka_temp\centos6.6\bootmgr</string>
+    <string>I:\Images\HIVE\pajka_temp\centos6.6\BOOTNXT</string>
+    <string>I:\Images\HIVE\pajka_temp\centos6.6\BOOTSECT.BAK</string>
+    <string>I:\Images\HIVE\pajka_temp\centos6.6\CentOs_6.6_aut.iso</string>
+  </CopyFilesInWINPE>
+  <CommandsInWINPE>
+    <string />
+  </CommandsInWINPE>
+  <WaitingTime>30</WaitingTime>
+</TaskData>

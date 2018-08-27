@@ -1,0 +1,21 @@
+netgeneric_VS2017_1709_NO_SYSPREP
+TargetComputers||LEKTOR922,STUDENT922-01,STUDENT922-02,STUDENT922-03,STUDENT922-04,STUDENT922-05,STUDENT922-06,STUDENT922-07,STUDENT922-08,STUDENT922-09,STUDENT922-10
+Clone||True
+Image Source Path||.\Images\_NO_SYSPREP\W10_Off2k16_x64_SingleProfile_NO_SYSPREP_1803
+DriveE Source Path||.\DriveE\VS_generic_VS2017
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\NETgeneric\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||25.05.2018 13:06:29
+WaitingTime||30
+Machine Group||922
+Configuration||True
+WithoutVHD||False

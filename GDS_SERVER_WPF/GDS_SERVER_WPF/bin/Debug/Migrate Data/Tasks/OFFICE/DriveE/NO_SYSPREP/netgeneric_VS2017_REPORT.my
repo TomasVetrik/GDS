@@ -1,0 +1,23 @@
+netgeneric_VS2017_REPORT
+TargetComputers||LEKTOR1036,STUDENT1036-01,STUDENT1036-02,STUDENT1036-03,STUDENT1036-04,STUDENT1036-07,STUDENT1036-08
+Clone||False
+Image Source Path||.\Images\_NO_SYSPREP\W10_Off2k16_x64_SingleProfile_NO_SYSPREP
+DriveE Source Path||.\DriveE\VS_generic_VS2017
+SAFA||True
+SourceDirectory||I:\Images\Office\DriveE\_WIM\VS_generic_2017
+TargetDirectory||E:\
+I:\Images\Office\DriveE\_WIM\VS_generic_2017\Report.bat
+I:\Images\Office\DriveE\_WIM\VS_generic_2017\Report.ps1
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\Report.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||24.01.2018 17:16:47
+WaitingTime||30
+Machine Group||1036
+Configuration||False
+WithoutVHD||False

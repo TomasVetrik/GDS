@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>DUDIK_OFUN</Name>
+  <LastExecuted>16. 6. 2017 15:46:16</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>true</Cloning>
+  <BaseImageSourcePath>.\Images\Office\Office_2k13_x64</BaseImageSourcePath>
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath>.\DriveE\GOC\OFUN_DUDIK</DriveEImageSourcePath>
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <SourceDirectoryInOS>I:\_Temporary\OFUN_DUDIK</SourceDirectoryInOS>
+  <DestinationDirectoryInOS>E:\</DestinationDirectoryInOS>
+  <CommandsInOS>
+    <string>E:\Autologon.bat</string>
+  </CommandsInOS>
+  <CopyFilesInOS>
+    <string>I:\_Temporary\OFUN_DUDIK\Autologon.ps1</string>
+  </CopyFilesInOS>
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE />
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE>
+    <string />
+  </CommandsInWINPE>
+  <WaitingTime>30</WaitingTime>
+</TaskData>

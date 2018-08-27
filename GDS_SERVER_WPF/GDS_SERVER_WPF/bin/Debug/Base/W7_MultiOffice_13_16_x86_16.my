@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ImageData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>W7_MultiOffice_13_16_x86_16</Name>
+  <ImageSource>Images/Image.ico</ImageSource>
+  <SourcePath>I:\Images\Office\Base\_WIM\W7_MultiOffice_13_16_x86\W7_MultiOffice_13_16_x86.wim</SourcePath>
+  <BoolLabel>Windows 7</BoolLabel>
+  <PartitionSize>125</PartitionSize>
+  <VHDResizeSize>40</VHDResizeSize>
+  <VHDResize>false</VHDResize>
+  <VHDNames>
+    <string>W7_Off2k16_x86</string>
+  </VHDNames>
+  <OSAbrivations>
+    <string>W7_X86</string>
+  </OSAbrivations>
+</ImageData>

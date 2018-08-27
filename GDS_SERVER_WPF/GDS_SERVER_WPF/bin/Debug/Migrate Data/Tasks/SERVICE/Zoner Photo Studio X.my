@@ -1,0 +1,26 @@
+Zoner Photo Studio X
+TargetComputers||LEKTOR925,STUDENT925-01,STUDENT925-02,STUDENT925-03,STUDENT925-04,STUDENT925-05,STUDENT925-06,STUDENT925-07,STUDENT925-08
+Clone||False
+Image Source Path||
+DriveE Source Path||
+SAFA||True
+SourceDirectory||I:\Images\Startup_OS\PostInstallers\Zoner_Photo_Studio
+TargetDirectory||D:\Temp\PostInstallers\Zoner_Photo_studio
+I:\Images\Startup_OS\PostInstallers\Zoner_Photo_Studio\Start.bat
+I:\Images\Startup_OS\PostInstallers\Zoner_Photo_Studio\Start.ps1
+I:\Images\Startup_OS\PostInstallers\Zoner_Photo_Studio\zps_CZ_patch.exe
+I:\Images\Startup_OS\PostInstallers\Zoner_Photo_Studio\zps_x_pro_cz_edu_2017_01_23_x64.msi
+I:\Images\Startup_OS\PostInstallers\Zoner_Photo_Studio\zps_x_pro_cz_edu_2017_01_23_x86.msi
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||D:\Temp\PostInstallers\Zoner_Photo_studio\Start.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||02.04.2018 14:12:39
+WaitingTime||30
+Machine Group||925
+Configuration||False
+WithoutVHD||False

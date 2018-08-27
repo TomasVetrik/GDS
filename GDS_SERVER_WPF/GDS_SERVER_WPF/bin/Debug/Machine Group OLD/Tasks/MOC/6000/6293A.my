@@ -1,0 +1,21 @@
+6293A
+TargetComputers||LEKTORSK4,STUDENTSK4-01,STUDENTSK4-03,STUDENTSK4-04,STUDENTSK4-05,STUDENTSK4-06,STUDENTSK4-07,STUDENTSK4-08
+Clone||True
+Image Source Path||.\Images\MOC\W2k8_R2
+DriveE Source Path||.\DriveE\6000\6293A
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||cscript E:\autologon.vbs
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||13. 10. 2017 12:39:28
+WaitingTime||30
+Machine Group||UcebnaSK04
+Configuration||True
+WithoutVHD||False

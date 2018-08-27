@@ -1,0 +1,25 @@
+Blender
+TargetComputers||LEKTOR932
+Clone||False
+Image Source Path||
+DriveE Source Path||
+SAFA||True
+SourceDirectory||I:\Startup_OS\PostInstallers\Blender
+TargetDirectory||D:\Temp\PostInstallers\Blender
+I:\Startup_OS\PostInstallers\Blender\Blender.ps1
+I:\Startup_OS\PostInstallers\Blender\blender-2.77a-windows32.msi
+I:\Startup_OS\PostInstallers\Blender\blender-2.77a-windows64.msi
+I:\Startup_OS\PostInstallers\Blender\Start.bat
+I:\Startup_OS\PostInstallers\Blender\Start_old.bat
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||D:\Temp\PostInstallers\Blender\start.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||3. 8. 2016 15:40:31
+WaitingTime||30
+Machine Group||932
+Configuration||False

@@ -1,0 +1,21 @@
+W10_x64_Virtual
+TargetComputers||LEKTOR921,STUDENT921-01,STUDENT921-02,STUDENT921-03,STUDENT921-04,STUDENT921-05,STUDENT921-06,STUDENT921-07,STUDENT921-08,STUDENT921-09,STUDENT921-10
+Clone||True
+Image Source Path||.\Images\W10_Off2k16_x64_Singleprofile
+DriveE Source Path||.\DriveE\W10_x64_Virtual
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||14.06.2017 16:12:52
+WaitingTime||30
+Machine Group||921
+Configuration||True
+WithoutVHD||False

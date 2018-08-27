@@ -1,0 +1,27 @@
+Gimp
+TargetComputers||STUDENT925-10,STUDENT925-11,STUDENT925-12
+Clone||False
+Image Source Path||
+DriveE Source Path||
+SAFA||True
+SourceDirectory||I:\Images\Startup_OS\PostInstallers\Gimp
+TargetDirectory||D:\Temp\PostInstallers\Gimp\
+I:\Images\Startup_OS\PostInstallers\Gimp\Descriptions.txt
+I:\Images\Startup_OS\PostInstallers\Gimp\gimp-2.8.16-setup-6.exe
+I:\Images\Startup_OS\PostInstallers\Gimp\Gimp.ps1
+I:\Images\Startup_OS\PostInstallers\Gimp\Start.bat
+I:\Images\Startup_OS\PostInstallers\Gimp\Start_old.bat
+I:\Images\Startup_OS\PostInstallers\Gimp\ufraw-0.19.2-2-setup.exe
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||D:\Temp\PostInstallers\Gimp\start.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||17.05.2018 0:44:44
+WaitingTime||30
+Machine Group||925
+Configuration||False
+WithoutVHD||False

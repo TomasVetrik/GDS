@@ -1,0 +1,21 @@
+CTSEC
+TargetComputers||LEKTOR1031,STUDENT1031-01,STUDENT1031-02,STUDENT1031-03,STUDENT1031-04,STUDENT1031-05,STUDENT1031-06,STUDENT1031-07
+Clone||True
+Image Source Path||.\Images\_NO_SYSPREP\W10_Off2k16_x64_SingleProfile_NO_SYSPREP
+DriveE Source Path||.\DriveE\CTSEC
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||18.02.2018 15:18:31
+WaitingTime||30
+Machine Group||1031
+Configuration||True
+WithoutVHD||False

@@ -1,0 +1,26 @@
+Questionmark
+TargetComputers||LEKTOR924,STUDENT924-01,STUDENT924-02,STUDENT924-03,STUDENT924-04,STUDENT924-05,STUDENT924-06,STUDENT924-07,STUDENT924-08,STUDENT924-09,STUDENT924-10,STUDENT924-11,STUDENT924-12
+Clone||False
+Image Source Path||
+DriveE Source Path||
+SAFA||True
+SourceDirectory||I:\Images\Startup_OS\PostInstallers\Questionmark
+TargetDirectory||D:\Temp\PostInstallers\Questionmark\
+I:\Images\Startup_OS\PostInstallers\Questionmark\Autologon.ps1
+I:\Images\Startup_OS\PostInstallers\Questionmark\QSB_5.8.1.4_EN.exe
+I:\Images\Startup_OS\PostInstallers\Questionmark\QuestionMark.ps1
+I:\Images\Startup_OS\PostInstallers\Questionmark\Start.bat
+I:\Images\Startup_OS\PostInstallers\Questionmark\ChromeSetup.exe
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||D:\Temp\PostInstallers\Questionmark\start.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||17.01.2018 10:23:47
+WaitingTime||10
+Machine Group||924
+Configuration||False
+WithoutVHD||False

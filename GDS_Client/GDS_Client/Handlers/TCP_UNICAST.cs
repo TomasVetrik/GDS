@@ -182,7 +182,5 @@ namespace GDS_Client.Handlers
                 DestroyConnection();
             }
         }
-
-
     }
 }

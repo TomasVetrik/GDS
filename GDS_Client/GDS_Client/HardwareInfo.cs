@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Management;
 using System.Net;
-using System.Net.NetworkInformation;
 using System.Threading;
 
 namespace GDS_Client
@@ -51,14 +50,13 @@ namespace GDS_Client
                         }
                     }
                 }
-                string hostName = Dns.GetHostName();
-                foreach (IPAddress IP in Dns.GetHostByName(hostName).AddressList)
+                foreach (IPAddress IP in Dns.GetHostEntry(Dns.GetHostName()).AddressList)
                 {
                     IPAddress.Add(IP.ToString());
-                }
+                }                
                 return IPAddress;
             }
-            catch { }
+            catch(Exception ex) { Console.WriteLine(ex.ToString()); }
             return new List<string>();
         }
 
@@ -90,8 +88,7 @@ namespace GDS_Client
             }
             else
             {
-                string hostName = Dns.GetHostName();
-                IPAddress = Dns.GetHostByName(hostName).AddressList[0].ToString();
+                IPAddress = Dns.GetHostEntry(Dns.GetHostName()).AddressList[0].ToString();
             }
             if (IPAddress.Length != 0)
             {
@@ -242,6 +239,15 @@ namespace GDS_Client
                 GetMacAddresses();
                 return new List<string>();
             }
+        }
+
+        public static List<string> GetMacAddresses2()
+        {
+            if(File.Exists(@"X:\Mac.txt"))
+            {
+                return new List<string> { File.ReadAllText(@"X:\Mac.txt") };
+            }
+            return new List<string>();
         }
     }
 }

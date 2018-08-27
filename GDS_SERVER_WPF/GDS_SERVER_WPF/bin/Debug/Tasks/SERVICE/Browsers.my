@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>Browsers</Name>
+  <LastExecuted>14.05.2018 14:01:40</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>false</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>false</Cloning>
+  <BaseImageSourcePath />
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <SourceDirectoryInOS>I:\Images\Startup_OS\PostInstallers\Browsers</SourceDirectoryInOS>
+  <DestinationDirectoryInOS>D:\Temp\PostInstallers\Browsers</DestinationDirectoryInOS>
+  <CommandsInOS>
+    <string>D:\Temp\PostInstallers\Browsers\start.bat</string>
+  </CommandsInOS>
+  <CopyFilesInOS>
+    <string>I:\Images\Startup_OS\PostInstallers\Browsers\Descriptions.txt</string>
+    <string>I:\Images\Startup_OS\PostInstallers\Browsers\ChromeSetup.exe</string>
+    <string>I:\Images\Startup_OS\PostInstallers\Browsers\IExplorer.exe</string>
+    <string>I:\Images\Startup_OS\PostInstallers\Browsers\Opera_NI_stable.exe</string>
+    <string>I:\Images\Startup_OS\PostInstallers\Browsers\Start.bat</string>
+  </CopyFilesInOS>
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE />
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE>
+    <string />
+  </CommandsInWINPE>
+  <WaitingTime>30</WaitingTime>
+</TaskData>

@@ -1,0 +1,21 @@
+RunCommand
+TargetComputers||LEKTORSK12,STUDENTSK12-01,STUDENTSK12-02,STUDENTSK12-03,STUDENTSK12-04,STUDENTSK12-05,STUDENTSK12-06,STUDENTSK12-07,STUDENTSK12-08
+Clone||False
+Image Source Path||
+DriveE Source Path||
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||D:\autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||17. 1. 2018 10:04:28
+WaitingTime||30
+Machine Group||UcebnaSK12
+Configuration||False
+WithoutVHD||False

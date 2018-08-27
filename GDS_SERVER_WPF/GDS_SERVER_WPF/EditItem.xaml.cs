@@ -56,12 +56,12 @@ namespace GDS_SERVER_WPF
             this.Close();
         }
 
-        private void buttonOK_Click(object sender, RoutedEventArgs e)
+        private void ButtonOK_Click(object sender, RoutedEventArgs e)
         {
             ClickOK();
         }
 
-        private void buttonCancel_Click(object sender, RoutedEventArgs e)
+        private void ButtonCancel_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

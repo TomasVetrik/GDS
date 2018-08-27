@@ -1,0 +1,21 @@
+GOC-BASE
+TargetComputers||LEKTOR1033,STUDENT1033-01,STUDENT1033-02,STUDENT1033-03,STUDENT1033-04,STUDENT1033-05,STUDENT1033-06,STUDENT1033-07,STUDENT1033-08
+Clone||True
+Image Source Path||.\Images\_NO_VHD\w2k16
+DriveE Source Path||.\DriveE\GOC-BASE
+SAFA||False
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\GOC201\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||07.05.2018 15:51:03
+WaitingTime||39
+Machine Group||1033
+Configuration||True
+WithoutVHD||True

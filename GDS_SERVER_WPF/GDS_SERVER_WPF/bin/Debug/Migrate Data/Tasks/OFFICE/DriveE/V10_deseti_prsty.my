@@ -1,0 +1,25 @@
+V10_deseti_prsty
+TargetComputers||LEKTOR921,STUDENT921-01,STUDENT921-02,STUDENT921-03,STUDENT921-04,STUDENT921-05,STUDENT921-07,STUDENT921-08,STUDENT921-09,STUDENT921-10
+Clone||True
+Image Source Path||.\Images\W7_Off2k16_x64_MultiProfile
+DriveE Source Path||
+SAFA||True
+SourceDirectory||I:\Images\Startup_OS\PostInstallers\V10
+TargetDirectory||E:\
+I:\Images\Startup_OS\PostInstallers\V10\AutoLogon.vbs
+I:\Images\Startup_OS\PostInstallers\V10\DesetiPrsty.sfx.exe
+I:\Images\Startup_OS\PostInstallers\V10\MultiScript.vbs
+I:\Images\Startup_OS\PostInstallers\V10\Start.bat
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\Start.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||12.04.2018 7:16:53
+WaitingTime||30
+Machine Group||921
+Configuration||True
+WithoutVHD||False

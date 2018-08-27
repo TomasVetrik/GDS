@@ -1,0 +1,21 @@
+GOC260_BASE_POLIVKA
+TargetComputers||LEKTORSK8,STUDENTSK8-01,STUDENTSK8-02,STUDENTSK8-03,STUDENTSK8-04,STUDENTSK8-05,STUDENTSK8-06,STUDENTSK8-07,STUDENTSK8-08
+Clone||True
+Image Source Path||.\Images\GOC\GOC260_BASE
+DriveE Source Path||
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||C:\bcdedit_GOC260.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||8. 11. 2017 7:36:19
+WaitingTime||30
+Machine Group||UcebnaSK08
+Configuration||True
+WithoutVHD||False

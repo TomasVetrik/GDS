@@ -1,5 +1,6 @@
 ﻿using GDS_SERVER_WPF.DataCLasses;
 using ProtoBuf;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Media.Imaging;
@@ -26,6 +27,11 @@ namespace GDS_SERVER_WPF
             this.LastExecuted = _lastExecuted;
             this.MachineGroup = _machineGroups;
             this.TargetComputers = _computers;
+            this.TargetComputers = new List<ComputerDetailsData>();
+            this.CopyFilesInOS = new List<string>();
+            this.CopyFilesInWINPE = new List<string>();
+            this.CommandsInOS = new List<string>();
+            this.CommandsInWINPE = new List<string>();
         }
 
         [ProtoMember(1)]
@@ -80,5 +86,201 @@ namespace GDS_SERVER_WPF
         public List<string> CommandsInWINPE { get; set; }
         [ProtoMember(26)]
         public int WaitingTime { get; set; }
+
+
+        public void LoadDataFromList(List<string> list)
+        {
+            bool targetDirectory = false;
+            bool targetDirectory_WINPE = false;
+            bool commands = false;
+            bool commands_WINPE = false;
+            foreach (string line in list)
+            {
+                if (line != "")
+                {
+                    if (line.Contains("LastExecution||"))
+                    {
+                        LastExecuted = "NONE";
+                        string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
+                        if (splitter[1] != "")
+                        {
+                            LastExecuted = splitter[1];
+                        }
+                    }
+                    if (line.Contains("WaitingTime||"))
+                    {
+                        string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
+                        WaitingTime = Convert.ToInt16(splitter[1]);
+                    }
+                    if (line.Contains("Clone||"))
+                    {
+                        string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
+                        if (Convert.ToBoolean(splitter[1]))
+                        {
+                            Cloning = true;
+                        }
+                        else
+                        {
+                            Cloning = false;
+                        }
+                    }
+                    if (line.Contains("WOL||"))
+                    {
+                        commands = false;
+                        string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
+                        if (Convert.ToBoolean(splitter[1]))
+                        {
+                            WakeOnLan = true;
+                        }
+                        else
+                        {
+                            WakeOnLan = false;
+                        }
+                    }
+                    if (line.Contains("Force Install||"))
+                    {
+                        targetDirectory = false;
+                        string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
+                        if (Convert.ToBoolean(splitter[1]))
+                        {
+                            ForceInstall = true;
+                        }
+                        else
+                        {
+                            ForceInstall = false;
+                        }
+                    }
+                    if (line.Contains("WithoutVHD||"))
+                    {
+                        targetDirectory = false;
+                        string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
+                        if (Convert.ToBoolean(splitter[1]))
+                        {
+                            WithoutVHD = true;
+                        }
+                        else
+                        {
+                            WithoutVHD = false;
+                        }
+                    }
+                    if (line.Contains("Shutdown||"))
+                    {
+                        commands_WINPE = false;
+                        string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
+                        if (Convert.ToBoolean(splitter[1]))
+                        {
+                            ShutDown = true;
+                        }
+                        else
+                        {
+                            ShutDown = false;
+                        }
+                    }
+                    if (line != "")
+                    {
+                        if (commands)
+                        {
+                            CommandsInOS.Add(line);
+                        }
+                        if (commands_WINPE)
+                        {
+                            CommandsInWINPE.Add(line);
+                        }
+                        if (targetDirectory)
+                        {
+                            CopyFilesInOS.Add(line);
+                        }
+                    }
+                    if (line.Contains("Commands||"))
+                    {
+                        targetDirectory_WINPE = false;
+                        string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
+                        CommandsInOS.Add(splitter[1]);
+                        commands = true;
+                    }
+                    if (line != "")
+                    {
+                        if (targetDirectory_WINPE)
+                        {
+                            CopyFilesInWINPE.Add(line);
+                        }
+                    }
+                    if (line.Contains("Commands(WINPE)||"))
+                    {
+                        string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
+                        CommandsInWINPE.Add(splitter[1]);
+                        commands_WINPE = true;
+                    }
+                    if (line.Contains("SAFA||"))
+                    {
+                        string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
+                        if (Convert.ToBoolean(splitter[1]))
+                        {
+                            SoftwareAndFileAction = true;
+                        }
+                        else
+                        {
+                            SoftwareAndFileAction = false;
+                        }
+                    }
+                    if (line.Contains("SAFA(WINPE)||"))
+                    {
+                        string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
+                        if (Convert.ToBoolean(splitter[1]))
+                        {
+                            SoftwareAndFileAction_WINPE = true;
+                        }
+                        else
+                        {
+                            SoftwareAndFileAction_WINPE = false;
+                        }
+                    }
+                    if (line.Contains("Image Source Path||"))
+                    {
+                        string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
+                        BaseImageSourcePath = splitter[1].Replace("Images","Base");
+                    }
+                    if (line.Contains("DriveE Source Path||"))
+                    {
+                        string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
+                        DriveEImageSourcePath = splitter[1];
+                    }
+                    if (line.Contains("Configuration||"))
+                    {
+                        string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
+                        if (Convert.ToBoolean(splitter[1]))
+                        {
+                            Configuration = true;
+                        }
+                        else
+                        {
+                            Configuration = false;
+                        }
+                    }
+                    if (line.Contains("TargetDirectory||"))
+                    {
+                        string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
+                        DestinationDirectoryInOS = splitter[1];
+                        targetDirectory = true;
+                    }
+                    if (line.Contains("TargetDirectory(WINPE)||"))
+                    {
+                        string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
+                        DestinationDirectoryInWINPE = splitter[1];
+                        targetDirectory_WINPE = true;
+                    }
+                    if (line.Contains("SourceDirectory||"))
+                    {
+                        string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
+                        SourceDirectoryInOS = splitter[1];
+                    }
+                    if (line.Contains("SourceDirectory(WINPE)||"))
+                    {
+                        string[] splitter = line.Split(new string[] { "||" }, StringSplitOptions.None);
+                        SourceDirectoryInWINPE = splitter[1];
+                    }
+                }            
+            }
+        }
     }
 }

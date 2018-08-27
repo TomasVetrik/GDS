@@ -1,0 +1,21 @@
+Restart_WinPE
+TargetComputers||LEKTOR915,STUDENT915-01,STUDENT915-03,STUDENT915-05,STUDENT915-07
+Clone||False
+Image Source Path||
+DriveE Source Path||
+SAFA||False
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||True
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||shutdown /r /t 0
+WOL||True
+Commands(WINPE)||wpeutil reboot
+Shutdown||False
+LastExecution||19.05.2018 18:12:45
+WaitingTime||5
+Machine Group||915
+Configuration||False
+WithoutVHD||False

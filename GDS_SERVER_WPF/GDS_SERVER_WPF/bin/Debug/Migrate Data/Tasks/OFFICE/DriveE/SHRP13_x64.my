@@ -1,0 +1,21 @@
+SHRP13_x64
+TargetComputers||STUDENT932-05,STUDENT932-06,STUDENT932-07,STUDENT932-08
+Clone||True
+Image Source Path||.\Images\W7_Off2k13_x64_MultiProfile
+DriveE Source Path||.\DriveE\SHRP13
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||19.02.2018 11:15:29
+WaitingTime||30
+Machine Group||932
+Configuration||True
+WithoutVHD||False

@@ -1,0 +1,21 @@
+SHRP13
+TargetComputers||LEKTOR932,STUDENT932-01,STUDENT932-02,STUDENT932-03,STUDENT932-04,STUDENT932-05,STUDENT932-06,STUDENT932-07,STUDENT932-08,STUDENT932-09,STUDENT932-10,STUDENT932-11,STUDENT932-12
+Clone||True
+Image Source Path||.\Images\W7_Off2k13_x86
+DriveE Source Path||.\DriveE\SHRP13
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||True
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||22.03.2017 17:11:01
+WaitingTime||30
+Machine Group||932
+Configuration||True
+WithoutVHD||False

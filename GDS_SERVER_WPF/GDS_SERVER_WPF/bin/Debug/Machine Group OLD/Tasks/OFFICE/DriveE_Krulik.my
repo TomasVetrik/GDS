@@ -1,0 +1,21 @@
+DriveE_Krulik
+TargetComputers||LEKTORSK7,STUDENTSK7-01,STUDENTSK7-02,STUDENTSK7-03,STUDENTSK7-04,STUDENTSK7-05,STUDENTSK7-06,STUDENTSK7-07,STUDENTSK7-08
+Clone||True
+Image Source Path||.\Images\Office\Win10_2k16_x64
+DriveE Source Path||.\DriveE\GOC\DriveE_Krulik
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||30. 1. 2018 13:00:04
+WaitingTime||30
+Machine Group||UcebnaSK07
+Configuration||True
+WithoutVHD||False

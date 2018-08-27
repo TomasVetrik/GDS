@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>VNC_GTT</Name>
+  <LastExecuted>22.05.2018 8:31:46</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>false</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>false</Cloning>
+  <BaseImageSourcePath />
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <SourceDirectoryInOS>I:\Images\Startup_OS\PostInstallers\VNC_GTT</SourceDirectoryInOS>
+  <DestinationDirectoryInOS>D:\Temp\PostInstallers\VNC_GTT</DestinationDirectoryInOS>
+  <CommandsInOS>
+    <string>D:\Temp\PostInstallers\VNC_GTT\Start.bat</string>
+  </CommandsInOS>
+  <CopyFilesInOS>
+    <string>I:\Images\Startup_OS\PostInstallers\VNC_GTT\Descriptions.txt</string>
+    <string>I:\Images\Startup_OS\PostInstallers\VNC_GTT\GenVNCProfiles.ps1</string>
+    <string>I:\Images\Startup_OS\PostInstallers\VNC_GTT\Shortcut.vbs</string>
+    <string>I:\Images\Startup_OS\PostInstallers\VNC_GTT\Start.bat</string>
+    <string>I:\Images\Startup_OS\PostInstallers\VNC_GTT\tightvnc-32bit.msi</string>
+    <string>I:\Images\Startup_OS\PostInstallers\VNC_GTT\tightvnc-64bit.msi</string>
+    <string>I:\Images\Startup_OS\PostInstallers\VNC_GTT\VNC-Viewer-32bit.exe</string>
+    <string>I:\Images\Startup_OS\PostInstallers\VNC_GTT\VNC-Viewer.exe</string>
+    <string>I:\Images\Startup_OS\PostInstallers\VNC_GTT\VNC_GTT.ps1</string>
+  </CopyFilesInOS>
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE />
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE>
+    <string />
+  </CommandsInWINPE>
+  <WaitingTime>30</WaitingTime>
+</TaskData>

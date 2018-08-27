@@ -1,0 +1,27 @@
+Adobe_CC_W10
+TargetComputers||STUDENT925-01,STUDENT925-02,STUDENT925-03,STUDENT925-04,STUDENT925-05,STUDENT925-06,STUDENT925-07,STUDENT925-08,STUDENT925-10,STUDENT925-11,STUDENT925-12
+Clone||True
+Image Source Path||.\Images\Adobe_CC_W10
+DriveE Source Path||
+SAFA||False
+SourceDirectory||I:\Startup_OS\PostInstallers\Gimp
+TargetDirectory||D:\Temp\PostInstallers\Gimp
+I:\Startup_OS\PostInstallers\Gimp\Descriptions.txt
+I:\Startup_OS\PostInstallers\Gimp\Gimp.ps1
+I:\Startup_OS\PostInstallers\Gimp\gimp-2.8.16-setup-6.exe
+I:\Startup_OS\PostInstallers\Gimp\Start.bat
+I:\Startup_OS\PostInstallers\Gimp\Start_old.bat
+I:\Startup_OS\PostInstallers\Gimp\ufraw-0.19.2-2-setup.exe
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||D:\Temp\PostInstallers\Gimp\Start.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||19.05.2018 18:13:04
+WaitingTime||39
+Machine Group||925
+Configuration||True
+WithoutVHD||True

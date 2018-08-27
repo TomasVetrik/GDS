@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>Domex</Name>
+  <LastExecuted>27.12.2017 11:04:10</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>false</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>false</Cloning>
+  <BaseImageSourcePath />
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <SourceDirectoryInOS>I:\Images\_Temporary\Dominik\New folder</SourceDirectoryInOS>
+  <DestinationDirectoryInOS>D:\Temp</DestinationDirectoryInOS>
+  <CommandsInOS>
+    <string>D:\Temp\Start.bat</string>
+  </CommandsInOS>
+  <CopyFilesInOS>
+    <string>I:\Images\_Temporary\Dominik\New folder\Start.bat</string>
+    <string>I:\Images\_Temporary\Dominik\New folder\Start.ps1</string>
+    <string>I:\Images\_Temporary\Dominik\New folder\Test.zip</string>
+  </CopyFilesInOS>
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE />
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE>
+    <string />
+  </CommandsInWINPE>
+  <WaitingTime>30</WaitingTime>
+</TaskData>

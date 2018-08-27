@@ -1,12 +1,9 @@
 ﻿using GDS_Client.Handlers;
-using Microsoft.Win32;
 using NetworkCommsDotNet.Connections;
-using NetworkCommsDotNet.Tools;
 using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading;
 
 namespace GDS_Client
@@ -65,24 +62,24 @@ namespace GDS_Client
             try
             {                
                 File.WriteAllText(@"X:\CloneStatus.txt", "RUNNING POWERSHELL SCRIPT");                
-                File.WriteAllText(@"X:\Error.txt", "False");
-                CloneProcess = System.Diagnostics.Process.Start(@"X:\windows\system32\WindowsPowershell\v1.0\powershell.exe", @"-WindowStyle Maximized -executionpolicy unrestricted -File W:\Cloning.ps1");
+                File.WriteAllText(@"X:\Error.txt", "False");               
+                CloneProcess = System.Diagnostics.Process.Start(@"X:\windows\system32\WindowsPowershell\v1.0\powershell.exe", @"-WindowStyle Maximized -executionpolicy unrestricted -File W:\Cloning.ps1");                
                 cloning = true;
                 string CloneMessage = "CLONING";
                 string CloneMessage_OLD = "OLD";
-                while (listener.running && CloneMessage != "FALSE" && CloneMessage != "TRUE" && cloning)
+                while (listener.running && CloneMessage != "FALSE" && CloneMessage != "TRUE" && cloning && !CloneMessage.Contains("CLONE FAILED"))
                 {                    
                     try
-                    {
+                    {                        
                         if (CloneMessage != null && listener.computerDetails.computerDetailsData != null && CloneMessage != "")
                         {
                             if (CloneMessage_OLD != CloneMessage)
-                            {
-                                listener.SendMessage(new Packet(FLAG.CLONING_STATUS, listener.computerDetails.computerDetailsData, CloneMessage));
-                                CloneMessage_OLD = CloneMessage;
+                            {                                
+                                listener.SendMessage(new Packet(FLAG.CLONING_STATUS, listener.computerDetails.computerDetailsData, CloneMessage));                                
+                                CloneMessage_OLD = CloneMessage;                         
                             }
-                        }
-                        CloneMessage = File.ReadLines(@"X:\CloneStatus.txt").First();
+                        }                        
+                        CloneMessage = File.ReadLines(@"X:\CloneStatus.txt").First();                 
                     }
                     catch (Exception ex)
                     {
@@ -90,19 +87,19 @@ namespace GDS_Client
                     }
                     Thread.Sleep(5000);
                     Console.WriteLine(DateTime.Now + " " + CloneMessage);
-                }
+                }                
                 var dataIdentifier = FLAG.CLONING_DONE;
-                if (CloneMessage == "FALSE")
+                if (CloneMessage == "FALSE" || CloneMessage.Contains("CLONE FAILED"))
                     dataIdentifier = FLAG.RESTART;
-                cloningDoneReceive = false;                
+                cloningDoneReceive = false;                                
                 if (cloning)
                 {
                     while (!cloningDoneReceive && listener.running)
                     {
-                        Thread.Sleep(500);
-                        listener.SendMessage(new Packet(dataIdentifier, listener.computerDetails.computerDetailsData));
+                        listener.SendMessage(new Packet(dataIdentifier, listener.computerDetails.computerDetailsData, CloneMessage));                        
+                        Thread.Sleep(1000);
                     }
-                }
+                }                
                 cloning = false;
             }
             catch (Exception ex)
@@ -207,8 +204,23 @@ namespace GDS_Client
                             break;
                         }
                     case FLAG.RESTART:
+                        {
+                            if (cloning)
+                            {
+                                Process[] procs = Process.GetProcessesByName("wdsmcast");
+                                foreach (Process p in procs) { p.Kill(); }
+                                Process p2 = Process.GetProcessById(CloneProcess.Id);
+                                p2.Kill();
+                                Process[] procs2 = Process.GetProcessesByName("diskpart");
+                                foreach (Process p in procs2) { p.Kill(); }
+                                File.WriteAllText(@"X:\CloneStatus.txt", "RESTART");
+                            }
+                            cloningDoneReceive = true;                            
+                            break;
+                        }
                     case FLAG.CLONING_DONE:
                         {
+                            cloning = false;
                             cloningDoneReceive = true;
                             break;
                         }

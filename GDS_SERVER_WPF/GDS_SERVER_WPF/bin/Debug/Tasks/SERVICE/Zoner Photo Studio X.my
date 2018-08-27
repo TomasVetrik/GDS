@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>Zoner Photo Studio X</Name>
+  <LastExecuted>02.04.2018 14:12:39</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>false</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>false</Cloning>
+  <BaseImageSourcePath />
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <SourceDirectoryInOS>I:\Images\Startup_OS\PostInstallers\Zoner_Photo_Studio</SourceDirectoryInOS>
+  <DestinationDirectoryInOS>D:\Temp\PostInstallers\Zoner_Photo_studio</DestinationDirectoryInOS>
+  <CommandsInOS>
+    <string>D:\Temp\PostInstallers\Zoner_Photo_studio\Start.bat</string>
+  </CommandsInOS>
+  <CopyFilesInOS>
+    <string>I:\Images\Startup_OS\PostInstallers\Zoner_Photo_Studio\Start.bat</string>
+    <string>I:\Images\Startup_OS\PostInstallers\Zoner_Photo_Studio\Start.ps1</string>
+    <string>I:\Images\Startup_OS\PostInstallers\Zoner_Photo_Studio\zps_CZ_patch.exe</string>
+    <string>I:\Images\Startup_OS\PostInstallers\Zoner_Photo_Studio\zps_x_pro_cz_edu_2017_01_23_x64.msi</string>
+    <string>I:\Images\Startup_OS\PostInstallers\Zoner_Photo_Studio\zps_x_pro_cz_edu_2017_01_23_x86.msi</string>
+  </CopyFilesInOS>
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE />
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE>
+    <string />
+  </CommandsInWINPE>
+  <WaitingTime>30</WaitingTime>
+</TaskData>

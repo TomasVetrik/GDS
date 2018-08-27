@@ -1,0 +1,21 @@
+netgeneric_VS2017_1607
+TargetComputers||LEKTOR1033,STUDENT1033-01,STUDENT1033-02,STUDENT1033-03,STUDENT1033-04,STUDENT1033-05,STUDENT1033-06,STUDENT1033-07,STUDENT1033-08
+Clone||True
+Image Source Path||.\Images\W10_Off2k16_x64_Singleprofile_1607
+DriveE Source Path||.\DriveE\VS_generic_VS2017
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||True
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\NETgeneric\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||04.08.2017 8:34:55
+WaitingTime||30
+Machine Group||1033
+Configuration||True
+WithoutVHD||False

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>SOFA(WINPE)</Name>
+  <LastExecuted>27. 4. 2016 11:26:42</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>false</Cloning>
+  <BaseImageSourcePath>.\Images\Office_2k13_MUI(1)</BaseImageSourcePath>
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>false</SoftwareAndFileAction>
+  <SourceDirectoryInOS />
+  <DestinationDirectoryInOS />
+  <CommandsInOS>
+    <string />
+  </CommandsInOS>
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>true</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE>I:\Startup_WinPE</SourceDirectoryInWINPE>
+  <DestinationDirectoryInWINPE>C:\</DestinationDirectoryInWINPE>
+  <CopyFilesInWINPE>
+    <string>I:\Startup_WinPE\vnc.ps1</string>
+  </CopyFilesInWINPE>
+  <CommandsInWINPE>
+    <string>dir &gt; C:\Dir.txt</string>
+  </CommandsInWINPE>
+  <WaitingTime>30</WaitingTime>
+</TaskData>

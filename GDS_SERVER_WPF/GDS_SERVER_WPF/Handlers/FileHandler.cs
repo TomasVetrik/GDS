@@ -1,5 +1,7 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Threading;
+using System.Windows;
 using System.Xml.Serialization;
 
 namespace GDS_SERVER_WPF
@@ -21,13 +23,28 @@ namespace GDS_SERVER_WPF
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                return Load<T>(FileSpec);                
+                if (ex.ToString().Contains("error in XML"))
+                {
+                    try
+                    {
+                        if (File.Exists(FileSpec))
+                        {
+
+                            File.Delete(FileSpec);
+
+                            MessageBox.Show(FileSpec + " IS CORRUPTED");
+                        }
+                    }
+                    catch { }
+                    return default(T);
+                }
+                return Load<T>(FileSpec);
             }
         }
 
-        public static void Save<T>(T ToSerialize, string FileSpec)
+        public static void Save<T>(T ToSerialize, string FileSpec, int counter = 0)
         {
             try
             {
@@ -40,7 +57,8 @@ namespace GDS_SERVER_WPF
             }
             catch
             {
-                Save<T>(ToSerialize, FileSpec);
+                if (counter != 5)
+                    Save<T>(ToSerialize, FileSpec, counter++);
             }
         }
 

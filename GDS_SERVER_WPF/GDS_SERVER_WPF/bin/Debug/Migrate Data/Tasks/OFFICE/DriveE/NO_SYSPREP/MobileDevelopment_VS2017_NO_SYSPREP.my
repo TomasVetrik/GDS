@@ -1,0 +1,21 @@
+MobileDevelopment_VS2017_NO_SYSPREP
+TargetComputers||LEKTOR1034,STUDENT1034-01,STUDENT1034-02,STUDENT1034-03,STUDENT1034-04,STUDENT1034-05,STUDENT1034-06,STUDENT1034-07,STUDENT1034-08
+Clone||True
+Image Source Path||.\Images\_NO_SYSPREP\W10_Off2k16_x64_SingleProfile_NO_SYSPREP
+DriveE Source Path||.\DriveE\VS_generic_VS2017
+SAFA||True
+SourceDirectory||
+TargetDirectory||
+Force Install||False
+SAFA(WINPE)||False
+SourceDirectory(WINPE)||
+TargetDirectory(WINPE)||
+Commands||E:\MobileApp\Autologon.bat
+WOL||True
+Commands(WINPE)||
+Shutdown||False
+LastExecution||21.03.2018 16:33:41
+WaitingTime||30
+Machine Group||1034
+Configuration||True
+WithoutVHD||False

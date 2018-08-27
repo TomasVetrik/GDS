@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>SOFA</Name>
+  <LastExecuted>15. 9. 2016 12:58:19</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>false</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>false</Cloning>
+  <BaseImageSourcePath />
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <SourceDirectoryInOS>I:\Startup_OS\PostInstallers\VirtualBox_v5</SourceDirectoryInOS>
+  <DestinationDirectoryInOS />
+  <CommandsInOS>
+    <string>E:\Autologon.bat</string>
+  </CommandsInOS>
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <SourceDirectoryInWINPE>I:\HIVE\pajka_temp</SourceDirectoryInWINPE>
+  <DestinationDirectoryInWINPE>c:\</DestinationDirectoryInWINPE>
+  <CopyFilesInWINPE>
+    <string>I:\HIVE\pajka_temp\DG965SS.EXE</string>
+  </CopyFilesInWINPE>
+  <CommandsInWINPE>
+    <string>c:\DG956SS.exe -s -force</string>
+  </CommandsInWINPE>
+  <WaitingTime>30</WaitingTime>
+</TaskData>

@@ -35,8 +35,7 @@ namespace GDS_SERVER_WPF
                     null,
                     (o, e) =>
                     {
-                        ItemsControl listView = o as ItemsControl;
-                        if (listView != null)
+                        if (o is ItemsControl listView)
                         {
                             if (!GetAutoSort(listView)) // Don't change click handler if AutoSort enabled
                             {
@@ -74,8 +73,7 @@ namespace GDS_SERVER_WPF
                     false,
                     (o, e) =>
                     {
-                        ListView listView = o as ListView;
-                        if (listView != null)
+                        if (o is ListView listView)
                         {
                             if (GetCommand(listView) == null) // Don't change click handler if a command is set
                             {
@@ -126,8 +124,7 @@ namespace GDS_SERVER_WPF
 
         private static void ColumnHeader_Click(object sender, RoutedEventArgs e)
         {
-            GridViewColumnHeader headerClicked = e.OriginalSource as GridViewColumnHeader;
-            if (headerClicked != null)
+            if (e.OriginalSource is GridViewColumnHeader headerClicked)
             {
                 string propertyName = GetPropertyName(headerClicked.Column);
                 if (!string.IsNullOrEmpty(propertyName))
