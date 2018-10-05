@@ -22,8 +22,6 @@ namespace GDS_Client
         bool restarting = false;
         Process CloneProcess;
         TCP_UNICAST tcp_unicast = null;
-        TaskData taskData = null;
-        
 
         public MessageHandler(Listener _listener)
         {
@@ -167,8 +165,7 @@ namespace GDS_Client
                                 FileHandler.Save<TaskData>(packet.taskData, @"X:\TaskData.my");
                             }
                             else
-                                FileHandler.Save<TaskData>(packet.taskData, @".\TaskData.my");
-                            taskData = packet.taskData;
+                                FileHandler.Save<TaskData>(packet.taskData, @".\TaskData.my");                            
                             break;
                         }
                     case FLAG.RUN_COMMAND:

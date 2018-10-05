@@ -39,7 +39,7 @@ namespace GDS_Client
                 formatter.Serialize(outFile, ToSerialize);
                 outFile.Close();
             }
-            catch (Exception ex)
+            catch
             {
                 if (counter != 5)
                     Save<T>(ToSerialize, FileSpec, counter++);
