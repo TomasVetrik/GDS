@@ -9,6 +9,7 @@
         Title="GDS Server" Height="748" Width="1024" Closing="Window_Closing" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" WindowState="Maximized" Icon="Images/logo_gopas_sk.ico" KeyUp="Window_KeyUp">
     <Window.Resources>
         <Style TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="FontFamily" Value="Segoe UI" />
             <Setter Property="HorizontalContentAlignment" Value="Left" />
         </Style>
         <BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter" />

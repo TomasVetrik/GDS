@@ -85,7 +85,7 @@ namespace GDS_SERVER_WPF.Handlers
                         if (receivePacket.clonningMessage.Contains("CLONE FAILED"))
                         {
                             cloneFaildMessage = receivePacket.clonningMessage;
-                            if (cloneFaildMessage.Contains("CLONE FAILED ACCESS DENIED"))
+                            if (cloneFaildMessage.Contains("CLONE FAILED ACCESS DENIED") || cloneFaildMessage.Contains("CLONE FAILED DISK IS TOO SMALL"))
                             {
                                 Failed(cloneFaildMessage);
                                 return;
