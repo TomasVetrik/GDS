@@ -130,11 +130,12 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="2*"/>
                                 <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
                             </Grid.ColumnDefinitions>
                             <CheckBox Grid.Row="1"  Grid.Column="0" x:Name="checkBoxWithoutVHD" Content="Without VHD" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                            <TextBox Grid.Row="0"  Grid.Column="0" x:Name="textBoxBaseImage" HorizontalAlignment="Stretch" Height="auto" Margin="0,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="auto" IsEnabled="False"/>
-                            <Button Grid.Row="0"  Grid.Column="1" x:Name="buttonBaseBrowseImage" Content="Browse" Width="75" Height="auto" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonBaseBrowseImage_Click"/>
-                            <Button Grid.Row="1"  Grid.Column="1" x:Name="buttonBaseClear" Content="Clear" Width="75" Height="auto" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonBaseClear_Click"/>
+                            <TextBox Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="2" x:Name="textBoxBaseImage" HorizontalAlignment="Stretch" Height="auto" Margin="0,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="auto" IsEnabled="False"/>
+                            <Button Grid.Row="0"  Grid.Column="2" x:Name="buttonBaseBrowseImage" Content="Browse" Width="75" Height="auto" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonBaseBrowseImage_Click"/>
+                            <Button Grid.Row="1"  Grid.Column="2" x:Name="buttonBaseClear" Content="Clear" Width="75" Height="auto" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonBaseClear_Click"/>
                         </Grid>
                     </GroupBox>
                     <GroupBox x:Name="groupBox_Copy" Header="DriveE Image" Grid.Row="1" HorizontalAlignment="Stretch" Margin="10,10,10,10" VerticalAlignment="Stretch">

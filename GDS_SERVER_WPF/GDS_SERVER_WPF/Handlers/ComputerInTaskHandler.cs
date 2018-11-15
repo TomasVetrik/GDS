@@ -238,7 +238,13 @@ namespace GDS_SERVER_WPF.Handlers
 
         private void RunCommands()
         {
-            CheckFlags(FLAG.RUN_COMMAND, new Packet(FLAG.RUN_COMMAND),FLAG.FINISH_RUN_COMMAND);
+            CheckFlags(FLAG.RUN_COMMAND, new Packet(FLAG.RUN_COMMAND), FLAG.FINISH_RUN_COMMAND);
+        }
+
+        private void RunCommandsWithWait()
+        {
+            CheckFlags(FLAG.RUN_COMMAND, new Packet(FLAG.RUN_COMMAND));
+            CheckFlags(FLAG.FINISH_RUN_COMMAND, new Packet(FLAG.FINISH_RUN_COMMAND));
         }
 
         private void SendTaskDataFile()

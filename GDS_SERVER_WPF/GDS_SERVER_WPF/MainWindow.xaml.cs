@@ -1071,86 +1071,100 @@ namespace GDS_SERVER_WPF
 
         private void RenameItem(TaskData oldItem)
         {
-            if (oldItem != null)
+            try
             {
-                string oldPath = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + oldItem.Name;                
-                var renameItemDialog = new EditItem();
-                renameItemDialog.textBoxNewText.Text = oldItem.Name;
-                renameItemDialog.labelOldText.Content = oldItem.Name;
-                foreach (TaskData item in listViewTasks.Items)
+                if (oldItem != null)
                 {
-                    if (item.ImageSource == oldItem.ImageSource)
-                        renameItemDialog.Names.Add(item.Name);
-                }
-                renameItemDialog.ShowDialog();
-                if (!renameItemDialog.cancel)
-                {
-                    string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + renameItemDialog.textBoxNewText.Text;
-                    if (oldItem.ImageSource.Contains("Folder"))
+                    string oldPath = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + oldItem.Name;
+                    var renameItemDialog = new EditItem();
+                    renameItemDialog.textBoxNewText.Text = oldItem.Name;
+                    renameItemDialog.labelOldText.Content = oldItem.Name;
+                    foreach (TaskData item in listViewTasks.Items)
                     {
-                        if (Directory.Exists(oldPath))
-                            Directory.Move(oldPath, path);
-                        treeViewMachinesAndTasksHandler.RenameItem(oldItem.Name, renameItemDialog.textBoxNewText.Text);
+                        if (item.ImageSource == oldItem.ImageSource)
+                            renameItemDialog.Names.Add(item.Name);
                     }
-                    else
+                    renameItemDialog.ShowDialog();
+                    if (!renameItemDialog.cancel)
                     {
-                        oldPath += ".my";
-                        path += ".my";
-                        TaskData taksData = FileHandler.Load<TaskData>(oldPath);
-                        taksData.Name = renameItemDialog.textBoxNewText.Text;
-                        if (File.Exists(oldPath))
-                            File.Delete(oldPath);
-                        FileHandler.Save<TaskData>(taksData, path);
+                        string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + renameItemDialog.textBoxNewText.Text;
+                        if (oldItem.ImageSource.Contains("Folder"))
+                        {
+                            if (Directory.Exists(oldPath))
+                                Directory.Move(oldPath, path);
+                            treeViewMachinesAndTasksHandler.RenameItem(oldItem.Name, renameItemDialog.textBoxNewText.Text);
+                        }
+                        else
+                        {
+                            oldPath += ".my";
+                            path += ".my";
+                            TaskData taksData = FileHandler.Load<TaskData>(oldPath);
+                            taksData.Name = renameItemDialog.textBoxNewText.Text;
+                            if (File.Exists(oldPath))
+                                File.Delete(oldPath);
+                            FileHandler.Save<TaskData>(taksData, path);
+                        }
+                        listViewMachinesAndTasksHandler.Refresh();
                     }
-                    listViewMachinesAndTasksHandler.Refresh();
                 }
+            }
+            catch
+            {
+                MessageBox.Show("Cannot rename this Item, please try again.");
             }
         }
 
         private void RenameItem(ComputerDetailsData oldItem)
         {
-            if (oldItem != null)
+            try
             {
-                listener.semaphore.WaitOne();
-                string oldPath = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + oldItem.Name;
-                if (oldPath == LockPath || oldPath == DefaultPath)
+                if (oldItem != null)
                 {
-                    MessageBox.Show("Cannot rename this folder", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
-                    return;
-                }
-                var renameItemDialog = new EditItem();
-                renameItemDialog.textBoxNewText.Text = oldItem.Name;
-                renameItemDialog.labelOldText.Content = oldItem.Name;
-                foreach (ComputerDetailsData item in listViewMachineGroups.Items)
-                {
-                    if (item.ImageSource == oldItem.ImageSource)
-                        renameItemDialog.Names.Add(item.Name);
-                }
-                renameItemDialog.ShowDialog();
-                if (!renameItemDialog.cancel)
-                {
-                    string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + renameItemDialog.textBoxNewText.Text;
-                    if (oldItem.ImageSource.Contains("Folder"))
+                    listener.semaphore.WaitOne();
+                    string oldPath = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + oldItem.Name;
+                    if (oldPath == LockPath || oldPath == DefaultPath)
                     {
-                        if (Directory.Exists(oldPath))
-                            Directory.Move(oldPath, path);
-                        treeViewMachinesAndTasksHandler.RenameItem(oldItem.Name, renameItemDialog.textBoxNewText.Text);
-                   } 
-                    else
-                    {
-                        oldPath += ".my";
-                        path += ".my";
-                        ComputerDetailsData machineData = FileHandler.Load<ComputerDetailsData>(oldPath);
-                        machineData.Name = renameItemDialog.textBoxNewText.Text;
-                        if (File.Exists(oldPath))
-                            File.Move(oldPath, path);
-                        if (File.Exists(oldPath.Replace(".my", ".cfg")))
-                            File.Move(oldPath.Replace(".my", ".cfg"), path.Replace(".my", ".cfg"));
-                        FileHandler.Save<ComputerDetailsData>(machineData, path);
+                        MessageBox.Show("Cannot rename this folder", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        return;
                     }
-                    listViewMachinesAndTasksHandler.Refresh();                    
+                    var renameItemDialog = new EditItem();
+                    renameItemDialog.textBoxNewText.Text = oldItem.Name;
+                    renameItemDialog.labelOldText.Content = oldItem.Name;
+                    foreach (ComputerDetailsData item in listViewMachineGroups.Items)
+                    {
+                        if (item.ImageSource == oldItem.ImageSource)
+                            renameItemDialog.Names.Add(item.Name);
+                    }
+                    renameItemDialog.ShowDialog();
+                    if (!renameItemDialog.cancel)
+                    {
+                        string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + renameItemDialog.textBoxNewText.Text;
+                        if (oldItem.ImageSource.Contains("Folder"))
+                        {
+                            if (Directory.Exists(oldPath))
+                                Directory.Move(oldPath, path);
+                            treeViewMachinesAndTasksHandler.RenameItem(oldItem.Name, renameItemDialog.textBoxNewText.Text);
+                        }
+                        else
+                        {
+                            oldPath += ".my";
+                            path += ".my";
+                            ComputerDetailsData machineData = FileHandler.Load<ComputerDetailsData>(oldPath);
+                            machineData.Name = renameItemDialog.textBoxNewText.Text;
+                            if (File.Exists(oldPath))
+                                File.Move(oldPath, path);
+                            if (File.Exists(oldPath.Replace(".my", ".cfg")))
+                                File.Move(oldPath.Replace(".my", ".cfg"), path.Replace(".my", ".cfg"));
+                            FileHandler.Save<ComputerDetailsData>(machineData, path);
+                        }
+                        listViewMachinesAndTasksHandler.Refresh();
+                    }
+                    listener.semaphore.Release();
                 }
-                listener.semaphore.Release();
+            }
+            catch
+            {
+                MessageBox.Show("Cannot rename this Item, please try again.");
             }
         }
 

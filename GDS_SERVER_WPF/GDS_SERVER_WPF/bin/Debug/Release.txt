@@ -1,6 +1,22 @@
 Created by: Tomas Vetrik
 Special Thanks: Michal Bednar, Vaclav Bernat a celej Gopasackej Technike.
 First Time RUN: 20.02.2018
-Version Date: 19.03.2018
-Version 1.1 BETA
+Version Date: 22.10.2018
+Version 1.2
 
+Do buducna:
+- Dorobit Custom Log
+- Vytvorit vyhybku pre instalovanie velkeho imagu na mensi disk (upozornenie) :
+	- Ak je disk mensi ako partition size -> FAIL - HOTOVO
+- Ked skonci pocitac v tasku, tak ho odstranit z listu v tasku a moze pokracovat v uplne inom novom tasku
+- Pridat komunikaciu s SQL serverom - HOTOVO
+- Ak je CLONE FAILED, tak nerestartne hned cloning, ale pocka nejaku dobu a podla FAILU sa rozhodne co dalej
+	- Ak je malo miesta na particii a nemoze nahrat wimko, tak zvacsi particiu
+	- Ak je malo miesta na rozbalenie wimka, tak zvacsi particiu
+	- Ak je CLONE FAILED ACCESS DENIED, tak zrusi klienta v tasku s tym,ze vypise k nemu chybu - HOTOVO
+- Ak GDSko sa vypne alebo nedajboze spadne, tak sa musi obnovit task z TaskDetails
+
+Pridane:
+19.10.2018
+	- Pridana funkcia refreshnutia ClassRoom ID do Features, kvoli ePrezence
+	- Pridana vyhybka do RenamePC, kvoli obcasnemu padaniu

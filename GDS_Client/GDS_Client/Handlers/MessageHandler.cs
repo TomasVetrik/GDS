@@ -108,13 +108,19 @@ namespace GDS_Client
             }
         }
 
-        static void RunCommand(string FileName, string Arguments)
-        {
+        void RunCommand(string FileName, string Arguments)
+        {           
             Process proc = new Process();
             proc.StartInfo.FileName = FileName;
             proc.StartInfo.Arguments = Arguments;
             proc.StartInfo.Verb = "runas";
             proc.Start();
+            if(listener.computerDetails.computerDetailsData.inWinpe)
+            {
+                Console.WriteLine("Waiting for process");
+                proc.WaitForExit();
+                Console.WriteLine("Closing proces");
+            }
         }
 
         private void Shutdowning()
@@ -166,6 +172,11 @@ namespace GDS_Client
                             }
                             else
                                 FileHandler.Save<TaskData>(packet.taskData, @".\TaskData.my");                            
+                            break;
+                        }
+                    case FLAG.FINISH_RUN_COMMAND:
+                        {
+                            Console.WriteLine("WAITING FOR FINISH RUN COMMAND");
                             break;
                         }
                     case FLAG.RUN_COMMAND:
