@@ -7,7 +7,7 @@ namespace GDS_Client
 {
     public class FileHandler
     {
-        public static T Load<T>(string FileSpec)
+        public static T Load<T>(string FileSpec, int counter = 0)
         {
             try
             {
@@ -24,7 +24,15 @@ namespace GDS_Client
             }
             catch
             {
-                return Load<T>(FileSpec);
+                if (counter != 5)
+                {
+                    counter++;
+                    return Load<T>(FileSpec, counter);
+                }
+                else
+                {
+                    return default(T);
+                }
             }
         }
 
@@ -42,7 +50,14 @@ namespace GDS_Client
             catch
             {
                 if (counter != 5)
-                    Save<T>(ToSerialize, FileSpec, counter++);
+                {
+                    counter++;
+                    Save<T>(ToSerialize, FileSpec, counter);
+                }
+                else
+                {
+                    Console.WriteLine("THERE IS PROBLEM WITH SAVING FILE");
+                }
             }
         }
     }

@@ -1,22 +1,50 @@
 Created by: Tomas Vetrik
 Special Thanks: Michal Bednar, Vaclav Bernat a celej Gopasackej Technike.
 First Time RUN: 20.02.2018
-Version Date: 22.10.2018
-Version 1.2
+Version Date: 12.03.2019
+Version 1.5
 
 Do buducna:
 - Dorobit Custom Log
 - Vytvorit vyhybku pre instalovanie velkeho imagu na mensi disk (upozornenie) :
 	- Ak je disk mensi ako partition size -> FAIL - HOTOVO
-- Ked skonci pocitac v tasku, tak ho odstranit z listu v tasku a moze pokracovat v uplne inom novom tasku
+- Ked skonci pocitac v tasku, tak ho odstranit z listu v tasku a moze pokracovat v uplne inom novom tasku - HOTOVO
 - Pridat komunikaciu s SQL serverom - HOTOVO
 - Ak je CLONE FAILED, tak nerestartne hned cloning, ale pocka nejaku dobu a podla FAILU sa rozhodne co dalej
 	- Ak je malo miesta na particii a nemoze nahrat wimko, tak zvacsi particiu
 	- Ak je malo miesta na rozbalenie wimka, tak zvacsi particiu
 	- Ak je CLONE FAILED ACCESS DENIED, tak zrusi klienta v tasku s tym,ze vypise k nemu chybu - HOTOVO
-- Ak GDSko sa vypne alebo nedajboze spadne, tak sa musi obnovit task z TaskDetails
+- Ak sa GDSko nedajboze vypne alebo spadne, tak musi obnovit tasky z TaskDetails - HOTOVO
 
-Pridane:
+Updates:
+17.05.2019
+	- Vypnuta funkcia Restart The Task, niekde je chyba
+
+07.05.2019
+	- Opraveny ListView "LOCK", po dvojitom klicknuti do prazdna, sa odznacia objekty
+
+25.04.2019
+	-Pridana moznost RESTART THE TASK pre jednotlivy pocitac
+
+08-12.03.2019
+	- Pridana moznost Infinity Waiting Time
+	- Pridana moznost Send Warning Mails
+	- Nastavenie posielania mailov jednotlivo MailTo -> Active/InActive
+	- GDS klient caka kym lektor nevykona Duplicate Monitors a az potom sa ohlasi GDSku
+	- Pridana moznost KICK FROM THE TASK pre jednotlivy pocitac
+
+18.01.2018
+	- Zmena v Create RDP files(Features) vypnuta funkcia "Pouzi moje poverenia brany RD pre vzdialeny pocitac" a "Mena pouzivatel" sa pridava "Local Admin"
+
+08.01.2018
+	- Pridane Create RDP Files(Features) do priecinka RDPFiles podla danych parametrov, je to pre vzdialene kurzy bez potreby verejnej IP adresy
+
+27.28.31.12.2018
+	- Pridana otazka pri vypinani konzoly
+	- Ak skonci pocitac v Tasku, tak je mozne ho pustit v dalsom Tasku, bez ohladu na to, ci predosli Task skoncil alebo nie
+	- Ak GDSko sa vypne alebo spadne, tak restartne Tasky po znovuspusteni GDSka z TaskDetails
+	- Ak nema dostatocny plac pri rozbalovani wim suboru, tak vypise error, ktory sa zobrazi v GDSku v TaskDetails
+
 19.10.2018
 	- Pridana funkcia refreshnutia ClassRoom ID do Features, kvoli ePrezence
 	- Pridana vyhybka do RenamePC, kvoli obcasnemu padaniu

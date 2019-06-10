@@ -38,7 +38,7 @@ namespace GDS_Client
             }
         }
 
-        string FileName = @"D:\Temp\GDSClient\GDS_Client_LOG.txt";
+        readonly string FileName = @"D:\Temp\GDSClient\GDS_Client_LOG.txt";
 
         public void WriteToLogs(string LOG)
         {

@@ -86,7 +86,10 @@ namespace GDS_SERVER_WPF
         public List<string> CommandsInWINPE { get; set; }
         [ProtoMember(26)]
         public int WaitingTime { get; set; }
-
+        [ProtoMember(27)]
+        public bool SendWarningMails { get; set; }
+        [ProtoMember(28)]
+        public bool InfinityWaitingTime { get; set; }
 
         public void LoadDataFromList(List<string> list)
         {

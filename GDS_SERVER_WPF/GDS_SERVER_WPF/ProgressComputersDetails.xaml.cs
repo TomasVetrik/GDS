@@ -23,7 +23,7 @@ namespace GDS_SERVER_WPF
             if(executedTaskData != null)
             {
                 executedTaskData = FileHandler.Load<ExecutedTaskData>(executedTaskData.GetFileName());
-                foreach (ProgressComputerData progressComputerData in executedTaskData.progressComputerData)
+                foreach (ProgressComputerData progressComputerData in executedTaskData.ProgressComputerData)
                 {
                     listViewProgressDetails.Items.Add(progressComputerData);
                 }

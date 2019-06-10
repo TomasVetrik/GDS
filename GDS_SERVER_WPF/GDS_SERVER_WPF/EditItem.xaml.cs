@@ -52,6 +52,11 @@ namespace GDS_SERVER_WPF
                     return;
                 }
             }
+            if(textBoxNewText.Text == "")
+            {
+                SetErrorMessage(labelNewText, "Cannot be an empty string");
+                return;
+            }
             cancel = false;
             this.Close();
         }
@@ -62,7 +67,7 @@ namespace GDS_SERVER_WPF
         }
 
         private void ButtonCancel_Click(object sender, RoutedEventArgs e)
-        {
+        {            
             this.Close();
         }
 

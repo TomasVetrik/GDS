@@ -7,8 +7,8 @@ namespace GDS_SERVER_WPF.DataCLasses
     {
         public ExecutedTaskData()
         {
-            progressComputerData = new List<ProgressComputerData>();
-            taskData = new TaskData();
+            ProgressComputerData = new List<ProgressComputerData>();
+            _TaskData = new TaskData();
         }
 
         public string Name { get; set; }
@@ -19,8 +19,8 @@ namespace GDS_SERVER_WPF.DataCLasses
         public string Done { get; set; }
         public string Failed { get; set; }
         public string MachineGroup { get; set; }
-        public TaskData taskData { get; set; }
-        public List<ProgressComputerData> progressComputerData { get; set; }
+        public TaskData _TaskData { get; set; }
+        public List<ProgressComputerData> ProgressComputerData { get; set; }
         public string FilePath { get; set; }
 
         public string GetFileName()

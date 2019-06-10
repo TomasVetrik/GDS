@@ -31,6 +31,7 @@ namespace GDS_SERVER_WPF
                     {
                         if (File.Exists(FileSpec))
                         {
+                            File.Copy(FileSpec, FileSpec + ".corrupted");
 
                             File.Delete(FileSpec);
 

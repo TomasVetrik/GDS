@@ -17,8 +17,10 @@ namespace GDS_Client
             try
             {
                 Console.WriteLine("START");
-                listener = new Listener();
-                listener.running = false;
+                listener = new Listener
+                {
+                    running = false
+                };
                 listener.StartListener();
                 Thread.Sleep(5000);
                 while (listener.running)

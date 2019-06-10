@@ -25,8 +25,7 @@ namespace GDS_SERVER_WPF
         public Dictionary<ShortGuid, ComputerWithConnection> ClientsDictionary = new Dictionary<ShortGuid, ComputerWithConnection>();
         public List<string> Names = new List<string>();
         public bool executed = false;
-        public List<ExecutedTaskHandler> ExecutedTasksHandlers;
-        
+        public List<ExecutedTaskHandler> ExecutedTasksHandlers;        
 
         public TaskData taskData;
 
@@ -74,6 +73,8 @@ namespace GDS_SERVER_WPF
             checkBoxSOFA.IsChecked = taskData.SoftwareAndFileAction;
             checkBoxSOFAWinpe.IsChecked = taskData.SoftwareAndFileAction_WINPE;
             checkBoxWithoutVHD.IsChecked = taskData.WithoutVHD;
+            checkBoxSendWarningMails.IsChecked = taskData.SendWarningMails;
+            checkBoxInfinityWaitingTime.IsChecked = taskData.InfinityWaitingTime = true;
             var commandsOS = string.Join("\n", taskData.CommandsInOS);
             richTextBoxCommandsInOS.AppendText(commandsOS);
             var commandsWINPE = string.Join("\n", taskData.CommandsInWINPE);
@@ -99,7 +100,7 @@ namespace GDS_SERVER_WPF
             labelError.Content = "";
         }
 
-        private void buttonSave_Click(object sender, RoutedEventArgs e)
+        private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
             Save();
         }
@@ -123,6 +124,8 @@ namespace GDS_SERVER_WPF
                     taskData.SoftwareAndFileAction = checkBoxSOFA.IsChecked.Value;
                     taskData.SoftwareAndFileAction_WINPE = checkBoxSOFAWinpe.IsChecked.Value;
                     taskData.WithoutVHD = checkBoxWithoutVHD.IsChecked.Value;
+                    taskData.SendWarningMails = checkBoxSendWarningMails.IsChecked.Value;
+                    taskData.InfinityWaitingTime = checkBoxInfinityWaitingTime.IsChecked.Value;
                     string[] commandsOS = StringFromRichTextBox(richTextBoxCommandsInOS).Split(new[] { Environment.NewLine }
                                               , StringSplitOptions.RemoveEmptyEntries);
                     taskData.CommandsInOS = new List<string>();
@@ -263,7 +266,7 @@ namespace GDS_SERVER_WPF
             tabItemGeneral.IsSelected = true;
         }
 
-        private void buttonClose_Click(object sender, RoutedEventArgs e)
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
@@ -293,7 +296,7 @@ namespace GDS_SERVER_WPF
             return false;
         }
 
-        private void buttonExecute_Click(object sender, RoutedEventArgs e)
+        private void ButtonExecute_Click(object sender, RoutedEventArgs e)
         {
             SetDefaultColors();
             if (listBoxTargetComputers.Items.Count == 0)
@@ -310,11 +313,11 @@ namespace GDS_SERVER_WPF
                         for (int i = ExecutedTasksHandlers.Count - 1; i >= 0; i--)
                         {
                             var item = ExecutedTasksHandlers[i];
-                            foreach (ComputerDetailsData computerInTask in item.executedTaskData.taskData.TargetComputers)
+                            foreach (ComputerInTaskHandler computerInTask in item.computers)
                             {
-                                if (CheckMacsInREC(computer.macAddresses, computerInTask.macAddresses))
+                                if (CheckMacsInREC(computer.macAddresses, computerInTask.computer.macAddresses) && !computerInTask.finish)
                                 {
-                                    SetErrorMessage(labelMachineGroup, computerInTask.Name + " is in task: " + item.executedTaskData.Name + "\n");
+                                    SetErrorMessage(labelMachineGroup, computerInTask.computer + " is in task: " + item.executedTaskData.Name + "\n");
                                     return;
                                 }
                             }
@@ -325,7 +328,6 @@ namespace GDS_SERVER_WPF
             MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Will you execute Task?", "Confirmation", System.Windows.MessageBoxButton.YesNo);
             if (messageBoxResult == MessageBoxResult.Yes)
             {
-
                 taskData.LastExecuted = DateTime.Now.ToString("dd.MM.yyyy HH-mm-ss");
                 if (Save())
                 {
@@ -335,11 +337,13 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void buttonBrowseComputers_Click(object sender, RoutedEventArgs e)
+        private void ButtonBrowseComputers_Click(object sender, RoutedEventArgs e)
         {
-            var browseComputersDialog = new BrowseComputers();
-            browseComputersDialog.ClientsDictionary = ClientsDictionary;
-            browseComputersDialog.listBoxOut = listBoxTargetComputers;            
+            var browseComputersDialog = new BrowseComputers
+            {
+                ClientsDictionary = ClientsDictionary,
+                listBoxOut = listBoxTargetComputers
+            };
             browseComputersDialog.ShowDialog();
             if (listBoxTargetComputers.Items.Count != 0)
             {
@@ -352,7 +356,7 @@ namespace GDS_SERVER_WPF
             labelNumberOfMachines.Content = "Number Of PCs: " + listBoxTargetComputers.Items.Count;
         }
 
-        private void buttonClear_Click(object sender, RoutedEventArgs e)
+        private void ButtonClear_Click(object sender, RoutedEventArgs e)
         {
             listBoxTargetComputers.Items.Clear();
             labelMachineGroupContent.Content = "NONE";
@@ -361,9 +365,11 @@ namespace GDS_SERVER_WPF
 
         private void ShowBrowseImagesDialog(string path, TextBox textBox, bool baseImage)
         {
-            var browseImagesWindows = new BrowseImages();
-            browseImagesWindows.path = path;
-            browseImagesWindows.baseImage = baseImage;            
+            var browseImagesWindows = new BrowseImages
+            {
+                path = path,
+                baseImage = baseImage
+            };
             browseImagesWindows.ShowDialog();
             if (browseImagesWindows.pathOutput != "")
             {
@@ -375,30 +381,32 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void buttonBaseBrowseImage_Click(object sender, RoutedEventArgs e)
+        private void ButtonBaseBrowseImage_Click(object sender, RoutedEventArgs e)
         {
             ShowBrowseImagesDialog(@".\Base\", textBoxBaseImage, true);
         }
 
-        private void buttonDriveEBrowseImage_Click(object sender, RoutedEventArgs e)
+        private void ButtonDriveEBrowseImage_Click(object sender, RoutedEventArgs e)
         {
             ShowBrowseImagesDialog(@".\DriveE", textBoxDriveEImage, false);
         }
 
-        private void buttonBaseClear_Click(object sender, RoutedEventArgs e)
+        private void ButtonBaseClear_Click(object sender, RoutedEventArgs e)
         {
             textBoxBaseImage.Text = "";
         }
 
-        private void buttonDriveEClear_Click(object sender, RoutedEventArgs e)
+        private void ButtonDriveEClear_Click(object sender, RoutedEventArgs e)
         {
             textBoxDriveEImage.Text = "";
         }
 
         private string LoadCopyFiles(string sourceDirectory, string destinationDirectory, TextBox textBox, ListBox listBox, List<string> copyFiles)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Multiselect = true;
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Multiselect = true
+            };
             if (sourceDirectory != "" && Directory.Exists(sourceDirectory))
             {
                 openFileDialog.InitialDirectory = sourceDirectory;
@@ -419,7 +427,7 @@ namespace GDS_SERVER_WPF
             return sourceDirectory;
         }
 
-        private void buttonFilesInWINPE_Click(object sender, RoutedEventArgs e)
+        private void ButtonFilesInWINPE_Click(object sender, RoutedEventArgs e)
         {            
             taskData.SourceDirectoryInWINPE = LoadCopyFiles(taskData.SourceDirectoryInWINPE, taskData.DestinationDirectoryInWINPE, textBoxDestinationFolderInWINPE, listBoxCopyFilesInWINPE, taskData.CopyFilesInWINPE);
         }
@@ -465,7 +473,7 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void listBoxCopyFilesInWINPE_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void ListBoxCopyFilesInWINPE_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             if (listBoxCopyFilesInWINPE.SelectedIndex != -1)
             {
@@ -473,12 +481,12 @@ namespace GDS_SERVER_WPF
             }            
         }
 
-        private void buttonFilesInOS_Click(object sender, RoutedEventArgs e)
+        private void ButtonFilesInOS_Click(object sender, RoutedEventArgs e)
         {
             taskData.SourceDirectoryInOS = LoadCopyFiles(taskData.SourceDirectoryInOS, taskData.DestinationDirectoryInOS, textBoxDestinationFolderInOS, listBoxCopyFilesInOS, taskData.CopyFilesInOS);
         }
 
-        private void listBoxCopyFilesInOS_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        private void ListBoxCopyFilesInOS_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             if (listBoxCopyFilesInOS.SelectedIndex != -1)
             {
@@ -501,8 +509,10 @@ namespace GDS_SERVER_WPF
 
         private string LoadCopyFolder(string sourceDirectory, string destinationDirectory, TextBox textBox, ListBox listBox, List<string> copyFiles)
         {
-            VistaFolderBrowserDialog dlg = new VistaFolderBrowserDialog();
-            dlg.ShowNewFolderButton = true;            
+            VistaFolderBrowserDialog dlg = new VistaFolderBrowserDialog
+            {
+                ShowNewFolderButton = true
+            };
             dlg.ShowDialog();
             string path = dlg.SelectedPath;
             if (path != "")
@@ -519,23 +529,23 @@ namespace GDS_SERVER_WPF
             return sourceDirectory;
         }
 
-        private void buttonFolderInOS_Click(object sender, RoutedEventArgs e)
+        private void ButtonFolderInOS_Click(object sender, RoutedEventArgs e)
         {
             taskData.SourceDirectoryInOS = LoadCopyFolder(taskData.SourceDirectoryInOS, taskData.DestinationDirectoryInOS, textBoxDestinationFolderInOS, listBoxCopyFilesInOS, taskData.CopyFilesInOS);
         }
 
-        private void buttonClearInOS_Click(object sender, RoutedEventArgs e)
+        private void ButtonClearInOS_Click(object sender, RoutedEventArgs e)
         {
             listBoxCopyFilesInOS.Items.Clear();
             textBoxDestinationFolderInOS.Clear();
         }
 
-        private void buttonFolderInWINPE_Click(object sender, RoutedEventArgs e)
+        private void ButtonFolderInWINPE_Click(object sender, RoutedEventArgs e)
         {
             taskData.SourceDirectoryInWINPE = LoadCopyFolder(taskData.SourceDirectoryInWINPE, taskData.DestinationDirectoryInWINPE, textBoxDestinationFolderInWINPE, listBoxCopyFilesInWINPE, taskData.CopyFilesInWINPE);
         }
 
-        private void buttonClearInWINPE_Click(object sender, RoutedEventArgs e)
+        private void ButtonClearInWINPE_Click(object sender, RoutedEventArgs e)
         {
             listBoxCopyFilesInWINPE.Items.Clear();
             textBoxDestinationFolderInWINPE.Clear();

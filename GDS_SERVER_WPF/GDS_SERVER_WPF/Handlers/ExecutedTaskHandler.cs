@@ -25,16 +25,18 @@ namespace GDS_SERVER_WPF.Handlers
         public ListView listViewSelected;
         public ListView listViewTaskDetailsProgress;
         public string imagePath = "Images/Done.ico";
+        public List<string> MailsTo;
 
         bool stopped = false;
 
-        public ExecutedTaskHandler(ExecutedTaskData _executedTaskData, List<string> _ipAddresses, ListView _listViewAll, ListView _listViewSelected, ListView _listViewTaskDetailsProgress)
+        public ExecutedTaskHandler(ExecutedTaskData _executedTaskData, List<string> _ipAddresses, ListView _listViewAll, ListView _listViewSelected, ListView _listViewTaskDetailsProgress, List<string> _MailsTo)
         {
             this.executedTaskData = _executedTaskData;
             this.ipAddresses = _ipAddresses;
             this.listViewAll = _listViewAll;
             this.listViewSelected = _listViewSelected;
             this.listViewTaskDetailsProgress = _listViewTaskDetailsProgress;
+            this.MailsTo = _MailsTo;
             handlers = new List<ExecutedTaskHandler>();
         }
 
@@ -46,18 +48,18 @@ namespace GDS_SERVER_WPF.Handlers
         public void Start()
         {            
             FileHandler.Save<ExecutedTaskData>(executedTaskData, executedTaskData.GetFileName());
-            if(executedTaskData.taskData.Cloning)
+            if(executedTaskData._TaskData.Cloning)
             {
-                string sessionName = executedTaskData.Started + "_" + executedTaskData.taskData.Name;
-                if (executedTaskData.taskData.BaseImageSourcePath != "")
-                    CreateSession(sessionName, executedTaskData.taskData.BaseImageData.SourcePath);
-                if(executedTaskData.taskData.DriveEImageSourcePath != "")
-                    CreateSession(sessionName + "_DriveE", executedTaskData.taskData.DriveEImageData.SourcePath);                
+                string sessionName = executedTaskData.Started + "_" + executedTaskData._TaskData.Name;
+                if (executedTaskData._TaskData.BaseImageSourcePath != "")
+                    CreateSession(sessionName, executedTaskData._TaskData.BaseImageData.SourcePath);
+                if(executedTaskData._TaskData.DriveEImageSourcePath != "")
+                    CreateSession(sessionName + "_DriveE", executedTaskData._TaskData.DriveEImageData.SourcePath);                
             }
             RefreshList();
-            for (int i = 0; i < executedTaskData.taskData.TargetComputers.Count; i++)
+            for (int i = 0; i < executedTaskData._TaskData.TargetComputers.Count; i++)
             {
-                var computer = new ComputerInTaskHandler(executedTaskData, i, ipAddresses, semaphoreForSaveFile, listViewAll, listViewSelected)
+                var computer = new ComputerInTaskHandler(executedTaskData, i, ipAddresses, semaphoreForSaveFile, listViewAll, listViewSelected, MailsTo)
                 {
                     ClientsDictionary = ClientsDictionary,
                     executedTaskHandler = this
@@ -75,8 +77,7 @@ namespace GDS_SERVER_WPF.Handlers
                 listViewTaskDetailsProgress.SelectedItems.Add(listViewTaskDetailsProgress.Items[listViewTaskDetailsProgress.Items.Count - 1]);
             });
             Thread.Sleep(1000);
-
-            //semaphoreForFinishTask.WaitOne();
+            
             foreach (ComputerInTaskHandler computer in computers)
             {
                 computer.semaphoreForTask.WaitOne();
@@ -111,12 +112,12 @@ namespace GDS_SERVER_WPF.Handlers
             RemoveFromListViewTaskProgress();
             RemoveFromListViews();
             AutoClosingMessageBox.Show(executedTaskData.Name + "\n" + executedTaskData.MachineGroup , "DONE", 5000);
-            if (executedTaskData.taskData.Cloning)
+            if (executedTaskData._TaskData.Cloning)
             {
-                string sessionName = executedTaskData.Started + "_" + executedTaskData.taskData.Name;
-                if (executedTaskData.taskData.BaseImageSourcePath != "")
+                string sessionName = executedTaskData.Started + "_" + executedTaskData._TaskData.Name;
+                if (executedTaskData._TaskData.BaseImageSourcePath != "")
                     RemoveSession(sessionName);
-                if (executedTaskData.taskData.DriveEImageSourcePath != "")
+                if (executedTaskData._TaskData.DriveEImageSourcePath != "")
                     RemoveSession(sessionName + "_DriveE");
             }
             handlers.Remove(this);
@@ -128,7 +129,7 @@ namespace GDS_SERVER_WPF.Handlers
             {
                 Application.Current.Dispatcher.Invoke(() =>
                 {
-                    computer.progressComputerData = new ProgressComputerData("", computer.computer.Name, computer.step, computer.computer.MacAddress);
+                    computer.progressComputerData = new ProgressComputerData("", computer.computer.Name, computer.step,executedTaskData.GetFileName(),"", computer.computer.MacAddress);
                     listViewAll.Items.Add(computer.progressComputerData);
                 });                
             }
@@ -246,7 +247,7 @@ namespace GDS_SERVER_WPF.Handlers
     class AutoClosingMessageBox
     {
         System.Threading.Timer _timeoutTimer;
-        string _caption;
+        readonly string _caption;
         AutoClosingMessageBox(string text, string caption, int timeout)
         {
             _caption = caption;

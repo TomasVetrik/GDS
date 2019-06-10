@@ -1,0 +1,36 @@
+﻿<Window x:Class="GDS_SERVER_WPF.CreateRDPFiles"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GDS_SERVER_WPF"
+        mc:Ignorable="d"
+        Title="CreateRDPFiles" Height="273.914" Width="454.658" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid Height="236" VerticalAlignment="Top" Margin="0,0,10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="41*" />
+            <RowDefinition Height="41" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="41*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="41*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Content="GateWay:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="TextBoxGateWay" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+        <Label Grid.Row="1" Content="Rds Login:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="TextBoxRdsLogin" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+        <Label Grid.Row="2" Content="Rds Password:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="TextBoxRdsPassword" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+        <Label Grid.Row="3" Content="Local Login:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="TextBoxLocalLogin" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+        <Label Grid.Row="4" Content="Local Password:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="TextBoxLocalPassword" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+        <Button x:Name="BtnCreateRDPs" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Create RDP Files" Height="30" Width="100" Click="BtnCreateRDPs_Click"/>
+        <Button x:Name="BtnCancel" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="1" VerticalAlignment="Center" HorizontalAlignment="Right" Content="Close" Height="30" Width="70" Click="BtnCancel_Click"/>
+
+    </Grid>
+</Window>

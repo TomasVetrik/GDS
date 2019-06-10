@@ -28,7 +28,7 @@ namespace GDS_Client
             this.listener = _listener;
         }
 
-        string FileName = @"D:\Temp\GDSClient\GDS_Client_LOG.txt";
+        readonly string FileName = @"D:\Temp\GDSClient\GDS_Client_LOG.txt";
 
         public void WriteToLogs(string LOG)
         {
@@ -153,25 +153,39 @@ namespace GDS_Client
                         }
                     case FLAG.SEND_TASK_CONFIG:
                         {
-                            listener.SendMessage(new Packet(FLAG.SEND_TASK_CONFIG, listener.computerDetails.computerDetailsData));
-                            packet.taskData.TargetComputers = new System.Collections.Generic.List<ComputerDetailsData>();
-                            packet.taskData.TargetComputers.Add(listener.computerDetails.computerDetailsData);
-                            if (listener.computerDetails.computerDetailsData.inWinpe)
+                            bool error = false;
+                            try
                             {
-                                try
+                                packet.taskData.TargetComputers = new System.Collections.Generic.List<ComputerDetailsData>
                                 {
-                                    if (File.Exists(@"X:\TaskData.my"))
+                                    listener.computerDetails.computerDetailsData
+                                };
+                                if (listener.computerDetails.computerDetailsData.inWinpe)
+                                {
+                                    try
                                     {
-                                        File.Delete(@"X:\TaskData.my");
-                                        Thread.Sleep(1000);
-                                    }                                    
+                                        if (File.Exists(@"X:\TaskData.my"))
+                                        {
+                                            File.Delete(@"X:\TaskData.my");
+                                            Thread.Sleep(1000);
+                                        }                                
+                                        FileHandler.Save<TaskData>(packet.taskData, @"X:\TaskData.my");
+                                    }
+                                    catch(Exception ex)
+                                    {
+                                        Console.WriteLine("There is problem with TASK DATA SAVING!!" + ex.ToString());
+                                    }
                                 }
-                                catch
-                                { }
-                                FileHandler.Save<TaskData>(packet.taskData, @"X:\TaskData.my");
+                                else
+                                    FileHandler.Save<TaskData>(packet.taskData, @".\TaskData.my");
                             }
-                            else
-                                FileHandler.Save<TaskData>(packet.taskData, @".\TaskData.my");                            
+                            catch(Exception ex)
+                            {
+                                error = true;
+                                Console.WriteLine("There is problem with TASK DATA!!" + ex.ToString());
+                            }
+                            if(!error)
+                                listener.SendMessage(new Packet(FLAG.SEND_TASK_CONFIG, listener.computerDetails.computerDetailsData));
                             break;
                         }
                     case FLAG.FINISH_RUN_COMMAND:
@@ -311,8 +325,10 @@ namespace GDS_Client
                                 tcp_unicast = new TCP_UNICAST(listener.serverIP, Convert.ToInt32(packet.clonningMessage));
                                 if (tcp_unicast.error)
                                 {
-                                    Packet packet_temp = new Packet(FLAG.ERROR_MESSAGE, listener.computerDetails.computerDetailsData);
-                                    packet_temp.clonningMessage = tcp_unicast.Message;
+                                    Packet packet_temp = new Packet(FLAG.ERROR_MESSAGE, listener.computerDetails.computerDetailsData)
+                                    {
+                                        clonningMessage = tcp_unicast.Message
+                                    };
                                     listener.SendMessage(packet_temp);
                                 }
                                 tcp_unicast = null;

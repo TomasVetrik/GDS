@@ -78,5 +78,9 @@ namespace GDS_Client
         public List<string> CommandsInWINPE { get; set; }
         [ProtoMember(26)]
         public int WaitingTime { get; set; }
+        [ProtoMember(27)]
+        public bool SendWarningMails { get; set; }
+        [ProtoMember(28)]
+        public bool InfinityWaitingTime { get; set; }
     }
 }

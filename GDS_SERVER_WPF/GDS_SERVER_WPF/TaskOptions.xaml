@@ -75,8 +75,8 @@
                                     </DataTemplate>
                                 </ListBox.ItemTemplate>
                             </ListBox>
-                            <Button Grid.Column="1" Grid.Row="0" x:Name="buttonBrowse" Content="Browse" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="buttonBrowseComputers_Click"/>
-                            <Button Grid.Column="1" Grid.Row="1" x:Name="buttonClear" Content="Clear" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="buttonClear_Click"/>
+                            <Button Grid.Column="1" Grid.Row="0" x:Name="buttonBrowse" Content="Browse" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="ButtonBrowseComputers_Click"/>
+                            <Button Grid.Column="1" Grid.Row="1" x:Name="buttonClear" Content="Clear" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="ButtonClear_Click"/>
                             <Label x:Name="labelMachineGroup" Content="Mahine Group:" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="9" Margin="0,29,0,0" Grid.RowSpan="2"/>
                             <Label Grid.Row="1" x:Name="labelNumberOfMachines" Content="Numbers Of PCs: 0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="9" Margin="0,0,0,0.333"/>
                             <Label x:Name="labelMachineGroupContent" Content="NONE" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="9" Margin="67,29,0,0" Grid.RowSpan="2" FontWeight="Bold"/>
@@ -85,6 +85,7 @@
                     <GroupBox Grid.Row="3" x:Name="groupBoxTaskOptions" Header="Task Options" Margin="10,0" VerticalAlignment="Top" Height="80">
                         <Grid>
                             <Grid.RowDefinitions>
+                                <RowDefinition />
                                 <RowDefinition />
                                 <RowDefinition />
                             </Grid.RowDefinitions>
@@ -96,6 +97,8 @@
                             <CheckBox x:Name="checkBoxShutdown" Grid.Row="0" Grid.Column="1" Content="Shutdown" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                             <CheckBox x:Name="checkBoxConfiguration" Grid.Row="1" Grid.Column="0" Content="Configuration" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                             <CheckBox x:Name="checkBoxForceInstall" Grid.Row="1" Grid.Column="1" Content="Force Install" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <CheckBox x:Name="checkBoxSendWarningMails" Grid.Row="2" Grid.Column="0" Content="Send Warning Mails" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="True"/>
+                            <CheckBox x:Name="checkBoxInfinityWaitingTime" Grid.Row="2" Grid.Column="1" Content="Infinity Waiting Time" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="True"/>
                         </Grid>
                     </GroupBox>
                     <Grid Grid.Row="4">
@@ -134,8 +137,8 @@
                             </Grid.ColumnDefinitions>
                             <CheckBox Grid.Row="1"  Grid.Column="0" x:Name="checkBoxWithoutVHD" Content="Without VHD" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                             <TextBox Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="2" x:Name="textBoxBaseImage" HorizontalAlignment="Stretch" Height="auto" Margin="0,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="auto" IsEnabled="False"/>
-                            <Button Grid.Row="0"  Grid.Column="2" x:Name="buttonBaseBrowseImage" Content="Browse" Width="75" Height="auto" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonBaseBrowseImage_Click"/>
-                            <Button Grid.Row="1"  Grid.Column="2" x:Name="buttonBaseClear" Content="Clear" Width="75" Height="auto" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonBaseClear_Click"/>
+                            <Button Grid.Row="0"  Grid.Column="2" x:Name="buttonBaseBrowseImage" Content="Browse" Width="75" Height="auto" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ButtonBaseBrowseImage_Click"/>
+                            <Button Grid.Row="1"  Grid.Column="2" x:Name="buttonBaseClear" Content="Clear" Width="75" Height="auto" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ButtonBaseClear_Click"/>
                         </Grid>
                     </GroupBox>
                     <GroupBox x:Name="groupBox_Copy" Header="DriveE Image" Grid.Row="1" HorizontalAlignment="Stretch" Margin="10,10,10,10" VerticalAlignment="Stretch">
@@ -149,8 +152,8 @@
                                 <ColumnDefinition Width="1*"/>
                             </Grid.ColumnDefinitions>
                             <TextBox Grid.Row="0"  Grid.Column="0" x:Name="textBoxDriveEImage" HorizontalAlignment="Stretch" Height="auto" Margin="0,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="auto" IsEnabled="False"/>
-                            <Button Grid.Row="0"  Grid.Column="1" x:Name="buttonDriveEBrowseImage" Content="Browse" Width="75" Height="auto" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonDriveEBrowseImage_Click"/>
-                            <Button Grid.Row="1"  Grid.Column="1" x:Name="buttonDriveEClear" Content="Clear" Width="75" Height="auto" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonDriveEClear_Click"/>
+                            <Button Grid.Row="0"  Grid.Column="1" x:Name="buttonDriveEBrowseImage" Content="Browse" Width="75" Height="auto" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ButtonDriveEBrowseImage_Click"/>
+                            <Button Grid.Row="1"  Grid.Column="1" x:Name="buttonDriveEClear" Content="Clear" Width="75" Height="auto" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ButtonDriveEClear_Click"/>
                         </Grid>
                     </GroupBox>
                 </Grid>
@@ -176,12 +179,12 @@
                                 <ColumnDefinition />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <ListBox Grid.ColumnSpan="3" Grid.Row="0" x:Name="listBoxCopyFilesInOS" MouseDoubleClick="listBoxCopyFilesInOS_MouseDoubleClick"/>
+                            <ListBox Grid.ColumnSpan="3" Grid.Row="0" x:Name="listBoxCopyFilesInOS" MouseDoubleClick="ListBoxCopyFilesInOS_MouseDoubleClick"/>
                             <Label Grid.ColumnSpan="3" Grid.Row="1" Content="Destination Folder:" VerticalContentAlignment="Center" FontWeight="Bold"/>
                             <TextBox Grid.ColumnSpan="3" Grid.Row="2" x:Name="textBoxDestinationFolderInOS" />
-                            <Button Grid.Column="0" Grid.Row="3" x:Name="buttonFilesInOS" Width="75" Height="auto" Content="Files" VerticalAlignment="Center" Click="buttonFilesInOS_Click" />
-                            <Button Grid.Column="1" Grid.Row="3" x:Name="buttonFolderInOS" Width="75" Height="auto" Content="Folder" VerticalAlignment="Center" Click="buttonFolderInOS_Click" />
-                            <Button Grid.Column="2" Grid.Row="3" x:Name="buttonClearInOS" Width="75" Height="auto" Content="Clear" VerticalAlignment="Center" Click="buttonClearInOS_Click" />
+                            <Button Grid.Column="0" Grid.Row="3" x:Name="buttonFilesInOS" Width="75" Height="auto" Content="Files" VerticalAlignment="Center" Click="ButtonFilesInOS_Click" />
+                            <Button Grid.Column="1" Grid.Row="3" x:Name="buttonFolderInOS" Width="75" Height="auto" Content="Folder" VerticalAlignment="Center" Click="ButtonFolderInOS_Click" />
+                            <Button Grid.Column="2" Grid.Row="3" x:Name="buttonClearInOS" Width="75" Height="auto" Content="Clear" VerticalAlignment="Center" Click="ButtonClearInOS_Click" />
                         </Grid>
                     </GroupBox>
                     <GroupBox Grid.Row="2" x:Name="groupBox2" Header="Commands to Run" HorizontalAlignment="Stretch" Margin="10,0,10,0" VerticalAlignment="Stretch">
@@ -210,12 +213,12 @@
                                 <ColumnDefinition />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <ListBox Grid.ColumnSpan="3" Grid.Row="0" x:Name="listBoxCopyFilesInWINPE" MouseDoubleClick="listBoxCopyFilesInWINPE_MouseDoubleClick"/>
+                            <ListBox Grid.ColumnSpan="3" Grid.Row="0" x:Name="listBoxCopyFilesInWINPE" MouseDoubleClick="ListBoxCopyFilesInWINPE_MouseDoubleClick"/>
                             <Label Grid.ColumnSpan="3" Grid.Row="1" Content="Destination Folder:" VerticalContentAlignment="Center" FontWeight="Bold"/>
                             <TextBox Grid.ColumnSpan="3" Grid.Row="2" x:Name="textBoxDestinationFolderInWINPE" />
-                            <Button Grid.Column="0" Grid.Row="3" x:Name="buttonFilesInWINPE" Width="75" Height="auto" Content="Files" VerticalAlignment="Center" Click="buttonFilesInWINPE_Click" />
-                            <Button Grid.Column="1" Grid.Row="3" x:Name="buttonFolderInWINPE" Width="75" Height="auto" Content="Folder" VerticalAlignment="Center" Click="buttonFolderInWINPE_Click" />
-                            <Button Grid.Column="2" Grid.Row="3" x:Name="buttonClearInWINPE" Width="75" Height="auto" Content="Clear" VerticalAlignment="Center" Click="buttonClearInWINPE_Click" />
+                            <Button Grid.Column="0" Grid.Row="3" x:Name="buttonFilesInWINPE" Width="75" Height="auto" Content="Files" VerticalAlignment="Center" Click="ButtonFilesInWINPE_Click" />
+                            <Button Grid.Column="1" Grid.Row="3" x:Name="buttonFolderInWINPE" Width="75" Height="auto" Content="Folder" VerticalAlignment="Center" Click="ButtonFolderInWINPE_Click" />
+                            <Button Grid.Column="2" Grid.Row="3" x:Name="buttonClearInWINPE" Width="75" Height="auto" Content="Clear" VerticalAlignment="Center" Click="ButtonClearInWINPE_Click" />
                         </Grid>
                     </GroupBox>
                     <GroupBox Grid.Row="2" x:Name="groupBox3" Header="Commands to Run" HorizontalAlignment="Stretch" Margin="10,0,10,0" VerticalAlignment="Stretch">
@@ -224,9 +227,9 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button x:Name="buttonExecute" Grid.Row="1" Grid.Column="0" Content="Execute" Width="75" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonExecute_Click"/>
-        <Button x:Name="buttonSave" Grid.Row="1" Grid.Column="1" Content="Save" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="buttonSave_Click"/>
-        <Button x:Name="buttonClose" Grid.Row="1" Grid.Column="2" Content="Close" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="buttonClose_Click"/>
+        <Button x:Name="buttonExecute" Grid.Row="1" Grid.Column="0" Content="Execute" Width="75" HorizontalAlignment="Center" VerticalAlignment="Center" Click="ButtonExecute_Click"/>
+        <Button x:Name="buttonSave" Grid.Row="1" Grid.Column="1" Content="Save" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="ButtonSave_Click"/>
+        <Button x:Name="buttonClose" Grid.Row="1" Grid.Column="2" Content="Close" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="ButtonClose_Click"/>
 
     </Grid>
 </Window>

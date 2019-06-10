@@ -4,7 +4,9 @@ using NetworkCommsDotNet.Connections;
 using NetworkCommsDotNet.Connections.TCP;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
+using System.Management;
 using System.Threading;
 
 namespace GDS_Client
@@ -16,7 +18,7 @@ namespace GDS_Client
         public MessageHandler messageHandler;
         public string serverIP = null;
         public int serverPort = 10000;
-        public Connection connection;
+        public Connection connection;        
 
         void GetServerIP()
         {
@@ -74,7 +76,7 @@ namespace GDS_Client
             //serverIP = "10.201.20.14";
         }
 
-        string FileName = @"D:\Temp\GDSClient\GDS_Client_LOG.txt";
+        readonly string FileName = @"D:\Temp\GDSClient\GDS_Client_LOG.txt";
 
         public void WriteToLogs(string LOG)
         {
@@ -96,16 +98,62 @@ namespace GDS_Client
             }
         }
 
+        void RunCommand(string FileName, string Arguments)
+        {
+            Process proc = new Process();
+            proc.StartInfo.FileName = FileName;
+            proc.StartInfo.Arguments = Arguments;
+            proc.StartInfo.Verb = "runas";
+            proc.Start();
+            if (computerDetails.computerDetailsData.inWinpe)
+            {
+                Console.WriteLine("Waiting for process");
+                proc.WaitForExit();
+                Console.WriteLine("Closing proces");
+            }
+        }
+
+        public void SetLectorDisplayDuplicate()
+        {
+            try
+            {
+                string PCName = System.Environment.MachineName.ToUpper();                
+                if (PCName.Contains("LEKTOR") || PCName.Contains("STUDENTSK11-10"))
+                {
+                    if (File.Exists(@"D:\Temp\SetDisplayDuplicate.ps1"))
+                    {
+                        RunCommand("cmd.exe", "/C " + @"C:\windows\system32\WindowsPowershell\v1.0\powershell D:\Temp\SetDisplayDuplicate.ps1");
+                        Thread.Sleep(2000);
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
         public void StartListener()
         {
             messageHandler = new MessageHandler(this);
-            Start:
+            Start:            
             serverIP = null;
             WriteToLogs("Getting IP");
             GetServerIP();
             WriteToLogs("Server IP: " + serverIP);
             computerDetails.SetComputerDetails();
             WriteToLogs("Getting computer details");
+            try
+            {
+                if (File.Exists(@"X:\TaskData.my"))
+                {
+                    File.Delete(@"X:\TaskData.my");
+                    Thread.Sleep(1000);
+                }
+            }
+            catch
+            { }
+            SetLectorDisplayDuplicate(); 
             bool created = false;
             int counter = 0;
             int MAX_COUNT_REFRESH = 5;

@@ -88,13 +88,18 @@
     <Compile Include="ConfigureTemplate.xaml.cs">
       <DependentUpon>ConfigureTemplate.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CreateRDPFiles.xaml.cs">
+      <DependentUpon>CreateRDPFiles.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CreateRenameCancel.xaml.cs">
       <DependentUpon>CreateRenameCancel.xaml</DependentUpon>
     </Compile>
     <Compile Include="DataCLasses\ComputerConfigData.cs" />
     <Compile Include="DataCLasses\ComputerDetailsData.cs" />
     <Compile Include="DataCLasses\ComputerWithConnection.cs" />
+    <Compile Include="DataCLasses\MailsData.cs" />
     <Compile Include="DataCLasses\PhonesForTask.cs" />
+    <Compile Include="DataCLasses\RDPLastUsedSettings.cs" />
     <Compile Include="DataCLasses\SemaphoresForTask.cs" />
     <Compile Include="GridViewSort.cs" />
     <Compile Include="Handlers\ComputerInTaskHandler.cs" />
@@ -131,6 +136,9 @@
     <Compile Include="ProgressComputersDetails.xaml.cs">
       <DependentUpon>ProgressComputersDetails.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SettingsForMails.xaml.cs">
+      <DependentUpon>SettingsForMails.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TaskOptions.xaml.cs">
       <DependentUpon>TaskOptions.xaml</DependentUpon>
     </Compile>
@@ -151,6 +159,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ConfigureTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateRDPFiles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -184,6 +196,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ProgressComputersDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SettingsForMails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

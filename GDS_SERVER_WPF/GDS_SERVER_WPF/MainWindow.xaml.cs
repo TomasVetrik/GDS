@@ -17,6 +17,7 @@ using System.Windows.Media;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace GDS_SERVER_WPF
 {
@@ -26,8 +27,7 @@ namespace GDS_SERVER_WPF
     ///   
 
     public partial class MainWindow : Window
-    {        
-
+    {                
         List<ComputerDetailsData> clipBoardMachines = new List<ComputerDetailsData>();
         List<TaskData> clipBoardTasks = new List<TaskData>();
         string nodePathOld = "";
@@ -45,6 +45,8 @@ namespace GDS_SERVER_WPF
         string LockPath = @".\Machine Groups\Lock";
         string DefaultPath = @".\Machine Groups\Default";
         string ReleaseInfoFile = @".\Release.txt";
+        MailsData MailsTo;
+        string pathMailsData = @".\MailsTo.my";
         List<string> ipAddresses;
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConString"].ConnectionString);
 
@@ -144,10 +146,18 @@ namespace GDS_SERVER_WPF
             {
                 listBoxConsole.Items.Add("CHYBA3 SQL: " + ex.ToString());
             }
-        }        
-        
+        }                
         private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
+        {            
+            if (!File.Exists(pathMailsData))
+            {
+                FileHandler.Save<MailsData>(MailsTo, pathMailsData);
+            }
+            MailsTo = FileHandler.Load<MailsData>(pathMailsData);
+            if(MailsTo == null)
+            {
+                MailsTo = new MailsData();
+            }
             FillDataGridClassRoom();
             CheckDirectories();            
             treeViewMachinesAndTasksHandler = new TreeViewHandler(treeViewMachinesAndTasks);            
@@ -180,18 +190,25 @@ namespace GDS_SERVER_WPF
             LoadIpAddresses();
             listener.StartListener();
             LoadReleaseInfo();
-            //Server = new Thread(listener.StartListener);
-            //Server.Start();
+            //RestartTasksInProgres();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            try
+            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure you want to close?", "Closing Confirmation", System.Windows.MessageBoxButton.YesNo);
+            if (messageBoxResult == MessageBoxResult.Yes)
             {
-                //NetworkComms.Shutdown();
+                try
+                {
+                    //NetworkComms.Shutdown();
+                }
+                catch { }
+                Environment.Exit(Environment.ExitCode);
             }
-            catch { }
-            Environment.Exit(Environment.ExitCode);
+            else
+            {
+                e.Cancel = true;
+            }
         }
         private void MenuItemMachineGroupsSetClassRoomID_Click(object sender, RoutedEventArgs e)
         {
@@ -209,6 +226,10 @@ namespace GDS_SERVER_WPF
         {
             CreateRDP(listViewMachineGroups);
         }
+        private void MenuItemKickFromTask_Click(object sender, RoutedEventArgs e)
+        {
+            KickComputersFromTask(listViewMachineGroups);            
+        }        
         private void MenuItemMachineGroupsLock_Click(object sender, RoutedEventArgs e)
         {
             if((ComputerDetailsData)listViewMachineGroups.SelectedItem != null)
@@ -218,10 +239,12 @@ namespace GDS_SERVER_WPF
                 {
                     computers.Add(computer);
                 }
-                var editItemDialog = new EditItem();
-                editItemDialog.skipControll = true;
+                var editItemDialog = new EditItem
+                {
+                    skipControll = true
+                };
                 editItemDialog.ShowDialog();
-                if (!editItemDialog.cancel)
+                if (!editItemDialog.cancel && editItemDialog.textBoxNewText.Text != "")
                 {
                     foreach (ComputerDetailsData computer in computers)
                     {
@@ -271,6 +294,11 @@ namespace GDS_SERVER_WPF
         {
             RunWakeOnLanOnSelectedItems(listViewMachineGroups);
         }
+        private void MenuItemRestartComputerTask_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Function is disabled");
+            //RestartComputersInTheTask(listViewMachineGroups);
+        }
         private void MenuItemMachineGroupsRDP_Click(object sender, RoutedEventArgs e)
         {
             RemoteDesktop(listViewMachineGroups);
@@ -278,6 +306,66 @@ namespace GDS_SERVER_WPF
         private void MenuItemCreateFolder_Click(object sender, RoutedEventArgs e)
         {
             NewFolder();
+        }
+        private void KickComputersFromTask(ListView listView)
+        {
+            try
+            {
+                if ((ComputerDetailsData)listView.SelectedItem != null)
+                {
+                    List<ComputerDetailsData> computers = new List<ComputerDetailsData>();
+                    foreach (ComputerDetailsData computer in listView.SelectedItems)
+                    {
+                        for (int i = ExecutedTasksHandlers.Count - 1; i >= 0; i--)
+                        {
+                            ExecutedTaskHandler executedTaskDataHandler = ExecutedTasksHandlers[i];
+                            for (int j = executedTaskDataHandler.computers.Count - 1; j >= 0; j--)
+                            {
+                                ComputerInTaskHandler computerInTask = executedTaskDataHandler.computers[j];
+                                if (Listener.CheckMacsInREC(computer.macAddresses, computerInTask.computer.macAddresses))
+                                {
+                                    //computerInTask.Failed("KICK FROMED THE TASK");
+                                    computerInTask.Stop();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void RestartComputersInTheTask(ListView listView)
+        {
+            try
+            {
+                if ((ComputerDetailsData)listView.SelectedItem != null)
+                {
+                    List<ComputerDetailsData> computers = new List<ComputerDetailsData>();
+                    foreach (ComputerDetailsData computer in listView.SelectedItems)
+                    {
+                        for (int i = ExecutedTasksHandlers.Count - 1; i >= 0; i--)
+                        {
+                            ExecutedTaskHandler executedTaskDataHandler = ExecutedTasksHandlers[i];
+                            for (int j = executedTaskDataHandler.computers.Count - 1; j >= 0; j--)
+                            {
+                                ComputerInTaskHandler computerInTask = executedTaskDataHandler.computers[j];
+                                if (Listener.CheckMacsInREC(computer.macAddresses, computerInTask.computer.macAddresses))
+                                {                                    
+                                    computerInTask.Restart();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
         private void UnLock(ListView listView)
         {
@@ -761,16 +849,95 @@ namespace GDS_SERVER_WPF
                 Done = "0",
                 Failed = "0",
                 MachineGroup = dialog.taskData.MachineGroup,
-                taskData = dialog.taskData
+                _TaskData = dialog.taskData
             };
-            ExecutedTaskHandler taskHandler = new ExecutedTaskHandler(executedTask, ipAddresses, listViewComputersProgressAll, listViewComputersProgressSelected, listViewTaskDetailsProgress);
+            ExecutedTaskHandler taskHandler = new ExecutedTaskHandler(executedTask, ipAddresses, listViewComputersProgressAll, listViewComputersProgressSelected, listViewTaskDetailsProgress, MailsTo.Emails);
             ExecutedTasksHandlers.Add(taskHandler);
             taskHandler.handlers = ExecutedTasksHandlers;
             taskHandler.listViewHandler = listViewTaskDetailsHandler;
             taskHandler.ClientsDictionary = listViewMachinesAndTasksHandler.ClientsDictionary;
             Thread taskHandlerThread = new Thread(taskHandler.Start);            
             taskHandlerThread.Start();
-        }                     
+        }
+
+        private void RestartTasksInProgres()
+        {
+            try
+            {
+                string[] executedTasksData = Directory.GetFiles("./TaskDetails", "*.my", SearchOption.AllDirectories);
+                foreach (string executedTaskDataFileName in executedTasksData)
+                {
+                    ExecutedTaskData executedTaskData = FileHandler.Load<ExecutedTaskData>(executedTaskDataFileName);
+                    if (executedTaskData.Finished == "NONE")
+                    {                       
+                        executedTaskData.Finished = DateTime.Now.ToString("dd.MM.yyyy HH-mm-ss");
+                        executedTaskData.Status = "Images/Stopped.ico";                        
+                        FileHandler.Save<ExecutedTaskData>(executedTaskData, executedTaskData.GetFileName());                        
+                        if (executedTaskData._TaskData.Cloning)
+                        {
+                            string sessionName = executedTaskData.Started + "_" + executedTaskData._TaskData.Name;
+                            if (executedTaskData._TaskData.BaseImageSourcePath != "")
+                                RemoveSession(sessionName);
+                            if (executedTaskData._TaskData.DriveEImageSourcePath != "")
+                                RemoveSession(sessionName + "_DriveE");
+                        }
+                        ExecutedTaskData executedTask = new ExecutedTaskData
+                        {
+                            Name = executedTaskData.Name,
+                            Status = "Images/Progress.ico",
+                            Started = DateTime.Now.ToString("dd.MM.yyyy HH-mm-ss"),
+                            Finished = "NONE",
+                            Clients = executedTaskData.Clients,
+                            Done = "0",
+                            Failed = "0",
+                            MachineGroup = executedTaskData.MachineGroup,
+                            _TaskData = executedTaskData._TaskData
+                        };
+                        RunTask(executedTask);
+                        Thread.Sleep(1000);
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                listBoxConsole.Items.Add("Ozivovanie Tasku: " + ex.ToString());
+            }
+        }
+
+        private void RunTask(ExecutedTaskData executedTask)
+        {
+            ExecutedTaskHandler taskHandler = new ExecutedTaskHandler(executedTask, ipAddresses, listViewComputersProgressAll, listViewComputersProgressSelected, listViewTaskDetailsProgress, MailsTo.Emails);
+            ExecutedTasksHandlers.Add(taskHandler);
+            taskHandler.handlers = ExecutedTasksHandlers;
+            taskHandler.listViewHandler = listViewTaskDetailsHandler;
+            taskHandler.ClientsDictionary = listViewMachinesAndTasksHandler.ClientsDictionary;
+            Thread taskHandlerThread = new Thread(taskHandler.Start);
+            taskHandlerThread.Start();
+        }
+
+        public void RemoveSession(string SessionName)
+        {
+            try
+            {
+                var processStartInfo = new ProcessStartInfo
+                {
+                    FileName = @"C:\Windows\Sysnative\WDSUTIL.exe",
+                    Arguments = "/remove-namespace /namespace:\"" + SessionName + "\" /Force",
+                    RedirectStandardOutput = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = true,
+                    WindowStyle = ProcessWindowStyle.Hidden
+                };
+
+                var process = Process.Start(processStartInfo);
+                var output = process.StandardOutput.ReadToEnd();
+                process.WaitForExit();
+            }
+            catch (Exception ex)
+            {
+                listBoxConsole.Items.Add("Remove WDS session: " + SessionName + " " + ex.ToString());
+            }
+        }
 
         private void CheckDirectories()
         {
@@ -794,7 +961,7 @@ namespace GDS_SERVER_WPF
                     + "redirectclipboard:i:1" + "\n" + "redirectposdevices:i:0" + "\n" + "drivestoredirect:s:" + "\n" + "autoreconnection enabled:i:1"
                     + "\n" + "authentication level:i:2" + "\n" + "prompt for credentials:i:0" + "\n" + "negotiate security layer:i:1"
                     + "\n" + "remoteapplicationmode:i:0" + "\n" + "alternate shell:s:" + "\n" + "shell working directory:s:" + "\n" + "gatewayusagemethod:i:2"
-                    + "\n" + "gatewaycredentialssource:i:4" + "\n" + "gatewayprofileusagemethod:i:1" + "\n" + "promptcredentialonce:i:1"
+                    + "\n" + "gatewaycredentialssource:i:4" + "\n" + "gatewayprofileusagemethod:i:1" + "\n" + "promptcredentialonce:i:0"
                     + "\n" + "use redirection server name:i:0" + "\n" + "rdgiskdcproxy:i:0" + "\n" + "kdcproxyname:s:";
                 File.WriteAllText(@".\!NEMAZAT_temp", riadky);
             }
@@ -1057,7 +1224,7 @@ namespace GDS_SERVER_WPF
                 }
             }
             addFolderDialog.ShowDialog();
-            if (!addFolderDialog.cancel)
+            if (!addFolderDialog.cancel && addFolderDialog.textBoxNewText.Text != "")
             {
                 string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + addFolderDialog.textBoxNewText.Text;                
                 if (!Directory.Exists(path))
@@ -1085,7 +1252,7 @@ namespace GDS_SERVER_WPF
                             renameItemDialog.Names.Add(item.Name);
                     }
                     renameItemDialog.ShowDialog();
-                    if (!renameItemDialog.cancel)
+                    if (!renameItemDialog.cancel && renameItemDialog.textBoxNewText.Text != "")
                     {
                         string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + renameItemDialog.textBoxNewText.Text;
                         if (oldItem.ImageSource.Contains("Folder"))
@@ -1136,7 +1303,7 @@ namespace GDS_SERVER_WPF
                             renameItemDialog.Names.Add(item.Name);
                     }
                     renameItemDialog.ShowDialog();
-                    if (!renameItemDialog.cancel)
+                    if (!renameItemDialog.cancel && renameItemDialog.textBoxNewText.Text != "")
                     {
                         string path = treeViewMachinesAndTasksHandler.GetNodePath() + "\\" + renameItemDialog.textBoxNewText.Text;
                         if (oldItem.ImageSource.Contains("Folder"))
@@ -1712,7 +1879,7 @@ namespace GDS_SERVER_WPF
             HitTestResult r = VisualTreeHelper.HitTest(this, e.GetPosition(this));
             if (r.VisualHit.GetType() != typeof(ListBoxItem))
             {                
-                listViewMachineGroups.UnselectAll();                
+                listViewMachineGroups.UnselectAll();
                 listViewMachineGroups.Focus();
             }
         }
@@ -1820,12 +1987,12 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void btnInsert_Click(object sender, RoutedEventArgs e)
+        private void BtnInsert_Click(object sender, RoutedEventArgs e)
         {
             listener.UpdateDataGridByMacs(new List<string> { txtBoxMAC.Text }, txtBoxName.Text, txtBoxClassRoom.Text);
         }
 
-        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        private void BtnUpdate_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -1844,7 +2011,7 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -1863,7 +2030,7 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void grdMachinesGroups_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void GrdMachinesGroups_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if(grdMachinesGroups.SelectedItem != null)
             {
@@ -1879,7 +2046,7 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void listViewMachineGroupsLock_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void ListViewMachineGroupsLock_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             ListViewComputers_MouseDoubleClick(listViewMachineGroupsLock, treeViewMachinesAndTasksHandler);
         }
@@ -2016,7 +2183,7 @@ namespace GDS_SERVER_WPF
             LoadReleaseInfo();
         }
 
-        private void treeViewPostInstalls_KeyUp(object sender, KeyEventArgs e)
+        private void TreeViewPostInstalls_KeyUp(object sender, KeyEventArgs e)
         {
             switch (e.Key)
             {
@@ -2090,12 +2257,19 @@ namespace GDS_SERVER_WPF
             {
                 var TempFile = new List<string>(System.IO.File.ReadAllLines(@".\!NEMAZAT_temp"));
                 string nodePath = treeViewMachinesAndTasksHandler.GetNodePath() ;
-                for (int i = list.Items.Count - 1; i >= 0; i--)
+                var creteRDPFilesDialog = new CreateRDPFiles
+                {
+                    gateWayHostName = gateWayHostName,
+                    list = list,
+                    TempFile = TempFile,
+                    nodePath = nodePath
+                };
+                creteRDPFilesDialog.ShowDialog();
+                /*for (int i = list.Items.Count - 1; i >= 0; i--)
                 {
                     ComputerDetailsData computer = (ComputerDetailsData)list.Items[i];                    
                     CreateRDP(computer.Name,gateWayHostName, nodePath + "\\" + computer.Name + ".rdp", TempFile);
-                }                
-                System.Diagnostics.Process.Start(nodePath);
+                }*/
             }            
         }
 
@@ -2107,7 +2281,7 @@ namespace GDS_SERVER_WPF
             File.WriteAllLines(pathToSave.Replace(".my", ".rdp"), TempFile.ToArray());
         }
 
-        private void listViewMachineGroupsLock_KeyUp(object sender, KeyEventArgs e)
+        private void ListViewMachineGroupsLock_KeyUp(object sender, KeyEventArgs e)
         {
             switch (e.Key)
             {
@@ -2169,12 +2343,12 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void btnPostInstallsRefresh_Click(object sender, RoutedEventArgs e)
+        private void BtnPostInstallsRefresh_Click(object sender, RoutedEventArgs e)
         {
             listViewPostInstallsHandler.RefreshPostInstalls();
         }
 
-        private void btnInsertClassroom_Click(object sender, RoutedEventArgs e)
+        private void BtnInsertClassroom_Click(object sender, RoutedEventArgs e)
         {
             var computersInfoFiles = Directory.GetFiles(@".\Machine Groups\" + txtBoxClassRoomName.Text, "*.my", SearchOption.AllDirectories);
             foreach (string computerFile in computersInfoFiles)
@@ -2184,16 +2358,33 @@ namespace GDS_SERVER_WPF
             }
         }
 
-        private void btnPostInstallsSelect_Click(object sender, RoutedEventArgs e)
+        private void BtnPostInstallsSelect_Click(object sender, RoutedEventArgs e)
         {
             listViewPostInstallsHandler.SeLect();
             listViewMachinesAndTasksHandler.Refresh();
         }
 
-        private void btnPostInstallsUnSelect_Click(object sender, RoutedEventArgs e)
+        private void BtnPostInstallsUnSelect_Click(object sender, RoutedEventArgs e)
         {
             listViewPostInstallsHandler.UnSeLect();
             listViewMachinesAndTasksHandler.Refresh();
+        }
+
+        private void BtnMailTo_Click(object sender, RoutedEventArgs e)
+        {
+            var SettingForMailsToDialog = new SettingsForMails();
+            SettingForMailsToDialog.ShowDialog();
+            MailsTo = FileHandler.Load<MailsData>(pathMailsData);
+        }
+
+        private void ListViewMachineGroupsLock_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            HitTestResult r = VisualTreeHelper.HitTest(this, e.GetPosition(this));
+            if (r.VisualHit.GetType() != typeof(ListBoxItem))
+            {
+                listViewMachineGroupsLock.UnselectAll();
+                listViewMachineGroupsLock.Focus();
+            }
         }
     }
 
