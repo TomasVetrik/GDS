@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows Server 2012 R2</Name>
+  <Started>31.10.2018 07-41-19</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>31.10.2018 08-04-16</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK10</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows Server 2012 R2</Name>
+    <LastExecuted>31.10.2018 07-41-19</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>SAGlAq9jCE-VBHByMJPH7w</_sourceIdentifier>
+        <Name>STUDENTSK10-08</Name>
+        <RealPCName>STUDENTSK10-08</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:15:8A:3E</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:15:8A:3E</MacAddress>
+        <OSInformations>Microsoft Windows Server 2008 R2 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.30</IPAddress>
+        <baseImageName>Windows Server 2008 R2</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK10</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\MOC\Windows Server 2012 R2</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows Server 2012 R2</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\Base\_WIM\W2k12r2\W2k12R2.wim</SourcePath>
+      <BoolLabel>Windows 2012 R2</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>W2k12R2</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W2k12_R2</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>7:42:11</Time>
+      <MacAddress>68:05:CA:15:8A:3E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-08</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>7:43:38</Time>
+      <MacAddress>68:05:CA:15:8A:3E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>7:43:39</Time>
+      <MacAddress>68:05:CA:15:8A:3E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-08</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>7:43:40</Time>
+      <MacAddress>68:05:CA:15:8A:3E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-08</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>7:43:41</Time>
+      <MacAddress>68:05:CA:15:8A:3E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:04:15</Time>
+      <MacAddress>68:05:CA:15:8A:3E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:04:16</Time>
+      <MacAddress>68:05:CA:15:8A:3E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\10\\31.10.2018 07-41-19_Windows Server 2012 R2.my</FilePath>
+</ExecutedTaskData>

@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>VS Generic</Name>
+  <Started>29.03.2018 15-18-15</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>29.03.2018 15-59-38</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK14</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>VS Generic</Name>
+    <LastExecuted>29.03.2018 15-18-15</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>FsQjM7pfGkm2Z4_-3zDEkQ</_sourceIdentifier>
+        <Name>STUDENTSK14-10</Name>
+        <RealPCName>STUDENTSK14-10</RealPCName>
+        <macAddresses>
+          <string>74:D4:35:8D:8D:BD</string>
+          <string>68:05:CA:24:7F:38</string>
+        </macAddresses>
+        <MacAddress>74:D4:35:8D:8D:BD</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.80</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>GOC BASE SEVECEK</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK14</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 10 Office 2016 x64 SP</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 10 Office 2016 x64 SP</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\_NO_SYSPREP\W10_Off2k16_x64_SingleProfile_NO_SYSPREP\W10_Off2k16_x64_SingleProfile_NO_SYSPREP.wim</SourcePath>
+      <BoolLabel>Windows 10 Office 2016</BoolLabel>
+      <PartitionSize>160</PartitionSize>
+      <VHDResizeSize>90</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W10_Off2k16_x64_SingleProfile_NO_SYSPREP</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\GOC\VS Generic 2017</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>VS Generic 2017</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\DriveE\_WIM\VS_generic_2017\VS_generic.wim</SourcePath>
+      <BoolLabel>VS Generic 2017</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\NetGeneric\Autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:18:17</Time>
+      <MacAddress>74:D4:35:8D:8D:BD</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:19:39</Time>
+      <MacAddress>74:D4:35:8D:8D:BD</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>15:19:40</Time>
+      <MacAddress>74:D4:35:8D:8D:BD</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:19:41</Time>
+      <MacAddress>74:D4:35:8D:8D:BD</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:19:42</Time>
+      <MacAddress>74:D4:35:8D:8D:BD</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:59:34</Time>
+      <MacAddress>74:D4:35:8D:8D:BD</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>15:59:35</Time>
+      <MacAddress>74:D4:35:8D:8D:BD</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:59:36</Time>
+      <MacAddress>74:D4:35:8D:8D:BD</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>15:59:37</Time>
+      <MacAddress>74:D4:35:8D:8D:BD</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>15:59:38</Time>
+      <MacAddress>74:D4:35:8D:8D:BD</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\03\\29.03.2018 15-18-15_VS Generic.my</FilePath>
+</ExecutedTaskData>

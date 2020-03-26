@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>GOC BASE SEVECEK November 2018</Name>
+  <Started>14.12.2018 11-34-10</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>14.12.2018 11-34-23</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>UCEBNASK03</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>GOC BASE SEVECEK November 2018</Name>
+    <LastExecuted>14.12.2018 11-34-10</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Khc6JvFWxEKS4q0nFg5nVQ</_sourceIdentifier>
+        <Name>LEKTORSK3</Name>
+        <RealPCName>LEKTORSK3</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4D:F5</string>
+          <string>1C:1B:0D:12:1F:7C</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4D:F5</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.154</IPAddress>
+        <baseImageName>Windows Server 2016 No Sysprep</baseImageName>
+        <driveEImageName>MOC 20744 C</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK03</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\MOC\Windows Server 2016</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows Server 2016</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\Base\_WIM\W2k16\W2k16.wim</SourcePath>
+      <BoolLabel>Windows Server 2016</BoolLabel>
+      <PartitionSize>102</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W2k16</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W2k16</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\GOC\GOC BASE SEVECEK November 2018</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>GOC BASE SEVECEK November 2018</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\GOC\DriveE\_wim\GOC-BASE_November_2018\GOC-BASE.wim</SourcePath>
+      <BoolLabel>Windows Server 2016</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK3</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:34:12</Time>
+      <MacAddress>68:05:CA:44:4D:F5</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>LEKTORSK3</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>11:34:12</Time>
+      <MacAddress>68:05:CA:44:4D:F5</MacAddress>
+      <Message>68:05:CA:44:4D:F5</Message>
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\12\\14.12.2018 11-34-10_GOC BASE SEVECEK November 2018.my</FilePath>
+</ExecutedTaskData>

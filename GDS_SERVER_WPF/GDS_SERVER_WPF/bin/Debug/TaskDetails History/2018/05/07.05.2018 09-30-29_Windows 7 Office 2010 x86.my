@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 7 Office 2010 x86</Name>
+  <Started>07.05.2018 09-30-29</Started>
+  <Status>Images/Failed.ico</Status>
+  <Finished>07.05.2018 10-17-59</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>UCEBNASK07</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 7 Office 2010 x86</Name>
+    <LastExecuted>07.05.2018 09-30-29</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>RwRbALO6tU6Hw4FhCeS76Q</_sourceIdentifier>
+        <Name>STUDENTSK7-02</Name>
+        <RealPCName>STUDENTSK7-02</RealPCName>
+        <macAddresses>
+          <string>E0:D5:5E:02:ED:EE</string>
+        </macAddresses>
+        <MacAddress>E0:D5:5E:02:ED:EE</MacAddress>
+        <OSInformations>Microsoft Windows 7 Enterprise, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-7400 CPU @ 3.00GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 11/08/17 12:51:49 Ver: 05.0000C</biosCaption>
+        <boardProductId>Z270-HD3P-CF</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.201</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK07</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 7 Office 2010 x86</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 7 Office 2010 x86</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\W7_Off2k10_x86\W7_Off2k10_x86.wim</SourcePath>
+      <BoolLabel>Windows 7 Office 2010</BoolLabel>
+      <PartitionSize>100</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W7_Off2k10_x86</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x86</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <DriveEImageData>
+      <Name>10989B</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\DriveE\_WIM\10989B\10989B.wim</SourcePath>
+      <BoolLabel>MOC 10989 B</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:30:31</Time>
+      <MacAddress>E0:D5:5E:02:ED:EE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-02</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:32:03</Time>
+      <MacAddress>E0:D5:5E:02:ED:EE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:32:04</Time>
+      <MacAddress>E0:D5:5E:02:ED:EE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:32:05</Time>
+      <MacAddress>E0:D5:5E:02:ED:EE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-02</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:32:06</Time>
+      <MacAddress>E0:D5:5E:02:ED:EE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK7-02</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>10:17:59</Time>
+      <MacAddress>E0:D5:5E:02:ED:EE</MacAddress>
+      <Message>Expired waiting time</Message>
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\05\\07.05.2018 09-30-29_Windows 7 Office 2010 x86.my</FilePath>
+</ExecutedTaskData>

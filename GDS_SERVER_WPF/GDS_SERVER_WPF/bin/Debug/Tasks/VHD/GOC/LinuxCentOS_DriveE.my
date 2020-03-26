@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>LinuxCentOS_DriveE</Name>
+  <LastExecuted>25.03.2019 10-45-47</LastExecuted>
+  <TargetComputers>
+    <ComputerDetailsData>
+      <_sourceIdentifier>qDRB-QlyMke-tvBnSGxDgg</_sourceIdentifier>
+      <Name>STUDENTSK8-01</Name>
+      <RealPCName>STUDENTSK8-01</RealPCName>
+      <macAddresses>
+        <string>68:05:CA:44:4D:8B</string>
+      </macAddresses>
+      <MacAddress>68:05:CA:44:4D:8B</MacAddress>
+      <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+      <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+      <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+      <numberOfRamSLots>4</numberOfRamSLots>
+      <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+      <boardProductId>H170-D3H-CF</boardProductId>
+      <accountName>Administrator</accountName>
+      <IPAddress>10.202.20.66</IPAddress>
+      <baseImageName>Windows Server 2012 R2</baseImageName>
+      <driveEImageName>MOC 20412 D</driveEImageName>
+      <dartInfo />
+      <ImageSource>Images/Offline.ico</ImageSource>
+      <inWinpe>false</inWinpe>
+      <PostInstalls />
+      <CustomLog />
+    </ComputerDetailsData>
+  </TargetComputers>
+  <MachineGroup>UCEBNASK08</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>true</Cloning>
+  <BaseImageSourcePath>.\Base\OFFICE\Windows 10 Office 2016 x64 SP</BaseImageSourcePath>
+  <BaseImageData>
+    <Name>Windows 10 Office 2016 x64 SP</Name>
+    <ImageSource>Images/Image.ico</ImageSource>
+    <SourcePath>I:\Office\Base\_WIM\_NO_SYSPREP\W10_Off2k16_x64_SingleProfile_NO_SYSPREP_1803\W10_Off2k16_x64_SingleProfile_NO_SYSPREP_1803.wim</SourcePath>
+    <BoolLabel>Windows 10 Office 2016</BoolLabel>
+    <PartitionSize>162</PartitionSize>
+    <VHDResizeSize>90</VHDResizeSize>
+    <VHDResize>true</VHDResize>
+    <VHDNames>
+      <string>W10_Off2k16_x64_SingleProfile</string>
+    </VHDNames>
+    <OSAbrivations>
+      <string>W10_x64</string>
+    </OSAbrivations>
+  </BaseImageData>
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath>.\DriveE\GOC\LinuxCentOS_DriveE</DriveEImageSourcePath>
+  <DriveEImageData>
+    <Name>LinuxCentOS_DriveE</Name>
+    <ImageSource>Images/Image.ico</ImageSource>
+    <SourcePath>I:\GOC\DriveE\_wim\LinuxCentOSDriveE\LinuxCentOSDriveE.wim</SourcePath>
+    <BoolLabel>Windows 10 Office 2016</BoolLabel>
+    <PartitionSize>90</PartitionSize>
+    <VHDResizeSize>50</VHDResizeSize>
+    <VHDResize>false</VHDResize>
+    <VHDNames />
+    <OSAbrivations />
+  </DriveEImageData>
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <DestinationDirectoryInOS />
+  <CommandsInOS>
+    <string>E:\Autologon.bat</string>
+  </CommandsInOS>
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE />
+  <WaitingTime>40</WaitingTime>
+  <SendWarningMails>false</SendWarningMails>
+  <InfinityWaitingTime>true</InfinityWaitingTime>
+</TaskData>

@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>MOC 10962 C</Name>
+  <Started>05.03.2019 14-22-48</Started>
+  <Status>Images/Failed.ico</Status>
+  <Finished>05.03.2019 15-15-01</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>UCEBNASK10</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>MOC 10962 C</Name>
+    <LastExecuted>05.03.2019 14-22-48</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>dbFEZtNQyE6Thm-it69MkQ</_sourceIdentifier>
+        <Name>LEKTORSK10</Name>
+        <RealPCName>LEKTORSK10</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:15:8A:3A</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:15:8A:3A</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.27</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>10962 C</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK10</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\MOC\Windows Server 2016</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows Server 2016</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\Base\_WIM\W2k16\W2k16.wim</SourcePath>
+      <BoolLabel>Windows Server 2016</BoolLabel>
+      <PartitionSize>102</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W2k16</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W2k16</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\MOC\10000\10962 C</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>10962 C</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\DriveE\_WIM\10962C\10962C.wim</SourcePath>
+      <BoolLabel>MOC 10962 C</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK10</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:23:35</Time>
+      <MacAddress>68:05:CA:15:8A:3A</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\05.03.2019 14-22-48_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK10</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>14:24:52</Time>
+      <MacAddress>68:05:CA:15:8A:3A</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\05.03.2019 14-22-48_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK10</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>14:24:53</Time>
+      <MacAddress>68:05:CA:15:8A:3A</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\05.03.2019 14-22-48_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK10</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>14:24:54</Time>
+      <MacAddress>68:05:CA:15:8A:3A</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\05.03.2019 14-22-48_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK10</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>14:24:55</Time>
+      <MacAddress>68:05:CA:15:8A:3A</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\05.03.2019 14-22-48_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>LEKTORSK10</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>15:15:01</Time>
+      <MacAddress>68:05:CA:15:8A:3A</MacAddress>
+      <Message>Expired waiting time</Message>
+      <Task_ID>.\TaskDetails\05.03.2019 14-22-48_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\03\\05.03.2019 14-22-48_MOC 10962 C.my</FilePath>
+</ExecutedTaskData>

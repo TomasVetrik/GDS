@@ -42,7 +42,7 @@ namespace GDS_Client
 
         public void WriteToLogs(string LOG)
         {
-            Console.WriteLine(LOG);
+            Console.WriteLine(DateTime.Now.ToString() + ": " + LOG);
             if (!computerDetailsData.inWinpe)
             {
                 if (File.Exists(FileName))
@@ -63,12 +63,11 @@ namespace GDS_Client
         public void SetComputerDetails()
         {
             try
-            {
+            {                
                 computerDetails = new List<string>();
-                computerDetailsData.RealPCName = System.Environment.MachineName;                
-                computerDetails.Add("Computer Name||" + computerDetailsData.RealPCName);
-
-                var MacAddress = HardwareInfo.GetMacAddresses();                
+                computerDetailsData.RealPCName = System.Environment.MachineName;
+                computerDetails.Add("Computer Name||" + computerDetailsData.RealPCName);                
+                var MacAddress = HardwareInfo.GetMacAddresses();
                 if (MacAddress.Count == 0)
                 {
                     var Macs = HardwareInfo.GetMacAddresses2();
@@ -79,32 +78,36 @@ namespace GDS_Client
                     }
                     MacAddress = Macs;
                 }
-                computerDetailsData._sourceIdentifier = NetworkComms.NetworkIdentifier;                
+                computerDetailsData._sourceIdentifier = NetworkComms.NetworkIdentifier;
                 computerDetailsData.macAddresses = MacAddress;
                 computerDetailsData.MacAddress = MacAddress[0];
                 computerDetails.Add("MacAddress||" + MacAddress);                
-                computerDetailsData.OSInformations = HardwareInfo.GetOSInformation();                
+                computerDetailsData.OSInformations = HardwareInfo.GetOSInformation();
                 computerDetails.Add("OS Informations||" + computerDetailsData.OSInformations);
-                computerDetailsData.processorInfo = HardwareInfo.GetProcessorInformation();                
+                computerDetailsData.processorInfo = HardwareInfo.GetProcessorInformation();
                 computerDetails.Add("Processor Informations||" + computerDetailsData.processorInfo);
                 computerDetailsData.physicalMemoryInfo = HardwareInfo.GetPhysicalMemory();
                 computerDetails.Add("Memory Size||" + computerDetailsData.physicalMemoryInfo);
-                computerDetailsData.numberOfRamSLots = HardwareInfo.GetNoRamSlots();               
+                computerDetailsData.numberOfRamSLots = "Used: " + HardwareInfo.GetUsedNORAMSlots() + " MAX: " + HardwareInfo.GetNoRamSlots();
                 computerDetails.Add("Used Memory Slots||" + computerDetailsData.numberOfRamSLots);
-                computerDetailsData.biosCaption = HardwareInfo.GetBIOScaption();                
+                computerDetailsData.biosCaption = HardwareInfo.GetBIOScaption();
                 computerDetails.Add("BIOS Caption||" + computerDetailsData.biosCaption);
-                computerDetailsData.boardProductId = HardwareInfo.GetBoardProductId();                
-                computerDetails.Add("Board ID||" + computerDetailsData.boardProductId);
-                computerDetailsData.accountName = HardwareInfo.GetAccountName();                
+                computerDetailsData.boardProductId = HardwareInfo.GetBoardProductId();
+                computerDetails.Add("Board ID||" + computerDetailsData.boardProductId);                
+                computerDetailsData.accountName = HardwareInfo.GetAccountName();
                 computerDetails.Add("User Account Name||" + computerDetailsData.accountName);
-                computerDetailsData.baseImageName = GetBaseImageName();                
+                computerDetailsData.baseImageName = GetBaseImageName();
                 computerDetails.Add("BASE NAME||" + computerDetailsData.baseImageName);
-                computerDetailsData.driveEImageName = GeDriveEImageName();                
+                computerDetailsData.driveEImageName = GeDriveEImageName();
                 computerDetails.Add("DRIVEE NAME||" + computerDetailsData.driveEImageName);
-                computerDetailsData.dartInfo = GetDartViewerInfo(0);                
+                computerDetailsData.dartInfo = GetDartViewerInfo(0);
                 computerDetails.Add("Dart Viewer||" + computerDetailsData.dartInfo);
                 computerDetailsData.CustomLog = "";
-                computerDetails.Add("Custom Log||" + computerDetailsData.CustomLog);
+                if (!computerDetailsData.inWinpe)
+                {
+                    computerDetailsData.CustomLog = HardwareInfo.GetInstalledApps();
+                }
+                computerDetails.Add("Custom Log||" + computerDetailsData.CustomLog);                
             }
             catch (Exception ex)
             {

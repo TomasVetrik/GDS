@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 7 Office 2010 x64 MP</Name>
+  <Started>04.04.2019 12-47-42</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>04.04.2019 13-31-59</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>Temp</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 7 Office 2010 x64 MP</Name>
+    <LastExecuted>04.04.2019 12-47-42</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>OTX8IRxAY06lL8sD8CM2uw</_sourceIdentifier>
+        <Name>DELL02</Name>
+        <RealPCName>DELL02</RealPCName>
+        <macAddresses>
+          <string>AC:7B:A1:7B:C7:99</string>
+          <string>EC:F4:BB:19:33:29</string>
+        </macAddresses>
+        <MacAddress>AC:7B:A1:7B:C7:99</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4200U CPU @ 1.60GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 01/22/14 08:03:33 Ver: A04.00 </biosCaption>
+        <boardProductId>0TG93N</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.130</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>Temp</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 7 Office 2010 x64 MP</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 7 Office 2010 x64 MP</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\W7_Off2k10_x64_MultiProfile\W7_Off2k10_x64_MultiProfile.wim</SourcePath>
+      <BoolLabel>Windows 7 Office 2010</BoolLabel>
+      <PartitionSize>100</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W7_Off2k10_x64_MultiProfile</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <DriveEImageData>
+      <Name>10989B</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\DriveE\_WIM\10989B\10989B.wim</SourcePath>
+      <BoolLabel>MOC 10989 B</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>12:47:43</Time>
+      <MacAddress>AC:7B:A1:7B:C7:99</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\04.04.2019 12-47-42_Windows 7 Office 2010 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL02</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>12:49:55</Time>
+      <MacAddress>AC:7B:A1:7B:C7:99</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\04.04.2019 12-47-42_Windows 7 Office 2010 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>12:49:56</Time>
+      <MacAddress>AC:7B:A1:7B:C7:99</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\04.04.2019 12-47-42_Windows 7 Office 2010 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>12:49:57</Time>
+      <MacAddress>AC:7B:A1:7B:C7:99</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\04.04.2019 12-47-42_Windows 7 Office 2010 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL02</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>12:49:58</Time>
+      <MacAddress>AC:7B:A1:7B:C7:99</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\04.04.2019 12-47-42_Windows 7 Office 2010 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:31:58</Time>
+      <MacAddress>AC:7B:A1:7B:C7:99</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\04.04.2019 12-47-42_Windows 7 Office 2010 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:31:59</Time>
+      <MacAddress>AC:7B:A1:7B:C7:99</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\04.04.2019 12-47-42_Windows 7 Office 2010 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\04\\04.04.2019 12-47-42_Windows 7 Office 2010 x64 MP.my</FilePath>
+</ExecutedTaskData>

@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>MOC 20744 C</Name>
+  <Started>08.02.2019 08-45-31</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>08.02.2019 10-21-21</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>!Testing</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>MOC 20744 C</Name>
+    <LastExecuted>08.02.2019 08-45-31</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>ler16khk_kSYyZ3bENSuAw</_sourceIdentifier>
+        <Name>STUDENTSK11-10</Name>
+        <RealPCName>MININT-RJP0RVP</RealPCName>
+        <macAddresses>
+          <string>00:22:4D:81:6E:56</string>
+          <string>68:05:CA:0C:B1:98</string>
+        </macAddresses>
+        <MacAddress>00:22:4D:81:6E:56</MacAddress>
+        <OSInformations>, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>24576MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.26</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>124-248-007#10.202.20.26#49678</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>!Testing</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\MOC\Windows Server 2016 No Sysprep</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows Server 2016 No Sysprep</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\Base\_WIM\NO_SYSPREP\w2k16\w2k16.wim</SourcePath>
+      <BoolLabel>Windows Server 2016</BoolLabel>
+      <PartitionSize>122</PartitionSize>
+      <VHDResizeSize>40</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>w2k16</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W2k16</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\MOC\20000\MOC 20744 C</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>MOC 20744 C</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\DriveE\_WIM\20744C\20744C.wim</SourcePath>
+      <BoolLabel>MOC 20744 C</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\Autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:45:32</Time>
+      <MacAddress>00:22:4D:81:6E:56</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 08-45-31_MOC 20744 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>8:45:33</Time>
+      <MacAddress>00:22:4D:81:6E:56</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 08-45-31_MOC 20744 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:45:34</Time>
+      <MacAddress>00:22:4D:81:6E:56</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 08-45-31_MOC 20744 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>8:45:35</Time>
+      <MacAddress>00:22:4D:81:6E:56</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 08-45-31_MOC 20744 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>8:45:36</Time>
+      <MacAddress>00:22:4D:81:6E:56</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 08-45-31_MOC 20744 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>10:14:15</Time>
+      <MacAddress>00:22:4D:81:6E:56</MacAddress>
+      <Message>CLONE FAILED There is not enough space on the disk</Message>
+      <Task_ID>.\TaskDetails\08.02.2019 08-45-31_MOC 20744 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:14:16</Time>
+      <MacAddress>00:22:4D:81:6E:56</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 08-45-31_MOC 20744 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>10:14:17</Time>
+      <MacAddress>00:22:4D:81:6E:56</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 08-45-31_MOC 20744 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:14:18</Time>
+      <MacAddress>00:22:4D:81:6E:56</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 08-45-31_MOC 20744 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:14:19</Time>
+      <MacAddress>00:22:4D:81:6E:56</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 08-45-31_MOC 20744 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>10:14:20</Time>
+      <MacAddress>00:22:4D:81:6E:56</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 08-45-31_MOC 20744 C.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\02\\08.02.2019 08-45-31_MOC 20744 C.my</FilePath>
+</ExecutedTaskData>

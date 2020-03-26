@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>CentOS_7_x64_aut</Name>
+  <Started>21.01.2019 09-34-18</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>21.01.2019 09-43-31</Finished>
+  <Clients>2</Clients>
+  <Done>0</Done>
+  <Failed>2</Failed>
+  <MachineGroup>UCEBNASK06</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>CentOS_7_x64_aut</Name>
+    <LastExecuted>21.01.2019 09-34-18</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>da48TfkJZkiFJRzWjkzQGQ</_sourceIdentifier>
+        <Name>STUDENTSK6-03_NUC</Name>
+        <RealPCName>MININT-IQE5DKK</RealPCName>
+        <macAddresses>
+          <string>94:C6:91:A4:D1:16</string>
+        </macAddresses>
+        <MacAddress>94:C6:91:A4:D1:16</MacAddress>
+        <OSInformations>, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.115</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>506-454-873#10.202.20.115#49675</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>zCzibwZ4uEODAMYLSfNeog</_sourceIdentifier>
+        <Name>STUDENTSK6-04_NUC</Name>
+        <RealPCName>MININT-SPG3D61</RealPCName>
+        <macAddresses>
+          <string>94:C6:91:A3:DF:EA</string>
+        </macAddresses>
+        <MacAddress>94:C6:91:A3:DF:EA</MacAddress>
+        <OSInformations>, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.116</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>240-599-003#10.202.20.116#49672</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK06</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\LINUX\CentOS_7_x64</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>CentOS_7_x64</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\LINUX\Base\_wim\CentOS_7\CentOS7_x64_aut.wim</SourcePath>
+      <BoolLabel>Default</BoolLabel>
+      <PartitionSize>80</PartitionSize>
+      <VHDResizeSize>40</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>CentOS7_x64_aut</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string />
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>true</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <SourceDirectoryInOS />
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <SourceDirectoryInWINPE>I:\Images\HIVE\pajka_temp\centos6.6</SourceDirectoryInWINPE>
+    <DestinationDirectoryInWINPE>C:\</DestinationDirectoryInWINPE>
+    <CopyFilesInWINPE>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\ANG0</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup.LOG</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup.LOG1</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup.LOG2</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bootmgr</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\BOOTNXT</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\BOOTSECT.BAK</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\CentOs_6.6_aut.iso</string>
+    </CopyFilesInWINPE>
+    <CommandsInWINPE />
+    <WaitingTime>20</WaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-04_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:34:19</Time>
+      <MacAddress>94:C6:91:A3:DF:EA</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.01.2019 09-34-18_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-03_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:34:19</Time>
+      <MacAddress>94:C6:91:A4:D1:16</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.01.2019 09-34-18_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-04_NUC</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>9:34:20</Time>
+      <MacAddress>94:C6:91:A3:DF:EA</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.01.2019 09-34-18_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-03_NUC</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>9:34:20</Time>
+      <MacAddress>94:C6:91:A4:D1:16</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.01.2019 09-34-18_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-04_NUC</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:34:21</Time>
+      <MacAddress>94:C6:91:A3:DF:EA</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.01.2019 09-34-18_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-03_NUC</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:34:21</Time>
+      <MacAddress>94:C6:91:A4:D1:16</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.01.2019 09-34-18_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-04_NUC</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:34:22</Time>
+      <MacAddress>94:C6:91:A3:DF:EA</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.01.2019 09-34-18_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-03_NUC</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:34:22</Time>
+      <MacAddress>94:C6:91:A4:D1:16</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.01.2019 09-34-18_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-04_NUC</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:34:23</Time>
+      <MacAddress>94:C6:91:A3:DF:EA</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.01.2019 09-34-18_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-03_NUC</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:34:23</Time>
+      <MacAddress>94:C6:91:A4:D1:16</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.01.2019 09-34-18_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK6-04_NUC</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>9:35:08</Time>
+      <MacAddress>94:C6:91:A3:DF:EA</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.01.2019 09-34-18_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK6-03_NUC</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>9:35:08</Time>
+      <MacAddress>94:C6:91:A4:D1:16</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.01.2019 09-34-18_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\01\\21.01.2019 09-34-18_CentOS_7_x64_aut.my</FilePath>
+</ExecutedTaskData>

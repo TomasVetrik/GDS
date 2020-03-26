@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 7 Office 2016 x86</Name>
+  <Started>29.11.2018 13-13-59</Started>
+  <Status>Images/Failed.ico</Status>
+  <Finished>29.11.2018 14-26-43</Finished>
+  <Clients>3</Clients>
+  <Done>0</Done>
+  <Failed>3</Failed>
+  <MachineGroup>Default</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 7 Office 2016 x86</Name>
+    <LastExecuted>29.11.2018 13-13-59</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>qK5QUzwiokK6bTRWXDZuwA</_sourceIdentifier>
+        <Name>LENOVOG510-04</Name>
+        <RealPCName>MININT-39NAN34</RealPCName>
+        <macAddresses>
+          <string>20:1A:06:F8:87:D2</string>
+        </macAddresses>
+        <MacAddress>20:1A:06:F8:87:D2</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4210M CPU @ 2.60GHz</processorInfo>
+        <physicalMemoryInfo>4096MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>InsydeH2O Version 03.73.0679CN48WW(V3.07)</biosCaption>
+        <boardProductId>INVALID</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.138</IPAddress>
+        <baseImageName>MultiOffice.wim</baseImageName>
+        <driveEImageName />
+        <dartInfo>205-556-518#10.202.20.138#49416</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>fcCDxvd3u0iAOrHTFqhImQ</_sourceIdentifier>
+        <Name>LENOVOG510-07</Name>
+        <RealPCName>MININT-1PASL7K</RealPCName>
+        <macAddresses>
+          <string>20:1A:06:F8:7F:68</string>
+        </macAddresses>
+        <MacAddress>20:1A:06:F8:7F:68</MacAddress>
+        <OSInformations>, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4210M CPU @ 2.60GHz</processorInfo>
+        <physicalMemoryInfo>4096MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>InsydeH2O Version 03.73.0679CN48WW(V3.07)</biosCaption>
+        <boardProductId>INVALID</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.93</IPAddress>
+        <baseImageName>MultiOffice.wim</baseImageName>
+        <driveEImageName />
+        <dartInfo>388-567-303#10.202.20.93#49672</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>uwM7ZWFJpkaa6tzxPDNZUw</_sourceIdentifier>
+        <Name>LENOVOG510-11</Name>
+        <RealPCName>MININT-Q3RV3T0</RealPCName>
+        <macAddresses>
+          <string>20:1A:06:F8:86:20</string>
+        </macAddresses>
+        <MacAddress>20:1A:06:F8:86:20</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4210M CPU @ 2.60GHz</processorInfo>
+        <physicalMemoryInfo>4096MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>InsydeH2O Version 03.73.0679CN48WW(V3.07)</biosCaption>
+        <boardProductId>INVALID</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.133</IPAddress>
+        <baseImageName>MultiOffice.wim</baseImageName>
+        <driveEImageName />
+        <dartInfo>431-723-903#10.202.20.133#49416</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>Default</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 7 Office 2016 x86</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 7 Office 2016 x86</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\W7_Off2k16_x86\W7_Off2k16_x86.wim</SourcePath>
+      <BoolLabel>Windows 7 Office 2016</BoolLabel>
+      <PartitionSize>92</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>W7_Off2k16_x86</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x86</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LENOVOG510-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:14:00</Time>
+      <MacAddress>20:1A:06:F8:87:D2</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LENOVOG510-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:14:00</Time>
+      <MacAddress>20:1A:06:F8:7F:68</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LENOVOG510-11</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:14:00</Time>
+      <MacAddress>20:1A:06:F8:86:20</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LENOVOG510-11</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>13:14:01</Time>
+      <MacAddress>20:1A:06:F8:86:20</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LENOVOG510-07</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>13:14:01</Time>
+      <MacAddress>20:1A:06:F8:7F:68</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LENOVOG510-04</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>13:14:01</Time>
+      <MacAddress>20:1A:06:F8:87:D2</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LENOVOG510-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:14:03</Time>
+      <MacAddress>20:1A:06:F8:87:D2</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LENOVOG510-07</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:14:03</Time>
+      <MacAddress>20:1A:06:F8:7F:68</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LENOVOG510-11</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:14:03</Time>
+      <MacAddress>20:1A:06:F8:86:20</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LENOVOG510-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:14:04</Time>
+      <MacAddress>20:1A:06:F8:87:D2</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LENOVOG510-11</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:14:04</Time>
+      <MacAddress>20:1A:06:F8:86:20</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LENOVOG510-07</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:14:04</Time>
+      <MacAddress>20:1A:06:F8:7F:68</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LENOVOG510-04</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:14:05</Time>
+      <MacAddress>20:1A:06:F8:87:D2</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LENOVOG510-11</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:14:05</Time>
+      <MacAddress>20:1A:06:F8:86:20</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LENOVOG510-07</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:14:05</Time>
+      <MacAddress>20:1A:06:F8:7F:68</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>LENOVOG510-11</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>14:26:03</Time>
+      <MacAddress>20:1A:06:F8:86:20</MacAddress>
+      <Message>Expired waiting time</Message>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>LENOVOG510-07</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>14:26:39</Time>
+      <MacAddress>20:1A:06:F8:7F:68</MacAddress>
+      <Message>Expired waiting time</Message>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>LENOVOG510-04</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>14:26:43</Time>
+      <MacAddress>20:1A:06:F8:87:D2</MacAddress>
+      <Message>Expired waiting time</Message>
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\11\\29.11.2018 13-13-59_Windows 7 Office 2016 x86.my</FilePath>
+</ExecutedTaskData>

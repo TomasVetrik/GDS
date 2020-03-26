@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>CopyFiles_TEST</Name>
+  <Started>04.10.2018 09-17-37</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>04.10.2018 09-26-51</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>!Testing</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>CopyFiles_TEST</Name>
+    <LastExecuted>04.10.2018 09-17-37</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>r9qCsL5Gf0W5nGbpU4d8_Q</_sourceIdentifier>
+        <Name>STUDENTSK11-08</Name>
+        <RealPCName>STUDENTSK11-08</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:BD:DE</string>
+          <string>68:05:CA:2A:CF:C9</string>
+          <string>00:22:4D:80:6F:15</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.23</IPAddress>
+        <baseImageName>Windows Server 2016 No Sysprep</baseImageName>
+        <driveEImageName>10987 C</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>!Testing</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <SourceDirectoryInOS>I:\_Temporary</SourceDirectoryInOS>
+    <DestinationDirectoryInOS>E:\</DestinationDirectoryInOS>
+    <CommandsInOS />
+    <CopyFilesInOS>
+      <string>I:\_Temporary\GOC3_E_NEW.rar</string>
+    </CopyFilesInOS>
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:17:38</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>9:17:39</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:17:40</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>9:17:41</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>9:26:50</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>9:26:51</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\10\\04.10.2018 09-17-37_CopyFiles_TEST.my</FilePath>
+</ExecutedTaskData>

@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>VS Generic</Name>
+  <Started>17.01.2018 15-35-22</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>17.01.2018 17-07-09</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>NOTEBOOKS</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>VS Generic</Name>
+    <LastExecuted>17.01.2018 15-35-22</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>jTuzm2Uv8ki7T6IgGRhKwQ</_sourceIdentifier>
+        <Name>DELL04</Name>
+        <RealPCName>MININT-8QJ27HI</RealPCName>
+        <macAddresses>
+          <string>EC:F4:BB:15:EA:8F</string>
+        </macAddresses>
+        <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+        <OSInformations>, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4200U CPU @ 1.60GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>0TG93N</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.81</IPAddress>
+        <baseImageName>W7_MultiOffice_7_10_13_16_x86.wim</baseImageName>
+        <driveEImageName />
+        <dartInfo>850-951-267#10.202.20.81#49416</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>NOTEBOOKS</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 10 Office 2016 x64 SP</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 10 Office 2016 x64 SP</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\_NO_SYSPREP\W10_Off2k16_x64_SingleProfile_NO_SYSPREP\W10_Off2k16_x64_SingleProfile_NO_SYSPREP.wim</SourcePath>
+      <BoolLabel>Windows 10 Office 2016</BoolLabel>
+      <PartitionSize>160</PartitionSize>
+      <VHDResizeSize>90</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W10_Off2k16_x64_SingleProfile_NO_SYSPREP</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\GOC\VS Generic 2017</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>VS Generic 2017</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\DriveE\_WIM\VS_generic_2017\VS_generic.wim</SourcePath>
+      <BoolLabel>VS Generic 2017</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\NetGeneric\Autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:35:23</Time>
+      <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL04</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>15:35:24</Time>
+      <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>15:35:25</Time>
+      <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:35:26</Time>
+      <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL04</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:35:27</Time>
+      <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:07:03</Time>
+      <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL04</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>17:07:04</Time>
+      <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>17:07:05</Time>
+      <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL04</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>17:07:06</Time>
+      <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL04</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>17:07:07</Time>
+      <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL04</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>17:07:08</Time>
+      <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:07:09</Time>
+      <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\01\\17.01.2018 15-35-22_VS Generic.my</FilePath>
+</ExecutedTaskData>

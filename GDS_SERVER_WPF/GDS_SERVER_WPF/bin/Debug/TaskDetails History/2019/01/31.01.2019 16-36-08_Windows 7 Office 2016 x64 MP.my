@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 7 Office 2016 x64 MP</Name>
+  <Started>31.01.2019 16-36-08</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>31.01.2019 17-30-51</Finished>
+  <Clients>2</Clients>
+  <Done>2</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK07</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 7 Office 2016 x64 MP</Name>
+    <LastExecuted>31.01.2019 16-36-08</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>2NqBjotVH0CG1fmWubQ3jw</_sourceIdentifier>
+        <Name>STUDENTSK6-05_NUC</Name>
+        <RealPCName>STUDENTSK6-05_N</RealPCName>
+        <macAddresses>
+          <string>94:C6:91:A4:3E:28</string>
+          <string>34:E1:2D:8C:EE:ED</string>
+        </macAddresses>
+        <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.20.246</IPAddress>
+        <baseImageName>Windows 10 Office 2016 x64 SP</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>9oObpK6u3EqzOl2CQ2Q_Aw</_sourceIdentifier>
+        <Name>STUDENTSK6-10_NUC</Name>
+        <RealPCName>STUDENTSK6-10_N</RealPCName>
+        <macAddresses>
+          <string>94:C6:91:A4:58:6D</string>
+          <string>34:E1:2D:3A:B4:52</string>
+        </macAddresses>
+        <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.20.145</IPAddress>
+        <baseImageName>Windows 10 Office 2016 x64 SP</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK07</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 7 Office 2016 x64 MP</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 7 Office 2016 x64 MP</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\W7_Off2k16_x64_MultiProfile\W7_Off2k16_x64_MultiProfile.wim</SourcePath>
+      <BoolLabel>Windows 7 Office 2016</BoolLabel>
+      <PartitionSize>100</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W7_Off2k16_x64_MultiProfile</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <DriveEImageData>
+      <Name>10989B</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\DriveE\_WIM\10989B\10989B.wim</SourcePath>
+      <BoolLabel>MOC 10989 B</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:36:09</Time>
+      <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.01.2019 16-36-08_Windows 7 Office 2016 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:36:09</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.01.2019 16-36-08_Windows 7 Office 2016 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>16:37:42</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.01.2019 16-36-08_Windows 7 Office 2016 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>16:37:42</Time>
+      <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.01.2019 16-36-08_Windows 7 Office 2016 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:37:43</Time>
+      <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.01.2019 16-36-08_Windows 7 Office 2016 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:37:43</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.01.2019 16-36-08_Windows 7 Office 2016 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:37:44</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.01.2019 16-36-08_Windows 7 Office 2016 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:37:44</Time>
+      <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.01.2019 16-36-08_Windows 7 Office 2016 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:37:45</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.01.2019 16-36-08_Windows 7 Office 2016 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:37:45</Time>
+      <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.01.2019 16-36-08_Windows 7 Office 2016 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:30:14</Time>
+      <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.01.2019 16-36-08_Windows 7 Office 2016 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:30:15</Time>
+      <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.01.2019 16-36-08_Windows 7 Office 2016 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:30:16</Time>
+      <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.01.2019 16-36-08_Windows 7 Office 2016 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:30:49</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.01.2019 16-36-08_Windows 7 Office 2016 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:30:50</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.01.2019 16-36-08_Windows 7 Office 2016 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:30:51</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.01.2019 16-36-08_Windows 7 Office 2016 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\01\\31.01.2019 16-36-08_Windows 7 Office 2016 x64 MP.my</FilePath>
+</ExecutedTaskData>

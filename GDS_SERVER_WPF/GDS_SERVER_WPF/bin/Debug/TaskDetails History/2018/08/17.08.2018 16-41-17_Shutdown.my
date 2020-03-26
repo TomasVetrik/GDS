@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Shutdown</Name>
+  <Started>17.08.2018 16-41-17</Started>
+  <Status>Images/Failed.ico</Status>
+  <Finished>17.08.2018 17-11-23</Finished>
+  <Clients>5</Clients>
+  <Done>4</Done>
+  <Failed>1</Failed>
+  <MachineGroup>UCEBNASK03</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Shutdown</Name>
+    <LastExecuted>17.08.2018 16-41-17</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>tUd0muk1gEW0Ld33S4FH-w</_sourceIdentifier>
+        <Name>STUDENTSK3-03</Name>
+        <RealPCName>STUDENTSK3-03</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4E:83</string>
+          <string>1C:1B:0D:12:1E:26</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4E:83</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.111</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>MOC 20533 E</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Iw9KdkuEvUmUk8XfuiTapw</_sourceIdentifier>
+        <Name>STUDENTSK3-04</Name>
+        <RealPCName>STUDENTSK3-04</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4C:7A</string>
+          <string>1C:1B:0D:12:1E:2B</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4C:7A</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 07/04/17 17:08:55 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.184</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>MOC 20533 E</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>4NcIn_c7Bk2Ye5Hw28IuqQ</_sourceIdentifier>
+        <Name>STUDENTSK3-05</Name>
+        <RealPCName>STUDENTSK3-05</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4D:FB</string>
+          <string>1C:1B:0D:12:1E:2F</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4D:FB</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.117</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>MOC 20533 E</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Q2_jfvkw1EyhEVXQuMgV5Q</_sourceIdentifier>
+        <Name>STUDENTSK3-06</Name>
+        <RealPCName>STUDENTSK3-06</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4E:82</string>
+          <string>1C:1B:0D:12:1F:8D</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4E:82</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.196</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>MOC 20533 E</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>AcB1FOSH1E-JE4WJboFkmA</_sourceIdentifier>
+        <Name>STUDENTSK3-07</Name>
+        <RealPCName>STUDENTSK3-07</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4D:FA</string>
+          <string>1C:1B:0D:12:1E:27</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4D:FA</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.197</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>MOC 20533 E</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK03</MachineGroup>
+    <WakeOnLan>false</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:41:18</Time>
+      <MacAddress>68:05:CA:44:4E:83</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:41:18</Time>
+      <MacAddress>68:05:CA:44:4D:FB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:41:18</Time>
+      <MacAddress>68:05:CA:44:4D:FA</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:41:18</Time>
+      <MacAddress>68:05:CA:44:4C:7A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-04</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:41:19</Time>
+      <MacAddress>68:05:CA:44:4C:7A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-07</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:41:19</Time>
+      <MacAddress>68:05:CA:44:4D:FA</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-05</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:41:19</Time>
+      <MacAddress>68:05:CA:44:4D:FB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-03</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:41:19</Time>
+      <MacAddress>68:05:CA:44:4E:83</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK3-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:11:23</Time>
+      <MacAddress>68:05:CA:44:4E:82</MacAddress>
+      <Message>Expired waiting time</Message>
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\08\\17.08.2018 16-41-17_Shutdown.my</FilePath>
+</ExecutedTaskData>

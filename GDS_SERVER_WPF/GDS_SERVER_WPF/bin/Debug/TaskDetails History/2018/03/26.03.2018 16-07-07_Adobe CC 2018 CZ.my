@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Adobe CC 2018 CZ</Name>
+  <Started>26.03.2018 16-07-07</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>26.03.2018 17-19-09</Finished>
+  <Clients>2</Clients>
+  <Done>2</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK09</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Adobe CC 2018 CZ</Name>
+    <LastExecuted>26.03.2018 16-07-07</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>FShfM7wU6ESll7_TGO0sqw</_sourceIdentifier>
+        <Name>STUDENTSK9-03</Name>
+        <RealPCName>STUDENTSK9-03</RealPCName>
+        <macAddresses>
+          <string>00:1B:21:C1:B3:3C</string>
+          <string>70:71:BC:9D:59:A9</string>
+        </macAddresses>
+        <MacAddress>00:1B:21:C1:B3:3C</MacAddress>
+        <OSInformations>Microsoft Windows 7 Enterprise, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>StudentSK</accountName>
+        <IPAddress>10.202.20.64</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>E5xOeV74HUq3C1WYPHqBGA</_sourceIdentifier>
+        <Name>STUDENTSK9-04</Name>
+        <RealPCName>STUDENTSK9-04</RealPCName>
+        <macAddresses>
+          <string>00:1B:21:C2:81:72</string>
+          <string>70:71:BC:9D:5A:F5</string>
+        </macAddresses>
+        <MacAddress>00:1B:21:C2:81:72</MacAddress>
+        <OSInformations>Microsoft Windows 7 Enterprise, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>StudentSK</accountName>
+        <IPAddress>10.202.20.63</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK09</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\GOC\Adobe 2018 CZ</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Adobe 2018 CZ</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\AdobeCC_2018cz\Adobe2018Cz.wim</SourcePath>
+      <BoolLabel>Windows 10 Adobe</BoolLabel>
+      <PartitionSize>300</PartitionSize>
+      <VHDResizeSize>40</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>Adobe2018Cz</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>true</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:07:08</Time>
+      <MacAddress>00:1B:21:C1:B3:3C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:07:08</Time>
+      <MacAddress>00:1B:21:C2:81:72</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-03</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>16:09:10</Time>
+      <MacAddress>00:1B:21:C1:B3:3C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:09:11</Time>
+      <MacAddress>00:1B:21:C1:B3:3C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:09:12</Time>
+      <MacAddress>00:1B:21:C1:B3:3C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-03</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:09:13</Time>
+      <MacAddress>00:1B:21:C1:B3:3C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-04</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>16:09:15</Time>
+      <MacAddress>00:1B:21:C2:81:72</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:09:16</Time>
+      <MacAddress>00:1B:21:C2:81:72</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:09:17</Time>
+      <MacAddress>00:1B:21:C2:81:72</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-04</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:09:18</Time>
+      <MacAddress>00:1B:21:C2:81:72</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:19:03</Time>
+      <MacAddress>00:1B:21:C1:B3:3C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:19:04</Time>
+      <MacAddress>00:1B:21:C1:B3:3C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:19:08</Time>
+      <MacAddress>00:1B:21:C2:81:72</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:19:09</Time>
+      <MacAddress>00:1B:21:C2:81:72</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\03\\26.03.2018 16-07-07_Adobe CC 2018 CZ.my</FilePath>
+</ExecutedTaskData>

@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 7 Office 2016 x86</Name>
+  <Started>26.10.2018 10-49-19</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>26.10.2018 10-50-05</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>UCEBNASK08</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 7 Office 2016 x86</Name>
+    <LastExecuted>26.10.2018 10-49-19</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>kE_6d2P11kiR-B7rbYvVrA</_sourceIdentifier>
+        <Name>STUDENTSK8-01</Name>
+        <RealPCName>STUDENTSK8-01</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4D:8B</string>
+          <string>1C:1B:0D:12:1E:F5</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4D:8B</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.20.80</IPAddress>
+        <baseImageName>Windows 7 Office 2013 x64</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK08</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 7 Office 2016 x86</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 7 Office 2016 x86</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\W7_Off2k16_x86\W7_Off2k16_x86.wim</SourcePath>
+      <BoolLabel>Windows 7 Office 2016</BoolLabel>
+      <PartitionSize>92</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>W7_Off2k16_x86</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x86</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK8-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:49:19</Time>
+      <MacAddress>68:05:CA:44:4D:8B</MacAddress>
+      <Message>68:05:CA:44:4D:8B</Message>
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\10\\26.10.2018 10-49-19_Windows 7 Office 2016 x86.my</FilePath>
+</ExecutedTaskData>

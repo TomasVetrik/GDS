@@ -1,0 +1,295 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Polivka DriveE TEST</Name>
+  <Started>08.02.2019 10-35-48</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>08.02.2019 11-43-51</Finished>
+  <Clients>2</Clients>
+  <Done>2</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK07</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Polivka DriveE TEST</Name>
+    <LastExecuted>08.02.2019 10-35-48</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>ItnnJdlv2EOayi_NrknLGg</_sourceIdentifier>
+        <Name>STUDENTSK6-05_NUC</Name>
+        <RealPCName>MININT-49NTBVF</RealPCName>
+        <macAddresses>
+          <string>94:C6:91:A4:3E:28</string>
+        </macAddresses>
+        <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.246</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo>496-647-608#10.202.20.246#49672</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>NwdlrqW3jkCVHRNu9YzgwQ</_sourceIdentifier>
+        <Name>STUDENTSK6-10_NUC</Name>
+        <RealPCName>MININT-NTGNFJ3</RealPCName>
+        <macAddresses>
+          <string>94:C6:91:A4:58:6D</string>
+        </macAddresses>
+        <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.145</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo>813-824-482#10.202.20.145#49672</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK07</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 10 x64 Office 2016 Polivka TEST</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 10 x64 Office 2016 Polivka TEST</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\W10_Off2k16_x64_SingleProfile_Polivka\W10_Off2k16_x64_SingleProfile_Polivka.wim</SourcePath>
+      <BoolLabel>Windows 10 x64</BoolLabel>
+      <PartitionSize>162</PartitionSize>
+      <VHDResizeSize>90</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W10_Off2k16_x64_SingleProfile_Polivka</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\GOC\VS Generic 2017</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>VS Generic 2017</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\DriveE\_WIM\VS_generic_2017\VS_generic.wim</SourcePath>
+      <BoolLabel>VS Generic 2017</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\NETgeneric\Autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:35:51</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:35:51</Time>
+      <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>10:35:52</Time>
+      <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>10:35:52</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:35:53</Time>
+      <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:35:53</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:35:54</Time>
+      <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:35:54</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>10:35:55</Time>
+      <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>10:35:55</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:43:46</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:43:46</Time>
+      <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>11:43:47</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>11:43:47</Time>
+      <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>11:43:48</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>11:43:48</Time>
+      <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>11:43:49</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>11:43:49</Time>
+      <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:43:50</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:43:51</Time>
+      <MacAddress>94:C6:91:A4:3E:28</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.02.2019 10-35-48_Polivka DriveE TEST.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\02\\08.02.2019 10-35-48_Polivka DriveE TEST.my</FilePath>
+</ExecutedTaskData>

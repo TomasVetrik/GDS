@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Shutdown</Name>
+  <Started>26.02.2018 15-18-27</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>26.02.2018 15-18-29</Finished>
+  <Clients>2</Clients>
+  <Done>2</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK09</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Shutdown</Name>
+    <LastExecuted>26.02.2018 15-18-27</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Kak97yVca0aKtosHKGFlIw</_sourceIdentifier>
+        <Name>LEKTORSK9</Name>
+        <RealPCName>LEKTORSK9</RealPCName>
+        <macAddresses>
+          <string>00:1B:21:C2:81:6F</string>
+          <string>70:71:BC:8E:B3:B4</string>
+        </macAddresses>
+        <MacAddress>00:1B:21:C2:81:6F</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.70</IPAddress>
+        <baseImageName>Windows 7 Office 2013 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>R4il-vbd20O2Gwo2xl8B6w</_sourceIdentifier>
+        <Name>STUDENTSK9-01</Name>
+        <RealPCName>STUDENTSK9-01</RealPCName>
+        <macAddresses>
+          <string>00:1B:21:C2:80:92</string>
+          <string>00:27:0E:2E:A1:5B</string>
+        </macAddresses>
+        <MacAddress>00:1B:21:C2:80:92</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.54</IPAddress>
+        <baseImageName>Windows 7 Office 2013 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK09</MachineGroup>
+    <WakeOnLan>false</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK9</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:18:28</Time>
+      <MacAddress>00:1B:21:C2:81:6F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:18:28</Time>
+      <MacAddress>00:1B:21:C2:80:92</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-01</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>15:18:29</Time>
+      <MacAddress>00:1B:21:C2:80:92</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK9</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>15:18:29</Time>
+      <MacAddress>00:1B:21:C2:81:6F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\02\\26.02.2018 15-18-27_Shutdown.my</FilePath>
+</ExecutedTaskData>

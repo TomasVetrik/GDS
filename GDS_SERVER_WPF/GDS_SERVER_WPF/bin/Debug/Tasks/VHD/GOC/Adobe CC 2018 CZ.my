@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>Adobe CC 2018 CZ</Name>
+  <LastExecuted>26.03.2019 09-11-50</LastExecuted>
+  <TargetComputers>
+    <ComputerDetailsData>
+      <_sourceIdentifier>FrNC_48DH0mCbmYQnz1UUg</_sourceIdentifier>
+      <Name>STUDENTSK3-08</Name>
+      <RealPCName>STUDENTSK3-08</RealPCName>
+      <macAddresses>
+        <string>68:05:CA:44:4E:85</string>
+        <string>1C:1B:0D:12:1E:E3</string>
+      </macAddresses>
+      <MacAddress>68:05:CA:44:4E:85</MacAddress>
+      <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+      <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+      <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+      <numberOfRamSLots>4</numberOfRamSLots>
+      <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+      <boardProductId>H170-D3H-CF</boardProductId>
+      <accountName>Student</accountName>
+      <IPAddress>10.202.20.57</IPAddress>
+      <baseImageName>Windows 7 Office 2013 x64</baseImageName>
+      <driveEImageName>GOC3_William</driveEImageName>
+      <dartInfo />
+      <ImageSource>Images/Offline.ico</ImageSource>
+      <inWinpe>false</inWinpe>
+      <PostInstalls />
+      <CustomLog />
+    </ComputerDetailsData>
+  </TargetComputers>
+  <MachineGroup>UCEBNASK03</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>true</Cloning>
+  <BaseImageSourcePath>.\Base\GOC\Adobe 2018 CZ</BaseImageSourcePath>
+  <BaseImageData>
+    <Name>Adobe 2018 CZ</Name>
+    <ImageSource>Images/Image.ico</ImageSource>
+    <SourcePath>I:\Office\Base\_WIM\AdobeCC_2018cz\Adobe2018Cz.wim</SourcePath>
+    <BoolLabel>Windows 10 Adobe</BoolLabel>
+    <PartitionSize>300</PartitionSize>
+    <VHDResizeSize>40</VHDResizeSize>
+    <VHDResize>false</VHDResize>
+    <VHDNames>
+      <string>Adobe2018Cz</string>
+    </VHDNames>
+    <OSAbrivations>
+      <string>W10_x64</string>
+    </OSAbrivations>
+  </BaseImageData>
+  <WithoutVHD>true</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>false</SoftwareAndFileAction>
+  <DestinationDirectoryInOS />
+  <CommandsInOS />
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE />
+  <WaitingTime>30</WaitingTime>
+  <SendWarningMails>false</SendWarningMails>
+  <InfinityWaitingTime>true</InfinityWaitingTime>
+</TaskData>

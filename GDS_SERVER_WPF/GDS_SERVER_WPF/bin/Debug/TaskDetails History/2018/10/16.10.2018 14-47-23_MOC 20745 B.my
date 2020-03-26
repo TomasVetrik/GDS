@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>MOC 20745 B</Name>
+  <Started>16.10.2018 14-47-23</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>16.10.2018 16-15-30</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>!Testing</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>MOC 20745 B</Name>
+    <LastExecuted>16.10.2018 14-47-23</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>5bjKJ9Hs4k6e0Vn9QrWogw</_sourceIdentifier>
+        <Name>STUDENTSK1-06</Name>
+        <RealPCName>STUDENTSK1-06</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:F4:64</string>
+          <string>FC:AA:14:AC:74:21</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.120.26</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>!Testing</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\WithoutVHD\Windows Server 2016</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows Server 2016</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\Base\_WIM\_NO_VHD\w2k16.wim</SourcePath>
+      <BoolLabel>Windows Server 2016</BoolLabel>
+      <PartitionSize>50</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>w2k16</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W2k16</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>true</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\MOC\20000\MOC 20745 B</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>MOC 20745 B</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\DriveE\_WIM\20745B\20745B.wim</SourcePath>
+      <BoolLabel>MOC 20745 B</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\Autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:47:24</Time>
+      <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>14:48:52</Time>
+      <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>14:48:53</Time>
+      <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>14:48:54</Time>
+      <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>14:48:55</Time>
+      <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:15:26</Time>
+      <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>16:15:27</Time>
+      <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:15:28</Time>
+      <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>16:15:29</Time>
+      <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:15:30</Time>
+      <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\10\\16.10.2018 14-47-23_MOC 20745 B.my</FilePath>
+</ExecutedTaskData>

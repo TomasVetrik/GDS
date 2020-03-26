@@ -1,0 +1,399 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Shutdown</Name>
+  <Started>04.10.2018 09-15-43</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>04.10.2018 09-15-47</Finished>
+  <Clients>9</Clients>
+  <Done>9</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK10</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Shutdown</Name>
+    <LastExecuted>04.10.2018 09-15-43</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>bXUhXckfdU-OXaZZtr16vA</_sourceIdentifier>
+        <Name>LEKTORSK10</Name>
+        <RealPCName>LEKTORSK10</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:15:8A:3A</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:15:8A:3A</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.15</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>MOC 20339-1A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>BfZEsmeBDkilsRLmP-w5Zg</_sourceIdentifier>
+        <Name>STUDENTSK10-01</Name>
+        <RealPCName>STUDENTSK10-01</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:15:8A:49</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:15:8A:49</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.17</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>MOC 20339-1A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>_cFw-qMymUKiAIKtIzKBzw</_sourceIdentifier>
+        <Name>STUDENTSK10-02</Name>
+        <RealPCName>STUDENTSK10-02</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:15:8A:17</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:15:8A:17</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.4</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>MOC 20339-1A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>27CR5sXjs0WEWFLzH3a04w</_sourceIdentifier>
+        <Name>STUDENTSK10-03</Name>
+        <RealPCName>STUDENTSK10-03</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:15:8A:53</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:15:8A:53</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.101</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>MOC 20339-1A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>gDdvy4T9v0iKz_6-L-5CkA</_sourceIdentifier>
+        <Name>STUDENTSK10-04</Name>
+        <RealPCName>STUDENTSK10-04</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:15:8A:36</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:15:8A:36</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.107</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>MOC 20339-1A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>DSTrBoc8fUS6iS2k4pvs5Q</_sourceIdentifier>
+        <Name>STUDENTSK10-05</Name>
+        <RealPCName>STUDENTSK10-05</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:15:8A:4B</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:15:8A:4B</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.52</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>MOC 20339-1A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>j_JiXXb6yUCTQC2b0_vQaA</_sourceIdentifier>
+        <Name>STUDENTSK10-06</Name>
+        <RealPCName>STUDENTSK10-06</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:15:8A:33</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:15:8A:33</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.109</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>MOC 20339-1A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>vJm9Ymz0y0uGwpXqeO_OHA</_sourceIdentifier>
+        <Name>STUDENTSK10-07</Name>
+        <RealPCName>STUDENTSK10-07</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:15:8A:4E</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:15:8A:4E</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.13</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>MOC 20339-1A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>0tlfcJ8jKUuBYBRIB-8I5A</_sourceIdentifier>
+        <Name>STUDENTSK10-08</Name>
+        <RealPCName>STUDENTSK10-08</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:15:8A:3E</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:15:8A:3E</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.30</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>MOC 20339-1A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK10</MachineGroup>
+    <WakeOnLan>false</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK10</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:15:46</Time>
+      <MacAddress>68:05:CA:15:8A:3A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:15:46</Time>
+      <MacAddress>68:05:CA:15:8A:4E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:15:46</Time>
+      <MacAddress>68:05:CA:15:8A:33</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:15:46</Time>
+      <MacAddress>68:05:CA:15:8A:3E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:15:46</Time>
+      <MacAddress>68:05:CA:15:8A:36</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:15:46</Time>
+      <MacAddress>68:05:CA:15:8A:53</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:15:46</Time>
+      <MacAddress>68:05:CA:15:8A:4B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:15:46</Time>
+      <MacAddress>68:05:CA:15:8A:49</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:15:46</Time>
+      <MacAddress>68:05:CA:15:8A:17</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK10</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:15:47</Time>
+      <MacAddress>68:05:CA:15:8A:3A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-06</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:15:47</Time>
+      <MacAddress>68:05:CA:15:8A:33</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-04</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:15:47</Time>
+      <MacAddress>68:05:CA:15:8A:36</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-07</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:15:47</Time>
+      <MacAddress>68:05:CA:15:8A:4E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-08</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:15:47</Time>
+      <MacAddress>68:05:CA:15:8A:3E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-01</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:15:47</Time>
+      <MacAddress>68:05:CA:15:8A:49</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-05</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:15:47</Time>
+      <MacAddress>68:05:CA:15:8A:4B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-02</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:15:47</Time>
+      <MacAddress>68:05:CA:15:8A:17</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK10-03</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:15:47</Time>
+      <MacAddress>68:05:CA:15:8A:53</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\10\\04.10.2018 09-15-43_Shutdown.my</FilePath>
+</ExecutedTaskData>

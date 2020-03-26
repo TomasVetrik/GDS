@@ -1,0 +1,903 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 10 Office 2016 x64 SP No Sysprep</Name>
+  <Started>09.11.2018 09-29-54</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>09.11.2018 10-19-25</Finished>
+  <Clients>9</Clients>
+  <Done>9</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK12</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 10 Office 2016 x64 SP No Sysprep</Name>
+    <LastExecuted>09.11.2018 09-29-54</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>0qGz5wkJb0iNfPibQyLcIw</_sourceIdentifier>
+        <Name>LEKTORSK12</Name>
+        <RealPCName>LEKTORSK12</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:F1:80</string>
+          <string>FC:AA:14:AC:74:1F</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:F1:80</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>StudentSK</accountName>
+        <IPAddress>10.202.20.167</IPAddress>
+        <baseImageName>Windows 7 Office 2010 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>u96ANpFTZUO949jzpbIXqw</_sourceIdentifier>
+        <Name>STUDENTSK12-01</Name>
+        <RealPCName>STUDENTSK12-01</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3C:30:DB</string>
+          <string>FC:AA:14:AC:71:9C</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3C:30:DB</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>StudentSK</accountName>
+        <IPAddress>10.202.20.166</IPAddress>
+        <baseImageName>Windows 7 Office 2010 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>BzOm3iUYIUiN4KNsO5KEtg</_sourceIdentifier>
+        <Name>STUDENTSK12-02</Name>
+        <RealPCName>STUDENTSK12-02</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:EF:16</string>
+          <string>FC:AA:14:AC:71:7B</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:EF:16</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>StudentSK</accountName>
+        <IPAddress>10.202.20.162</IPAddress>
+        <baseImageName>Windows 7 Office 2010 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>XdZvMr_SJkOv7oonkhMxZg</_sourceIdentifier>
+        <Name>STUDENTSK12-03</Name>
+        <RealPCName>STUDENTSK12-03</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3C:35:32</string>
+          <string>FC:AA:14:AC:70:2B</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3C:35:32</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.163</IPAddress>
+        <baseImageName>Windows 7 Office 2010 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>rHGdKEHBrEC8NX3e-UKzBg</_sourceIdentifier>
+        <Name>STUDENTSK12-04</Name>
+        <RealPCName>STUDENTSK12-04</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:EF:AB</string>
+          <string>FC:AA:14:AC:74:27</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:EF:AB</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>StudentSK</accountName>
+        <IPAddress>10.202.20.164</IPAddress>
+        <baseImageName>Windows 7 Office 2010 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>RxKJgUo8uUu6CagY4UvUXw</_sourceIdentifier>
+        <Name>STUDENTSK12-05</Name>
+        <RealPCName>STUDENTSK12-05</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:F1:7E</string>
+          <string>FC:AA:14:AC:73:F2</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:F1:7E</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>StudentSK</accountName>
+        <IPAddress>10.202.20.160</IPAddress>
+        <baseImageName>Windows 7 Office 2010 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>kS887m9Q-Uyg31gLblptyg</_sourceIdentifier>
+        <Name>STUDENTSK12-06</Name>
+        <RealPCName>STUDENTSK12-06</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3C:30:DF</string>
+          <string>FC:AA:14:AC:70:26</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3C:30:DF</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>StudentSK</accountName>
+        <IPAddress>10.202.20.165</IPAddress>
+        <baseImageName>Windows 7 Office 2010 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>kZ78rkb6NUqFte3g3VW9Qg</_sourceIdentifier>
+        <Name>STUDENTSK12-07</Name>
+        <RealPCName>STUDENTSK12-07</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:F4:6B</string>
+          <string>FC:AA:14:AC:74:3B</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:F4:6B</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>StudentSK</accountName>
+        <IPAddress>10.202.20.158</IPAddress>
+        <baseImageName>Windows 7 Office 2010 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>4TKY5R7DSE2EWwPYtKicNg</_sourceIdentifier>
+        <Name>STUDENTSK12-08</Name>
+        <RealPCName>STUDENTSK12-08</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3C:35:75</string>
+          <string>FC:AA:14:AC:70:27</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3C:35:75</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>StudentSK</accountName>
+        <IPAddress>10.202.20.156</IPAddress>
+        <baseImageName>Windows 7 Office 2010 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK12</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 10 Office 2016 x64 SP</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 10 Office 2016 x64 SP</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\_NO_SYSPREP\W10_Off2k16_x64_SingleProfile_NO_SYSPREP_1803\W10_Off2k16_x64_SingleProfile_NO_SYSPREP_1803.wim</SourcePath>
+      <BoolLabel>Windows 10 Office 2016</BoolLabel>
+      <PartitionSize>162</PartitionSize>
+      <VHDResizeSize>90</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W10_Off2k16_x64_SingleProfile</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:29:56</Time>
+      <MacAddress>68:05:CA:3C:35:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:30:46</Time>
+      <MacAddress>68:05:CA:3C:30:DF</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:30:46</Time>
+      <MacAddress>68:05:CA:3B:EF:AB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:30:46</Time>
+      <MacAddress>68:05:CA:3B:EF:16</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:30:46</Time>
+      <MacAddress>68:05:CA:3C:35:75</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:30:46</Time>
+      <MacAddress>68:05:CA:3B:F4:6B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:30:46</Time>
+      <MacAddress>68:05:CA:3C:30:DB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:30:46</Time>
+      <MacAddress>68:05:CA:3B:F1:7E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:30:46</Time>
+      <MacAddress>68:05:CA:3B:F1:80</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:31:28</Time>
+      <MacAddress>68:05:CA:3C:35:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:31:29</Time>
+      <MacAddress>68:05:CA:3C:35:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:31:30</Time>
+      <MacAddress>68:05:CA:3C:35:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:31:31</Time>
+      <MacAddress>68:05:CA:3C:35:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-06</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:32:13</Time>
+      <MacAddress>68:05:CA:3C:30:DF</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-02</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:32:13</Time>
+      <MacAddress>68:05:CA:3B:EF:16</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-07</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:32:13</Time>
+      <MacAddress>68:05:CA:3B:F4:6B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:32:13</Time>
+      <MacAddress>68:05:CA:3B:F1:80</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-05</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:32:13</Time>
+      <MacAddress>68:05:CA:3B:F1:7E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:32:14</Time>
+      <MacAddress>68:05:CA:3B:EF:16</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-07</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:32:14</Time>
+      <MacAddress>68:05:CA:3B:F4:6B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:32:14</Time>
+      <MacAddress>68:05:CA:3C:30:DF</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:32:14</Time>
+      <MacAddress>68:05:CA:3B:F1:80</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-05</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:32:14</Time>
+      <MacAddress>68:05:CA:3B:F1:7E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:32:15</Time>
+      <MacAddress>68:05:CA:3C:30:DF</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-07</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:32:15</Time>
+      <MacAddress>68:05:CA:3B:F4:6B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:32:15</Time>
+      <MacAddress>68:05:CA:3B:EF:16</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:32:15</Time>
+      <MacAddress>68:05:CA:3B:F1:80</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-05</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:32:15</Time>
+      <MacAddress>68:05:CA:3B:F1:7E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-02</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:32:16</Time>
+      <MacAddress>68:05:CA:3B:EF:16</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-07</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:32:16</Time>
+      <MacAddress>68:05:CA:3B:F4:6B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-06</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:32:16</Time>
+      <MacAddress>68:05:CA:3C:30:DF</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:32:16</Time>
+      <MacAddress>68:05:CA:3B:F1:80</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-05</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:32:16</Time>
+      <MacAddress>68:05:CA:3B:F1:7E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:32:18</Time>
+      <MacAddress>68:05:CA:3C:35:75</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-04</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:32:18</Time>
+      <MacAddress>68:05:CA:3B:EF:AB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:32:18</Time>
+      <MacAddress>68:05:CA:3C:30:DB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:32:19</Time>
+      <MacAddress>68:05:CA:3C:35:75</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:32:19</Time>
+      <MacAddress>68:05:CA:3C:30:DB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:32:19</Time>
+      <MacAddress>68:05:CA:3B:EF:AB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:32:20</Time>
+      <MacAddress>68:05:CA:3C:30:DB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:32:20</Time>
+      <MacAddress>68:05:CA:3C:35:75</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:32:20</Time>
+      <MacAddress>68:05:CA:3B:EF:AB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:32:21</Time>
+      <MacAddress>68:05:CA:3C:30:DB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:32:21</Time>
+      <MacAddress>68:05:CA:3C:35:75</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-04</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:32:21</Time>
+      <MacAddress>68:05:CA:3B:EF:AB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>9:48:53</Time>
+      <MacAddress>68:05:CA:3C:35:32</MacAddress>
+      <Message>CLIENT NEED RESTART</Message>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:48:54</Time>
+      <MacAddress>68:05:CA:3C:35:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>9:48:55</Time>
+      <MacAddress>68:05:CA:3C:35:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:48:57</Time>
+      <MacAddress>68:05:CA:3C:35:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:48:58</Time>
+      <MacAddress>68:05:CA:3C:35:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:48:59</Time>
+      <MacAddress>68:05:CA:3C:35:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:59:21</Time>
+      <MacAddress>68:05:CA:3B:F4:6B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-07</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:59:23</Time>
+      <MacAddress>68:05:CA:3B:F4:6B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-07</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:59:24</Time>
+      <MacAddress>68:05:CA:3B:F4:6B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:01:27</Time>
+      <MacAddress>68:05:CA:3B:EF:16</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:01:28</Time>
+      <MacAddress>68:05:CA:3B:EF:16</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-02</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>10:01:29</Time>
+      <MacAddress>68:05:CA:3B:EF:16</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:03:37</Time>
+      <MacAddress>68:05:CA:3B:F1:7E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-05</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:03:38</Time>
+      <MacAddress>68:05:CA:3B:F1:7E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-05</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>10:03:39</Time>
+      <MacAddress>68:05:CA:3B:F1:7E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:03:52</Time>
+      <MacAddress>68:05:CA:3B:F1:80</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:03:53</Time>
+      <MacAddress>68:05:CA:3B:F1:80</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>10:03:54</Time>
+      <MacAddress>68:05:CA:3B:F1:80</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:03:57</Time>
+      <MacAddress>68:05:CA:3C:35:75</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:03:58</Time>
+      <MacAddress>68:05:CA:3C:35:75</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>10:03:59</Time>
+      <MacAddress>68:05:CA:3C:35:75</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:04:02</Time>
+      <MacAddress>68:05:CA:3C:30:DF</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:04:03</Time>
+      <MacAddress>68:05:CA:3C:30:DF</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-06</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>10:04:04</Time>
+      <MacAddress>68:05:CA:3C:30:DF</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:04:12</Time>
+      <MacAddress>68:05:CA:3B:EF:AB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:04:13</Time>
+      <MacAddress>68:05:CA:3B:EF:AB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-04</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>10:04:14</Time>
+      <MacAddress>68:05:CA:3B:EF:AB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:04:22</Time>
+      <MacAddress>68:05:CA:3C:30:DB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:04:23</Time>
+      <MacAddress>68:05:CA:3C:30:DB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>10:04:24</Time>
+      <MacAddress>68:05:CA:3C:30:DB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:19:23</Time>
+      <MacAddress>68:05:CA:3C:35:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:19:24</Time>
+      <MacAddress>68:05:CA:3C:35:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>10:19:25</Time>
+      <MacAddress>68:05:CA:3C:35:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\11\\09.11.2018 09-29-54_Windows 10 Office 2016 x64 SP No Sysprep.my</FilePath>
+</ExecutedTaskData>

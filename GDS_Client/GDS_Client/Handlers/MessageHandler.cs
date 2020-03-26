@@ -34,7 +34,7 @@ namespace GDS_Client
         {
             try
             {
-                Console.WriteLine(LOG);
+                Console.WriteLine(DateTime.Now.ToString() + ": " + LOG);
                 if (!listener.computerDetails.computerDetailsData.inWinpe)
                 {
                     if (File.Exists(FileName))
@@ -138,14 +138,20 @@ namespace GDS_Client
         {
             try
             {
-                WriteToLogs(DateTime.Now.ToLongTimeString().ToString() + ": " + packet.ID);
+                WriteToLogs(packet.ID.ToString());
                 switch (packet.ID)
                 {
+                    case FLAG.REFRESH_COMPUTER_DETAILS_DATA:
+                        {
+                            listener.computerDetails.computerDetailsData.CustomLog = HardwareInfo.GetInstalledApps();
+                            listener.SendMessage(new Packet(FLAG.SYN_FLAG, listener.computerDetails.computerDetailsData));                            
+                            break;
+                        }
                     case FLAG.SYN_FLAG:
                         {
                             listener.SendMessage(new Packet(FLAG.SYN_FLAG, listener.computerDetails.computerDetailsData));
                             break;
-                        }
+                        }                    
                     case FLAG.CLOSE:
                         {
                             //Environment.Exit(0);

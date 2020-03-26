@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 7 Office 2016 x86</Name>
+  <Started>03.10.2018 10-52-44</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>03.10.2018 11-43-55</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>Temp</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 7 Office 2016 x86</Name>
+    <LastExecuted>03.10.2018 10-52-44</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>uLlHzIROPU6Db35HdCT6jg</_sourceIdentifier>
+        <Name>DELL12</Name>
+        <RealPCName>DELL12</RealPCName>
+        <macAddresses>
+          <string>AC:7B:A1:7B:BB:00</string>
+          <string>EC:F4:BB:15:E3:83</string>
+        </macAddresses>
+        <MacAddress>AC:7B:A1:7B:BB:00</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4200U CPU @ 1.60GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 01/22/14 08:03:33 Ver: A04.00 </biosCaption>
+        <boardProductId>0TG93N</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.20.75</IPAddress>
+        <baseImageName>Windows 7 Office 2013 x64</baseImageName>
+        <driveEImageName>GOC54</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>Temp</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 7 Office 2016 x86</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 7 Office 2016 x86</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\W7_Off2k16_x86\W7_Off2k16_x86.wim</SourcePath>
+      <BoolLabel>Windows 7 Office 2016</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>W7_Off2k16_x86</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x86</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL12</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:52:46</Time>
+      <MacAddress>AC:7B:A1:7B:BB:00</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL12</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>10:55:13</Time>
+      <MacAddress>AC:7B:A1:7B:BB:00</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL12</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:55:14</Time>
+      <MacAddress>AC:7B:A1:7B:BB:00</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL12</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:55:15</Time>
+      <MacAddress>AC:7B:A1:7B:BB:00</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL12</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>10:55:16</Time>
+      <MacAddress>AC:7B:A1:7B:BB:00</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>DELL12</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>11:05:32</Time>
+      <MacAddress>AC:7B:A1:7B:BB:00</MacAddress>
+      <Message>CLIENT NEED RESTART</Message>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL12</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:05:33</Time>
+      <MacAddress>AC:7B:A1:7B:BB:00</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL12</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>11:05:34</Time>
+      <MacAddress>AC:7B:A1:7B:BB:00</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL12</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:05:35</Time>
+      <MacAddress>AC:7B:A1:7B:BB:00</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL12</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>11:05:36</Time>
+      <MacAddress>AC:7B:A1:7B:BB:00</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL12</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>11:05:37</Time>
+      <MacAddress>AC:7B:A1:7B:BB:00</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL12</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:43:53</Time>
+      <MacAddress>AC:7B:A1:7B:BB:00</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL12</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:43:54</Time>
+      <MacAddress>AC:7B:A1:7B:BB:00</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL12</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>11:43:55</Time>
+      <MacAddress>AC:7B:A1:7B:BB:00</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\10\\03.10.2018 10-52-44_Windows 7 Office 2016 x86.my</FilePath>
+</ExecutedTaskData>

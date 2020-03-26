@@ -1,0 +1,994 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>VS Generic_Krulik</Name>
+  <Started>14.05.2019 15-42-44</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>14.05.2019 16-13-05</Finished>
+  <Clients>8</Clients>
+  <Done>8</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK11</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>VS Generic_Krulik</Name>
+    <LastExecuted>14.05.2019 15-42-44</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>5Y27_2GYCUG-lMV0kpPoyw</_sourceIdentifier>
+        <Name>LEKTORSK11</Name>
+        <RealPCName>LEKTORSK11</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:D0:36</string>
+          <string>68:05:CA:0C:AF:9A</string>
+          <string>00:22:4D:80:6E:C6</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.131</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>MOC 20339-1A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>XGW1CgKQYkq6bwt0Qh6lqw</_sourceIdentifier>
+        <Name>STUDENTSK11-01</Name>
+        <RealPCName>STUDENTSK11-01</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:D0:37</string>
+          <string>68:05:CA:0A:71:5C</string>
+          <string>00:22:4D:89:01:8A</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.146</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>MOC 20339-1A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>A2qPJlbYjkCkr8DL7HhAhQ</_sourceIdentifier>
+        <Name>STUDENTSK11-02</Name>
+        <RealPCName>STUDENTSK11-02</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:CF:43</string>
+          <string>68:05:CA:0C:BD:B5</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.118</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>MOC 20339-1A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>J7556qEOEEm1bMSVb5mMww</_sourceIdentifier>
+        <Name>STUDENTSK11-03</Name>
+        <RealPCName>STUDENTSK11-03</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:CF:C6</string>
+          <string>68:05:CA:0C:AF:92</string>
+          <string>00:22:4D:80:6F:09</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.138</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>MOC 20339-1A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>rPSytEWlTEitylz-TDZzkQ</_sourceIdentifier>
+        <Name>STUDENTSK11-04</Name>
+        <RealPCName>STUDENTSK11-04</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:B2:30</string>
+          <string>68:05:CA:2A:D0:B8</string>
+          <string>00:22:4D:82:42:14</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.137</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>MOC 20339-1A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>PpyNM8MImUO4673mrCpUCA</_sourceIdentifier>
+        <Name>STUDENTSK11-05</Name>
+        <RealPCName>STUDENTSK11-05</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:D0:2D</string>
+          <string>68:05:CA:0C:B1:A6</string>
+          <string>00:22:4D:80:6F:05</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.135</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>MOC 20339-1A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Qo-VAaftQUCgMLKK47N1XA</_sourceIdentifier>
+        <Name>STUDENTSK11-06</Name>
+        <RealPCName>STUDENTSK11-06</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:D0:2E</string>
+          <string>00:22:4D:80:6E:2B</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.122</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>MOC 20339-1A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>5Udm-MHpHEWpwhVJNOwvaA</_sourceIdentifier>
+        <Name>STUDENTSK11-07</Name>
+        <RealPCName>STUDENTSK11-07</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:AF:98</string>
+          <string>00:22:4D:80:6F:0D</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.119</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>MOC 20339-1A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK11</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 10 Office 2016 x64 SP</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 10 Office 2016 x64 SP</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\_NO_SYSPREP\W10_Off2k16_x64_SingleProfile_NO_SYSPREP_1803\W10_Off2k16_x64_SingleProfile_NO_SYSPREP_1803.wim</SourcePath>
+      <BoolLabel>Windows 10 Office 2016</BoolLabel>
+      <PartitionSize>190</PartitionSize>
+      <VHDResizeSize>120</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W10_Off2k16_x64_SingleProfile</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\GOC\VS Generic 2017</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>VS Generic 2017</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\DriveE\_WIM\VS_generic_2017\VS_generic.wim</SourcePath>
+      <BoolLabel>VS Generic 2017</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\Krulik\Autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:43:40</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:43:40</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:43:41</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:43:42</Time>
+      <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:43:45</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:43:45</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:43:45</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:43:45</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:45:03</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:45:03</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>15:45:04</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:45:04</Time>
+      <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>15:45:04</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:45:05</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>15:45:05</Time>
+      <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:45:05</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:45:06</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:45:06</Time>
+      <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:45:06</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:45:07</Time>
+      <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:45:08</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:45:08</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>15:45:09</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>15:45:09</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:45:10</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:45:10</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:45:11</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:45:11</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:45:13</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:45:13</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>15:45:14</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>15:45:14</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:45:15</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:45:15</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:45:16</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:45:16</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:45:18</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>15:45:19</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:45:20</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:45:21</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:12:19</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>16:12:20</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:21</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>16:12:22</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:12:23</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:12:24</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:12:24</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>16:12:25</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>16:12:25</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:26</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:26</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>16:12:27</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>16:12:27</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:12:28</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:12:28</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:12:29</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>16:12:30</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:31</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>16:12:32</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:12:33</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:12:34</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>16:12:35</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:36</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>16:12:37</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:12:38</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:12:54</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:12:55</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>16:12:55</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>16:12:56</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:56</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:57</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>16:12:57</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>16:12:58</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:12:58</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:12:59</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:13:01</Time>
+      <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>16:13:02</Time>
+      <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:13:03</Time>
+      <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>16:13:04</Time>
+      <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:13:05</Time>
+      <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.05.2019 15-42-44_VS Generic_Krulik.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\05\\14.05.2019 15-42-44_VS Generic_Krulik.my</FilePath>
+</ExecutedTaskData>

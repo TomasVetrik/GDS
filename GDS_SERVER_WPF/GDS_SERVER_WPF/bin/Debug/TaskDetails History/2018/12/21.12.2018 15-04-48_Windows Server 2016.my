@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows Server 2016</Name>
+  <Started>21.12.2018 15-04-48</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>21.12.2018 15-26-56</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK08</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows Server 2016</Name>
+    <LastExecuted>21.12.2018 15-04-48</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>VIuoOMTSLkm5T2AUTPxcMg</_sourceIdentifier>
+        <Name>STUDENTSK8-06</Name>
+        <RealPCName>STUDENTSK8-06</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4D:72</string>
+          <string>1C:1B:0D:12:1E:F4</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4D:72</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.48</IPAddress>
+        <baseImageName>Windows 10 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK08</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\MOC\Windows Server 2016</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows Server 2016</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\Base\_WIM\W2k16\W2k16.wim</SourcePath>
+      <BoolLabel>Windows Server 2016</BoolLabel>
+      <PartitionSize>102</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W2k16</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W2k16</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:04:50</Time>
+      <MacAddress>68:05:CA:44:4D:72</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-06</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:06:02</Time>
+      <MacAddress>68:05:CA:44:4D:72</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>15:06:03</Time>
+      <MacAddress>68:05:CA:44:4D:72</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:06:04</Time>
+      <MacAddress>68:05:CA:44:4D:72</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-06</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:06:05</Time>
+      <MacAddress>68:05:CA:44:4D:72</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:26:55</Time>
+      <MacAddress>68:05:CA:44:4D:72</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>15:26:56</Time>
+      <MacAddress>68:05:CA:44:4D:72</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\12\\21.12.2018 15-04-48_Windows Server 2016.my</FilePath>
+</ExecutedTaskData>

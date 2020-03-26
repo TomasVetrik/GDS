@@ -46,138 +46,187 @@ namespace GDS_SERVER_WPF.Handlers
         }
 
         public void Start()
-        {            
-            FileHandler.Save<ExecutedTaskData>(executedTaskData, executedTaskData.GetFileName());
-            if(executedTaskData._TaskData.Cloning)
+        {
+            try
             {
-                string sessionName = executedTaskData.Started + "_" + executedTaskData._TaskData.Name;
-                if (executedTaskData._TaskData.BaseImageSourcePath != "")
-                    CreateSession(sessionName, executedTaskData._TaskData.BaseImageData.SourcePath);
-                if(executedTaskData._TaskData.DriveEImageSourcePath != "")
-                    CreateSession(sessionName + "_DriveE", executedTaskData._TaskData.DriveEImageData.SourcePath);                
-            }
-            RefreshList();
-            for (int i = 0; i < executedTaskData._TaskData.TargetComputers.Count; i++)
-            {
-                var computer = new ComputerInTaskHandler(executedTaskData, i, ipAddresses, semaphoreForSaveFile, listViewAll, listViewSelected, MailsTo)
+                FileHandler.Save<ExecutedTaskData>(executedTaskData, executedTaskData.GetFileName());
+                if (executedTaskData._TaskData.Cloning)
                 {
-                    ClientsDictionary = ClientsDictionary,
-                    executedTaskHandler = this
-                };
-                computers.Add(computer);
-                var computerThread = new Thread(computer.Start);
-                computersThreads.Add(computerThread);
-                computerThread.Start();        
-            }
-            AddComputersToListViewAll();
-            Application.Current.Dispatcher.Invoke(() =>
-            {
-                listViewTaskDetailsProgress.Items.Add(executedTaskData);
-                listViewTaskDetailsProgress.SelectedItems.Clear();
-                listViewTaskDetailsProgress.SelectedItems.Add(listViewTaskDetailsProgress.Items[listViewTaskDetailsProgress.Items.Count - 1]);
-            });
-            Thread.Sleep(1000);
-            
-            foreach (ComputerInTaskHandler computer in computers)
-            {
-                computer.semaphoreForTask.WaitOne();
-                if (!computer.stopped && !computer.failed)
-                {
-                    executedTaskData.Done = (Convert.ToInt16(executedTaskData.Done) + 1).ToString();
+                    string sessionName = executedTaskData.Started + "_" + executedTaskData._TaskData.Name;
+                    if (executedTaskData._TaskData.BaseImageSourcePath != "")
+                        CreateSession(sessionName, executedTaskData._TaskData.BaseImageData.SourcePath);
+                    if (executedTaskData._TaskData.DriveEImageSourcePath != "")
+                        CreateSession(sessionName + "_DriveE", executedTaskData._TaskData.DriveEImageData.SourcePath);
                 }
-                else
+                RefreshList();
+                for (int i = 0; i < executedTaskData._TaskData.TargetComputers.Count; i++)
                 {
-                    if(computer.failed)
+                    var computer = new ComputerInTaskHandler(executedTaskData, i, ipAddresses, semaphoreForSaveFile, listViewAll, listViewSelected, MailsTo)
                     {
-                        imagePath = "Images/Failed.ico";
+                        ClientsDictionary = ClientsDictionary,
+                        executedTaskHandler = this
+                    };
+                    computers.Add(computer);
+                    var computerThread = new Thread(computer.Start);
+                    computersThreads.Add(computerThread);
+                    computerThread.Start();
+                }
+                AddComputersToListViewAll();
+                Application.Current.Dispatcher.Invoke(() =>
+                {
+                    listViewTaskDetailsProgress.Items.Add(executedTaskData);
+                    listViewTaskDetailsProgress.SelectedItems.Clear();
+                    listViewTaskDetailsProgress.SelectedItems.Add(listViewTaskDetailsProgress.Items[listViewTaskDetailsProgress.Items.Count - 1]);
+                });
+                Thread.Sleep(1000);
+
+                foreach (ComputerInTaskHandler computer in computers)
+                {
+                    computer.semaphoreForTask.WaitOne();
+                    if (!computer.stopped && !computer.failed)
+                    {
+                        executedTaskData.Done = (Convert.ToInt16(executedTaskData.Done) + 1).ToString();
+                    }
+                    else
+                    {
+                        if (computer.failed)
+                        {
+                            imagePath = "Images/Failed.ico";
+                        }
                     }
                 }
+                Finish(imagePath);
             }
-            Finish(imagePath);
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void Finish(string status)
         {
-            if(stopped)
+            try
             {
-                status = "Images/Stopped.ico";
+                if (stopped)
+                {
+                    status = "Images/Stopped.ico";
+                }
+                executedTaskData.Finished = DateTime.Now.ToString("dd.MM.yyyy HH-mm-ss");
+                executedTaskData.Status = status;
+                executedTaskData.Failed = (Convert.ToInt16(executedTaskData.Clients) - Convert.ToInt16(executedTaskData.Done)).ToString();
+                semaphoreForSaveFile.WaitOne();
+                FileHandler.Save<ExecutedTaskData>(executedTaskData, executedTaskData.GetFileName());
+                RefreshList();
+                semaphoreForSaveFile.Release();
+                RemoveFromListViewTaskProgress();
+                RemoveFromListViews();
+                AutoClosingMessageBox.Show(executedTaskData.Name + "\n" + executedTaskData.MachineGroup, "DONE", 5000);
+                if (executedTaskData._TaskData.Cloning)
+                {
+                    string sessionName = executedTaskData.Started + "_" + executedTaskData._TaskData.Name;
+                    if (executedTaskData._TaskData.BaseImageSourcePath != "")
+                        RemoveSession(sessionName);
+                    if (executedTaskData._TaskData.DriveEImageSourcePath != "")
+                        RemoveSession(sessionName + "_DriveE");
+                }
+                handlers.Remove(this);
             }
-            executedTaskData.Finished = DateTime.Now.ToString("dd.MM.yyyy HH-mm-ss");
-            executedTaskData.Status = status;
-            executedTaskData.Failed = (Convert.ToInt16(executedTaskData.Clients) - Convert.ToInt16(executedTaskData.Done)).ToString();
-            semaphoreForSaveFile.WaitOne();
-            FileHandler.Save<ExecutedTaskData>(executedTaskData, executedTaskData.GetFileName());
-            RefreshList();
-            semaphoreForSaveFile.Release();
-            RemoveFromListViewTaskProgress();
-            RemoveFromListViews();
-            AutoClosingMessageBox.Show(executedTaskData.Name + "\n" + executedTaskData.MachineGroup , "DONE", 5000);
-            if (executedTaskData._TaskData.Cloning)
+            catch (Exception ex)
             {
-                string sessionName = executedTaskData.Started + "_" + executedTaskData._TaskData.Name;
-                if (executedTaskData._TaskData.BaseImageSourcePath != "")
-                    RemoveSession(sessionName);
-                if (executedTaskData._TaskData.DriveEImageSourcePath != "")
-                    RemoveSession(sessionName + "_DriveE");
+                MessageBox.Show(ex.ToString());
             }
-            handlers.Remove(this);
         }
 
         private void AddComputersToListViewAll()
         {
-            foreach (ComputerInTaskHandler computer in computers)
+            try
             {
-                Application.Current.Dispatcher.Invoke(() =>
+                foreach (ComputerInTaskHandler computer in computers)
                 {
-                    computer.progressComputerData = new ProgressComputerData("", computer.computer.Name, computer.step,executedTaskData.GetFileName(),"", computer.computer.MacAddress);
-                    listViewAll.Items.Add(computer.progressComputerData);
-                });                
+                    Application.Current.Dispatcher.Invoke(() =>
+                    {
+                        computer.progressComputerData = new ProgressComputerData("", computer.computer.Name, computer.step, executedTaskData.GetFileName(), "", computer.computer.MacAddress);
+                        listViewAll.Items.Add(computer.progressComputerData);
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
 
         public void AddComputersToListViewSelected()
         {
-            Application.Current.Dispatcher.Invoke(() =>
+            try
             {
-                listViewSelected.Items.Clear();
-                foreach (ComputerInTaskHandler computer in computers)
+                Application.Current.Dispatcher.Invoke(() =>
                 {
-                    listViewSelected.Items.Add(computer.progressComputerData);
-                    computer.listViewSelected = listViewSelected;
-                }
-            });            
+                    listViewSelected.Items.Clear();
+                    foreach (ComputerInTaskHandler computer in computers)
+                    {
+                        listViewSelected.Items.Add(computer.progressComputerData);
+                        computer.listViewSelected = listViewSelected;
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }        
 
         private void RemoveFromListViewTaskProgress()
         {
-            for (int i = listViewTaskDetailsProgress.Items.Count - 1; i >= 0; i--)
+            try
             {
-                ExecutedTaskData item = (ExecutedTaskData)listViewTaskDetailsProgress.Items[i];
-                if (item.Name == executedTaskData.Name && item.Started == executedTaskData.Started)
+                for (int i = listViewTaskDetailsProgress.Items.Count - 1; i >= 0; i--)
                 {
-                    Application.Current.Dispatcher.Invoke(() =>
+                    ExecutedTaskData item = (ExecutedTaskData)listViewTaskDetailsProgress.Items[i];
+                    if (item.Name == executedTaskData.Name && item.Started == executedTaskData.Started)
                     {
-                        listViewTaskDetailsProgress.Items.Remove(item);
-                    });
-                    break;
+                        Application.Current.Dispatcher.Invoke(() =>
+                        {
+                            listViewTaskDetailsProgress.Items.Remove(item);
+                        });
+                        break;
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
 
         private void RemoveFromListViews()
         {
-            foreach (ComputerInTaskHandler computer in computers)
+            try
             {
-                computer.RemoveFromListViewAll();
-                computer.RemoveFromListViewSelected();
+                foreach (ComputerInTaskHandler computer in computers)
+                {
+                    computer.RemoveFromListViewAll();
+                    computer.RemoveFromListViewSelected();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
 
         public void Stop()
         {
-            for (int i = computers.Count - 1; i >= 0; i--)            
-                computers[i].Stop();            
-            stopped = true;            
+            try
+            {
+                for (int i = computers.Count - 1; i >= 0; i--)
+                    computers[i].Stop();
+                stopped = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void CreateSession(string SessionName, string ImageSourcePath)
@@ -188,7 +237,7 @@ namespace GDS_SERVER_WPF.Handlers
                 string args = "/New-Namespace /NamespaceType:AutoCast /FriendlyName:\"" + SessionName + "\" /Namespace:\"" + SessionName + "\" /ContentProvider:WDS /ConfigString:" + ImageFolder;
                 var processStartInfo = new ProcessStartInfo
                 {
-                    FileName = @"C:\Windows\Sysnative\WDSUTIL.exe",
+                    FileName = @"C:\Windows\System32\WDSUTIL.exe",
                     Arguments = args,
                     RedirectStandardOutput = true,
                     UseShellExecute = false,
@@ -224,7 +273,7 @@ namespace GDS_SERVER_WPF.Handlers
             {
                 var processStartInfo = new ProcessStartInfo
                 {
-                    FileName = @"C:\Windows\Sysnative\WDSUTIL.exe",
+                    FileName = @"C:\Windows\System32\WDSUTIL.exe",
                     Arguments = "/remove-namespace /namespace:\"" + SessionName + "\" /Force",
                     RedirectStandardOutput = true,
                     UseShellExecute = false,

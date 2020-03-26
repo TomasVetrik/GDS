@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Shutdown</Name>
+  <Started>16.11.2018 11-36-50</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>16.11.2018 11-36-53</Finished>
+  <Clients>3</Clients>
+  <Done>3</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK14</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Shutdown</Name>
+    <LastExecuted>16.11.2018 11-36-50</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>FsnHkKTz_UKFm_NGGExQLA</_sourceIdentifier>
+        <Name>STUDENTSK14-02</Name>
+        <RealPCName>STUDENTSK14-02</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:24:67:C0</string>
+          <string>74:D4:35:8D:A0:B4</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:24:67:C0</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.80</IPAddress>
+        <baseImageName>Windows 10 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>WegHmhhBcEiytoyszqWQ9Q</_sourceIdentifier>
+        <Name>STUDENTSK14-03</Name>
+        <RealPCName>STUDENTSK14-03</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:29:D7:86</string>
+          <string>74:D4:35:8B:18:EE</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:29:D7:86</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.79</IPAddress>
+        <baseImageName>Windows 10 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>qRLbAv6ct06SMECCL_HdtQ</_sourceIdentifier>
+        <Name>STUDENTSK14-11</Name>
+        <RealPCName>STUDENTSK14-11</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:24:4F:EA</string>
+          <string>74:D4:35:1D:AC:AB</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:24:4F:EA</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.82</IPAddress>
+        <baseImageName>Windows 10 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK14</MachineGroup>
+    <WakeOnLan>false</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:36:52</Time>
+      <MacAddress>68:05:CA:29:D7:86</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:36:52</Time>
+      <MacAddress>68:05:CA:24:67:C0</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-11</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:36:52</Time>
+      <MacAddress>68:05:CA:24:4F:EA</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-11</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>11:36:53</Time>
+      <MacAddress>68:05:CA:24:4F:EA</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-03</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>11:36:53</Time>
+      <MacAddress>68:05:CA:29:D7:86</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-02</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>11:36:53</Time>
+      <MacAddress>68:05:CA:24:67:C0</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\11\\16.11.2018 11-36-50_Shutdown.my</FilePath>
+</ExecutedTaskData>

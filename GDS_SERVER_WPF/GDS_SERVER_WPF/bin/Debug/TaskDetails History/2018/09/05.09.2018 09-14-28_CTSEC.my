@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>CTSEC</Name>
+  <Started>05.09.2018 09-14-28</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>05.09.2018 10-17-32</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK08</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>CTSEC</Name>
+    <LastExecuted>05.09.2018 09-14-28</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>QdbzPH24Fk2yVTY_zKP18Q</_sourceIdentifier>
+        <Name>STUDENTSK8-03</Name>
+        <RealPCName>STUDENTSK8-03</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4D:20</string>
+          <string>1C:1B:0D:12:1E:F8</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4D:20</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.121.13</IPAddress>
+        <baseImageName>JPROG v7</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK08</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 10 Office 2016 x64 SP</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 10 Office 2016 x64 SP</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\_NO_SYSPREP\W10_Off2k16_x64_SingleProfile_NO_SYSPREP_1803\W10_Off2k16_x64_SingleProfile_NO_SYSPREP_1803.wim</SourcePath>
+      <BoolLabel>Windows 10 Office 2016</BoolLabel>
+      <PartitionSize>160</PartitionSize>
+      <VHDResizeSize>90</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W10_Off2k16_x64_SingleProfile</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\GOC\CTSEC</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>CTSEC</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\GOC\DriveE\_wim\CTSEC\CTSEC.wim</SourcePath>
+      <BoolLabel>Windows 10 CTSEC </BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\Autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:14:55</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:16:47</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:16:48</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:16:49</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:16:50</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:17:28</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>10:17:29</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:17:30</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>10:17:31</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:17:32</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\09\\05.09.2018 09-14-28_CTSEC.my</FilePath>
+</ExecutedTaskData>

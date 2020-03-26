@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Management;
 using System.Net;
+using System.Text;
 using System.Threading;
 
 namespace GDS_Client
@@ -111,6 +113,18 @@ namespace GDS_Client
                 catch { }
             }
             return "Unknown";
+        }
+
+        public static string GetUsedNORAMSlots()
+        {
+            string NUUsedRAMSlots = "";
+            try
+            {
+                ManagementObjectSearcher searcher = new ManagementObjectSearcher("Select * from Win32_PhysicalMemory");
+                NUUsedRAMSlots = searcher.Get().Count.ToString();
+            }
+            catch { }
+            return NUUsedRAMSlots;
         }
 
         public static string GetWorkGroup()
@@ -248,6 +262,94 @@ namespace GDS_Client
                 return new List<string> { File.ReadAllText(@"X:\Mac.txt") };
             }
             return new List<string>();
+        }
+
+        private static List<string> GetAbrvFromTextFile()
+        {
+            string fileName = @"D:\Temp\GDSClient\AppsFilter.txt";
+            var list = new List<string>();
+            try
+            {                
+                if (File.Exists(fileName))
+                {
+                    var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+                    using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
+                    {
+                        string line;
+                        while ((line = streamReader.ReadLine()) != null)
+                        {
+                            list.Add(line);
+                        }
+                    }
+                }
+            }
+            catch { }
+            return list;
+        }
+
+        public static string GetInstalledApps()
+        {
+            string InstalledApps = "";
+            List<string> InstalledAppsList = new List<string>();
+            try
+            {
+                List<RegistryKey> keys = new List<RegistryKey>();
+                keys.Add(Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"));
+                keys.Add(Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall"));
+                keys.Add(Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"));
+                var listOfAbrv = GetAbrvFromTextFile();
+                if (listOfAbrv.Count != 0)
+                {
+                    foreach (RegistryKey key in keys)
+                    {
+                        using (key)
+                        {
+                            foreach (string subkey_name in key.GetSubKeyNames())
+                            {
+                                using (RegistryKey subkey = key.OpenSubKey(subkey_name))
+                                {
+                                    try
+                                    {
+                                        foreach (string app in listOfAbrv)
+                                        {
+                                            string appLower = subkey.GetValue("DisplayName").ToString().ToLower();
+                                            if (appLower.Contains(app.ToLower()) && !(InstalledAppsList.Contains(subkey.GetValue("DisplayName").ToString())))
+                                            {
+                                                InstalledAppsList.Add(subkey.GetValue("DisplayName").ToString());
+                                            }
+                                        }
+                                    }
+                                    catch { }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch { }
+            try
+            {
+                string LogName = @"E:\Log.txt";
+                InstalledAppsList.Sort();
+                if (File.Exists(LogName))
+                {
+                    var fileStream = new FileStream(LogName, FileMode.Open, FileAccess.Read);
+                    using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
+                    {
+                        string line;
+                        while ((line = streamReader.ReadLine()) != null)
+                        {                                                     
+                            InstalledAppsList.Insert(0, line);
+                        }
+                    }
+                }
+                foreach (string app in InstalledAppsList)
+                {
+                    InstalledApps += app + "\n";
+                }
+            }
+            catch { }
+            return InstalledApps;
         }
     }
 }

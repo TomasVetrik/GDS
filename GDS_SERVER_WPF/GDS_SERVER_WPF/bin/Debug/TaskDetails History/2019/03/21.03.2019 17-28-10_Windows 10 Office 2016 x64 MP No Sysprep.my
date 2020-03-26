@@ -1,0 +1,929 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 10 Office 2016 x64 MP No Sysprep</Name>
+  <Started>21.03.2019 17-28-10</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>21.03.2019 17-56-05</Finished>
+  <Clients>9</Clients>
+  <Done>9</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK12</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 10 Office 2016 x64 MP No Sysprep</Name>
+    <LastExecuted>21.03.2019 17-28-10</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>BqIKhqIBxUS5DIXnEC2L_g</_sourceIdentifier>
+        <Name>LEKTORSK12</Name>
+        <RealPCName>MININT-085DNTO</RealPCName>
+        <macAddresses>
+          <string>FC:AA:14:AC:74:1F</string>
+          <string>68:05:CA:3B:F1:80</string>
+        </macAddresses>
+        <MacAddress>FC:AA:14:AC:74:1F</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.167</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>956-549-436#10.202.20.167#49678</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Kjo2O2PbQECwFkU4rEbj7w</_sourceIdentifier>
+        <Name>STUDENTSK12-01</Name>
+        <RealPCName>MININT-E063OD1</RealPCName>
+        <macAddresses>
+          <string>FC:AA:14:AC:71:9C</string>
+          <string>68:05:CA:3C:30:DB</string>
+        </macAddresses>
+        <MacAddress>FC:AA:14:AC:71:9C</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.4</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>931-827-586#10.202.20.4#49678</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>hSCMt0czikukLDHkD9WK_Q</_sourceIdentifier>
+        <Name>STUDENTSK12-02</Name>
+        <RealPCName>MININT-704IVEC</RealPCName>
+        <macAddresses>
+          <string>FC:AA:14:AC:71:7B</string>
+          <string>68:05:CA:3B:EF:16</string>
+        </macAddresses>
+        <MacAddress>FC:AA:14:AC:71:7B</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.52</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>112-359-123#10.202.20.52#49678</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>gysa3yA8ykSx0UkoLVs_-g</_sourceIdentifier>
+        <Name>STUDENTSK12-03</Name>
+        <RealPCName>MININT-5F0G3L4</RealPCName>
+        <macAddresses>
+          <string>FC:AA:14:AC:70:2B</string>
+          <string>68:05:CA:3C:35:32</string>
+        </macAddresses>
+        <MacAddress>FC:AA:14:AC:70:2B</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.163</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>917-542-451#10.202.20.163#49678</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>WT7LvqtvEE69FvTKmGxRVA</_sourceIdentifier>
+        <Name>STUDENTSK12-04</Name>
+        <RealPCName>MININT-MMJK0M3</RealPCName>
+        <macAddresses>
+          <string>FC:AA:14:AC:74:27</string>
+          <string>68:05:CA:3B:EF:AB</string>
+        </macAddresses>
+        <MacAddress>FC:AA:14:AC:74:27</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.36</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>157-532-838#10.202.20.36#49678</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>6GrafCMuEU26bzwzmcxsWg</_sourceIdentifier>
+        <Name>STUDENTSK12-05</Name>
+        <RealPCName>MININT-38HLAPK</RealPCName>
+        <macAddresses>
+          <string>FC:AA:14:AC:73:F2</string>
+          <string>68:05:CA:3B:F1:7E</string>
+        </macAddresses>
+        <MacAddress>FC:AA:14:AC:73:F2</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.160</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>238-356-146#10.202.20.160#49678</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>BfjSRWwuE0CEhx7DYE6Teg</_sourceIdentifier>
+        <Name>STUDENTSK12-06</Name>
+        <RealPCName>MININT-178EAH1</RealPCName>
+        <macAddresses>
+          <string>FC:AA:14:AC:70:26</string>
+          <string>68:05:CA:3C:30:DF</string>
+        </macAddresses>
+        <MacAddress>FC:AA:14:AC:70:26</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.165</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>832-862-806#10.202.20.165#49678</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>x2dis46oU0WS2gODzSIwWQ</_sourceIdentifier>
+        <Name>STUDENTSK12-07</Name>
+        <RealPCName>MININT-P0D2FSV</RealPCName>
+        <macAddresses>
+          <string>FC:AA:14:AC:74:3B</string>
+          <string>68:05:CA:3B:F4:6B</string>
+        </macAddresses>
+        <MacAddress>FC:AA:14:AC:74:3B</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.25</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>982-563-427#10.202.20.25#49678</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>kcASHuBdakmUigQ6HyMZ0g</_sourceIdentifier>
+        <Name>STUDENTSK12-08</Name>
+        <RealPCName>MININT-0CIBS8K</RealPCName>
+        <macAddresses>
+          <string>FC:AA:14:AC:70:27</string>
+          <string>68:05:CA:3C:35:75</string>
+        </macAddresses>
+        <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.46</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>710-658-955#10.202.20.46#49678</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK12</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 10 Office 2016 x64 MP</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 10 Office 2016 x64 MP</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\_NO_SYSPREP\W10_Off2k16_x64_Multiprofile_NO_SYSPREP_1803\W10_Off2k16_x64_Multiprofile_NO_SYSPREP_1803.wim</SourcePath>
+      <BoolLabel>Windows 10 Office 2016</BoolLabel>
+      <PartitionSize>162</PartitionSize>
+      <VHDResizeSize>90</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W10_Off2k16_x64_MultiProfile</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:28:15</Time>
+      <MacAddress>FC:AA:14:AC:74:3B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:28:15</Time>
+      <MacAddress>FC:AA:14:AC:74:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:28:15</Time>
+      <MacAddress>FC:AA:14:AC:70:26</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:28:15</Time>
+      <MacAddress>FC:AA:14:AC:73:F2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:28:15</Time>
+      <MacAddress>FC:AA:14:AC:70:2B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:28:15</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:28:15</Time>
+      <MacAddress>FC:AA:14:AC:71:9C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:28:15</Time>
+      <MacAddress>FC:AA:14:AC:74:1F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:28:15</Time>
+      <MacAddress>FC:AA:14:AC:71:7B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-07</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>17:28:16</Time>
+      <MacAddress>FC:AA:14:AC:74:3B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-02</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>17:28:16</Time>
+      <MacAddress>FC:AA:14:AC:71:7B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-04</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>17:28:16</Time>
+      <MacAddress>FC:AA:14:AC:74:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-05</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>17:28:16</Time>
+      <MacAddress>FC:AA:14:AC:73:F2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>17:28:16</Time>
+      <MacAddress>FC:AA:14:AC:74:1F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>17:28:16</Time>
+      <MacAddress>FC:AA:14:AC:71:9C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-06</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>17:28:16</Time>
+      <MacAddress>FC:AA:14:AC:70:26</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>17:28:16</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>17:28:16</Time>
+      <MacAddress>FC:AA:14:AC:70:2B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:28:17</Time>
+      <MacAddress>FC:AA:14:AC:71:7B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-07</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:28:17</Time>
+      <MacAddress>FC:AA:14:AC:74:3B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:28:17</Time>
+      <MacAddress>FC:AA:14:AC:74:1F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:28:17</Time>
+      <MacAddress>FC:AA:14:AC:74:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:28:17</Time>
+      <MacAddress>FC:AA:14:AC:71:9C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:28:17</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:28:17</Time>
+      <MacAddress>FC:AA:14:AC:70:26</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-05</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:28:17</Time>
+      <MacAddress>FC:AA:14:AC:73:F2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:28:17</Time>
+      <MacAddress>FC:AA:14:AC:70:2B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-07</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>17:28:23</Time>
+      <MacAddress>FC:AA:14:AC:74:3B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>17:28:23</Time>
+      <MacAddress>FC:AA:14:AC:74:1F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>17:28:23</Time>
+      <MacAddress>FC:AA:14:AC:71:7B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>17:28:23</Time>
+      <MacAddress>FC:AA:14:AC:74:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>17:28:23</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>17:28:23</Time>
+      <MacAddress>FC:AA:14:AC:71:9C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>17:28:23</Time>
+      <MacAddress>FC:AA:14:AC:70:26</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>17:28:23</Time>
+      <MacAddress>FC:AA:14:AC:70:2B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-05</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>17:28:23</Time>
+      <MacAddress>FC:AA:14:AC:73:F2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>17:28:24</Time>
+      <MacAddress>FC:AA:14:AC:74:1F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-07</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>17:28:24</Time>
+      <MacAddress>FC:AA:14:AC:74:3B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-02</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>17:28:24</Time>
+      <MacAddress>FC:AA:14:AC:71:7B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-04</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>17:28:24</Time>
+      <MacAddress>FC:AA:14:AC:74:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>17:28:24</Time>
+      <MacAddress>FC:AA:14:AC:71:9C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-06</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>17:28:24</Time>
+      <MacAddress>FC:AA:14:AC:70:26</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>17:28:24</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>17:28:24</Time>
+      <MacAddress>FC:AA:14:AC:70:2B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-05</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>17:28:25</Time>
+      <MacAddress>FC:AA:14:AC:73:F2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:53:52</Time>
+      <MacAddress>FC:AA:14:AC:71:9C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:53:53</Time>
+      <MacAddress>FC:AA:14:AC:71:9C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:53:54</Time>
+      <MacAddress>FC:AA:14:AC:71:9C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:54:07</Time>
+      <MacAddress>FC:AA:14:AC:70:2B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:54:08</Time>
+      <MacAddress>FC:AA:14:AC:70:2B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:54:09</Time>
+      <MacAddress>FC:AA:14:AC:70:2B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:54:18</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:54:19</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:54:20</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:55:14</Time>
+      <MacAddress>FC:AA:14:AC:73:F2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-05</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:55:15</Time>
+      <MacAddress>FC:AA:14:AC:73:F2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-05</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:55:16</Time>
+      <MacAddress>FC:AA:14:AC:73:F2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:55:23</Time>
+      <MacAddress>FC:AA:14:AC:74:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:55:24</Time>
+      <MacAddress>FC:AA:14:AC:74:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-04</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:55:25</Time>
+      <MacAddress>FC:AA:14:AC:74:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:55:32</Time>
+      <MacAddress>FC:AA:14:AC:71:7B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:55:32</Time>
+      <MacAddress>FC:AA:14:AC:74:1F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:55:33</Time>
+      <MacAddress>FC:AA:14:AC:71:7B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:55:34</Time>
+      <MacAddress>FC:AA:14:AC:74:1F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-02</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:55:34</Time>
+      <MacAddress>FC:AA:14:AC:71:7B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:55:35</Time>
+      <MacAddress>FC:AA:14:AC:74:1F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:55:43</Time>
+      <MacAddress>FC:AA:14:AC:74:3B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-07</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:55:44</Time>
+      <MacAddress>FC:AA:14:AC:74:3B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-07</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:55:45</Time>
+      <MacAddress>FC:AA:14:AC:74:3B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:56:03</Time>
+      <MacAddress>FC:AA:14:AC:70:26</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:56:04</Time>
+      <MacAddress>FC:AA:14:AC:70:26</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-06</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:56:05</Time>
+      <MacAddress>FC:AA:14:AC:70:26</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\03\\21.03.2019 17-28-10_Windows 10 Office 2016 x64 MP No Sysprep.my</FilePath>
+</ExecutedTaskData>

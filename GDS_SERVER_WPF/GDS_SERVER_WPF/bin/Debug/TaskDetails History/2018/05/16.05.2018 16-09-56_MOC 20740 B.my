@@ -1,0 +1,307 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>MOC 20740 B</Name>
+  <Started>16.05.2018 16-09-56</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>16.05.2018 16-10-08</Finished>
+  <Clients>5</Clients>
+  <Done>0</Done>
+  <Failed>5</Failed>
+  <MachineGroup>UCEBNASK11</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>MOC 20740 B</Name>
+    <LastExecuted>16.05.2018 16-09-56</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>1m8MWXoHtUOMWvPx-Jud-A</_sourceIdentifier>
+        <Name>STUDENTSK11-01</Name>
+        <RealPCName>STUDENTSK11-01</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:D0:37</string>
+          <string>68:05:CA:0A:71:5C</string>
+          <string>00:22:4D:89:01:8A</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.85</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>MOC 20740 C</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>DRjKpwJ7yUmqaan9eSwUNQ</_sourceIdentifier>
+        <Name>STUDENTSK11-02</Name>
+        <RealPCName>STUDENTSK11-02</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:CF:43</string>
+          <string>68:05:CA:0C:BD:B5</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.76</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>MOC 20740 C</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>vVF89grmb0Ko3ccSQyKuYA</_sourceIdentifier>
+        <Name>STUDENTSK11-06</Name>
+        <RealPCName>MININT-H2LIN6E</RealPCName>
+        <macAddresses>
+          <string>00:22:4D:80:6E:2B</string>
+          <string>68:05:CA:2A:D0:2E</string>
+        </macAddresses>
+        <MacAddress>00:22:4D:80:6E:2B</MacAddress>
+        <OSInformations>, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.118</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>MOC 20740 C</driveEImageName>
+        <dartInfo>646-238-915#10.202.20.118#49422</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>XOY1ygQWWk--_BRDNc5Fyg</_sourceIdentifier>
+        <Name>STUDENTSK11-08</Name>
+        <RealPCName>MININT-3OP2D2R</RealPCName>
+        <macAddresses>
+          <string>00:22:4D:80:6F:15</string>
+          <string>68:05:CA:0C:BD:DE</string>
+          <string>68:05:CA:2A:CF:C9</string>
+        </macAddresses>
+        <MacAddress>00:22:4D:80:6F:15</MacAddress>
+        <OSInformations>, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.98</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>MOC 20740 C</driveEImageName>
+        <dartInfo>962-916-768#10.202.20.98#49422</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>kWINLuQIRkO6f1-ydpDjCw</_sourceIdentifier>
+        <Name>STUDENTSK11-04</Name>
+        <RealPCName>STUDENTSK11-04</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:B2:30</string>
+          <string>68:05:CA:2A:D0:B8</string>
+          <string>00:22:4D:82:42:14</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.110</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>MOC 20740 C</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK11</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\MOC\Windows Server 2016</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows Server 2016</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\Base\_WIM\W2k16\W2k16.wim</SourcePath>
+      <BoolLabel>Windows Server 2016</BoolLabel>
+      <PartitionSize>100</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W2k16</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W2k16</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\MOC\20000\MOC 20740 B</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>MOC 20740 B</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\DriveE\_WIM\20740B\20740B.wim</SourcePath>
+      <BoolLabel>MOC 20740 B</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\Autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:09:57</Time>
+      <MacAddress>00:22:4D:80:6F:15</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:09:57</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:09:57</Time>
+      <MacAddress>00:22:4D:80:6E:2B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>16:09:58</Time>
+      <MacAddress>00:22:4D:80:6E:2B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>16:09:58</Time>
+      <MacAddress>00:22:4D:80:6F:15</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:10:00</Time>
+      <MacAddress>00:22:4D:80:6F:15</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:10:00</Time>
+      <MacAddress>00:22:4D:80:6E:2B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:10:01</Time>
+      <MacAddress>00:22:4D:80:6E:2B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:10:01</Time>
+      <MacAddress>00:22:4D:80:6F:15</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:10:02</Time>
+      <MacAddress>00:22:4D:80:6F:15</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:10:02</Time>
+      <MacAddress>00:22:4D:80:6E:2B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:09:56</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message>68:05:CA:2A:CF:43</Message>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:09:56</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message>68:05:CA:2A:D0:37</Message>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>16:09:57</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message>68:05:CA:0C:B2:30</Message>
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\05\\16.05.2018 16-09-56_MOC 20740 B.my</FilePath>
+</ExecutedTaskData>

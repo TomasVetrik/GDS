@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>CentOS_7_x64_aut</Name>
+  <Started>28.01.2019 11-53-11</Started>
+  <Status>Images/Failed.ico</Status>
+  <Finished>28.01.2019 12-15-59</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>UCEBNASK12</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>CentOS_7_x64_aut</Name>
+    <LastExecuted>28.01.2019 11-53-11</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>24iEr9gxOkSJmRGIu1hn6g</_sourceIdentifier>
+        <Name>STUDENTSK12-08</Name>
+        <RealPCName>STUDENTSK12-08</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3C:35:75</string>
+          <string>FC:AA:14:AC:70:27</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3C:35:75</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.20.156</IPAddress>
+        <baseImageName>Windows 7 Office 2013 x64</baseImageName>
+        <driveEImageName>GOC3_William</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK12</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\LINUX\CentOS_7_x64</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>CentOS_7_x64</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\LINUX\Base\_wim\CentOS_7\CentOS7_x64_aut.wim</SourcePath>
+      <BoolLabel>Default</BoolLabel>
+      <PartitionSize>80</PartitionSize>
+      <VHDResizeSize>40</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>CentOS7_x64_aut</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string />
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>true</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <SourceDirectoryInOS />
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <SourceDirectoryInWINPE>I:\Images\HIVE\pajka_temp\centos6.6</SourceDirectoryInWINPE>
+    <DestinationDirectoryInWINPE>C:\</DestinationDirectoryInWINPE>
+    <CopyFilesInWINPE>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\ANG0</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup.LOG</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup.LOG1</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup.LOG2</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bootmgr</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\BOOTNXT</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\BOOTSECT.BAK</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\CentOs_6.6_aut.iso</string>
+    </CopyFilesInWINPE>
+    <CommandsInWINPE />
+    <WaitingTime>20</WaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:53:12</Time>
+      <MacAddress>68:05:CA:3C:35:75</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\28.01.2019 11-53-11_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>11:54:29</Time>
+      <MacAddress>68:05:CA:3C:35:75</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\28.01.2019 11-53-11_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:54:31</Time>
+      <MacAddress>68:05:CA:3C:35:75</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\28.01.2019 11-53-11_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>11:54:32</Time>
+      <MacAddress>68:05:CA:3C:35:75</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\28.01.2019 11-53-11_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>11:54:33</Time>
+      <MacAddress>68:05:CA:3C:35:75</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\28.01.2019 11-53-11_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:15:59</Time>
+      <MacAddress>68:05:CA:3C:35:75</MacAddress>
+      <Message>Expired waiting time</Message>
+      <Task_ID>.\TaskDetails\28.01.2019 11-53-11_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\01\\28.01.2019 11-53-11_CentOS_7_x64_aut.my</FilePath>
+</ExecutedTaskData>

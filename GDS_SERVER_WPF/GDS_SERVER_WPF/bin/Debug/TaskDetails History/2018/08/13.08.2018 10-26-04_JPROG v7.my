@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>JPROG v7</Name>
+  <Started>13.08.2018 10-26-04</Started>
+  <Status>Images/Failed.ico</Status>
+  <Finished>13.08.2018 11-08-51</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>UCEBNASK08</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>JPROG v7</Name>
+    <LastExecuted>13.08.2018 10-26-04</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>tCitAENS-Emb-PHEDwy0hA</_sourceIdentifier>
+        <Name>LEKTORSK8</Name>
+        <RealPCName>MININT-VN5MJNO</RealPCName>
+        <macAddresses>
+          <string>1C:1B:0D:12:1E:F7</string>
+          <string>68:05:CA:44:4D:1E</string>
+        </macAddresses>
+        <MacAddress>1C:1B:0D:12:1E:F7</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.50</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>10992 B</driveEImageName>
+        <dartInfo>504-707-667#10.202.20.50#49425</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK08</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\GOC\JPROG v7</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>JPROG v7</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\JPROG.V7\JPROG.V7.wim</SourcePath>
+      <BoolLabel>WIndows 10 JPROG</BoolLabel>
+      <PartitionSize>140</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>JPROG.V7</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK8</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:26:05</Time>
+      <MacAddress>1C:1B:0D:12:1E:F7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK8</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>10:26:06</Time>
+      <MacAddress>1C:1B:0D:12:1E:F7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK8</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:26:07</Time>
+      <MacAddress>1C:1B:0D:12:1E:F7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK8</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:26:08</Time>
+      <MacAddress>1C:1B:0D:12:1E:F7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK8</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>10:26:09</Time>
+      <MacAddress>1C:1B:0D:12:1E:F7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>LEKTORSK8</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>11:08:51</Time>
+      <MacAddress>1C:1B:0D:12:1E:F7</MacAddress>
+      <Message>Expired waiting time</Message>
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\08\\13.08.2018 10-26-04_JPROG v7.my</FilePath>
+</ExecutedTaskData>

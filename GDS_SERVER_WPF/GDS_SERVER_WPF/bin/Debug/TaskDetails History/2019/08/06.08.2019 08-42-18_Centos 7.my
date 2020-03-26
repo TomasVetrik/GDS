@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Centos 7</Name>
+  <Started>06.08.2019 08-42-18</Started>
+  <Status>Images/Failed.ico</Status>
+  <Finished>06.08.2019 09-15-34</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>UCEBNASK07</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Centos 7</Name>
+    <LastExecuted>06.08.2019 08-42-18</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>U8CaY5Vyd02D9SpnGmZvig</_sourceIdentifier>
+        <Name>STUDENTSK7-03</Name>
+        <RealPCName>STUDENTSK7-03</RealPCName>
+        <macAddresses>
+          <string>E0:D5:5E:02:EE:8C</string>
+        </macAddresses>
+        <MacAddress>E0:D5:5E:02:EE:8C</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-7400 CPU @ 3.00GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 11/08/17 12:51:49 Ver: 05.0000C</biosCaption>
+        <boardProductId>Z270-HD3P-CF</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.194</IPAddress>
+        <baseImageName>Windows Server 2016 No Sysprep</baseImageName>
+        <driveEImageName>MOC 20767 C</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK07</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\LINUX\CentOS 7</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>CentOS 7</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\LINUX\Base\_wim\CentOS_7\Centos_7.wim</SourcePath>
+      <BoolLabel>CentOS</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>Centos_7</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x86</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>true</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>false</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:42:20</Time>
+      <MacAddress>E0:D5:5E:02:EE:8C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.08.2019 08-42-18_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-03</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>8:43:37</Time>
+      <MacAddress>E0:D5:5E:02:EE:8C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.08.2019 08-42-18_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>8:43:38</Time>
+      <MacAddress>E0:D5:5E:02:EE:8C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.08.2019 08-42-18_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-03</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>8:43:39</Time>
+      <MacAddress>E0:D5:5E:02:EE:8C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.08.2019 08-42-18_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK7-03</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>9:15:34</Time>
+      <MacAddress>E0:D5:5E:02:EE:8C</MacAddress>
+      <Message>Expired waiting time</Message>
+      <Task_ID>.\TaskDetails\06.08.2019 08-42-18_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\08\\06.08.2019 08-42-18_Centos 7.my</FilePath>
+</ExecutedTaskData>

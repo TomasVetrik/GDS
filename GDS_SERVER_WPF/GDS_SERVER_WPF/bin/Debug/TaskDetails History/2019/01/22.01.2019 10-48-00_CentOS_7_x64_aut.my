@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>CentOS_7_x64_aut</Name>
+  <Started>22.01.2019 10-48-00</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>22.01.2019 10-56-18</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>!Testing</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>CentOS_7_x64_aut</Name>
+    <LastExecuted>22.01.2019 10-48-00</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Kl6kyi5j9k6UcqK0uO6Klw</_sourceIdentifier>
+        <Name>STUDENTSK11-10</Name>
+        <RealPCName>STUDENTSK11-10</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:B1:98</string>
+          <string>00:22:4D:81:6E:56</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>24576MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.26</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>!Testing</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\LINUX\CentOS_7_x64</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>CentOS_7_x64</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\LINUX\Base\_wim\CentOS_7\CentOS7_x64_aut.wim</SourcePath>
+      <BoolLabel>Default</BoolLabel>
+      <PartitionSize>80</PartitionSize>
+      <VHDResizeSize>40</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>CentOS7_x64_aut</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string />
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>true</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <SourceDirectoryInOS />
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <SourceDirectoryInWINPE>I:\Images\HIVE\pajka_temp\centos6.6</SourceDirectoryInWINPE>
+    <DestinationDirectoryInWINPE>C:\</DestinationDirectoryInWINPE>
+    <CopyFilesInWINPE>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\ANG0</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup.LOG</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup.LOG1</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup.LOG2</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bootmgr</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\BOOTNXT</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\BOOTSECT.BAK</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\CentOs_6.6_aut.iso</string>
+    </CopyFilesInWINPE>
+    <CommandsInWINPE />
+    <WaitingTime>20</WaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>10:49:22</Time>
+      <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.01.2019 10-48-00_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>10:49:23</Time>
+      <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.01.2019 10-48-00_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:49:24</Time>
+      <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.01.2019 10-48-00_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:49:25</Time>
+      <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.01.2019 10-48-00_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>10:49:26</Time>
+      <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.01.2019 10-48-00_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>10:50:25</Time>
+      <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.01.2019 10-48-00_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\01\\22.01.2019 10-48-00_CentOS_7_x64_aut.my</FilePath>
+</ExecutedTaskData>

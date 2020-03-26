@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>GOC BASE SEVECEK August 2018</Name>
+  <Started>05.10.2018 14-45-40</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>05.10.2018 17-50-43</Finished>
+  <Clients>2</Clients>
+  <Done>2</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK01</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>GOC BASE SEVECEK August 2018</Name>
+    <LastExecuted>05.10.2018 14-45-40</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>sX1V_S_E7k6vlXSY9oJgKA</_sourceIdentifier>
+        <Name>STUDENTSK1-06</Name>
+        <RealPCName>STUDENTSK1-06</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:F4:64</string>
+          <string>FC:AA:14:AC:74:21</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.120.26</IPAddress>
+        <baseImageName>Windows 7 Office 2013 x64</baseImageName>
+        <driveEImageName>RAB OFUN</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>rDsbPRReCEil8aohEgSM9w</_sourceIdentifier>
+        <Name>STUDENTSK1-05</Name>
+        <RealPCName>STUDENTSK1-05</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:F0:3C</string>
+          <string>FC:AA:14:AC:75:5F</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.120.25</IPAddress>
+        <baseImageName>Windows 7 Office 2013 x64</baseImageName>
+        <driveEImageName>RAB OFUN</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK01</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\MOC\Windows Server 2016</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows Server 2016</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\Base\_WIM\W2k16\W2k16.wim</SourcePath>
+      <BoolLabel>Windows Server 2016</BoolLabel>
+      <PartitionSize>100</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W2k16</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W2k16</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\GOC\GOC BASE SEVECEK August 2018</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>GOC BASE SEVECEK August 2018</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\GOC\DriveE\_wim\GOC-BASE_August_2018-2\GOC-BASE.wim</SourcePath>
+      <BoolLabel>Windows Server 2016</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:46:26</Time>
+      <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:46:36</Time>
+      <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>14:47:54</Time>
+      <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>14:47:55</Time>
+      <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>14:47:56</Time>
+      <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>14:47:57</Time>
+      <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-05</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>14:48:08</Time>
+      <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-05</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>14:48:09</Time>
+      <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-05</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>14:48:10</Time>
+      <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-05</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>14:48:11</Time>
+      <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:43:12</Time>
+      <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:43:13</Time>
+      <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:50:42</Time>
+      <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-05</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:50:43</Time>
+      <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\10\\05.10.2018 14-45-40_GOC BASE SEVECEK August 2018.my</FilePath>
+</ExecutedTaskData>

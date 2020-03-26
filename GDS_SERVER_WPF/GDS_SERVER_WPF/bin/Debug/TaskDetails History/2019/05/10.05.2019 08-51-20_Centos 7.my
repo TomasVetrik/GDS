@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Centos 7</Name>
+  <Started>10.05.2019 08-51-20</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>10.05.2019 12-16-54</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>!Testing</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Centos 7</Name>
+    <LastExecuted>10.05.2019 08-51-20</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>KTgxCNEKHEmClLiEkW-kdw</_sourceIdentifier>
+        <Name>STUDENTSK11-08</Name>
+        <RealPCName>MININT-AUMIQHP</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:BD:DE</string>
+          <string>68:05:CA:2A:CF:C9</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+        <OSInformations>, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.10</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>821-636-075#10.202.20.10#49678</dartInfo>
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>!Testing</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\LINUX\CentOS 7.4</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>CentOS 7.4</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\LINUX\CentOS_Menu_All\CentosALL_7_4.wim</SourcePath>
+      <BoolLabel>CentOS</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>CentosALL_7_4</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x86</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>true</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>10</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>8:59:02</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>8:59:03</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>8:59:04</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>8:59:05</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:12:08</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:16:54</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:16:54</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:16:54</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:16:54</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:16:54</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:16:54</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:16:54</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:16:54</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:16:54</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:16:54</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:16:54</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:16:54</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:16:54</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:16:54</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:16:54</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:16:54</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:16:54</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:16:54</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:16:54</Time>
+      <MacAddress>68:05:CA:0C:BD:DE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\10.05.2019 08-51-20_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\05\\10.05.2019 08-51-20_Centos 7.my</FilePath>
+</ExecutedTaskData>

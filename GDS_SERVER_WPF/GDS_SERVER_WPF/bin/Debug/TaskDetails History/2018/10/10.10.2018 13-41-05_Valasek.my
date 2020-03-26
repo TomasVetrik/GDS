@@ -1,0 +1,420 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Valasek</Name>
+  <Started>10.10.2018 13-41-05</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>11.10.2018 07-24-30</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>!Testing</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Valasek</Name>
+    <LastExecuted>10.10.2018 13-41-05</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>A2GELKoMLUCo2JMqMb-Sjg</_sourceIdentifier>
+        <Name>STUDENTSK11-09</Name>
+        <RealPCName>STUDENTSK11-09</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:29:D9:D7</string>
+          <string>00:22:4D:7C:7B:7A</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.143</IPAddress>
+        <baseImageName>Windows Server 2016 No Sysprep</baseImageName>
+        <driveEImageName>MOC 20745 B</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>!Testing</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 10 Office 2016 x64 SP</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 10 Office 2016 x64 SP</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\_NO_SYSPREP\W10_Off2k16_x64_SingleProfile_NO_SYSPREP_1803\W10_Off2k16_x64_SingleProfile_NO_SYSPREP_1803.wim</SourcePath>
+      <BoolLabel>Windows 10 Office 2016</BoolLabel>
+      <PartitionSize>160</PartitionSize>
+      <VHDResizeSize>90</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W10_Off2k16_x64_SingleProfile</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\GOC\Valasek</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>Valasek</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\GOC\DriveE\_wim\Valasek\Valasek.wim</SourcePath>
+      <BoolLabel>Windows 10</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\Autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:42:41</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>13:44:14</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:44:15</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:44:16</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:44:17</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>15:17:15</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message>CLIENT NEED RESTART</Message>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:17:16</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>15:17:17</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>15:17:18</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:17:19</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:17:20</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>17:00:55</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message>CLIENT NEED RESTART</Message>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:00:56</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>17:00:57</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:00:58</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>17:00:59</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>17:01:00</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>18:02:15</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message>CLIENT NEED RESTART</Message>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>18:02:16</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>18:02:17</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>18:02:18</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>18:02:19</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>18:02:20</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>19:06:01</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message>CLIENT NEED RESTART</Message>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>19:06:02</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>19:06:03</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>19:06:04</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>19:06:05</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>19:06:06</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>20:10:47</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message>CLIENT NEED RESTART</Message>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>20:10:48</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>20:10:49</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>20:10:50</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>20:10:51</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>20:10:52</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>7:24:09</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message>CLONE FAILED EC -1054735609</Message>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>7:24:10</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>7:24:11</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>7:24:12</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>7:24:13</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>7:24:14</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\10\\10.10.2018 13-41-05_Valasek.my</FilePath>
+</ExecutedTaskData>

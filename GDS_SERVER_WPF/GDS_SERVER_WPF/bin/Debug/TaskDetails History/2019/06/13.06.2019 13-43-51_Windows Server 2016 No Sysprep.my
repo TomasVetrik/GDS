@@ -1,0 +1,496 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows Server 2016 No Sysprep</Name>
+  <Started>13.06.2019 13-43-51</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>13.06.2019 14-09-31</Finished>
+  <Clients>5</Clients>
+  <Done>5</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK03</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows Server 2016 No Sysprep</Name>
+    <LastExecuted>13.06.2019 13-43-51</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>I14JXxIC2kWQNsoymqZ9Ug</_sourceIdentifier>
+        <Name>LEKTORSK3</Name>
+        <RealPCName>LEKTORSK3</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4D:F5</string>
+          <string>1C:1B:0D:12:1F:7C</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4D:F5</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.154</IPAddress>
+        <baseImageName>Windows Server 2016 No Sysprep</baseImageName>
+        <driveEImageName>GOC190_Meciar</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>mnTLWG4TF0-eLd1qWqc4Jw</_sourceIdentifier>
+        <Name>STUDENTSK3-01</Name>
+        <RealPCName>STUDENTSK3-01</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4D:F6</string>
+          <string>1C:1B:0D:12:1E:FC</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4D:F6</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.158</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>10961 C</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>HiqLaER1L0SN1rErLqvqTg</_sourceIdentifier>
+        <Name>STUDENTSK3-02</Name>
+        <RealPCName>STUDENTSK3-02</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4D:F1</string>
+          <string>1C:1B:0D:12:1E:F9</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4D:F1</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 07/04/17 17:08:55 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.205</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>10961 C</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>re2Lhj4kbUGz9rG2DF0FQQ</_sourceIdentifier>
+        <Name>STUDENTSK3-03</Name>
+        <RealPCName>STUDENTSK3-03</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4E:83</string>
+          <string>1C:1B:0D:12:1E:26</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4E:83</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.153</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>10961 C</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>N6uGqj0M0Eme_nQKbSuulg</_sourceIdentifier>
+        <Name>STUDENTSK3-04</Name>
+        <RealPCName>STUDENTSK3-04</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4C:7A</string>
+          <string>1C:1B:0D:12:1E:2B</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4C:7A</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 07/04/17 17:08:55 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.184</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>10961 C</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK03</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\MOC\Windows Server 2016 No Sysprep</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows Server 2016 No Sysprep</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\Base\_WIM\NO_SYSPREP\w2k16\w2k16.wim</SourcePath>
+      <BoolLabel>Windows Server 2016</BoolLabel>
+      <PartitionSize>122</PartitionSize>
+      <VHDResizeSize>40</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>w2k16</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W2k16</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK3</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:43:52</Time>
+      <MacAddress>68:05:CA:44:4D:F5</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:44:42</Time>
+      <MacAddress>68:05:CA:44:4E:83</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:44:42</Time>
+      <MacAddress>68:05:CA:44:4D:F6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:44:42</Time>
+      <MacAddress>68:05:CA:44:4D:F1</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:44:42</Time>
+      <MacAddress>68:05:CA:44:4C:7A</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK3</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>13:45:39</Time>
+      <MacAddress>68:05:CA:44:4D:F5</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK3</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:45:40</Time>
+      <MacAddress>68:05:CA:44:4D:F5</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK3</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:45:41</Time>
+      <MacAddress>68:05:CA:44:4D:F5</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK3</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:45:42</Time>
+      <MacAddress>68:05:CA:44:4D:F5</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-01</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>13:45:59</Time>
+      <MacAddress>68:05:CA:44:4D:F6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-04</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>13:45:59</Time>
+      <MacAddress>68:05:CA:44:4C:7A</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:46:00</Time>
+      <MacAddress>68:05:CA:44:4D:F6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:46:00</Time>
+      <MacAddress>68:05:CA:44:4C:7A</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:46:01</Time>
+      <MacAddress>68:05:CA:44:4C:7A</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:46:01</Time>
+      <MacAddress>68:05:CA:44:4D:F6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-04</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:46:02</Time>
+      <MacAddress>68:05:CA:44:4C:7A</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-01</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:46:02</Time>
+      <MacAddress>68:05:CA:44:4D:F6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-02</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>13:46:04</Time>
+      <MacAddress>68:05:CA:44:4D:F1</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:46:05</Time>
+      <MacAddress>68:05:CA:44:4D:F1</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:46:06</Time>
+      <MacAddress>68:05:CA:44:4D:F1</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-02</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:46:07</Time>
+      <MacAddress>68:05:CA:44:4D:F1</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-03</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>13:46:09</Time>
+      <MacAddress>68:05:CA:44:4E:83</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:46:10</Time>
+      <MacAddress>68:05:CA:44:4E:83</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:46:11</Time>
+      <MacAddress>68:05:CA:44:4E:83</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-03</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:46:12</Time>
+      <MacAddress>68:05:CA:44:4E:83</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK3</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:59:09</Time>
+      <MacAddress>68:05:CA:44:4D:F5</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK3</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:59:10</Time>
+      <MacAddress>68:05:CA:44:4D:F5</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:08:55</Time>
+      <MacAddress>68:05:CA:44:4D:F1</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>14:08:56</Time>
+      <MacAddress>68:05:CA:44:4D:F1</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:09:15</Time>
+      <MacAddress>68:05:CA:44:4E:83</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>14:09:16</Time>
+      <MacAddress>68:05:CA:44:4E:83</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:09:25</Time>
+      <MacAddress>68:05:CA:44:4D:F6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>14:09:26</Time>
+      <MacAddress>68:05:CA:44:4D:F6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:09:30</Time>
+      <MacAddress>68:05:CA:44:4C:7A</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK3-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>14:09:31</Time>
+      <MacAddress>68:05:CA:44:4C:7A</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\06\\13.06.2019 13-43-51_Windows Server 2016 No Sysprep.my</FilePath>
+</ExecutedTaskData>

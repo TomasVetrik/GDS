@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 10 Office 2016 x64 Polivka</Name>
+  <Started>06.03.2018 11-12-43</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>06.03.2018 11-33-50</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK01</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 10 Office 2016 x64 Polivka</Name>
+    <LastExecuted>06.03.2018 11-12-43</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>OSL6DBoNv02kB9c-JMe8SA</_sourceIdentifier>
+        <Name>STUDENTSK1-01</Name>
+        <RealPCName>STUDENTSK1-01</RealPCName>
+        <macAddresses>
+          <string>FC:AA:14:AC:74:32</string>
+          <string>68:05:CA:3B:F7:66</string>
+        </macAddresses>
+        <MacAddress>FC:AA:14:AC:74:32</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.120.21</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>GOC BASE SEVECEK</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK01</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 10 x64 Office 2016 Polivka</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 10 x64 Office 2016 Polivka</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\W10_Off2k16_x64_SingleProfile_Polivka\W10_Off2k16_x64_SingleProfile_Polivka.wim</SourcePath>
+      <BoolLabel>Windows 10 x64</BoolLabel>
+      <PartitionSize>200</PartitionSize>
+      <VHDResizeSize>150</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W10_Off2k16_x64_SingleProfile_Polivka</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:13:39</Time>
+      <MacAddress>FC:AA:14:AC:74:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-01</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>11:15:27</Time>
+      <MacAddress>FC:AA:14:AC:74:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:15:28</Time>
+      <MacAddress>FC:AA:14:AC:74:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>11:15:29</Time>
+      <MacAddress>FC:AA:14:AC:74:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-01</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>11:15:30</Time>
+      <MacAddress>FC:AA:14:AC:74:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:33:49</Time>
+      <MacAddress>FC:AA:14:AC:74:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:33:50</Time>
+      <MacAddress>FC:AA:14:AC:74:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\03\\06.03.2018 11-12-43_Windows 10 Office 2016 x64 Polivka.my</FilePath>
+</ExecutedTaskData>

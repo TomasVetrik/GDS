@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 7 Office 2013 x86</Name>
+  <Started>05.11.2018 09-29-16</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>05.11.2018 11-04-03</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>NOTEBOOKS</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 7 Office 2013 x86</Name>
+    <LastExecuted>05.11.2018 09-29-16</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>FFYoUG3RqkivyO9dXBU9mQ</_sourceIdentifier>
+        <Name>TOSCHIBA</Name>
+        <RealPCName>TOSCHIBA</RealPCName>
+        <macAddresses>
+          <string>00:21:5D:71:8A:B0</string>
+          <string>00:1E:33:6C:D6:C2</string>
+        </macAddresses>
+        <MacAddress>00:21:5D:71:8A:B0</MacAddress>
+        <OSInformations>Microsoft Windows 7 Enterprise, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™2 Duo CPU T5800 @ 2.00GHz</processorInfo>
+        <physicalMemoryInfo>3072MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>InsydeH2O Version 1.60</biosCaption>
+        <boardProductId>Portable PC</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.131</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>NOTEBOOKS</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 7 Office 2013 x86</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 7 Office 2013 x86</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\W7_Off2k13_x86\W7_Off2k13_x86.wim</SourcePath>
+      <BoolLabel>Windows 7 Office 2013</BoolLabel>
+      <PartitionSize>92</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>W7_Off2k13_x86</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x86</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <DriveEImageData>
+      <Name>10989B</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\DriveE\_WIM\10989B\10989B.wim</SourcePath>
+      <BoolLabel>MOC 10989 B</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>TOSCHIBA</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:29:43</Time>
+      <MacAddress>00:21:5D:71:8A:B0</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>TOSCHIBA</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>9:29:44</Time>
+      <MacAddress>00:21:5D:71:8A:B0</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>TOSCHIBA</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:29:45</Time>
+      <MacAddress>00:21:5D:71:8A:B0</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>TOSCHIBA</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:29:46</Time>
+      <MacAddress>00:21:5D:71:8A:B0</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>TOSCHIBA</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:29:47</Time>
+      <MacAddress>00:21:5D:71:8A:B0</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>TOSCHIBA</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:04:01</Time>
+      <MacAddress>00:21:5D:71:8A:B0</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>TOSCHIBA</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:04:02</Time>
+      <MacAddress>00:21:5D:71:8A:B0</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>TOSCHIBA</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>11:04:03</Time>
+      <MacAddress>00:21:5D:71:8A:B0</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\11\\05.11.2018 09-29-16_Windows 7 Office 2013 x86.my</FilePath>
+</ExecutedTaskData>

@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 10 Office 2016 x64 MP No Sysprep</Name>
+  <Started>11.12.2018 10-46-05</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>11.12.2018 11-23-25</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>Default</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 10 Office 2016 x64 MP No Sysprep</Name>
+    <LastExecuted>11.12.2018 10-46-05</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>HcXSoyie_Eqh6Sla5QjTow</_sourceIdentifier>
+        <Name>STUDENTSK6-08_NUC</Name>
+        <RealPCName>MININT-NQ175MQ</RealPCName>
+        <macAddresses>
+          <string>94:C6:91:A4:3E:02</string>
+        </macAddresses>
+        <MacAddress>94:C6:91:A4:3E:02</MacAddress>
+        <OSInformations>, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.21.125</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>889-763-376#10.202.21.125#49672</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>Default</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 10 Office 2016 x64 MP</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 10 Office 2016 x64 MP</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\_NO_SYSPREP\W10_Off2k16_x64_Multiprofile_NO_SYSPREP_1803\W10_Off2k16_x64_Multiprofile_NO_SYSPREP_1803.wim</SourcePath>
+      <BoolLabel>Windows 10 Office 2016</BoolLabel>
+      <PartitionSize>162</PartitionSize>
+      <VHDResizeSize>90</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W10_Off2k16_x64_MultiProfile</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-08_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:46:07</Time>
+      <MacAddress>94:C6:91:A4:3E:02</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-08_NUC</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>10:46:08</Time>
+      <MacAddress>94:C6:91:A4:3E:02</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-08_NUC</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:46:09</Time>
+      <MacAddress>94:C6:91:A4:3E:02</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-08_NUC</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:46:10</Time>
+      <MacAddress>94:C6:91:A4:3E:02</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-08_NUC</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>10:46:11</Time>
+      <MacAddress>94:C6:91:A4:3E:02</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-08_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:23:24</Time>
+      <MacAddress>94:C6:91:A4:3E:02</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-08_NUC</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:23:25</Time>
+      <MacAddress>94:C6:91:A4:3E:02</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\12\\11.12.2018 10-46-05_Windows 10 Office 2016 x64 MP No Sysprep.my</FilePath>
+</ExecutedTaskData>

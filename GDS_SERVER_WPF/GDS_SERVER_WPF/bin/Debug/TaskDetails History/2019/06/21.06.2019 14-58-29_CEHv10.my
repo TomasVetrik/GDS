@@ -1,0 +1,1449 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>CEHv10</Name>
+  <Started>21.06.2019 14-58-29</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>21.06.2019 16-35-27</Finished>
+  <Clients>13</Clients>
+  <Done>0</Done>
+  <Failed>13</Failed>
+  <MachineGroup>UCEBNASK14</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>CEHv10</Name>
+    <LastExecuted>21.06.2019 14-58-29</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>1nkLcjTS50SWe_sVMhYoqA</_sourceIdentifier>
+        <Name>LEKTORSK14</Name>
+        <RealPCName>LEKTORSK14</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:AC:AD</string>
+          <string>68:05:CA:29:C8:B5</string>
+          <string>74:D4:35:86:E9:B1</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:AC:AD</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.11</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName>SAPFL</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>hDq2EUg1tki8ehGKiM4Uyw</_sourceIdentifier>
+        <Name>STUDENTSK14-01</Name>
+        <RealPCName>STUDENTSK14-01</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:29:D7:83</string>
+          <string>74:D4:35:86:E9:A3</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:29:D7:83</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.41</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName>SAPFL</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>oXCydhOk_UKMcdY8dbowZg</_sourceIdentifier>
+        <Name>STUDENTSK14-02</Name>
+        <RealPCName>STUDENTSK14-02</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:24:67:C0</string>
+          <string>74:D4:35:8D:A0:B4</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:24:67:C0</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.6</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName>SAPFL</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>zvBGh8f3aU6-L_GYQ8-pcQ</_sourceIdentifier>
+        <Name>STUDENTSK14-03</Name>
+        <RealPCName>STUDENTSK14-03</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:29:D7:86</string>
+          <string>74:D4:35:8B:18:EE</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:29:D7:86</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.22</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName>SAPFL</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>rq9w9la25Um6d7p1VgS3RA</_sourceIdentifier>
+        <Name>STUDENTSK14-04</Name>
+        <RealPCName>STUDENTSK14-04</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:29:DA:21</string>
+          <string>74:D4:35:8B:5E:27</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:29:DA:21</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.33</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName>SAPFL</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>0H7owudvsEKgcxXcIufotw</_sourceIdentifier>
+        <Name>STUDENTSK14-05</Name>
+        <RealPCName>STUDENTSK14-05</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:29:D9:E2</string>
+          <string>74:D4:35:8D:9E:6E</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:29:D9:E2</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.85</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName>SAPFL</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>a9HpswABakOPXR9-FUcVLQ</_sourceIdentifier>
+        <Name>STUDENTSK14-06</Name>
+        <RealPCName>STUDENTSK14-06</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:24:7A:E0</string>
+          <string>74:D4:35:8D:9F:BB</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:24:7A:E0</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.34</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName>SAPFL</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>tuKnCDexAUW0k9D9viDgcg</_sourceIdentifier>
+        <Name>STUDENTSK14-07</Name>
+        <RealPCName>STUDENTSK14-07</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:29:D9:DC</string>
+          <string>74:D4:35:8D:8D:F9</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:29:D9:DC</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.111</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName>SAPFL</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>t2muBl4LrEmi8g0Is8Z6WA</_sourceIdentifier>
+        <Name>STUDENTSK14-08</Name>
+        <RealPCName>STUDENTSK14-08</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:24:7A:E4</string>
+          <string>74:D4:35:8D:9D:1F</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:24:7A:E4</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.40</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName>SAPFL</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>NFC0BbS-ZUyhYXSCp9a9Xw</_sourceIdentifier>
+        <Name>STUDENTSK14-09</Name>
+        <RealPCName>STUDENTSK14-09</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:15:8A:3F</string>
+          <string>74:D4:35:1D:AC:A7</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.149</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName>SAPFL</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>xnNF1IrLtk-vwFkvW4txAg</_sourceIdentifier>
+        <Name>STUDENTSK14-10</Name>
+        <RealPCName>STUDENTSK14-10</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:24:7F:38</string>
+          <string>74:D4:35:8D:8D:BD</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:24:7F:38</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.150</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName>SAPFL</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>HYuWeQx-cEqAFNcG3Y6nDw</_sourceIdentifier>
+        <Name>STUDENTSK14-11</Name>
+        <RealPCName>STUDENTSK14-11</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:24:4F:EA</string>
+          <string>74:D4:35:1D:AC:AB</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:24:4F:EA</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 01/17/14 21:20:20 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.250</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName>SAPFL</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>rt-RynQ_V0-OyMvKny198A</_sourceIdentifier>
+        <Name>STUDENTSK14-12</Name>
+        <RealPCName>STUDENTSK14-12</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:D0:30</string>
+          <string>68:05:CA:24:7A:E1</string>
+          <string>74:D4:35:8D:9D:37</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.115</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName>SAPFL</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK14</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\MOC\Windows Server 2012 R2</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows Server 2012 R2</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\Base\_WIM\W2k12r2\W2k12R2.wim</SourcePath>
+      <BoolLabel>Windows 2012 R2</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>W2k12R2</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W2k12_R2</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\GOC\CEHv10</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>CEHv10</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\GOC\DriveE\_wim\CEHv10\CEHv10.wim</SourcePath>
+      <BoolLabel>CEHv10</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\Autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+    <SendWarningMails>true</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:58:39</Time>
+      <MacAddress>68:05:CA:29:DA:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:58:39</Time>
+      <MacAddress>68:05:CA:24:7F:38</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:58:39</Time>
+      <MacAddress>68:05:CA:29:D9:DC</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-11</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:58:39</Time>
+      <MacAddress>68:05:CA:24:4F:EA</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:58:39</Time>
+      <MacAddress>68:05:CA:29:D7:86</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:59:22</Time>
+      <MacAddress>68:05:CA:24:7A:E0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:59:23</Time>
+      <MacAddress>68:05:CA:24:7A:E4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:59:24</Time>
+      <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:59:25</Time>
+      <MacAddress>68:05:CA:24:67:C0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:59:25</Time>
+      <MacAddress>68:05:CA:29:D9:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:59:25</Time>
+      <MacAddress>68:05:CA:29:D7:83</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:59:32</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:59:35</Time>
+      <MacAddress>68:05:CA:0C:AC:AD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-07</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:00:01</Time>
+      <MacAddress>68:05:CA:29:D9:DC</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-03</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:00:01</Time>
+      <MacAddress>68:05:CA:29:D7:86</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-04</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:00:01</Time>
+      <MacAddress>68:05:CA:29:DA:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:00:01</Time>
+      <MacAddress>68:05:CA:24:7F:38</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-07</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:00:02</Time>
+      <MacAddress>68:05:CA:29:D9:DC</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:00:02</Time>
+      <MacAddress>68:05:CA:29:DA:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:00:02</Time>
+      <MacAddress>68:05:CA:29:D7:86</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:00:02</Time>
+      <MacAddress>68:05:CA:24:7F:38</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-07</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:00:03</Time>
+      <MacAddress>68:05:CA:29:D9:DC</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-04</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:00:03</Time>
+      <MacAddress>68:05:CA:29:DA:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:00:03</Time>
+      <MacAddress>68:05:CA:24:7F:38</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-03</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:00:03</Time>
+      <MacAddress>68:05:CA:29:D7:86</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-11</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:00:21</Time>
+      <MacAddress>68:05:CA:24:4F:EA</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-11</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:00:22</Time>
+      <MacAddress>68:05:CA:24:4F:EA</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-11</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:00:23</Time>
+      <MacAddress>68:05:CA:24:4F:EA</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-06</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:00:44</Time>
+      <MacAddress>68:05:CA:24:7A:E0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-08</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:00:45</Time>
+      <MacAddress>68:05:CA:24:7A:E4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:00:45</Time>
+      <MacAddress>68:05:CA:24:7A:E0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-08</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:00:46</Time>
+      <MacAddress>68:05:CA:24:7A:E4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-09</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:00:46</Time>
+      <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-06</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:00:46</Time>
+      <MacAddress>68:05:CA:24:7A:E0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-08</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:00:47</Time>
+      <MacAddress>68:05:CA:24:7A:E4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:00:47</Time>
+      <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-05</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:00:48</Time>
+      <MacAddress>68:05:CA:29:D9:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-01</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:00:48</Time>
+      <MacAddress>68:05:CA:29:D7:83</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-02</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:00:48</Time>
+      <MacAddress>68:05:CA:24:67:C0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-09</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:00:48</Time>
+      <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:00:49</Time>
+      <MacAddress>68:05:CA:29:D7:83</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-05</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:00:49</Time>
+      <MacAddress>68:05:CA:29:D9:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:00:49</Time>
+      <MacAddress>68:05:CA:24:67:C0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-01</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:00:50</Time>
+      <MacAddress>68:05:CA:29:D7:83</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-02</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:00:50</Time>
+      <MacAddress>68:05:CA:24:67:C0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-05</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:00:50</Time>
+      <MacAddress>68:05:CA:29:D9:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:00:59</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:01:01</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:01:02</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:01:03</Time>
+      <MacAddress>68:05:CA:0C:AC:AD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:01:04</Time>
+      <MacAddress>68:05:CA:0C:AC:AD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:01:05</Time>
+      <MacAddress>68:05:CA:0C:AC:AD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>16:11:57</Time>
+      <MacAddress>68:05:CA:24:7F:38</MacAddress>
+      <Message>CLONE FAILED There is not enough space on the disk</Message>
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK14-03</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>16:11:57</Time>
+      <MacAddress>68:05:CA:29:D7:86</MacAddress>
+      <Message>CLONE FAILED There is not enough space on the disk</Message>
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK14-04</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>16:11:57</Time>
+      <MacAddress>68:05:CA:29:DA:21</MacAddress>
+      <Message>CLONE FAILED There is not enough space on the disk</Message>
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:11:58</Time>
+      <MacAddress>68:05:CA:24:7F:38</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:11:58</Time>
+      <MacAddress>68:05:CA:29:D7:86</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:11:58</Time>
+      <MacAddress>68:05:CA:29:DA:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>16:11:59</Time>
+      <MacAddress>68:05:CA:24:7F:38</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-03</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>16:11:59</Time>
+      <MacAddress>68:05:CA:29:D7:86</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-04</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>16:11:59</Time>
+      <MacAddress>68:05:CA:29:DA:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK14-11</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>16:12:02</Time>
+      <MacAddress>68:05:CA:24:4F:EA</MacAddress>
+      <Message>CLONE FAILED There is not enough space on the disk</Message>
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK14-07</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>16:12:02</Time>
+      <MacAddress>68:05:CA:29:D9:DC</MacAddress>
+      <Message>CLONE FAILED There is not enough space on the disk</Message>
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK14-09</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>16:12:02</Time>
+      <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+      <Message>CLONE FAILED There is not enough space on the disk</Message>
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-11</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:12:03</Time>
+      <MacAddress>68:05:CA:24:4F:EA</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:12:03</Time>
+      <MacAddress>68:05:CA:29:D9:DC</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:12:03</Time>
+      <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-11</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>16:12:04</Time>
+      <MacAddress>68:05:CA:24:4F:EA</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-07</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>16:12:04</Time>
+      <MacAddress>68:05:CA:29:D9:DC</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-09</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>16:12:04</Time>
+      <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:05</Time>
+      <MacAddress>68:05:CA:24:7F:38</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:05</Time>
+      <MacAddress>68:05:CA:29:D7:86</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:05</Time>
+      <MacAddress>68:05:CA:29:DA:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>16:12:05</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message>CLONE FAILED There is not enough space on the disk</Message>
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:12:06</Time>
+      <MacAddress>68:05:CA:24:7F:38</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-03</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:12:06</Time>
+      <MacAddress>68:05:CA:29:D7:86</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-04</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:12:06</Time>
+      <MacAddress>68:05:CA:29:DA:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:12:06</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK14-08</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>16:12:06</Time>
+      <MacAddress>68:05:CA:24:7A:E4</MacAddress>
+      <Message>CLONE FAILED There is not enough space on the disk</Message>
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>16:12:07</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:12:07</Time>
+      <MacAddress>68:05:CA:24:7A:E4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK14-01</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>16:12:08</Time>
+      <MacAddress>68:05:CA:29:D7:83</MacAddress>
+      <Message>CLONE FAILED There is not enough space on the disk</Message>
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK14-05</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>16:12:08</Time>
+      <MacAddress>68:05:CA:29:D9:E2</MacAddress>
+      <Message>CLONE FAILED There is not enough space on the disk</Message>
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-08</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>16:12:09</Time>
+      <MacAddress>68:05:CA:24:7A:E4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>16:12:09</Time>
+      <MacAddress>68:05:CA:0C:AC:AD</MacAddress>
+      <Message>CLONE FAILED There is not enough space on the disk</Message>
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK14-02</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>16:12:09</Time>
+      <MacAddress>68:05:CA:24:67:C0</MacAddress>
+      <Message>CLONE FAILED There is not enough space on the disk</Message>
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:12:09</Time>
+      <MacAddress>68:05:CA:29:D7:83</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:12:09</Time>
+      <MacAddress>68:05:CA:29:D9:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:12:10</Time>
+      <MacAddress>68:05:CA:0C:AC:AD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:12:10</Time>
+      <MacAddress>68:05:CA:24:67:C0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-11</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:10</Time>
+      <MacAddress>68:05:CA:24:4F:EA</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-07</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:10</Time>
+      <MacAddress>68:05:CA:29:D9:DC</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-01</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>16:12:10</Time>
+      <MacAddress>68:05:CA:29:D7:83</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK14-06</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>16:12:10</Time>
+      <MacAddress>68:05:CA:24:7A:E0</MacAddress>
+      <Message>CLONE FAILED There is not enough space on the disk</Message>
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-05</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>16:12:10</Time>
+      <MacAddress>68:05:CA:29:D9:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>16:12:11</Time>
+      <MacAddress>68:05:CA:0C:AC:AD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-02</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>16:12:11</Time>
+      <MacAddress>68:05:CA:24:67:C0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:11</Time>
+      <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-11</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:12:11</Time>
+      <MacAddress>68:05:CA:24:4F:EA</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-07</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:12:11</Time>
+      <MacAddress>68:05:CA:29:D9:DC</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:12:11</Time>
+      <MacAddress>68:05:CA:24:7A:E0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-09</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:12:12</Time>
+      <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-06</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>16:12:12</Time>
+      <MacAddress>68:05:CA:24:7A:E0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:13</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:12:14</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-08</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:15</Time>
+      <MacAddress>68:05:CA:24:7A:E4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-08</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:12:16</Time>
+      <MacAddress>68:05:CA:24:7A:E4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:16</Time>
+      <MacAddress>68:05:CA:29:D7:83</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-05</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:16</Time>
+      <MacAddress>68:05:CA:29:D9:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:17</Time>
+      <MacAddress>68:05:CA:0C:AC:AD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:17</Time>
+      <MacAddress>68:05:CA:24:67:C0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-01</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:12:17</Time>
+      <MacAddress>68:05:CA:29:D7:83</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-05</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:12:17</Time>
+      <MacAddress>68:05:CA:29:D9:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:12:18</Time>
+      <MacAddress>68:05:CA:0C:AC:AD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-02</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:12:18</Time>
+      <MacAddress>68:05:CA:24:67:C0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:18</Time>
+      <MacAddress>68:05:CA:24:7A:E0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-06</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:12:19</Time>
+      <MacAddress>68:05:CA:24:7A:E0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 14-58-29_CEHv10.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\06\\21.06.2019 14-58-29_CEHv10.my</FilePath>
+</ExecutedTaskData>

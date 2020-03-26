@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Shutdown</Name>
+  <Started>05.01.2018 16-02-34</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>05.01.2018 16-02-37</Finished>
+  <Clients>3</Clients>
+  <Done>3</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK12</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Shutdown</Name>
+    <LastExecuted>05.01.2018 16-02-34</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>VCakAvXZRk2twKNW6k-Qiw</_sourceIdentifier>
+        <Name>LEKTORSK12</Name>
+        <RealPCName>LEKTORSK12</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:F1:80</string>
+          <string>FC:AA:14:AC:74:1F</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:F1:80</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 11/19/14 21:14:12 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.121</IPAddress>
+        <baseImageName>Windows 7 Office 2010 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>1Xv15DP4ck-_2dztos-fqA</_sourceIdentifier>
+        <Name>STUDENTSK12-01</Name>
+        <RealPCName>STUDENTSK12-01</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3C:30:DB</string>
+          <string>FC:AA:14:AC:71:9C</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3C:30:DB</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 11/19/14 21:14:12 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.91</IPAddress>
+        <baseImageName>Windows 7 Office 2010 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Y-t6ypR0m0uDdKp79yz5SQ</_sourceIdentifier>
+        <Name>STUDENTSK12-03</Name>
+        <RealPCName>STUDENTSK12-03</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3C:35:32</string>
+          <string>FC:AA:14:AC:70:2B</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3C:35:32</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 11/19/14 21:14:12 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.95</IPAddress>
+        <baseImageName>Windows 7 Office 2010 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK12</MachineGroup>
+    <WakeOnLan>false</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:02:35</Time>
+      <MacAddress>68:05:CA:3C:30:DB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:02:35</Time>
+      <MacAddress>68:05:CA:3B:F1:80</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:02:35</Time>
+      <MacAddress>68:05:CA:3C:35:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:02:37</Time>
+      <MacAddress>68:05:CA:3C:35:32</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:02:37</Time>
+      <MacAddress>68:05:CA:3C:30:DB</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:02:37</Time>
+      <MacAddress>68:05:CA:3B:F1:80</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\01\\05.01.2018 16-02-34_Shutdown.my</FilePath>
+</ExecutedTaskData>

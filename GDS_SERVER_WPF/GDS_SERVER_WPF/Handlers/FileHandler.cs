@@ -7,24 +7,29 @@ using System.Xml.Serialization;
 namespace GDS_SERVER_WPF
 {
     public class FileHandler
-    {     
-        public static T Load<T>(string FileSpec)
+    {
+        private static readonly object loadLock = new object();
+        public static T Load<T>(string FileSpec, int counter = 0)
         {
             try
             {
-                var formatter = new XmlSerializer(typeof(T));
-                using (var aFile = new FileStream(FileSpec, FileMode.Open))
+                lock (loadLock)
                 {
-                    byte[] buffer = new byte[aFile.Length];
-                    aFile.Read(buffer, 0, (int)aFile.Length);
-                    using (MemoryStream stream = new MemoryStream(buffer))
+                    var formatter = new XmlSerializer(typeof(T));
+                    using (var aFile = new FileStream(FileSpec, FileMode.Open, FileAccess.Read))
                     {
-                        return (T)formatter.Deserialize(stream);
+                        byte[] buffer = new byte[aFile.Length];
+                        aFile.Read(buffer, 0, (int)aFile.Length);
+                        using (MemoryStream stream = new MemoryStream(buffer))
+                        {
+                            return (T)formatter.Deserialize(stream);
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
+                counter++;
                 if (ex.ToString().Contains("error in XML"))
                 {
                     try
@@ -41,7 +46,13 @@ namespace GDS_SERVER_WPF
                     catch { }
                     return default(T);
                 }
-                return Load<T>(FileSpec);
+                else if (ex.ToString().Contains("The process cannot access the file"))
+                {
+                    Thread.Sleep(500);
+                    if (counter >= 5)                                            
+                        return default(T);                                
+                }
+                return Load<T>(FileSpec, counter);                                
             }
         }
 
@@ -58,8 +69,9 @@ namespace GDS_SERVER_WPF
             }
             catch
             {
-                if (counter != 5)
-                    Save<T>(ToSerialize, FileSpec, counter++);
+                counter++;
+                if (counter <= 5)
+                    Save<T>(ToSerialize, FileSpec, counter);
             }
         }
 

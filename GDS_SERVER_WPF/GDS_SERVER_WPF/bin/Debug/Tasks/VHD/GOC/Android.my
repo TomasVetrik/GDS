@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>Android</Name>
+  <LastExecuted>28.11.2018 14-19-05</LastExecuted>
+  <TargetComputers>
+    <ComputerDetailsData>
+      <_sourceIdentifier>J2fHOlL7h0a4aLI9P68XcQ</_sourceIdentifier>
+      <Name>LEKTORKS6_NUC</Name>
+      <RealPCName>MININT-77P901J</RealPCName>
+      <macAddresses>
+        <string>94:C6:91:A4:05:7C</string>
+      </macAddresses>
+      <MacAddress>94:C6:91:A4:05:7C</MacAddress>
+      <OSInformations>, 32-bit</OSInformations>
+      <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+      <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+      <numberOfRamSLots>2</numberOfRamSLots>
+      <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+      <boardProductId>NUC7i3BNB</boardProductId>
+      <accountName>SYSTEM</accountName>
+      <IPAddress>10.202.20.240</IPAddress>
+      <baseImageName />
+      <driveEImageName />
+      <dartInfo>104-059-425#10.202.20.240#49672</dartInfo>
+      <ImageSource>Images/Winpe.ico</ImageSource>
+      <inWinpe>true</inWinpe>
+      <PostInstalls />
+      <CustomLog />
+    </ComputerDetailsData>
+    <ComputerDetailsData>
+      <_sourceIdentifier>eHeyZRT7c0CTWVf39U_EBA</_sourceIdentifier>
+      <Name>STUDENTSK6-03_NUC</Name>
+      <RealPCName>STUDENTSK6-03_N</RealPCName>
+      <macAddresses>
+        <string>94:C6:91:A4:D1:16</string>
+        <string>34:E1:2D:8C:A8:A7</string>
+      </macAddresses>
+      <MacAddress>94:C6:91:A4:D1:16</MacAddress>
+      <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+      <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+      <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+      <numberOfRamSLots>2</numberOfRamSLots>
+      <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+      <boardProductId>NUC7i3BNB</boardProductId>
+      <accountName>Student</accountName>
+      <IPAddress>10.202.20.230</IPAddress>
+      <baseImageName>Windows 7 Office 2013 x64</baseImageName>
+      <driveEImageName>Sevelda_JTomcat</driveEImageName>
+      <dartInfo />
+      <ImageSource>Images/Online.ico</ImageSource>
+      <inWinpe>false</inWinpe>
+      <PostInstalls />
+      <CustomLog />
+    </ComputerDetailsData>
+  </TargetComputers>
+  <MachineGroup>!Testing</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>true</Cloning>
+  <BaseImageSourcePath>.\Base\GOC\Android</BaseImageSourcePath>
+  <BaseImageData>
+    <Name>Android</Name>
+    <ImageSource>Images/Image.ico</ImageSource>
+    <SourcePath>I:\Office\Base\_WIM\Android\Android.wim</SourcePath>
+    <BoolLabel>Android</BoolLabel>
+    <PartitionSize>200</PartitionSize>
+    <VHDResizeSize>50</VHDResizeSize>
+    <VHDResize>false</VHDResize>
+    <VHDNames>
+      <string>Android</string>
+    </VHDNames>
+    <OSAbrivations>
+      <string>W8.1_x64</string>
+    </OSAbrivations>
+  </BaseImageData>
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>false</SoftwareAndFileAction>
+  <DestinationDirectoryInOS />
+  <CommandsInOS />
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE />
+  <WaitingTime>50</WaitingTime>
+</TaskData>

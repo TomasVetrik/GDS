@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>MOC 20744 C</Name>
+  <Started>27.10.2018 10-12-10</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>27.10.2018 11-37-43</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK08</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>MOC 20744 C</Name>
+    <LastExecuted>27.10.2018 10-12-10</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Lx_aO282rkWG6I_xeUUqpg</_sourceIdentifier>
+        <Name>STUDENTSK8-08</Name>
+        <RealPCName>STUDENTSK8-08</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4E:86</string>
+          <string>1C:1B:0D:12:1E:F6</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4E:86</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.157</IPAddress>
+        <baseImageName>Windows 7 Office 2013 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK08</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\MOC\Windows Server 2016 No Sysprep</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows Server 2016 No Sysprep</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\Base\_WIM\NO_SYSPREP\w2k16\w2k16.wim</SourcePath>
+      <BoolLabel>Windows Server 2016</BoolLabel>
+      <PartitionSize>122</PartitionSize>
+      <VHDResizeSize>40</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>w2k16</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W2k16</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\MOC\20000\MOC 20744 C</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>MOC 20744 C</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\DriveE\_WIM\20744C\20744C.wim</SourcePath>
+      <BoolLabel>MOC 20744 C</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\Autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:13:06</Time>
+      <MacAddress>68:05:CA:44:4E:86</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-08</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>10:14:44</Time>
+      <MacAddress>68:05:CA:44:4E:86</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:14:45</Time>
+      <MacAddress>68:05:CA:44:4E:86</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-08</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:14:46</Time>
+      <MacAddress>68:05:CA:44:4E:86</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-08</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>10:14:47</Time>
+      <MacAddress>68:05:CA:44:4E:86</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:37:42</Time>
+      <MacAddress>68:05:CA:44:4E:86</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:37:43</Time>
+      <MacAddress>68:05:CA:44:4E:86</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\10\\27.10.2018 10-12-10_MOC 20744 C.my</FilePath>
+</ExecutedTaskData>

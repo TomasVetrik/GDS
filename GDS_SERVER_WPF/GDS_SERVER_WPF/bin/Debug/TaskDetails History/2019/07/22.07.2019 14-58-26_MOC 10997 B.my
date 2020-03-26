@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>MOC 10997 B</Name>
+  <Started>22.07.2019 14-58-26</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>22.07.2019 16-12-23</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>!Testing</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>MOC 10997 B</Name>
+    <LastExecuted>22.07.2019 14-58-26</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>tSbFRcotn0GYydqNdYh6kg</_sourceIdentifier>
+        <Name>STUDENTSK11-09</Name>
+        <RealPCName>STUDENTSK11-09</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:29:D9:D7</string>
+          <string>00:22:4D:7C:7B:7A</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.201.20.12</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>!Testing</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\MOC\Windows Server 2016</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows Server 2016</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\Base\_WIM\W2k16\W2k16.wim</SourcePath>
+      <BoolLabel>Windows Server 2016</BoolLabel>
+      <PartitionSize>102</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W2k16</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W2k16</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\MOC\10000\10997 B</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>10997 B</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\DriveE\_WIM\10997B\10997B.wim</SourcePath>
+      <BoolLabel>MOC 10997 B</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:58:29</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>14:59:46</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>14:59:47</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>14:59:48</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>14:59:49</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>15:36:25</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message>CLONE FAILED EC -1054735609</Message>
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:36:26</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>15:36:27</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>15:36:28</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:36:34</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:36:35</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>15:44:10</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message>CLONE FAILED EC -1054735609</Message>
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:44:11</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>15:44:12</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>15:44:13</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:44:19</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:44:20</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:12:19</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>16:12:20</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:12:21</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>16:12:22</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:12:23</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\22.07.2019 14-58-26_MOC 10997 B.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\07\\22.07.2019 14-58-26_MOC 10997 B.my</FilePath>
+</ExecutedTaskData>

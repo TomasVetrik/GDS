@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Shutdown</Name>
+  <Started>07.06.2019 09-00-04</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>07.06.2019 09-00-06</Finished>
+  <Clients>8</Clients>
+  <Done>8</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK12</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Shutdown</Name>
+    <LastExecuted>07.06.2019 09-00-04</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>XAcgi6lrZkWt0HL9X2XQvA</_sourceIdentifier>
+        <Name>LEKTORSK12</Name>
+        <RealPCName>LEKTORSK12</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:F1:80</string>
+          <string>FC:AA:14:AC:74:1F</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:F1:80</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.18</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>10990 C</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>KzIlNtCYfkaM2VINidZA_Q</_sourceIdentifier>
+        <Name>STUDENTSK12-01</Name>
+        <RealPCName>STUDENTSK12-01</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3C:30:DB</string>
+          <string>FC:AA:14:AC:71:9C</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3C:30:DB</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.32</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>10990 C</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>AyQVbykx2UyN6TMkjkMcUQ</_sourceIdentifier>
+        <Name>STUDENTSK12-02</Name>
+        <RealPCName>STUDENTSK12-02</RealPCName>
+        <macAddresses>
+          <string>FC:AA:14:AC:71:7B</string>
+          <string>68:05:CA:3B:EF:16</string>
+        </macAddresses>
+        <MacAddress>FC:AA:14:AC:71:7B</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.52</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>10990 C</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>ucSGLo_XPkW6HptehDqVBg</_sourceIdentifier>
+        <Name>STUDENTSK12-03</Name>
+        <RealPCName>STUDENTSK12-03</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3C:35:32</string>
+          <string>FC:AA:14:AC:70:2B</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3C:35:32</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.163</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>10990 C</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>wg_I78FnLEu4XxfuIp5YEQ</_sourceIdentifier>
+        <Name>STUDENTSK12-04</Name>
+        <RealPCName>STUDENTSK12-04</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:EF:AB</string>
+          <string>FC:AA:14:AC:74:27</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:EF:AB</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.50</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>10990 C</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>rd26gsx2zkmbLXIksBiVug</_sourceIdentifier>
+        <Name>STUDENTSK12-05</Name>
+        <RealPCName>STUDENTSK12-05</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:F1:7E</string>
+          <string>FC:AA:14:AC:73:F2</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:F1:7E</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.117</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>10990 C</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>S7DJpQTMUkmf1mMoiWDC3Q</_sourceIdentifier>
+        <Name>STUDENTSK12-06</Name>
+        <RealPCName>STUDENTSK12-06</RealPCName>
+        <macAddresses>
+          <string>FC:AA:14:AC:70:26</string>
+          <string>68:05:CA:3C:30:DF</string>
+        </macAddresses>
+        <MacAddress>FC:AA:14:AC:70:26</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.129</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>10990 C</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>NtfBtYf8f0G8v73wm3nqJQ</_sourceIdentifier>
+        <Name>STUDENTSK12-07</Name>
+        <RealPCName>STUDENTSK12-07</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:F4:6B</string>
+          <string>FC:AA:14:AC:74:3B</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:F4:6B</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.140</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>10990 C</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK12</MachineGroup>
+    <WakeOnLan>false</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>49</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:00:05</Time>
+      <MacAddress>68:05:CA:3B:F1:7E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\07.06.2019 09-00-04_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:00:05</Time>
+      <MacAddress>68:05:CA:3B:EF:AB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\07.06.2019 09-00-04_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:00:05</Time>
+      <MacAddress>FC:AA:14:AC:71:7B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\07.06.2019 09-00-04_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:00:05</Time>
+      <MacAddress>68:05:CA:3C:35:32</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\07.06.2019 09-00-04_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:00:05</Time>
+      <MacAddress>68:05:CA:3C:30:DB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\07.06.2019 09-00-04_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:00:05</Time>
+      <MacAddress>68:05:CA:3B:F1:80</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\07.06.2019 09-00-04_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:00:05</Time>
+      <MacAddress>68:05:CA:3B:F4:6B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\07.06.2019 09-00-04_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:00:05</Time>
+      <MacAddress>FC:AA:14:AC:70:26</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\07.06.2019 09-00-04_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-02</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:00:06</Time>
+      <MacAddress>FC:AA:14:AC:71:7B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\07.06.2019 09-00-04_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK12</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:00:06</Time>
+      <MacAddress>68:05:CA:3B:F1:80</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\07.06.2019 09-00-04_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-05</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:00:06</Time>
+      <MacAddress>68:05:CA:3B:F1:7E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\07.06.2019 09-00-04_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-01</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:00:06</Time>
+      <MacAddress>68:05:CA:3C:30:DB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\07.06.2019 09-00-04_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-06</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:00:06</Time>
+      <MacAddress>FC:AA:14:AC:70:26</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\07.06.2019 09-00-04_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-04</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:00:06</Time>
+      <MacAddress>68:05:CA:3B:EF:AB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\07.06.2019 09-00-04_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-07</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:00:06</Time>
+      <MacAddress>68:05:CA:3B:F4:6B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\07.06.2019 09-00-04_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-03</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:00:06</Time>
+      <MacAddress>68:05:CA:3C:35:32</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\07.06.2019 09-00-04_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\06\\07.06.2019 09-00-04_Shutdown.my</FilePath>
+</ExecutedTaskData>

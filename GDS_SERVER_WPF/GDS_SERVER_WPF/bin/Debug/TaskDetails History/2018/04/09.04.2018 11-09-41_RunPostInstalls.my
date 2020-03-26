@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>RunPostInstalls</Name>
+  <Started>09.04.2018 11-09-41</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>09.04.2018 11-09-48</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK09</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>RunPostInstalls</Name>
+    <LastExecuted>09.04.2018 11-09-41</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>3pmbunv9gEaxLRH0KW3b1A</_sourceIdentifier>
+        <Name>STUDENTSK9-12</Name>
+        <RealPCName>STUDENTSK9-12</RealPCName>
+        <macAddresses>
+          <string>00:1B:21:C1:B3:39</string>
+          <string>70:71:BC:8E:B3:11</string>
+        </macAddresses>
+        <MacAddress>00:1B:21:C1:B3:39</MacAddress>
+        <OSInformations>Microsoft Windows 7 Enterprise, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.56</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK09</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <SourceDirectoryInOS>I:\Startup_OS\Accessories</SourceDirectoryInOS>
+    <DestinationDirectoryInOS>D:\Temp</DestinationDirectoryInOS>
+    <CommandsInOS>
+      <string>D:\Autologon_PostInstalls.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS>
+      <string>I:\Startup_OS\Accessories\Password.txt</string>
+    </CopyFilesInOS>
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <SourceDirectoryInWINPE>I:\</SourceDirectoryInWINPE>
+    <DestinationDirectoryInWINPE>I:\</DestinationDirectoryInWINPE>
+    <CopyFilesInWINPE>
+      <string>I:\GDS_Client.exe</string>
+    </CopyFilesInWINPE>
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-12</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:09:42</Time>
+      <MacAddress>00:1B:21:C1:B3:39</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-12</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>11:09:44</Time>
+      <MacAddress>00:1B:21:C1:B3:39</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-12</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>11:09:45</Time>
+      <MacAddress>00:1B:21:C1:B3:39</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-12</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>11:09:46</Time>
+      <MacAddress>00:1B:21:C1:B3:39</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-12</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>11:09:47</Time>
+      <MacAddress>00:1B:21:C1:B3:39</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-12</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>11:09:48</Time>
+      <MacAddress>00:1B:21:C1:B3:39</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\04\\09.04.2018 11-09-41_RunPostInstalls.my</FilePath>
+</ExecutedTaskData>

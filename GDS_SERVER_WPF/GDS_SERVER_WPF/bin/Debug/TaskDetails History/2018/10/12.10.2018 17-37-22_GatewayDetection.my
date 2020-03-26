@@ -1,0 +1,414 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>GatewayDetection</Name>
+  <Started>12.10.2018 17-37-22</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>12.10.2018 17-41-24</Finished>
+  <Clients>5</Clients>
+  <Done>5</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK11</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>GatewayDetection</Name>
+    <LastExecuted>12.10.2018 17-37-22</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>bujG39lqDkii5lUZ7nZmtw</_sourceIdentifier>
+        <Name>STUDENTSK11-07</Name>
+        <RealPCName>STUDENTSK11-07</RealPCName>
+        <macAddresses>
+          <string>00:22:4D:80:6F:0D</string>
+        </macAddresses>
+        <MacAddress>00:22:4D:80:6F:0D</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.39</IPAddress>
+        <baseImageName>Windows Server 2016 No Sysprep</baseImageName>
+        <driveEImageName>MOC 20742 B</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>crDWVpaQFEGXc7JR6b2YjQ</_sourceIdentifier>
+        <Name>STUDENTSK11-03</Name>
+        <RealPCName>STUDENTSK11-03</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:CF:C6</string>
+          <string>68:05:CA:0C:AF:92</string>
+          <string>00:22:4D:80:6F:09</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.45</IPAddress>
+        <baseImageName>Windows Server 2016 No Sysprep</baseImageName>
+        <driveEImageName>MOC 20742 B</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>4BXWNv4ZBECeZ4LWR8EiQA</_sourceIdentifier>
+        <Name>STUDENTSK11-04</Name>
+        <RealPCName>STUDENTSK11-04</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:B2:30</string>
+          <string>68:05:CA:2A:D0:B8</string>
+          <string>00:22:4D:82:42:14</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.110</IPAddress>
+        <baseImageName>Windows Server 2016 No Sysprep</baseImageName>
+        <driveEImageName>MOC 20742 B</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>4RJHpapkYEu3pvMXX8NmlQ</_sourceIdentifier>
+        <Name>STUDENTSK11-05</Name>
+        <RealPCName>STUDENTSK11-05</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:D0:2D</string>
+          <string>68:05:CA:0C:B1:A6</string>
+          <string>00:22:4D:80:6F:05</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.87</IPAddress>
+        <baseImageName>Windows Server 2016 No Sysprep</baseImageName>
+        <driveEImageName>MOC 20742 B</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>2JDOOyRZMUixehuYzjKqEA</_sourceIdentifier>
+        <Name>STUDENTSK11-06</Name>
+        <RealPCName>STUDENTSK11-06</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:D0:2E</string>
+          <string>00:22:4D:80:6E:2B</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.53</IPAddress>
+        <baseImageName>Windows Server 2016 No Sysprep</baseImageName>
+        <driveEImageName>MOC 20742 B</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK11</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <SourceDirectoryInOS>I:\Startup_OS\Accessories</SourceDirectoryInOS>
+    <DestinationDirectoryInOS>D:\</DestinationDirectoryInOS>
+    <CommandsInOS>
+      <string>D:\Autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS>
+      <string>I:\Startup_OS\Accessories\Autologon.bat</string>
+      <string>I:\Startup_OS\Accessories\Autologon_D.ps1</string>
+      <string>I:\Startup_OS\Accessories\Gateway_detection.bat</string>
+      <string>I:\Startup_OS\Accessories\Gateway_detection.ps1</string>
+    </CopyFilesInOS>
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:38:19</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:38:19</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>17:38:20</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>17:38:20</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>17:38:21</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>17:38:21</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>17:38:22</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>17:38:22</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>17:38:23</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>17:38:23</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:38:24</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>17:38:24</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>17:38:24</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>17:38:25</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>17:38:26</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>17:38:27</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>17:38:28</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:38:29</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>17:38:29</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>17:38:30</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>17:38:31</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>17:38:32</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>17:38:33</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>17:38:34</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:41:19</Time>
+      <MacAddress>00:22:4D:80:6F:0D</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>17:41:20</Time>
+      <MacAddress>00:22:4D:80:6F:0D</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>17:41:21</Time>
+      <MacAddress>00:22:4D:80:6F:0D</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>17:41:22</Time>
+      <MacAddress>00:22:4D:80:6F:0D</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>17:41:23</Time>
+      <MacAddress>00:22:4D:80:6F:0D</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>17:41:24</Time>
+      <MacAddress>00:22:4D:80:6F:0D</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\10\\12.10.2018 17-37-22_GatewayDetection.my</FilePath>
+</ExecutedTaskData>

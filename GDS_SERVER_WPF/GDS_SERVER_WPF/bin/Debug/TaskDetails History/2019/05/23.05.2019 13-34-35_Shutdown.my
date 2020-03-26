@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Shutdown</Name>
+  <Started>23.05.2019 13-34-35</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>23.05.2019 13-34-38</Finished>
+  <Clients>2</Clients>
+  <Done>2</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK02</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Shutdown</Name>
+    <LastExecuted>23.05.2019 13-34-35</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>4CVkVG_6Ek-hrzsXuqR1XQ</_sourceIdentifier>
+        <Name>STUDENTSK2-01</Name>
+        <RealPCName>STUDENTSK2-01</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:AF:94</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:AF:94</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>StudentSK</accountName>
+        <IPAddress>10.202.20.98</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>qXrmcwqYikOGS8w2kfhnZw</_sourceIdentifier>
+        <Name>STUDENTSK2-11</Name>
+        <RealPCName>STUDENTSK2-11</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:B1:A4</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:B1:A4</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>StudentSK</accountName>
+        <IPAddress>10.202.20.105</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK02</MachineGroup>
+    <WakeOnLan>false</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>49</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:34:37</Time>
+      <MacAddress>68:05:CA:0C:AF:94</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.05.2019 13-34-35_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-11</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:34:37</Time>
+      <MacAddress>68:05:CA:0C:B1:A4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.05.2019 13-34-35_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-11</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>13:34:38</Time>
+      <MacAddress>68:05:CA:0C:B1:A4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.05.2019 13-34-35_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-01</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>13:34:38</Time>
+      <MacAddress>68:05:CA:0C:AF:94</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.05.2019 13-34-35_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\05\\23.05.2019 13-34-35_Shutdown.my</FilePath>
+</ExecutedTaskData>

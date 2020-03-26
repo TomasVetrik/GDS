@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>MOC 20761 C</Name>
+  <Started>28.02.2019 09-38-42</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>28.02.2019 11-46-20</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK14</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>MOC 20761 C</Name>
+    <LastExecuted>28.02.2019 09-38-42</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>6zpG8vxU7ES3ERAYMlJ65g</_sourceIdentifier>
+        <Name>LEKTORSK14</Name>
+        <RealPCName>LEKTORSK14</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:29:C8:B5</string>
+          <string>68:05:CA:0C:AC:AD</string>
+          <string>74:D4:35:86:E9:B1</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:29:C8:B5</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.4</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>10990 C</driveEImageName>
+        <dartInfo />
+        <Detail />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <pathNode>.\Machine Groups\UCEBNASK14</pathNode>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK14</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\MOC\Windows Server 2016</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows Server 2016</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\Base\_WIM\W2k16\W2k16.wim</SourcePath>
+      <BoolLabel>Windows Server 2016</BoolLabel>
+      <PartitionSize>102</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W2k16</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W2k16</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\MOC\20000\MOC 20761 C</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>MOC 20761 C</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\DriveE\_WIM\20761C\20761C.wim</SourcePath>
+      <BoolLabel>MOC 20761 C</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:38:44</Time>
+      <MacAddress>68:05:CA:29:C8:B5</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\28.02.2019 09-38-42_MOC 20761 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:40:26</Time>
+      <MacAddress>68:05:CA:29:C8:B5</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\28.02.2019 09-38-42_MOC 20761 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:40:27</Time>
+      <MacAddress>68:05:CA:29:C8:B5</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\28.02.2019 09-38-42_MOC 20761 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:40:28</Time>
+      <MacAddress>68:05:CA:29:C8:B5</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\28.02.2019 09-38-42_MOC 20761 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:40:29</Time>
+      <MacAddress>68:05:CA:29:C8:B5</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\28.02.2019 09-38-42_MOC 20761 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:46:16</Time>
+      <MacAddress>68:05:CA:29:C8:B5</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\28.02.2019 09-38-42_MOC 20761 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>11:46:17</Time>
+      <MacAddress>68:05:CA:29:C8:B5</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\28.02.2019 09-38-42_MOC 20761 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>11:46:18</Time>
+      <MacAddress>68:05:CA:29:C8:B5</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\28.02.2019 09-38-42_MOC 20761 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>11:46:19</Time>
+      <MacAddress>68:05:CA:29:C8:B5</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\28.02.2019 09-38-42_MOC 20761 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:46:20</Time>
+      <MacAddress>68:05:CA:29:C8:B5</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\28.02.2019 09-38-42_MOC 20761 C.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\02\\28.02.2019 09-38-42_MOC 20761 C.my</FilePath>
+</ExecutedTaskData>

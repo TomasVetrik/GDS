@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Shutdown</Name>
+  <Started>05.01.2018 16-02-24</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>05.01.2018 16-02-26</Finished>
+  <Clients>5</Clients>
+  <Done>5</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK01</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Shutdown</Name>
+    <LastExecuted>05.01.2018 16-02-24</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>A9tN-zuvjUKQkkWplPs1iA</_sourceIdentifier>
+        <Name>LEKTORSK1</Name>
+        <RealPCName>LEKTORSK1</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3C:35:81</string>
+          <string>FC:AA:14:AC:73:E2</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3C:35:81</MacAddress>
+        <OSInformations>Microsoft Windows Server 2008 R2 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 11/19/14 21:14:12 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.120.20</IPAddress>
+        <baseImageName>Windows Server 2008 R2</baseImageName>
+        <driveEImageName>10775 A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>WuR0cde40kq63oc1YK77iQ</_sourceIdentifier>
+        <Name>STUDENTSK1-05</Name>
+        <RealPCName>STUDENTSK1-05</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:F0:3C</string>
+          <string>FC:AA:14:AC:75:5F</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+        <OSInformations>Microsoft Windows Server 2008 R2 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 11/19/14 21:14:12 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.120.25</IPAddress>
+        <baseImageName>Windows Server 2008 R2</baseImageName>
+        <driveEImageName>10775 A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>ZEmL30OoTUiuYE7qVn6nRw</_sourceIdentifier>
+        <Name>STUDENTSK1-06</Name>
+        <RealPCName>STUDENTSK1-06</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:F4:64</string>
+          <string>FC:AA:14:AC:74:21</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+        <OSInformations>Microsoft Windows Server 2008 R2 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 11/19/14 21:14:12 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.120.26</IPAddress>
+        <baseImageName>Windows Server 2008 R2</baseImageName>
+        <driveEImageName>10775 A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>GZRJMWnPPku_KZO46Q5idw</_sourceIdentifier>
+        <Name>STUDENTSK1-08</Name>
+        <RealPCName>STUDENTSK1-08</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:EF:AC</string>
+          <string>FC:AA:14:AC:74:25</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:EF:AC</MacAddress>
+        <OSInformations>Microsoft Windows Server 2008 R2 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 11/19/14 21:14:12 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.120.28</IPAddress>
+        <baseImageName>Windows Server 2008 R2</baseImageName>
+        <driveEImageName>10775 A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>335Gq8qoFkG-cD8I3sbHkA</_sourceIdentifier>
+        <Name>STUDENTSK1-07</Name>
+        <RealPCName>STUDENTSK1-07</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3C:35:76</string>
+          <string>FC:AA:14:AC:70:2A</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3C:35:76</MacAddress>
+        <OSInformations>Microsoft Windows Server 2008 R2 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.120.27</IPAddress>
+        <baseImageName>Windows Server 2008 R2</baseImageName>
+        <driveEImageName>10775 A</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK01</MachineGroup>
+    <WakeOnLan>false</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:02:25</Time>
+      <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK1</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:02:25</Time>
+      <MacAddress>68:05:CA:3C:35:81</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:02:25</Time>
+      <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:02:25</Time>
+      <MacAddress>68:05:CA:3C:35:76</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:02:25</Time>
+      <MacAddress>68:05:CA:3B:EF:AC</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:02:26</Time>
+      <MacAddress>68:05:CA:3C:35:76</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:02:26</Time>
+      <MacAddress>68:05:CA:3B:F4:64</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-05</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:02:26</Time>
+      <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK1</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:02:26</Time>
+      <MacAddress>68:05:CA:3C:35:81</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:02:26</Time>
+      <MacAddress>68:05:CA:3B:EF:AC</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\01\\05.01.2018 16-02-24_Shutdown.my</FilePath>
+</ExecutedTaskData>

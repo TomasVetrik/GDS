@@ -1,0 +1,945 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 7 Office 2013 x64 SP</Name>
+  <Started>15.07.2019 09-20-13</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>15.07.2019 09-48-24</Finished>
+  <Clients>9</Clients>
+  <Done>9</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK11</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 7 Office 2013 x64 SP</Name>
+    <LastExecuted>15.07.2019 09-20-13</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>N_FWcjGIQU2gZJ6KIFfYzA</_sourceIdentifier>
+        <Name>LEKTORSK11</Name>
+        <RealPCName>LEKTORSK11</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:D0:36</string>
+          <string>68:05:CA:0C:AF:9A</string>
+          <string>00:22:4D:80:6E:C6</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.131</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>Meciar_DriveE</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>0JJP1JaGfkK1fnRqKZkgHA</_sourceIdentifier>
+        <Name>STUDENTSK11-01</Name>
+        <RealPCName>STUDENTSK11-01</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:D0:37</string>
+          <string>68:05:CA:0A:71:5C</string>
+          <string>00:22:4D:89:01:8A</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.146</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>Meciar_DriveE</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>gJeHCdQ7xU23srzWtV92uA</_sourceIdentifier>
+        <Name>STUDENTSK11-02</Name>
+        <RealPCName>STUDENTSK11-02</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:CF:43</string>
+          <string>68:05:CA:0C:BD:B5</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.118</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>Meciar_DriveE</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>HL31XXLOHEe_o03RJ4d-yQ</_sourceIdentifier>
+        <Name>STUDENTSK11-03</Name>
+        <RealPCName>STUDENTSK11-03</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:CF:C6</string>
+          <string>68:05:CA:0C:AF:92</string>
+          <string>00:22:4D:80:6F:09</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.138</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>Meciar_DriveE</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>lqfzu6RZNkm_qKK_uP_new</_sourceIdentifier>
+        <Name>STUDENTSK11-04</Name>
+        <RealPCName>STUDENTSK11-04</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:B2:30</string>
+          <string>68:05:CA:2A:D0:B8</string>
+          <string>00:22:4D:82:42:14</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.21.30</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>Meciar_DriveE</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>tr1Wx2nKQ06rItCwiQUGgQ</_sourceIdentifier>
+        <Name>STUDENTSK11-05</Name>
+        <RealPCName>STUDENTSK11-05</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:D0:2D</string>
+          <string>68:05:CA:0C:B1:A6</string>
+          <string>00:22:4D:80:6F:05</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.135</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>Meciar_DriveE</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>49U4btNObkWgRQm-805rZQ</_sourceIdentifier>
+        <Name>STUDENTSK11-06</Name>
+        <RealPCName>STUDENTSK11-06</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:D0:2E</string>
+          <string>00:22:4D:80:6E:2B</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.122</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>Meciar_DriveE</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Mlv7cRn5UEGvYbjlNdIgYQ</_sourceIdentifier>
+        <Name>STUDENTSK11-07</Name>
+        <RealPCName>STUDENTSK11-07</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:AF:98</string>
+          <string>00:22:4D:80:6F:0D</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.119</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>Meciar_DriveE</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>gF1BvDG8QEmgrnqBe9R3_w</_sourceIdentifier>
+        <Name>STUDENTSK11-08</Name>
+        <RealPCName>STUDENTSK11-08</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:CF:C9</string>
+          <string>68:05:CA:0C:BD:DE</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:CF:C9</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.2</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>Meciar_DriveE</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK11</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 7 Office 2013 x64</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 7 Office 2013 x64</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\W7_Off2k13_x64\W7_Off2k13_x64.wim</SourcePath>
+      <BoolLabel>Windows 7 Office 2013</BoolLabel>
+      <PartitionSize>92</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>W7_Off2k13_x64</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <DriveEImageData>
+      <Name>10989B</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\DriveE\_WIM\10989B\10989B.wim</SourcePath>
+      <BoolLabel>MOC 10989 B</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:20:15</Time>
+      <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:20:15</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:20:15</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:20:15</Time>
+      <MacAddress>68:05:CA:2A:CF:C9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:21:05</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:21:05</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:21:10</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:21:10</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:21:37</Time>
+      <MacAddress>68:05:CA:2A:CF:C9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:21:38</Time>
+      <MacAddress>68:05:CA:2A:CF:C9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:21:39</Time>
+      <MacAddress>68:05:CA:2A:CF:C9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:21:40</Time>
+      <MacAddress>68:05:CA:2A:CF:C9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:21:42</Time>
+      <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:21:42</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:21:42</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:21:43</Time>
+      <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:21:43</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:21:43</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:21:44</Time>
+      <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:21:44</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:21:44</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:21:45</Time>
+      <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:21:45</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:21:45</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:22:27</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:22:27</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:22:28</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:22:28</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:22:29</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:22:29</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:22:30</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:22:30</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:22:37</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:22:37</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:22:38</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:22:38</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:22:39</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:22:39</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:22:40</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:22:40</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:25:50</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>9:25:51</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:25:52</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:25:53</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:25:54</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:41:07</Time>
+      <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:41:08</Time>
+      <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:41:09</Time>
+      <MacAddress>68:05:CA:0C:AF:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:41:53</Time>
+      <MacAddress>68:05:CA:2A:CF:C9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:41:54</Time>
+      <MacAddress>68:05:CA:2A:CF:C9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-08</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:41:55</Time>
+      <MacAddress>68:05:CA:2A:CF:C9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:42:23</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:42:25</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:42:26</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:42:57</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:42:58</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:42:59</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:43:27</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:43:28</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:43:28</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:43:29</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:43:29</Time>
+      <MacAddress>68:05:CA:2A:D0:2D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:43:30</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:43:33</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:43:34</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:43:35</Time>
+      <MacAddress>68:05:CA:2A:D0:2E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:43:58</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:43:59</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:44:00</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:48:22</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:48:23</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:48:24</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\07\\15.07.2019 09-20-13_Windows 7 Office 2013 x64 SP.my</FilePath>
+</ExecutedTaskData>

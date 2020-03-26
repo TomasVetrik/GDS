@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>MOC 20332 B</Name>
+  <LastExecuted>08.06.2018 07-34-32</LastExecuted>
+  <TargetComputers />
+  <MachineGroup>NONE</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>true</Cloning>
+  <BaseImageSourcePath>.\Base\MOC\Windows Server 2008 R2</BaseImageSourcePath>
+  <BaseImageData>
+    <Name>Windows Server 2008 R2</Name>
+    <ImageSource>Images/Image.ico</ImageSource>
+    <SourcePath>I:\MOC\Base\_WIM\W2k8r2\w2k8r2.wim</SourcePath>
+    <BoolLabel>Windows Server 2008 R2</BoolLabel>
+    <PartitionSize>90</PartitionSize>
+    <VHDResizeSize>50</VHDResizeSize>
+    <VHDResize>false</VHDResize>
+    <VHDNames>
+      <string>w2k8r2</string>
+      <string />
+    </VHDNames>
+    <OSAbrivations>
+      <string>W2k8_R2</string>
+    </OSAbrivations>
+  </BaseImageData>
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath>.\DriveE\MOC\20000\MOC 20332 B</DriveEImageSourcePath>
+  <DriveEImageData>
+    <Name>MOC 20332 B</Name>
+    <ImageSource>Images/Image.ico</ImageSource>
+    <SourcePath>I:\MOC\DriveE\_WIM\20332B\20332B.wim</SourcePath>
+    <BoolLabel>MOC 20332 B</BoolLabel>
+    <PartitionSize>90</PartitionSize>
+    <VHDResizeSize>50</VHDResizeSize>
+    <VHDResize>false</VHDResize>
+    <VHDNames />
+    <OSAbrivations />
+  </DriveEImageData>
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <DestinationDirectoryInOS />
+  <CommandsInOS>
+    <string>cscript E:\Autologon.vbs</string>
+  </CommandsInOS>
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE />
+  <WaitingTime>30</WaitingTime>
+  <SendWarningMails>false</SendWarningMails>
+  <InfinityWaitingTime>true</InfinityWaitingTime>
+</TaskData>

@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows Server 2016</Name>
+  <Started>14.03.2019 08-33-19</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>14.03.2019 08-56-21</Finished>
+  <Clients>2</Clients>
+  <Done>2</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK01</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows Server 2016</Name>
+    <LastExecuted>14.03.2019 08-33-19</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>oOTjLRN1RUWqA4qODmztZg</_sourceIdentifier>
+        <Name>STUDENTSK1-03</Name>
+        <RealPCName>STUDENTSK1-03</RealPCName>
+        <macAddresses>
+          <string>FC:AA:14:AC:74:2A</string>
+          <string>68:05:CA:3B:EF:AE</string>
+        </macAddresses>
+        <MacAddress>FC:AA:14:AC:74:2A</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.120.23</IPAddress>
+        <baseImageName>Windows 10 Office 2016 x64 SP</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>OGfziDu5GUiCDs3LCuEGVw</_sourceIdentifier>
+        <Name>STUDENTSK1-04</Name>
+        <RealPCName>STUDENTSK1-04</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3C:30:E2</string>
+          <string>FC:AA:14:AC:74:22</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.120.24</IPAddress>
+        <baseImageName>Windows 10 Office 2016 x64 SP</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK01</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\MOC\Windows Server 2016</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows Server 2016</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\Base\_WIM\W2k16\W2k16.wim</SourcePath>
+      <BoolLabel>Windows Server 2016</BoolLabel>
+      <PartitionSize>102</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W2k16</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W2k16</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:34:15</Time>
+      <MacAddress>FC:AA:14:AC:74:2A</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.03.2019 08-33-19_Windows Server 2016.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:34:15</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.03.2019 08-33-19_Windows Server 2016.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>8:35:28</Time>
+      <MacAddress>FC:AA:14:AC:74:2A</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.03.2019 08-33-19_Windows Server 2016.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:35:29</Time>
+      <MacAddress>FC:AA:14:AC:74:2A</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.03.2019 08-33-19_Windows Server 2016.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>8:35:30</Time>
+      <MacAddress>FC:AA:14:AC:74:2A</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.03.2019 08-33-19_Windows Server 2016.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>8:35:31</Time>
+      <MacAddress>FC:AA:14:AC:74:2A</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.03.2019 08-33-19_Windows Server 2016.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>8:35:33</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.03.2019 08-33-19_Windows Server 2016.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:35:34</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.03.2019 08-33-19_Windows Server 2016.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>8:35:35</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.03.2019 08-33-19_Windows Server 2016.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>8:35:36</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.03.2019 08-33-19_Windows Server 2016.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:56:10</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.03.2019 08-33-19_Windows Server 2016.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:56:11</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.03.2019 08-33-19_Windows Server 2016.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:56:20</Time>
+      <MacAddress>FC:AA:14:AC:74:2A</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.03.2019 08-33-19_Windows Server 2016.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:56:21</Time>
+      <MacAddress>FC:AA:14:AC:74:2A</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\14.03.2019 08-33-19_Windows Server 2016.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\03\\14.03.2019 08-33-19_Windows Server 2016.my</FilePath>
+</ExecutedTaskData>

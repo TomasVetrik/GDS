@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ImageData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>CentOS 7</Name>
+  <ImageSource>Images/Image.ico</ImageSource>
+  <SourcePath>I:\LINUX\Base\_wim\CentOS_7\Centos_7.wim</SourcePath>
+  <BoolLabel>CentOS</BoolLabel>
+  <PartitionSize>90</PartitionSize>
+  <VHDResizeSize>50</VHDResizeSize>
+  <VHDResize>false</VHDResize>
+  <VHDNames>
+    <string>Centos_7</string>
+  </VHDNames>
+  <OSAbrivations>
+    <string>w7_x86</string>
+  </OSAbrivations>
+</ImageData>

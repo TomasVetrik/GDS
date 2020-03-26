@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>RunAutologon</Name>
+  <Started>05.04.2018 10-53-32</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>05.04.2018 10-53-37</Finished>
+  <Clients>2</Clients>
+  <Done>2</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK14</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>RunAutologon</Name>
+    <LastExecuted>05.04.2018 10-53-32</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>z-LasW2I4ke6bv0ESmtwTg</_sourceIdentifier>
+        <Name>STUDENTSK14-06</Name>
+        <RealPCName>STUDENTSK14-06</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:24:7A:E0</string>
+          <string>74:D4:35:8D:9F:BB</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:24:7A:E0</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.20.88</IPAddress>
+        <baseImageName>Windows 7 Office 2013 x64</baseImageName>
+        <driveEImageName>RAB OFUN</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>1TYmQJKTtk-EWOOuvpMckg</_sourceIdentifier>
+        <Name>STUDENTSK14-09</Name>
+        <RealPCName>STUDENTSK14-09</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:15:8A:3F</string>
+          <string>74:D4:35:1D:AC:A7</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.20.91</IPAddress>
+        <baseImageName>Windows 7 Office 2013 x64</baseImageName>
+        <driveEImageName>RAB OFUN</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK14</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\Autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <SourceDirectoryInWINPE>I:\</SourceDirectoryInWINPE>
+    <DestinationDirectoryInWINPE>I:\</DestinationDirectoryInWINPE>
+    <CopyFilesInWINPE>
+      <string>I:\GDS_Client.exe</string>
+    </CopyFilesInWINPE>
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:53:34</Time>
+      <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:53:34</Time>
+      <MacAddress>68:05:CA:24:7A:E0</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-06</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>10:53:35</Time>
+      <MacAddress>68:05:CA:24:7A:E0</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-09</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>10:53:35</Time>
+      <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:53:36</Time>
+      <MacAddress>68:05:CA:24:7A:E0</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:53:36</Time>
+      <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-09</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>10:53:37</Time>
+      <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-06</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>10:53:37</Time>
+      <MacAddress>68:05:CA:24:7A:E0</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\04\\05.04.2018 10-53-32_RunAutologon.my</FilePath>
+</ExecutedTaskData>

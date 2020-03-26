@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ImageData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows Server 2016</Name>
+  <ImageSource>Images/Image.ico</ImageSource>
+  <SourcePath>I:\MOC\Base\_WIM\W2k16\W2k16.wim</SourcePath>
+  <BoolLabel>Windows Server 2016</BoolLabel>
+  <PartitionSize>102</PartitionSize>
+  <VHDResizeSize>50</VHDResizeSize>
+  <VHDResize>true</VHDResize>
+  <VHDNames>
+    <string>W2k16</string>
+  </VHDNames>
+  <OSAbrivations>
+    <string>W2k16</string>
+  </OSAbrivations>
+</ImageData>

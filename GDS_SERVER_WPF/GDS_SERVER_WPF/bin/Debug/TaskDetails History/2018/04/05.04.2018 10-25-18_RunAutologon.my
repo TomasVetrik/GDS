@@ -1,0 +1,548 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>RunAutologon</Name>
+  <Started>05.04.2018 10-25-18</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>05.04.2018 10-49-11</Finished>
+  <Clients>9</Clients>
+  <Done>9</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK07</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>RunAutologon</Name>
+    <LastExecuted>05.04.2018 10-25-18</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>8nagH2Zw2kS6G487NDw6pg</_sourceIdentifier>
+        <Name>LEKTORSK7</Name>
+        <RealPCName>MININT-24VMCGJ</RealPCName>
+        <macAddresses>
+          <string>E0:D5:5E:02:EE:84</string>
+        </macAddresses>
+        <MacAddress>E0:D5:5E:02:EE:84</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-7400 CPU @ 3.00GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>Z270-HD3P-CF</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.122</IPAddress>
+        <baseImageName>Windows 10 x64 Office 2016 Polivka</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo>208-985-941#10.202.20.122#49416</dartInfo>
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>54ZnZsAt9EuDPZRtKPePdw</_sourceIdentifier>
+        <Name>STUDENTSK7-01</Name>
+        <RealPCName>MININT-HO3AOKI</RealPCName>
+        <macAddresses>
+          <string>E0:D5:5E:02:EE:8A</string>
+        </macAddresses>
+        <MacAddress>E0:D5:5E:02:EE:8A</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-7400 CPU @ 3.00GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>Z270-HD3P-CF</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.202</IPAddress>
+        <baseImageName>Windows 10 x64 Office 2016 Polivka</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo>360-654-522#10.202.20.202#49416</dartInfo>
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>YiFvaG_XLEm93kvOR8SopA</_sourceIdentifier>
+        <Name>STUDENTSK7-02</Name>
+        <RealPCName>STUDENTSK7-02</RealPCName>
+        <macAddresses>
+          <string>E0:D5:5E:02:ED:EE</string>
+        </macAddresses>
+        <MacAddress>E0:D5:5E:02:ED:EE</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-7400 CPU @ 3.00GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 11/08/17 12:51:49 Ver: 05.0000C</biosCaption>
+        <boardProductId>Z270-HD3P-CF</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.201</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>MOC 20697-1 D</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>VbscBP8Zm0-wgtU05Wk3ww</_sourceIdentifier>
+        <Name>STUDENTSK7-03</Name>
+        <RealPCName>MININT-TJ06VLT</RealPCName>
+        <macAddresses>
+          <string>E0:D5:5E:02:EE:8C</string>
+        </macAddresses>
+        <MacAddress>E0:D5:5E:02:EE:8C</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-7400 CPU @ 3.00GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>Z270-HD3P-CF</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.126</IPAddress>
+        <baseImageName>Windows 10 x64 Office 2016 Polivka</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo>629-583-832#10.202.20.126#49416</dartInfo>
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>iY2Q0Qa6HUGjUH2kiG3wdA</_sourceIdentifier>
+        <Name>STUDENTSK7-04</Name>
+        <RealPCName>MININT-3SP6D6R</RealPCName>
+        <macAddresses>
+          <string>E0:D5:5E:02:ED:95</string>
+        </macAddresses>
+        <MacAddress>E0:D5:5E:02:ED:95</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-7400 CPU @ 3.00GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>Z270-HD3P-CF</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.127</IPAddress>
+        <baseImageName>Windows 10 x64 Office 2016 Polivka</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo>785-461-806#10.202.20.127#49416</dartInfo>
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>pA_bz-Eo5U-JaJvQTSenLg</_sourceIdentifier>
+        <Name>STUDENTSK7-05</Name>
+        <RealPCName>MININT-QT7Q6D3</RealPCName>
+        <macAddresses>
+          <string>E0:D5:5E:02:EE:AA</string>
+        </macAddresses>
+        <MacAddress>E0:D5:5E:02:EE:AA</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-7400 CPU @ 3.00GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>Z270-HD3P-CF</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.44</IPAddress>
+        <baseImageName>Windows 10 x64 Office 2016 Polivka</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo>196-405-118#10.202.20.44#49416</dartInfo>
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>CVTfIBSalUeLWF4wwrJc1w</_sourceIdentifier>
+        <Name>STUDENTSK7-06</Name>
+        <RealPCName>MININT-HCHVSD3</RealPCName>
+        <macAddresses>
+          <string>E0:D5:5E:02:EE:88</string>
+        </macAddresses>
+        <MacAddress>E0:D5:5E:02:EE:88</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-7400 CPU @ 3.00GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>Z270-HD3P-CF</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.198</IPAddress>
+        <baseImageName>Windows 10 x64 Office 2016 Polivka</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo>992-760-456#10.202.20.198#49416</dartInfo>
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>JABxuB8QuUmQn5mEWkMneg</_sourceIdentifier>
+        <Name>STUDENTSK7-07</Name>
+        <RealPCName>MININT-G7AR8LK</RealPCName>
+        <macAddresses>
+          <string>E0:D5:5E:02:EE:86</string>
+        </macAddresses>
+        <MacAddress>E0:D5:5E:02:EE:86</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-7400 CPU @ 3.00GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>Z270-HD3P-CF</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.200</IPAddress>
+        <baseImageName>Windows 10 x64 Office 2016 Polivka</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo>346-286-117#10.202.20.200#49416</dartInfo>
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>HOFMF6SB4Eykw3zlQyBMag</_sourceIdentifier>
+        <Name>STUDENTSK7-08</Name>
+        <RealPCName>MININT-9L7GJA0</RealPCName>
+        <macAddresses>
+          <string>E0:D5:5E:02:EE:89</string>
+        </macAddresses>
+        <MacAddress>E0:D5:5E:02:EE:89</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-7400 CPU @ 3.00GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>Z270-HD3P-CF</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.116</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo>424-411-791#10.202.20.116#49416</dartInfo>
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK07</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\Autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <SourceDirectoryInWINPE>I:\</SourceDirectoryInWINPE>
+    <DestinationDirectoryInWINPE>I:\</DestinationDirectoryInWINPE>
+    <CopyFilesInWINPE>
+      <string>I:\GDS_Client.exe</string>
+    </CopyFilesInWINPE>
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:25:20</Time>
+      <MacAddress>E0:D5:5E:02:ED:EE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-02</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>10:25:21</Time>
+      <MacAddress>E0:D5:5E:02:ED:EE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:25:22</Time>
+      <MacAddress>E0:D5:5E:02:ED:EE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-02</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>10:25:23</Time>
+      <MacAddress>E0:D5:5E:02:ED:EE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:25:30</Time>
+      <MacAddress>E0:D5:5E:02:EE:8A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-01</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>10:25:31</Time>
+      <MacAddress>E0:D5:5E:02:EE:8A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:25:32</Time>
+      <MacAddress>E0:D5:5E:02:EE:8A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-01</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>10:25:33</Time>
+      <MacAddress>E0:D5:5E:02:EE:8A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:25:35</Time>
+      <MacAddress>E0:D5:5E:02:ED:95</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-04</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>10:25:36</Time>
+      <MacAddress>E0:D5:5E:02:ED:95</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:25:37</Time>
+      <MacAddress>E0:D5:5E:02:ED:95</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-04</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>10:25:38</Time>
+      <MacAddress>E0:D5:5E:02:ED:95</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:26:25</Time>
+      <MacAddress>E0:D5:5E:02:EE:88</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-06</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>10:26:26</Time>
+      <MacAddress>E0:D5:5E:02:EE:88</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:26:27</Time>
+      <MacAddress>E0:D5:5E:02:EE:88</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-06</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>10:26:28</Time>
+      <MacAddress>E0:D5:5E:02:EE:88</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:26:30</Time>
+      <MacAddress>E0:D5:5E:02:EE:AA</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-05</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>10:26:31</Time>
+      <MacAddress>E0:D5:5E:02:EE:AA</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-05</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:26:32</Time>
+      <MacAddress>E0:D5:5E:02:EE:AA</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-05</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>10:26:33</Time>
+      <MacAddress>E0:D5:5E:02:EE:AA</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:26:40</Time>
+      <MacAddress>E0:D5:5E:02:EE:86</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-07</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>10:26:41</Time>
+      <MacAddress>E0:D5:5E:02:EE:86</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-07</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:26:42</Time>
+      <MacAddress>E0:D5:5E:02:EE:86</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-07</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>10:26:43</Time>
+      <MacAddress>E0:D5:5E:02:EE:86</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:26:45</Time>
+      <MacAddress>E0:D5:5E:02:EE:89</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-08</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>10:26:46</Time>
+      <MacAddress>E0:D5:5E:02:EE:89</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-08</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:26:47</Time>
+      <MacAddress>E0:D5:5E:02:EE:89</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-08</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>10:26:48</Time>
+      <MacAddress>E0:D5:5E:02:EE:89</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK7</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:27:10</Time>
+      <MacAddress>E0:D5:5E:02:EE:84</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK7</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>10:27:11</Time>
+      <MacAddress>E0:D5:5E:02:EE:84</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK7</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:27:12</Time>
+      <MacAddress>E0:D5:5E:02:EE:84</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK7</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>10:27:13</Time>
+      <MacAddress>E0:D5:5E:02:EE:84</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:49:08</Time>
+      <MacAddress>E0:D5:5E:02:EE:8C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-03</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>10:49:09</Time>
+      <MacAddress>E0:D5:5E:02:EE:8C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:49:10</Time>
+      <MacAddress>E0:D5:5E:02:EE:8C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-03</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>10:49:11</Time>
+      <MacAddress>E0:D5:5E:02:EE:8C</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\04\\05.04.2018 10-25-18_RunAutologon.my</FilePath>
+</ExecutedTaskData>

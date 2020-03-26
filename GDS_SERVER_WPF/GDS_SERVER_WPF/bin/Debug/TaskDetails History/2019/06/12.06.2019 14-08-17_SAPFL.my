@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>SAPFL</Name>
+  <Started>12.06.2019 14-08-17</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>12.06.2019 14-21-39</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK14</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>SAPFL</Name>
+    <LastExecuted>12.06.2019 14-08-17</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>enRjXYu1GUeWDY11SCrCDQ</_sourceIdentifier>
+        <Name>STUDENTSK14-12</Name>
+        <RealPCName>STUDENTSK14-12</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:D0:30</string>
+          <string>68:05:CA:24:7A:E1</string>
+          <string>74:D4:35:8D:9D:37</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.115</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName>SAPFL</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK14</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 7 Office 2016 x64 MP</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 7 Office 2016 x64 MP</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\W7_Off2k16_x64_MultiProfile\W7_Off2k16_x64_MultiProfile.wim</SourcePath>
+      <BoolLabel>Windows 7 Office 2016</BoolLabel>
+      <PartitionSize>100</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W7_Off2k16_x64_MultiProfile</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\GOC\SAPFL</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>SAPFL</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\GOC\DriveE\_wim\SAP\SAP.wim</SourcePath>
+      <BoolLabel>SAPFL</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:08:18</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\12.06.2019 14-08-17_SAPFL.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>14:09:45</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\12.06.2019 14-08-17_SAPFL.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>14:09:46</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\12.06.2019 14-08-17_SAPFL.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>14:09:48</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\12.06.2019 14-08-17_SAPFL.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>14:09:49</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\12.06.2019 14-08-17_SAPFL.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:21:35</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\12.06.2019 14-08-17_SAPFL.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>14:21:36</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\12.06.2019 14-08-17_SAPFL.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>14:21:37</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\12.06.2019 14-08-17_SAPFL.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>14:21:38</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\12.06.2019 14-08-17_SAPFL.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>14:21:39</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\12.06.2019 14-08-17_SAPFL.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\06\\12.06.2019 14-08-17_SAPFL.my</FilePath>
+</ExecutedTaskData>

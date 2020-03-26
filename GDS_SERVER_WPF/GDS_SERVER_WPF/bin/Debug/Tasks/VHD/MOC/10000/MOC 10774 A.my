@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>MOC 10774 A</Name>
+  <LastExecuted>26.06.2019 10-26-05</LastExecuted>
+  <TargetComputers>
+    <ComputerDetailsData>
+      <_sourceIdentifier>ZtvKy45ZpEO2XUC7pdomSQ</_sourceIdentifier>
+      <Name>STUDENTSK8-04</Name>
+      <RealPCName>STUDENTSK8-04</RealPCName>
+      <macAddresses>
+        <string>1C:1B:0D:12:1E:2D</string>
+        <string>68:05:CA:44:4E:84</string>
+      </macAddresses>
+      <MacAddress>1C:1B:0D:12:1E:2D</MacAddress>
+      <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+      <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+      <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+      <numberOfRamSLots>4</numberOfRamSLots>
+      <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+      <boardProductId>H170-D3H-CF</boardProductId>
+      <accountName>StudentEN</accountName>
+      <IPAddress>10.202.20.72</IPAddress>
+      <baseImageName>Windows 10 Office 2019 x64 MP</baseImageName>
+      <driveEImageName />
+      <dartInfo />
+      <ImageSource>Images/Offline.ico</ImageSource>
+      <inWinpe>false</inWinpe>
+      <PostInstalls />
+      <CustomLog />
+    </ComputerDetailsData>
+  </TargetComputers>
+  <MachineGroup>UCEBNASK08</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>true</Cloning>
+  <BaseImageSourcePath>.\Base\MOC\Windows Server 2008 R2</BaseImageSourcePath>
+  <BaseImageData>
+    <Name>Windows Server 2008 R2</Name>
+    <ImageSource>Images/Image.ico</ImageSource>
+    <SourcePath>I:\MOC\Base\_WIM\W2k8r2\w2k8r2.wim</SourcePath>
+    <BoolLabel>Windows Server 2008 R2</BoolLabel>
+    <PartitionSize>90</PartitionSize>
+    <VHDResizeSize>50</VHDResizeSize>
+    <VHDResize>false</VHDResize>
+    <VHDNames>
+      <string>w2k8r2</string>
+      <string />
+    </VHDNames>
+    <OSAbrivations>
+      <string>W2k8_R2</string>
+    </OSAbrivations>
+  </BaseImageData>
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath>.\DriveE\MOC\10000\10774 A</DriveEImageSourcePath>
+  <DriveEImageData>
+    <Name>10774 A</Name>
+    <ImageSource>Images/Image.ico</ImageSource>
+    <SourcePath>I:\MOC\DriveE\_WIM\10775A\10775A.wim</SourcePath>
+    <BoolLabel>MOC 10774 A</BoolLabel>
+    <PartitionSize>90</PartitionSize>
+    <VHDResizeSize>50</VHDResizeSize>
+    <VHDResize>false</VHDResize>
+    <VHDNames />
+    <OSAbrivations />
+  </DriveEImageData>
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <DestinationDirectoryInOS />
+  <CommandsInOS>
+    <string>E:\autologon.bat</string>
+  </CommandsInOS>
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE />
+  <WaitingTime>30</WaitingTime>
+  <SendWarningMails>false</SendWarningMails>
+  <InfinityWaitingTime>true</InfinityWaitingTime>
+</TaskData>

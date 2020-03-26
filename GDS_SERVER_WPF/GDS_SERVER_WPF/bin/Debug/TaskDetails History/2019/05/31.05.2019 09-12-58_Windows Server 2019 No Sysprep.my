@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows Server 2019 No Sysprep</Name>
+  <Started>31.05.2019 09-12-58</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>31.05.2019 09-27-18</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>!Testing</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows Server 2019 No Sysprep</Name>
+    <LastExecuted>31.05.2019 09-12-58</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Cf9JfshRikWDFmxvIVrvJQ</_sourceIdentifier>
+        <Name>STUDENTSK11-09</Name>
+        <RealPCName>STUDENTSK11-09</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:29:D9:D7</string>
+          <string>00:22:4D:7C:7B:7A</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>StudentCZ</accountName>
+        <IPAddress>10.202.20.143</IPAddress>
+        <baseImageName>JSPRINGBOOT</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>!Testing</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\MOC\Windows Server 2019 No Sysprep</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows Server 2019 No Sysprep</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\Base\_WIM\NO_SYSPREP\w2k19\w2k19.wim</SourcePath>
+      <BoolLabel>Windows Server 2019</BoolLabel>
+      <PartitionSize>122</PartitionSize>
+      <VHDResizeSize>40</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>w2k19</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w2k_19</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:12:59</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 09-12-58_Windows Server 2019 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:14:21</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 09-12-58_Windows Server 2019 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:14:22</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 09-12-58_Windows Server 2019 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:14:23</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 09-12-58_Windows Server 2019 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:14:24</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 09-12-58_Windows Server 2019 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:27:16</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 09-12-58_Windows Server 2019 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:27:17</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 09-12-58_Windows Server 2019 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>9:27:18</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 09-12-58_Windows Server 2019 No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\05\\31.05.2019 09-12-58_Windows Server 2019 No Sysprep.my</FilePath>
+</ExecutedTaskData>

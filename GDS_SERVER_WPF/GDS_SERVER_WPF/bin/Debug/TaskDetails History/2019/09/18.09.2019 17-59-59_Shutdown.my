@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Shutdown</Name>
+  <Started>18.09.2019 17-59-59</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>18.09.2019 18-24-37</Finished>
+  <Clients>2</Clients>
+  <Done>2</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK02</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Shutdown</Name>
+    <LastExecuted>18.09.2019 17-59-59</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Kip1zIJWI0iGLf_H6SilDw</_sourceIdentifier>
+        <Name>STUDENTSK2-01</Name>
+        <RealPCName>MININT-G341R0G</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:AF:94</string>
+          <string>00:27:0E:15:14:26</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:AF:94</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.172</IPAddress>
+        <baseImageName>Windows 10 Office 10 13 16 19 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo>580-223-712#10.202.20.172#49678</dartInfo>
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>ceVTEzFkakePN7DesNHyyw</_sourceIdentifier>
+        <Name>STUDENTSK2-11</Name>
+        <RealPCName>MININT-FE3F7I0</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:B1:A4</string>
+          <string>00:27:0E:15:14:1D</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:B1:A4</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.107</IPAddress>
+        <baseImageName>Windows 10 Office 10 13 16 19 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo>808-205-823#10.202.20.107#49678</dartInfo>
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK02</MachineGroup>
+    <WakeOnLan>false</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>49</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>18:24:26</Time>
+      <MacAddress>68:05:CA:0C:AF:94</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\18.09.2019 17-59-59_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-01</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>18:24:27</Time>
+      <MacAddress>68:05:CA:0C:AF:94</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\18.09.2019 17-59-59_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-11</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>18:24:36</Time>
+      <MacAddress>68:05:CA:0C:B1:A4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\18.09.2019 17-59-59_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-11</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>18:24:37</Time>
+      <MacAddress>68:05:CA:0C:B1:A4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\18.09.2019 17-59-59_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\09\\18.09.2019 17-59-59_Shutdown.my</FilePath>
+</ExecutedTaskData>

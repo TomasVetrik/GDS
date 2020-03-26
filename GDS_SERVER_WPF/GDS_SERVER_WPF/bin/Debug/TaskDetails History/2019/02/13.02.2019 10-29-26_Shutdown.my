@@ -1,0 +1,418 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Shutdown</Name>
+  <Started>13.02.2019 10-29-26</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>13.02.2019 10-29-35</Finished>
+  <Clients>9</Clients>
+  <Done>9</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK02</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Shutdown</Name>
+    <LastExecuted>13.02.2019 10-29-26</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>QMSwJPXwGUawJUTWY6ICTA</_sourceIdentifier>
+        <Name>STUDENTSK2-08</Name>
+        <RealPCName>STUDENTSK2-08</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:B0:CD</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:B0:CD</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.102</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>O72omlfkbk2ScqJzLwERGw</_sourceIdentifier>
+        <Name>LEKTORSK2</Name>
+        <RealPCName>LEKTORSK2</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:BD:AF</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:BD:AF</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.13</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>sb9szIjlHke6V0d4H-khnw</_sourceIdentifier>
+        <Name>STUDENTSK2-01</Name>
+        <RealPCName>STUDENTSK2-01</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:AF:94</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:AF:94</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.56</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>pa8_ZwbP4UmnMIoz8soh-A</_sourceIdentifier>
+        <Name>STUDENTSK2-02</Name>
+        <RealPCName>STUDENTSK2-02</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:B1:E7</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:B1:E7</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  750 @ 2.67GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.23</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>MQ2WAw6yFUOBmIrzNSbq3g</_sourceIdentifier>
+        <Name>STUDENTSK2-03</Name>
+        <RealPCName>STUDENTSK2-03</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:BD:B7</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:BD:B7</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.62</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>oSDayBhSYE6o59eLK8N-Ug</_sourceIdentifier>
+        <Name>STUDENTSK2-04</Name>
+        <RealPCName>MININT-0HJSJC3</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:B1:9B</string>
+          <string>70:71:BC:5C:C6:A9</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:B1:9B</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.21</IPAddress>
+        <baseImageName>Windows 7 Office 2013 2016 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo>463-831-204#10.202.20.21#49678</dartInfo>
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>OzzoyF1x-E-aDvwUYBWoWA</_sourceIdentifier>
+        <Name>STUDENTSK2-05</Name>
+        <RealPCName>STUDENTSK2-05</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:BD:E8</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:BD:E8</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.53</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>t3Wwdvfit0yVb83KhxgHqw</_sourceIdentifier>
+        <Name>STUDENTSK2-06</Name>
+        <RealPCName>STUDENTSK2-06</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:AF:95</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:AF:95</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.91</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>M47dnFG48E2BPxVR30nJxw</_sourceIdentifier>
+        <Name>STUDENTSK2-07</Name>
+        <RealPCName>STUDENTSK2-07</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0A:6B:3B</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0A:6B:3B</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.87</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK02</MachineGroup>
+    <WakeOnLan>false</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>49</WaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:29:34</Time>
+      <MacAddress>68:05:CA:0C:B1:E7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.02.2019 10-29-26_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:29:34</Time>
+      <MacAddress>68:05:CA:0A:6B:3B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.02.2019 10-29-26_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:29:34</Time>
+      <MacAddress>68:05:CA:0C:AF:94</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.02.2019 10-29-26_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK2</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:29:34</Time>
+      <MacAddress>68:05:CA:0C:BD:AF</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.02.2019 10-29-26_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:29:34</Time>
+      <MacAddress>68:05:CA:0C:B1:9B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.02.2019 10-29-26_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:29:34</Time>
+      <MacAddress>68:05:CA:0C:BD:B7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.02.2019 10-29-26_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:29:34</Time>
+      <MacAddress>68:05:CA:0C:BD:E8</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.02.2019 10-29-26_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:29:34</Time>
+      <MacAddress>68:05:CA:0C:AF:95</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.02.2019 10-29-26_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:29:34</Time>
+      <MacAddress>68:05:CA:0C:B0:CD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.02.2019 10-29-26_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-04</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>10:29:35</Time>
+      <MacAddress>68:05:CA:0C:B1:9B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.02.2019 10-29-26_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK2</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>10:29:35</Time>
+      <MacAddress>68:05:CA:0C:BD:AF</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.02.2019 10-29-26_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-01</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>10:29:35</Time>
+      <MacAddress>68:05:CA:0C:AF:94</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.02.2019 10-29-26_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-03</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>10:29:35</Time>
+      <MacAddress>68:05:CA:0C:BD:B7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.02.2019 10-29-26_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-07</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>10:29:35</Time>
+      <MacAddress>68:05:CA:0A:6B:3B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.02.2019 10-29-26_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-02</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>10:29:35</Time>
+      <MacAddress>68:05:CA:0C:B1:E7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.02.2019 10-29-26_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-08</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>10:29:35</Time>
+      <MacAddress>68:05:CA:0C:B0:CD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.02.2019 10-29-26_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-05</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>10:29:35</Time>
+      <MacAddress>68:05:CA:0C:BD:E8</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.02.2019 10-29-26_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-06</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>10:29:35</Time>
+      <MacAddress>68:05:CA:0C:AF:95</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.02.2019 10-29-26_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\02\\13.02.2019 10-29-26_Shutdown.my</FilePath>
+</ExecutedTaskData>

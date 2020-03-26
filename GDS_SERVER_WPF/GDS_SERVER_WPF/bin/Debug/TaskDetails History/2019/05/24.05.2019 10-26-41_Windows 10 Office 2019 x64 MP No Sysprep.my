@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 10 Office 2019 x64 MP No Sysprep</Name>
+  <Started>24.05.2019 10-26-41</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>24.05.2019 10-50-38</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>NOTEBOOKS</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 10 Office 2019 x64 MP No Sysprep</Name>
+    <LastExecuted>24.05.2019 10-26-41</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>qIMkQTZM_0CO6eW-O5KeNA</_sourceIdentifier>
+        <Name>DELL01</Name>
+        <RealPCName>DELL01</RealPCName>
+        <macAddresses>
+          <string>AC:7B:A1:7B:A7:C3</string>
+          <string>EC:F4:BB:19:27:03</string>
+        </macAddresses>
+        <MacAddress>AC:7B:A1:7B:A7:C3</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4200U CPU @ 1.60GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 01/22/14 08:03:33 Ver: A04.00 </biosCaption>
+        <boardProductId>0TG93N</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.5</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>NOTEBOOKS</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 10 Office 2019 x64 MP</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 10 Office 2019 x64 MP</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\_NO_SYSPREP\W10_Off2k19_x64_Multiprofile_NO_SYSPREP_1809\W10_Off2k19_x64_Multiprofile.wim</SourcePath>
+      <BoolLabel>Windows 10 Office 2019</BoolLabel>
+      <PartitionSize>162</PartitionSize>
+      <VHDResizeSize>90</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W10_Off2k19_x64_Multiprofile</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:26:52</Time>
+      <MacAddress>AC:7B:A1:7B:A7:C3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.05.2019 10-26-41_Windows 10 Office 2019 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL01</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>10:28:30</Time>
+      <MacAddress>AC:7B:A1:7B:A7:C3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.05.2019 10-26-41_Windows 10 Office 2019 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:28:31</Time>
+      <MacAddress>AC:7B:A1:7B:A7:C3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.05.2019 10-26-41_Windows 10 Office 2019 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:28:32</Time>
+      <MacAddress>AC:7B:A1:7B:A7:C3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.05.2019 10-26-41_Windows 10 Office 2019 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL01</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>10:28:33</Time>
+      <MacAddress>AC:7B:A1:7B:A7:C3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.05.2019 10-26-41_Windows 10 Office 2019 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:50:36</Time>
+      <MacAddress>AC:7B:A1:7B:A7:C3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.05.2019 10-26-41_Windows 10 Office 2019 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:50:37</Time>
+      <MacAddress>AC:7B:A1:7B:A7:C3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.05.2019 10-26-41_Windows 10 Office 2019 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL01</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>10:50:38</Time>
+      <MacAddress>AC:7B:A1:7B:A7:C3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.05.2019 10-26-41_Windows 10 Office 2019 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\05\\24.05.2019 10-26-41_Windows 10 Office 2019 x64 MP No Sysprep.my</FilePath>
+</ExecutedTaskData>

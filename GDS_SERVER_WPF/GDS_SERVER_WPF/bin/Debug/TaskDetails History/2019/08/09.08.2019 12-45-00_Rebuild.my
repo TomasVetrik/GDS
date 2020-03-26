@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Rebuild</Name>
+  <Started>09.08.2019 12-45-00</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>09.08.2019 12-48-47</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>!Testing</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Rebuild</Name>
+    <LastExecuted>09.08.2019 12-45-00</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>SkMrERMFKE-VDUS3CNHiOw</_sourceIdentifier>
+        <Name>STUDENTSK11-09</Name>
+        <RealPCName>STUDENTSK11-09</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:29:D9:D7</string>
+          <string>00:22:4D:7C:7B:7A</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.97</IPAddress>
+        <baseImageName>Windows 10 Office 10 13 16 19 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>!Testing</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>true</SoftwareAndFileAction_WINPE>
+    <SourceDirectoryInWINPE>I:\Startup_WinPE\Scripts</SourceDirectoryInWINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE>
+      <string>W:\Scripts\Rebuild_Restart.bat</string>
+    </CommandsInWINPE>
+    <WaitingTime>30</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>12:45:01</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.08.2019 12-45-00_Rebuild.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>12:46:23</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.08.2019 12-45-00_Rebuild.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>12:46:24</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.08.2019 12-45-00_Rebuild.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>12:46:25</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.08.2019 12-45-00_Rebuild.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-09</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:46:25</Time>
+      <MacAddress>68:05:CA:29:D9:D7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.08.2019 12-45-00_Rebuild.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\08\\09.08.2019 12-45-00_Rebuild.my</FilePath>
+</ExecutedTaskData>

@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 10 Office 2016 x64 MP No Sysprep</Name>
+  <Started>15.11.2018 10-56-23</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>15.11.2018 11-21-35</Finished>
+  <Clients>2</Clients>
+  <Done>0</Done>
+  <Failed>2</Failed>
+  <MachineGroup>UCEBNASK09</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 10 Office 2016 x64 MP No Sysprep</Name>
+    <LastExecuted>15.11.2018 10-56-23</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>6wdB1rxif0WA0eygO-HwXw</_sourceIdentifier>
+        <Name>LEKTORSK9</Name>
+        <RealPCName>LEKTORSK9</RealPCName>
+        <macAddresses>
+          <string>70:71:BC:8E:B3:B4</string>
+          <string>00:1B:21:C2:81:6F</string>
+        </macAddresses>
+        <MacAddress>70:71:BC:8E:B3:B4</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.20.36</IPAddress>
+        <baseImageName>Windows 10 Office 2016 x64 Ucebna 05</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>pvf8UB4Tak22lY0mPjGV7g</_sourceIdentifier>
+        <Name>STUDENTSK9-06</Name>
+        <RealPCName>MININT-7VTP9I6</RealPCName>
+        <macAddresses>
+          <string>00:1B:21:C1:B3:3A</string>
+          <string>70:71:BC:8E:B2:1F</string>
+        </macAddresses>
+        <MacAddress>00:1B:21:C1:B3:3A</MacAddress>
+        <OSInformations>, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.26</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>559-033-639#10.202.20.26#49422</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK09</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 10 Office 2016 x64 MP</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 10 Office 2016 x64 MP</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\_NO_SYSPREP\W10_Off2k16_x64_Multiprofile_NO_SYSPREP_1803\W10_Off2k16_x64_Multiprofile_NO_SYSPREP_1803.wim</SourcePath>
+      <BoolLabel>Windows 10 Office 2016</BoolLabel>
+      <PartitionSize>162</PartitionSize>
+      <VHDResizeSize>90</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W10_Off2k16_x64_MultiProfile</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:56:24</Time>
+      <MacAddress>00:1B:21:C1:B3:3A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-06</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>10:56:25</Time>
+      <MacAddress>00:1B:21:C1:B3:3A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:56:26</Time>
+      <MacAddress>00:1B:21:C1:B3:3A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:56:27</Time>
+      <MacAddress>00:1B:21:C1:B3:3A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-06</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>10:56:28</Time>
+      <MacAddress>00:1B:21:C1:B3:3A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK9</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:57:09</Time>
+      <MacAddress>70:71:BC:8E:B3:B4</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK9</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>10:59:27</Time>
+      <MacAddress>70:71:BC:8E:B3:B4</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK9</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:59:28</Time>
+      <MacAddress>70:71:BC:8E:B3:B4</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK9</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:59:29</Time>
+      <MacAddress>70:71:BC:8E:B3:B4</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK9</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>10:59:30</Time>
+      <MacAddress>70:71:BC:8E:B3:B4</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK9-06</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>11:07:04</Time>
+      <MacAddress>00:1B:21:C1:B3:3A</MacAddress>
+      <Message>CLIENT NEED RESTART</Message>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:07:05</Time>
+      <MacAddress>00:1B:21:C1:B3:3A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-06</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>11:07:06</Time>
+      <MacAddress>00:1B:21:C1:B3:3A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:07:07</Time>
+      <MacAddress>00:1B:21:C1:B3:3A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>11:07:08</Time>
+      <MacAddress>00:1B:21:C1:B3:3A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-06</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>11:07:09</Time>
+      <MacAddress>00:1B:21:C1:B3:3A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK9-06</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>11:19:16</Time>
+      <MacAddress>00:1B:21:C1:B3:3A</MacAddress>
+      <Message>CLIENT NEED RESTART</Message>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:19:17</Time>
+      <MacAddress>00:1B:21:C1:B3:3A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-06</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>11:19:18</Time>
+      <MacAddress>00:1B:21:C1:B3:3A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:19:19</Time>
+      <MacAddress>00:1B:21:C1:B3:3A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>11:19:20</Time>
+      <MacAddress>00:1B:21:C1:B3:3A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-06</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>11:19:21</Time>
+      <MacAddress>00:1B:21:C1:B3:3A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>LEKTORSK9</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>11:12:16</Time>
+      <MacAddress>70:71:BC:8E:B3:B4</MacAddress>
+      <Message>70:71:BC:8E:B3:B4</Message>
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\11\\15.11.2018 10-56-23_Windows 10 Office 2016 x64 MP No Sysprep.my</FilePath>
+</ExecutedTaskData>

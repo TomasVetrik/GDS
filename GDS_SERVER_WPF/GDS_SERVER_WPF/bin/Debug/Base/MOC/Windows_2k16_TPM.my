@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ImageData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows_2k16_TPM</Name>
+  <ImageSource>Images/Image.ico</ImageSource>
+  <SourcePath>I:\MOC\Base\_WIM\W2k16TPM\W2k16TPM.wim</SourcePath>
+  <BoolLabel>Windows 2016 TMP</BoolLabel>
+  <PartitionSize>92</PartitionSize>
+  <VHDResizeSize>50</VHDResizeSize>
+  <VHDResize>false</VHDResize>
+  <VHDNames>
+    <string>W2k16TPM</string>
+  </VHDNames>
+  <OSAbrivations>
+    <string>W2k12_R2</string>
+  </OSAbrivations>
+</ImageData>

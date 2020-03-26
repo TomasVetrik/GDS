@@ -1,0 +1,1078 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>RunPostInstalls</Name>
+  <Started>23.06.2019 12-58-56</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>23.06.2019 12-59-12</Finished>
+  <Clients>13</Clients>
+  <Done>13</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK14</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>RunPostInstalls</Name>
+    <LastExecuted>23.06.2019 12-58-56</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>53SGyQhYfUGnCeR-QH0mrQ</_sourceIdentifier>
+        <Name>LEKTORSK14</Name>
+        <RealPCName>LEKTORSK14</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:AC:AD</string>
+          <string>68:05:CA:29:C8:B5</string>
+          <string>74:D4:35:86:E9:B1</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:AC:AD</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.11</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>UFlZ7947dkSuxpA99Hg2VQ</_sourceIdentifier>
+        <Name>STUDENTSK14-01</Name>
+        <RealPCName>STUDENTSK14-01</RealPCName>
+        <macAddresses>
+          <string>74:D4:35:86:E9:A3</string>
+          <string>68:05:CA:29:D7:83</string>
+        </macAddresses>
+        <MacAddress>74:D4:35:86:E9:A3</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.41</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>QzwVZ-ZjH0eiwYE1s0QrKA</_sourceIdentifier>
+        <Name>STUDENTSK14-02</Name>
+        <RealPCName>STUDENTSK14-02</RealPCName>
+        <macAddresses>
+          <string>74:D4:35:8D:A0:B4</string>
+          <string>68:05:CA:24:67:C0</string>
+        </macAddresses>
+        <MacAddress>74:D4:35:8D:A0:B4</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.6</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>y1G3cf03f0Kp7aKrMrtqSw</_sourceIdentifier>
+        <Name>STUDENTSK14-03</Name>
+        <RealPCName>STUDENTSK14-03</RealPCName>
+        <macAddresses>
+          <string>74:D4:35:8B:18:EE</string>
+          <string>68:05:CA:29:D7:86</string>
+        </macAddresses>
+        <MacAddress>74:D4:35:8B:18:EE</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.22</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>IzaapR4c2kC4PjwD_UGqmw</_sourceIdentifier>
+        <Name>STUDENTSK14-04</Name>
+        <RealPCName>STUDENTSK14-04</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:29:DA:21</string>
+          <string>74:D4:35:8B:5E:27</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:29:DA:21</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.33</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>AX1CwwJJrEy74gwgU2tsmw</_sourceIdentifier>
+        <Name>STUDENTSK14-05</Name>
+        <RealPCName>STUDENTSK14-05</RealPCName>
+        <macAddresses>
+          <string>74:D4:35:8D:9E:6E</string>
+          <string>68:05:CA:29:D9:E2</string>
+        </macAddresses>
+        <MacAddress>74:D4:35:8D:9E:6E</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.85</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>8Bo1VDn4d0m_bbVWAGlgug</_sourceIdentifier>
+        <Name>STUDENTSK14-06</Name>
+        <RealPCName>STUDENTSK14-06</RealPCName>
+        <macAddresses>
+          <string>74:D4:35:8D:9F:BB</string>
+          <string>68:05:CA:24:7A:E0</string>
+        </macAddresses>
+        <MacAddress>74:D4:35:8D:9F:BB</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.34</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>-rvCPzFc3EmIcFE_CCt2jg</_sourceIdentifier>
+        <Name>STUDENTSK14-07</Name>
+        <RealPCName>STUDENTSK14-07</RealPCName>
+        <macAddresses>
+          <string>74:D4:35:8D:8D:F9</string>
+          <string>68:05:CA:29:D9:DC</string>
+        </macAddresses>
+        <MacAddress>74:D4:35:8D:8D:F9</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.111</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>iNRqJWqzIkqEEaSrgXDWwg</_sourceIdentifier>
+        <Name>STUDENTSK14-08</Name>
+        <RealPCName>STUDENTSK14-08</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:24:7A:E4</string>
+          <string>74:D4:35:8D:9D:1F</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:24:7A:E4</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.40</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>QxVZUjTYCUORRxZRrjOUrw</_sourceIdentifier>
+        <Name>STUDENTSK14-09</Name>
+        <RealPCName>STUDENTSK14-09</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:15:8A:3F</string>
+          <string>74:D4:35:1D:AC:A7</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.149</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>wPL4VuvL20GkSiyb7LCKVg</_sourceIdentifier>
+        <Name>STUDENTSK14-10</Name>
+        <RealPCName>STUDENTSK14-10</RealPCName>
+        <macAddresses>
+          <string>74:D4:35:8D:8D:BD</string>
+          <string>68:05:CA:24:7F:38</string>
+        </macAddresses>
+        <MacAddress>74:D4:35:8D:8D:BD</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.150</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>-DB-l7m7uUGozqWfs50z6g</_sourceIdentifier>
+        <Name>STUDENTSK14-11</Name>
+        <RealPCName>STUDENTSK14-11</RealPCName>
+        <macAddresses>
+          <string>74:D4:35:1D:AC:AB</string>
+          <string>68:05:CA:24:4F:EA</string>
+        </macAddresses>
+        <MacAddress>74:D4:35:1D:AC:AB</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 01/17/14 21:20:20 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.250</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>rijtsFGZKEudejhfOJPUow</_sourceIdentifier>
+        <Name>STUDENTSK14-12</Name>
+        <RealPCName>STUDENTSK14-12</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:D0:30</string>
+          <string>74:D4:35:8D:9D:37</string>
+          <string>68:05:CA:24:7A:E1</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+        <boardProductId>H87-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.115</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK14</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <SourceDirectoryInOS>I:\Startup_OS\Custom_OS</SourceDirectoryInOS>
+    <DestinationDirectoryInOS>D:\Temp</DestinationDirectoryInOS>
+    <CommandsInOS>
+      <string>D:\Autologon_PostInstalls.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS>
+      <string>I:\Startup_OS\Custom_OS\Password.txt</string>
+    </CopyFilesInOS>
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <SourceDirectoryInWINPE>I:\</SourceDirectoryInWINPE>
+    <DestinationDirectoryInWINPE>I:\</DestinationDirectoryInWINPE>
+    <CopyFilesInWINPE>
+      <string>I:\GDS_Client.exe</string>
+    </CopyFilesInWINPE>
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>12:59:05</Time>
+      <MacAddress>74:D4:35:86:E9:A3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>12:59:05</Time>
+      <MacAddress>68:05:CA:0C:AC:AD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>12:59:05</Time>
+      <MacAddress>74:D4:35:8D:9F:BB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>12:59:05</Time>
+      <MacAddress>74:D4:35:8D:9E:6E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>12:59:05</Time>
+      <MacAddress>74:D4:35:8B:18:EE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>12:59:05</Time>
+      <MacAddress>74:D4:35:8D:8D:F9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>12:59:06</Time>
+      <MacAddress>74:D4:35:8D:8D:BD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>12:59:06</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>12:59:06</Time>
+      <MacAddress>74:D4:35:8D:A0:B4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>12:59:06</Time>
+      <MacAddress>68:05:CA:29:DA:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-11</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>12:59:06</Time>
+      <MacAddress>74:D4:35:1D:AC:AB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-09</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>12:59:06</Time>
+      <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>12:59:06</Time>
+      <MacAddress>68:05:CA:24:7A:E4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-06</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:59:06</Time>
+      <MacAddress>74:D4:35:8D:9F:BB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-01</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:59:06</Time>
+      <MacAddress>74:D4:35:86:E9:A3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:59:06</Time>
+      <MacAddress>68:05:CA:0C:AC:AD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-05</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:59:06</Time>
+      <MacAddress>74:D4:35:8D:9E:6E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-07</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:59:06</Time>
+      <MacAddress>74:D4:35:8D:8D:F9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-03</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:59:06</Time>
+      <MacAddress>74:D4:35:8B:18:EE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-11</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:59:07</Time>
+      <MacAddress>74:D4:35:1D:AC:AB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-08</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:59:07</Time>
+      <MacAddress>68:05:CA:24:7A:E4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-02</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:59:07</Time>
+      <MacAddress>74:D4:35:8D:A0:B4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-04</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:59:07</Time>
+      <MacAddress>68:05:CA:29:DA:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:59:07</Time>
+      <MacAddress>74:D4:35:8D:8D:BD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-09</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:59:07</Time>
+      <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:59:07</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>12:59:07</Time>
+      <MacAddress>74:D4:35:86:E9:A3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>12:59:07</Time>
+      <MacAddress>68:05:CA:0C:AC:AD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>12:59:07</Time>
+      <MacAddress>74:D4:35:8D:9F:BB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>12:59:07</Time>
+      <MacAddress>74:D4:35:8B:18:EE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-07</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>12:59:07</Time>
+      <MacAddress>74:D4:35:8D:8D:F9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-05</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>12:59:07</Time>
+      <MacAddress>74:D4:35:8D:9E:6E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>12:59:08</Time>
+      <MacAddress>74:D4:35:8D:8D:BD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-09</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>12:59:08</Time>
+      <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>12:59:08</Time>
+      <MacAddress>74:D4:35:8D:A0:B4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-08</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>12:59:08</Time>
+      <MacAddress>68:05:CA:24:7A:E4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>12:59:08</Time>
+      <MacAddress>68:05:CA:29:DA:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>12:59:08</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-11</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>12:59:08</Time>
+      <MacAddress>74:D4:35:1D:AC:AB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-06</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>12:59:08</Time>
+      <MacAddress>74:D4:35:8D:9F:BB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-01</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>12:59:08</Time>
+      <MacAddress>74:D4:35:86:E9:A3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>12:59:08</Time>
+      <MacAddress>68:05:CA:0C:AC:AD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-05</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>12:59:08</Time>
+      <MacAddress>74:D4:35:8D:9E:6E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-07</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>12:59:08</Time>
+      <MacAddress>74:D4:35:8D:8D:F9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-03</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>12:59:08</Time>
+      <MacAddress>74:D4:35:8B:18:EE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>12:59:09</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>12:59:09</Time>
+      <MacAddress>74:D4:35:8D:8D:BD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-08</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>12:59:09</Time>
+      <MacAddress>68:05:CA:24:7A:E4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-02</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>12:59:09</Time>
+      <MacAddress>74:D4:35:8D:A0:B4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-04</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>12:59:09</Time>
+      <MacAddress>68:05:CA:29:DA:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-09</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>12:59:09</Time>
+      <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-11</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>12:59:09</Time>
+      <MacAddress>74:D4:35:1D:AC:AB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-01</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>12:59:09</Time>
+      <MacAddress>74:D4:35:86:E9:A3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-06</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>12:59:09</Time>
+      <MacAddress>74:D4:35:8D:9F:BB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-05</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>12:59:09</Time>
+      <MacAddress>74:D4:35:8D:9E:6E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-03</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>12:59:09</Time>
+      <MacAddress>74:D4:35:8B:18:EE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>12:59:10</Time>
+      <MacAddress>74:D4:35:8D:8D:BD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-04</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>12:59:10</Time>
+      <MacAddress>68:05:CA:29:DA:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>12:59:10</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>12:59:10</Time>
+      <MacAddress>68:05:CA:0C:AC:AD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-01</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>12:59:10</Time>
+      <MacAddress>74:D4:35:86:E9:A3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-06</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>12:59:10</Time>
+      <MacAddress>74:D4:35:8D:9F:BB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-07</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>12:59:10</Time>
+      <MacAddress>74:D4:35:8D:8D:F9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-05</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>12:59:10</Time>
+      <MacAddress>74:D4:35:8D:9E:6E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-03</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>12:59:10</Time>
+      <MacAddress>74:D4:35:8B:18:EE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-08</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>12:59:11</Time>
+      <MacAddress>68:05:CA:24:7A:E4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-02</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>12:59:11</Time>
+      <MacAddress>74:D4:35:8D:A0:B4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-09</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>12:59:11</Time>
+      <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-10</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>12:59:11</Time>
+      <MacAddress>74:D4:35:8D:8D:BD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-12</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>12:59:11</Time>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-11</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>12:59:11</Time>
+      <MacAddress>74:D4:35:1D:AC:AB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-04</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>12:59:11</Time>
+      <MacAddress>68:05:CA:29:DA:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK14</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>12:59:11</Time>
+      <MacAddress>68:05:CA:0C:AC:AD</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-07</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>12:59:11</Time>
+      <MacAddress>74:D4:35:8D:8D:F9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-08</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>12:59:12</Time>
+      <MacAddress>68:05:CA:24:7A:E4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-02</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>12:59:12</Time>
+      <MacAddress>74:D4:35:8D:A0:B4</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-09</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>12:59:12</Time>
+      <MacAddress>68:05:CA:15:8A:3F</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK14-11</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>12:59:12</Time>
+      <MacAddress>74:D4:35:1D:AC:AB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\23.06.2019 12-58-56_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\06\\23.06.2019 12-58-56_RunPostInstalls.my</FilePath>
+</ExecutedTaskData>

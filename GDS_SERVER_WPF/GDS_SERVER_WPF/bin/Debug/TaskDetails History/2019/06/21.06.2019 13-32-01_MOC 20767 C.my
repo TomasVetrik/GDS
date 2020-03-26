@@ -1,0 +1,1023 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>MOC 20767 C</Name>
+  <Started>21.06.2019 13-32-01</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>23.06.2019 12-56-25</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>UCEBNASK12</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>MOC 20767 C</Name>
+    <LastExecuted>21.06.2019 13-32-01</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>JP23uCiFvkOa6pHqxz8UBg</_sourceIdentifier>
+        <Name>STUDENTSK12-08</Name>
+        <RealPCName>STUDENTSK12-08</RealPCName>
+        <macAddresses>
+          <string>FC:AA:14:AC:70:27</string>
+          <string>68:05:CA:3C:35:75</string>
+        </macAddresses>
+        <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.46</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>10990 C</driveEImageName>
+        <dartInfo />
+        <Detail />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <pathNode>.\Machine Groups\UCEBNASK12</pathNode>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK12</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\MOC\Windows Server 2016 No Sysprep</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows Server 2016 No Sysprep</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\Base\_WIM\NO_SYSPREP\w2k16\w2k16.wim</SourcePath>
+      <BoolLabel>Windows Server 2016</BoolLabel>
+      <PartitionSize>122</PartitionSize>
+      <VHDResizeSize>40</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>w2k16</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W2k16</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\MOC\20000\MOC 20767 C</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>MOC 20767 C</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\DriveE\_WIM\20767C\20767C.wim</SourcePath>
+      <BoolLabel>MOC 20767 C</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\Autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:32:03</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>13:33:30</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:33:31</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:33:32</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:33:33</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>14:14:50</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message>CLONE FAILED EC -1054735609</Message>
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:14:51</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>14:14:52</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>14:14:53</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>14:14:59</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>14:15:00</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:36:43</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:36:43</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:36:43</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:36:43</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:36:43</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:36:43</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:36:43</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:36:43</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:36:43</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:36:43</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK12-08</ComputerName>
+      <Step>FAILED</Step>
+      <Time>12:56:25</Time>
+      <MacAddress>FC:AA:14:AC:70:27</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\21.06.2019 13-32-01_MOC 20767 C.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\06\\21.06.2019 13-32-01_MOC 20767 C.my</FilePath>
+</ExecutedTaskData>

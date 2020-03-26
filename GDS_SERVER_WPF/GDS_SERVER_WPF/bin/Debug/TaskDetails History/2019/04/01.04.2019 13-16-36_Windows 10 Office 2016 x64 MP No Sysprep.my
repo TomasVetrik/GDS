@@ -1,0 +1,476 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 10 Office 2016 x64 MP No Sysprep</Name>
+  <Started>01.04.2019 13-16-36</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>01.04.2019 13-49-56</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>NOTEBOOKS</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 10 Office 2016 x64 MP No Sysprep</Name>
+    <LastExecuted>01.04.2019 13-16-36</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>VulVm21PjECbfdn_-O5vxg</_sourceIdentifier>
+        <Name>LEKTORSKY_NTB01</Name>
+        <RealPCName>MININT-PL8AE55</RealPCName>
+        <macAddresses>
+          <string>D4:BE:D9:6D:75:90</string>
+        </macAddresses>
+        <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+        <OSInformations>, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3210M CPU @ 2.50GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 01/18/16 13:46:00 Ver: A18.00 </biosCaption>
+        <boardProductId>0CPWYR</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.81</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>103-612-397#10.202.20.81#49672</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>NOTEBOOKS</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 10 Office 2016 x64 MP</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 10 Office 2016 x64 MP</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\_NO_SYSPREP\W10_Off2k16_x64_Multiprofile_NO_SYSPREP_1803\W10_Off2k16_x64_Multiprofile_NO_SYSPREP_1803.wim</SourcePath>
+      <BoolLabel>Windows 10 Office 2016</BoolLabel>
+      <PartitionSize>162</PartitionSize>
+      <VHDResizeSize>90</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W10_Off2k16_x64_MultiProfile</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:16:38</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>13:16:39</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:16:40</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:16:41</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:16:42</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>13:26:03</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message>CLONE FAILED Applying Image EC 1392</Message>
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:26:04</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>13:26:05</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:26:06</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:26:07</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:26:08</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>13:35:23</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message>CLONE FAILED Applying Image EC 1392</Message>
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:35:24</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>13:35:25</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:35:26</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:35:33</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:35:34</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>13:46:57</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message>CLIENT NEED RESTART</Message>
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:46:58</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>13:46:59</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:47:00</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:47:01</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:47:02</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>13:47:46</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message>CLONE FAILED EC -2147024893</Message>
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:47:47</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>13:47:48</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:47:49</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:47:56</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:47:57</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>13:48:26</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message>CLONE FAILED EC -2147024893</Message>
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:48:27</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>13:48:28</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:48:29</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:48:35</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:48:36</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>13:49:00</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message>CLONE FAILED EC -2147024893</Message>
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:49:01</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>13:49:02</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:49:03</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:49:09</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:49:10</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>13:49:39</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message>CLONE FAILED EC -2147024893</Message>
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:49:40</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>LEKTORSKY_NTB01</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>13:49:40</Time>
+      <MacAddress>D4:BE:D9:6D:75:90</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\04\\01.04.2019 13-16-36_Windows 10 Office 2016 x64 MP No Sysprep.my</FilePath>
+</ExecutedTaskData>

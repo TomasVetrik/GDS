@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Centos 7</Name>
+  <Started>29.05.2019 13-05-13</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>29.05.2019 15-52-00</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>UCEBNASK06</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Centos 7</Name>
+    <LastExecuted>29.05.2019 13-05-13</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>2Kl3qAAi9Umh_7Qf2JL7iw</_sourceIdentifier>
+        <Name>LEKTORKS6_NUC</Name>
+        <RealPCName>MININT-58HALAL</RealPCName>
+        <macAddresses>
+          <string>94:C6:91:A4:05:7C</string>
+        </macAddresses>
+        <MacAddress>94:C6:91:A4:05:7C</MacAddress>
+        <OSInformations>, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.202</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>302-689-118#10.202.20.202#49672</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK06</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\LINUX\CentOS 7</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>CentOS 7</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\LINUX\Base\_wim\CentOS_7\Centos_7.wim</SourcePath>
+      <BoolLabel>CentOS</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>Centos_7</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x86</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>true</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>20</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:05:14</Time>
+      <MacAddress>94:C6:91:A4:05:7C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\29.05.2019 13-05-13_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>13:05:15</Time>
+      <MacAddress>94:C6:91:A4:05:7C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\29.05.2019 13-05-13_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:05:21</Time>
+      <MacAddress>94:C6:91:A4:05:7C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\29.05.2019 13-05-13_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:05:22</Time>
+      <MacAddress>94:C6:91:A4:05:7C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\29.05.2019 13-05-13_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>15:47:19</Time>
+      <MacAddress>94:C6:91:A4:05:7C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\29.05.2019 13-05-13_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>15:47:19</Time>
+      <MacAddress>94:C6:91:A4:05:7C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\29.05.2019 13-05-13_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>15:47:19</Time>
+      <MacAddress>94:C6:91:A4:05:7C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\29.05.2019 13-05-13_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>15:47:19</Time>
+      <MacAddress>94:C6:91:A4:05:7C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\29.05.2019 13-05-13_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>FAILED</Step>
+      <Time>15:52:00</Time>
+      <MacAddress>94:C6:91:A4:05:7C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\29.05.2019 13-05-13_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>FAILED</Step>
+      <Time>15:52:00</Time>
+      <MacAddress>94:C6:91:A4:05:7C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\29.05.2019 13-05-13_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>FAILED</Step>
+      <Time>15:52:00</Time>
+      <MacAddress>94:C6:91:A4:05:7C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\29.05.2019 13-05-13_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>FAILED</Step>
+      <Time>15:52:00</Time>
+      <MacAddress>94:C6:91:A4:05:7C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\29.05.2019 13-05-13_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>FAILED</Step>
+      <Time>15:52:00</Time>
+      <MacAddress>94:C6:91:A4:05:7C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\29.05.2019 13-05-13_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\05\\29.05.2019 13-05-13_Centos 7.my</FilePath>
+</ExecutedTaskData>

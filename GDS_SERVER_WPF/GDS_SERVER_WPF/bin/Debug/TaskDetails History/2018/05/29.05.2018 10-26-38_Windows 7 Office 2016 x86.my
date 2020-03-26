@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 7 Office 2016 x86</Name>
+  <Started>29.05.2018 10-26-38</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>29.05.2018 11-12-01</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>Default</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 7 Office 2016 x86</Name>
+    <LastExecuted>29.05.2018 10-26-38</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>ZySGpW_Xnkm5F8k7umrpaQ</_sourceIdentifier>
+        <Name>Drga</Name>
+        <RealPCName>MININT-7P1REOE</RealPCName>
+        <macAddresses>
+          <string>00:19:D1:6D:A4:AE</string>
+        </macAddresses>
+        <MacAddress>00:19:D1:6D:A4:AE</MacAddress>
+        <OSInformations>, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™2 CPU  6420 @ 2.13GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DQ965GF</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.151</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>218-077-645#10.202.20.151#49416</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>Default</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 7 Office 2016 x86</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 7 Office 2016 x86</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\W7_Off2k16_x86\W7_Off2k16_x86.wim</SourcePath>
+      <BoolLabel>Windows 7 Office 2016</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>W7_Off2k16_x86</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x86</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>Drga</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:26:39</Time>
+      <MacAddress>00:19:D1:6D:A4:AE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>Drga</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>10:26:40</Time>
+      <MacAddress>00:19:D1:6D:A4:AE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>Drga</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:26:41</Time>
+      <MacAddress>00:19:D1:6D:A4:AE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>Drga</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:26:42</Time>
+      <MacAddress>00:19:D1:6D:A4:AE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>Drga</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>10:26:43</Time>
+      <MacAddress>00:19:D1:6D:A4:AE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>Drga</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>10:42:31</Time>
+      <MacAddress>00:19:D1:6D:A4:AE</MacAddress>
+      <Message>CLIENT NEED RESTART</Message>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>Drga</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:42:32</Time>
+      <MacAddress>00:19:D1:6D:A4:AE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>Drga</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>10:42:33</Time>
+      <MacAddress>00:19:D1:6D:A4:AE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>Drga</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:42:34</Time>
+      <MacAddress>00:19:D1:6D:A4:AE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>Drga</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:42:35</Time>
+      <MacAddress>00:19:D1:6D:A4:AE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>Drga</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>10:42:36</Time>
+      <MacAddress>00:19:D1:6D:A4:AE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>Drga</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:11:59</Time>
+      <MacAddress>00:19:D1:6D:A4:AE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>Drga</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:12:01</Time>
+      <MacAddress>00:19:D1:6D:A4:AE</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\05\\29.05.2018 10-26-38_Windows 7 Office 2016 x86.my</FilePath>
+</ExecutedTaskData>

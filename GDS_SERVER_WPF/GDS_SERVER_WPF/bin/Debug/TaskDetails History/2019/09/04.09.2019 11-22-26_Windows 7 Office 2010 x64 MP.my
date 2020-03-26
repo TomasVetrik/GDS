@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 7 Office 2010 x64 MP</Name>
+  <Started>04.09.2019 11-22-26</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>04.09.2019 11-49-18</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK07</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 7 Office 2010 x64 MP</Name>
+    <LastExecuted>04.09.2019 11-22-26</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>EZ9wWQo0bUysMbwlpO0lGg</_sourceIdentifier>
+        <Name>LEKTORSK7</Name>
+        <RealPCName>LEKTORSK7</RealPCName>
+        <macAddresses>
+          <string>E0:D5:5E:02:EE:84</string>
+        </macAddresses>
+        <MacAddress>E0:D5:5E:02:EE:84</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-7400 CPU @ 3.00GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 11/08/17 12:51:49 Ver: 05.0000C</biosCaption>
+        <boardProductId>Z270-HD3P-CF</boardProductId>
+        <accountName>StudentCZ</accountName>
+        <IPAddress>10.202.20.79</IPAddress>
+        <baseImageName>Windows 10 Office 2019 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK07</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 7 Office 2010 x64 MP</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 7 Office 2010 x64 MP</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\W7_Off2k10_x64_MultiProfile\W7_Off2k10_x64_MultiProfile.wim</SourcePath>
+      <BoolLabel>Windows 7 Office 2010</BoolLabel>
+      <PartitionSize>100</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W7_Off2k10_x64_MultiProfile</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <DriveEImageData>
+      <Name>10989B</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\DriveE\_WIM\10989B\10989B.wim</SourcePath>
+      <BoolLabel>MOC 10989 B</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK7</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:22:27</Time>
+      <MacAddress>E0:D5:5E:02:EE:84</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\04.09.2019 11-22-26_Windows 7 Office 2010 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK7</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>11:23:49</Time>
+      <MacAddress>E0:D5:5E:02:EE:84</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\04.09.2019 11-22-26_Windows 7 Office 2010 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK7</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:23:50</Time>
+      <MacAddress>E0:D5:5E:02:EE:84</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\04.09.2019 11-22-26_Windows 7 Office 2010 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK7</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>11:23:51</Time>
+      <MacAddress>E0:D5:5E:02:EE:84</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\04.09.2019 11-22-26_Windows 7 Office 2010 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK7</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>11:23:52</Time>
+      <MacAddress>E0:D5:5E:02:EE:84</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\04.09.2019 11-22-26_Windows 7 Office 2010 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK7</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:49:16</Time>
+      <MacAddress>E0:D5:5E:02:EE:84</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\04.09.2019 11-22-26_Windows 7 Office 2010 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK7</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:49:17</Time>
+      <MacAddress>E0:D5:5E:02:EE:84</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\04.09.2019 11-22-26_Windows 7 Office 2010 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK7</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>11:49:18</Time>
+      <MacAddress>E0:D5:5E:02:EE:84</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\04.09.2019 11-22-26_Windows 7 Office 2010 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\09\\04.09.2019 11-22-26_Windows 7 Office 2010 x64 MP.my</FilePath>
+</ExecutedTaskData>

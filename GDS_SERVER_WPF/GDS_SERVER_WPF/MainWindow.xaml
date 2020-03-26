@@ -3,8 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GDS_SERVER_WPF"  
-        xmlns:self="clr-namespace:GDS_SERVER_WPF"
+        xmlns:local="clr-namespace:GDS_SERVER_WPF"
         mc:Ignorable="d"
         Title="GDS Server" Height="748" Width="1024" Closing="Window_Closing" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" WindowState="Maximized" Icon="Images/logo_gopas_sk.ico" KeyUp="Window_KeyUp">
     <Window.Resources>
@@ -73,15 +72,19 @@
                             <ContextMenu>
                                 <MenuItem x:Name="menuItemRenameWG" Header="Rename" InputGestureText="F2"  Click="MenuItemMachineGroupsRename_Click"/>
                                 <MenuItem x:Name="menuItemDeleteWG" Header="Delete" InputGestureText="DEL" Click="MenuItemDelete_Click"/>
-                                <MenuItem x:Name="menuItemKickFromTask" Header="Kick From The Task" InputGestureText="CTRL+K" Click="MenuItemKickFromTask_Click"/>
-                                <MenuItem x:Name="menuItemRestartFromTask" Header="Restart The Task" InputGestureText="CTRL+Q" Click="MenuItemRestartComputerTask_Click"/>
+                                <!--<MenuItem x:Name="menuItemKickFromTask" Header="Kick From The Task" InputGestureText="CTRL+K" Click="MenuItemKickFromTask_Click"/>-->
+                                <!--<MenuItem x:Name="menuItemRestartFromTask" Header="Restart The Task" InputGestureText="CTRL+Q" Click="MenuItemRestartComputerTask_Click"/>-->                                
                                 <MenuItem x:Name="menuItemFeaturesWG" Header="Features">
                                     <MenuItem Header="Wake On Lan" InputGestureText="CTRL+W" Click="MenuItemMachineGroupsWOL_Click"/>
                                     <MenuItem Header="RDP" InputGestureText="CTRL+R" Click="MenuItemMachineGroupsRDP_Click"/>
                                     <MenuItem Header="Dart Viewer" InputGestureText="CTRL+D" Click="MenuItemMachineGroupsDartViewer_Click"/>
                                     <MenuItem Header="Lock" InputGestureText="CTRL+L" Click="MenuItemMachineGroupsLock_Click"/>
+                                    <MenuItem Header="SSH Terminal" InputGestureText="CTRL+Q" Click="MenuItemSSHTerminal_Click"/>
+                                    <MenuItem Header="Windows To WinPE" InputGestureText="CTRL+P" Click="MenuItemWindowsToWinPe_Click"/>
                                     <MenuItem Header="Configure Template" InputGestureText="CTRL+T" Click="MenuItemMachineGroupsConfigureTemplate_Click" />
+                                    <MenuItem Header="Restart GDS Client Service" InputGestureText="F7" Click="MenuItemMachineGroupsRestartClientService_Click"/>
                                     <MenuItem Header="Crete RDP Files" InputGestureText="F8" Click="MenuItemMachineGroupsCreateRDPFiles_Click"/>
+                                    <MenuItem Header="Refresh Computer Details" InputGestureText="CTRL+F5" Click="MenuItemRefreshComputerDetails_Click"/>
                                     <MenuItem Header="Update ClassRoomID" InputGestureText="F11" Click="MenuItemMachineGroupsUpdateClassRoomID_Click"/>
                                 </MenuItem>
                                 <MenuItem Header="New Folder" InputGestureText="CTRL+SHIFT+N" Click="MenuItemCreateFolder_Click"/>

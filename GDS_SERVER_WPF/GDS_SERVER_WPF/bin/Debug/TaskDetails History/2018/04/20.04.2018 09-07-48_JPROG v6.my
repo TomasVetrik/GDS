@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>JPROG v6</Name>
+  <Started>20.04.2018 09-07-48</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>20.04.2018 09-36-23</Finished>
+  <Clients>2</Clients>
+  <Done>2</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK01</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>JPROG v6</Name>
+    <LastExecuted>20.04.2018 09-07-48</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Oss7yVhV7U6qPuhIIVEbNQ</_sourceIdentifier>
+        <Name>STUDENTSK1-08</Name>
+        <RealPCName>STUDENTSK1-08</RealPCName>
+        <macAddresses>
+          <string>FC:AA:14:AC:74:25</string>
+          <string>68:05:CA:3B:EF:AC</string>
+        </macAddresses>
+        <MacAddress>FC:AA:14:AC:74:25</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.120.28</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>MOC 20412 D</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>dh2VV5kX-EiJjNg1kgFMeA</_sourceIdentifier>
+        <Name>STUDENTSK1-07</Name>
+        <RealPCName>STUDENTSK1-07</RealPCName>
+        <macAddresses>
+          <string>FC:AA:14:AC:70:2A</string>
+          <string>68:05:CA:3C:35:76</string>
+        </macAddresses>
+        <MacAddress>FC:AA:14:AC:70:2A</MacAddress>
+        <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.120.27</IPAddress>
+        <baseImageName>Windows Server 2012 R2</baseImageName>
+        <driveEImageName>MOC 20411 D</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK01</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\GOC\JPROG v6</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>JPROG v6</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\JPROG.V6\JPROG.V6.wim</SourcePath>
+      <BoolLabel>JPROG</BoolLabel>
+      <PartitionSize>140</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>JPROG.V6</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x86</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:07:49</Time>
+      <MacAddress>FC:AA:14:AC:74:25</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:07:49</Time>
+      <MacAddress>FC:AA:14:AC:70:2A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:09:17</Time>
+      <MacAddress>FC:AA:14:AC:74:25</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:09:18</Time>
+      <MacAddress>FC:AA:14:AC:74:25</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:09:19</Time>
+      <MacAddress>FC:AA:14:AC:74:25</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:09:20</Time>
+      <MacAddress>FC:AA:14:AC:74:25</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:09:27</Time>
+      <MacAddress>FC:AA:14:AC:70:2A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:09:28</Time>
+      <MacAddress>FC:AA:14:AC:70:2A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:09:29</Time>
+      <MacAddress>FC:AA:14:AC:70:2A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:09:30</Time>
+      <MacAddress>FC:AA:14:AC:70:2A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:36:06</Time>
+      <MacAddress>FC:AA:14:AC:74:25</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:36:07</Time>
+      <MacAddress>FC:AA:14:AC:74:25</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:36:22</Time>
+      <MacAddress>FC:AA:14:AC:70:2A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:36:23</Time>
+      <MacAddress>FC:AA:14:AC:70:2A</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\04\\20.04.2018 09-07-48_JPROG v6.my</FilePath>
+</ExecutedTaskData>

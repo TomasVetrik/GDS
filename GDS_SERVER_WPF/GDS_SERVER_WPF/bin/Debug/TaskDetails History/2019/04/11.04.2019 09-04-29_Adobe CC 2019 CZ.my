@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Adobe CC 2019 CZ</Name>
+  <Started>11.04.2019 09-04-29</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>11.04.2019 09-44-47</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>!Testing</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Adobe CC 2019 CZ</Name>
+    <LastExecuted>11.04.2019 09-04-29</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>EQYMd2UhR0SljMJoHy1aaQ</_sourceIdentifier>
+        <Name>STUDENTSK11-10</Name>
+        <RealPCName>STUDENTSK11-10</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:B1:98</string>
+          <string>00:22:4D:81:6E:56</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+        <OSInformations>Microsoft Windows 10 Education, 64bitový</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.20.174</IPAddress>
+        <baseImageName>Windows 10 Office 2016 x64 SP EDU EN</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>!Testing</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\GOC\Adobe 2019 CZ</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Adobe 2019 CZ</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\Adobe2019CZ\Adobe2019cz.wim</SourcePath>
+      <BoolLabel>Windows 10 Adobe</BoolLabel>
+      <PartitionSize>300</PartitionSize>
+      <VHDResizeSize>40</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>Adobe2019cz</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>true</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:04:30</Time>
+      <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\11.04.2019 09-04-29_Adobe CC 2019 CZ.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>9:06:07</Time>
+      <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\11.04.2019 09-04-29_Adobe CC 2019 CZ.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:06:08</Time>
+      <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\11.04.2019 09-04-29_Adobe CC 2019 CZ.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:06:10</Time>
+      <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\11.04.2019 09-04-29_Adobe CC 2019 CZ.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>9:06:11</Time>
+      <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\11.04.2019 09-04-29_Adobe CC 2019 CZ.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:44:46</Time>
+      <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\11.04.2019 09-04-29_Adobe CC 2019 CZ.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:44:47</Time>
+      <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\11.04.2019 09-04-29_Adobe CC 2019 CZ.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\04\\11.04.2019 09-04-29_Adobe CC 2019 CZ.my</FilePath>
+</ExecutedTaskData>

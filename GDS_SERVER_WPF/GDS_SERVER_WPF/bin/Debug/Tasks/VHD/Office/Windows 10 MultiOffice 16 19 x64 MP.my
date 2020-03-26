@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>Windows 10 MultiOffice 16 19 x64 MP</Name>
+  <LastExecuted>24.09.2019 10-56-16</LastExecuted>
+  <TargetComputers>
+    <ComputerDetailsData>
+      <_sourceIdentifier>NU2u7bSiOUmhnDZSY8GGTQ</_sourceIdentifier>
+      <Name>HP11</Name>
+      <RealPCName>HP11</RealPCName>
+      <macAddresses>
+        <string>40:A3:CC:D0:66:64</string>
+        <string>80:CE:62:82:5E:16</string>
+      </macAddresses>
+      <MacAddress>40:A3:CC:D0:66:64</MacAddress>
+      <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+      <processorInfo>Intel® Core™ i3-6006U CPU @ 2.00GHz</processorInfo>
+      <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+      <numberOfRamSLots>2</numberOfRamSLots>
+      <biosCaption>InsydeH2O Version 05.12.09F.33</biosCaption>
+      <boardProductId>8328</boardProductId>
+      <accountName>Student</accountName>
+      <IPAddress>10.202.20.139</IPAddress>
+      <baseImageName>Windows 7 Office 2013 x64</baseImageName>
+      <driveEImageName>GOC54</driveEImageName>
+      <dartInfo />
+      <ImageSource>Images/Offline.ico</ImageSource>
+      <inWinpe>false</inWinpe>
+      <PostInstalls />
+      <CustomLog />
+    </ComputerDetailsData>
+  </TargetComputers>
+  <MachineGroup>Brno_Temp</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>true</ShutDown>
+  <Cloning>true</Cloning>
+  <BaseImageSourcePath>.\Base\OFFICE\Windows 10 Office 16 19 x64 MP</BaseImageSourcePath>
+  <BaseImageData>
+    <Name>Windows 10 Office 16 19 x64 MP</Name>
+    <ImageSource>Images/Image.ico</ImageSource>
+    <SourcePath>I:\Office\Base\_WIM\_NO_SYSPREP\W10_MultiOffice_16_19_MP_NS\W10_MultiOffice_16_19_x64.wim</SourcePath>
+    <BoolLabel>Windows 10</BoolLabel>
+    <PartitionSize>220</PartitionSize>
+    <VHDResizeSize>50</VHDResizeSize>
+    <VHDResize>false</VHDResize>
+    <VHDNames>
+      <string>W10_Off2k19_x64_MultiProfile</string>
+      <string>W10_Off2k16_x64_MultiProfile</string>
+    </VHDNames>
+    <OSAbrivations>
+      <string>W10_x64</string>
+    </OSAbrivations>
+  </BaseImageData>
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>false</SoftwareAndFileAction>
+  <DestinationDirectoryInOS />
+  <CommandsInOS />
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE />
+  <WaitingTime>50</WaitingTime>
+  <SendWarningMails>false</SendWarningMails>
+  <InfinityWaitingTime>true</InfinityWaitingTime>
+</TaskData>

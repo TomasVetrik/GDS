@@ -1,0 +1,938 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>JSPRINGBOOT</Name>
+  <Started>31.05.2019 16-26-03</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>31.05.2019 17-44-35</Finished>
+  <Clients>9</Clients>
+  <Done>9</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK01</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>JSPRINGBOOT</Name>
+    <LastExecuted>31.05.2019 16-26-03</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>3bg1U3wSTE-3QDcjjKg3CA</_sourceIdentifier>
+        <Name>LEKTORSK1</Name>
+        <RealPCName>LEKTORSK1</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3C:35:81</string>
+          <string>FC:AA:14:AC:73:E2</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3C:35:81</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.120.20</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>GOC BASE SEVECEK Maj 2019</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>8vVXsR8QsECFVQLF7wMp7g</_sourceIdentifier>
+        <Name>STUDENTSK1-01</Name>
+        <RealPCName>STUDENTSK1-01</RealPCName>
+        <macAddresses>
+          <string>FC:AA:14:AC:74:32</string>
+          <string>68:05:CA:3B:F7:66</string>
+        </macAddresses>
+        <MacAddress>FC:AA:14:AC:74:32</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.120.21</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>GOC BASE SEVECEK Maj 2019</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>L9_TXuipfkGNYSG33qh1EQ</_sourceIdentifier>
+        <Name>STUDENTSK1-02</Name>
+        <RealPCName>STUDENTSK1-02</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:EF:14</string>
+          <string>FC:AA:14:AC:70:59</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.120.22</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>GOC BASE SEVECEK Maj 2019</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>dKNbxxH6FkuVkRLBFlao6g</_sourceIdentifier>
+        <Name>STUDENTSK1-03</Name>
+        <RealPCName>STUDENTSK1-03</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:EF:AE</string>
+          <string>FC:AA:14:AC:74:2A</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.120.23</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>GOC BASE SEVECEK Maj 2019</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>d5Nqn1PMMEqUlqio3ZzvtQ</_sourceIdentifier>
+        <Name>STUDENTSK1-04</Name>
+        <RealPCName>STUDENTSK1-04</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3C:30:E2</string>
+          <string>FC:AA:14:AC:74:22</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.120.24</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>GOC BASE SEVECEK Maj 2019</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Ywp5Ro8BSE6b8cEfyF36mA</_sourceIdentifier>
+        <Name>STUDENTSK1-05</Name>
+        <RealPCName>STUDENTSK1-05</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:F0:3C</string>
+          <string>FC:AA:14:AC:75:5F</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.120.25</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>GOC BASE SEVECEK November 2018</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>P8lVfihJYkqH8MIGixlRtQ</_sourceIdentifier>
+        <Name>STUDENTSK1-06</Name>
+        <RealPCName>STUDENTSK1-06</RealPCName>
+        <macAddresses>
+          <string>FC:AA:14:AC:74:21</string>
+          <string>68:05:CA:3B:F4:64</string>
+        </macAddresses>
+        <MacAddress>FC:AA:14:AC:74:21</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.120.26</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>GOC BASE SEVECEK November 2018</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>-zcpLFOP80yosJ1SAuo-1g</_sourceIdentifier>
+        <Name>STUDENTSK1-07</Name>
+        <RealPCName>STUDENTSK1-07</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3C:35:76</string>
+          <string>FC:AA:14:AC:70:2A</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3C:35:76</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.120.27</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>GOC BASE SEVECEK Maj 2019</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>pzp6Tm-RlkGO8AjhRLvQuQ</_sourceIdentifier>
+        <Name>STUDENTSK1-08</Name>
+        <RealPCName>STUDENTSK1-08</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:EF:AC</string>
+          <string>FC:AA:14:AC:74:25</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:EF:AC</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.120.28</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName>GOC BASE SEVECEK Maj 2019</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK01</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\GOC\JSPRINGBOOT</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>JSPRINGBOOT</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\_NO_SYSPREP\JSPRINGBOOT\JSPRINGBOOT.wim</SourcePath>
+      <BoolLabel>WIndows 10 JSPRING</BoolLabel>
+      <PartitionSize>140</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>JSPRINGBOOT</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:26:07</Time>
+      <MacAddress>FC:AA:14:AC:74:32</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:26:07</Time>
+      <MacAddress>FC:AA:14:AC:74:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:26:07</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:26:07</Time>
+      <MacAddress>68:05:CA:3B:EF:AC</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK1</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:26:07</Time>
+      <MacAddress>68:05:CA:3C:35:81</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:26:07</Time>
+      <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:26:07</Time>
+      <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:26:07</Time>
+      <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:26:07</Time>
+      <MacAddress>68:05:CA:3C:35:76</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-02</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>16:27:49</Time>
+      <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:27:50</Time>
+      <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:27:51</Time>
+      <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>16:27:53</Time>
+      <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-02</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:27:53</Time>
+      <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:27:54</Time>
+      <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:27:55</Time>
+      <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:27:56</Time>
+      <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>16:28:03</Time>
+      <MacAddress>68:05:CA:3C:35:76</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:28:04</Time>
+      <MacAddress>68:05:CA:3C:35:76</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK1</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>16:28:05</Time>
+      <MacAddress>68:05:CA:3C:35:81</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:28:05</Time>
+      <MacAddress>68:05:CA:3C:35:76</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK1</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:28:06</Time>
+      <MacAddress>68:05:CA:3C:35:81</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:28:06</Time>
+      <MacAddress>68:05:CA:3C:35:76</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK1</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:28:07</Time>
+      <MacAddress>68:05:CA:3C:35:81</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK1</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:28:08</Time>
+      <MacAddress>68:05:CA:3C:35:81</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>16:28:09</Time>
+      <MacAddress>FC:AA:14:AC:74:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-01</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>16:28:09</Time>
+      <MacAddress>FC:AA:14:AC:74:32</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>16:28:09</Time>
+      <MacAddress>68:05:CA:3B:EF:AC</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>16:28:09</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-05</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>16:28:09</Time>
+      <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:28:10</Time>
+      <MacAddress>FC:AA:14:AC:74:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:28:10</Time>
+      <MacAddress>FC:AA:14:AC:74:32</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:28:10</Time>
+      <MacAddress>68:05:CA:3B:EF:AC</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:28:10</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-05</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:28:10</Time>
+      <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:28:11</Time>
+      <MacAddress>FC:AA:14:AC:74:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:28:11</Time>
+      <MacAddress>FC:AA:14:AC:74:32</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:28:11</Time>
+      <MacAddress>68:05:CA:3B:EF:AC</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:28:11</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-05</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>16:28:11</Time>
+      <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:28:12</Time>
+      <MacAddress>FC:AA:14:AC:74:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-01</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:28:12</Time>
+      <MacAddress>FC:AA:14:AC:74:32</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:28:12</Time>
+      <MacAddress>68:05:CA:3B:EF:AC</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:28:12</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-05</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>16:28:12</Time>
+      <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:05:28</Time>
+      <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:05:29</Time>
+      <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-02</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:05:30</Time>
+      <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:08:03</Time>
+      <MacAddress>FC:AA:14:AC:74:32</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:08:04</Time>
+      <MacAddress>FC:AA:14:AC:74:32</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-01</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:08:05</Time>
+      <MacAddress>FC:AA:14:AC:74:32</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:08:13</Time>
+      <MacAddress>68:05:CA:3B:EF:AC</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:08:14</Time>
+      <MacAddress>68:05:CA:3B:EF:AC</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:08:15</Time>
+      <MacAddress>68:05:CA:3B:EF:AC</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:08:23</Time>
+      <MacAddress>FC:AA:14:AC:74:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:08:24</Time>
+      <MacAddress>FC:AA:14:AC:74:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-06</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:08:25</Time>
+      <MacAddress>FC:AA:14:AC:74:21</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:08:26</Time>
+      <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:08:27</Time>
+      <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:08:28</Time>
+      <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:08:33</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:08:34</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:08:35</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:08:37</Time>
+      <MacAddress>68:05:CA:3C:35:76</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:08:38</Time>
+      <MacAddress>68:05:CA:3C:35:76</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:08:39</Time>
+      <MacAddress>68:05:CA:3C:35:76</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK1</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:29:56</Time>
+      <MacAddress>68:05:CA:3C:35:81</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK1</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:29:57</Time>
+      <MacAddress>68:05:CA:3C:35:81</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK1</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:29:58</Time>
+      <MacAddress>68:05:CA:3C:35:81</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:44:30</Time>
+      <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>17:44:33</Time>
+      <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-05</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>17:44:34</Time>
+      <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-05</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>17:44:35</Time>
+      <MacAddress>68:05:CA:3B:F0:3C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.05.2019 16-26-03_JSPRINGBOOT.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\05\\31.05.2019 16-26-03_JSPRINGBOOT.my</FilePath>
+</ExecutedTaskData>

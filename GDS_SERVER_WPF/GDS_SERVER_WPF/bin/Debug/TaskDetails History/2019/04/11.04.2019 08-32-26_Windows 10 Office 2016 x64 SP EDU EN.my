@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 10 Office 2016 x64 SP EDU EN</Name>
+  <Started>11.04.2019 08-32-26</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>11.04.2019 08-34-23</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>!Testing</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 10 Office 2016 x64 SP EDU EN</Name>
+    <LastExecuted>11.04.2019 08-32-26</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>eIPUNTVtBUO1gaWvi0e1qg</_sourceIdentifier>
+        <Name>STUDENTSK11-10</Name>
+        <RealPCName>STUDENTSK11-10</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:B1:98</string>
+          <string>00:22:4D:81:6E:56</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.174</IPAddress>
+        <baseImageName>Windows Server 2016</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>!Testing</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 10 Office 2016 x64 SP EDU EN</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 10 Office 2016 x64 SP EDU EN</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\W10_Off2k16_x64_SingleProfile_Edu_EN\W10_Off2k16_x64_SingleProfile_Edu_EN.wim</SourcePath>
+      <BoolLabel>Windows 10 Office 2016</BoolLabel>
+      <PartitionSize>162</PartitionSize>
+      <VHDResizeSize>90</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>w10_off2k16_x64_SingleProfile_EDU</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:32:27</Time>
+      <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\11.04.2019 08-32-26_Windows 10 Office 2016 x64 SP EDU EN.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>8:32:28</Time>
+      <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\11.04.2019 08-32-26_Windows 10 Office 2016 x64 SP EDU EN.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:32:29</Time>
+      <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\11.04.2019 08-32-26_Windows 10 Office 2016 x64 SP EDU EN.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>8:32:30</Time>
+      <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\11.04.2019 08-32-26_Windows 10 Office 2016 x64 SP EDU EN.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>8:32:31</Time>
+      <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\11.04.2019 08-32-26_Windows 10 Office 2016 x64 SP EDU EN.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>8:33:40</Time>
+      <MacAddress>68:05:CA:0C:B1:98</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\11.04.2019 08-32-26_Windows 10 Office 2016 x64 SP EDU EN.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\04\\11.04.2019 08-32-26_Windows 10 Office 2016 x64 SP EDU EN.my</FilePath>
+</ExecutedTaskData>

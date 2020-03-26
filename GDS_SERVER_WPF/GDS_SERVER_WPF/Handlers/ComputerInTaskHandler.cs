@@ -47,67 +47,81 @@ namespace GDS_SERVER_WPF.Handlers
 
         public ComputerInTaskHandler(ExecutedTaskData _executedTaskData, int _index, List<string> _ipAddresses, Semaphore _semaphoreFotSaveFile, ListView _listViewAll, ListView _listViewSelected, List<string> _MailsTo)
         {
-            step = "WAITING FOR ACK";            
-            this.executedTaskData = _executedTaskData;            
-            this.index = _index;
-            this.ipAddresses = _ipAddresses;
-            this.taskData = executedTaskData._TaskData;
-            this.semaphoreForSaveFile = _semaphoreFotSaveFile;
-            this.listViewAll = _listViewAll;
-            this.listViewSelected = _listViewSelected;
-            this.MailsTo = _MailsTo;
-            receivePacket = new Packet(FLAG.Null);
-            computer = executedTaskData._TaskData.TargetComputers[index];            
+            try
+            {
+                step = "WAITING FOR ACK";
+                this.executedTaskData = _executedTaskData;
+                this.index = _index;
+                this.ipAddresses = _ipAddresses;
+                this.taskData = executedTaskData._TaskData;
+                this.semaphoreForSaveFile = _semaphoreFotSaveFile;
+                this.listViewAll = _listViewAll;
+                this.listViewSelected = _listViewSelected;
+                this.MailsTo = _MailsTo;
+                receivePacket = new Packet(FLAG.Null);
+                computer = executedTaskData._TaskData.TargetComputers[index];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void WaitForCloningDone()
         {
-            cloning = true;
-            receivePacket.ID = FLAG.Null;
-            while (receivePacket.ID != FLAG.CLONING_DONE  && receivePacket.ID != FLAG.CLONING_ERROR && !stopped)
+            try
             {
-                if (receivePacket.ID == FLAG.RESTART || receivePacket.ID == FLAG.SYN_FLAG_WINPE || restart)
-                {                    
-                    ChangeProgressData("NEED RESTART");
-                    if (receivePacket.ID == FLAG.RESTART)
+                cloning = true;
+                receivePacket.ID = FLAG.Null;
+                while (receivePacket.ID != FLAG.CLONING_DONE && receivePacket.ID != FLAG.CLONING_ERROR && !stopped)
+                {
+                    if (receivePacket.ID == FLAG.RESTART || receivePacket.ID == FLAG.SYN_FLAG_WINPE || restart)
                     {
-                        try
+                        ChangeProgressData("NEED RESTART");
+                        if (receivePacket.ID == FLAG.RESTART)
                         {
-                            if (connection != null)
+                            try
                             {
-                                SendMessage(receivePacket, connection);
+                                if (connection != null)
+                                {
+                                    SendMessage(receivePacket, connection);
+                                }
+                            }
+                            catch
+                            {
+                                connection = null;
                             }
                         }
-                        catch
+                        if (receivePacket.clonningMessage != null && receivePacket.clonningMessage != "")
                         {
-                            connection = null;
-                        }
-                    }
-                    if (receivePacket.clonningMessage != null && receivePacket.clonningMessage != "")
-                    {                        
-                        if (receivePacket.clonningMessage.Contains("CLONE FAILED"))
-                        {
-                            cloneFaildMessage = receivePacket.clonningMessage;
-                            if (cloneFaildMessage.Contains("CLONE FAILED ACCESS DENIED") || cloneFaildMessage.Contains("CLONE FAILED DISK IS TOO SMALL"))
+                            if (receivePacket.clonningMessage.Contains("CLONE FAILED"))
                             {
-                                Failed(cloneFaildMessage);
+                                cloneFaildMessage = receivePacket.clonningMessage;
+                                if (cloneFaildMessage.Contains("CLONE FAILED ACCESS DENIED") || cloneFaildMessage.Contains("CLONE FAILED DISK IS TOO SMALL"))
+                                {
+                                    Failed(cloneFaildMessage);
+                                    return;
+                                }
+                                restart = true;
                                 return;
                             }
-                            restart = true;
-                            return;
                         }
+                        cloneFaildMessage = "CLIENT NEED RESTART";
+                        restart = true;
+                        return;
                     }
-                    cloneFaildMessage = "CLIENT NEED RESTART";
-                    restart = true;
-                    return;
+                    if (receivePacket.clonningMessage != null && receivePacket.clonningMessage != "")
+                    {
+                        ChangeProgressData(receivePacket.clonningMessage);
+                    }
+                    semaphoreForCloning.WaitOne();
                 }
-                if (receivePacket.clonningMessage != null && receivePacket.clonningMessage != "")
-                {
-                    ChangeProgressData(receivePacket.clonningMessage);                    
-                }
-                semaphoreForCloning.WaitOne();
+                cloning = false;
             }
-            cloning = false;            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void SendMessage(Packet packet, Connection connection)
@@ -125,28 +139,12 @@ namespace GDS_SERVER_WPF.Handlers
 
         private void CheckFlags(FLAG _stepDataIdentifier1, Packet packet , FLAG _stepDataIdentifier2 = FLAG.CLOSE, int WaitingTime = 5000)
         {
-            stepDataIdentifier1 = _stepDataIdentifier1;
-            stepDataIdentifier2 = _stepDataIdentifier2;
-            receivePacket.ID = FLAG.Null;
-            ChangeProgressData(stepDataIdentifier1.ToString());
             try
             {
-                if (connection != null)
-                {
-                    SendMessage(packet, connection);
-                }
-            }
-            catch
-            {
-                connection = null;
-            }
-            Thread.Sleep(1000);
-            while (receivePacket.ID != stepDataIdentifier1 && receivePacket.ID != stepDataIdentifier2 && !stopped)
-            {
-                if(stopped || failed)
-                {
-                    return;
-                }
+                stepDataIdentifier1 = _stepDataIdentifier1;
+                stepDataIdentifier2 = _stepDataIdentifier2;
+                receivePacket.ID = FLAG.Null;
+                ChangeProgressData(stepDataIdentifier1.ToString());
                 try
                 {
                     if (connection != null)
@@ -158,19 +156,42 @@ namespace GDS_SERVER_WPF.Handlers
                 {
                     connection = null;
                 }
-                if((receivePacket.ID == FLAG.SYN_FLAG || receivePacket.ID == FLAG.SYN_FLAG_WINPE) && (receivePacket.ID != stepDataIdentifier1 || receivePacket.ID != stepDataIdentifier2))
+                Thread.Sleep(1000);
+                while (receivePacket.ID != stepDataIdentifier1 && receivePacket.ID != stepDataIdentifier2 && !stopped)
                 {
-                    cloneFaildMessage = "CLIENT NEED RESTART";
-                    restart = true;
-                    return;
+                    if (stopped || failed)
+                    {
+                        return;
+                    }
+                    try
+                    {
+                        if (connection != null)
+                        {
+                            SendMessage(packet, connection);
+                        }
+                    }
+                    catch
+                    {
+                        connection = null;
+                    }
+                    if ((receivePacket.ID == FLAG.SYN_FLAG || receivePacket.ID == FLAG.SYN_FLAG_WINPE) && (receivePacket.ID != stepDataIdentifier1 || receivePacket.ID != stepDataIdentifier2))
+                    {
+                        cloneFaildMessage = "CLIENT NEED RESTART";
+                        restart = true;
+                        return;
+                    }
+                    Thread.Sleep(WaitingTime);
                 }
-                Thread.Sleep(WaitingTime);
+                if (!failed && !stopped)
+                {
+                    progressComputerData = new ProgressComputerData("Images/Done.ico", computer.Name, receivePacket.ID.ToString(), executedTaskData.GetFileName(), "", computer.MacAddress);
+                }
+                SaveProgress();
             }
-            if (!failed && !stopped)
+            catch (Exception ex)
             {
-                progressComputerData = new ProgressComputerData("Images/Done.ico", computer.Name, receivePacket.ID.ToString(), executedTaskData.GetFileName(), "", computer.MacAddress);                
+                MessageBox.Show(ex.ToString());
             }
-            SaveProgress();
         }
 
         private void CheckSynFlag()
@@ -195,42 +216,57 @@ namespace GDS_SERVER_WPF.Handlers
 
         private void ClientSendingFileInOS()
         {
-            Packet packet = new Packet(FLAG.START_COPY_FILES, computer, connection.ConnectionInfo.NetworkIdentifier)
+            try
             {
-                taskData = taskData
-            };
-            if (taskData.CopyFilesInOS.Count != 0)
-            {
-                int PORT = 60000;
-                foreach (string number in computer.IPAddress.Split('.'))
+                Packet packet = new Packet(FLAG.START_COPY_FILES, computer, connection.ConnectionInfo.NetworkIdentifier)
                 {
-                    PORT += Convert.ToInt32(number);
+                    taskData = taskData
+                };
+                if (taskData.CopyFilesInOS.Count != 0)
+                {
+                    int PORT = 60000;
+                    foreach (string number in computer.IPAddress.Split('.'))
+                    {
+                        PORT += Convert.ToInt32(number);
+                    }
+                    packet.clonningMessage = PORT.ToString();
+                    CheckFlags(FLAG.START_COPY_FILES, packet);
+                    tCP_UNICAST = new TCP_UNICAST(taskData.CopyFilesInOS, taskData.DestinationDirectoryInOS, taskData.SourceDirectoryInOS, computer.IPAddress, PORT);
+                    tCP_UNICAST.SendingFiles();
+                    CheckFlags(FLAG.FINISH_COPY_FILES, new Packet(FLAG.FINISH_COPY_FILES));
                 }
-                packet.clonningMessage = PORT.ToString();
-                CheckFlags(FLAG.START_COPY_FILES, packet);
-                tCP_UNICAST = new TCP_UNICAST(taskData.CopyFilesInOS, taskData.DestinationDirectoryInOS, taskData.SourceDirectoryInOS, computer.IPAddress, PORT);
-                tCP_UNICAST.SendingFiles();
-                CheckFlags(FLAG.FINISH_COPY_FILES, new Packet(FLAG.FINISH_COPY_FILES));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
 
         private void ClientSendingFileInWinPE()
         {
-            Packet packet = new Packet(FLAG.START_COPY_FILES, computer, connection.ConnectionInfo.NetworkIdentifier)
+            try
             {
-                taskData = taskData
-            };
-            if (taskData.CopyFilesInWINPE.Count != 0)
-            {    int PORT = 60000;
-                foreach (string number in computer.IPAddress.Split('.'))
+                Packet packet = new Packet(FLAG.START_COPY_FILES, computer, connection.ConnectionInfo.NetworkIdentifier)
                 {
-                    PORT += Convert.ToInt32(number);
+                    taskData = taskData
+                };
+                if (taskData.CopyFilesInWINPE.Count != 0)
+                {
+                    int PORT = 60000;
+                    foreach (string number in computer.IPAddress.Split('.'))
+                    {
+                        PORT += Convert.ToInt32(number);
+                    }
+                    packet.clonningMessage = PORT.ToString();
+                    CheckFlags(FLAG.START_COPY_FILES, packet);
+                    tCP_UNICAST = new TCP_UNICAST(taskData.CopyFilesInWINPE, taskData.DestinationDirectoryInWINPE, taskData.SourceDirectoryInWINPE, computer.IPAddress, PORT);
+                    tCP_UNICAST.SendingFiles();
+                    CheckFlags(FLAG.FINISH_COPY_FILES, new Packet(FLAG.FINISH_COPY_FILES));
                 }
-                packet.clonningMessage = PORT.ToString();
-                CheckFlags(FLAG.START_COPY_FILES, packet);
-                tCP_UNICAST = new TCP_UNICAST(taskData.CopyFilesInWINPE, taskData.DestinationDirectoryInWINPE, taskData.SourceDirectoryInWINPE, computer.IPAddress, PORT);
-                tCP_UNICAST.SendingFiles();
-                CheckFlags(FLAG.FINISH_COPY_FILES, new Packet(FLAG.FINISH_COPY_FILES));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }        
 
@@ -261,27 +297,34 @@ namespace GDS_SERVER_WPF.Handlers
 
         private void SendConfigFile()
         {
-            var packet = new Packet(FLAG.SEND_CONFIG);
-            if(receivePacket.computerConfigData != null)
-                packet.computerConfigData = receivePacket.computerConfigData;
-            else
+            try
             {
-                var computersInfoFiles = Directory.GetFiles(@".\Machine Groups\", "*.my", SearchOption.AllDirectories);
-                var filePath = Listener.GetFileNameByMac(computersInfoFiles, receivePacket.computerDetailsData.macAddresses);
-                packet.computerConfigData = new ComputerConfigData(receivePacket.computerDetailsData.RealPCName, "Workgroup");
-                if (filePath != "")
-                {                                        
-                    if (!File.Exists(filePath.Replace(".my", ".cfg")))
+                var packet = new Packet(FLAG.SEND_CONFIG);
+                if (receivePacket.computerConfigData != null)
+                    packet.computerConfigData = receivePacket.computerConfigData;
+                else
+                {
+                    var computersInfoFiles = Directory.GetFiles(@".\Machine Groups\", "*.my", SearchOption.AllDirectories);
+                    var filePath = Listener.GetFileNameByMac(computersInfoFiles, receivePacket.computerDetailsData.macAddresses);
+                    packet.computerConfigData = new ComputerConfigData(receivePacket.computerDetailsData.RealPCName, "Workgroup");
+                    if (filePath != "")
                     {
-                        FileHandler.Save<ComputerConfigData>(packet.computerConfigData, filePath.Replace(".my", ".cfg"));
-                    }
-                    else
-                    {
-                        packet.computerConfigData = FileHandler.Load<ComputerConfigData>(filePath.Replace(".my", ".cfg"));
+                        if (!File.Exists(filePath.Replace(".my", ".cfg")))
+                        {
+                            FileHandler.Save<ComputerConfigData>(packet.computerConfigData, filePath.Replace(".my", ".cfg"));
+                        }
+                        else
+                        {
+                            packet.computerConfigData = FileHandler.Load<ComputerConfigData>(filePath.Replace(".my", ".cfg"));
+                        }
                     }
                 }
+                CheckFlags(FLAG.SEND_CONFIG, packet);
             }
-            CheckFlags(FLAG.SEND_CONFIG, packet);
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void SendMail()
@@ -315,54 +358,68 @@ namespace GDS_SERVER_WPF.Handlers
 
         private bool RunAndWait(Action Function)
         {
-            if (taskData.InfinityWaitingTime)
+            try
             {
-                while (!failed && !stopped)
+                if (taskData.InfinityWaitingTime)
                 {
-                    waitingTask = Task.Run(() => { Function(); });
-                    if (waitingTask.Wait(TimeSpan.FromMinutes(executedTaskData._TaskData.WaitingTime + 0.1)))
+                    while (!failed && !stopped)
                     {
-                        if (!stopped && !failed)
+                        waitingTask = Task.Run(() => { Function(); });
+                        if (waitingTask.Wait(TimeSpan.FromMinutes(executedTaskData._TaskData.WaitingTime + 0.1)))
                         {
-                            return true;
+                            if (!stopped && !failed)
+                            {
+                                return true;
+                            }
+                        }
+                        if (!stopped && !failed && taskData.SendWarningMails)
+                        {
+                            SendMail();
                         }
                     }
-                    if (!stopped && !failed && taskData.SendWarningMails)
+                }
+                else
+                {
+                    if (!failed && !stopped)
                     {
-                        SendMail();
+                        waitingTask = Task.Run(() => { Function(); });
+                        if (waitingTask.Wait(TimeSpan.FromMinutes(executedTaskData._TaskData.WaitingTime + 0.1)))
+                        {
+                            if (!stopped && !failed)
+                            {
+                                return true;
+                            }
+                        }
+                        if (!stopped && !failed && taskData.SendWarningMails)
+                        {
+                            SendMail();
+                        }
                     }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                if (!failed && !stopped)
-                {
-                    waitingTask = Task.Run(() => { Function(); });
-                    if (waitingTask.Wait(TimeSpan.FromMinutes(executedTaskData._TaskData.WaitingTime + 0.1)))
-                    {
-                        if (!stopped && !failed)
-                        {
-                            return true;
-                        }
-                    }
-                    if (!stopped && !failed && taskData.SendWarningMails)
-                    {
-                        SendMail();
-                    }
-                }
+                MessageBox.Show(ex.ToString());
             }
             return false;
         }
 
         private void SaveProgress()
         {
-            if (progressComputerData.Step != "Null")
+            try
             {
-                semaphoreForSaveFile.WaitOne();
-                progressComputerData.MacAddress = computer.MacAddress;
-                executedTaskData.ProgressComputerData.Add(progressComputerData);
-                FileHandler.Save(executedTaskData, executedTaskData.GetFileName());
-                semaphoreForSaveFile.Release();
+                if (progressComputerData.Step != "Null")
+                {
+                    semaphoreForSaveFile.WaitOne();
+                    progressComputerData.MacAddress = computer.MacAddress;
+                    executedTaskData.ProgressComputerData.Add(progressComputerData);
+                    FileHandler.Save(executedTaskData, executedTaskData.GetFileName());
+                    semaphoreForSaveFile.Release();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -568,7 +625,8 @@ namespace GDS_SERVER_WPF.Handlers
 
         private void FindClient()
         {
-            try {
+            try
+            {
                 lock (ClientsDictionary)
                 {
                     for (int index = ClientsDictionary.Count - 1; index >= 0; index--)
@@ -584,122 +642,172 @@ namespace GDS_SERVER_WPF.Handlers
             }
             catch
             {
+                Thread.Sleep(10000);
                 FindClient();                
             }
         }
 
         public void Failed(string Message = "Expired waiting time")
         {
-            if (!failed && !stopped)
+            try
             {
-                failed = true;
-                if(stopped)
-                    progressComputerData = new ProgressComputerData("Images/Stopped.ico", computer.Name, stepDataIdentifier1.ToString(), executedTaskData.GetFileName(), Message, computer.MacAddress);
-                else
-                    progressComputerData = new ProgressComputerData("Images/Failed.ico", computer.Name, stepDataIdentifier1.ToString(), executedTaskData.GetFileName(), Message, computer.MacAddress);
-                SaveProgress();                
+                if (!failed && !stopped)
+                {
+                    failed = true;
+                    if (stopped)
+                        progressComputerData = new ProgressComputerData("Images/Stopped.ico", computer.Name, stepDataIdentifier1.ToString(), executedTaskData.GetFileName(), Message, computer.MacAddress);
+                    else
+                        progressComputerData = new ProgressComputerData("Images/Failed.ico", computer.Name, stepDataIdentifier1.ToString(), executedTaskData.GetFileName(), Message, computer.MacAddress);
+                    SaveProgress();
+                }
+                if (tCP_UNICAST != null)
+                {
+                    tCP_UNICAST.DestroyConnection();
+                }
             }
-            if(tCP_UNICAST != null)
+            catch (Exception ex)
             {
-                tCP_UNICAST.DestroyConnection();
+                MessageBox.Show(ex.ToString());
             }
         }
 
         public void Stop()
         {
-            semaphoreForCloning.Release();
-            if (!stopped && !failed && !finish)
+            try
             {
-                stopped = true;
-                failed = true;
-                if (connection != null)
+                semaphoreForCloning.Release();
+                if (!stopped && !failed && !finish)
                 {
-                    SendMessage(new Packet(FLAG.ERROR_MESSAGE), connection);
+                    stopped = true;
+                    failed = true;
+                    if (connection != null)
+                    {
+                        SendMessage(new Packet(FLAG.ERROR_MESSAGE), connection);
+                    }
+                }
+                if (tCP_UNICAST != null)
+                {
+                    tCP_UNICAST.DestroyConnection();
                 }
             }
-            if (tCP_UNICAST != null)
+            catch (Exception ex)
             {
-                tCP_UNICAST.DestroyConnection();
+                MessageBox.Show(ex.ToString());
             }
         }
 
         public void Restart()
         {
-            semaphoreForCloning.Release();
-            if (!stopped && !failed && !finish)
+            try
             {
-                restart = true;
-                if (connection != null)
+                semaphoreForCloning.Release();
+                if (!stopped && !failed && !finish)
                 {
-                    SendMessage(new Packet(FLAG.ERROR_MESSAGE), connection);
+                    restart = true;
+                    if (connection != null)
+                    {
+                        SendMessage(new Packet(FLAG.ERROR_MESSAGE), connection);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
 
         private void ChangeProgressData(string _step)
         {
-            step = _step;
-            Application.Current.Dispatcher.Invoke(() =>
+            try
             {
-                progressComputerData = new ProgressComputerData("", computer.Name, step, executedTaskData.GetFileName(), "", computer.MacAddress);
-                int index = GetIndexOfItemFromList(listViewAll);
-                if (index != -1)
+                step = _step;
+                Application.Current.Dispatcher.Invoke(() =>
                 {
-                    listViewAll.Items[index] = progressComputerData;
-                }
-                index = GetIndexOfItemFromList(listViewSelected);
-                if (index != -1)
-                {
-                    listViewSelected.Items[index] = progressComputerData;
-                }
-            });
+                    progressComputerData = new ProgressComputerData("", computer.Name, step, executedTaskData.GetFileName(), "", computer.MacAddress);
+                    int index = GetIndexOfItemFromList(listViewAll);
+                    if (index != -1)
+                    {
+                        listViewAll.Items[index] = progressComputerData;
+                    }
+                    index = GetIndexOfItemFromList(listViewSelected);
+                    if (index != -1)
+                    {
+                        listViewSelected.Items[index] = progressComputerData;
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private int GetIndexOfItemFromList(ListView listView)
         {
-            for (int i = listView.Items.Count - 1; i >= 0; i--)
+            try
             {
-                ProgressComputerData item = (ProgressComputerData)listView.Items[i];
-                if (item.Task_ID == executedTaskData.GetFileName())
+                for (int i = listView.Items.Count - 1; i >= 0; i--)
                 {
-                    if (item.ComputerName == computer.Name)
+                    ProgressComputerData item = (ProgressComputerData)listView.Items[i];
+                    if (item.Task_ID == executedTaskData.GetFileName())
                     {
-                        if (item.MacAddress == "")
-                            return i;
-                        else
+                        if (item.ComputerName == computer.Name)
                         {
-                            if (item.MacAddress == computer.MacAddress)
+                            if (item.MacAddress == "")
                                 return i;
+                            else
+                            {
+                                if (item.MacAddress == computer.MacAddress)
+                                    return i;
+                            }
                         }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
             return -1;
         }
 
         public void RemoveFromListViewAll()
         {
-            int index = GetIndexOfItemFromList(listViewAll);
-            if(index != -1)
+            try
             {
-                Application.Current.Dispatcher.Invoke(() =>
+                int index = GetIndexOfItemFromList(listViewAll);
+                if (index != -1)
                 {
-                    ProgressComputerData item = (ProgressComputerData)listViewAll.Items[index];
-                    listViewAll.Items.Remove(item);
-                });
+                    Application.Current.Dispatcher.Invoke(() =>
+                    {
+                        ProgressComputerData item = (ProgressComputerData)listViewAll.Items[index];
+                        listViewAll.Items.Remove(item);
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
 
         public void RemoveFromListViewSelected()
         {
-            int index = GetIndexOfItemFromList(listViewSelected);
-            if (index != -1)
+            try
             {
-                Application.Current.Dispatcher.Invoke(() =>
+                int index = GetIndexOfItemFromList(listViewSelected);
+                if (index != -1)
                 {
-                    ProgressComputerData item = (ProgressComputerData)listViewSelected.Items[index];
-                    listViewSelected.Items.Remove(item);
-                });
+                    Application.Current.Dispatcher.Invoke(() =>
+                    {
+                        ProgressComputerData item = (ProgressComputerData)listViewSelected.Items[index];
+                        listViewSelected.Items.Remove(item);
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
     }

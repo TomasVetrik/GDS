@@ -1,0 +1,757 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>MOC 10962 C</Name>
+  <Started>06.03.2019 08-46-04</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>06.03.2019 09-33-00</Finished>
+  <Clients>6</Clients>
+  <Done>6</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK08</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>MOC 10962 C</Name>
+    <LastExecuted>06.03.2019 08-46-04</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>uydTIvfrlUG_ZvrxFbam5g</_sourceIdentifier>
+        <Name>LEKTORSK8</Name>
+        <RealPCName>LEKTORSK8</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4D:1E</string>
+          <string>1C:1B:0D:12:1E:F7</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4D:1E</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.88</IPAddress>
+        <baseImageName>Windows Server 2016 No Sysprep</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>RuJ2mFI4hEK09DitAI3dfg</_sourceIdentifier>
+        <Name>STUDENTSK8-01</Name>
+        <RealPCName>STUDENTSK8-01</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4D:8B</string>
+          <string>1C:1B:0D:12:1E:F5</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4D:8B</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.89</IPAddress>
+        <baseImageName>Windows Server 2016 No Sysprep</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>nM_UFdrIDUOpNGXvaEmVkA</_sourceIdentifier>
+        <Name>STUDENTSK8-02</Name>
+        <RealPCName>STUDENTSK8-02</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4D:8C</string>
+          <string>1C:1B:0D:12:1F:04</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4D:8C</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.70</IPAddress>
+        <baseImageName>Windows Server 2016 No Sysprep</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>ACvUJ_LQLEeBBzlA2nFmrg</_sourceIdentifier>
+        <Name>STUDENTSK8-03</Name>
+        <RealPCName>STUDENTSK8-03</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4D:20</string>
+          <string>1C:1B:0D:12:1E:F8</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4D:20</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.68</IPAddress>
+        <baseImageName>Windows Server 2016 No Sysprep</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>8xYpMlw9UE2RZZ_Ij4DCtw</_sourceIdentifier>
+        <Name>STUDENTSK8-04</Name>
+        <RealPCName>STUDENTSK8-04</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4E:84</string>
+          <string>1C:1B:0D:12:1E:2D</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4E:84</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.72</IPAddress>
+        <baseImageName>Windows Server 2016 No Sysprep</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>857Ys9ROFEC8RyAzRk14jA</_sourceIdentifier>
+        <Name>STUDENTSK8-05</Name>
+        <RealPCName>STUDENTSK8-05</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:44:4C:77</string>
+          <string>1C:1B:0D:12:1E:28</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:44:4C:77</MacAddress>
+        <OSInformations>Microsoft Windows Server 2016 Datacenter, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6500 CPU @ 3.20GHz</processorInfo>
+        <physicalMemoryInfo>65536MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 03/07/17 17:39:00 Ver: 05.0000C</biosCaption>
+        <boardProductId>H170-D3H-CF</boardProductId>
+        <accountName>Administrator</accountName>
+        <IPAddress>10.202.20.140</IPAddress>
+        <baseImageName>Windows Server 2016 No Sysprep</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK08</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\MOC\Windows Server 2016</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows Server 2016</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\Base\_WIM\W2k16\W2k16.wim</SourcePath>
+      <BoolLabel>Windows Server 2016</BoolLabel>
+      <PartitionSize>102</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W2k16</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W2k16</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\MOC\10000\10962 C</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>10962 C</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\DriveE\_WIM\10962C\10962C.wim</SourcePath>
+      <BoolLabel>MOC 10962 C</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:46:06</Time>
+      <MacAddress>68:05:CA:44:4D:8B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK8</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:46:06</Time>
+      <MacAddress>68:05:CA:44:4D:1E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:46:06</Time>
+      <MacAddress>68:05:CA:44:4D:8C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:46:06</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:46:06</Time>
+      <MacAddress>68:05:CA:44:4C:77</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:46:06</Time>
+      <MacAddress>68:05:CA:44:4E:84</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-05</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>8:47:19</Time>
+      <MacAddress>68:05:CA:44:4C:77</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-01</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>8:47:19</Time>
+      <MacAddress>68:05:CA:44:4D:8B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:47:20</Time>
+      <MacAddress>68:05:CA:44:4D:8B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-05</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:47:20</Time>
+      <MacAddress>68:05:CA:44:4C:77</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>8:47:21</Time>
+      <MacAddress>68:05:CA:44:4D:8B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-05</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>8:47:21</Time>
+      <MacAddress>68:05:CA:44:4C:77</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-01</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>8:47:22</Time>
+      <MacAddress>68:05:CA:44:4D:8B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-05</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>8:47:22</Time>
+      <MacAddress>68:05:CA:44:4C:77</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-02</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>8:47:24</Time>
+      <MacAddress>68:05:CA:44:4D:8C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-04</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>8:47:24</Time>
+      <MacAddress>68:05:CA:44:4E:84</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>8:47:24</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:47:25</Time>
+      <MacAddress>68:05:CA:44:4E:84</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:47:25</Time>
+      <MacAddress>68:05:CA:44:4D:8C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:47:25</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>8:47:26</Time>
+      <MacAddress>68:05:CA:44:4E:84</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>8:47:26</Time>
+      <MacAddress>68:05:CA:44:4D:8C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>8:47:26</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-02</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>8:47:27</Time>
+      <MacAddress>68:05:CA:44:4D:8C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-04</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>8:47:27</Time>
+      <MacAddress>68:05:CA:44:4E:84</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>8:47:27</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK8</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>8:47:39</Time>
+      <MacAddress>68:05:CA:44:4D:1E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK8</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:47:40</Time>
+      <MacAddress>68:05:CA:44:4D:1E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK8</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>8:47:41</Time>
+      <MacAddress>68:05:CA:44:4D:1E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK8</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>8:47:42</Time>
+      <MacAddress>68:05:CA:44:4D:1E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:31:35</Time>
+      <MacAddress>68:05:CA:44:4D:8B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-01</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>9:31:36</Time>
+      <MacAddress>68:05:CA:44:4D:8B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:31:37</Time>
+      <MacAddress>68:05:CA:44:4D:8B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-01</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>9:31:38</Time>
+      <MacAddress>68:05:CA:44:4D:8B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-01</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:31:39</Time>
+      <MacAddress>68:05:CA:44:4D:8B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK8</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:32:15</Time>
+      <MacAddress>68:05:CA:44:4D:1E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK8</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>9:32:16</Time>
+      <MacAddress>68:05:CA:44:4D:1E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK8</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:32:17</Time>
+      <MacAddress>68:05:CA:44:4D:1E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK8</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>9:32:18</Time>
+      <MacAddress>68:05:CA:44:4D:1E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK8</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:32:19</Time>
+      <MacAddress>68:05:CA:44:4D:1E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:32:20</Time>
+      <MacAddress>68:05:CA:44:4C:77</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:32:20</Time>
+      <MacAddress>68:05:CA:44:4D:8C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-05</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>9:32:21</Time>
+      <MacAddress>68:05:CA:44:4C:77</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-02</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>9:32:21</Time>
+      <MacAddress>68:05:CA:44:4D:8C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-05</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:32:22</Time>
+      <MacAddress>68:05:CA:44:4C:77</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:32:22</Time>
+      <MacAddress>68:05:CA:44:4D:8C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-05</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>9:32:23</Time>
+      <MacAddress>68:05:CA:44:4C:77</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-02</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>9:32:23</Time>
+      <MacAddress>68:05:CA:44:4D:8C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-05</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:32:24</Time>
+      <MacAddress>68:05:CA:44:4C:77</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:32:24</Time>
+      <MacAddress>68:05:CA:44:4D:8C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:32:35</Time>
+      <MacAddress>68:05:CA:44:4E:84</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-04</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>9:32:36</Time>
+      <MacAddress>68:05:CA:44:4E:84</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:32:38</Time>
+      <MacAddress>68:05:CA:44:4E:84</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-04</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>9:32:39</Time>
+      <MacAddress>68:05:CA:44:4E:84</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:32:40</Time>
+      <MacAddress>68:05:CA:44:4E:84</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:32:56</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>9:32:57</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:32:58</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>9:32:59</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK8-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>9:33:00</Time>
+      <MacAddress>68:05:CA:44:4D:20</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\06.03.2019 08-46-04_MOC 10962 C.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\03\\06.03.2019 08-46-04_MOC 10962 C.my</FilePath>
+</ExecutedTaskData>

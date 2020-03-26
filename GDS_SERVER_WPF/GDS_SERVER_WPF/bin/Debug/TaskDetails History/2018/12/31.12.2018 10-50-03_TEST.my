@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>TEST</Name>
+  <Started>31.12.2018 10-50-03</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>31.12.2018 10-57-26</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>UCEBNASK01</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>TEST</Name>
+    <LastExecuted>31.12.2018 10-50-03</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>br-nODl7-kSvq2WlkCDYTQ</_sourceIdentifier>
+        <Name>STUDENTSK1-02</Name>
+        <RealPCName>STUDENTSK1-02</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:EF:14</string>
+          <string>FC:AA:14:AC:70:59</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.120.22</IPAddress>
+        <baseImageName>Windows 7 Office 2013 x64</baseImageName>
+        <driveEImageName>RAB OFUN</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK01</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\TEST</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>TEST</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\W7_Off2k13_x86\W7_Off2k13_x86.wim</SourcePath>
+      <BoolLabel>Windows 7 OFfice 2013</BoolLabel>
+      <PartitionSize>40</PartitionSize>
+      <VHDResizeSize>40</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>W7_Off2k13_x86</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x86</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\NetGeneric\Autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE>
+      <string>E:\Start.bat</string>
+    </CommandsInWINPE>
+    <WaitingTime>30</WaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:50:04</Time>
+      <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.12.2018 10-50-03_TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-02</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>10:50:05</Time>
+      <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.12.2018 10-50-03_TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:50:06</Time>
+      <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.12.2018 10-50-03_TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:50:07</Time>
+      <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.12.2018 10-50-03_TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-02</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>10:50:08</Time>
+      <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.12.2018 10-50-03_TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK1-02</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>10:56:48</Time>
+      <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+      <Message>CLONE FAILED There is not enough space on the disk</Message>
+      <Task_ID>.\TaskDetails\31.12.2018 10-50-03_TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:56:49</Time>
+      <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.12.2018 10-50-03_TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-02</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>10:56:50</Time>
+      <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.12.2018 10-50-03_TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:56:51</Time>
+      <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.12.2018 10-50-03_TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:56:52</Time>
+      <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.12.2018 10-50-03_TEST.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-02</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>10:56:53</Time>
+      <MacAddress>68:05:CA:3B:EF:14</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\31.12.2018 10-50-03_TEST.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2018\12\\31.12.2018 10-50-03_TEST.my</FilePath>
+</ExecutedTaskData>

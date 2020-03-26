@@ -1,0 +1,514 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Shutdown</Name>
+  <Started>13.09.2019 16-28-53</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>13.09.2019 16-29-05</Finished>
+  <Clients>11</Clients>
+  <Done>11</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK06</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Shutdown</Name>
+    <LastExecuted>13.09.2019 16-28-53</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>TXYm9yO3skKzeg0wmj5MkA</_sourceIdentifier>
+        <Name>STUDENTSK6-08_NUC</Name>
+        <RealPCName>STUDENTSK6-08</RealPCName>
+        <macAddresses>
+          <string>94:C6:91:A4:3E:02</string>
+          <string>34:E1:2D:3B:CA:B3</string>
+        </macAddresses>
+        <MacAddress>94:C6:91:A4:3E:02</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.135</IPAddress>
+        <baseImageName>Windows 10 Office 2019 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>mwH3Aq8AEEm0tqIE0lSr7Q</_sourceIdentifier>
+        <Name>LEKTORKS6_NUC</Name>
+        <RealPCName>LEKTORSK6</RealPCName>
+        <macAddresses>
+          <string>94:C6:91:A4:05:7C</string>
+          <string>34:E1:2D:8C:0F:F0</string>
+        </macAddresses>
+        <MacAddress>94:C6:91:A4:05:7C</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.99</IPAddress>
+        <baseImageName>Windows 10 Office 2019 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>w40cOD4e3EuMfl9o8TNI1g</_sourceIdentifier>
+        <Name>STUDENTSK6-01_NUC</Name>
+        <RealPCName>STUDENTSK6-01</RealPCName>
+        <macAddresses>
+          <string>94:C6:91:A4:D0:06</string>
+          <string>34:E1:2D:8C:F0:EB</string>
+        </macAddresses>
+        <MacAddress>94:C6:91:A4:D0:06</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.131</IPAddress>
+        <baseImageName>Windows 10 Office 2019 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>0MGhT2E4Dki2eSSF0CSilg</_sourceIdentifier>
+        <Name>STUDENTSK6-02_NUC</Name>
+        <RealPCName>STUDENTSK6-02</RealPCName>
+        <macAddresses>
+          <string>34:E1:2D:3C:0D:34</string>
+          <string>94:C6:91:A4:43:0C</string>
+        </macAddresses>
+        <MacAddress>34:E1:2D:3C:0D:34</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.20</IPAddress>
+        <baseImageName>Windows 10 Office 2019 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>LfkWEHKl0UeLYfDDU13Wpg</_sourceIdentifier>
+        <Name>STUDENTSK6-03_NUC</Name>
+        <RealPCName>STUDENTSK6-03</RealPCName>
+        <macAddresses>
+          <string>94:C6:91:A4:D1:16</string>
+          <string>34:E1:2D:8C:A8:A7</string>
+        </macAddresses>
+        <MacAddress>94:C6:91:A4:D1:16</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.65</IPAddress>
+        <baseImageName>Windows 10 Office 2019 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>bXDTDweKp0aGknIUAvKV7w</_sourceIdentifier>
+        <Name>STUDENTSK6-04_NUC</Name>
+        <RealPCName>STUDENTSK6-04</RealPCName>
+        <macAddresses>
+          <string>94:C6:91:A3:DF:EA</string>
+          <string>C0:B6:F9:CD:01:63</string>
+        </macAddresses>
+        <MacAddress>94:C6:91:A3:DF:EA</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.130</IPAddress>
+        <baseImageName>Windows 10 Office 2019 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>KOY3e-E180mqY6TGWfFsjQ</_sourceIdentifier>
+        <Name>STUDENTSK6-05_NUC</Name>
+        <RealPCName>STUDENTSK6-05</RealPCName>
+        <macAddresses>
+          <string>34:E1:2D:8C:EE:ED</string>
+          <string>94:C6:91:A4:3E:28</string>
+        </macAddresses>
+        <MacAddress>34:E1:2D:8C:EE:ED</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.177</IPAddress>
+        <baseImageName>Windows 10 Office 2019 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>LRmqZZ9Jq0mBj7RtUCRkOQ</_sourceIdentifier>
+        <Name>STUDENTSK6-06_NUC</Name>
+        <RealPCName>STUDENTSK6-06</RealPCName>
+        <macAddresses>
+          <string>94:C6:91:A4:08:CA</string>
+          <string>C0:B6:F9:8C:33:5E</string>
+        </macAddresses>
+        <MacAddress>94:C6:91:A4:08:CA</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.136</IPAddress>
+        <baseImageName>Windows 10 Office 2019 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Iv4dnEbBL0mWpdFMFrakFA</_sourceIdentifier>
+        <Name>STUDENTSK6-07_NUC</Name>
+        <RealPCName>STUDENTSK6-07</RealPCName>
+        <macAddresses>
+          <string>94:C6:91:A4:F6:5B</string>
+          <string>34:E1:2D:8C:3C:A0</string>
+        </macAddresses>
+        <MacAddress>94:C6:91:A4:F6:5B</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.133</IPAddress>
+        <baseImageName>Windows 10 Office 2019 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>6Unf0XNUIUi4JmS1EGd8nA</_sourceIdentifier>
+        <Name>STUDENTSK6-09_NUC</Name>
+        <RealPCName>STUDENTSK6-09</RealPCName>
+        <macAddresses>
+          <string>94:C6:91:A4:43:43</string>
+          <string>34:E1:2D:8C:91:AF</string>
+        </macAddresses>
+        <MacAddress>94:C6:91:A4:43:43</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.134</IPAddress>
+        <baseImageName>Windows 10 Office 2019 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>sSV3vrpDikePkPDgHkCTDA</_sourceIdentifier>
+        <Name>STUDENTSK6-10_NUC</Name>
+        <RealPCName>STUDENTSK6-10</RealPCName>
+        <macAddresses>
+          <string>94:C6:91:A4:58:6D</string>
+          <string>34:E1:2D:3A:B4:52</string>
+        </macAddresses>
+        <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.178</IPAddress>
+        <baseImageName>Windows 10 Office 2019 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK06</MachineGroup>
+    <WakeOnLan>false</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>49</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-01_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:28:54</Time>
+      <MacAddress>94:C6:91:A4:D0:06</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-08_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:28:54</Time>
+      <MacAddress>94:C6:91:A4:3E:02</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:28:54</Time>
+      <MacAddress>94:C6:91:A4:05:7C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-06_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:28:54</Time>
+      <MacAddress>94:C6:91:A4:08:CA</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:28:54</Time>
+      <MacAddress>34:E1:2D:8C:EE:ED</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-04_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:28:54</Time>
+      <MacAddress>94:C6:91:A3:DF:EA</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-03_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:28:54</Time>
+      <MacAddress>94:C6:91:A4:D1:16</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-02_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:28:54</Time>
+      <MacAddress>34:E1:2D:3C:0D:34</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-07_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:28:54</Time>
+      <MacAddress>94:C6:91:A4:F6:5B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:28:54</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-09_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:28:54</Time>
+      <MacAddress>94:C6:91:A4:43:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-06_NUC</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:29:05</Time>
+      <MacAddress>94:C6:91:A4:08:CA</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-04_NUC</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:29:05</Time>
+      <MacAddress>94:C6:91:A3:DF:EA</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-03_NUC</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:29:05</Time>
+      <MacAddress>94:C6:91:A4:D1:16</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-01_NUC</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:29:05</Time>
+      <MacAddress>94:C6:91:A4:D0:06</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-10_NUC</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:29:05</Time>
+      <MacAddress>94:C6:91:A4:58:6D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:29:05</Time>
+      <MacAddress>94:C6:91:A4:05:7C</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-08_NUC</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:29:05</Time>
+      <MacAddress>94:C6:91:A4:3E:02</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-07_NUC</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:29:05</Time>
+      <MacAddress>94:C6:91:A4:F6:5B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-02_NUC</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:29:05</Time>
+      <MacAddress>34:E1:2D:3C:0D:34</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-09_NUC</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:29:05</Time>
+      <MacAddress>94:C6:91:A4:43:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-05_NUC</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>16:29:05</Time>
+      <MacAddress>34:E1:2D:8C:EE:ED</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\13.09.2019 16-28-53_Shutdown.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\09\\13.09.2019 16-28-53_Shutdown.my</FilePath>
+</ExecutedTaskData>

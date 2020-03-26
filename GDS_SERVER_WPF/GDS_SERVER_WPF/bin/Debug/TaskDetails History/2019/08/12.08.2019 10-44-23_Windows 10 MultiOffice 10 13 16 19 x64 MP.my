@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 10 MultiOffice 10 13 16 19 x64 MP</Name>
+  <Started>12.08.2019 10-44-23</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>12.08.2019 11-27-14</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>NOTEBOOKS</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 10 MultiOffice 10 13 16 19 x64 MP</Name>
+    <LastExecuted>12.08.2019 10-44-23</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>66x1gZZ5uEWIT6vp4nnxhA</_sourceIdentifier>
+        <Name>DELL06</Name>
+        <RealPCName>DELL06</RealPCName>
+        <macAddresses>
+          <string>EC:F4:BB:15:EB:D9</string>
+          <string>AC:7B:A1:7B:C7:C1</string>
+        </macAddresses>
+        <MacAddress>EC:F4:BB:15:EB:D9</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4200U CPU @ 1.60GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 01/22/14 08:03:33 Ver: A04.00 </biosCaption>
+        <boardProductId>0TG93N</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.139</IPAddress>
+        <baseImageName>Windows 10 Office 10 13 16 19 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>NOTEBOOKS</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 10 Office 10 13 16 19 x64 MP</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 10 Office 10 13 16 19 x64 MP</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\_NO_SYSPREP\W10_MultiOffice_10_13_16_19_MP_NS\W10_MultiOffice_10_13_16_19_MP_NS.wim</SourcePath>
+      <BoolLabel>Windows 10</BoolLabel>
+      <PartitionSize>302</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>W10_Off2k19_x64_Multiprofile</string>
+        <string>W10_Off2k16_x64_MultiProfile</string>
+        <string>W10_Off2k13_x64_Multiprofile</string>
+        <string>W7_Off2k10_x64_MultiProfile</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+        <string>w7_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>50</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:44:25</Time>
+      <MacAddress>EC:F4:BB:15:EB:D9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\12.08.2019 10-44-23_Windows 10 MultiOffice 10 13 16 19 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL06</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>10:45:52</Time>
+      <MacAddress>EC:F4:BB:15:EB:D9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\12.08.2019 10-44-23_Windows 10 MultiOffice 10 13 16 19 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:45:53</Time>
+      <MacAddress>EC:F4:BB:15:EB:D9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\12.08.2019 10-44-23_Windows 10 MultiOffice 10 13 16 19 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:45:54</Time>
+      <MacAddress>EC:F4:BB:15:EB:D9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\12.08.2019 10-44-23_Windows 10 MultiOffice 10 13 16 19 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL06</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>10:45:55</Time>
+      <MacAddress>EC:F4:BB:15:EB:D9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\12.08.2019 10-44-23_Windows 10 MultiOffice 10 13 16 19 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:27:12</Time>
+      <MacAddress>EC:F4:BB:15:EB:D9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\12.08.2019 10-44-23_Windows 10 MultiOffice 10 13 16 19 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL06</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:27:13</Time>
+      <MacAddress>EC:F4:BB:15:EB:D9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\12.08.2019 10-44-23_Windows 10 MultiOffice 10 13 16 19 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL06</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>11:27:14</Time>
+      <MacAddress>EC:F4:BB:15:EB:D9</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\12.08.2019 10-44-23_Windows 10 MultiOffice 10 13 16 19 x64 MP.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\08\\12.08.2019 10-44-23_Windows 10 MultiOffice 10 13 16 19 x64 MP.my</FilePath>
+</ExecutedTaskData>

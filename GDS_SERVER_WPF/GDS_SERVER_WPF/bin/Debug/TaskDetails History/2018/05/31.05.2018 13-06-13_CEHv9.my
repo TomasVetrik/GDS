@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>CEHv9</Name>
+  <Started>31.05.2018 13-06-13</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>31.05.2018 15-00-49</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK09</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>CEHv9</Name>
+    <LastExecuted>31.05.2018 13-06-13</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>_GMUMvzrckmNIfMjWEIg8A</_sourceIdentifier>
+        <Name>STUDENTSK9-02</Name>
+        <RealPCName>STUDENTSK9-02</RealPCName>
+        <macAddresses>
+          <string>70:71:BC:8E:B3:B9</string>
+          <string>00:1B:21:C1:B3:3D</string>
+        </macAddresses>
+        <MacAddress>70:71:BC:8E:B3:B9</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.20.62</IPAddress>
+        <baseImageName>Windows 7 Office 2013 x64</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK09</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\MOC\Windows Server 2012 R2</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows Server 2012 R2</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\Base\_WIM\W2k12r2\W2k12R2.wim</SourcePath>
+      <BoolLabel>Windows 2012 R2</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>W2k12R2</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W2k12_R2</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\GOC\CEHv9</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>CEHv9</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\DriveE\_WIM\CEHv9\CEHv9.wim</SourcePath>
+      <BoolLabel>CEHv9</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\Autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-02</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>13:06:59</Time>
+      <MacAddress>70:71:BC:8E:B3:B9</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-02</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>13:07:00</Time>
+      <MacAddress>70:71:BC:8E:B3:B9</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:07:01</Time>
+      <MacAddress>70:71:BC:8E:B3:B9</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:07:02</Time>
+      <MacAddress>70:71:BC:8E:B3:B9</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-02</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:07:03</Time>
+      <MacAddress>70:71:BC:8E:B3:B9</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:00:44</Time>
+      <MacAddress>70:71:BC:8E:B3:B9</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-02</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>15:00:45</Time>
+      <MacAddress>70:71:BC:8E:B3:B9</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:00:46</Time>
+      <MacAddress>70:71:BC:8E:B3:B9</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-02</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>15:00:47</Time>
+      <MacAddress>70:71:BC:8E:B3:B9</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK9-02</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>15:00:49</Time>
+      <MacAddress>70:71:BC:8E:B3:B9</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\05\\31.05.2018 13-06-13_CEHv9.my</FilePath>
+</ExecutedTaskData>

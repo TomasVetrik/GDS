@@ -31,7 +31,7 @@ namespace GDS_Client
                     {
                         foreach (string IP in IPAdds)
                         {
-                            Console.WriteLine(IP);                           
+                            WriteToLogs("Computer IP: " + IP);                           
                             SetServerIP(IP);
                             if (serverIP != null)
                                 break;
@@ -80,7 +80,7 @@ namespace GDS_Client
 
         public void WriteToLogs(string LOG)
         {
-            Console.WriteLine(LOG);
+            Console.WriteLine(DateTime.Now.ToString() + ": " + LOG);
             if (!computerDetails.computerDetailsData.inWinpe)
             {
                 if (File.Exists(FileName))
@@ -168,9 +168,10 @@ namespace GDS_Client
                     {
                         connection = TCPConnection.GetConnection(serverConnectionInfo);
                     }
-                    catch
-                    {                        
+                    catch(Exception ex)
+                    {
                         Console.WriteLine("Failed with Creating connection");
+                        //Console.WriteLine(ex.ToString());
                         Thread.Sleep(10000);
                         created = false;                        
                         if (counter == MAX_COUNT_REFRESH)
@@ -198,7 +199,7 @@ namespace GDS_Client
             };
             connection.AppendIncomingPacketHandler<byte[]>("Packet", IncommingMessage);
             connection.AppendShutdownHandler(HandleConnectionClosed);
-            Console.WriteLine("Connected to: " + serverIP);            
+            WriteToLogs("Connected to: " + serverIP);            
             SendMessage(packet);
             WriteToLogs("Sending SYN FLAG");
             running = true;

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ImageData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>CentOS 6</Name>
+  <ImageSource>Images/Image.ico</ImageSource>
+  <SourcePath>I:\LINUX\Base\_wim\CentOS_6\CentOS_6.wim</SourcePath>
+  <BoolLabel>CentOS</BoolLabel>
+  <PartitionSize>90</PartitionSize>
+  <VHDResizeSize>50</VHDResizeSize>
+  <VHDResize>false</VHDResize>
+  <VHDNames>
+    <string>CentOS_6</string>
+  </VHDNames>
+  <OSAbrivations>
+    <string>w7_x64</string>
+  </OSAbrivations>
+</ImageData>

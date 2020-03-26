@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>Windows 10 Office 2013 x64 MP No Sysprep</Name>
+  <LastExecuted>04.09.2019 15-25-27</LastExecuted>
+  <TargetComputers>
+    <ComputerDetailsData>
+      <_sourceIdentifier>93stlEfHhEKoZKshKBPn0Q</_sourceIdentifier>
+      <Name>STUDENTSK7-06</Name>
+      <RealPCName>MININT-50G9KK5</RealPCName>
+      <macAddresses>
+        <string>68:05:CA:15:8A:4C</string>
+        <string>E0:D5:5E:02:EE:88</string>
+      </macAddresses>
+      <MacAddress>68:05:CA:15:8A:4C</MacAddress>
+      <OSInformations>, 32-bit</OSInformations>
+      <processorInfo>Intel® Core™ i5-7400 CPU @ 3.00GHz</processorInfo>
+      <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+      <numberOfRamSLots>4</numberOfRamSLots>
+      <biosCaption>BIOS Date: 03/09/18 13:03:04 Ver: 05.0000C</biosCaption>
+      <boardProductId>Z270-HD3P-CF</boardProductId>
+      <accountName>SYSTEM</accountName>
+      <IPAddress>10.202.20.104</IPAddress>
+      <baseImageName>Windows 10 Office 2019 x64 MP</baseImageName>
+      <driveEImageName />
+      <dartInfo>946-143-786#10.202.20.104#49678</dartInfo>
+      <ImageSource>Images/Winpe.ico</ImageSource>
+      <inWinpe>true</inWinpe>
+      <PostInstalls />
+      <CustomLog />
+    </ComputerDetailsData>
+  </TargetComputers>
+  <MachineGroup>UCEBNASK07</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>true</Cloning>
+  <BaseImageSourcePath>.\Base\OFFICE\Windows 10 Office 2013 x64 MP</BaseImageSourcePath>
+  <BaseImageData>
+    <Name>Windows 10 Office 2013 x64 MP</Name>
+    <ImageSource>Images/Image.ico</ImageSource>
+    <SourcePath>I:\Office\Base\_WIM\_NO_SYSPREP\W10_Off2k13_x64_Multiprofile_NO_SYSPREP_1809\W10_Off2k13_x64_Multiprofile.wim</SourcePath>
+    <BoolLabel>Windows 10 Office 2013</BoolLabel>
+    <PartitionSize>162</PartitionSize>
+    <VHDResizeSize>90</VHDResizeSize>
+    <VHDResize>true</VHDResize>
+    <VHDNames>
+      <string>W10_Off2k13_x64_Multiprofile</string>
+    </VHDNames>
+    <OSAbrivations>
+      <string>W10_x64</string>
+    </OSAbrivations>
+  </BaseImageData>
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath />
+  <SoftwareAndFileAction>false</SoftwareAndFileAction>
+  <DestinationDirectoryInOS />
+  <CommandsInOS />
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE />
+  <WaitingTime>40</WaitingTime>
+  <SendWarningMails>false</SendWarningMails>
+  <InfinityWaitingTime>true</InfinityWaitingTime>
+</TaskData>

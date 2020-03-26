@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>MOC 10969 B</Name>
+  <LastExecuted>20.03.2018 14-12-22</LastExecuted>
+  <TargetComputers>
+    <ComputerDetailsData>
+      <_sourceIdentifier>xcJWIMm_LUO5YoBZwoLcgA</_sourceIdentifier>
+      <Name>STUDENTSK7-06</Name>
+      <RealPCName>STUDENTSK7-06</RealPCName>
+      <macAddresses>
+        <string>E0:D5:5E:02:EE:88</string>
+      </macAddresses>
+      <MacAddress>E0:D5:5E:02:EE:88</MacAddress>
+      <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+      <processorInfo>Intel® Core™ i5-7400 CPU @ 3.00GHz</processorInfo>
+      <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+      <numberOfRamSLots>4</numberOfRamSLots>
+      <biosCaption>BIOS Date: 11/08/17 12:51:49 Ver: 05.0000C</biosCaption>
+      <boardProductId>Z270-HD3P-CF</boardProductId>
+      <accountName>Administrator</accountName>
+      <IPAddress>10.202.20.198</IPAddress>
+      <baseImageName>Windows Server 2012 R2</baseImageName>
+      <driveEImageName>MOC 20410 D</driveEImageName>
+      <dartInfo />
+      <ImageSource>Images/Offline.ico</ImageSource>
+      <inWinpe>false</inWinpe>
+      <PostInstalls />
+      <CustomLog />
+    </ComputerDetailsData>
+    <ComputerDetailsData>
+      <_sourceIdentifier>-fZXwBBGQkGy44q5kCkoqg</_sourceIdentifier>
+      <Name>STUDENTSK7-07</Name>
+      <RealPCName>STUDENTSK7-07</RealPCName>
+      <macAddresses>
+        <string>E0:D5:5E:02:EE:86</string>
+      </macAddresses>
+      <MacAddress>E0:D5:5E:02:EE:86</MacAddress>
+      <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+      <processorInfo>Intel® Core™ i5-7400 CPU @ 3.00GHz</processorInfo>
+      <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+      <numberOfRamSLots>4</numberOfRamSLots>
+      <biosCaption>BIOS Date: 11/08/17 12:51:49 Ver: 05.0000C</biosCaption>
+      <boardProductId>Z270-HD3P-CF</boardProductId>
+      <accountName>Administrator</accountName>
+      <IPAddress>10.202.20.200</IPAddress>
+      <baseImageName>Windows Server 2012 R2</baseImageName>
+      <driveEImageName>MOC 20410 D</driveEImageName>
+      <dartInfo />
+      <ImageSource>Images/Offline.ico</ImageSource>
+      <inWinpe>false</inWinpe>
+      <PostInstalls />
+      <CustomLog />
+    </ComputerDetailsData>
+    <ComputerDetailsData>
+      <_sourceIdentifier>CkfhysuCE0eKkRkPK8CS_Q</_sourceIdentifier>
+      <Name>STUDENTSK7-08</Name>
+      <RealPCName>STUDENTSK7-08</RealPCName>
+      <macAddresses>
+        <string>E0:D5:5E:02:EE:89</string>
+      </macAddresses>
+      <MacAddress>E0:D5:5E:02:EE:89</MacAddress>
+      <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+      <processorInfo>Intel® Core™ i5-7400 CPU @ 3.00GHz</processorInfo>
+      <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+      <numberOfRamSLots>4</numberOfRamSLots>
+      <biosCaption>BIOS Date: 11/08/17 12:51:49 Ver: 05.0000C</biosCaption>
+      <boardProductId>Z270-HD3P-CF</boardProductId>
+      <accountName>Administrator</accountName>
+      <IPAddress>10.202.20.116</IPAddress>
+      <baseImageName>Windows Server 2012 R2</baseImageName>
+      <driveEImageName>MOC 20410 D</driveEImageName>
+      <dartInfo />
+      <ImageSource>Images/Offline.ico</ImageSource>
+      <inWinpe>false</inWinpe>
+      <PostInstalls />
+      <CustomLog />
+    </ComputerDetailsData>
+  </TargetComputers>
+  <MachineGroup>UCEBNASK07</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>true</Cloning>
+  <BaseImageSourcePath>.\Base\MOC\Windows Server 2012 R2</BaseImageSourcePath>
+  <BaseImageData>
+    <Name>Windows Server 2012 R2</Name>
+    <ImageSource>Images/Image.ico</ImageSource>
+    <SourcePath>I:\MOC\Base\_WIM\W2k12r2\W2k12R2.wim</SourcePath>
+    <BoolLabel>Windows 2012 R2</BoolLabel>
+    <PartitionSize>90</PartitionSize>
+    <VHDResizeSize>50</VHDResizeSize>
+    <VHDResize>false</VHDResize>
+    <VHDNames>
+      <string>W2k12R2</string>
+    </VHDNames>
+    <OSAbrivations>
+      <string>W2k12_R2</string>
+    </OSAbrivations>
+  </BaseImageData>
+  <WithoutVHD>false</WithoutVHD>
+  <DriveEImageSourcePath>.\DriveE\MOC\10000\10969 B</DriveEImageSourcePath>
+  <DriveEImageData>
+    <Name>10969 B</Name>
+    <ImageSource>Images/Image.ico</ImageSource>
+    <SourcePath>I:\MOC\DriveE\_WIM\10969B\10969B.wim</SourcePath>
+    <BoolLabel>MOC10969B</BoolLabel>
+    <PartitionSize>90</PartitionSize>
+    <VHDResizeSize>50</VHDResizeSize>
+    <VHDResize>false</VHDResize>
+    <VHDNames />
+    <OSAbrivations />
+  </DriveEImageData>
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <DestinationDirectoryInOS />
+  <CommandsInOS>
+    <string>e:\autologon.bat</string>
+  </CommandsInOS>
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE />
+  <WaitingTime>30</WaitingTime>
+</TaskData>

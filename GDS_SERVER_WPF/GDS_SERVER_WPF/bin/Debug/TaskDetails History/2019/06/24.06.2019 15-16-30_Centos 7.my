@@ -1,0 +1,613 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Centos 7</Name>
+  <Started>24.06.2019 15-16-30</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>24.06.2019 15-36-59</Finished>
+  <Clients>8</Clients>
+  <Done>0</Done>
+  <Failed>8</Failed>
+  <MachineGroup>Machine Groups</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Centos 7</Name>
+    <LastExecuted>24.06.2019 15-16-30</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>pB3JwNQvU0-My5sJMBSD8Q</_sourceIdentifier>
+        <Name>LEKTORSK11</Name>
+        <RealPCName>LEKTORSK11</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:D0:36</string>
+          <string>00:22:4D:80:6E:C6</string>
+          <string>68:05:CA:0C:AF:9A</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.20.131</IPAddress>
+        <baseImageName>Windows 10 x64 Office 2016 Polivka_MENSI</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo />
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Qg_q-VttQ02unBakpf9VJA</_sourceIdentifier>
+        <Name>STUDENTSK11-01</Name>
+        <RealPCName>STUDENTSK11-01</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:D0:37</string>
+          <string>00:22:4D:89:01:8A</string>
+          <string>68:05:CA:0A:71:5C</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.20.146</IPAddress>
+        <baseImageName>Windows 10 x64 Office 2016 Polivka_MENSI</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo />
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Zn914SgC_0y7513ImXeqSA</_sourceIdentifier>
+        <Name>STUDENTSK11-02</Name>
+        <RealPCName>STUDENTSK11-02</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:CF:43</string>
+          <string>68:05:CA:0C:BD:B5</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.20.118</IPAddress>
+        <baseImageName>Windows 10 x64 Office 2016 Polivka_MENSI</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo />
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>MQq9huqkLE6nHkFIgRhekw</_sourceIdentifier>
+        <Name>STUDENTSK11-03</Name>
+        <RealPCName>STUDENTSK11-03</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:2A:CF:C6</string>
+          <string>00:22:4D:80:6F:09</string>
+          <string>68:05:CA:0C:AF:92</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.20.138</IPAddress>
+        <baseImageName>Windows 10 x64 Office 2016 Polivka_MENSI</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo />
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>OhecNWFTAkCfD6tAsskj7A</_sourceIdentifier>
+        <Name>STUDENTSK11-04</Name>
+        <RealPCName>STUDENTSK11-04</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:0C:B2:30</string>
+          <string>00:22:4D:82:42:14</string>
+          <string>68:05:CA:2A:D0:B8</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.20.5</IPAddress>
+        <baseImageName>Windows 10 x64 Office 2016 Polivka_MENSI</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo />
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>oXUu2fsGFUW-MMXXvcIwDQ</_sourceIdentifier>
+        <Name>STUDENTSK11-05</Name>
+        <RealPCName>STUDENTSK11-05</RealPCName>
+        <macAddresses>
+          <string>00:22:4D:80:6F:05</string>
+          <string>68:05:CA:2A:D0:2D</string>
+          <string>68:05:CA:0C:B1:A6</string>
+        </macAddresses>
+        <MacAddress>00:22:4D:80:6F:05</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.20.135</IPAddress>
+        <baseImageName>Windows 10 x64 Office 2016 Polivka_MENSI</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo />
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>oTltypvx9kyse-GSp3Wenw</_sourceIdentifier>
+        <Name>STUDENTSK11-06</Name>
+        <RealPCName>STUDENTSK11-06</RealPCName>
+        <macAddresses>
+          <string>00:22:4D:80:6E:2B</string>
+          <string>68:05:CA:2A:D0:2E</string>
+        </macAddresses>
+        <MacAddress>00:22:4D:80:6E:2B</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.20.122</IPAddress>
+        <baseImageName>Windows 10 x64 Office 2016 Polivka_MENSI</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo />
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>k3y66TMVKUeByYLEhfWesA</_sourceIdentifier>
+        <Name>STUDENTSK11-07</Name>
+        <RealPCName>STUDENTSK11-07</RealPCName>
+        <macAddresses>
+          <string>00:22:4D:80:6F:0D</string>
+          <string>68:05:CA:0C:AF:98</string>
+        </macAddresses>
+        <MacAddress>00:22:4D:80:6F:0D</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.20.119</IPAddress>
+        <baseImageName>Windows 10 x64 Office 2016 Polivka_MENSI</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo />
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>Machine Groups</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\LINUX\CentOS 7</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>CentOS 7</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\LINUX\Base\_wim\CentOS_7\Centos_7.wim</SourcePath>
+      <BoolLabel>CentOS</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>Centos_7</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x86</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>true</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:16:32</Time>
+      <MacAddress>00:22:4D:80:6F:05</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:16:32</Time>
+      <MacAddress>00:22:4D:80:6F:0D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:16:32</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:16:32</Time>
+      <MacAddress>00:22:4D:80:6E:2B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:16:32</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:17:21</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:17:26</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:17:26</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:17:54</Time>
+      <MacAddress>00:22:4D:80:6E:2B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:17:54</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:17:54</Time>
+      <MacAddress>00:22:4D:80:6F:05</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:17:55</Time>
+      <MacAddress>00:22:4D:80:6E:2B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:17:55</Time>
+      <MacAddress>00:22:4D:80:6F:05</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:17:55</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:17:56</Time>
+      <MacAddress>00:22:4D:80:6F:05</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:17:56</Time>
+      <MacAddress>00:22:4D:80:6E:2B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:17:56</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:17:59</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:17:59</Time>
+      <MacAddress>00:22:4D:80:6F:0D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:18:00</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:18:00</Time>
+      <MacAddress>00:22:4D:80:6F:0D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:18:01</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:18:01</Time>
+      <MacAddress>00:22:4D:80:6F:0D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:18:44</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:18:45</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:18:46</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:18:54</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>15:18:54</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:18:55</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:18:55</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:18:56</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:18:56</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-02</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>15:20:30</Time>
+      <MacAddress>68:05:CA:2A:CF:43</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-07</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>15:19:45</Time>
+      <MacAddress>00:22:4D:80:6F:0D</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-05</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>15:19:50</Time>
+      <MacAddress>00:22:4D:80:6F:05</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-01</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>15:19:50</Time>
+      <MacAddress>68:05:CA:2A:D0:37</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-04</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>15:19:55</Time>
+      <MacAddress>68:05:CA:0C:B2:30</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-06</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>15:19:35</Time>
+      <MacAddress>00:22:4D:80:6E:2B</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-03</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>15:20:35</Time>
+      <MacAddress>68:05:CA:2A:CF:C6</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>LEKTORSK11</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>15:20:36</Time>
+      <MacAddress>68:05:CA:2A:D0:36</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.06.2019 15-16-30_Centos 7.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\06\\24.06.2019 15-16-30_Centos 7.my</FilePath>
+</ExecutedTaskData>

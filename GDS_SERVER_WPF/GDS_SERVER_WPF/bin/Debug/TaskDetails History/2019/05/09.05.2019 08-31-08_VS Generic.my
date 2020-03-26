@@ -1,0 +1,511 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>VS Generic</Name>
+  <Started>09.05.2019 08-31-08</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>09.05.2019 08-35-30</Finished>
+  <Clients>4</Clients>
+  <Done>0</Done>
+  <Failed>4</Failed>
+  <MachineGroup>UCEBNASK01</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>VS Generic</Name>
+    <LastExecuted>09.05.2019 08-06-06</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>ct8fClywDkWQE344l8W-rw</_sourceIdentifier>
+        <Name>STUDENTSK1-03</Name>
+        <RealPCName>STUDENTSK1-03</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3B:EF:AE</string>
+          <string>FC:AA:14:AC:74:2A</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.120.23</IPAddress>
+        <baseImageName>Windows 10 Office 2016 x64 SP</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>ACjvwKhHuka-blADQNTPNw</_sourceIdentifier>
+        <Name>STUDENTSK1-04</Name>
+        <RealPCName>STUDENTSK1-04</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3C:30:E2</string>
+          <string>FC:AA:14:AC:74:22</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.120.24</IPAddress>
+        <baseImageName>Windows 10 Office 2016 x64 SP</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>nC14gkNocE6DG6uEGgZ6BQ</_sourceIdentifier>
+        <Name>STUDENTSK1-07</Name>
+        <RealPCName>STUDENTSK1-07</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:3C:35:76</string>
+          <string>FC:AA:14:AC:70:2A</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:3C:35:76</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.120.27</IPAddress>
+        <baseImageName>Windows 10 Office 2016 x64 SP</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>jJ9oVj74xEC-MJyOiX2Wrg</_sourceIdentifier>
+        <Name>STUDENTSK1-08</Name>
+        <RealPCName>STUDENTSK1-08</RealPCName>
+        <macAddresses>
+          <string>FC:AA:14:AC:74:25</string>
+          <string>68:05:CA:3B:EF:AC</string>
+        </macAddresses>
+        <MacAddress>FC:AA:14:AC:74:25</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 09/18/15 22:06:35 Ver: 04.06.05</biosCaption>
+        <boardProductId>H97-HD3</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.120.28</IPAddress>
+        <baseImageName>Windows 10 Office 2016 x64 SP</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK01</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 10 Office 2016 x64 SP</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 10 Office 2016 x64 SP</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\_NO_SYSPREP\W10_Off2k16_x64_SingleProfile_NO_SYSPREP_1803\W10_Off2k16_x64_SingleProfile_NO_SYSPREP_1803.wim</SourcePath>
+      <BoolLabel>Windows 10 Office 2016</BoolLabel>
+      <PartitionSize>190</PartitionSize>
+      <VHDResizeSize>120</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W10_Off2k16_x64_SingleProfile</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath>.\DriveE\GOC\VS Generic 2017</DriveEImageSourcePath>
+    <DriveEImageData>
+      <Name>VS Generic 2017</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\DriveE\_WIM\VS_generic_2017\VS_generic.wim</SourcePath>
+      <BoolLabel>VS Generic 2017</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS>
+      <string>E:\NetGeneric\Autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>8:32:11</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>8:32:12</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:32:13</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>8:32:14</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>8:32:15</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:32:37</Time>
+      <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:32:46</Time>
+      <MacAddress>68:05:CA:3C:35:76</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:32:56</Time>
+      <MacAddress>FC:AA:14:AC:74:25</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>8:33:24</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message>CLONE FAILED EC -1054801659</Message>
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:33:25</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>8:33:26</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:33:27</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>8:33:33</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>8:33:34</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>8:33:54</Time>
+      <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:33:55</Time>
+      <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>8:33:56</Time>
+      <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>8:33:57</Time>
+      <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>8:34:08</Time>
+      <MacAddress>68:05:CA:3C:35:76</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:34:09</Time>
+      <MacAddress>68:05:CA:3C:35:76</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>8:34:10</Time>
+      <MacAddress>68:05:CA:3C:35:76</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-07</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>8:34:11</Time>
+      <MacAddress>68:05:CA:3C:35:76</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>8:34:13</Time>
+      <MacAddress>FC:AA:14:AC:74:25</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:34:14</Time>
+      <MacAddress>FC:AA:14:AC:74:25</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>8:34:15</Time>
+      <MacAddress>FC:AA:14:AC:74:25</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-08</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>8:34:16</Time>
+      <MacAddress>FC:AA:14:AC:74:25</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>8:34:38</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message>CLONE FAILED EC -1054801659</Message>
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:34:39</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>8:34:40</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:34:41</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>8:34:47</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-04</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>8:34:48</Time>
+      <MacAddress>68:05:CA:3C:30:E2</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>RESTART CLONNIG</Step>
+      <Time>8:35:16</Time>
+      <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+      <Message>CLONE FAILED EC -1054801659</Message>
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>8:35:17</Time>
+      <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>8:35:18</Time>
+      <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>8:35:19</Time>
+      <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>8:35:25</Time>
+      <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK1-03</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>8:35:26</Time>
+      <MacAddress>68:05:CA:3B:EF:AE</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\09.05.2019 08-31-08_VS Generic.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\05\\09.05.2019 08-31-08_VS Generic.my</FilePath>
+</ExecutedTaskData>

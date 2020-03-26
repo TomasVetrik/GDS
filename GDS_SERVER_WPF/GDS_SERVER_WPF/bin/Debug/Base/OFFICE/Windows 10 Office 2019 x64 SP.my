@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ImageData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 10 Office 2019 x64 SP</Name>
+  <ImageSource>Images/Image.ico</ImageSource>
+  <SourcePath>I:\Office\Base\_WIM\_NO_SYSPREP\W10_Off2k19_x64_SingleProfile_NO_SYSPREP_1809\W10_Off2k19_x64_SingleProfile_NO_SYSPREP_1809.wim</SourcePath>
+  <BoolLabel>Windows 10 Office 2019</BoolLabel>
+  <PartitionSize>190</PartitionSize>
+  <VHDResizeSize>120</VHDResizeSize>
+  <VHDResize>true</VHDResize>
+  <VHDNames>
+    <string>W10_Off2k19_x64_SingleProfile</string>
+  </VHDNames>
+  <OSAbrivations>
+    <string>W10_x64</string>
+  </OSAbrivations>
+</ImageData>

@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 10 Office 2016 x64 MP No Sysprep</Name>
+  <Started>26.02.2019 15-36-03</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>26.02.2019 16-30-20</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>NOTEBOOKS</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 10 Office 2016 x64 MP No Sysprep</Name>
+    <LastExecuted>26.02.2019 15-36-03</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>V0U4Fz5KGEewcpZCTSJnQg</_sourceIdentifier>
+        <Name>DELL08</Name>
+        <RealPCName>DELL08</RealPCName>
+        <macAddresses>
+          <string>EC:F4:BB:15:E7:66</string>
+          <string>AC:7B:A1:7B:BA:D8</string>
+        </macAddresses>
+        <MacAddress>EC:F4:BB:15:E7:66</MacAddress>
+        <OSInformations>Microsoft Windows 7 Enterprise, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4200U CPU @ 1.60GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 01/22/14 08:03:33 Ver: A04.00 </biosCaption>
+        <boardProductId>0TG93N</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.21.94</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>NOTEBOOKS</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 10 Office 2016 x64 MP</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 10 Office 2016 x64 MP</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\_NO_SYSPREP\W10_Off2k16_x64_Multiprofile_NO_SYSPREP_1803\W10_Off2k16_x64_Multiprofile_NO_SYSPREP_1803.wim</SourcePath>
+      <BoolLabel>Windows 10 Office 2016</BoolLabel>
+      <PartitionSize>162</PartitionSize>
+      <VHDResizeSize>90</VHDResizeSize>
+      <VHDResize>true</VHDResize>
+      <VHDNames>
+        <string>W10_Off2k16_x64_MultiProfile</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:36:05</Time>
+      <MacAddress>EC:F4:BB:15:E7:66</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\26.02.2019 15-36-03_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL08</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>15:36:06</Time>
+      <MacAddress>EC:F4:BB:15:E7:66</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\26.02.2019 15-36-03_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>15:36:07</Time>
+      <MacAddress>EC:F4:BB:15:E7:66</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\26.02.2019 15-36-03_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL08</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>15:36:08</Time>
+      <MacAddress>EC:F4:BB:15:E7:66</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\26.02.2019 15-36-03_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL08</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>15:36:09</Time>
+      <MacAddress>EC:F4:BB:15:E7:66</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\26.02.2019 15-36-03_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL08</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>16:30:19</Time>
+      <MacAddress>EC:F4:BB:15:E7:66</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\26.02.2019 15-36-03_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL08</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>16:30:20</Time>
+      <MacAddress>EC:F4:BB:15:E7:66</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\26.02.2019 15-36-03_Windows 10 Office 2016 x64 MP No Sysprep.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\02\\26.02.2019 15-36-03_Windows 10 Office 2016 x64 MP No Sysprep.my</FilePath>
+</ExecutedTaskData>

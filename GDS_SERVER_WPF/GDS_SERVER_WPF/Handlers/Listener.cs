@@ -21,7 +21,7 @@ namespace GDS_SERVER_WPF
 {
     public class Listener
     {
-
+        private static readonly object computersInfo = new object();
         public Dictionary<ShortGuid, ComputerWithConnection> ClientsDictionary = new Dictionary<ShortGuid, ComputerWithConnection>();
         public Label labelOnlineClients;
         public Label labelOfflineClients;
@@ -36,79 +36,114 @@ namespace GDS_SERVER_WPF
 
         public void StartListener()
         {
-            listViewMachinesAndTasksHandler.ClientsDictionary = ClientsDictionary;
-            clientsAll = Directory.GetFiles(@".\Machine Groups\", "*.my", SearchOption.AllDirectories).Length;
-            Application.Current.Dispatcher.Invoke(() =>
+            try
             {
-                labelOnlineClients.Content = "Online: " + ClientsDictionary.Count;
-                labelOfflineClients.Content = "Offline: " + (clientsAll - ClientsDictionary.Count);
-                labelAllClients.Content = "Clients: " + clientsAll;
-            });
+                listViewMachinesAndTasksHandler.ClientsDictionary = ClientsDictionary;
+                clientsAll = Directory.GetFiles(@".\Machine Groups\", "*.my", SearchOption.AllDirectories).Length;
+                Application.Current.Dispatcher.Invoke(() =>
+                {
+                    labelOnlineClients.Content = "Online: " + ClientsDictionary.Count;
+                    labelOfflineClients.Content = "Offline: " + (clientsAll - ClientsDictionary.Count);
+                    labelAllClients.Content = "Clients: " + clientsAll;
+                });
 
-            NetworkComms.AppendGlobalIncomingPacketHandler<byte[]>("Packet", IncommingMessage);
-            NetworkComms.AppendGlobalConnectionCloseHandler(HandleConnectionClosed);
-            Connection.StartListening(ConnectionType.TCP, new IPEndPoint(IPAddress.Any, 10000));
+                NetworkComms.AppendGlobalIncomingPacketHandler<byte[]>("Packet", IncommingMessage);
+                NetworkComms.AppendGlobalConnectionCloseHandler(HandleConnectionClosed);
+                Connection.StartListening(ConnectionType.TCP, new IPEndPoint(IPAddress.Any, 10000));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void SetOffline(ListView list, ShortGuid remoteIdentifier)
         {
-            for (int i = list.Items.Count - 1; i >= 0; i--)
+            try
             {
-                ComputerDetailsData computer = (ComputerDetailsData)list.Items[i];
-                if (computer.macAddresses != null && ClientsDictionary[remoteIdentifier].ComputerData.macAddresses != null && CheckMacsInREC(computer.macAddresses, ClientsDictionary[remoteIdentifier].ComputerData.macAddresses))
+                for (int i = list.Items.Count - 1; i >= 0; i--)
                 {
-                    computer.ImageSource = "Images/Offline.ico";
-                    list.Items.RemoveAt(i);
-                    list.Items.Insert(i, computer);
-                    break;
+                    ComputerDetailsData computer = (ComputerDetailsData)list.Items[i];
+                    if (computer.macAddresses != null && ClientsDictionary[remoteIdentifier].ComputerData.macAddresses != null && CheckMacsInREC(computer.macAddresses, ClientsDictionary[remoteIdentifier].ComputerData.macAddresses))
+                    {
+                        computer.ImageSource = "Images/Offline.ico";
+                        list.Items.RemoveAt(i);
+                        list.Items.Insert(i, computer);
+                        break;
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }        
         }
 
         private void HandleConnectionClosed(Connection connection)
         {
-            semaphore.WaitOne();
-            ShortGuid remoteIdentifier = connection.ConnectionInfo.NetworkIdentifier;
-            if (ClientsDictionary.ContainsKey(remoteIdentifier))
+            try
             {
+                semaphore.WaitOne();
+                ShortGuid remoteIdentifier = connection.ConnectionInfo.NetworkIdentifier;
+                if (ClientsDictionary.ContainsKey(remoteIdentifier))
+                {
+                    Application.Current.Dispatcher.Invoke(() =>
+                    {
+                        if (listViewMachinesAndTasksHandler.machines.Visibility == Visibility.Visible)
+                            SetOffline(listViewMachinesAndTasksHandler.machines, remoteIdentifier);
+                        if (listViewMachinesAndTasksHandler.machines_lock.Visibility == Visibility.Visible)
+                            SetOffline(listViewMachinesAndTasksHandler.machines_lock, remoteIdentifier);
+                    });
+                }
+                ClientsDictionary.Remove(connection.ConnectionInfo.NetworkIdentifier);
                 Application.Current.Dispatcher.Invoke(() =>
-                {                    
-                    if(listViewMachinesAndTasksHandler.machines.Visibility == Visibility.Visible)
-                        SetOffline(listViewMachinesAndTasksHandler.machines, remoteIdentifier);
-                    if (listViewMachinesAndTasksHandler.machines_lock.Visibility == Visibility.Visible)
-                        SetOffline(listViewMachinesAndTasksHandler.machines_lock, remoteIdentifier);
+                {
+                    labelOnlineClients.Content = "Online: " + ClientsDictionary.Count;
+                    labelOfflineClients.Content = "Offline: " + (clientsAll - ClientsDictionary.Count);
                 });
+                semaphore.Release(1);
             }
-            ClientsDictionary.Remove(connection.ConnectionInfo.NetworkIdentifier);
-            Application.Current.Dispatcher.Invoke(() =>
+            catch (Exception ex)
             {
-                labelOnlineClients.Content = "Online: " + ClientsDictionary.Count;
-                labelOfflineClients.Content = "Offline: " + (clientsAll - ClientsDictionary.Count);
-            });
-            semaphore.Release(1);
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         public static bool CheckMacsInREC(List<string> Macs, List<string> Recs)
         {
-            if (Recs != null)
+            try
             {
-                if (Macs.Count != 0 && Recs.Count != 0)
-                    return IsMacAddressIn(Macs, Recs);
+                if (Recs != null)
+                {
+                    if (Macs.Count != 0 && Recs.Count != 0)
+                        return IsMacAddressIn(Macs, Recs);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
             return false;
         }
 
         private static bool IsMacAddressIn(List<string> array1, List<string> array2)
         {
-            foreach (string text1 in array1)
+            try
             {
-                foreach (string text2 in array2)
+                foreach (string text1 in array1)
                 {
-                    if (text1 == text2)
+                    foreach (string text2 in array2)
                     {
-                        return true;
+                        if (text1 == text2)
+                        {
+                            return true;
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
             return false;
         }
@@ -298,62 +333,85 @@ namespace GDS_SERVER_WPF
 
         public static T GetVisualChild<T>(Visual parent) where T : Visual
         {
-            T child = default(T);
-            int numVisuals = VisualTreeHelper.GetChildrenCount(parent);
-            for (int i = 0; i < numVisuals; i++)
+            try
             {
-                Visual v = (Visual)VisualTreeHelper.GetChild(parent, i);
-                child = v as T;
-                if (child == null)
+                T child = default(T);
+                int numVisuals = VisualTreeHelper.GetChildrenCount(parent);
+                for (int i = 0; i < numVisuals; i++)
                 {
-                    child = GetVisualChild<T>(v);
+                    Visual v = (Visual)VisualTreeHelper.GetChild(parent, i);
+                    child = v as T;
+                    if (child == null)
+                    {
+                        child = GetVisualChild<T>(v);
+                    }
+                    if (child != null)
+                    {
+                        break;
+                    }
                 }
-                if (child != null)
-                {
-                    break;
-                }
+                return child;
             }
-            return child;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return null;
         }
 
         public DataGridRow GetRow(int index)
         {
-            DataGridRow row = (DataGridRow)grdMachinesGroups.ItemContainerGenerator.ContainerFromIndex(index);
-            if (row == null)
+            try
             {
-                grdMachinesGroups.UpdateLayout();
-                grdMachinesGroups.ScrollIntoView(grdMachinesGroups.Items[index]);
-                row = (DataGridRow)grdMachinesGroups.ItemContainerGenerator.ContainerFromIndex(index);
+                DataGridRow row = (DataGridRow)grdMachinesGroups.ItemContainerGenerator.ContainerFromIndex(index);
+                if (row == null)
+                {
+                    grdMachinesGroups.UpdateLayout();
+                    grdMachinesGroups.ScrollIntoView(grdMachinesGroups.Items[index]);
+                    row = (DataGridRow)grdMachinesGroups.ItemContainerGenerator.ContainerFromIndex(index);
+                }
+                return row;
             }
-            return row;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return null;
+            }
         }
 
         private void SetOnline(ListView list, Packet packet)
         {
-            for (int i = list.Items.Count - 1; i >= 0; i--)
+            try
             {
-                try
+                for (int i = list.Items.Count - 1; i >= 0; i--)
                 {
-                    ComputerDetailsData computer = (ComputerDetailsData)list.Items[i];
-                    if (!computer.ImageSource.Contains("Folder"))
+                    try
                     {
-                        if (CheckMacsInREC(computer.macAddresses, packet.computerDetailsData.macAddresses))
+                        ComputerDetailsData computer = (ComputerDetailsData)list.Items[i];
+                        if (!computer.ImageSource.Contains("Folder"))
                         {
-                            if (packet.computerDetailsData.inWinpe)
-                                packet.computerDetailsData.ImageSource = "Images/WinPE.ico";
-                            else
-                                packet.computerDetailsData.ImageSource = "Images/Online.ico";
-                            packet.computerDetailsData.PostInstalls = packet.computerConfigData.PostInstalls;
-                            list.Items.RemoveAt(i);
-                            list.Items.Insert(i, packet.computerDetailsData);
-                            break;
+                            if (CheckMacsInREC(computer.macAddresses, packet.computerDetailsData.macAddresses))
+                            {
+                                if (packet.computerDetailsData.inWinpe)
+                                    packet.computerDetailsData.ImageSource = "Images/WinPE.ico";
+                                else
+                                    packet.computerDetailsData.ImageSource = "Images/Online.ico";
+                                packet.computerDetailsData.PostInstalls = packet.computerConfigData.PostInstalls;
+                                list.Items.RemoveAt(i);
+                                list.Items.Insert(i, packet.computerDetailsData);
+                                break;
+                            }
                         }
                     }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("BEZIM: " + e.ToString());
+                    }
                 }
-                catch (Exception e)
-                {
-                    MessageBox.Show("BEZIM: " + e.ToString());
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -408,28 +466,31 @@ namespace GDS_SERVER_WPF
 
         public static string GetFileNameByMac(string[] computersInfoFiles, List<string> macAddresses)
         {
-            try
+            lock (computersInfo)
             {
-                string filePath = "";
-                foreach (string computerFile in computersInfoFiles)
+                try
                 {
-                    var computerData = FileHandler.Load<ComputerDetailsData>(computerFile);
-                    if (computerData != null && computerData.macAddresses != null)
+                    string filePath = "";
+                    foreach (string computerFile in computersInfoFiles)
                     {
-                        if (CheckMacsInREC(computerData.macAddresses, macAddresses))
+                        var computerData = FileHandler.Load<ComputerDetailsData>(computerFile);
+                        if (computerData != null && computerData.macAddresses != null)
                         {
-                            filePath = computerFile;
-                            break;
+                            if (CheckMacsInREC(computerData.macAddresses, macAddresses))
+                            {
+                                filePath = computerFile;
+                                break;
+                            }
                         }
                     }
+                    return filePath;
                 }
-                return filePath;
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                return "";
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            return "";
         }
 
         private void SaveComputerData(Packet packet, Connection connection)

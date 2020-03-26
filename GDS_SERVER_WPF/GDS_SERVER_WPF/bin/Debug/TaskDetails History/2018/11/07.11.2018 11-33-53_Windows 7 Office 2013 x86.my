@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 7 Office 2013 x86</Name>
+  <Started>07.11.2018 11-33-53</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>07.11.2018 12-11-32</Finished>
+  <Clients>2</Clients>
+  <Done>2</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK06</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 7 Office 2013 x86</Name>
+    <LastExecuted>07.11.2018 11-33-53</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>BXzZJ3bJR06obZxJI9TzVQ</_sourceIdentifier>
+        <Name>STUDENTSK7-06_OLD</Name>
+        <RealPCName>MININT-S1V2G27</RealPCName>
+        <macAddresses>
+          <string>00:1C:C0:8D:B5:0B</string>
+        </macAddresses>
+        <MacAddress>00:1C:C0:8D:B5:0B</MacAddress>
+        <OSInformations>, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™2 Quad CPU Q9400 @ 2.66GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/08/08 17:50:03 Ver: 08.00.10</biosCaption>
+        <boardProductId>DG45ID</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.123</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>852-139-014#10.202.20.123#49416</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>6Zfij4hAvUGi0KxVqTRSrw</_sourceIdentifier>
+        <Name>STUDENTSK7-10_OLD</Name>
+        <RealPCName>MININT-CGHUH97</RealPCName>
+        <macAddresses>
+          <string>00:1C:C0:7D:DB:D1</string>
+        </macAddresses>
+        <MacAddress>00:1C:C0:7D:DB:D1</MacAddress>
+        <OSInformations>, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™2 Quad CPU Q9400 @ 2.66GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/08/08 17:50:03 Ver: 08.00.10</biosCaption>
+        <boardProductId>DG45ID</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.121</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>494-443-566#10.202.20.121#49416</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK06</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 7 Office 2013 x86</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 7 Office 2013 x86</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\W7_Off2k13_x86\W7_Off2k13_x86.wim</SourcePath>
+      <BoolLabel>Windows 7 Office 2013</BoolLabel>
+      <PartitionSize>92</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>W7_Off2k13_x86</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x86</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <DriveEImageData>
+      <Name>10989B</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\MOC\DriveE\_WIM\10989B\10989B.wim</SourcePath>
+      <BoolLabel>MOC 10989 B</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames />
+      <OSAbrivations />
+    </DriveEImageData>
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-10_OLD</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:33:54</Time>
+      <MacAddress>00:1C:C0:7D:DB:D1</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-06_OLD</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:33:54</Time>
+      <MacAddress>00:1C:C0:8D:B5:0B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-06_OLD</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>11:33:55</Time>
+      <MacAddress>00:1C:C0:8D:B5:0B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-10_OLD</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>11:33:55</Time>
+      <MacAddress>00:1C:C0:7D:DB:D1</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-10_OLD</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:33:56</Time>
+      <MacAddress>00:1C:C0:7D:DB:D1</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-06_OLD</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:33:56</Time>
+      <MacAddress>00:1C:C0:8D:B5:0B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-06_OLD</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>11:33:58</Time>
+      <MacAddress>00:1C:C0:8D:B5:0B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-10_OLD</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>11:33:58</Time>
+      <MacAddress>00:1C:C0:7D:DB:D1</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-06_OLD</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>11:33:59</Time>
+      <MacAddress>00:1C:C0:8D:B5:0B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-10_OLD</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>11:33:59</Time>
+      <MacAddress>00:1C:C0:7D:DB:D1</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-10_OLD</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>12:08:31</Time>
+      <MacAddress>00:1C:C0:7D:DB:D1</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-10_OLD</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>12:08:32</Time>
+      <MacAddress>00:1C:C0:7D:DB:D1</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-06_OLD</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>12:11:31</Time>
+      <MacAddress>00:1C:C0:8D:B5:0B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-06_OLD</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>12:11:32</Time>
+      <MacAddress>00:1C:C0:8D:B5:0B</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\11\\07.11.2018 11-33-53_Windows 7 Office 2013 x86.my</FilePath>
+</ExecutedTaskData>

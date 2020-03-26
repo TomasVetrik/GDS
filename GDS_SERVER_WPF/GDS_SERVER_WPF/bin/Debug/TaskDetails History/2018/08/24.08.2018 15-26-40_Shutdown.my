@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Shutdown</Name>
+  <Started>24.08.2018 15-26-40</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>24.08.2018 15-26-43</Finished>
+  <Clients>2</Clients>
+  <Done>2</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK05</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Shutdown</Name>
+    <LastExecuted>24.08.2018 15-26-40</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>C3bs1P4PS0OBwUlpEHfImw</_sourceIdentifier>
+        <Name>STUDENTSK5-02</Name>
+        <RealPCName>STUDENTSK5-02</RealPCName>
+        <macAddresses>
+          <string>98:EE:CB:45:AC:8E</string>
+          <string>74:DF:BF:65:1B:11</string>
+        </macAddresses>
+        <MacAddress>98:EE:CB:45:AC:8E</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6400T CPU @ 2.20GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>1</numberOfRamSLots>
+        <biosCaption>LENOVO BIOS Rev:O29KT14A 0.0</biosCaption>
+        <boardProductId>3647</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.120.62</IPAddress>
+        <baseImageName>Windows 10 Office 2016 x64 Ucebna 05</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Fe3G3HZjD02jEvIOpEtTkA</_sourceIdentifier>
+        <Name>STUDENTSK5-01</Name>
+        <RealPCName>STUDENTSK5-01</RealPCName>
+        <macAddresses>
+          <string>74:DF:BF:65:6E:E1</string>
+          <string>98:EE:CB:45:AC:68</string>
+        </macAddresses>
+        <MacAddress>74:DF:BF:65:6E:E1</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6400T CPU @ 2.20GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>1</numberOfRamSLots>
+        <biosCaption>LENOVO BIOS Rev:O29KT14A 0.0</biosCaption>
+        <boardProductId>3647</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.120.61</IPAddress>
+        <baseImageName>Windows 10 Office 2016 x64 Ucebna 05</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK05</MachineGroup>
+    <WakeOnLan>false</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK5-02</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:26:42</Time>
+      <MacAddress>98:EE:CB:45:AC:8E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK5-01</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>15:26:42</Time>
+      <MacAddress>74:DF:BF:65:6E:E1</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK5-01</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>15:26:43</Time>
+      <MacAddress>74:DF:BF:65:6E:E1</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK5-02</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>15:26:43</Time>
+      <MacAddress>98:EE:CB:45:AC:8E</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\08\\24.08.2018 15-26-40_Shutdown.my</FilePath>
+</ExecutedTaskData>

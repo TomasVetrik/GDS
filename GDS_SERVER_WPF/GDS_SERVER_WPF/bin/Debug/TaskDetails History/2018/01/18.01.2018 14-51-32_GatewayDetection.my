@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>GatewayDetection</Name>
+  <Started>18.01.2018 14-51-32</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>NONE</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK04</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>GatewayDetection</Name>
+    <LastExecuted>18.01.2018 14-51-32</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>ISo4lWgMrUKF5_okBdPGWA</_sourceIdentifier>
+        <Name>LEKTORSK4</Name>
+        <RealPCName>LEKTORSK4</RealPCName>
+        <macAddresses>
+          <string>00:1B:21:97:40:CC</string>
+          <string>00:27:0E:2D:ED:68</string>
+        </macAddresses>
+        <MacAddress>00:1B:21:97:40:CC</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>StudentCZ</accountName>
+        <IPAddress>10.202.20.27</IPAddress>
+        <baseImageName>Windows 7 Office 2013 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK04</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <SourceDirectoryInOS>I:\Startup_OS\Accessories</SourceDirectoryInOS>
+    <DestinationDirectoryInOS>D:\</DestinationDirectoryInOS>
+    <CommandsInOS>
+      <string>D:\Autologon.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS>
+      <string>I:\Startup_OS\Accessories\Autologon.bat</string>
+      <string>I:\Startup_OS\Accessories\Autologon_D.ps1</string>
+      <string>I:\Startup_OS\Accessories\Gateway_detection.bat</string>
+      <string>I:\Startup_OS\Accessories\Gateway_detection.ps1</string>
+    </CopyFilesInOS>
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData />
+  <FilePath>.\TaskDetails History\2018\01\\18.01.2018 14-51-32_GatewayDetection.my</FilePath>
+</ExecutedTaskData>

@@ -1,0 +1,760 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>RunPostInstalls</Name>
+  <Started>19.03.2019 09-01-24</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>19.03.2019 09-01-38</Finished>
+  <Clients>9</Clients>
+  <Done>9</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK06</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>RunPostInstalls</Name>
+    <LastExecuted>19.03.2019 09-01-24</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>DgGPJ2aRT02SC10ywNmSfg</_sourceIdentifier>
+        <Name>LEKTORKS6_NUC</Name>
+        <RealPCName>LEKTORKS6_NUC</RealPCName>
+        <macAddresses>
+          <string>34:E1:2D:8C:0F:F0</string>
+          <string>94:C6:91:A4:05:7C</string>
+        </macAddresses>
+        <MacAddress>34:E1:2D:8C:0F:F0</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.123</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>IOBdlkWga0quYkavP_LL8w</_sourceIdentifier>
+        <Name>STUDENTSK6-01_NUC</Name>
+        <RealPCName>STUDENTSK6-01_N</RealPCName>
+        <macAddresses>
+          <string>34:E1:2D:8C:F0:EB</string>
+          <string>94:C6:91:A4:D0:06</string>
+        </macAddresses>
+        <MacAddress>34:E1:2D:8C:F0:EB</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.120</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>rGSPqGZlWkOUYXX_xUdisg</_sourceIdentifier>
+        <Name>STUDENTSK6-02_NUC</Name>
+        <RealPCName>STUDENTSK6-02_N</RealPCName>
+        <macAddresses>
+          <string>34:E1:2D:3C:0D:34</string>
+          <string>94:C6:91:A4:43:0C</string>
+        </macAddresses>
+        <MacAddress>34:E1:2D:3C:0D:34</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.114</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>jvCh3lDa20uSe8ZzBGCCdA</_sourceIdentifier>
+        <Name>STUDENTSK6-03_NUC</Name>
+        <RealPCName>STUDENTSK6-03_N</RealPCName>
+        <macAddresses>
+          <string>34:E1:2D:8C:A8:A7</string>
+          <string>94:C6:91:A4:D1:16</string>
+        </macAddresses>
+        <MacAddress>34:E1:2D:8C:A8:A7</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.116</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>d68qax5Fc0mJyt8gBdNEfg</_sourceIdentifier>
+        <Name>STUDENTSK6-04_NUC</Name>
+        <RealPCName>STUDENTSK6-04_N</RealPCName>
+        <macAddresses>
+          <string>C0:B6:F9:CD:01:63</string>
+          <string>94:C6:91:A3:DF:EA</string>
+        </macAddresses>
+        <MacAddress>C0:B6:F9:CD:01:63</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.107</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>ARh4ig51AEKRVw1CEg0yPA</_sourceIdentifier>
+        <Name>STUDENTSK6-06_NUC</Name>
+        <RealPCName>STUDENTSK6-06_N</RealPCName>
+        <macAddresses>
+          <string>C0:B6:F9:8C:33:5E</string>
+          <string>94:C6:91:A4:08:CA</string>
+        </macAddresses>
+        <MacAddress>C0:B6:F9:8C:33:5E</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.122</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>2mJNP5EjFEK80hZldmW2gg</_sourceIdentifier>
+        <Name>STUDENTSK6-07_NUC</Name>
+        <RealPCName>STUDENTSK6-07_N</RealPCName>
+        <macAddresses>
+          <string>34:E1:2D:8C:3C:A0</string>
+          <string>94:C6:91:A4:F6:5B</string>
+        </macAddresses>
+        <MacAddress>34:E1:2D:8C:3C:A0</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.119</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>QONZ4-qmcU6svpjzR7oa-w</_sourceIdentifier>
+        <Name>STUDENTSK6-08_NUC</Name>
+        <RealPCName>STUDENTSK6-08_N</RealPCName>
+        <macAddresses>
+          <string>34:E1:2D:3B:CA:B3</string>
+          <string>94:C6:91:A4:3E:02</string>
+        </macAddresses>
+        <MacAddress>34:E1:2D:3B:CA:B3</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.53</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Zipp1MazeE6xdZwIhT9EZQ</_sourceIdentifier>
+        <Name>STUDENTSK6-09_NUC</Name>
+        <RealPCName>STUDENTSK6-09_N</RealPCName>
+        <macAddresses>
+          <string>34:E1:2D:8C:91:AF</string>
+          <string>94:C6:91:A4:43:43</string>
+        </macAddresses>
+        <MacAddress>34:E1:2D:8C:91:AF</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i3-7100U CPU @ 2.40GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 02/22/18 16:44:56 Ver: 05.0000C</biosCaption>
+        <boardProductId>NUC7i3BNB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.99</IPAddress>
+        <baseImageName>Windows 7 Office 2016 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK06</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>true</SoftwareAndFileAction>
+    <SourceDirectoryInOS>I:\Startup_OS\Custom_OS</SourceDirectoryInOS>
+    <DestinationDirectoryInOS>D:\Temp</DestinationDirectoryInOS>
+    <CommandsInOS>
+      <string>D:\Autologon_PostInstalls.bat</string>
+    </CommandsInOS>
+    <CopyFilesInOS>
+      <string>I:\Startup_OS\Custom_OS\Password.txt</string>
+    </CopyFilesInOS>
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <SourceDirectoryInWINPE>I:\</SourceDirectoryInWINPE>
+    <DestinationDirectoryInWINPE>I:\</DestinationDirectoryInWINPE>
+    <CopyFilesInWINPE>
+      <string>I:\GDS_Client.exe</string>
+    </CopyFilesInWINPE>
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-01_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:01:29</Time>
+      <MacAddress>34:E1:2D:8C:F0:EB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-03_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:01:29</Time>
+      <MacAddress>34:E1:2D:8C:A8:A7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:01:29</Time>
+      <MacAddress>34:E1:2D:8C:0F:F0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-02_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:01:29</Time>
+      <MacAddress>34:E1:2D:3C:0D:34</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-07_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:01:29</Time>
+      <MacAddress>34:E1:2D:8C:3C:A0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-08_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:01:29</Time>
+      <MacAddress>34:E1:2D:3B:CA:B3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-07_NUC</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>9:01:30</Time>
+      <MacAddress>34:E1:2D:8C:3C:A0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-02_NUC</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>9:01:30</Time>
+      <MacAddress>34:E1:2D:3C:0D:34</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-03_NUC</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>9:01:30</Time>
+      <MacAddress>34:E1:2D:8C:A8:A7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-01_NUC</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>9:01:30</Time>
+      <MacAddress>34:E1:2D:8C:F0:EB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>9:01:30</Time>
+      <MacAddress>34:E1:2D:8C:0F:F0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-08_NUC</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>9:01:30</Time>
+      <MacAddress>34:E1:2D:3B:CA:B3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-06_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:01:30</Time>
+      <MacAddress>C0:B6:F9:8C:33:5E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-04_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:01:30</Time>
+      <MacAddress>C0:B6:F9:CD:01:63</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-07_NUC</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:01:31</Time>
+      <MacAddress>34:E1:2D:8C:3C:A0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-02_NUC</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:01:31</Time>
+      <MacAddress>34:E1:2D:3C:0D:34</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-03_NUC</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:01:31</Time>
+      <MacAddress>34:E1:2D:8C:A8:A7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:01:31</Time>
+      <MacAddress>34:E1:2D:8C:0F:F0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-01_NUC</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:01:31</Time>
+      <MacAddress>34:E1:2D:8C:F0:EB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-08_NUC</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:01:31</Time>
+      <MacAddress>34:E1:2D:3B:CA:B3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-04_NUC</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>9:01:31</Time>
+      <MacAddress>C0:B6:F9:CD:01:63</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-06_NUC</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>9:01:31</Time>
+      <MacAddress>C0:B6:F9:8C:33:5E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-03_NUC</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>9:01:32</Time>
+      <MacAddress>34:E1:2D:8C:A8:A7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-02_NUC</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>9:01:32</Time>
+      <MacAddress>34:E1:2D:3C:0D:34</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-07_NUC</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>9:01:32</Time>
+      <MacAddress>34:E1:2D:8C:3C:A0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>9:01:32</Time>
+      <MacAddress>34:E1:2D:8C:0F:F0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-01_NUC</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>9:01:32</Time>
+      <MacAddress>34:E1:2D:8C:F0:EB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-08_NUC</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>9:01:32</Time>
+      <MacAddress>34:E1:2D:3B:CA:B3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-06_NUC</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:01:32</Time>
+      <MacAddress>C0:B6:F9:8C:33:5E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-04_NUC</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:01:32</Time>
+      <MacAddress>C0:B6:F9:CD:01:63</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-09_NUC</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>9:01:33</Time>
+      <MacAddress>34:E1:2D:8C:91:AF</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-03_NUC</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>9:01:33</Time>
+      <MacAddress>34:E1:2D:8C:A8:A7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>9:01:33</Time>
+      <MacAddress>34:E1:2D:8C:0F:F0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-08_NUC</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>9:01:33</Time>
+      <MacAddress>34:E1:2D:3B:CA:B3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-01_NUC</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>9:01:33</Time>
+      <MacAddress>34:E1:2D:8C:F0:EB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-04_NUC</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>9:01:33</Time>
+      <MacAddress>C0:B6:F9:CD:01:63</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-06_NUC</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>9:01:33</Time>
+      <MacAddress>C0:B6:F9:8C:33:5E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-09_NUC</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>9:01:34</Time>
+      <MacAddress>34:E1:2D:8C:91:AF</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-02_NUC</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>9:01:34</Time>
+      <MacAddress>34:E1:2D:3C:0D:34</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-07_NUC</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>9:01:34</Time>
+      <MacAddress>34:E1:2D:8C:3C:A0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-03_NUC</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>9:01:34</Time>
+      <MacAddress>34:E1:2D:8C:A8:A7</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-08_NUC</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>9:01:34</Time>
+      <MacAddress>34:E1:2D:3B:CA:B3</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORKS6_NUC</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>9:01:34</Time>
+      <MacAddress>34:E1:2D:8C:0F:F0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-01_NUC</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>9:01:34</Time>
+      <MacAddress>34:E1:2D:8C:F0:EB</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-06_NUC</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>9:01:34</Time>
+      <MacAddress>C0:B6:F9:8C:33:5E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-04_NUC</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>9:01:34</Time>
+      <MacAddress>C0:B6:F9:CD:01:63</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-09_NUC</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>9:01:35</Time>
+      <MacAddress>34:E1:2D:8C:91:AF</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-02_NUC</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>9:01:35</Time>
+      <MacAddress>34:E1:2D:3C:0D:34</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-07_NUC</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>9:01:35</Time>
+      <MacAddress>34:E1:2D:8C:3C:A0</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-04_NUC</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>9:01:35</Time>
+      <MacAddress>C0:B6:F9:CD:01:63</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-06_NUC</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>9:01:35</Time>
+      <MacAddress>C0:B6:F9:8C:33:5E</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-09_NUC</ComputerName>
+      <Step>START_COPY_FILES</Step>
+      <Time>9:01:36</Time>
+      <MacAddress>34:E1:2D:8C:91:AF</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-09_NUC</ComputerName>
+      <Step>FINISH_COPY_FILES</Step>
+      <Time>9:01:37</Time>
+      <MacAddress>34:E1:2D:8C:91:AF</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK6-09_NUC</ComputerName>
+      <Step>FINISH_RUN_COMMAND</Step>
+      <Time>9:01:38</Time>
+      <MacAddress>34:E1:2D:8C:91:AF</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 09-01-24_RunPostInstalls.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\03\\19.03.2019 09-01-24_RunPostInstalls.my</FilePath>
+</ExecutedTaskData>

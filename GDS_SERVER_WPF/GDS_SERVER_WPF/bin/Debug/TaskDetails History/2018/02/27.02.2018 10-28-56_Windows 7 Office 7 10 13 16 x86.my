@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 7 Office 7 10 13 16 x86</Name>
+  <Started>27.02.2018 10-28-56</Started>
+  <Status>Images/Failed.ico</Status>
+  <Finished>27.02.2018 12-07-57</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>NOTEBOOKS</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 7 Office 7 10 13 16 x86</Name>
+    <LastExecuted>27.02.2018 10-28-56</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>Y48MyxCU3U6nQVFPP-Yq9A</_sourceIdentifier>
+        <Name>DELL04</Name>
+        <RealPCName>DELL04</RealPCName>
+        <macAddresses>
+          <string>EC:F4:BB:15:EA:8F</string>
+          <string>AC:7B:A1:7B:A8:68</string>
+        </macAddresses>
+        <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+        <OSInformations>Microsoft Windows 7 Ultimate, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-4200U CPU @ 1.60GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>2</numberOfRamSLots>
+        <biosCaption>BIOS Date: 01/22/14 08:03:33 Ver: A04.00 </biosCaption>
+        <boardProductId>0TG93N</boardProductId>
+        <accountName>StudentSK</accountName>
+        <IPAddress>10.202.20.32</IPAddress>
+        <baseImageName>Windows 7 Office 2013 2016 x86</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>NOTEBOOKS</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>true</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 7 Office 7 10 13 16 x86</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 7 Office 7 10 13 16 x86</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\W7_MultiOffice_7_10_13_16_x86\W7_MultiOffice_7_10_13_16_x86.wim</SourcePath>
+      <BoolLabel>Windows 7</BoolLabel>
+      <PartitionSize>125</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>W7_Off2k16_x86</string>
+        <string>W7_Off2k13_x86</string>
+        <string>W7_Off2k10_x86</string>
+        <string>W7_Off2k7_x86</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x86</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:28:59</Time>
+      <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL04</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>10:30:56</Time>
+      <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:30:57</Time>
+      <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:30:58</Time>
+      <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>DELL04</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>10:30:59</Time>
+      <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Failed.ico</Status>
+      <ComputerName>DELL04</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>12:07:57</Time>
+      <MacAddress>EC:F4:BB:15:EA:8F</MacAddress>
+      <Message>Expired waiting time</Message>
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\02\\27.02.2018 10-28-56_Windows 7 Office 7 10 13 16 x86.my</FilePath>
+</ExecutedTaskData>

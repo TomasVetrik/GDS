@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Centos 7.4</Name>
+  <Started>24.01.2019 14-22-29</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>24.01.2019 14-25-35</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>!Testing</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Centos 7.4</Name>
+    <LastExecuted>24.01.2019 14-22-29</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>BrHF75bcIUS5hgQGQOD6fg</_sourceIdentifier>
+        <Name>STUDENTSK11-10</Name>
+        <RealPCName>MININT-0BOLJRH</RealPCName>
+        <macAddresses>
+          <string>00:22:4D:81:6E:56</string>
+          <string>68:05:CA:0C:B1:98</string>
+        </macAddresses>
+        <MacAddress>00:22:4D:81:6E:56</MacAddress>
+        <OSInformations>, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-3570 CPU @ 3.40GHz</processorInfo>
+        <physicalMemoryInfo>24576MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DZ77BH-55K</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.26</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>465-698-822#10.202.20.26#49678</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>!Testing</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\LINUX\CentOS 7.4</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>CentOS 7.4</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\LINUX\CentOS_Menu_All\CentosALL_7_4.wim</SourcePath>
+      <BoolLabel>CentOS</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>CentosALL_7_4</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x86</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>true</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>10</WaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:22:30</Time>
+      <MacAddress>00:22:4D:81:6E:56</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.01.2019 14-22-29_Centos 7.4.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>14:22:31</Time>
+      <MacAddress>00:22:4D:81:6E:56</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.01.2019 14-22-29_Centos 7.4.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>14:22:32</Time>
+      <MacAddress>00:22:4D:81:6E:56</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.01.2019 14-22-29_Centos 7.4.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>14:22:33</Time>
+      <MacAddress>00:22:4D:81:6E:56</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.01.2019 14-22-29_Centos 7.4.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK11-10</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>14:23:58</Time>
+      <MacAddress>00:22:4D:81:6E:56</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\24.01.2019 14-22-29_Centos 7.4.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\01\\24.01.2019 14-22-29_Centos 7.4.my</FilePath>
+</ExecutedTaskData>

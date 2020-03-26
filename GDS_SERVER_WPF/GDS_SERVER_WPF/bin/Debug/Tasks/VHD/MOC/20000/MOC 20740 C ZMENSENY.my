@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<TaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ImageSource>Images/Tasks.ico</ImageSource>
+  <Name>MOC 20740 C ZMENSENY</Name>
+  <LastExecuted>23.03.2018 15-28-48</LastExecuted>
+  <TargetComputers>
+    <ComputerDetailsData>
+      <_sourceIdentifier>nLWgQLZjtkGP7SqHDdY1xg</_sourceIdentifier>
+      <Name>STUDENTSK14-12</Name>
+      <RealPCName>STUDENTSK14-12</RealPCName>
+      <macAddresses>
+        <string>68:05:CA:2A:D0:30</string>
+        <string>74:D4:35:8D:9D:37</string>
+        <string>68:05:CA:24:7A:E1</string>
+      </macAddresses>
+      <MacAddress>68:05:CA:2A:D0:30</MacAddress>
+      <OSInformations>Microsoft Windows Server 2012 R2 Standard, 64-bit</OSInformations>
+      <processorInfo>Intel® Core™ i5-4670 CPU @ 3.40GHz</processorInfo>
+      <physicalMemoryInfo>32768MB</physicalMemoryInfo>
+      <numberOfRamSLots>4</numberOfRamSLots>
+      <biosCaption>BIOS Date: 08/18/15 15:14:44 Ver: 04.06.05</biosCaption>
+      <boardProductId>H87-HD3</boardProductId>
+      <accountName>Administrator</accountName>
+      <IPAddress>10.202.20.40</IPAddress>
+      <baseImageName>Windows Server 2012 R2</baseImageName>
+      <driveEImageName>MOC 20695 C</driveEImageName>
+      <dartInfo />
+      <ImageSource>Images/Offline.ico</ImageSource>
+      <inWinpe>false</inWinpe>
+      <PostInstalls />
+      <CustomLog />
+    </ComputerDetailsData>
+  </TargetComputers>
+  <MachineGroup>UCEBNASK14</MachineGroup>
+  <WakeOnLan>true</WakeOnLan>
+  <Configuration>true</Configuration>
+  <ForceInstall>false</ForceInstall>
+  <ShutDown>false</ShutDown>
+  <Cloning>true</Cloning>
+  <BaseImageSourcePath>.\Base\WithoutVHD\Windows Server 2016</BaseImageSourcePath>
+  <BaseImageData>
+    <Name>Windows Server 2016</Name>
+    <ImageSource>Images/Image.ico</ImageSource>
+    <SourcePath>I:\MOC\Base\_WIM\_NO_VHD\w2k16.wim</SourcePath>
+    <BoolLabel>Windows Server 2016</BoolLabel>
+    <PartitionSize>50</PartitionSize>
+    <VHDResizeSize>50</VHDResizeSize>
+    <VHDResize>false</VHDResize>
+    <VHDNames>
+      <string>w2k16</string>
+    </VHDNames>
+    <OSAbrivations>
+      <string>W2k16</string>
+    </OSAbrivations>
+  </BaseImageData>
+  <WithoutVHD>true</WithoutVHD>
+  <DriveEImageSourcePath>.\DriveE\MOC\20000\MOC 20740 C</DriveEImageSourcePath>
+  <DriveEImageData>
+    <Name>MOC 20740 C</Name>
+    <ImageSource>Images/Image.ico</ImageSource>
+    <SourcePath>I:\MOC\DriveE\_WIM\20740C\20740C.wim</SourcePath>
+    <BoolLabel>MOC 20740 C</BoolLabel>
+    <PartitionSize>90</PartitionSize>
+    <VHDResizeSize>50</VHDResizeSize>
+    <VHDResize>false</VHDResize>
+    <VHDNames />
+    <OSAbrivations />
+  </DriveEImageData>
+  <SoftwareAndFileAction>true</SoftwareAndFileAction>
+  <DestinationDirectoryInOS />
+  <CommandsInOS>
+    <string>E:\Autologon.bat</string>
+  </CommandsInOS>
+  <CopyFilesInOS />
+  <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+  <DestinationDirectoryInWINPE />
+  <CopyFilesInWINPE />
+  <CommandsInWINPE />
+  <WaitingTime>30</WaitingTime>
+</TaskData>

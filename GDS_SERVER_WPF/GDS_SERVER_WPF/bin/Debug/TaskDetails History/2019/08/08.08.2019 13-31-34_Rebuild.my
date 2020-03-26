@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Rebuild</Name>
+  <Started>08.08.2019 13-31-34</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>08.08.2019 13-32-12</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>UCEBNASK04</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Rebuild</Name>
+    <LastExecuted>08.08.2019 13-31-34</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>tfpiLTrqPE6xmdRx6wCFRQ</_sourceIdentifier>
+        <Name>LEKTORSK4</Name>
+        <RealPCName>LEKTORSK4</RealPCName>
+        <macAddresses>
+          <string>00:27:0E:2D:ED:68</string>
+          <string>00:1B:21:97:40:CC</string>
+        </macAddresses>
+        <MacAddress>00:27:0E:2D:ED:68</MacAddress>
+        <OSInformations>Microsoft Windows 10 Enterprise, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>StudentEN</accountName>
+        <IPAddress>10.202.20.35</IPAddress>
+        <baseImageName>Windows 10 Office 10 13 16 19 x64 MP</baseImageName>
+        <driveEImageName />
+        <dartInfo />
+        <ImageSource>Images/Online.ico</ImageSource>
+        <inWinpe>false</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK04</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>false</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>false</Cloning>
+    <BaseImageSourcePath />
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>true</SoftwareAndFileAction_WINPE>
+    <SourceDirectoryInWINPE>I:\Startup_WinPE\Scripts</SourceDirectoryInWINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE>
+      <string>W:\Scripts\Rebuild_Restart.bat</string>
+    </CommandsInWINPE>
+    <WaitingTime>30</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>LEKTORSK4</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:31:35</Time>
+      <MacAddress>00:27:0E:2D:ED:68</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.08.2019 13-31-34_Rebuild.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>LEKTORSK4</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>13:31:35</Time>
+      <MacAddress>00:27:0E:2D:ED:68</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\08.08.2019 13-31-34_Rebuild.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\08\\08.08.2019 13-31-34_Rebuild.my</FilePath>
+</ExecutedTaskData>

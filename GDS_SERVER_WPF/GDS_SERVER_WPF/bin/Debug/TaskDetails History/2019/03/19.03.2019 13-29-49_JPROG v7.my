@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>JPROG v7</Name>
+  <Started>19.03.2019 13-29-49</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>19.03.2019 14-14-01</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>UCEBNASK05</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>JPROG v7</Name>
+    <LastExecuted>19.03.2019 13-29-49</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>AWUHxbtvh0WJMAoni4R2BA</_sourceIdentifier>
+        <Name>STUDENTSK5-04</Name>
+        <RealPCName>MININT-QPPUGMO</RealPCName>
+        <macAddresses>
+          <string>98:EE:CB:45:AB:96</string>
+        </macAddresses>
+        <MacAddress>98:EE:CB:45:AB:96</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-6400T CPU @ 2.20GHz</processorInfo>
+        <physicalMemoryInfo>8192MB</physicalMemoryInfo>
+        <numberOfRamSLots>1</numberOfRamSLots>
+        <biosCaption>LENOVO BIOS Rev:O29KT14A 0.0</biosCaption>
+        <boardProductId>3647</boardProductId>
+        <accountName>Student</accountName>
+        <IPAddress>10.202.120.64</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>280-668-975#10.202.120.64#49672</dartInfo>
+        <ImageSource>Images/Offline.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK05</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\WithoutVHD\GOC\JPROG v7</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>JPROG v7</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\GOC\Base\_wim\_NO_VHD\JPROGv7\JPROG.V7_NOVHD.wim</SourcePath>
+      <BoolLabel>JPROG</BoolLabel>
+      <PartitionSize>90</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>JPROGV7</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>W10_x64</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>true</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>30</WaitingTime>
+    <SendWarningMails>false</SendWarningMails>
+    <InfinityWaitingTime>true</InfinityWaitingTime>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK5-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:31:42</Time>
+      <MacAddress>98:EE:CB:45:AB:96</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 13-29-49_JPROG v7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK5-04</ComputerName>
+      <Step>SYN_FLAG_WINPE</Step>
+      <Time>13:33:19</Time>
+      <MacAddress>98:EE:CB:45:AB:96</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 13-29-49_JPROG v7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK5-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:33:20</Time>
+      <MacAddress>98:EE:CB:45:AB:96</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 13-29-49_JPROG v7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK5-04</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:33:21</Time>
+      <MacAddress>98:EE:CB:45:AB:96</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 13-29-49_JPROG v7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK5-04</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:33:22</Time>
+      <MacAddress>98:EE:CB:45:AB:96</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 13-29-49_JPROG v7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK5-04</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>14:13:59</Time>
+      <MacAddress>98:EE:CB:45:AB:96</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 13-29-49_JPROG v7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK5-04</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>14:14:00</Time>
+      <MacAddress>98:EE:CB:45:AB:96</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 13-29-49_JPROG v7.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK5-04</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>14:14:01</Time>
+      <MacAddress>98:EE:CB:45:AB:96</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\19.03.2019 13-29-49_JPROG v7.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\03\\19.03.2019 13-29-49_JPROG v7.my</FilePath>
+</ExecutedTaskData>

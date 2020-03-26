@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Windows 7 Office 2016 x86</Name>
+  <Started>21.11.2018 10-41-16</Started>
+  <Status>Images/Done.ico</Status>
+  <Finished>21.11.2018 11-13-40</Finished>
+  <Clients>1</Clients>
+  <Done>1</Done>
+  <Failed>0</Failed>
+  <MachineGroup>Default</MachineGroup>
+  <taskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>Windows 7 Office 2016 x86</Name>
+    <LastExecuted>21.11.2018 10-41-16</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>IpSsS3vPIE23AKLEmi7hDA</_sourceIdentifier>
+        <Name>STUDENTSK2-13</Name>
+        <RealPCName>MININT-JOE2V9Q</RealPCName>
+        <macAddresses>
+          <string>68:05:CA:15:8A:52</string>
+          <string>00:27:0E:2E:9D:18</string>
+        </macAddresses>
+        <MacAddress>68:05:CA:15:8A:52</MacAddress>
+        <OSInformations>, 32-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5 CPU  760 @ 2.80GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>Default System BIOS</biosCaption>
+        <boardProductId>DP55WB</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.141</IPAddress>
+        <baseImageName />
+        <driveEImageName />
+        <dartInfo>234-164-301#10.202.20.141#49422</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>Default</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>true</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\OFFICE\Windows 7 Office 2016 x86</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>Windows 7 Office 2016 x86</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\Office\Base\_WIM\W7_Off2k16_x86\W7_Off2k16_x86.wim</SourcePath>
+      <BoolLabel>Windows 7 Office 2016</BoolLabel>
+      <PartitionSize>92</PartitionSize>
+      <VHDResizeSize>50</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>W7_Off2k16_x86</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string>w7_x86</string>
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>false</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <DestinationDirectoryInWINPE />
+    <CopyFilesInWINPE />
+    <CommandsInWINPE />
+    <WaitingTime>40</WaitingTime>
+  </taskData>
+  <progressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-13</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>10:41:18</Time>
+      <MacAddress>68:05:CA:15:8A:52</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-13</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>10:41:19</Time>
+      <MacAddress>68:05:CA:15:8A:52</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-13</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>10:41:20</Time>
+      <MacAddress>68:05:CA:15:8A:52</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-13</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>10:41:21</Time>
+      <MacAddress>68:05:CA:15:8A:52</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-13</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>10:41:22</Time>
+      <MacAddress>68:05:CA:15:8A:52</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-13</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>11:13:38</Time>
+      <MacAddress>68:05:CA:15:8A:52</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-13</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>11:13:39</Time>
+      <MacAddress>68:05:CA:15:8A:52</MacAddress>
+      <Message />
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK2-13</ComputerName>
+      <Step>SHUTDOWN_DONE</Step>
+      <Time>11:13:40</Time>
+      <MacAddress>68:05:CA:15:8A:52</MacAddress>
+      <Message />
+    </ProgressComputerData>
+  </progressComputerData>
+  <FilePath>.\TaskDetails History\2018\11\\21.11.2018 10-41-16_Windows 7 Office 2016 x86.my</FilePath>
+</ExecutedTaskData>

@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<ExecutedTaskData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>CentOS_7_x64_aut</Name>
+  <Started>11.03.2019 13-07-53</Started>
+  <Status>Images/Stopped.ico</Status>
+  <Finished>11.03.2019 13-22-36</Finished>
+  <Clients>1</Clients>
+  <Done>0</Done>
+  <Failed>1</Failed>
+  <MachineGroup>UCEBNASK07</MachineGroup>
+  <_TaskData>
+    <ImageSource>Images/Tasks.ico</ImageSource>
+    <Name>CentOS_7_x64_aut</Name>
+    <LastExecuted>11.03.2019 13-07-53</LastExecuted>
+    <TargetComputers>
+      <ComputerDetailsData>
+        <_sourceIdentifier>RPVT7NQEWEquresbh2GJrQ</_sourceIdentifier>
+        <Name>STUDENTSK7-07</Name>
+        <RealPCName>MININT-OFJCQ1M</RealPCName>
+        <macAddresses>
+          <string>E0:D5:5E:02:EE:86</string>
+        </macAddresses>
+        <MacAddress>E0:D5:5E:02:EE:86</MacAddress>
+        <OSInformations>, 64-bit</OSInformations>
+        <processorInfo>Intel® Core™ i5-7400 CPU @ 3.00GHz</processorInfo>
+        <physicalMemoryInfo>16384MB</physicalMemoryInfo>
+        <numberOfRamSLots>4</numberOfRamSLots>
+        <biosCaption>BIOS Date: 11/08/17 12:51:49 Ver: 05.0000C</biosCaption>
+        <boardProductId>Z270-HD3P-CF</boardProductId>
+        <accountName>SYSTEM</accountName>
+        <IPAddress>10.202.20.146</IPAddress>
+        <baseImageName>Windows 10 Office 2016 x64 SP</baseImageName>
+        <driveEImageName>VS Generic 2017</driveEImageName>
+        <dartInfo>965-485-669#10.202.20.146#49672</dartInfo>
+        <ImageSource>Images/Winpe.ico</ImageSource>
+        <inWinpe>true</inWinpe>
+        <PostInstalls />
+        <CustomLog />
+      </ComputerDetailsData>
+    </TargetComputers>
+    <MachineGroup>UCEBNASK07</MachineGroup>
+    <WakeOnLan>true</WakeOnLan>
+    <Configuration>true</Configuration>
+    <ForceInstall>false</ForceInstall>
+    <ShutDown>false</ShutDown>
+    <Cloning>true</Cloning>
+    <BaseImageSourcePath>.\Base\LINUX\CentOS_7_x64</BaseImageSourcePath>
+    <BaseImageData>
+      <Name>CentOS_7_x64</Name>
+      <ImageSource>Images/Image.ico</ImageSource>
+      <SourcePath>I:\LINUX\Base\_wim\CentOS_7\CentOS7_x64_aut.wim</SourcePath>
+      <BoolLabel>Default</BoolLabel>
+      <PartitionSize>80</PartitionSize>
+      <VHDResizeSize>40</VHDResizeSize>
+      <VHDResize>false</VHDResize>
+      <VHDNames>
+        <string>CentOS7_x64_aut</string>
+      </VHDNames>
+      <OSAbrivations>
+        <string />
+      </OSAbrivations>
+    </BaseImageData>
+    <WithoutVHD>true</WithoutVHD>
+    <DriveEImageSourcePath />
+    <SoftwareAndFileAction>false</SoftwareAndFileAction>
+    <SourceDirectoryInOS />
+    <DestinationDirectoryInOS />
+    <CommandsInOS />
+    <CopyFilesInOS />
+    <SoftwareAndFileAction_WINPE>false</SoftwareAndFileAction_WINPE>
+    <SourceDirectoryInWINPE>I:\Images\HIVE\pajka_temp\centos6.6</SourceDirectoryInWINPE>
+    <DestinationDirectoryInWINPE>C:\</DestinationDirectoryInWINPE>
+    <CopyFilesInWINPE>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\ANG0</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup.LOG</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup.LOG1</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bcd_backup.LOG2</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\bootmgr</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\BOOTNXT</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\BOOTSECT.BAK</string>
+      <string>I:\Images\HIVE\pajka_temp\centos6.6\CentOs_6.6_aut.iso</string>
+    </CopyFilesInWINPE>
+    <CommandsInWINPE />
+    <WaitingTime>20</WaitingTime>
+    <SendWarningMails>true</SendWarningMails>
+  </_TaskData>
+  <ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-07</ComputerName>
+      <Step>SYN_FLAG</Step>
+      <Time>13:07:54</Time>
+      <MacAddress>E0:D5:5E:02:EE:86</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\11.03.2019 13-07-53_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-07</ComputerName>
+      <Step>CLIENT_TO_WINPE</Step>
+      <Time>13:07:55</Time>
+      <MacAddress>E0:D5:5E:02:EE:86</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\11.03.2019 13-07-53_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-07</ComputerName>
+      <Step>SEND_CONFIG</Step>
+      <Time>13:07:56</Time>
+      <MacAddress>E0:D5:5E:02:EE:86</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\11.03.2019 13-07-53_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-07</ComputerName>
+      <Step>SEND_TASK_CONFIG</Step>
+      <Time>13:07:57</Time>
+      <MacAddress>E0:D5:5E:02:EE:86</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\11.03.2019 13-07-53_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status>Images/Done.ico</Status>
+      <ComputerName>STUDENTSK7-07</ComputerName>
+      <Step>CLONING_STATUS</Step>
+      <Time>13:07:58</Time>
+      <MacAddress>E0:D5:5E:02:EE:86</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\11.03.2019 13-07-53_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+    <ProgressComputerData>
+      <Status />
+      <ComputerName>STUDENTSK7-07</ComputerName>
+      <Step>TO_OPERATING_SYSTEM</Step>
+      <Time>13:08:52</Time>
+      <MacAddress>E0:D5:5E:02:EE:86</MacAddress>
+      <Message />
+      <Task_ID>.\TaskDetails\11.03.2019 13-07-53_CentOS_7_x64_aut.my</Task_ID>
+    </ProgressComputerData>
+  </ProgressComputerData>
+  <FilePath>.\TaskDetails History\2019\03\\11.03.2019 13-07-53_CentOS_7_x64_aut.my</FilePath>
+</ExecutedTaskData>
